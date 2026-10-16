@@ -1,0 +1,769 @@
+{
+  "schema_version": 1,
+  "scope": "stage1 inventory and environment smoke only",
+  "started_at": "2026-10-16T21:18:17.710957+08:00",
+  "finished_at": "2026-10-16T21:18:28.974522+08:00",
+  "timezone": "Asia/Shanghai (UTC+08:00)",
+  "root": "D:\\KWT1-Accelerator",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "git": {
+    "executable": "C:\\Program Files\\Git\\cmd\\git.EXE",
+    "commit": null,
+    "branch": "master",
+    "status_porcelain": "?? .gitignore\n?? CONTRIBUTING.md\n?? KWT-1_软件与硬件交接和并行安排.md\n?? README.md\n?? docs/HANDOFF_TEMPLATE.md\n?? docs/PROJECT_STATUS.md\n?? docs/REQUIREMENTS.md\n?? docs/SUBMISSION_CHECKLIST.md\n?? integration/check.py\n?? rtl/.gitkeep\n?? soc/.gitkeep\n?? software/.gitkeep\n?? synthesis/.gitkeep\n?? tb/.gitkeep\n?? 嵌赛题目.pdf\n?? 硬件侧回复_软件交接_2026-10-16.md\n",
+    "version": {
+      "command": [
+        "C:\\Program Files\\Git\\cmd\\git.EXE",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "git version 2.55.0.windows.3\n",
+      "stderr": "",
+      "output_truncated": false
+    },
+    "dirty": true
+  },
+  "overall_status": "FAIL",
+  "stage1_basic_status": "FAIL",
+  "counts": {
+    "PASS": 22,
+    "FAIL": 2,
+    "BLOCKED": 19,
+    "NOT_RUN": 2
+  },
+  "exit_code": 1,
+  "notes": [
+    "PASS 仅对应单个检查的明确范围，文件清点不代表设计功能通过。",
+    "缺失工具以当前 PATH 为界；未安装/下载任何工具或资产。",
+    "Git 状态在本次报告写入前采集，报告本身及之后的文件变动不在该快照中。",
+    "项目验证 BLOCKED 为当前缺少已核验依赖的人工准备状态；本程序不执行功能/精度/综合。"
+  ],
+  "material_hashes": {
+    "嵌赛题目.pdf": {
+      "sha256": "354977bf737a6c21b1267fd96853ff6bdcb5c7fa82c240f8ff190845f980d719",
+      "bytes": 2509230
+    },
+    "KWT-1_软件与硬件交接和并行安排.md": {
+      "sha256": "cd96b15c1487f7a72b93542a73bc1e4b5e7a13ed78478ab7ac9e59eb287dfe1c",
+      "bytes": 36549
+    },
+    "硬件侧回复_软件交接_2026-10-16.md": {
+      "sha256": "0fa2e5cd5a6738c14ef83397332df767727db3b6f9fed55e83ba6ee8dd014723",
+      "bytes": 18249
+    }
+  },
+  "source_inventory": {
+    "software": [],
+    "rtl": [],
+    "tb": [],
+    "soc": []
+  },
+  "tool_probes": {
+    "iverilog": {
+      "executable": "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\iverilog.CMD",
+      "probe": {
+        "command": [
+          "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\iverilog.CMD",
+          "-V"
+        ],
+        "returncode": 0,
+        "stdout": "Icarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)\n\nCopyright (c) 2000-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\nIcarus Verilog Preprocessor version 12.0 (devel) (s20150603-1539-g2693dd32b)\n\nCopyright (c) 1999-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\nIcarus Verilog Parser/Elaborator version 12.0 (devel) (s20150603-1539-g2693dd32b)\n\nCopyright (c) 1998-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\n FLAGS DLL vvp.tgt\nvvp.tgt: Icarus Verilog VVP Code Generator 12.0 (devel) (s20150603-1539-g2693dd32b)\n\nCopyright (c) 2001-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\n",
+        "stderr": "",
+        "output_truncated": false
+      },
+      "startup_ok": true
+    },
+    "vvp": {
+      "executable": "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\vvp.CMD",
+      "probe": {
+        "command": [
+          "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\vvp.CMD",
+          "-V"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Icarus Verilog runtime version 12.0 (devel) (s20150603-1539-g2693dd32b)\n\nCopyright (c) 2001-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\n",
+        "output_truncated": false
+      },
+      "startup_ok": true
+    },
+    "verilator": {
+      "executable": null,
+      "probe": null,
+      "startup_ok": false
+    },
+    "yosys": {
+      "executable": null,
+      "probe": null,
+      "startup_ok": false
+    },
+    "dc_shell": {
+      "executable": null,
+      "probe": null,
+      "startup_ok": false
+    },
+    "genus": {
+      "executable": null,
+      "probe": null,
+      "startup_ok": false
+    },
+    "riscv32-unknown-elf-gcc": {
+      "executable": null,
+      "probe": null,
+      "startup_ok": false
+    },
+    "riscv64-unknown-elf-gcc": {
+      "executable": null,
+      "probe": null,
+      "startup_ok": false
+    }
+  },
+  "checks": [
+    {
+      "id": "python_runtime",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "当前解释器启动成功且版本至少为 3.11",
+      "evidence": {
+        "executable": "C:\\Users\\pc\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+        "probe": {
+          "command": [
+            "C:\\Users\\pc\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+            "--version"
+          ],
+          "returncode": 0,
+          "stdout": "Python 3.11.9\n",
+          "stderr": "",
+          "output_truncated": false
+        }
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "git_repository",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "项目根目录为独立 Git 仓库",
+      "evidence": {
+        "command": [
+          "C:\\Program Files\\Git\\cmd\\git.EXE",
+          "rev-parse",
+          "--show-toplevel"
+        ],
+        "returncode": 0,
+        "stdout": "D:/KWT1-Accelerator\n",
+        "stderr": "",
+        "output_truncated": false
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "git_commit",
+      "category": "readiness",
+      "status": "BLOCKED",
+      "summary": "尚无首个提交；未自动暂存或创建提交",
+      "evidence": {
+        "head": {
+          "command": [
+            "C:\\Program Files\\Git\\cmd\\git.EXE",
+            "rev-parse",
+            "--verify",
+            "HEAD"
+          ],
+          "returncode": 128,
+          "stdout": "",
+          "stderr": "fatal: Needed a single revision\n",
+          "output_truncated": false
+        },
+        "symbolic_ref": {
+          "command": [
+            "C:\\Program Files\\Git\\cmd\\git.EXE",
+            "symbolic-ref",
+            "--quiet",
+            "HEAD"
+          ],
+          "returncode": 0,
+          "stdout": "refs/heads/master\n",
+          "stderr": "",
+          "output_truncated": false
+        },
+        "reference_probe": {
+          "command": [
+            "C:\\Program Files\\Git\\cmd\\git.EXE",
+            "show-ref",
+            "--verify",
+            "--quiet",
+            "refs/heads/master"
+          ],
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "",
+          "output_truncated": false
+        }
+      },
+      "missing_dependencies": [
+        "人工审阅并创建首个提交"
+      ]
+    },
+    {
+      "id": "git_worktree",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "已读取工作区状态；存在未提交文件不等于设计失败",
+      "evidence": {
+        "command": [
+          "C:\\Program Files\\Git\\cmd\\git.EXE",
+          "-c",
+          "core.quotepath=false",
+          "status",
+          "--porcelain=v1",
+          "--untracked-files=all"
+        ],
+        "returncode": 0,
+        "stdout": "?? .gitignore\n?? CONTRIBUTING.md\n?? KWT-1_软件与硬件交接和并行安排.md\n?? README.md\n?? docs/HANDOFF_TEMPLATE.md\n?? docs/PROJECT_STATUS.md\n?? docs/REQUIREMENTS.md\n?? docs/SUBMISSION_CHECKLIST.md\n?? integration/check.py\n?? rtl/.gitkeep\n?? soc/.gitkeep\n?? software/.gitkeep\n?? synthesis/.gitkeep\n?? tb/.gitkeep\n?? 嵌赛题目.pdf\n?? 硬件侧回复_软件交接_2026-10-16.md\n",
+        "stderr": "",
+        "output_truncated": false
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "git_remote_inventory",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "仅记录远程名称；未新增或修改远程",
+      "evidence": {
+        "names": [],
+        "returncode": 0
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "dir_software",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "目录清点：software/；不表示工程功能通过",
+      "evidence": {
+        "exists": true
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "dir_rtl",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "目录清点：rtl/；不表示工程功能通过",
+      "evidence": {
+        "exists": true
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "dir_tb",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "目录清点：tb/；不表示工程功能通过",
+      "evidence": {
+        "exists": true
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "dir_soc",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "目录清点：soc/；不表示工程功能通过",
+      "evidence": {
+        "exists": true
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "dir_synthesis",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "目录清点：synthesis/；不表示工程功能通过",
+      "evidence": {
+        "exists": true
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "dir_integration",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "目录清点：integration/；不表示工程功能通过",
+      "evidence": {
+        "exists": true
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "dir_docs",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "目录清点：docs/；不表示工程功能通过",
+      "evidence": {
+        "exists": true
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "dir_reports",
+      "category": "stage1",
+      "status": "FAIL",
+      "summary": "目录清点：reports/；不表示工程功能通过",
+      "evidence": {
+        "exists": false
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "file_README.md",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "非空文件清点：README.md；不验证内容功能",
+      "evidence": {
+        "exists_nonempty": true
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "file_CONTRIBUTING.md",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "非空文件清点：CONTRIBUTING.md；不验证内容功能",
+      "evidence": {
+        "exists_nonempty": true
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "file_.gitignore",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "非空文件清点：.gitignore；不验证内容功能",
+      "evidence": {
+        "exists_nonempty": true
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "file_docs/HANDOFF_TEMPLATE.md",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "非空文件清点：docs/HANDOFF_TEMPLATE.md；不验证内容功能",
+      "evidence": {
+        "exists_nonempty": true
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "file_docs/PROJECT_STATUS.md",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "非空文件清点：docs/PROJECT_STATUS.md；不验证内容功能",
+      "evidence": {
+        "exists_nonempty": true
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "file_docs/REQUIREMENTS.md",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "非空文件清点：docs/REQUIREMENTS.md；不验证内容功能",
+      "evidence": {
+        "exists_nonempty": true
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "file_docs/SUBMISSION_CHECKLIST.md",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "非空文件清点：docs/SUBMISSION_CHECKLIST.md；不验证内容功能",
+      "evidence": {
+        "exists_nonempty": true
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "file_integration/check.py",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "非空文件清点：integration/check.py；不验证内容功能",
+      "evidence": {
+        "exists_nonempty": true
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "material_嵌赛题目.pdf",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "原始材料清点：嵌赛题目.pdf；文件存在不等于内容完整或代码已验证",
+      "evidence": {
+        "sha256": "354977bf737a6c21b1267fd96853ff6bdcb5c7fa82c240f8ff190845f980d719",
+        "bytes": 2509230
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "material_KWT-1_软件与硬件交接和并行安排.md",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "原始材料清点：KWT-1_软件与硬件交接和并行安排.md；文件存在不等于内容完整或代码已验证",
+      "evidence": {
+        "sha256": "cd96b15c1487f7a72b93542a73bc1e4b5e7a13ed78478ab7ac9e59eb287dfe1c",
+        "bytes": 36549
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "material_硬件侧回复_软件交接_2026-10-16.md",
+      "category": "stage1",
+      "status": "PASS",
+      "summary": "原始材料清点：硬件侧回复_软件交接_2026-10-16.md；文件存在不等于内容完整或代码已验证",
+      "evidence": {
+        "sha256": "0fa2e5cd5a6738c14ef83397332df767727db3b6f9fed55e83ba6ee8dd014723",
+        "bytes": 18249
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "official_version_completeness",
+      "category": "readiness",
+      "status": "BLOCKED",
+      "summary": "2026-10-16 人工逐页核对：本地 PDF 为印刷 2～14 页；完整官方版本尚未确认",
+      "evidence": {
+        "manual_audit": "docs/REQUIREMENTS.md",
+        "automatic_pdf_parsing": false
+      },
+      "missing_dependencies": [
+        "完整官方赛题（含印刷第 1 页）及版本/更正公告确认"
+      ]
+    },
+    {
+      "id": "teacher_硬件设计定义.txt",
+      "category": "readiness",
+      "status": "BLOCKED",
+      "summary": "老师原始材料清点：硬件设计定义.txt；现有硬件回复中的转述不等于原文",
+      "evidence": {
+        "path": "硬件设计定义.txt",
+        "exists_nonempty": false
+      },
+      "missing_dependencies": [
+        "硬件设计定义.txt"
+      ]
+    },
+    {
+      "id": "teacher_硬件设计实现.txt",
+      "category": "readiness",
+      "status": "BLOCKED",
+      "summary": "老师原始材料清点：硬件设计实现.txt；现有硬件回复中的转述不等于原文",
+      "evidence": {
+        "path": "硬件设计实现.txt",
+        "exists_nonempty": false
+      },
+      "missing_dependencies": [
+        "硬件设计实现.txt"
+      ]
+    },
+    {
+      "id": "source_inventory_software",
+      "category": "readiness",
+      "status": "BLOCKED",
+      "summary": "software/ 源文件清点（不含 .gitkeep；不代表完整、可运行或通过）",
+      "evidence": {
+        "files": []
+      },
+      "missing_dependencies": [
+        "software 实际工程源码"
+      ]
+    },
+    {
+      "id": "source_inventory_rtl",
+      "category": "readiness",
+      "status": "BLOCKED",
+      "summary": "rtl/ 源文件清点（不含 .gitkeep；不代表完整、可运行或通过）",
+      "evidence": {
+        "files": []
+      },
+      "missing_dependencies": [
+        "rtl 实际工程源码"
+      ]
+    },
+    {
+      "id": "source_inventory_tb",
+      "category": "readiness",
+      "status": "BLOCKED",
+      "summary": "tb/ 源文件清点（不含 .gitkeep；不代表完整、可运行或通过）",
+      "evidence": {
+        "files": []
+      },
+      "missing_dependencies": [
+        "tb 实际工程源码"
+      ]
+    },
+    {
+      "id": "source_inventory_soc",
+      "category": "readiness",
+      "status": "BLOCKED",
+      "summary": "soc/ 源文件清点（不含 .gitkeep；不代表完整、可运行或通过）",
+      "evidence": {
+        "files": []
+      },
+      "missing_dependencies": [
+        "soc 实际工程源码"
+      ]
+    },
+    {
+      "id": "external_e203",
+      "category": "readiness",
+      "status": "BLOCKED",
+      "summary": "指定 E203/SoC/SDK 平台：仅非空目录清点，未核验版本/内容/许可/兼容性",
+      "evidence": {
+        "path": "D:\\KWT1-Accelerator\\external\\e203",
+        "environment_variable": "KWT_E203_DIR",
+        "nonempty_directory": false,
+        "error": null
+      },
+      "missing_dependencies": [
+        "指定 E203/SoC/SDK 平台"
+      ]
+    },
+    {
+      "id": "external_techlib",
+      "category": "readiness",
+      "status": "BLOCKED",
+      "summary": "指定工艺标准单元库及 PVT/功耗资料：仅非空目录清点，未核验版本/内容/许可/兼容性",
+      "evidence": {
+        "path": "D:\\KWT1-Accelerator\\external\\techlib",
+        "environment_variable": "KWT_TECH_LIB_DIR",
+        "nonempty_directory": false,
+        "error": null
+      },
+      "missing_dependencies": [
+        "指定工艺标准单元库及 PVT/功耗资料"
+      ]
+    },
+    {
+      "id": "external_sram",
+      "category": "readiness",
+      "status": "BLOCKED",
+      "summary": "指定 SRAM 宏仿真/时序/功耗/面积资料：仅非空目录清点，未核验版本/内容/许可/兼容性",
+      "evidence": {
+        "path": "D:\\KWT1-Accelerator\\external\\sram",
+        "environment_variable": "KWT_SRAM_LIB_DIR",
+        "nonempty_directory": false,
+        "error": null
+      },
+      "missing_dependencies": [
+        "指定 SRAM 宏仿真/时序/功耗/面积资料"
+      ]
+    },
+    {
+      "id": "external_model",
+      "category": "readiness",
+      "status": "BLOCKED",
+      "summary": "指定模型源码/权重/配置：仅非空目录清点，未核验版本/内容/许可/兼容性",
+      "evidence": {
+        "path": "D:\\KWT1-Accelerator\\external\\model",
+        "environment_variable": "KWT_MODEL_DIR",
+        "nonempty_directory": false,
+        "error": null
+      },
+      "missing_dependencies": [
+        "指定模型源码/权重/配置"
+      ]
+    },
+    {
+      "id": "external_data",
+      "category": "readiness",
+      "status": "BLOCKED",
+      "summary": "合法 Speech Commands V2 数据及划分：仅非空目录清点，未核验版本/内容/许可/兼容性",
+      "evidence": {
+        "path": "D:\\KWT1-Accelerator\\external\\data",
+        "environment_variable": "KWT_DATA_DIR",
+        "nonempty_directory": false,
+        "error": null
+      },
+      "missing_dependencies": [
+        "合法 Speech Commands V2 数据及划分"
+      ]
+    },
+    {
+      "id": "verilog_tool_smoke",
+      "category": "stage1",
+      "status": "FAIL",
+      "summary": "Icarus 临时编译/运行冒烟；未使用项目 RTL，不是芯片功能验证",
+      "evidence": {
+        "compile": {
+          "command": [
+            "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\iverilog.CMD",
+            "-g2012",
+            "-s",
+            "tool_smoke",
+            "-o",
+            "C:\\Users\\pc\\AppData\\Local\\Packages\\sandbox.{d129edb8-f8f8-4531-84d7-97915a54b807}\\AC\\Temp\\kwt_tool_smoke_qtelenx1\\tool_smoke.vvp",
+            "C:\\Users\\pc\\AppData\\Local\\Packages\\sandbox.{d129edb8-f8f8-4531-84d7-97915a54b807}\\AC\\Temp\\kwt_tool_smoke_qtelenx1\\tool_smoke.v"
+          ],
+          "returncode": 3221225477,
+          "stdout": "",
+          "stderr": "",
+          "output_truncated": false
+        },
+        "run": null,
+        "temporary_files_removed": true,
+        "project_rtl_tested": false
+      },
+      "missing_dependencies": []
+    },
+    {
+      "id": "synthesis_tool_startup",
+      "category": "readiness",
+      "status": "BLOCKED",
+      "summary": "逻辑综合工具启动：仅 PATH/版本启动检查，不证明指定平台/工艺支持或许可可用",
+      "evidence": {
+        "yosys": {
+          "executable": null,
+          "probe": null,
+          "startup_ok": false
+        },
+        "dc_shell": {
+          "executable": null,
+          "probe": null,
+          "startup_ok": false
+        },
+        "genus": {
+          "executable": null,
+          "probe": null,
+          "startup_ok": false
+        }
+      },
+      "missing_dependencies": [
+        "逻辑综合工具启动可用且获授权的指定工具"
+      ]
+    },
+    {
+      "id": "riscv_toolchain_startup",
+      "category": "readiness",
+      "status": "BLOCKED",
+      "summary": "RISC-V 编译器启动：仅 PATH/版本启动检查，不证明指定平台/工艺支持或许可可用",
+      "evidence": {
+        "riscv32-unknown-elf-gcc": {
+          "executable": null,
+          "probe": null,
+          "startup_ok": false
+        },
+        "riscv64-unknown-elf-gcc": {
+          "executable": null,
+          "probe": null,
+          "startup_ok": false
+        }
+      },
+      "missing_dependencies": [
+        "RISC-V 编译器启动可用且获授权的指定工具"
+      ]
+    },
+    {
+      "id": "synthesis_inputs_inventory",
+      "category": "readiness",
+      "status": "BLOCKED",
+      "summary": "综合约束/RTL 清单清点；未创建最终脚本，不验证 SDC 有效性或 RTL 冻结",
+      "evidence": {
+        "sdc_files": [],
+        "filelists": []
+      },
+      "missing_dependencies": [
+        "经确认的 SDC/时钟复位/I/O/负载/时序例外依据",
+        "冻结 RTL、唯一顶层及编译顺序/宏清单"
+      ]
+    },
+    {
+      "id": "project_rtl_soc_verification",
+      "category": "project_validation",
+      "status": "BLOCKED",
+      "summary": "项目 RTL/SoC 与 12 次连续任务验证：缺少已核验依赖，本程序不执行",
+      "evidence": null,
+      "missing_dependencies": [
+        "队友实际源码/测试入口",
+        "冻结数值/布局/控制协议",
+        "向量与指定 E203 平台"
+      ]
+    },
+    {
+      "id": "project_accuracy_verification",
+      "category": "project_validation",
+      "status": "BLOCKED",
+      "summary": "真实 12 层精度与逐位一致性验收：缺少已核验依赖，本程序不执行",
+      "evidence": null,
+      "missing_dependencies": [
+        "指定真实模型/合法样本",
+        "冻结数值参考",
+        "RTL 实际输出及运行日志"
+      ]
+    },
+    {
+      "id": "project_synthesis_ppa",
+      "category": "project_validation",
+      "status": "BLOCKED",
+      "summary": "正式逻辑综合、150 MHz 时序、面积与功耗评估：缺少已核验依赖，本程序不执行",
+      "evidence": null,
+      "missing_dependencies": [
+        "获授权的指定综合工具与工艺/宏资料",
+        "冻结工程/SDC",
+        "真实任务活动与计时事件"
+      ]
+    },
+    {
+      "id": "innovation_experiment",
+      "category": "future",
+      "status": "NOT_RUN",
+      "summary": "创新方案未确定，本阶段未安排实验",
+      "evidence": null,
+      "missing_dependencies": []
+    },
+    {
+      "id": "final_submission_generation",
+      "category": "future",
+      "status": "NOT_RUN",
+      "summary": "正式网表/截图/成绩及提交包未安排生成",
+      "evidence": null,
+      "missing_dependencies": []
+    }
+  ],
+  "missing_dependencies": [
+    "RISC-V 编译器启动可用且获授权的指定工具",
+    "RTL 实际输出及运行日志",
+    "rtl 实际工程源码",
+    "soc 实际工程源码",
+    "software 实际工程源码",
+    "tb 实际工程源码",
+    "人工审阅并创建首个提交",
+    "冻结 RTL、唯一顶层及编译顺序/宏清单",
+    "冻结工程/SDC",
+    "冻结数值/布局/控制协议",
+    "冻结数值参考",
+    "合法 Speech Commands V2 数据及划分",
+    "向量与指定 E203 平台",
+    "完整官方赛题（含印刷第 1 页）及版本/更正公告确认",
+    "指定 E203/SoC/SDK 平台",
+    "指定 SRAM 宏仿真/时序/功耗/面积资料",
+    "指定工艺标准单元库及 PVT/功耗资料",
+    "指定模型源码/权重/配置",
+    "指定真实模型/合法样本",
+    "真实任务活动与计时事件",
+    "硬件设计定义.txt",
+    "硬件设计实现.txt",
+    "经确认的 SDC/时钟复位/I/O/负载/时序例外依据",
+    "获授权的指定综合工具与工艺/宏资料",
+    "逻辑综合工具启动可用且获授权的指定工具",
+    "队友实际源码/测试入口"
+  ],
+  "report_files": {
+    "json": "D:\\KWT1-Accelerator\\reports\\basic_check_20261016_211817_710957_72225f.json",
+    "markdown": "D:\\KWT1-Accelerator\\reports\\basic_check_20261016_211817_710957_72225f.md"
+  }
+}

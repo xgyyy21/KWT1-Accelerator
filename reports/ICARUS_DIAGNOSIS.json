@@ -1,0 +1,815 @@
+{
+  "time": "2026-10-16T21:34:47.598736+08:00",
+  "scope": "local installation and temporary environment smoke only",
+  "source": "module tool_smoke; initial begin\nif ((7 + 5) != 12) $fatal(1, \"arithmetic failed\");\n$display(\"KWT_TOOL_SMOKE_OK\"); $finish;\nend endmodule\n",
+  "aliases": {
+    "iverilog": {
+      "path": "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\iverilog.CMD",
+      "content": "@echo off\n\"C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\iverilog.exe\" %*\n"
+    },
+    "vvp": {
+      "path": "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\vvp.CMD",
+      "content": "@echo off\n\"C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\vvp.exe\" %*\n"
+    }
+  },
+  "files": {
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\iverilog-vpi.exe": {
+      "bytes": 50688,
+      "sha256": "1dce895641fed2614a7cd19c91ecf684c2cf00651eafef16373da61284ee98b2",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\iverilog.exe": {
+      "bytes": 88064,
+      "sha256": "803b8844af2cc8ed70b5f08b07ffa749901280e81339617ca3e72cbbb852bd2b",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\libbz2-1.dll": {
+      "bytes": 99146,
+      "sha256": "e996e8d18fa41407d80680adb9e416d916f7320e4559485ce3e3e5de811dca1d",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\libgcc_s_seh-1.dll": {
+      "bytes": 107699,
+      "sha256": "0692ada737d92c53f5a6c29d519ed810051cf73d9f53a7f90111135691dd1be1",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\libhistory8.dll": {
+      "bytes": 64044,
+      "sha256": "19bde7722b6754f34810afb4908cd234c9543dbf46f5068da5a498fb59d553dd",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\libreadline8.dll": {
+      "bytes": 255684,
+      "sha256": "3f57dacb09c1f1991fb92f4c70e83cf02683b75cddef1c203473acde97a1f9f6",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\libstdc++-6.dll": {
+      "bytes": 2024733,
+      "sha256": "8a675636ac025bc3c7f1139beca1748991c6646d539082a8e6d379eafa5b05ac",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\libtermcap-0.dll": {
+      "bytes": 45347,
+      "sha256": "c7450a34433e212b5081ff5e7a08630337be6e71d27f7c37989ab3654028b9e1",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\libwinpthread-1.dll": {
+      "bytes": 58109,
+      "sha256": "4acce6a2a692e90e93dfdaffe8050ca06308fae36e13e01f35e9ddd35128e399",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\vvp.exe": {
+      "bytes": 945664,
+      "sha256": "e2f442f4d5aa76e55c85c3ff77e4446fbfdb9946b7cfe8a2dff87f275da17b62",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\zlib1.dll": {
+      "bytes": 119026,
+      "sha256": "a26b41bb482967b170453c93edf8f108052ab00f0c7d1134761f625c085f175e",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\evcd2vcd.exe": {
+      "bytes": 476614,
+      "sha256": "abe6a65459046317df9bd3ae91fc7afc7e15bef664ebbebdf8242c1f0ae7efba",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\fst2vcd.exe": {
+      "bytes": 1551658,
+      "sha256": "f991344e6547597f3741cba2be7d04a3e4af71457025a8e91df7131ee53a17f9",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\fstminer.exe": {
+      "bytes": 1560066,
+      "sha256": "674d1546ab8623a1b2ea3f6bc901d31b4219404e079968d77d1aaf1d047ff238",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\ghwdump.exe": {
+      "bytes": 546306,
+      "sha256": "91926736284c9fcc218b0ddda4c840fd43dd0c6ad9161b7f0b12cebc9437ed56",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\gtkwave.exe": {
+      "bytes": 17537340,
+      "sha256": "305fe53392b96792bb752fd3cd35779baa75ab1bbf8818edad7bfff196073b6e",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libatk-1.0-0.dll": {
+      "bytes": 135615,
+      "sha256": "ee0843595798eb83eabf2802f6be68cd30a0dd78911a84d48146a9caf6d69fe9",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libbz2-1.dll": {
+      "bytes": 74400,
+      "sha256": "cde82b78524ba83ba94743417883e03e3311713ac0af87b50f5bc0335c5b77b6",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libcairo-2.dll": {
+      "bytes": 1001522,
+      "sha256": "f83a2d756056bc7734466d441f777e940444f4cdb0ee00ab7ee8d76ad0663b22",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libexpat-1.dll": {
+      "bytes": 219464,
+      "sha256": "8dbf061bf3a412ba638ad89b80fd867204372546c0455b345a85d955c63cc7d8",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libffi-6.dll": {
+      "bytes": 34176,
+      "sha256": "077ed959cd9ab1bf8f9e2ed248a0cb6492a18fd2ba283f52896125412ead121d",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libfontconfig-1.dll": {
+      "bytes": 320935,
+      "sha256": "4f96b6856b0244ec0fc8fd4d1e9254a04230c7d792f10cd74c19233bf271c076",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libfreetype-6.dll": {
+      "bytes": 677139,
+      "sha256": "dc82cea32a0a1ce4dc281b1ea2fd62a63803549c77f8485d73de6ea277d516f0",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libgcc_s_seh-1.dll": {
+      "bytes": 83150,
+      "sha256": "e298fa2e8729b17208ccd20b585b01ef58d10fb050eb03c72fdb04ea5462e766",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libgdk-win32-2.0-0.dll": {
+      "bytes": 768653,
+      "sha256": "3f84573219909b3b30a6d1b900304644e7d9097b3eac030f6e8ca6fa3a7207cd",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libgdk_pixbuf-2.0-0.dll": {
+      "bytes": 187881,
+      "sha256": "69b09466a7314718bffa5ca9babc1e1b903ced74990b58b57af09181c70ada92",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libgio-2.0-0.dll": {
+      "bytes": 1436430,
+      "sha256": "6dc15b19e23957b91bc8c887dde3508503388f58a2df6a4e480bb849472ec8cb",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libglib-2.0-0.dll": {
+      "bytes": 1132611,
+      "sha256": "83450b95155b8d3e802110a16c88404fb4204efe15b785de90d50559f226909c",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libgmodule-2.0-0.dll": {
+      "bytes": 26827,
+      "sha256": "9ddaac6204242d07198bbabb742a5ce497316bb88f3262288bf4b7296fbcef35",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libgobject-2.0-0.dll": {
+      "bytes": 313198,
+      "sha256": "e8799e92cdb1767dd05f86f98a7185f36fcf05036dd4524148e9326b37fc84bc",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libgraphite2.dll": {
+      "bytes": 226591,
+      "sha256": "d968f72d9d0fd28331148452d02226e2e5af51a5d89ad3fe5f7c1a6483d39a1f",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libgtk-win32-2.0-0.dll": {
+      "bytes": 3942032,
+      "sha256": "934b3a155483a8cee02ab4b59d78cff0894be3a9809ab7a627a2657590f3a768",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libharfbuzz-0.dll": {
+      "bytes": 650125,
+      "sha256": "7ccf4f209e64d28f5ba1fd4c6b768136fb209e159723ba8f13f89397690eaa8a",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libiconv-2.dll": {
+      "bytes": 1056753,
+      "sha256": "1d1076c36d0d2b7836cf9ff949212e3133bdb32db8885d2fdca21653aacfee95",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libintl-8.dll": {
+      "bytes": 133779,
+      "sha256": "1f39be5f07c32f6a445e51065dbce227ddb83f4fdb899e8a5dcfcbb881eec082",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\liblzma-5.dll": {
+      "bytes": 153325,
+      "sha256": "a7aefdece970bbe3094b5f725f21cb1e5a8134d830031ffdbb12f0b20fa50fc5",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libpango-1.0-0.dll": {
+      "bytes": 259759,
+      "sha256": "af8ceba843baaec579077278d65c4f5724cba08d5306c60b3ba2e6fbf5fd2c10",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libpangocairo-1.0-0.dll": {
+      "bytes": 64920,
+      "sha256": "53f3fb9ce4986d9ebe65e235aee1013ae723a8c866f1136c06d25d64308c652f",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libpangoft2-1.0-0.dll": {
+      "bytes": 89578,
+      "sha256": "8e04409bf9092979474f8d7ae6872c089b7e8e0a1b574da04d285d49a70b6694",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libpangowin32-1.0-0.dll": {
+      "bytes": 97030,
+      "sha256": "7de67c451b31ba1a98bf2b81b4803684ae34bbe9f7138ac05bf9b36655c80508",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libpcre-1.dll": {
+      "bytes": 285375,
+      "sha256": "a7a86d2caa72e3ef6a0852f380a9dd5efa22e4a63e082d7623772d6d4328f2e6",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libpixman-1-0.dll": {
+      "bytes": 682872,
+      "sha256": "fa202a99b8a14c8e023bbf6c4e2a83700c50d96c78896d0fc117cca870f3921f",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libpng16-16.dll": {
+      "bytes": 231566,
+      "sha256": "c685b578aa2126a73475a2305fdcf1e7e7d72c196d27852da6552c713a368f54",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libstdc++-6.dll": {
+      "bytes": 1432713,
+      "sha256": "f5ff110ea78a0b985fdbafab2b1f3fc6a8f860568002c9cb9c766048faf59a7f",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\libwinpthread-1.dll": {
+      "bytes": 57379,
+      "sha256": "b5907263ff1cc16346f1948b92a8a6ddc50612b25ecd743ca18e94a2a5df0024",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\lxt2miner.exe": {
+      "bytes": 540570,
+      "sha256": "776253dc382d8a6ebe1720d27e07dcff14459d747f42bc8815db075b715c3e9e",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\lxt2vcd.exe": {
+      "bytes": 554770,
+      "sha256": "82b2f2dec690c61c6308a32eec6bdb4e7494c182c4a45851f032d8ca478b6b93",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\rtlbrowse.exe": {
+      "bytes": 2065757,
+      "sha256": "64754a351fcb42c33720f6986a34a7d9589c8b3bf809d0ebf7f75040547ba756",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\shmidcat.exe": {
+      "bytes": 426331,
+      "sha256": "1469406b213f319866c35fb888972192992341ba53216c07b2155caacbf1160f",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\tcl86.dll": {
+      "bytes": 1608855,
+      "sha256": "4edfacc34ff1c3774a920df6bc3dc35e70fab9a912f7935176e1c15ac80ead7a",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\tk86.dll": {
+      "bytes": 1449582,
+      "sha256": "29adefc71bc030ab3023b2f83ca31f36170f37c1ceb3b64ee93f611faf1e6546",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\twinwave.exe": {
+      "bytes": 439487,
+      "sha256": "1a84643f44e59b806fd424b99c99482ad326b1b6e52d257e4bc31798073ea8a8",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\vcd2fst.exe": {
+      "bytes": 1618927,
+      "sha256": "7f6154a2bf5233545a2b6ea99e92e15dfa44fc80b96c84af441acf780e6a51a8",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\vcd2lxt.exe": {
+      "bytes": 632715,
+      "sha256": "df833a90ac137555565d3da82c7a492346a310cd190c3bea0f0b779096bcc530",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\vcd2lxt2.exe": {
+      "bytes": 600188,
+      "sha256": "c04edee3159ec8222a64b49c1bdbe09cd4c7631286aed2580a486041baaeb410",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\vcd2vzt.exe": {
+      "bytes": 654821,
+      "sha256": "836f06b2299585e0077c9e3ee0d49ba790c0756d71c66ef3f1114399668f1647",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\vermin.exe": {
+      "bytes": 1095545,
+      "sha256": "cd54361bd755bb3b36e8648537e52ef6428535ddc6c642fd349fe53951ea51db",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\vzt2vcd.exe": {
+      "bytes": 621245,
+      "sha256": "4a61e2714466454c28378dd9180abf7ea40536c21b6ca5d3935478a8acae5880",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\vztminer.exe": {
+      "bytes": 605982,
+      "sha256": "00f9aa4338fc27c1b2bd0e860162af0f93f753a0c50a0fe174f7602c275800ed",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\xml2stems.exe": {
+      "bytes": 679025,
+      "sha256": "92587d008381944cc19b82964448fd6ee138740900cab597e6302122e680b697",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\bin\\zlib1.dll": {
+      "bytes": 93830,
+      "sha256": "4e77961253cf1ae0981d7f3384f5278da77cafa3d776550d810c1c43f73bced4",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-ani.dll": {
+      "bytes": 27631,
+      "sha256": "698f5b3357675b15213f899fdb78dc22820d22bcb78ac9327d680e395d88be69",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-icns.dll": {
+      "bytes": 22572,
+      "sha256": "02c21c10e39adfef5a04fe58232e6ba2b44eed78880b87a146908e647862555c",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-pnm.dll": {
+      "bytes": 27064,
+      "sha256": "d86d1b7186fe369c8d3e52fe596ab58d72efad0c02e076f95e549b9278f32a36",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-qtif.dll": {
+      "bytes": 23917,
+      "sha256": "615111cb6eef799c0b428d11dd00b9a7867800538538dcd6d20638c959d834d4",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-svg.dll": {
+      "bytes": 20465,
+      "sha256": "ae43dcefb9f4e5da55fa3807e746af40f53e34cbbd5ca32a236d25e9e14e4d18",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-tga.dll": {
+      "bytes": 27482,
+      "sha256": "969b952db24f60ffa8f6c20273377c98c335bb1b97a8bc7859d38ebda85f5b2e",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-xbm.dll": {
+      "bytes": 60391,
+      "sha256": "6ee25ca94aa9d84023c18a9e45a03d382a00243c09969f242b1ef1569470078c",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\gtkwave\\lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-xpm.dll": {
+      "bytes": 74146,
+      "sha256": "66e674eb0f5893590bf50c6b638771f3c65d6ba247ae4ccdcffbe838bae20f92",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\blif-s.conf": {
+      "bytes": 96,
+      "sha256": "3ce285013d51a0f632be229a513c17d4f8a314319c0e7d7fbbe53a2339580e1c"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\blif.conf": {
+      "bytes": 96,
+      "sha256": "3ce285013d51a0f632be229a513c17d4f8a314319c0e7d7fbbe53a2339580e1c"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\blif.tgt": {
+      "bytes": 832732,
+      "sha256": "c9e31e9d14cf3ae76c13062b4a94cf700b81a57643d748206c94c674ed52593c",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\ivl.exe": {
+      "bytes": 2287104,
+      "sha256": "5361827e163d6e1367a4bff251e077de9e88766497473adac2e12e700673d77c",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\ivlpp.exe": {
+      "bytes": 134144,
+      "sha256": "30d5089d3ac3d08e6d9f94c97ae55a9c0791df0066f5755c0941afb80f38fda4",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\libbz2-1.dll": {
+      "bytes": 99146,
+      "sha256": "e996e8d18fa41407d80680adb9e416d916f7320e4559485ce3e3e5de811dca1d",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\libgcc_s_seh-1.dll": {
+      "bytes": 107699,
+      "sha256": "0692ada737d92c53f5a6c29d519ed810051cf73d9f53a7f90111135691dd1be1",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\libhistory8.dll": {
+      "bytes": 64044,
+      "sha256": "19bde7722b6754f34810afb4908cd234c9543dbf46f5068da5a498fb59d553dd",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\libreadline8.dll": {
+      "bytes": 255684,
+      "sha256": "3f57dacb09c1f1991fb92f4c70e83cf02683b75cddef1c203473acde97a1f9f6",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\libstdc++-6.dll": {
+      "bytes": 2024733,
+      "sha256": "8a675636ac025bc3c7f1139beca1748991c6646d539082a8e6d379eafa5b05ac",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\libtermcap-0.dll": {
+      "bytes": 45347,
+      "sha256": "c7450a34433e212b5081ff5e7a08630337be6e71d27f7c37989ab3654028b9e1",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\libwinpthread-1.dll": {
+      "bytes": 58109,
+      "sha256": "4acce6a2a692e90e93dfdaffe8050ca06308fae36e13e01f35e9ddd35128e399",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\null-s.conf": {
+      "bytes": 65,
+      "sha256": "8a4b79342b5d58fcd576238e928403c986bf623e5e9c63fc7e199f5c5bf57fae"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\null.conf": {
+      "bytes": 18,
+      "sha256": "313ef43d707cf69cabac9b02c1cee5223b7179007aa627c0963a567691751cd0"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\null.tgt": {
+      "bytes": 91665,
+      "sha256": "32b7e81acce9a5c97da779a508daed9bcb161338ecbad32d62e5661de2a7e652",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\pcb-s.conf": {
+      "bytes": 95,
+      "sha256": "2f184346cab431bfa26ef1bf0a906a8d78469aae495f93974896ec952dee3657"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\pcb.conf": {
+      "bytes": 48,
+      "sha256": "5a84492e9e830658590cc28d5c39d8b137124ac2f6e5c111a838d91b99aa3cb9"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\pcb.tgt": {
+      "bytes": 1674488,
+      "sha256": "416489a9cbe8d523c5c9c403d158e4007b6a2eb5d41642fe577eb9a4a42db7f5",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\sizer-s.conf": {
+      "bytes": 97,
+      "sha256": "03a8f24468995e87b23840915b613abd339843a6ec6d0931b57ea56720ff415d"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\sizer.conf": {
+      "bytes": 97,
+      "sha256": "03a8f24468995e87b23840915b613abd339843a6ec6d0931b57ea56720ff415d"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\sizer.tgt": {
+      "bytes": 811683,
+      "sha256": "32f51e4000565c0033485609fbb1fde94e7ed28b9847a09e1caecce23047a3d7",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\stub-s.conf": {
+      "bytes": 96,
+      "sha256": "ca77cff51d74ad77e33efd589c82fb410823ad88a5933a5e4aca86251250b302"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\stub.conf": {
+      "bytes": 49,
+      "sha256": "03c9241decbe4502f087790fe7eaf6568fb7992788fbf56be0f69737a98c67fb"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\stub.tgt": {
+      "bytes": 460530,
+      "sha256": "8291351c824ef78b23dc2af74a4555e6a8ebee2b0aef09c7865fb5b9eef444b8",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\vhdl-s.conf": {
+      "bytes": 103,
+      "sha256": "d9b3d7de12e25e14c86738110f4e2baf3711f60a161e34ad329104f13ccabc5d"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\vhdl.conf": {
+      "bytes": 86,
+      "sha256": "7f8563bd0a386bedf111f5f23ce827b8efd6749cb3b104cf236358324ccd840a"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\vhdl.tgt": {
+      "bytes": 5682764,
+      "sha256": "970ecfa6c81d849b391234db44ec1f5e724fd6beeaa9704a7955b1b5d21a6686",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\vhdlpp.exe": {
+      "bytes": 526848,
+      "sha256": "a9e68bbdaaa3403adc963e282c5fba82d7f844dd08518685c89452d80acab99f",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\vlog95-s.conf": {
+      "bytes": 141,
+      "sha256": "f4f09237dc90f1e4e58658b2bb14bb446e93619c911b8ead10cc0240f64cad51"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\vlog95.conf": {
+      "bytes": 57,
+      "sha256": "47d4a923819bdf601c5fa62065b6787f81d2ea64cb0e6b33c33c4e9001d356c0"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\vlog95.tgt": {
+      "bytes": 746009,
+      "sha256": "30130912e33e0730060e7091fe0101dd956478ddb696617f1646ae66239b3a93",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\vvp-s.conf": {
+      "bytes": 150,
+      "sha256": "65925ac28b98b5c6209ccc490550f8a23c4ad20fd6dc93805d15fee84d036186"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\vvp.conf": {
+      "bytes": 103,
+      "sha256": "8a3e9cba1d38069658771ff7ab75f39ab1df23c1b629dc832b536dbc9d67f496"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\vvp.tgt": {
+      "bytes": 881391,
+      "sha256": "ef72a907024b7685501c612ce7a7260a8e86e5df0407fb0a23320414041757ee",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    },
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\zlib1.dll": {
+      "bytes": 119026,
+      "sha256": "a26b41bb482967b170453c93edf8f108052ab00f0c7d1134761f625c085f175e",
+      "valid_pe_signature": true,
+      "machine_hex": "0x8664"
+    }
+  },
+  "runs": [
+    {
+      "label": "direct_version",
+      "command": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\iverilog.exe",
+        "-V"
+      ],
+      "returncode": 0,
+      "windows_hex": "0x00000000",
+      "stdout": "Icarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)\n\nCopyright (c) 2000-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\nIcarus Verilog Preprocessor version 12.0 (devel) (s20150603-1539-g2693dd32b)\n\nCopyright (c) 1999-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\nIcarus Verilog Parser/Elaborator version 12.0 (devel) (s20150603-1539-g2693dd32b)\n\nCopyright (c) 1998-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\n FLAGS DLL vvp.tgt\nvvp.tgt: Icarus Verilog VVP Code Generator 12.0 (devel) (s20150603-1539-g2693dd32b)\n\nCopyright (c) 2001-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\n",
+      "stderr": ""
+    },
+    {
+      "label": "direct_compile_verbose",
+      "command": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\iverilog.exe",
+        "-v",
+        "-g2012",
+        "-s",
+        "tool_smoke",
+        "-o",
+        "direct.vvp",
+        "tool_smoke.sv"
+      ],
+      "returncode": 0,
+      "windows_hex": "0x00000000",
+      "stdout": "Using language generation: IEEE1800-2012,no-specify,xtypes,icarus-misc\nPARSING INPUT\nELABORATING DESIGN\nRUNNING FUNCTORS\n ... Iteration detected 0 optimizations.\n ... Look for dangling constants\n ... done\n ... scan for dangling signal and event nodes. (scomplete=F, ecomplete=F)\n ... 1 iterations deleted 0 dangling signals and 0 events.\n ... done\nCALCULATING ISLANDS\nCODE GENERATION\n ... invoking target_design\nDONE.\nSTATISTICS\nlex_string: add_count=103 hit_count=5\nIcarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)\n\nCopyright (c) 2000-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\ntranslate: C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\ivlpp -v -L -F\"C:\\Users\\pc\\AppData\\Local\\Packages\\sandbox.{71c0ef7c-dfee-431c-86e7-0124abf31199}\\AC\\Temp\\ivrlg23264\" -f\"C:\\Users\\pc\\AppData\\Local\\Packages\\sandbox.{71c0ef7c-dfee-431c-86e7-0124abf31199}\\AC\\Temp\\ivrlg3264\" -p\"C:\\Users\\pc\\AppData\\Local\\Packages\\sandbox.{71c0ef7c-dfee-431c-86e7-0124abf31199}\\AC\\Temp\\ivrli3264\" |C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\ivl -v -C\"C:\\Users\\pc\\AppData\\Local\\Packages\\sandbox.{71c0ef7c-dfee-431c-86e7-0124abf31199}\\AC\\Temp\\ivrlh3264\" -C\"C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\vvp.conf\" -- -\n",
+      "stderr": "Icarus Verilog Preprocessor version 12.0 (devel) (s20150603-1539-g2693dd32b)\n\nCopyright (c) 1999-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n -F cprop ...\n -F nodangle ...\n"
+    },
+    {
+      "label": "direct_compile_no_verbose",
+      "command": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tool_smoke",
+        "-o",
+        "direct_plain.vvp",
+        "tool_smoke.sv"
+      ],
+      "returncode": 3221225477,
+      "windows_hex": "0xC0000005",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "wrapper_compile_no_verbose",
+      "command": [
+        "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\iverilog.CMD",
+        "-g2012",
+        "-s",
+        "tool_smoke",
+        "-o",
+        "wrapper.vvp",
+        "tool_smoke.sv"
+      ],
+      "returncode": 3221225477,
+      "windows_hex": "0xC0000005",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "direct_vvp_run",
+      "command": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\vvp.exe",
+        "direct_plain.vvp"
+      ],
+      "returncode": 0,
+      "windows_hex": "0x00000000",
+      "stdout": "KWT_TOOL_SMOKE_OK\ntool_smoke.sv:3: $finish called at 0 (1s)\n",
+      "stderr": ""
+    },
+    {
+      "label": "wrapper_vvp_run",
+      "command": [
+        "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\vvp.CMD",
+        "wrapper.vvp"
+      ],
+      "returncode": 0,
+      "windows_hex": "0x00000000",
+      "stdout": "KWT_TOOL_SMOKE_OK\ntool_smoke.sv:3: $finish called at 0 (1s)\n",
+      "stderr": ""
+    },
+    {
+      "label": "direct_vvp_verbose_compiled_artifact",
+      "command": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\vvp.exe",
+        "direct.vvp"
+      ],
+      "returncode": 0,
+      "windows_hex": "0x00000000",
+      "stdout": "KWT_TOOL_SMOKE_OK\ntool_smoke.sv:3: $finish called at 0 (1s)\n",
+      "stderr": ""
+    },
+    {
+      "label": "wrapper_compile_verbose",
+      "command": [
+        "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\iverilog.CMD",
+        "-v",
+        "-g2012",
+        "-s",
+        "tool_smoke",
+        "-o",
+        "wrapper_verbose.vvp",
+        "tool_smoke.sv"
+      ],
+      "returncode": 3221225477,
+      "windows_hex": "0xC0000005",
+      "stdout": "Using language generation: IEEE1800-2012,no-specify,xtypes,icarus-misc\nPARSING INPUT\nELABORATING DESIGN\nRUNNING FUNCTORS\n ... Iteration detected 0 optimizations.\n ... Look for dangling constants\n ... done\n ... scan for dangling signal and event nodes. (scomplete=F, ecomplete=F)\n ... 1 iterations deleted 0 dangling signals and 0 events.\n ... done\nCALCULATING ISLANDS\nCODE GENERATION\n ... invoking target_design\nDONE.\nSTATISTICS\nlex_string: add_count=103 hit_count=5\nIcarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)\n\nCopyright (c) 2000-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\ntranslate: C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\ivlpp -v -L -F\"C:\\Users\\pc\\AppData\\Local\\Packages\\sandbox.{8008b013-f8fb-4d0d-b559-45e84182d98c}\\AC\\Temp\\ivrlg256e2\" -f\"C:\\Users\\pc\\AppData\\Local\\Packages\\sandbox.{8008b013-f8fb-4d0d-b559-45e84182d98c}\\AC\\Temp\\ivrlg56e2\" -p\"C:\\Users\\pc\\AppData\\Local\\Packages\\sandbox.{8008b013-f8fb-4d0d-b559-45e84182d98c}\\AC\\Temp\\ivrli56e2\" |C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\ivl -v -C\"C:\\Users\\pc\\AppData\\Local\\Packages\\sandbox.{8008b013-f8fb-4d0d-b559-45e84182d98c}\\AC\\Temp\\ivrlh56e2\" -C\"C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl\\vvp.conf\" -- -\n",
+      "stderr": "Icarus Verilog Preprocessor version 12.0 (devel) (s20150603-1539-g2693dd32b)\n\nCopyright (c) 1999-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n -F cprop ...\n -F nodangle ...\n"
+    },
+    {
+      "label": "wrapper_vvp_verbose_compiled_artifact",
+      "command": [
+        "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\vvp.CMD",
+        "wrapper_verbose.vvp"
+      ],
+      "returncode": 0,
+      "windows_hex": "0x00000000",
+      "stdout": "KWT_TOOL_SMOKE_OK\ntool_smoke.sv:3: $finish called at 0 (1s)\n",
+      "stderr": ""
+    },
+    {
+      "label": "direct_compile_workspace_temp",
+      "command": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tool_smoke",
+        "-o",
+        "workspace_temp.vvp",
+        "tool_smoke.sv"
+      ],
+      "returncode": 3221225477,
+      "windows_hex": "0xC0000005",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "direct_vvp_workspace_temp",
+      "command": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\vvp.exe",
+        "workspace_temp.vvp"
+      ],
+      "returncode": 0,
+      "windows_hex": "0x00000000",
+      "stdout": "KWT_TOOL_SMOKE_OK\ntool_smoke.sv:3: $finish called at 0 (1s)\n",
+      "stderr": ""
+    },
+    {
+      "label": "isolated_path_compile",
+      "command": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tool_smoke",
+        "-o",
+        "isolated.vvp",
+        "tool_smoke.sv"
+      ],
+      "returncode": 3221225477,
+      "windows_hex": "0xC0000005",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "direct_preprocess_only",
+      "command": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin\\iverilog.exe",
+        "-g2012",
+        "-E",
+        "-o",
+        "preprocessed.sv",
+        "tool_smoke.sv"
+      ],
+      "returncode": 0,
+      "windows_hex": "0x00000000",
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "process_local_temp_override": {
+    "TEMP": "D:\\KWT1-Accelerator\\tmp\\icarus_probe",
+    "TMP": "D:\\KWT1-Accelerator\\tmp\\icarus_probe"
+  },
+  "isolated_process_path": "C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\bin;C:\\Users\\pc\\AppData\\Local\\Programs\\iverilog\\app\\lib\\ivl;C:\\Windows\\System32",
+  "environment_inventory": {
+    "PATH_entry_count": 35,
+    "custom_iverilog_ivl_vvp_variables": [],
+    "note": "Full personal PATH omitted from versioned report; tested isolated child PATH and short TEMP/TMP without global changes."
+  },
+  "outside_sandbox_observed": {
+    "command": [
+      "C:/Users/pc/AppData/Local/Programs/iverilog/app/bin/iverilog.exe",
+      "-g2012",
+      "-s",
+      "tool_smoke",
+      "-o",
+      "outside_sandbox.vvp",
+      "tool_smoke.sv"
+    ],
+    "compile_returncode": 0,
+    "run_returncode": 0,
+    "observed_stdout": "COMPILE_EXIT=0\nKWT_TOOL_SMOKE_OK\ntool_smoke.sv:3: $finish called at 0 (1s)\nRUN_EXIT=0\n",
+    "provenance": "approved exec_command in PowerShell, same workspace temporary source, outside restricted sandbox"
+  }
+}
