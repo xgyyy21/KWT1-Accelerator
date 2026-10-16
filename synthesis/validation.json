@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "time": "2026-10-16T23:51:12.907543+08:00",
+  "runner": {
+    "path": "D:\\KWT1-Accelerator\\synthesis\\flow.py",
+    "sha256": "bf4abfcc1f4dce9b96049246376a44450f1e598b8256eae360c06640a100e7c9",
+    "bytes": 15941
+  },
+  "verification_script": {
+    "path": "D:\\KWT1-Accelerator\\synthesis\\verify.py",
+    "sha256": "ba994899bcb64dee4a3a09ddb507bea07c992e5d0cc14d277bd92a13f34bbc33",
+    "bytes": 5264
+  },
+  "git": {
+    "commit": "b05e081ea393dd3bc16d9a71fb9ae64cdaf9f9fe",
+    "branch": "codex/stage3a-synthesis-prep",
+    "dirty": true,
+    "commands": {
+      "commit": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:51:12.908546+08:00",
+        "returncode": 0,
+        "stdout": "b05e081ea393dd3bc16d9a71fb9ae64cdaf9f9fe\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:51:12.976144+08:00"
+      },
+      "branch": {
+        "argv": [
+          "git",
+          "branch",
+          "--show-current"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:51:12.976144+08:00",
+        "returncode": 0,
+        "stdout": "codex/stage3a-synthesis-prep\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:51:13.044515+08:00"
+      },
+      "worktree": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain=v1",
+          "--untracked-files=all"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:51:13.044515+08:00",
+        "returncode": 0,
+        "stdout": "?? reports/STAGE2A_LOCAL_AUDIT.json\n?? reports/STAGE2A_LOCAL_AUDIT.md\n?? reports/STAGE3A_SYNTHESIS_PREP.md\n?? reports/basic_check_20261016_214831_212370_009413.json\n?? reports/basic_check_20261016_214831_212370_009413.md\n?? synthesis/README.md\n?? synthesis/flow.py\n?? synthesis/runs/20261016_234108_environment_7a9e37f3/commands.log\n?? synthesis/runs/20261016_234108_environment_7a9e37f3/report.json\n?? synthesis/runs/20261016_234129_generic_5ec2762c/commands.log\n?? synthesis/runs/20261016_234129_generic_5ec2762c/report.json\n?? synthesis/runs/20261016_234210_environment_9ab34613/commands.log\n?? synthesis/runs/20261016_234210_environment_9ab34613/report.json\n?? synthesis/runs/20261016_234304_environment_2c069586/commands.log\n?? synthesis/runs/20261016_234304_environment_2c069586/report.json\n?? synthesis/runs/20261016_234423_generic_1f576711/commands.log\n?? synthesis/runs/20261016_234423_generic_1f576711/report.json\n?? synthesis/smoke/files.f\n?? synthesis/smoke/smoke.v\n?? synthesis/validation.json\n?? synthesis/verify.py\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:51:13.153117+08:00"
+      }
+    }
+  },
+  "checks": [
+    "PASS: missing executable returns 2, writes BLOCKED logs and null PPA; no netlist",
+    "PASS: Git snapshot and source SHA-256 match actual inputs",
+    "PASS: SDC hash recorded without claiming application or timing analysis",
+    "PASS: invalid top rejected with FAIL and retained report",
+    "PASS: nonzero exit and timeout remain failures",
+    "PASS: two-run comparison shows missing metrics as BLOCKED",
+    "PASS: actual Icarus simulation checks reset, 255+255 carry, enable hold, addition and reset priority"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-c",
+        "raise SystemExit(7)"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:51:12.226780+08:00",
+      "returncode": 7,
+      "stdout": "",
+      "stderr": "",
+      "status": "FAIL",
+      "finished_at": "2026-10-16T23:51:12.304440+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-c",
+        "import time; time.sleep(2)"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:51:12.304440+08:00",
+      "returncode": null,
+      "stdout": "",
+      "stderr": "",
+      "status": "FAIL",
+      "error": "timeout after 0.2s",
+      "finished_at": "2026-10-16T23:51:12.534430+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\iverilog.CMD",
+        "-g2012",
+        "-s",
+        "smoke_check",
+        "-o",
+        "D:\\KWT1-Accelerator\\tmp\\stage3a_verify_rcl6x1sm\\sim.vvp",
+        "D:\\KWT1-Accelerator\\synthesis\\smoke\\smoke.v",
+        "D:\\KWT1-Accelerator\\tmp\\stage3a_verify_rcl6x1sm\\smoke_check.v"
+      ],
+      "cwd": "D:\\KWT1-Accelerator\\tmp\\stage3a_verify_rcl6x1sm",
+      "started_at": "2026-10-16T23:51:12.586015+08:00",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:51:12.769548+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\vvp.CMD",
+        "D:\\KWT1-Accelerator\\tmp\\stage3a_verify_rcl6x1sm\\sim.vvp"
+      ],
+      "cwd": "D:\\KWT1-Accelerator\\tmp\\stage3a_verify_rcl6x1sm",
+      "started_at": "2026-10-16T23:51:12.793847+08:00",
+      "returncode": 0,
+      "stdout": "STAGE3A_SMOKE_SIM_OK\r\nD:\\KWT1-Accelerator\\tmp\\stage3a_verify_rcl6x1sm\\smoke_check.v:17: $finish called at 46 (1s)\r\n",
+      "stderr": "",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:51:12.903456+08:00"
+    }
+  ],
+  "testbench_source": "module smoke_check;\nreg clk=0, reset=1, enable=0;\nreg [7:0] a=0,b=0;\nwire [8:0] q;\nsmoke dut(clk,reset,enable,a,b,q);\nalways #5 clk=~clk;\ninitial begin\n  @(posedge clk); #1; if(q !== 0) $fatal(1,\"reset\");\n  @(negedge clk); reset=0; enable=1; a=255; b=255;\n  @(posedge clk); #1; if(q !== 510) $fatal(1,\"carry\");\n  @(negedge clk); enable=0; a=1; b=2;\n  @(posedge clk); #1; if(q !== 510) $fatal(1,\"hold\");\n  @(negedge clk); enable=1;\n  @(posedge clk); #1; if(q !== 3) $fatal(1,\"addition\");\n  @(negedge clk); reset=1;\n  @(posedge clk); #1; if(q !== 0) $fatal(1,\"reset priority\");\n  $display(\"STAGE3A_SMOKE_SIM_OK\"); $finish;\nend\nendmodule\n",
+  "comparison_output": "| Label | Commit | Synthesis | Generic cells | Area mm2 | Slack ns | Power mW | Critical path |\n|---|---|---|---|---|---|---|---|\n| negative-validation | b05e081ea393 | BLOCKED | NOT_RUN | BLOCKED | BLOCKED | BLOCKED | BLOCKED |\n| negative-validation | b05e081ea393 | BLOCKED | NOT_RUN | BLOCKED | BLOCKED | BLOCKED | BLOCKED |\n\nGeneric practice only. Compare matching tools, constraints, libraries, task windows and configurations after review; no official PPA inference.\n",
+  "limitations": "No Yosys installed: successful synthesis/netlist/statistics path is NOT_RUN. Icarus simulation is not synthesis or formal equivalence."
+}

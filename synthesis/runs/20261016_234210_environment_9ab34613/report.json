@@ -1,0 +1,763 @@
+{
+  "schema_version": 1,
+  "kind": "environment",
+  "started_at": "2026-10-16T23:42:10.139382+08:00",
+  "git": {
+    "commit": "b05e081ea393dd3bc16d9a71fb9ae64cdaf9f9fe",
+    "branch": "codex/stage3a-synthesis-prep",
+    "dirty": true,
+    "commands": {
+      "commit": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:10.139382+08:00",
+        "returncode": 0,
+        "stdout": "b05e081ea393dd3bc16d9a71fb9ae64cdaf9f9fe\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:10.188265+08:00"
+      },
+      "branch": {
+        "argv": [
+          "git",
+          "branch",
+          "--show-current"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:10.188265+08:00",
+        "returncode": 0,
+        "stdout": "codex/stage3a-synthesis-prep\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:10.233833+08:00"
+      },
+      "worktree": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain=v1",
+          "--untracked-files=all"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:10.233833+08:00",
+        "returncode": 0,
+        "stdout": "?? reports/STAGE2A_LOCAL_AUDIT.json\n?? reports/STAGE2A_LOCAL_AUDIT.md\n?? reports/basic_check_20261016_214831_212370_009413.json\n?? reports/basic_check_20261016_214831_212370_009413.md\n?? synthesis/flow.py\n?? synthesis/runs/20261016_234108_environment_7a9e37f3/commands.log\n?? synthesis/runs/20261016_234108_environment_7a9e37f3/report.json\n?? synthesis/runs/20261016_234129_generic_5ec2762c/commands.log\n?? synthesis/runs/20261016_234129_generic_5ec2762c/report.json\n?? synthesis/smoke/files.f\n?? synthesis/smoke/smoke.v\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:10.287720+08:00"
+      }
+    }
+  },
+  "runner": {
+    "path": "D:\\KWT1-Accelerator\\synthesis\\flow.py",
+    "sha256": "6ba6e240f3692b73492b236e51545281bff341ae255642e4403d0bac0ba79779",
+    "bytes": 15629
+  },
+  "tools": {
+    "yosys": {
+      "resolved_path": null,
+      "version_probe": {
+        "argv": [
+          "yosys",
+          "-V"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:10.315711+08:00",
+        "returncode": null,
+        "stdout": "",
+        "stderr": "",
+        "status": "BLOCKED",
+        "error": "[WinError 2] 系统找不到指定的文件。",
+        "finished_at": "2026-10-16T23:42:10.321979+08:00"
+      },
+      "usability": "BLOCKED"
+    },
+    "dc_shell": {
+      "resolved_path": null,
+      "version_probe": {
+        "argv": [
+          "dc_shell",
+          "-version"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:10.348547+08:00",
+        "returncode": null,
+        "stdout": "",
+        "stderr": "",
+        "status": "BLOCKED",
+        "error": "[WinError 2] 系统找不到指定的文件。",
+        "finished_at": "2026-10-16T23:42:10.354554+08:00"
+      },
+      "usability": "BLOCKED"
+    },
+    "dc_shell-t": {
+      "resolved_path": null,
+      "version_probe": {
+        "argv": [
+          "dc_shell-t",
+          "-version"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:10.382436+08:00",
+        "returncode": null,
+        "stdout": "",
+        "stderr": "",
+        "status": "BLOCKED",
+        "error": "[WinError 2] 系统找不到指定的文件。",
+        "finished_at": "2026-10-16T23:42:10.388950+08:00"
+      },
+      "usability": "BLOCKED"
+    },
+    "genus": {
+      "resolved_path": null,
+      "version_probe": {
+        "argv": [
+          "genus",
+          "-version"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:10.425289+08:00",
+        "returncode": null,
+        "stdout": "",
+        "stderr": "",
+        "status": "BLOCKED",
+        "error": "[WinError 2] 系统找不到指定的文件。",
+        "finished_at": "2026-10-16T23:42:10.434814+08:00"
+      },
+      "usability": "BLOCKED"
+    },
+    "verilator": {
+      "resolved_path": null,
+      "version_probe": {
+        "argv": [
+          "verilator",
+          "--version"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:10.477120+08:00",
+        "returncode": null,
+        "stdout": "",
+        "stderr": "",
+        "status": "BLOCKED",
+        "error": "[WinError 2] 系统找不到指定的文件。",
+        "finished_at": "2026-10-16T23:42:10.488118+08:00"
+      },
+      "usability": "BLOCKED"
+    },
+    "iverilog": {
+      "resolved_path": "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\iverilog.CMD",
+      "version_probe": {
+        "argv": [
+          "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\iverilog.CMD",
+          "-V"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:10.508125+08:00",
+        "returncode": 0,
+        "stdout": "Icarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)\r\n\r\nCopyright (c) 2000-2021 Stephen Williams (steve@icarus.com)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\nIcarus Verilog Preprocessor version 12.0 (devel) (s20150603-1539-g2693dd32b)\r\n\r\nCopyright (c) 1999-2021 Stephen Williams (steve@icarus.com)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\nIcarus Verilog Parser/Elaborator version 12.0 (devel) (s20150603-1539-g2693dd32b)\r\n\r\nCopyright (c) 1998-2021 Stephen Williams (steve@icarus.com)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\n FLAGS DLL vvp.tgt\r\nvvp.tgt: Icarus Verilog VVP Code Generator 12.0 (devel) (s20150603-1539-g2693dd32b)\r\n\r\nCopyright (c) 2001-2021 Stephen Williams (steve@icarus.com)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:10.683886+08:00"
+      },
+      "usability": "PASS",
+      "compile_run": [
+        {
+          "argv": [
+            "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\iverilog.CMD",
+            "-g2012",
+            "-s",
+            "probe",
+            "-o",
+            "probe.vvp",
+            "probe.v"
+          ],
+          "cwd": "D:\\KWT1-Accelerator\\synthesis\\runs\\20261016_234210_environment_9ab34613\\iverilog_i4y4vo_s",
+          "started_at": "2026-10-16T23:42:19.689531+08:00",
+          "returncode": 0,
+          "stdout": "",
+          "stderr": "",
+          "status": "PASS",
+          "finished_at": "2026-10-16T23:42:19.840351+08:00"
+        },
+        {
+          "argv": [
+            "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\vvp.CMD",
+            "probe.vvp"
+          ],
+          "cwd": "D:\\KWT1-Accelerator\\synthesis\\runs\\20261016_234210_environment_9ab34613\\iverilog_i4y4vo_s",
+          "started_at": "2026-10-16T23:42:19.840351+08:00",
+          "returncode": 0,
+          "stdout": "STAGE3A_ICARUS_OK\r\nprobe.v:1: $finish called at 0 (1s)\r\n",
+          "stderr": "",
+          "status": "PASS",
+          "finished_at": "2026-10-16T23:42:19.970913+08:00"
+        }
+      ]
+    },
+    "vvp": {
+      "resolved_path": "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\vvp.CMD",
+      "version_probe": {
+        "argv": [
+          "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\vvp.CMD",
+          "-V"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:10.706778+08:00",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Icarus Verilog runtime version 12.0 (devel) (s20150603-1539-g2693dd32b)\r\n\r\nCopyright (c) 2001-2021 Stephen Williams (steve@icarus.com)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\n",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:10.762828+08:00"
+      },
+      "usability": "PASS"
+    },
+    "git": {
+      "resolved_path": "C:\\Program Files\\Git\\cmd\\git.EXE",
+      "version_probe": {
+        "argv": [
+          "C:\\Program Files\\Git\\cmd\\git.EXE",
+          "--version"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:10.775840+08:00",
+        "returncode": 0,
+        "stdout": "git version 2.55.0.windows.3\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:10.811832+08:00"
+      },
+      "usability": "PASS",
+      "functional_probe": {
+        "argv": [
+          "C:\\Program Files\\Git\\cmd\\git.EXE",
+          "rev-parse",
+          "--is-inside-work-tree"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:11.053280+08:00",
+        "returncode": 0,
+        "stdout": "true\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:11.099391+08:00"
+      }
+    },
+    "python": {
+      "resolved_path": "C:\\Users\\pc\\AppData\\Local\\Programs\\Python\\Python311\\python.EXE",
+      "version_probe": {
+        "argv": [
+          "C:\\Users\\pc\\AppData\\Local\\Programs\\Python\\Python311\\python.EXE",
+          "--version"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:10.832931+08:00",
+        "returncode": 0,
+        "stdout": "Python 3.11.9\r\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:10.849937+08:00"
+      },
+      "usability": "PASS",
+      "functional_probe": {
+        "argv": [
+          "C:\\Users\\pc\\AppData\\Local\\Programs\\Python\\Python311\\python.EXE",
+          "-c",
+          "import sys,json,hashlib,tempfile,subprocess; print(sys.version); print(sys.executable); assert sys.version_info >= (3,11); print('PYTHON_STDLIB_OK')"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:11.099391+08:00",
+        "returncode": 0,
+        "stdout": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]\r\nC:\\Users\\pc\\AppData\\Local\\Programs\\Python\\Python311\\python.EXE\r\nPYTHON_STDLIB_OK\r\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:11.298542+08:00"
+      }
+    },
+    "wsl": {
+      "resolved_path": "C:\\Windows\\system32\\wsl.EXE",
+      "version_probe": {
+        "argv": [
+          "C:\\Windows\\system32\\wsl.EXE",
+          "--version"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:10.854935+08:00",
+        "returncode": 0,
+        "stdout": "WSL 版本: 2.7.11.0\r\n内核版本: 6.18.33.2-2\r\nWSLg 版本: 1.0.73.2\r\nMSRDC 版本: 1.2.7214\r\nDirect3D 版本: 1.611.1-81528511\r\nDXCore 版本: 10.0.26100.1-240331-1435.ge-release\r\nWindows: 10.0.26200.9711\r\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:10.922042+08:00"
+      },
+      "usability": "NOT_RUN"
+    },
+    "docker": {
+      "resolved_path": "C:\\Users\\pc\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+      "version_probe": {
+        "argv": [
+          "C:\\Users\\pc\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--version"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:10.947791+08:00",
+        "returncode": 0,
+        "stdout": "Docker version 29.6.2, build dfc4efb\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:11.053280+08:00"
+      },
+      "usability": "NOT_RUN"
+    },
+    "wsl_status": {
+      "functional_probe": {
+        "argv": [
+          "C:\\Windows\\system32\\wsl.EXE",
+          "--status"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:11.298542+08:00",
+        "returncode": 0,
+        "stdout": "默认分发: Ubuntu\r\n默认版本: 2\r\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:11.368515+08:00"
+      },
+      "usability": "PASS"
+    },
+    "wsl_distros": {
+      "functional_probe": {
+        "argv": [
+          "C:\\Windows\\system32\\wsl.EXE",
+          "--list",
+          "--quiet"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:11.368515+08:00",
+        "returncode": 0,
+        "stdout": "Ubuntu\r\ndocker-desktop\r\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:11.457308+08:00"
+      },
+      "usability": "PASS"
+    },
+    "docker_version": {
+      "functional_probe": {
+        "argv": [
+          "C:\\Users\\pc\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "version"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:11.457308+08:00",
+        "returncode": 0,
+        "stdout": "Client:\n Version:           29.6.2\n API version:       1.55\n Go version:        go1.26.5\n Git commit:        dfc4efb\n Built:             Thu Jul 16 16:14:59 2026\n OS/Arch:           windows/amd64\n Context:           desktop-linux\n\nServer: Docker Desktop 4.85.0 (235549)\n Engine:\n  Version:          29.6.2\n  API version:      1.55 (minimum version 1.40)\n  Go version:       go1.26.5\n  Git commit:       3d80467\n  Built:            Thu Jul 16 16:12:20 2026\n  OS/Arch:          linux/amd64\n  Experimental:     false\n containerd:\n  Version:          v2.2.5\n  GitCommit:        e53c7c1516c3b2bff98eb76f1f4117477e6f4e66\n runc:\n  Version:          1.3.6\n  GitCommit:        v1.3.6-0-g491b69ba\n docker-init:\n  Version:          0.19.0\n  GitCommit:        de40ad0\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:12.370603+08:00"
+      },
+      "usability": "PASS"
+    },
+    "docker_daemon": {
+      "functional_probe": {
+        "argv": [
+          "C:\\Users\\pc\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "info",
+          "--format",
+          "{{.ServerVersion}} {{.OSType}}"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:12.370603+08:00",
+        "returncode": 0,
+        "stdout": "29.6.2 linux\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:15.026105+08:00"
+      },
+      "usability": "PASS"
+    },
+    "docker_local_images": {
+      "functional_probe": {
+        "argv": [
+          "C:\\Users\\pc\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "image",
+          "ls",
+          "--format",
+          "{{.Repository}}:{{.Tag}} {{.ID}}"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:15.026105+08:00",
+        "returncode": 0,
+        "stdout": "nginx:latest f9ea18bfa4fa\nredis:6-alpine b362b5dff9d1\npostgres:15-alpine f7d23353e1b1\nlanggenius/dify-web:1.17.1 6353fe8e0448\nlanggenius/dify-agent-backend:1.17.1 a30c039bbead\nlanggenius/dify-api:1.17.1 ceede5b903af\nlanggenius/dify-agent-local-sandbox:1.17.1 f4d404c9dcdf\ncr.weaviate.io/semitechnologies/weaviate:1.39.2 5c62e5cbce4c\nmathmodelagent-backend:latest 090991902393\nmathmodelagent-frontend:latest a67f404a90cd\nghcr.io/astral-sh/uv:latest 2d890623d310\nghcr.dockerproxy.com/astral-sh/uv:latest 2d890623d310\nlanggenius/dify-plugin-daemon:0.6.10-local 34412a22d1e1\nredis:alpine 978f0e01593e\nbusybox:latest fd7dc98638c8\nlanggenius/dify-sandbox:0.2.15 750e1111426e\nhello-world:latest 11a3eb1597e8\nubuntu/squid:latest 6a097f68bae7\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:15.264313+08:00"
+      },
+      "usability": "PASS"
+    },
+    "wsl_shell": {
+      "functional_probe": {
+        "argv": [
+          "C:\\Windows\\system32\\wsl.EXE",
+          "--exec",
+          "sh",
+          "-lc",
+          "uname -s; for t in yosys dc_shell genus verilator iverilog; do command -v \"$t\" || true; done"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:42:15.264313+08:00",
+        "returncode": 0,
+        "stdout": "Linux\n",
+        "stderr": "wsl: 检测到 localhost 代理配置，但未镜像到 WSL。NAT 模式下的 WSL 不支持 localhost 代理。\r\n",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:42:19.683288+08:00"
+      },
+      "usability": "PASS"
+    }
+  },
+  "execution_context": "outside-sandbox",
+  "search_scope": "PATH and explicitly listed local candidate directories; not a whole-machine or remote-server inventory",
+  "local_candidates": [
+    {
+      "path": "C:\\oss-cad-suite\\bin\\yosys.exe",
+      "exists": false
+    },
+    {
+      "path": "D:\\oss-cad-suite\\bin\\yosys.exe",
+      "exists": false
+    },
+    {
+      "path": "C:\\tools\\oss-cad-suite\\bin\\yosys.exe",
+      "exists": false
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\bin\\yosys.exe",
+      "exists": false
+    },
+    {
+      "path": "C:\\msys64\\ucrt64\\bin\\yosys.exe",
+      "exists": false
+    },
+    {
+      "path": "C:\\Users\\pc\\scoop\\apps\\yosys\\current\\bin\\yosys.exe",
+      "exists": false
+    }
+  ],
+  "assets": {
+    "e203": {
+      "path": "D:\\KWT1-Accelerator\\external\\e203",
+      "exists": false,
+      "files": []
+    },
+    "techlib": {
+      "path": "D:\\KWT1-Accelerator\\external\\techlib",
+      "exists": false,
+      "files": []
+    },
+    "sram": {
+      "path": "D:\\KWT1-Accelerator\\external\\sram",
+      "exists": false,
+      "files": []
+    }
+  },
+  "status": "BLOCKED",
+  "finished_at": "2026-10-16T23:42:19.976432+08:00",
+  "commands": [
+    {
+      "argv": [
+        "yosys",
+        "-V"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:10.315711+08:00",
+      "returncode": null,
+      "stdout": "",
+      "stderr": "",
+      "status": "BLOCKED",
+      "error": "[WinError 2] 系统找不到指定的文件。",
+      "finished_at": "2026-10-16T23:42:10.321979+08:00"
+    },
+    {
+      "argv": [
+        "dc_shell",
+        "-version"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:10.348547+08:00",
+      "returncode": null,
+      "stdout": "",
+      "stderr": "",
+      "status": "BLOCKED",
+      "error": "[WinError 2] 系统找不到指定的文件。",
+      "finished_at": "2026-10-16T23:42:10.354554+08:00"
+    },
+    {
+      "argv": [
+        "dc_shell-t",
+        "-version"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:10.382436+08:00",
+      "returncode": null,
+      "stdout": "",
+      "stderr": "",
+      "status": "BLOCKED",
+      "error": "[WinError 2] 系统找不到指定的文件。",
+      "finished_at": "2026-10-16T23:42:10.388950+08:00"
+    },
+    {
+      "argv": [
+        "genus",
+        "-version"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:10.425289+08:00",
+      "returncode": null,
+      "stdout": "",
+      "stderr": "",
+      "status": "BLOCKED",
+      "error": "[WinError 2] 系统找不到指定的文件。",
+      "finished_at": "2026-10-16T23:42:10.434814+08:00"
+    },
+    {
+      "argv": [
+        "verilator",
+        "--version"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:10.477120+08:00",
+      "returncode": null,
+      "stdout": "",
+      "stderr": "",
+      "status": "BLOCKED",
+      "error": "[WinError 2] 系统找不到指定的文件。",
+      "finished_at": "2026-10-16T23:42:10.488118+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\iverilog.CMD",
+        "-V"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:10.508125+08:00",
+      "returncode": 0,
+      "stdout": "Icarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)\r\n\r\nCopyright (c) 2000-2021 Stephen Williams (steve@icarus.com)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\nIcarus Verilog Preprocessor version 12.0 (devel) (s20150603-1539-g2693dd32b)\r\n\r\nCopyright (c) 1999-2021 Stephen Williams (steve@icarus.com)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\nIcarus Verilog Parser/Elaborator version 12.0 (devel) (s20150603-1539-g2693dd32b)\r\n\r\nCopyright (c) 1998-2021 Stephen Williams (steve@icarus.com)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\n FLAGS DLL vvp.tgt\r\nvvp.tgt: Icarus Verilog VVP Code Generator 12.0 (devel) (s20150603-1539-g2693dd32b)\r\n\r\nCopyright (c) 2001-2021 Stephen Williams (steve@icarus.com)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\n",
+      "stderr": "",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:42:10.683886+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\vvp.CMD",
+        "-V"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:10.706778+08:00",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "Icarus Verilog runtime version 12.0 (devel) (s20150603-1539-g2693dd32b)\r\n\r\nCopyright (c) 2001-2021 Stephen Williams (steve@icarus.com)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\n",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:42:10.762828+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Program Files\\Git\\cmd\\git.EXE",
+        "--version"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:10.775840+08:00",
+      "returncode": 0,
+      "stdout": "git version 2.55.0.windows.3\n",
+      "stderr": "",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:42:10.811832+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\Python\\Python311\\python.EXE",
+        "--version"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:10.832931+08:00",
+      "returncode": 0,
+      "stdout": "Python 3.11.9\r\n",
+      "stderr": "",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:42:10.849937+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Windows\\system32\\wsl.EXE",
+        "--version"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:10.854935+08:00",
+      "returncode": 0,
+      "stdout": "WSL 版本: 2.7.11.0\r\n内核版本: 6.18.33.2-2\r\nWSLg 版本: 1.0.73.2\r\nMSRDC 版本: 1.2.7214\r\nDirect3D 版本: 1.611.1-81528511\r\nDXCore 版本: 10.0.26100.1-240331-1435.ge-release\r\nWindows: 10.0.26200.9711\r\n",
+      "stderr": "",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:42:10.922042+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "--version"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:10.947791+08:00",
+      "returncode": 0,
+      "stdout": "Docker version 29.6.2, build dfc4efb\n",
+      "stderr": "",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:42:11.053280+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Program Files\\Git\\cmd\\git.EXE",
+        "rev-parse",
+        "--is-inside-work-tree"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:11.053280+08:00",
+      "returncode": 0,
+      "stdout": "true\n",
+      "stderr": "",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:42:11.099391+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\Python\\Python311\\python.EXE",
+        "-c",
+        "import sys,json,hashlib,tempfile,subprocess; print(sys.version); print(sys.executable); assert sys.version_info >= (3,11); print('PYTHON_STDLIB_OK')"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:11.099391+08:00",
+      "returncode": 0,
+      "stdout": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]\r\nC:\\Users\\pc\\AppData\\Local\\Programs\\Python\\Python311\\python.EXE\r\nPYTHON_STDLIB_OK\r\n",
+      "stderr": "",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:42:11.298542+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Windows\\system32\\wsl.EXE",
+        "--status"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:11.298542+08:00",
+      "returncode": 0,
+      "stdout": "默认分发: Ubuntu\r\n默认版本: 2\r\n",
+      "stderr": "",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:42:11.368515+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Windows\\system32\\wsl.EXE",
+        "--list",
+        "--quiet"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:11.368515+08:00",
+      "returncode": 0,
+      "stdout": "Ubuntu\r\ndocker-desktop\r\n",
+      "stderr": "",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:42:11.457308+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "version"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:11.457308+08:00",
+      "returncode": 0,
+      "stdout": "Client:\n Version:           29.6.2\n API version:       1.55\n Go version:        go1.26.5\n Git commit:        dfc4efb\n Built:             Thu Jul 16 16:14:59 2026\n OS/Arch:           windows/amd64\n Context:           desktop-linux\n\nServer: Docker Desktop 4.85.0 (235549)\n Engine:\n  Version:          29.6.2\n  API version:      1.55 (minimum version 1.40)\n  Go version:       go1.26.5\n  Git commit:       3d80467\n  Built:            Thu Jul 16 16:12:20 2026\n  OS/Arch:          linux/amd64\n  Experimental:     false\n containerd:\n  Version:          v2.2.5\n  GitCommit:        e53c7c1516c3b2bff98eb76f1f4117477e6f4e66\n runc:\n  Version:          1.3.6\n  GitCommit:        v1.3.6-0-g491b69ba\n docker-init:\n  Version:          0.19.0\n  GitCommit:        de40ad0\n",
+      "stderr": "",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:42:12.370603+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "info",
+        "--format",
+        "{{.ServerVersion}} {{.OSType}}"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:12.370603+08:00",
+      "returncode": 0,
+      "stdout": "29.6.2 linux\n",
+      "stderr": "",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:42:15.026105+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Users\\pc\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "image",
+        "ls",
+        "--format",
+        "{{.Repository}}:{{.Tag}} {{.ID}}"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:15.026105+08:00",
+      "returncode": 0,
+      "stdout": "nginx:latest f9ea18bfa4fa\nredis:6-alpine b362b5dff9d1\npostgres:15-alpine f7d23353e1b1\nlanggenius/dify-web:1.17.1 6353fe8e0448\nlanggenius/dify-agent-backend:1.17.1 a30c039bbead\nlanggenius/dify-api:1.17.1 ceede5b903af\nlanggenius/dify-agent-local-sandbox:1.17.1 f4d404c9dcdf\ncr.weaviate.io/semitechnologies/weaviate:1.39.2 5c62e5cbce4c\nmathmodelagent-backend:latest 090991902393\nmathmodelagent-frontend:latest a67f404a90cd\nghcr.io/astral-sh/uv:latest 2d890623d310\nghcr.dockerproxy.com/astral-sh/uv:latest 2d890623d310\nlanggenius/dify-plugin-daemon:0.6.10-local 34412a22d1e1\nredis:alpine 978f0e01593e\nbusybox:latest fd7dc98638c8\nlanggenius/dify-sandbox:0.2.15 750e1111426e\nhello-world:latest 11a3eb1597e8\nubuntu/squid:latest 6a097f68bae7\n",
+      "stderr": "",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:42:15.264313+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Windows\\system32\\wsl.EXE",
+        "--exec",
+        "sh",
+        "-lc",
+        "uname -s; for t in yosys dc_shell genus verilator iverilog; do command -v \"$t\" || true; done"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:42:15.264313+08:00",
+      "returncode": 0,
+      "stdout": "Linux\n",
+      "stderr": "wsl: 检测到 localhost 代理配置，但未镜像到 WSL。NAT 模式下的 WSL 不支持 localhost 代理。\r\n",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:42:19.683288+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\iverilog.CMD",
+        "-g2012",
+        "-s",
+        "probe",
+        "-o",
+        "probe.vvp",
+        "probe.v"
+      ],
+      "cwd": "D:\\KWT1-Accelerator\\synthesis\\runs\\20261016_234210_environment_9ab34613\\iverilog_i4y4vo_s",
+      "started_at": "2026-10-16T23:42:19.689531+08:00",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:42:19.840351+08:00"
+    },
+    {
+      "argv": [
+        "C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\vvp.CMD",
+        "probe.vvp"
+      ],
+      "cwd": "D:\\KWT1-Accelerator\\synthesis\\runs\\20261016_234210_environment_9ab34613\\iverilog_i4y4vo_s",
+      "started_at": "2026-10-16T23:42:19.840351+08:00",
+      "returncode": 0,
+      "stdout": "STAGE3A_ICARUS_OK\r\nprobe.v:1: $finish called at 0 (1s)\r\n",
+      "stderr": "",
+      "status": "PASS",
+      "finished_at": "2026-10-16T23:42:19.970913+08:00"
+    }
+  ]
+}

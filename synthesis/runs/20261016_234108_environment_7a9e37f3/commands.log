@@ -1,0 +1,264 @@
+
+2026-10-16T23:41:08.489141+08:00 cwd=D:\KWT1-Accelerator
+argv=["yosys", "-V"]
+status=BLOCKED exit=None [WinError 2] 系统找不到指定的文件。
+STDOUT:
+
+STDERR:
+
+
+2026-10-16T23:41:08.554877+08:00 cwd=D:\KWT1-Accelerator
+argv=["dc_shell", "-version"]
+status=BLOCKED exit=None [WinError 2] 系统找不到指定的文件。
+STDOUT:
+
+STDERR:
+
+
+2026-10-16T23:41:08.613669+08:00 cwd=D:\KWT1-Accelerator
+argv=["dc_shell-t", "-version"]
+status=BLOCKED exit=None [WinError 2] 系统找不到指定的文件。
+STDOUT:
+
+STDERR:
+
+
+2026-10-16T23:41:08.687512+08:00 cwd=D:\KWT1-Accelerator
+argv=["genus", "-version"]
+status=BLOCKED exit=None [WinError 2] 系统找不到指定的文件。
+STDOUT:
+
+STDERR:
+
+
+2026-10-16T23:41:08.729162+08:00 cwd=D:\KWT1-Accelerator
+argv=["verilator", "--version"]
+status=BLOCKED exit=None [WinError 2] 系统找不到指定的文件。
+STDOUT:
+
+STDERR:
+
+
+2026-10-16T23:41:08.766230+08:00 cwd=D:\KWT1-Accelerator
+argv=["C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\iverilog.CMD", "-V"]
+status=PASS exit=0 
+STDOUT:
+Icarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)
+
+Copyright (c) 2000-2021 Stephen Williams (steve@icarus.com)
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along
+  with this program; if not, write to the Free Software Foundation, Inc.,
+  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+
+Icarus Verilog Preprocessor version 12.0 (devel) (s20150603-1539-g2693dd32b)
+
+Copyright (c) 1999-2021 Stephen Williams (steve@icarus.com)
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along
+  with this program; if not, write to the Free Software Foundation, Inc.,
+  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+
+Icarus Verilog Parser/Elaborator version 12.0 (devel) (s20150603-1539-g2693dd32b)
+
+Copyright (c) 1998-2021 Stephen Williams (steve@icarus.com)
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along
+  with this program; if not, write to the Free Software Foundation, Inc.,
+  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+
+ FLAGS DLL vvp.tgt
+vvp.tgt: Icarus Verilog VVP Code Generator 12.0 (devel) (s20150603-1539-g2693dd32b)
+
+Copyright (c) 2001-2021 Stephen Williams (steve@icarus.com)
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along
+  with this program; if not, write to the Free Software Foundation, Inc.,
+  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+
+
+STDERR:
+
+
+2026-10-16T23:41:09.786222+08:00 cwd=D:\KWT1-Accelerator
+argv=["C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\vvp.CMD", "-V"]
+status=PASS exit=0 
+STDOUT:
+
+STDERR:
+Icarus Verilog runtime version 12.0 (devel) (s20150603-1539-g2693dd32b)
+
+Copyright (c) 2001-2021 Stephen Williams (steve@icarus.com)
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along
+  with this program; if not, write to the Free Software Foundation, Inc.,
+  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+
+
+
+2026-10-16T23:41:10.057832+08:00 cwd=D:\KWT1-Accelerator
+argv=["C:\\Program Files\\Git\\cmd\\git.EXE", "--version"]
+status=PASS exit=0 
+STDOUT:
+git version 2.55.0.windows.3
+
+STDERR:
+
+
+2026-10-16T23:41:10.147853+08:00 cwd=D:\KWT1-Accelerator
+argv=["C:\\Users\\pc\\AppData\\Local\\Programs\\Python\\Python311\\python.EXE", "--version"]
+status=PASS exit=0 
+STDOUT:
+Python 3.11.9
+
+STDERR:
+
+
+2026-10-16T23:41:10.195744+08:00 cwd=D:\KWT1-Accelerator
+argv=["C:\\Windows\\system32\\wsl.EXE", "--version"]
+status=PASS exit=0 
+STDOUT:
+WSL 版本: 2.7.11.0
+内核版本: 6.18.33.2-2
+WSLg 版本: 1.0.73.2
+MSRDC 版本: 1.2.7214
+Direct3D 版本: 1.611.1-81528511
+DXCore 版本: 10.0.26100.1-240331-1435.ge-release
+Windows: 10.0.26200.9711
+
+STDERR:
+
+
+2026-10-16T23:41:10.333620+08:00 cwd=D:\KWT1-Accelerator
+argv=["C:\\Users\\pc\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE", "--version"]
+status=PASS exit=0 
+STDOUT:
+Docker version 29.6.2, build dfc4efb
+
+STDERR:
+
+
+2026-10-16T23:41:10.452288+08:00 cwd=D:\KWT1-Accelerator
+argv=["C:\\Program Files\\Git\\cmd\\git.EXE", "rev-parse", "--is-inside-work-tree"]
+status=PASS exit=0 
+STDOUT:
+true
+
+STDERR:
+
+
+2026-10-16T23:41:10.525209+08:00 cwd=D:\KWT1-Accelerator
+argv=["C:\\Users\\pc\\AppData\\Local\\Programs\\Python\\Python311\\python.EXE", "-c", "import sys,json,hashlib,tempfile,subprocess; print(sys.version); print(sys.executable); assert sys.version_info >= (3,11); print('PYTHON_STDLIB_OK')"]
+status=PASS exit=0 
+STDOUT:
+3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]
+C:\Users\pc\AppData\Local\Programs\Python\Python311\python.EXE
+PYTHON_STDLIB_OK
+
+STDERR:
+
+
+2026-10-16T23:41:10.852877+08:00 cwd=D:\KWT1-Accelerator
+argv=["C:\\Windows\\system32\\wsl.EXE", "--status"]
+status=FAIL exit=4294967295 
+STDOUT:
+拒绝访问。 
+错误代码: Wsl/E_ACCESSDENIED
+
+STDERR:
+
+
+2026-10-16T23:41:10.994322+08:00 cwd=D:\KWT1-Accelerator
+argv=["C:\\Windows\\system32\\wsl.EXE", "--list", "--quiet"]
+status=FAIL exit=4294967295 
+STDOUT:
+拒绝访问。 
+错误代码: Wsl/E_ACCESSDENIED
+
+STDERR:
+
+
+2026-10-16T23:41:11.098653+08:00 cwd=D:\KWT1-Accelerator
+argv=["C:\\Users\\pc\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE", "version"]
+status=FAIL exit=1 
+STDOUT:
+Client:
+ Version:           29.6.2
+ API version:       1.55
+ Go version:        go1.26.5
+ Git commit:        dfc4efb
+ Built:             Thu Jul 16 16:14:59 2026
+ OS/Arch:           windows/amd64
+ Context:           desktop-linux
+
+STDERR:
+permission denied while trying to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine
+
+
+2026-10-16T23:41:11.252037+08:00 cwd=D:\KWT1-Accelerator
+argv=["C:\\Users\\pc\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE", "info", "--format", "{{.ServerVersion}} {{.OSType}}"]
+status=FAIL exit=1 
+STDOUT:
+ 
+
+STDERR:
+permission denied while trying to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine
+
+
+2026-10-16T23:41:12.811791+08:00 cwd=D:\KWT1-Accelerator\synthesis\runs\20261016_234108_environment_7a9e37f3\iverilog_v5_djgqz
+argv=["C:\\Users\\pc\\AppData\\Local\\Microsoft\\WindowsApps\\iverilog.CMD", "-g2012", "-s", "probe", "-o", "probe.vvp", "probe.v"]
+status=FAIL exit=3221225477 
+STDOUT:
+
+STDERR:
+

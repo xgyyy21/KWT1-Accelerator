@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "kind": "generic_logic_only",
+  "label": "smoke-baseline",
+  "started_at": "2026-10-16T23:41:29.109035+08:00",
+  "git": {
+    "commit": "b05e081ea393dd3bc16d9a71fb9ae64cdaf9f9fe",
+    "branch": "codex/stage3a-synthesis-prep",
+    "dirty": true,
+    "commands": {
+      "commit": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:41:29.109584+08:00",
+        "returncode": 0,
+        "stdout": "b05e081ea393dd3bc16d9a71fb9ae64cdaf9f9fe\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:41:29.207040+08:00"
+      },
+      "branch": {
+        "argv": [
+          "git",
+          "branch",
+          "--show-current"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:41:29.207040+08:00",
+        "returncode": 0,
+        "stdout": "codex/stage3a-synthesis-prep\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:41:29.294068+08:00"
+      },
+      "worktree": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain=v1",
+          "--untracked-files=all"
+        ],
+        "cwd": "D:\\KWT1-Accelerator",
+        "started_at": "2026-10-16T23:41:29.294068+08:00",
+        "returncode": 0,
+        "stdout": "?? reports/STAGE2A_LOCAL_AUDIT.json\n?? reports/STAGE2A_LOCAL_AUDIT.md\n?? reports/basic_check_20261016_214831_212370_009413.json\n?? reports/basic_check_20261016_214831_212370_009413.md\n?? synthesis/flow.py\n?? synthesis/runs/20261016_234108_environment_7a9e37f3/commands.log\n?? synthesis/runs/20261016_234108_environment_7a9e37f3/report.json\n?? synthesis/smoke/files.f\n?? synthesis/smoke/smoke.v\n",
+        "stderr": "",
+        "status": "PASS",
+        "finished_at": "2026-10-16T23:41:29.422064+08:00"
+      }
+    }
+  },
+  "runner": {
+    "path": "D:\\KWT1-Accelerator\\synthesis\\flow.py",
+    "sha256": "f47cfc10db90469fa2d52ed296b3d954793164b5f5103f1daffd665ed4dadd05",
+    "bytes": 14711
+  },
+  "invocation": [
+    "C:\\Users\\pc\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "synthesis/flow.py",
+    "run",
+    "--label",
+    "smoke-baseline"
+  ],
+  "status": "BLOCKED",
+  "synthesis": {
+    "status": "NOT_RUN"
+  },
+  "top": "smoke",
+  "inputs": [
+    {
+      "path": "D:\\KWT1-Accelerator\\synthesis\\smoke\\smoke.v",
+      "sha256": "4e20ab11d363410067e8357b4a775ca9e6979da649838005ed3550f7aab0505c",
+      "bytes": 389
+    }
+  ],
+  "constraints": {
+    "status": "NOT_RUN",
+    "version": null,
+    "applied": false,
+    "target_frequency_mhz": 150,
+    "target_period_ns": "1000/150",
+    "note": "Metadata only: generic synthesis does not read SDC or check timing"
+  },
+  "ppa": {
+    "area_mm2": {
+      "status": "BLOCKED",
+      "value": null,
+      "reason": "Designated standard-cell/SRAM libraries and scope missing",
+      "evidence": null
+    },
+    "timing_slack_ns": {
+      "status": "BLOCKED",
+      "value": null,
+      "reason": "No technology mapping or STA backend",
+      "evidence": null
+    },
+    "power_mw": {
+      "status": "BLOCKED",
+      "value": null,
+      "reason": "No power backend, activity, libraries or operating conditions",
+      "evidence": null
+    },
+    "critical_path": {
+      "status": "BLOCKED",
+      "value": null,
+      "reason": "No STA backend or valid constraints applied",
+      "evidence": null
+    }
+  },
+  "generic_resources": {
+    "status": "NOT_RUN",
+    "value": null
+  },
+  "netlist": {
+    "status": "NOT_RUN",
+    "value": null
+  },
+  "filelist": {
+    "path": "D:\\KWT1-Accelerator\\synthesis\\smoke\\files.f",
+    "sha256": "e36263f9d5ef762f880d627b06106b9588de03fb039548673fc418f75e502f97",
+    "bytes": 82
+  },
+  "tool": {
+    "requested": "yosys",
+    "resolved_path": null,
+    "version_probe": {
+      "argv": [
+        "yosys",
+        "-V"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:41:29.492425+08:00",
+      "returncode": null,
+      "stdout": "",
+      "stderr": "",
+      "status": "BLOCKED",
+      "error": "[WinError 2] 系统找不到指定的文件。",
+      "finished_at": "2026-10-16T23:41:29.497426+08:00"
+    }
+  },
+  "reason": "Yosys unavailable; no installation/download attempted",
+  "finished_at": "2026-10-16T23:41:29.497426+08:00",
+  "commands": [
+    {
+      "argv": [
+        "yosys",
+        "-V"
+      ],
+      "cwd": "D:\\KWT1-Accelerator",
+      "started_at": "2026-10-16T23:41:29.492425+08:00",
+      "returncode": null,
+      "stdout": "",
+      "stderr": "",
+      "status": "BLOCKED",
+      "error": "[WinError 2] 系统找不到指定的文件。",
+      "finished_at": "2026-10-16T23:41:29.497426+08:00"
+    }
+  ]
+}

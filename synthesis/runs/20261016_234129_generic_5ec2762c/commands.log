@@ -1,0 +1,8 @@
+
+2026-10-16T23:41:29.492425+08:00 cwd=D:\KWT1-Accelerator
+argv=["yosys", "-V"]
+status=BLOCKED exit=None [WinError 2] 系统找不到指定的文件。
+STDOUT:
+
+STDERR:
+
