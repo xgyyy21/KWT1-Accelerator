@@ -4,6 +4,7 @@ module systolic_array_reference_tb;
   logic clk=0; always #5 clk=~clk;
   logic rst_n=0, start=0, in_valid=0;
   logic [DW-1:0] a_left[R], b_top[C];
+  logic [31:0] bias_data[C];
   logic busy, done, result_valid;
   logic [AW-1:0] result[R][C];
   integer r,c,k,expected;
@@ -11,6 +12,7 @@ module systolic_array_reference_tb;
   initial begin
     for (r=0;r<R;r=r+1) a_left[r]=0;
     for (c=0;c<C;c=c+1) b_top[c]=0;
+    for (c=0;c<C;c=c+1) bias_data[c]=0;
     repeat(2) @(negedge clk); rst_n=1;
     @(negedge clk); start=1;
     @(negedge clk); start=0;

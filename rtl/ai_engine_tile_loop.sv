@@ -14,6 +14,8 @@ module ai_engine_tile_loop #(
   input logic clk,
   input logic rst_n,
   input logic start,
+  input logic [15:0] valid_rows,
+  input logic [15:0] valid_cols,
   input logic a_load_en,
   input logic [CACHE_ADDR_WIDTH-1:0] a_load_addr,
   input logic [DATA_WIDTH-1:0] a_load_data,
@@ -57,6 +59,8 @@ module ai_engine_tile_loop #(
   logic [15:0] tile_result_row, tile_result_col;
   logic [DATA_WIDTH-1:0] a_left [ROWS];
   logic [DATA_WIDTH-1:0] b_top [COLS];
+  logic [15:0] rows_q, cols_q;
+  logic tile_config_valid;
 
   initial begin
     if (DATA_WIDTH <= 0 || ACC_WIDTH != DATA_WIDTH || ROWS <= 0 ||
@@ -93,6 +97,9 @@ module ai_engine_tile_loop #(
   assign result_wr_addr = CACHE_ADDR_WIDTH'(tile_result_row * COLS + tile_result_col);
   assign result_wr_data = tile_result_data;
 
+  assign tile_config_valid = valid_rows > 0 && valid_rows <= ROWS &&
+                             valid_cols > 0 && valid_cols <= COLS;
+
   assign busy = (state != S_IDLE) && (state != S_DONE) && (state != S_ERROR);
   assign done = (state == S_DONE);
   assign error = (state == S_ERROR);
@@ -113,7 +120,7 @@ module ai_engine_tile_loop #(
   ) u_tile (
     .clk(clk), .rst_n(rst_n), .start(tile_start),
     .in_valid(tile_in_valid), .a_left(a_left), .b_top(b_top),
-    .valid_rows(16'(ROWS)), .valid_cols(16'(COLS)), .busy(), .done(tile_done),
+    .valid_rows(rows_q), .valid_cols(cols_q), .busy(), .done(tile_done),
     .result_valid(tile_result_valid), .result_last(tile_result_last),
     .result_data(tile_result_data), .result_row(tile_result_row),
     .result_col(tile_result_col)
@@ -125,6 +132,7 @@ module ai_engine_tile_loop #(
       state <= S_IDLE;
       a_issue <= 0; a_capture <= 0; b_issue <= 0; b_capture <= 0;
       k_index <= 0;
+      rows_q <= 0; cols_q <= 0;
       for (r = 0; r < K; r = r + 1)
         for (c = 0; c < ROWS; c = c + 1) a_tile[r][c] <= '0;
       for (r = 0; r < K; r = r + 1)
@@ -133,8 +141,11 @@ module ai_engine_tile_loop #(
       case (state)
         S_IDLE: begin
           if (start) begin
-            state <= S_LOAD_A;
-            a_issue <= 0; a_capture <= 0;
+            if (tile_config_valid) begin
+              state <= S_LOAD_A;
+              a_issue <= 0; a_capture <= 0;
+              rows_q <= valid_rows; cols_q <= valid_cols;
+            end else state <= S_ERROR;
           end
         end
         S_LOAD_A: begin
@@ -166,11 +177,18 @@ module ai_engine_tile_loop #(
         S_WAIT_RESULT: if (tile_done) state <= S_DONE;
         S_DONE: begin
           if (start) begin
-            state <= S_LOAD_A;
-            a_issue <= 0; a_capture <= 0;
+            if (tile_config_valid) begin
+              state <= S_LOAD_A;
+              a_issue <= 0; a_capture <= 0;
+              rows_q <= valid_rows; cols_q <= valid_cols;
+            end else state <= S_ERROR;
           end else state <= S_IDLE;
         end
-        S_ERROR: state <= S_ERROR;
+        S_ERROR: if (start && tile_config_valid) begin
+          state <= S_LOAD_A;
+          a_issue <= 0; a_capture <= 0;
+          rows_q <= valid_rows; cols_q <= valid_cols;
+        end
         default: state <= S_ERROR;
       endcase
     end

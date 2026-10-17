@@ -9,6 +9,7 @@ module ai_engine_tile_loop_tb;
   logic clk = 0;
   always #5 clk = ~clk;
   logic rst_n = 0, start = 0;
+  logic [15:0] valid_rows = ROWS, valid_cols = COLS;
   logic a_load_en = 0, b_load_en = 0;
   logic [CACHE_AW-1:0] a_load_addr = 0, b_load_addr = 0;
   logic [DW-1:0] a_load_data = 0, b_load_data = 0;
@@ -55,7 +56,8 @@ module ai_engine_tile_loop_tb;
         $fatal(1, "result addr=%0d valid=%b data=%h", addr,
                result_rd_valid, result_rd_data);
     end
-    // A completed tile can be launched again without reset.
+    // A completed tail tile can be launched again without reset.
+    valid_rows = 3; valid_cols = 4;
     @(negedge clk); start = 1;
     @(negedge clk); start = 0;
     cycles = 0;
@@ -63,6 +65,13 @@ module ai_engine_tile_loop_tb;
       @(negedge clk); cycles = cycles + 1;
     end
     if (error || !done) $fatal(1, "second tile loop did not complete");
+    for (addr = 0; addr < 3*4; addr = addr + 1) begin
+      @(negedge clk); result_rd_en = 1; result_rd_addr = addr;
+      @(negedge clk); result_rd_en = 0;
+      if (!result_rd_valid || result_rd_data !== 16'd64)
+        $fatal(1, "tail result addr=%0d valid=%b data=%h", addr,
+               result_rd_valid, result_rd_data);
+    end
     $display("ai_engine_tile_loop_tb PASS cycles=%0d", cycles);
     $finish;
   end

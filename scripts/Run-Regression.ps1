@@ -1,4 +1,4 @@
-param([string]$Iverilog = '', [string]$Vvp = '')
+param([string]$Iverilog = '', [string]$Vvp = '', [string[]]$WordReadbackArgs = @())
 $ErrorActionPreference = 'Stop'
 function Invoke-NativeTool {
     param([string]$Executable, [string[]]$Arguments)
@@ -22,6 +22,7 @@ try {
     New-Item -ItemType Directory -Force -Path 'build/logs' | Out-Null
     & "$PSScriptRoot/Generate-Fp32Vectors.ps1"
     $failures = @()
+    $skipped = @()
     $tests = Get-ChildItem -LiteralPath 'tb' -Filter '*_tb.sv' | Sort-Object Name
     foreach ($test in $tests) {
         $testName = $test.BaseName
@@ -35,7 +36,16 @@ try {
             $failures += $testName
             continue
         }
-        $simResult = Invoke-NativeTool $Vvp @($binary)
+        $simArgs = @($binary)
+        if ($testName -eq 'word_readback_tb') {
+            if ($WordReadbackArgs.Count -eq 0) {
+                Write-Output "SKIP $testName (requires external sample data and plusargs)"
+                $skipped += $testName
+                continue
+            }
+            $simArgs += $WordReadbackArgs
+        }
+        $simResult = Invoke-NativeTool $Vvp $simArgs
         $simOutput = $simResult.Output
         $simExit = $simResult.ExitCode
         $simOutput | Out-File -LiteralPath $simLog -Encoding utf8
@@ -48,7 +58,7 @@ try {
     $socResult = Invoke-NativeTool $Iverilog @('-g2012','-s','ai_engine_soc_adapter','-o','build/soc_elaboration.vvp','-f','rtl/files.f')
     $socResult.Output | Out-File -LiteralPath build/logs/soc_elaboration.log -Encoding utf8
     if ($socResult.ExitCode -ne 0) { $failures += 'soc_elaboration' }
-    $summary = "Tests: $($tests.Count); failures: $($failures.Count); failed: $($failures -join ', ')"
+    $summary = "Tests: $($tests.Count); failures: $($failures.Count); skipped: $($skipped.Count); failed: $($failures -join ', '); skipped_tests: $($skipped -join ', ')"
     $summary | Out-File -LiteralPath build/logs/summary.txt -Encoding utf8
     Write-Output $summary
     if ($failures.Count) { throw 'RTL regression failed; see build/logs.' }

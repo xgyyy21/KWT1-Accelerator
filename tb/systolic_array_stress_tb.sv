@@ -4,12 +4,13 @@ module systolic_array_stress_tb;
   logic clk=0; always #5 clk=~clk;
   logic rst_n=0,start=0,in_valid=0,busy,done,result_valid;
   logic [DW-1:0] a_left[R],b_top[C];
+  logic [31:0] bias_data[C];
   wire [AW-1:0] result[R][C];
   integer r,c,k,job,expected[R][C];
   systolic_array_8x16 #(.DATA_WIDTH(DW),.ACC_WIDTH(AW),.ROWS(R),.COLS(C),.K(K)) dut(.*);
   initial begin
     for(r=0;r<R;r=r+1) a_left[r]=0;
-    for(c=0;c<C;c=c+1) b_top[c]=0;
+    for(c=0;c<C;c=c+1) begin b_top[c]=0; bias_data[c]=0; end
     repeat(2) @(negedge clk); rst_n=1;
     for(job=0;job<3;job=job+1) begin
       for(r=0;r<R;r=r+1) for(c=0;c<C;c=c+1) expected[r][c]=0;

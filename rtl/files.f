@@ -1,6 +1,7 @@
 rtl/ai_engine_pkg.sv
 rtl/fp32_math_pkg.sv
 rtl/pe_mac.sv
+rtl/fp32_pe_mac.sv
 rtl/pe_array_8x16.sv
 rtl/systolic_array_8x16.sv
 rtl/systolic_input_skew.sv
@@ -20,3 +21,5 @@ rtl/block_descriptor.sv
 rtl/block_counter.sv
 rtl/fp32_mac_boundary.sv
 rtl/ai_engine_tile_loop.sv
+rtl/ai_engine_cache_soc_adapter.sv
+rtl/ai_engine_tiled_executor.sv
