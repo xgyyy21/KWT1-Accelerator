@@ -1,0 +1,628 @@
+{
+  "schema_version": 1,
+  "kind": "stage4c curated export of previously executed evidence; no stage4c simulations",
+  "hardware_commit": "4448aee155f59dc895f83bec3968322160fd66a6",
+  "hardware_tree": "9c9d948a804dbb4e9da49147eea8f1e648d76562",
+  "integration_head_at_execution": "5b2fa0f297f03d2598bb79d7e59c93f974e144f5",
+  "scope": "module regression and SoC wrapper elaboration only",
+  "excluded": [
+    "complete FP32 array",
+    "FFN1 with bias/cross-K",
+    "E203 integration",
+    "12 layers",
+    "synthesis/PPA"
+  ],
+  "runs": {
+    "stage4a_12": {
+      "started_at": "2026-10-17T13:41:22.505980+08:00",
+      "finished_at": "2026-10-17T13:41:48.336026+08:00",
+      "execution_context": "outside-sandbox",
+      "status": "FAIL",
+      "counts": {
+        "PASS": 16,
+        "FAIL": 6,
+        "BLOCKED": 0,
+        "NOT_RUN": 0
+      },
+      "test_count": 22,
+      "failed_modules": [
+        "ai_engine_core_sequence_tb",
+        "ai_engine_core_tb",
+        "pe_array_8x16_tb",
+        "systolic_array_8x16_tb",
+        "systolic_array_reference_tb",
+        "systolic_array_stress_tb"
+      ],
+      "exit_code": 1,
+      "source_unchanged": true,
+      "soc_elaboration": {
+        "status": "PASS",
+        "returncode": 0,
+        "scope": "compile/elaboration only; no E203 simulation"
+      },
+      "adapter_sha256": "5d72a2c92ea7fe0346c15349d19077058bc0e1d9394ff3f8750286bc05696a19",
+      "tool_versions": {
+        "iverilog": "Icarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)",
+        "vvp": "Icarus Verilog runtime version 12.0 (devel) (s20150603-1539-g2693dd32b)"
+      },
+      "outer_commands": [
+        {
+          "argv": [
+            "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-File",
+            "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_134122_b37baf18\\scripts\\Generate-Fp32Vectors.ps1",
+            "-OutputPath",
+            "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_134122_b37baf18\\build\\fp32_vectors.txt"
+          ],
+          "cwd": "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_134122_b37baf18",
+          "returncode": 0,
+          "started_at": "2026-10-17T13:41:23.561766+08:00",
+          "finished_at": "2026-10-17T13:41:24.229167+08:00"
+        },
+        {
+          "argv": [
+            "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-File",
+            "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_134122_b37baf18\\scripts\\Run-Regression.ps1",
+            "-Iverilog",
+            "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_134122_b37baf18\\iverilog_capture.cmd",
+            "-Vvp",
+            "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_134122_b37baf18\\vvp_capture.cmd"
+          ],
+          "cwd": "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_134122_b37baf18",
+          "returncode": 1,
+          "started_at": "2026-10-17T13:41:24.232156+08:00",
+          "finished_at": "2026-10-17T13:41:47.933602+08:00"
+        }
+      ],
+      "published_native_commands": "evidence/icarus12_commands.jsonl"
+    },
+    "stage4b_12": {
+      "started_at": "2026-10-17T13:55:25.893035+08:00",
+      "finished_at": "2026-10-17T13:56:01.507746+08:00",
+      "execution_context": "stage4b-icarus12-outside-sandbox",
+      "status": "FAIL",
+      "counts": {
+        "PASS": 16,
+        "FAIL": 6,
+        "BLOCKED": 0,
+        "NOT_RUN": 0
+      },
+      "test_count": 22,
+      "failed_modules": [
+        "ai_engine_core_sequence_tb",
+        "ai_engine_core_tb",
+        "pe_array_8x16_tb",
+        "systolic_array_8x16_tb",
+        "systolic_array_reference_tb",
+        "systolic_array_stress_tb"
+      ],
+      "exit_code": 1,
+      "source_unchanged": true,
+      "soc_elaboration": {
+        "status": "PASS",
+        "returncode": 0,
+        "scope": "compile/elaboration only; no E203 simulation"
+      },
+      "adapter_sha256": "5d72a2c92ea7fe0346c15349d19077058bc0e1d9394ff3f8750286bc05696a19",
+      "tool_versions": {
+        "iverilog": "Icarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)",
+        "vvp": "Icarus Verilog runtime version 12.0 (devel) (s20150603-1539-g2693dd32b)"
+      },
+      "outer_commands": [
+        {
+          "argv": [
+            "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-File",
+            "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_135525_78208404\\scripts\\Generate-Fp32Vectors.ps1",
+            "-OutputPath",
+            "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_135525_78208404\\build\\fp32_vectors.txt"
+          ],
+          "cwd": "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_135525_78208404",
+          "returncode": 0,
+          "started_at": "2026-10-17T13:55:26.984411+08:00",
+          "finished_at": "2026-10-17T13:55:27.820263+08:00"
+        },
+        {
+          "argv": [
+            "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-File",
+            "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_135525_78208404\\scripts\\Run-Regression.ps1",
+            "-Iverilog",
+            "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_135525_78208404\\iverilog_capture.cmd",
+            "-Vvp",
+            "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_135525_78208404\\vvp_capture.cmd"
+          ],
+          "cwd": "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_135525_78208404",
+          "returncode": 1,
+          "started_at": "2026-10-17T13:55:27.822264+08:00",
+          "finished_at": "2026-10-17T13:56:01.209032+08:00"
+        }
+      ]
+    },
+    "stage4b_14": {
+      "started_at": "2026-10-17T14:02:19.043382+08:00",
+      "finished_at": "2026-10-17T14:02:43.713973+08:00",
+      "execution_context": "stage4b-icarus14-official-yosyshq-outside-sandbox",
+      "status": "PASS",
+      "counts": {
+        "PASS": 22,
+        "FAIL": 0,
+        "BLOCKED": 0,
+        "NOT_RUN": 0
+      },
+      "test_count": 22,
+      "failed_modules": [],
+      "exit_code": 0,
+      "source_unchanged": true,
+      "soc_elaboration": {
+        "status": "PASS",
+        "returncode": 0,
+        "scope": "compile/elaboration only; no E203 simulation"
+      },
+      "adapter_sha256": "5d72a2c92ea7fe0346c15349d19077058bc0e1d9394ff3f8750286bc05696a19",
+      "tool_versions": {
+        "iverilog": "Icarus Verilog version 14.0 (devel) (s20260301-583-g5d7612759-dirty)",
+        "vvp": "Icarus Verilog runtime version 14.0 (devel) (s20260301-583-g5d7612759-dirty)"
+      },
+      "outer_commands": [
+        {
+          "argv": [
+            "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-File",
+            "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_140219_05b522e4\\scripts\\Generate-Fp32Vectors.ps1",
+            "-OutputPath",
+            "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_140219_05b522e4\\build\\fp32_vectors.txt"
+          ],
+          "cwd": "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_140219_05b522e4",
+          "returncode": 0,
+          "started_at": "2026-10-17T14:02:20.240649+08:00",
+          "finished_at": "2026-10-17T14:02:21.077166+08:00"
+        },
+        {
+          "argv": [
+            "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-File",
+            "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_140219_05b522e4\\scripts\\Run-Regression.ps1",
+            "-Iverilog",
+            "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_140219_05b522e4\\iverilog_capture.cmd",
+            "-Vvp",
+            "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_140219_05b522e4\\vvp_capture.cmd"
+          ],
+          "cwd": "${PROJECT_ROOT}\\tmp\\stage4a_runs\\20261017_140219_05b522e4",
+          "returncode": 0,
+          "started_at": "2026-10-17T14:02:21.080180+08:00",
+          "finished_at": "2026-10-17T14:02:43.111556+08:00"
+        }
+      ],
+      "published_native_commands": "evidence/icarus14_commands.jsonl"
+    }
+  },
+  "comparison_checks": {
+    "hardware_commit_matches": true,
+    "source_inputs_identical": true,
+    "vectors_identical": true,
+    "icarus12_repeats_history": true,
+    "icarus14_22_pass": true,
+    "all_14_native_compile_simulation_exits_zero": true,
+    "soc14_elaboration_pass": true,
+    "direct_original14_matches_adapter": true,
+    "all_sources_unchanged": true,
+    "icarus12_still_runs_after14": true,
+    "same_smoke_source": true
+  },
+  "tests": [
+    {
+      "name": "ai_engine_core_sequence_tb",
+      "stage4a_12": "FAIL",
+      "stage4b_12": "FAIL",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "ai_engine_core_tb",
+      "stage4a_12": "FAIL",
+      "stage4b_12": "FAIL",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "ai_engine_fsm_tb",
+      "stage4a_12": "PASS",
+      "stage4b_12": "PASS",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "ai_engine_regs_tb",
+      "stage4a_12": "PASS",
+      "stage4b_12": "PASS",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "block_counter_tb",
+      "stage4a_12": "PASS",
+      "stage4b_12": "PASS",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "block_descriptor_tb",
+      "stage4a_12": "PASS",
+      "stage4b_12": "PASS",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "fp32_mac_boundary_tb",
+      "stage4a_12": "PASS",
+      "stage4b_12": "PASS",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "fp32_math_tb",
+      "stage4a_12": "PASS",
+      "stage4b_12": "PASS",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "matrix_buffer_tb",
+      "stage4a_12": "PASS",
+      "stage4b_12": "PASS",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "matrix_cache_manager_tb",
+      "stage4a_12": "PASS",
+      "stage4b_12": "PASS",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "matrix_task_controller_tb",
+      "stage4a_12": "PASS",
+      "stage4b_12": "PASS",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "matrix_task_scheduler_tb",
+      "stage4a_12": "PASS",
+      "stage4b_12": "PASS",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "pe_array_8x16_tb",
+      "stage4a_12": "FAIL",
+      "stage4b_12": "FAIL",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "pe_mac_signed_tb",
+      "stage4a_12": "PASS",
+      "stage4b_12": "PASS",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "pe_mac_tb",
+      "stage4a_12": "PASS",
+      "stage4b_12": "PASS",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "systolic_array_8x16_tb",
+      "stage4a_12": "FAIL",
+      "stage4b_12": "FAIL",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "systolic_array_reference_tb",
+      "stage4a_12": "FAIL",
+      "stage4b_12": "FAIL",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "systolic_array_stress_tb",
+      "stage4a_12": "FAIL",
+      "stage4b_12": "FAIL",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "systolic_input_skew_tb",
+      "stage4a_12": "PASS",
+      "stage4b_12": "PASS",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "tile_dma_tb",
+      "stage4a_12": "PASS",
+      "stage4b_12": "PASS",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "tile_result_collector_tb",
+      "stage4a_12": "PASS",
+      "stage4b_12": "PASS",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    },
+    {
+      "name": "tile_stream_adapter_tb",
+      "stage4a_12": "PASS",
+      "stage4b_12": "PASS",
+      "stage4b_14": "PASS",
+      "compile14_exit": 0,
+      "simulation14_exit": 0
+    }
+  ],
+  "resolved_historical_failures": [
+    "ai_engine_core_sequence_tb",
+    "ai_engine_core_tb",
+    "pe_array_8x16_tb",
+    "systolic_array_8x16_tb",
+    "systolic_array_reference_tb",
+    "systolic_array_stress_tb"
+  ],
+  "input_sha256": {
+    "docs/HARDWARE_IMPORT_HANDOFF.md": "f1182b9331f5df79fa68d6e32151d4fdce1ebe6e98761e0191834a5c799ed3bc",
+    "rtl/.gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "rtl/ai_engine_core.sv": "0d5a5cc4ea284119789a1984657827272a452d51bc14623241fca73c16eeba72",
+    "rtl/ai_engine_fsm.sv": "a637eb524879bbd63d6534c71d6fdb2cba0616af5860a768fe44f73ee0b9bc01",
+    "rtl/ai_engine_pkg.sv": "99dcb21b694f725a0d0e3f3301095fdc09cd1f965a60d8a9d4d383b075032911",
+    "rtl/ai_engine_regs.sv": "545bc7618d35c4006e7df39a8bb895280a58cdc58a65cece7486752b2e4dede0",
+    "rtl/ai_engine_soc_adapter.sv": "4b1be4e2aee3fffa791c09dde3b66fb75aee4f5d0f70c3f45bf748ff13f82916",
+    "rtl/block_counter.sv": "9baa888e2ee07e9cb0232002a99f0634be92262e809c7e59b981bef1b132d7bb",
+    "rtl/block_descriptor.sv": "4b50d9f1b9d73d554e12385165806e8b7bc47b958355420d5cdda8244d00f4ff",
+    "rtl/files.f": "28dda9fed716bc26c0c5a5a8289423f2a19cb64a092646fa061660748aa4d53e",
+    "rtl/fp32_mac_boundary.sv": "bccc3b76015534d42caefd56964d09932fc540aec64a29b45ee1a3700996273f",
+    "rtl/fp32_math_pkg.sv": "f9b2ff813b51aba48914ce181c3840d40bd3bbd4f5b2ad0c89a3f4acadb888fe",
+    "rtl/matrix_buffer.sv": "50329ddd4521cdd2c989cf23dbbdcf9f49f2379a51263dbf892cb37ed4b15e2c",
+    "rtl/matrix_cache_manager.sv": "ad1db76b9df18621d31ae8aae11c9bc5ee30e7dd1baa2caaf7dd3cd4680f8838",
+    "rtl/matrix_task_controller.sv": "cba739edc5ae7a78a970432388910c0a7b3d013ef504c338c47d9512fd584b17",
+    "rtl/matrix_task_scheduler.sv": "5c4efb28a448f498b6cd2169ff721e711dbedd0d5e9a3aebe85fdef2099457be",
+    "rtl/pe_array_8x16.sv": "a7f33ecd8a2b7516abc3acc8faa5bd54dd40b43dfd3be1a24e976e5703ffb056",
+    "rtl/pe_mac.sv": "051b5855301ba3bc9174dea79a1485aa8330265fb0b41c221632b9ce65f60f63",
+    "rtl/systolic_array_8x16.sv": "5cffcff3b2de2ede3b13a9ff976e38290bac741a4209045ec5c6913245658906",
+    "rtl/systolic_input_skew.sv": "573b6eefb213a9d2cb7f22ceeb981c93e34aee46bb8c817527889e5ec94c1e5f",
+    "rtl/systolic_tile_engine.sv": "ec7648d730c1e9e5d53360f05f56f33c7640ab52287558461a2098e7c24643ed",
+    "rtl/tile_dma.sv": "0c8c2163fe6a61b2bf721b7e49c500586bdfde48dfab69d3af7ba043fe35b4cb",
+    "rtl/tile_result_collector.sv": "d93d617d0151ddd63b6be254ad2c4315eca410bf3295b823d663fb1cf0db1d1d",
+    "rtl/tile_stream_adapter.sv": "06af51e0d90ed49aa97cfd80190449e7be6b2e55d8b74251bffc9c940d99d8d8",
+    "scripts/Generate-Fp32Vectors.ps1": "fc43252c2d4d1a19340d9226fc5e8b32b10929474a4bf93790001316f600ed76",
+    "scripts/Run-Regression.ps1": "cc817782b695ce2cb3757848e694410a7b4d9db49accc378287fb4bcc35dd5ae",
+    "tb/.gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "tb/ai_engine_core_sequence_tb.sv": "450f9986ad4b66ad53c48b5bcaee965e3e13250a3dbbc47de87933d02c932c85",
+    "tb/ai_engine_core_tb.sv": "8b48fa3a8988275aea5eaa1cc6f40f9608ad386cf22b32c98c5d88aa83ebc47c",
+    "tb/ai_engine_fsm_tb.sv": "c6f2a1eaa69000b403f991965c3bcfd17df7f12ecd98c9b1e31961605d3300aa",
+    "tb/ai_engine_regs_tb.sv": "16f42196e26aed62af73e93c94b42ef779f049e0e0ed6ee05db77b7c4db4931c",
+    "tb/block_counter_tb.sv": "6673130174bdee5e71dd19611f2e6534758ec0684b549deec2325f926baa433c",
+    "tb/block_descriptor_tb.sv": "6fef0319123b7d5cc030a449173ca68226bec28135da039f04fb41c0f6549d45",
+    "tb/fp32_mac_boundary_tb.sv": "b4fcf7f37daabd9dbcff051ead5734e0a73d3ccf87bfa68293975af2557d9240",
+    "tb/fp32_math_tb.sv": "68ac89ab2f37382de089e622e34e154948b4b096ccd55b14c713eee32d77b179",
+    "tb/matrix_buffer_tb.sv": "826679a9d807f9b81c59ed8fe7f54da4693503d14b8343c618e596f0790931be",
+    "tb/matrix_cache_manager_tb.sv": "c641e00eb102a33ef6bf6c8c723c7497f8e7bf53fff55b2be74a152d2a0e1c07",
+    "tb/matrix_task_controller_tb.sv": "33c75e8b2bbc394bc92680113614c0949a1ba1c425c61c95a785e2a374c392d5",
+    "tb/matrix_task_scheduler_tb.sv": "6ece9b28a0f1d8601e847038b0bbe33216f59b673e0d4cb255647417e6962135",
+    "tb/pe_array_8x16_tb.sv": "631839544af53a03f77f494359fc4bba8f484d93054dc48a53574edafc5d4127",
+    "tb/pe_mac_signed_tb.sv": "6730a8252eb1bf49f1153b535438e140de4805c0880ce9ae3b3fc1cb14f0e377",
+    "tb/pe_mac_tb.sv": "e088337ebef08d6b9cbbb839ac76db0acab84e01a9190131299157530263e7d6",
+    "tb/systolic_array_8x16_tb.sv": "f11353bbb2e5209ce9220840ce6050a7ae4ffd9cd1c5538408d78138d7b53aad",
+    "tb/systolic_array_reference_tb.sv": "1efb3e515c81be969e9785393163abfdab407467bd0a6c638203e844cf6a060a",
+    "tb/systolic_array_stress_tb.sv": "c8af00ce47b6ed42292ce7fcbdfd0e1673f19e34da39b51dc1767b4aa87e88de",
+    "tb/systolic_input_skew_tb.sv": "a1062a15e136935e3b9139ae6ff34bf14a6c5b4b88c5ee4c58c684d6d6d66da2",
+    "tb/tile_dma_tb.sv": "1ab469faa2392e030c36c788a93a4245d61134b10824b3adf49e4fe8f4e24a5e",
+    "tb/tile_result_collector_tb.sv": "6a9bdb665e8c3006259a71d28cec02366d0d8ce3f520fcf7aa4497e9151b77cd",
+    "tb/tile_stream_adapter_tb.sv": "23e4f7b406ccaf5471b8865ba69dbb08b85ce7bb0beea6558310552a4ee3e925"
+  },
+  "vectors": {
+    "sha256": "b3a645b027dd3a1afddf9ca917f3df35fa4e2aa95222b85ba4c481de168b9dcb",
+    "pairs": 20441,
+    "generator": "scripts/Generate-Fp32Vectors.ps1",
+    "seed": "0x12345678",
+    "edge_pairs": "21 x 21",
+    "random_pairs_default": 20000,
+    "reference": ".NET Single separate add/mul, canonical NaN"
+  },
+  "tool_smoke": {
+    "icarus12": {
+      "status": "PASS",
+      "commands": [
+        {
+          "argv": [
+            "${ICARUS12}/bin/iverilog.exe",
+            "-V"
+          ],
+          "cwd": "${PROJECT_ROOT}\\tmp\\stage4b_smoke12",
+          "started_at": "2026-10-17T14:02:51.795891+08:00",
+          "returncode": 0,
+          "stdout": "Icarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)\r\n\r\nCopyright (c) 2000-2021 Stephen Williams (<upstream-contact>)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\nIcarus Verilog Preprocessor version 12.0 (devel) (s20150603-1539-g2693dd32b)\r\n\r\nCopyright (c) 1999-2021 Stephen Williams (<upstream-contact>)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\nIcarus Verilog Parser/Elaborator version 12.0 (devel) (s20150603-1539-g2693dd32b)\r\n\r\nCopyright (c) 1998-2021 Stephen Williams (<upstream-contact>)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\n FLAGS DLL vvp.tgt\r\nvvp.tgt: Icarus Verilog VVP Code Generator 12.0 (devel) (s20150603-1539-g2693dd32b)\r\n\r\nCopyright (c) 2001-2021 Stephen Williams (<upstream-contact>)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\n",
+          "stderr": "",
+          "finished_at": "2026-10-17T14:02:52.008717+08:00"
+        },
+        {
+          "argv": [
+            "${ICARUS12}/bin/vvp.exe",
+            "-V"
+          ],
+          "cwd": "${PROJECT_ROOT}\\tmp\\stage4b_smoke12",
+          "started_at": "2026-10-17T14:02:52.008717+08:00",
+          "returncode": 0,
+          "stdout": "",
+          "stderr": "Icarus Verilog runtime version 12.0 (devel) (s20150603-1539-g2693dd32b)\r\n\r\nCopyright (c) 2001-2021 Stephen Williams (<upstream-contact>)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\n",
+          "finished_at": "2026-10-17T14:02:52.057216+08:00"
+        },
+        {
+          "argv": [
+            "${ICARUS12}/bin/iverilog.exe",
+            "-g2012",
+            "-s",
+            "stage4b_smoke",
+            "-o",
+            "after14.vvp",
+            "stage4b_smoke.v"
+          ],
+          "cwd": "${PROJECT_ROOT}\\tmp\\stage4b_smoke12",
+          "started_at": "2026-10-17T14:02:52.057216+08:00",
+          "returncode": 0,
+          "stdout": "",
+          "stderr": "",
+          "finished_at": "2026-10-17T14:02:52.160818+08:00"
+        },
+        {
+          "argv": [
+            "${ICARUS12}/bin/vvp.exe",
+            "after14.vvp"
+          ],
+          "cwd": "${PROJECT_ROOT}\\tmp\\stage4b_smoke12",
+          "started_at": "2026-10-17T14:02:52.160818+08:00",
+          "returncode": 0,
+          "stdout": "STAGE4B_ICARUS_SMOKE_PASS\r\nstage4b_smoke.v:3: $finish called at 1 (1s)\r\n",
+          "stderr": "",
+          "finished_at": "2026-10-17T14:02:52.200195+08:00"
+        }
+      ]
+    },
+    "icarus14": {
+      "status": "PASS",
+      "commands": [
+        {
+          "argv": [
+            "${ICARUS14}\\bin\\iverilog.exe",
+            "-V"
+          ],
+          "cwd": "${PROJECT_ROOT}\\tmp\\stage4b_smoke14",
+          "started_at": "2026-10-17T14:01:42.429095+08:00",
+          "returncode": 0,
+          "stdout": "Icarus Verilog version 14.0 (devel) (s20260301-583-g5d7612759-dirty)\r\n\r\nCopyright (c) 2000-2026 Stephen Williams (<upstream-contact>)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\nIcarus Verilog Preprocessor version 14.0 (devel) (s20260301-583-g5d7612759-dirty)\r\n\r\nCopyright (c) 1999-2026 Stephen Williams (<upstream-contact>)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\nIcarus Verilog Parser/Elaborator version 14.0 (devel) (s20260301-583-g5d7612759-dirty)\r\n\r\nCopyright (c) 1998-2026 Stephen Williams (<upstream-contact>)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\n FLAGS DLL vvp.tgt\r\nvvp.tgt: Icarus Verilog VVP Code Generator 14.0 (devel) (s20260301-583-g5d7612759-dirty)\r\n\r\nCopyright (c) 2001-2026 Stephen Williams (<upstream-contact>)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\n",
+          "stderr": "",
+          "finished_at": "2026-10-17T14:01:43.524822+08:00"
+        },
+        {
+          "argv": [
+            "${ICARUS14}\\bin\\vvp.exe",
+            "-V"
+          ],
+          "cwd": "${PROJECT_ROOT}\\tmp\\stage4b_smoke14",
+          "started_at": "2026-10-17T14:01:43.524822+08:00",
+          "returncode": 0,
+          "stdout": "",
+          "stderr": "Icarus Verilog runtime version 14.0 (devel) (s20260301-583-g5d7612759-dirty)\r\n\r\nCopyright (c) 2001-2026 Stephen Williams (<upstream-contact>)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\n",
+          "finished_at": "2026-10-17T14:01:43.979780+08:00"
+        },
+        {
+          "argv": [
+            "${ICARUS14}\\bin\\iverilog.exe",
+            "-g2012",
+            "-s",
+            "stage4b_smoke",
+            "-o",
+            "smoke.vvp",
+            "${PROJECT_ROOT}\\tmp\\stage4b_smoke14\\stage4b_smoke.v"
+          ],
+          "cwd": "${PROJECT_ROOT}\\tmp\\stage4b_smoke14",
+          "started_at": "2026-10-17T14:01:43.979780+08:00",
+          "returncode": 0,
+          "stdout": "",
+          "stderr": "",
+          "finished_at": "2026-10-17T14:01:44.157655+08:00"
+        },
+        {
+          "argv": [
+            "${ICARUS14}\\bin\\vvp.exe",
+            "smoke.vvp"
+          ],
+          "cwd": "${PROJECT_ROOT}\\tmp\\stage4b_smoke14",
+          "started_at": "2026-10-17T14:01:44.157655+08:00",
+          "returncode": 0,
+          "stdout": "STAGE4B_ICARUS_SMOKE_PASS\r\n${PROJECT_ROOT}\\tmp\\stage4b_smoke14\\stage4b_smoke.v:3: $finish called at 1 (1s)\r\n",
+          "stderr": "",
+          "finished_at": "2026-10-17T14:01:44.198536+08:00"
+        }
+      ]
+    }
+  },
+  "official_distribution": {
+    "publisher": "YosysHQ",
+    "release": "https://github.com/YosysHQ/oss-cad-suite-build/releases/tag/2026-10-16",
+    "source": "https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2026-10-16/oss-cad-suite-windows-x64-20261016.tgz",
+    "bytes": 603907603,
+    "sha256": "a9620d217a6cd796b38dad1f5acf9eae7fe931d193cd89a9dbe468d86f7cd052",
+    "expected_sha256": "a9620d217a6cd796b38dad1f5acf9eae7fe931d193cd89a9dbe468d86f7cd052",
+    "hash_matches": true,
+    "checksum_authority": "GitHub release asset digest published for YosysHQ official repository",
+    "archive_executed": false
+  },
+  "tool_binary_sha256": {
+    "icarus14": {
+      "bin/iverilog.exe": "ad9c22778613f3c72778d9aa5e2e541645e757ac493de6e34625bb73315df529",
+      "bin/vvp.exe": "536052cb5537133977ca483dfed67fccd4a825c3aa49c5191e2df4befa7e8c21"
+    },
+    "icarus12": {
+      "bin/iverilog.exe": "803b8844af2cc8ed70b5f08b07ffa749901280e81339617ca3e72cbbb852bd2b",
+      "bin/vvp.exe": "e2f442f4d5aa76e55c85c3ff77e4446fbfdb9946b7cfe8a2dff87f275da17b62"
+    }
+  },
+  "security_event": {
+    "first_candidate": "Bleyer 14-20260804 installer blocked by Defender; never executed, extracted or restored",
+    "detection": "Trojan:Win32/Suschil!rfn",
+    "final_candidate": "different YosysHQ official archive; digest verified; extracted-directory scan completed; no detections for that archive/directory recorded",
+    "security_settings_modified": false
+  },
+  "format_notes": [
+    "Normalized ${PROJECT_ROOT}/${ICARUS12}/${ICARUS14}/${LOCALAPPDATA}/${USER_HOME} replace local paths in exported command evidence. Original files retained unchanged locally.",
+    "Native stdout/stderr retain test outcomes; version copyright contact emails redacted.",
+    "These are exports from earlier real executions, not additional tests."
+  ]
+}

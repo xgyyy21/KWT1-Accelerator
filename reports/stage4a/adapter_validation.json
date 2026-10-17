@@ -1,0 +1,18 @@
+{
+  "scope": "real direct/adapter agreement and evidence integrity; not extra RTL tests",
+  "checks": {
+    "all_discovered_tests_accounted_for": true,
+    "native_22_compiles_22_simulations_plus_soc": true,
+    "compile_exits_all_zero": true,
+    "pass_requires_successful_simulation": true,
+    "six_failures_propagate_to_unified_exit": true,
+    "direct_and_adapter_summaries_match": true,
+    "direct_and_adapter_failure_exits_match": true,
+    "vectors_identical": true,
+    "original_and_copy_sources_unchanged": true,
+    "adapter_hash_matches_run": true,
+    "every_module_log_preserved": true,
+    "unified_report_contains_failure_and_preserves_soc_block": true
+  },
+  "all_passed": true
+}

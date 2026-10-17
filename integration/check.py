@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""Stage-1 local inventory and tool smoke checks. Python 3.11, stdlib only.
+"""Local inventory/tool smoke checks, with opt-in hardware module regression.
 
-No model, team RTL, SoC simulation, synthesis or PPA is executed.
+Default: no model, team RTL, SoC simulation, synthesis or PPA is executed.
+--hardware-source runs the team's unchanged module regression in an isolated copy.
 Exit codes: 0=no FAIL/BLOCKED; 1=FAIL; 2=BLOCKED without FAIL.
 """
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import os
@@ -84,6 +86,14 @@ def sha256(path: Path) -> str:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--hardware-source", type=Path)
+    parser.add_argument("--hardware-manifest", type=Path,
+                        default=ROOT / "reports/stage4a/hardware_manifest.json")
+    parser.add_argument("--hardware-iverilog")
+    parser.add_argument("--hardware-vvp")
+    parser.add_argument("--context", default="unspecified")
+    options = parser.parse_args()
     started = datetime.now(CN_TIME)
     checks: list[dict] = []
 
@@ -285,6 +295,18 @@ def main() -> int:
     add("innovation_experiment", "future", "NOT_RUN", "创新方案未确定，本阶段未安排实验")
     add("final_submission_generation", "future", "NOT_RUN", "正式网表/截图/成绩及提交包未安排生成")
 
+    hardware_report = None
+    if options.hardware_source is not None:
+        from hardware import run as run_hardware
+        hardware_report = run_hardware(options.hardware_source, options.hardware_manifest,
+                                       options.hardware_iverilog, options.hardware_vvp, options.context)
+        add("hardware_module_regression", "hardware_modules", hardware_report["status"],
+            "硬件组原脚本模块级回归；不代表完整 FP32 阵列、FFN1 或 E203 集成通过",
+            {"report": hardware_report["report_path"],
+             "commit": hardware_report.get("hardware_commit"),
+             "test_count": hardware_report["test_count"], "counts": hardware_report["counts"],
+             "failed_modules": hardware_report["failed_modules"]})
+
     counts = {s: sum(c["status"] == s for c in checks) for s in STATUSES}
     stage_counts = dict(Counter(c["status"] for c in checks if c["category"] == "stage1"))
     overall = "FAIL" if counts["FAIL"] else ("BLOCKED" if counts["BLOCKED"] else "PASS")
@@ -293,7 +315,9 @@ def main() -> int:
     exit_code = 1 if counts["FAIL"] else (2 if counts["BLOCKED"] else 0)
     finished = datetime.now(CN_TIME)
     report = {
-        "schema_version": 1, "scope": "stage1 inventory and environment smoke only",
+        "schema_version": 1,
+        "scope": ("inventory, environment smoke, and opt-in hardware module regression"
+                  if hardware_report else "stage1 inventory and environment smoke only"),
         "started_at": started.isoformat(), "finished_at": finished.isoformat(),
         "timezone": "Asia/Shanghai (UTC+08:00)", "root": str(ROOT),
         "platform": platform.platform(), "git": git_info,
@@ -303,7 +327,7 @@ def main() -> int:
             "PASS 仅对应单个检查的明确范围，文件清点不代表设计功能通过。",
             "缺失工具以当前 PATH 为界；未安装/下载任何工具或资产。",
             "Git 状态在本次报告写入前采集，报告本身及之后的文件变动不在该快照中。",
-            "项目验证 BLOCKED 为当前缺少已核验依赖的人工准备状态；本程序不执行功能/精度/综合。",
+            "完整工程验证仍 BLOCKED；可选硬件模块回归单列，不替代整层/SoC/精度/综合验收。",
         ],
         "material_hashes": material_hashes, "source_inventory": inventories,
         "tool_probes": tools, "checks": checks,
@@ -326,7 +350,9 @@ def main() -> int:
         f"- 阶段 1 基础入口：**{stage_status}**；工程准备总览：**{overall}**",
         "- 计数：" + " / ".join(f"{s}={counts[s]}" for s in STATUSES),
         f"- 退出码：{exit_code}", "",
-        "本报告不执行项目 RTL/SoC、精度、逻辑综合或 PPA。PASS 只覆盖所述检查范围。", "",
+        ("本次包含单列硬件模块回归，详见对应报告；未执行完整 FFN1/E203、精度、综合或 PPA。"
+         if hardware_report else "本报告不执行项目 RTL/SoC、精度、逻辑综合或 PPA。")
+        + "PASS 只覆盖所述检查范围。", "",
         "| 检查项 | 分类 | 状态 | 结论 |", "|---|---|---|---|",
     ]
     for check in checks:

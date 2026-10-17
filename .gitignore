@@ -100,3 +100,14 @@ secrets*
 /嵌赛题目.pdf
 /KWT-1_软件与硬件交接和并行安排.md
 /硬件侧回复_软件交接_2026-10-16.md
+
+# Machine-specific/raw stage 4 evidence stays local; publish reviewed exports.
+/reports/STAGE4A_HARDWARE_INTEGRATION.md
+/reports/STAGE4B_ICARUS14_VALIDATION.md
+/reports/stage4a/*
+!/reports/stage4a/hardware_manifest.json
+!/reports/stage4a/adapter_validation.json
+/reports/stage4b/
+/reports/basic_check_*.json
+/reports/basic_check_*.md
+*.tgz

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "scope": "stage4c publication/commit review only; no new RTL tests",
+  "baseline_head": "5b2fa0f297f03d2598bb79d7e59c93f974e144f5",
+  "branch": "codex/stage3a-synthesis-prep",
+  "initial_untracked": {
+    "files": 316,
+    "bytes": 804584,
+    "all_text": true,
+    "credential_pattern_findings": 0,
+    "files_with_user_profile_paths": 22
+  },
+  "policy": {
+    "original_reports_and_raw_logs": "preserved locally and ignored; only sanitized exports selected",
+    "environment_path_and_raw_commit_metadata": "not selected",
+    "stage2a_untracked_audits": "preserved; not selected",
+    "installer_or_tool_binaries": "outside repository; not selected",
+    "existing_stage3_commit": "preserved unchanged"
+  },
+  "checks": {
+    "ast_syntax": "PASS",
+    "cli_help_without_running_tests": "PASS",
+    "json_jsonl_parse": "PASS",
+    "relative_markdown_links": "PASS",
+    "published_credentials_and_user_profile_paths": "PASS",
+    "no_selected_binary_or_file_over_1MiB": "PASS",
+    "original_untracked_files_not_deleted": "PASS",
+    "only_intended_readme_changed_among_initial_untracked": "PASS",
+    "stage3_and_team_paths_unchanged": "PASS"
+  },
+  "known_hardware_path_overlap": [],
+  "semantic_merge_validation": "NOT_RUN",
+  "stage4c_hardware_regression": "NOT_RUN",
+  "stage4c_installation_or_synthesis": "NOT_RUN",
+  "remote_evidence": "remote_branches.json",
+  "native_test_counts": "verification_summary.json"
+}

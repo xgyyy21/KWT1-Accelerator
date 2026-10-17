@@ -1,0 +1,1 @@
+Tests: 22; failures: 6; failed: ai_engine_core_sequence_tb, ai_engine_core_tb, pe_array_8x16_tb, systolic_array_8x16_tb, systolic_array_reference_tb, systolic_array_stress_tb

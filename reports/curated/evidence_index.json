@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "scope": "portable publication derived from stage4a/4b; original files preserved locally",
+  "local_originals": {
+    "reports/stage4a/runs/20261017_134122_b37baf18/report.json": {
+      "sha256": "40f6e4afc67fa39b87d7e967436cdb4661ebc4508117dd5f4bc078c7117f32f3",
+      "bytes": 32005,
+      "availability": "local original; not included unless explicitly listed as published"
+    },
+    "reports/stage4a/runs/20261017_135525_78208404/report.json": {
+      "sha256": "f97a1ac2cffc0c2e66b56baea6bc818e8d0c3e3bcf6b374cd15e40337f545a0e",
+      "bytes": 42556,
+      "availability": "local original; not included unless explicitly listed as published"
+    },
+    "reports/stage4a/runs/20261017_140219_05b522e4/report.json": {
+      "sha256": "3f7006003e3de5c12d61fb8811919f4a09a08e6fe3a2dc66e2b1c6d732f0b4aa",
+      "bytes": 45626,
+      "availability": "local original; not included unless explicitly listed as published"
+    },
+    "reports/stage4b/comparison_final.json": {
+      "sha256": "7d5f5c2ce8676fa374811a74a28fb3e29902a2bf53de2a98738ff678cef5a060",
+      "bytes": 5707,
+      "availability": "local original; not included unless explicitly listed as published"
+    },
+    "reports/stage4a/runs/20261017_134122_b37baf18/native_commands.jsonl": {
+      "sha256": "45a61ce72f177ee3992764a6bb3b7dd260f26dbdddcf492c14135b234afd5ae4",
+      "bytes": 22356,
+      "availability": "local original; not included unless explicitly listed as published"
+    },
+    "reports/stage4a/runs/20261017_134122_b37baf18/logs/summary.txt": {
+      "sha256": "6a51ae8fdea65c7a5156069d496b6b74d95b5fcffb4301a44819c1c18027246b",
+      "bytes": 179,
+      "availability": "local original; not included unless explicitly listed as published"
+    },
+    "reports/stage4a/runs/20261017_140219_05b522e4/native_commands.jsonl": {
+      "sha256": "c31a63b3a57b59fe8825e761faf6df58bb756c69a941e9e50779fe63e039367f",
+      "bytes": 21317,
+      "availability": "local original; not included unless explicitly listed as published"
+    },
+    "reports/stage4a/runs/20261017_140219_05b522e4/logs/summary.txt": {
+      "sha256": "6602965dbe215eb7ecbb247a46b2e5ddee1a984903e7a2c4114dd7c398eaf175",
+      "bytes": 37,
+      "availability": "local original; not included unless explicitly listed as published"
+    },
+    "reports/stage4b/basic_icarus12_after14/report.json": {
+      "sha256": "f21bdd7166262bfb5c2476bdf9381d998d1a43a596c5ad210f4eb709d9988e3e",
+      "bytes": 6296,
+      "availability": "local original; not included unless explicitly listed as published"
+    },
+    "reports/stage4b/basic_icarus14/report.json": {
+      "sha256": "61d9a7a487dafa1c08065aac698d2867740a0aa7c5cb8c464429e4c7e3198510",
+      "bytes": 6818,
+      "availability": "local original; not included unless explicitly listed as published"
+    },
+    "reports/stage4b/official_download.json": {
+      "sha256": "1953e1b5605e8f090551d6c5fce1ab8066349417779665f186a6094056dc31ef",
+      "bytes": 739,
+      "availability": "local original; not included unless explicitly listed as published"
+    },
+    "reports/stage4a/hardware_manifest.json": {
+      "sha256": "ecfe62083812a1b983882eef70010b3c4f18d6722c00d139301c146a1dcdd5bf",
+      "bytes": 15432,
+      "availability": "local original; not included unless explicitly listed as published"
+    },
+    "reports/stage4a/adapter_validation.json": {
+      "sha256": "14303d0457a35fe34d1726144eaac9fad27102720867e469ac9324932a4bb87e",
+      "bytes": 717,
+      "availability": "local original; not included unless explicitly listed as published"
+    },
+    "reports/STAGE4A_HARDWARE_INTEGRATION.md": {
+      "sha256": "bdaa1f443912bb46bb965be03a9d1b050352f46df82650cef2a568179d9fb0d5",
+      "bytes": 16895,
+      "availability": "local original; not included unless explicitly listed as published"
+    },
+    "reports/STAGE4B_ICARUS14_VALIDATION.md": {
+      "sha256": "46cf20910056a4d5014cf1838543b9e10cd550cb433624981a97264023d2ea40",
+      "bytes": 14669,
+      "availability": "local original; not included unless explicitly listed as published"
+    }
+  },
+  "published": [
+    {
+      "path": "reports/curated/evidence/icarus12_commands.jsonl",
+      "sha256": "b8c33379d0426db21ff3336fda54f6b8ea199116afadc508be75d6e6f8c06925",
+      "bytes": 20246
+    },
+    {
+      "path": "reports/curated/evidence/icarus12_summary.txt",
+      "sha256": "fb3ac76c3db704ac7fb0bd986faf76478d1e7213127d0e36c8891590ccda9ed6",
+      "bytes": 175
+    },
+    {
+      "path": "reports/curated/evidence/icarus14_commands.jsonl",
+      "sha256": "e5f87e3dc128a23c5d7d5173e06f00d97372bc79452a454e8b466324a0a61222",
+      "bytes": 20152
+    },
+    {
+      "path": "reports/curated/evidence/icarus14_summary.txt",
+      "sha256": "adb916d39234716c62620b7e87d704b8958afb4a44fbabdc976282bb53439ba6",
+      "bytes": 32
+    },
+    {
+      "path": "reports/curated/remote_branches.json",
+      "sha256": "fec1a007b160870bb8e754c10190324ce98b447785b4d7ade57e4a14ebe57031",
+      "bytes": 624
+    },
+    {
+      "path": "reports/curated/STAGE4A_HARDWARE_INTEGRATION.md",
+      "sha256": "3dbccfa6d96278318dffb9fbab435bb950d3c484123c7ea1357bc900669db521",
+      "bytes": 17451
+    },
+    {
+      "path": "reports/curated/STAGE4B_ICARUS14_VALIDATION.md",
+      "sha256": "00d5c52d7a292be6a38cd4ac55e207f8aa1552cdd2b9427c003aaebcbf66f7ca",
+      "bytes": 15526
+    },
+    {
+      "path": "reports/curated/verification_summary.json",
+      "sha256": "8f29289a92ca8af438574d5e483faf5f50e46664430663880df1eeb65276828b",
+      "bytes": 33005
+    }
+  ],
+  "placeholder_roots": [
+    "${PROJECT_ROOT}",
+    "${ICARUS12}",
+    "${ICARUS14}",
+    "${LOCALAPPDATA}",
+    "${USER_HOME}"
+  ],
+  "publication_text_encoding": "UTF-8, LF; exported summary trailing whitespace removed; local_originals hashes refer to untouched local byte streams"
+}
