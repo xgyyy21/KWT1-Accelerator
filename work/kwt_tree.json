@@ -1,0 +1,1939 @@
+{
+  "sha": "237e4097afd4f6851e0b82f0a8d65c2dfe8eae30",
+  "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/237e4097afd4f6851e0b82f0a8d65c2dfe8eae30",
+  "tree": [
+    {
+      "path": "LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f49a4e16e68b128803cc2dcea614603632b04eac",
+      "size": 11356,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/f49a4e16e68b128803cc2dcea614603632b04eac"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae2a5128273ba47ae5cc2c43fb469911855b6281",
+      "size": 5182,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ae2a5128273ba47ae5cc2c43fb469911855b6281"
+    },
+    {
+      "path": "distill.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d83f7269af1f7f8164222fca4f3df3479fb78305",
+      "size": 954,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/d83f7269af1f7f8164222fca4f3df3479fb78305"
+    },
+    {
+      "path": "distill_att_mh_rnn.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c70fab10438a293e0f88325261ef418dc985c094",
+      "size": 429,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/c70fab10438a293e0f88325261ef418dc985c094"
+    },
+    {
+      "path": "eval.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a43026e163514710bf552f48836127fb01958d40",
+      "size": 923,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/a43026e163514710bf552f48836127fb01958d40"
+    },
+    {
+      "path": "kws_streaming",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "38e3152d3ebb0719e3b92c3bb7740beeb98344a4",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/38e3152d3ebb0719e3b92c3bb7740beeb98344a4"
+    },
+    {
+      "path": "kws_streaming/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e21abc99cf948a7f0bc94f1330fd5b410bf8f36a",
+      "size": 31208,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/e21abc99cf948a7f0bc94f1330fd5b410bf8f36a"
+    },
+    {
+      "path": "kws_streaming/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "625758ddaac8e31b389f38101ca77b0f02bee50d",
+      "size": 624,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/625758ddaac8e31b389f38101ca77b0f02bee50d"
+    },
+    {
+      "path": "kws_streaming/accuracy_latency.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "672b94cedbb15c0e15751b5c49bffafcbc908e9d",
+      "size": 24819,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/672b94cedbb15c0e15751b5c49bffafcbc908e9d"
+    },
+    {
+      "path": "kws_streaming/accuracy_latency_stream.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ac5802c821424c6676791f7e8b542a443290dcd",
+      "size": 10715,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/0ac5802c821424c6676791f7e8b542a443290dcd"
+    },
+    {
+      "path": "kws_streaming/accuracy_size.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6269e32438783c3f0877c6e535a22e2e82544160",
+      "size": 24309,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/6269e32438783c3f0877c6e535a22e2e82544160"
+    },
+    {
+      "path": "kws_streaming/accuracy_size_stream.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "954bc3c29f98a2d1562131dcfb1ea416f9d77e4b",
+      "size": 10021,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/954bc3c29f98a2d1562131dcfb1ea416f9d77e4b"
+    },
+    {
+      "path": "kws_streaming/colab",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "92ae47d0d67e8146505bbe59002cac0dd3bf36bc",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/92ae47d0d67e8146505bbe59002cac0dd3bf36bc"
+    },
+    {
+      "path": "kws_streaming/colab/00_check_data.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "932a68a92b0bbef1cce42d34f5211049d8d52bb6",
+      "size": 16669,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/932a68a92b0bbef1cce42d34f5211049d8d52bb6"
+    },
+    {
+      "path": "kws_streaming/colab/01_train.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be0619e7e129b9692639498e41dfa2fd4765d569",
+      "size": 15545,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/be0619e7e129b9692639498e41dfa2fd4765d569"
+    },
+    {
+      "path": "kws_streaming/colab/02_inference.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08728f0bb57cabe085f14ed497c06ce6fb61406e",
+      "size": 31293,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/08728f0bb57cabe085f14ed497c06ce6fb61406e"
+    },
+    {
+      "path": "kws_streaming/colab/conv_batch_norm_folding.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6124edd06b61a15c41a05260a2ba0851c07e838a",
+      "size": 13961,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/6124edd06b61a15c41a05260a2ba0851c07e838a"
+    },
+    {
+      "path": "kws_streaming/colab/conv_batch_norm_on_generated_data.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd07e248ba88f74b3f9070bd4ba0b96727b97117",
+      "size": 459077,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/dd07e248ba88f74b3f9070bd4ba0b96727b97117"
+    },
+    {
+      "path": "kws_streaming/colab/visualize_speech_feature.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "576daceadc5f3c66183311be6468e3685faddd06",
+      "size": 16982,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/576daceadc5f3c66183311be6468e3685faddd06"
+    },
+    {
+      "path": "kws_streaming/colab/visualize_training_validation_loss.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47463cd299cb02c9c733c610042e02eb8e617fad",
+      "size": 7981,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/47463cd299cb02c9c733c610042e02eb8e617fad"
+    },
+    {
+      "path": "kws_streaming/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "15af2eca5946463f50c211ba249659d6dc99d428",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/15af2eca5946463f50c211ba249659d6dc99d428"
+    },
+    {
+      "path": "kws_streaming/data/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df2f04dedfed6be7590bec1c0a682fbd18abc421",
+      "size": 629,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/df2f04dedfed6be7590bec1c0a682fbd18abc421"
+    },
+    {
+      "path": "kws_streaming/data/input_data.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98b3d34f46e7e6e40b39dce1703fc6c457b7cd82",
+      "size": 35247,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/98b3d34f46e7e6e40b39dce1703fc6c457b7cd82"
+    },
+    {
+      "path": "kws_streaming/data/input_data_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e185dc8f137025b5467ac3542a1fce203aa1c392",
+      "size": 8733,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/e185dc8f137025b5467ac3542a1fce203aa1c392"
+    },
+    {
+      "path": "kws_streaming/eval.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ccbf1c1db0fb5a41d9fd7ed2b9ba1ced4d66649e",
+      "size": 533,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ccbf1c1db0fb5a41d9fd7ed2b9ba1ced4d66649e"
+    },
+    {
+      "path": "kws_streaming/experiments",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "80e78a16c71138e0c8eddd4cfe8e11180e0ad6cb",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/80e78a16c71138e0c8eddd4cfe8e11180e0ad6cb"
+    },
+    {
+      "path": "kws_streaming/experiments/kws_experiments_12_labels.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "193d708c288c57157bb99093a5733c8dc48652dc",
+      "size": 4291,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/193d708c288c57157bb99093a5733c8dc48652dc"
+    },
+    {
+      "path": "kws_streaming/experiments/kws_experiments_30k_12_labels.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4b6eb3ee83fa0a5513dc2508ab33bb5847a4f30",
+      "size": 10294,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/b4b6eb3ee83fa0a5513dc2508ab33bb5847a4f30"
+    },
+    {
+      "path": "kws_streaming/experiments/kws_experiments_35_labels.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "336746b2011474ba3dea9ae7c5fa317be3dc2100",
+      "size": 4897,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/336746b2011474ba3dea9ae7c5fa317be3dc2100"
+    },
+    {
+      "path": "kws_streaming/experiments/kws_experiments_paper_12_labels.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f9fded74cba0da3dca6bda6a2444e34751abca6",
+      "size": 31550,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/9f9fded74cba0da3dca6bda6a2444e34751abca6"
+    },
+    {
+      "path": "kws_streaming/experiments/kws_experiments_quantized_12_labels.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "585c5d1a45f8a56cade002bc09eaf89425e94556",
+      "size": 10499,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/585c5d1a45f8a56cade002bc09eaf89425e94556"
+    },
+    {
+      "path": "kws_streaming/latency_size.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40c4f4d33ac844371797aa77e21955315697699c",
+      "size": 22893,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/40c4f4d33ac844371797aa77e21955315697699c"
+    },
+    {
+      "path": "kws_streaming/layers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "52389ef0483931c0121e27ef7d039634759850ae",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/52389ef0483931c0121e27ef7d039634759850ae"
+    },
+    {
+      "path": "kws_streaming/layers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f15908c8aa874daa1ed188bae3501b91be88f915",
+      "size": 631,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/f15908c8aa874daa1ed188bae3501b91be88f915"
+    },
+    {
+      "path": "kws_streaming/layers/average_pooling2d.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "647586a849da19f168e8f044ab1de36224b6a797",
+      "size": 3419,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/647586a849da19f168e8f044ab1de36224b6a797"
+    },
+    {
+      "path": "kws_streaming/layers/average_pooling2d_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4713c36a50a28548370c856621fb15e9cf4aa59b",
+      "size": 2881,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/4713c36a50a28548370c856621fb15e9cf4aa59b"
+    },
+    {
+      "path": "kws_streaming/layers/compat.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bfd13a899dbc328e0487d5b6d53c999fc5bfa25",
+      "size": 781,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/4bfd13a899dbc328e0487d5b6d53c999fc5bfa25"
+    },
+    {
+      "path": "kws_streaming/layers/contrib_conv2d.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff7cbc6b3622b5b5bdc3fab3629fbf1fc6bfadf2",
+      "size": 3216,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ff7cbc6b3622b5b5bdc3fab3629fbf1fc6bfadf2"
+    },
+    {
+      "path": "kws_streaming/layers/contrib_conv2d_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "180bebfca49e625d04bd76d3799ce555df9d1da0",
+      "size": 662,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/180bebfca49e625d04bd76d3799ce555df9d1da0"
+    },
+    {
+      "path": "kws_streaming/layers/conv1d_transpose.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d1263d7e5c365c7692898feba087b4b37e8f85c",
+      "size": 8269,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/5d1263d7e5c365c7692898feba087b4b37e8f85c"
+    },
+    {
+      "path": "kws_streaming/layers/conv1d_transpose_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ec2767cc5b7e247b8c3e51de8a804460eb515f1",
+      "size": 4257,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/8ec2767cc5b7e247b8c3e51de8a804460eb515f1"
+    },
+    {
+      "path": "kws_streaming/layers/conv2d_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "886ab4118438151efa5a6957d3e20192c2db0e13",
+      "size": 7525,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/886ab4118438151efa5a6957d3e20192c2db0e13"
+    },
+    {
+      "path": "kws_streaming/layers/data_frame.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83ac39d49d9f0496c8b03062d1c7be35c557a728",
+      "size": 9208,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/83ac39d49d9f0496c8b03062d1c7be35c557a728"
+    },
+    {
+      "path": "kws_streaming/layers/data_frame_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f3331673faccb89ffbe4b8d1b71fa36ceffdc47",
+      "size": 7139,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/2f3331673faccb89ffbe4b8d1b71fa36ceffdc47"
+    },
+    {
+      "path": "kws_streaming/layers/dct.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c48bff4eeb124d7d6fa7b7f6b4ad8ddd4139369c",
+      "size": 2279,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/c48bff4eeb124d7d6fa7b7f6b4ad8ddd4139369c"
+    },
+    {
+      "path": "kws_streaming/layers/dct_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5982fe5a2048c017f0b134d4626181eb47325aa",
+      "size": 1750,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/e5982fe5a2048c017f0b134d4626181eb47325aa"
+    },
+    {
+      "path": "kws_streaming/layers/delay.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40b89428d918023b68be30626fc1f71a86674434",
+      "size": 5087,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/40b89428d918023b68be30626fc1f71a86674434"
+    },
+    {
+      "path": "kws_streaming/layers/delay_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c39e8532f55008bff177188bfe2020f1dbab6b4",
+      "size": 7847,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/2c39e8532f55008bff177188bfe2020f1dbab6b4"
+    },
+    {
+      "path": "kws_streaming/layers/dense_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "730b56cce1c108e6f65c62e1b51e2fbb5e4f9fd1",
+      "size": 2855,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/730b56cce1c108e6f65c62e1b51e2fbb5e4f9fd1"
+    },
+    {
+      "path": "kws_streaming/layers/depthwise_conv1d.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da0ecc386ebe69cd239fcf542b128cb8e1ee73b2",
+      "size": 9669,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/da0ecc386ebe69cd239fcf542b128cb8e1ee73b2"
+    },
+    {
+      "path": "kws_streaming/layers/depthwise_conv1d_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "175222ba14885c11acb697994d3c1a1a72c794d0",
+      "size": 5221,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/175222ba14885c11acb697994d3c1a1a72c794d0"
+    },
+    {
+      "path": "kws_streaming/layers/flatten_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5b91a34fd31908a939e9236fc6f37b36df01dd3",
+      "size": 4462,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/c5b91a34fd31908a939e9236fc6f37b36df01dd3"
+    },
+    {
+      "path": "kws_streaming/layers/gru.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d606d31dd73546a81c7aba569a5196d5966d499",
+      "size": 7959,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/6d606d31dd73546a81c7aba569a5196d5966d499"
+    },
+    {
+      "path": "kws_streaming/layers/gru_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "316ad42a99735d50b0ab5c041c4f495a54204700",
+      "size": 3907,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/316ad42a99735d50b0ab5c041c4f495a54204700"
+    },
+    {
+      "path": "kws_streaming/layers/lstm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db0de9fcc667404412f7bad41ed9c041d2618610",
+      "size": 10610,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/db0de9fcc667404412f7bad41ed9c041d2618610"
+    },
+    {
+      "path": "kws_streaming/layers/lstm_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bd82199aee0c758e2afeedb214d39152011b185",
+      "size": 5206,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/3bd82199aee0c758e2afeedb214d39152011b185"
+    },
+    {
+      "path": "kws_streaming/layers/magnitude_rdft.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b517020b2089db9b93f659c65aa585715de3889",
+      "size": 4473,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/8b517020b2089db9b93f659c65aa585715de3889"
+    },
+    {
+      "path": "kws_streaming/layers/magnitude_rdft_mel.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e02a3d36555c0ddf1a5100156c6532ebfdd4f30",
+      "size": 5281,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/3e02a3d36555c0ddf1a5100156c6532ebfdd4f30"
+    },
+    {
+      "path": "kws_streaming/layers/magnitude_rdft_mel_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05d0fdf2d2c7a88fe9d78c887d7aec1e5cb6ec05",
+      "size": 3884,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/05d0fdf2d2c7a88fe9d78c887d7aec1e5cb6ec05"
+    },
+    {
+      "path": "kws_streaming/layers/magnitude_rdft_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e98b463a42ecc0ae129eb2dd9297fefeb3b99d82",
+      "size": 1709,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/e98b463a42ecc0ae129eb2dd9297fefeb3b99d82"
+    },
+    {
+      "path": "kws_streaming/layers/mel_spectrogram.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6457f5448d457b85365f3db276012df2a8a87ee6",
+      "size": 3207,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/6457f5448d457b85365f3db276012df2a8a87ee6"
+    },
+    {
+      "path": "kws_streaming/layers/mel_spectrogram_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c81ad25dbaef1f4a94025c83094f66077f867a1d",
+      "size": 2735,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/c81ad25dbaef1f4a94025c83094f66077f867a1d"
+    },
+    {
+      "path": "kws_streaming/layers/mel_table.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddebc0003811b3301febb7779059fe919f3ff713",
+      "size": 5565,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ddebc0003811b3301febb7779059fe919f3ff713"
+    },
+    {
+      "path": "kws_streaming/layers/mel_table_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efd814c8812176d5f8f6e4b3583efff231103e92",
+      "size": 1899,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/efd814c8812176d5f8f6e4b3583efff231103e92"
+    },
+    {
+      "path": "kws_streaming/layers/modes.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d21184f93de9a3f01392bd7da0a311de1117ac1a",
+      "size": 3066,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/d21184f93de9a3f01392bd7da0a311de1117ac1a"
+    },
+    {
+      "path": "kws_streaming/layers/non_scaling_dropout.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e609cf5a02095f581e52de41a036c13ced0b1f0a",
+      "size": 1882,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/e609cf5a02095f581e52de41a036c13ced0b1f0a"
+    },
+    {
+      "path": "kws_streaming/layers/non_scaling_dropout_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d54f0e44f77b556c437d379cf2a42e603ad51f44",
+      "size": 4778,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/d54f0e44f77b556c437d379cf2a42e603ad51f44"
+    },
+    {
+      "path": "kws_streaming/layers/normalizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d815d0c8e4cee475487cee8bfc9b834d0ce47b02",
+      "size": 1677,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/d815d0c8e4cee475487cee8bfc9b834d0ce47b02"
+    },
+    {
+      "path": "kws_streaming/layers/preemphasis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64d22a8acd6a70e036712df9ce4f743585b64dfd",
+      "size": 2319,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/64d22a8acd6a70e036712df9ce4f743585b64dfd"
+    },
+    {
+      "path": "kws_streaming/layers/preemphasis_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9016d5c6fbd8a0bde947ba132ac042dcac62760b",
+      "size": 1816,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/9016d5c6fbd8a0bde947ba132ac042dcac62760b"
+    },
+    {
+      "path": "kws_streaming/layers/random_shift.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "374ddf5ea5414ea5d36d5683a9bfca4c2df4ef97",
+      "size": 4236,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/374ddf5ea5414ea5d36d5683a9bfca4c2df4ef97"
+    },
+    {
+      "path": "kws_streaming/layers/random_shift_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4addbc795808fe7c0b28580a92c26d0ca6202e56",
+      "size": 1850,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/4addbc795808fe7c0b28580a92c26d0ca6202e56"
+    },
+    {
+      "path": "kws_streaming/layers/random_stretch_squeeze.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12b6ca7d0575907d54d1d4b74313caef23129bd8",
+      "size": 4470,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/12b6ca7d0575907d54d1d4b74313caef23129bd8"
+    },
+    {
+      "path": "kws_streaming/layers/random_stretch_squeeze_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "939d36cc1c567c29908ad939aa214b262eb75ec5",
+      "size": 1962,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/939d36cc1c567c29908ad939aa214b262eb75ec5"
+    },
+    {
+      "path": "kws_streaming/layers/spectrogram_augment.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33f1da4f956908bbdb12ecfb32b3a62326229a88",
+      "size": 4084,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/33f1da4f956908bbdb12ecfb32b3a62326229a88"
+    },
+    {
+      "path": "kws_streaming/layers/spectrogram_augment_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5044e3817e77284002b61a6d6ffd352d255c975e",
+      "size": 2651,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/5044e3817e77284002b61a6d6ffd352d255c975e"
+    },
+    {
+      "path": "kws_streaming/layers/spectrogram_cutout.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5067a058004869119ca7d66d36003161a69b8837",
+      "size": 5749,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/5067a058004869119ca7d66d36003161a69b8837"
+    },
+    {
+      "path": "kws_streaming/layers/spectrogram_cutout_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd035ec56bd4bb0adb663186c85d65c7dcaebdee",
+      "size": 2293,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/fd035ec56bd4bb0adb663186c85d65c7dcaebdee"
+    },
+    {
+      "path": "kws_streaming/layers/speech_features.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c888a2f77e03487b399622c094fd288c43a237e4",
+      "size": 13229,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/c888a2f77e03487b399622c094fd288c43a237e4"
+    },
+    {
+      "path": "kws_streaming/layers/speech_features_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "503c3142860a4216cd15e97111c6ae158c318a49",
+      "size": 7963,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/503c3142860a4216cd15e97111c6ae158c318a49"
+    },
+    {
+      "path": "kws_streaming/layers/stream.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b23c82095fd6926422e949ca2372896ca47e7f6",
+      "size": 14686,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/4b23c82095fd6926422e949ca2372896ca47e7f6"
+    },
+    {
+      "path": "kws_streaming/layers/stream_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "374e4790eae779820def84e5e101f80efc4485a2",
+      "size": 16210,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/374e4790eae779820def84e5e101f80efc4485a2"
+    },
+    {
+      "path": "kws_streaming/layers/svdf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4919b419502b475ef83dcd8fe4d39f75c68f9136",
+      "size": 5691,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/4919b419502b475ef83dcd8fe4d39f75c68f9136"
+    },
+    {
+      "path": "kws_streaming/layers/svdf_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbef4ce51d17694cc2afa0fae558b7ed9f86e4c8",
+      "size": 5216,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/bbef4ce51d17694cc2afa0fae558b7ed9f86e4c8"
+    },
+    {
+      "path": "kws_streaming/layers/temporal_padding.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d433e4b201ed750a75875e722cb103a1719549c",
+      "size": 3471,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/3d433e4b201ed750a75875e722cb103a1719549c"
+    },
+    {
+      "path": "kws_streaming/layers/temporal_padding_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "773e6d3f0dcb191f8efe7829c5cb3b10ba9f26f8",
+      "size": 3099,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/773e6d3f0dcb191f8efe7829c5cb3b10ba9f26f8"
+    },
+    {
+      "path": "kws_streaming/layers/test_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1a0a4d0fe9436b9dbf4b3c0de3172ed2762bc8f",
+      "size": 5153,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/c1a0a4d0fe9436b9dbf4b3c0de3172ed2762bc8f"
+    },
+    {
+      "path": "kws_streaming/layers/windowing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71d160ec1800bb97a012432861e315ed8ffc6f5c",
+      "size": 2961,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/71d160ec1800bb97a012432861e315ed8ffc6f5c"
+    },
+    {
+      "path": "kws_streaming/models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ebe65d1089a4b6957c8350857516552b8bdcfc97",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/ebe65d1089a4b6957c8350857516552b8bdcfc97"
+    },
+    {
+      "path": "kws_streaming/models/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d62889a603d7c82e584a0a6b659cc7e59ced1d03",
+      "size": 631,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/d62889a603d7c82e584a0a6b659cc7e59ced1d03"
+    },
+    {
+      "path": "kws_streaming/models/att_mh_rnn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec576f6cfd2e98c54f61893097a1e3c2e34cb4db",
+      "size": 6556,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ec576f6cfd2e98c54f61893097a1e3c2e34cb4db"
+    },
+    {
+      "path": "kws_streaming/models/att_rnn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47d18942eeccf7409cb1cf5bcdfe97191c7dc0eb",
+      "size": 5474,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/47d18942eeccf7409cb1cf5bcdfe97191c7dc0eb"
+    },
+    {
+      "path": "kws_streaming/models/cnn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1440a6ec595db4c25684ab0d1116a11d5bc6cadb",
+      "size": 4168,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/1440a6ec595db4c25684ab0d1116a11d5bc6cadb"
+    },
+    {
+      "path": "kws_streaming/models/crnn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b9e466639a636596f9d1477e4975d7ac8ca3b5a",
+      "size": 5210,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/4b9e466639a636596f9d1477e4975d7ac8ca3b5a"
+    },
+    {
+      "path": "kws_streaming/models/dnn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1ee3af820427c6b8a4b2b0c2e305346eea6c51d",
+      "size": 3801,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/a1ee3af820427c6b8a4b2b0c2e305346eea6c51d"
+    },
+    {
+      "path": "kws_streaming/models/dnn_raw.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02044a6836b8eeac95f012ae879b9d42d714e07e",
+      "size": 3756,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/02044a6836b8eeac95f012ae879b9d42d714e07e"
+    },
+    {
+      "path": "kws_streaming/models/ds_cnn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "730e3c0c7abb7bb0af0aa01725eb70191ee3d665",
+      "size": 7319,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/730e3c0c7abb7bb0af0aa01725eb70191ee3d665"
+    },
+    {
+      "path": "kws_streaming/models/ds_tc_resnet.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccbe35f54ea0b69c7f2429f81bf1ade93f1d2854",
+      "size": 9947,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ccbe35f54ea0b69c7f2429f81bf1ade93f1d2854"
+    },
+    {
+      "path": "kws_streaming/models/gru.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56120286b866fdc537d58f25787fd9a77f2a8413",
+      "size": 3532,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/56120286b866fdc537d58f25787fd9a77f2a8413"
+    },
+    {
+      "path": "kws_streaming/models/inception.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c63da30f31c8086b9177449038782518116075f6",
+      "size": 5109,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/c63da30f31c8086b9177449038782518116075f6"
+    },
+    {
+      "path": "kws_streaming/models/inception_resnet.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37836aa641e41bdd7176e853b359a85ba15c3bc9",
+      "size": 7226,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/37836aa641e41bdd7176e853b359a85ba15c3bc9"
+    },
+    {
+      "path": "kws_streaming/models/kws_transformer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff323b04786cea200bba7d62288673e1ebe48657",
+      "size": 6539,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ff323b04786cea200bba7d62288673e1ebe48657"
+    },
+    {
+      "path": "kws_streaming/models/lstm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0eed6e82702e7d74c47db864cd1c946f77d36d8",
+      "size": 3931,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/f0eed6e82702e7d74c47db864cd1c946f77d36d8"
+    },
+    {
+      "path": "kws_streaming/models/mobilenet.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e3e905c1502db8eb5d0d5e07f4afd40ff622fac",
+      "size": 4730,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/3e3e905c1502db8eb5d0d5e07f4afd40ff622fac"
+    },
+    {
+      "path": "kws_streaming/models/mobilenet_v2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44867d983608e8597ef92348b33a701283d7b7a0",
+      "size": 5462,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/44867d983608e8597ef92348b33a701283d7b7a0"
+    },
+    {
+      "path": "kws_streaming/models/model_flags.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25ec34f084a23021cb1a3955939d4c0fd6938ec0",
+      "size": 2787,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/25ec34f084a23021cb1a3955939d4c0fd6938ec0"
+    },
+    {
+      "path": "kws_streaming/models/model_params.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c23c75c12c03546c842e1a262b52aaa691056e3",
+      "size": 11462,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/4c23c75c12c03546c842e1a262b52aaa691056e3"
+    },
+    {
+      "path": "kws_streaming/models/models.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b033ae3d48a40f9709302c7d7f071d9961ec6cca",
+      "size": 2213,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/b033ae3d48a40f9709302c7d7f071d9961ec6cca"
+    },
+    {
+      "path": "kws_streaming/models/models_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7844753bbf0a4df7fee98606d1fa10e8127e7096",
+      "size": 5040,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/7844753bbf0a4df7fee98606d1fa10e8127e7096"
+    },
+    {
+      "path": "kws_streaming/models/svdf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cf677f704fec115b9c7fb05ad6de066ee2a601c",
+      "size": 4265,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/6cf677f704fec115b9c7fb05ad6de066ee2a601c"
+    },
+    {
+      "path": "kws_streaming/models/svdf_resnet.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18e33c45d7a09be55c087c4c5bc0c7ed30ba3333",
+      "size": 9209,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/18e33c45d7a09be55c087c4c5bc0c7ed30ba3333"
+    },
+    {
+      "path": "kws_streaming/models/tc_resnet.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd3e006b55834f6d6a888adc25f2c1f6e0ad6302",
+      "size": 6444,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/dd3e006b55834f6d6a888adc25f2c1f6e0ad6302"
+    },
+    {
+      "path": "kws_streaming/models/transformer_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff597a2d6d15d9ae61304667da62931c14338c58",
+      "size": 7589,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ff597a2d6d15d9ae61304667da62931c14338c58"
+    },
+    {
+      "path": "kws_streaming/models/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1493302c186451b14d5bebdac18049ee010513e",
+      "size": 16962,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/d1493302c186451b14d5bebdac18049ee010513e"
+    },
+    {
+      "path": "kws_streaming/models/utils_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d0d413de22625f9eb646d08ac32dabcf2799456",
+      "size": 8376,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/1d0d413de22625f9eb646d08ac32dabcf2799456"
+    },
+    {
+      "path": "kws_streaming/models/xception.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad3476fd277b642fbf51c03b61b15a1653cdcef1",
+      "size": 8274,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ad3476fd277b642fbf51c03b61b15a1653cdcef1"
+    },
+    {
+      "path": "kws_streaming/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4be95479c5cc148093e5ef8a213011d9001ca044",
+      "size": 143,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/4be95479c5cc148093e5ef8a213011d9001ca044"
+    },
+    {
+      "path": "kws_streaming/train",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3c97bd0218306588baadac477741a8cd45aa0163",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/3c97bd0218306588baadac477741a8cd45aa0163"
+    },
+    {
+      "path": "kws_streaming/train/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce57b45e14ed4434e2c9ff830dbbdd08f0485e57",
+      "size": 630,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ce57b45e14ed4434e2c9ff830dbbdd08f0485e57"
+    },
+    {
+      "path": "kws_streaming/train/base_parser.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07cf6591be35189d5af4ab1ac828941adf2cdf74",
+      "size": 13572,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/07cf6591be35189d5af4ab1ac828941adf2cdf74"
+    },
+    {
+      "path": "kws_streaming/train/base_parser_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e42cb28a3faafab1b3c7d7afaf936e5589145e4",
+      "size": 4468,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/4e42cb28a3faafab1b3c7d7afaf936e5589145e4"
+    },
+    {
+      "path": "kws_streaming/train/model_train_eval.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "010f2392573987638847ea6266029e4ab6be43a2",
+      "size": 13378,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/010f2392573987638847ea6266029e4ab6be43a2"
+    },
+    {
+      "path": "kws_streaming/train/test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4cb03046fbb5e5b65e75fb35e651a42e56bde29",
+      "size": 28044,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/e4cb03046fbb5e5b65e75fb35e651a42e56bde29"
+    },
+    {
+      "path": "kws_streaming/train/train.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5cd3be19d26365f821ea625e4d5cdd5586d09f9",
+      "size": 13053,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/f5cd3be19d26365f821ea625e4d5cdd5586d09f9"
+    },
+    {
+      "path": "kws_streaming/train/train_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a355a1a7639abcf79162009e45ea41573375a346",
+      "size": 5152,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/a355a1a7639abcf79162009e45ea41573375a346"
+    },
+    {
+      "path": "kwt.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f993f6f88850437bbd5f4aeaa0f00354e1835da",
+      "size": 842665,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/0f993f6f88850437bbd5f4aeaa0f00354e1835da"
+    },
+    {
+      "path": "models_data_v2_12_labels",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "27a5d6d6edd484cf9de1ed973565af3437cf0e02",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/27a5d6d6edd484cf9de1ed973565af3437cf0e02"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e634f715592c79f3bed686a039bf6f548226d25e",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/e634f715592c79f3bed686a039bf6f548226d25e"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/accuracy_last.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e945da72671ff51e4f3127963ff8d2cd8faebfe2",
+      "size": 17,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/e945da72671ff51e4f3127963ff8d2cd8faebfe2"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/best_weights.data-00000-of-00001",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0051cbc22f6272ca89756f66cfbf9ecfbd8a4547",
+      "size": 9097685,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/0051cbc22f6272ca89756f66cfbf9ecfbd8a4547"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/best_weights.index",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "085a3b92c44ad44ba8601539d53f589065531083",
+      "size": 7323,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/085a3b92c44ad44ba8601539d53f589065531083"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/checkpoint",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf3b29288f11a172be3514bbe2f9bd3b3d213d8c",
+      "size": 81,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/bf3b29288f11a172be3514bbe2f9bd3b3d213d8c"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/flags.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3030695d8cda8171c867309cb4f38981a02b268b",
+      "size": 2336,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/3030695d8cda8171c867309cb4f38981a02b268b"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/flags.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae312be1f0e28efeadc38feb04e5741c1e3d9873",
+      "size": 2082,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ae312be1f0e28efeadc38feb04e5741c1e3d9873"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/graph.pbtxt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac966d297d5111cc972197c60037640a2624252a",
+      "size": 6747789,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ac966d297d5111cc972197c60037640a2624252a"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/labels.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba416458b011a7f4b96739eb6fcb6275a6ab3bec",
+      "size": 60,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ba416458b011a7f4b96739eb6fcb6275a6ab3bec"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/last_weights.data-00000-of-00001",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbd5e791cac4b8d747ca2d51ba880f3859c0b115",
+      "size": 9097685,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/fbd5e791cac4b8d747ca2d51ba880f3859c0b115"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/last_weights.index",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75527328c5f42f44a350e496d0e728fc732e7e83",
+      "size": 7323,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/75527328c5f42f44a350e496d0e728fc732e7e83"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/logs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "64eee9b9f2258d1b617da0f09b58f7bbcb07aff2",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/64eee9b9f2258d1b617da0f09b58f7bbcb07aff2"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/logs/train",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1e1cea8db91a5c8f483d47cd750290d05e7806d0",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/1e1cea8db91a5c8f483d47cd750290d05e7806d0"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/logs/train/events.out.tfevents.1614857539.ip-172-31-22-172",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a8c906eb978636e57cf8ba16f85289b170ee8ba",
+      "size": 12569673,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/7a8c906eb978636e57cf8ba16f85289b170ee8ba"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/logs/validation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1a946651757947cd91d72dc5f96bf543f8b29e23",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/1a946651757947cd91d72dc5f96bf543f8b29e23"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/logs/validation/events.out.tfevents.1614857751.ip-172-31-22-172",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bba866e1e8361ef254965b56e8f1dd761beba4e",
+      "size": 631880,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/6bba866e1e8361ef254965b56e8f1dd761beba4e"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/model_summary.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87129cd20d48f17f6f314ad6a605acabaeb4b889",
+      "size": 7710,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/87129cd20d48f17f6f314ad6a605acabaeb4b889"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/non_stream",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "600b9a91a00254aefd2fa0776248093818c7802f",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/600b9a91a00254aefd2fa0776248093818c7802f"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/non_stream/model_summary.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bba53d0358a5757aa81ede6025a9b9dd22140881",
+      "size": 7710,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/bba53d0358a5757aa81ede6025a9b9dd22140881"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/tf",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dda5d1ff06b79ba5e988efda9fdcb9a9f56f43c0",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/dda5d1ff06b79ba5e988efda9fdcb9a9f56f43c0"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/tf/model_summary_non_stream.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8c7a3068b25fb36418ec43973b5e7f9bede5166",
+      "size": 236464,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/b8c7a3068b25fb36418ec43973b5e7f9bede5166"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/tf/model_summary_non_stream.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87129cd20d48f17f6f314ad6a605acabaeb4b889",
+      "size": 7710,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/87129cd20d48f17f6f314ad6a605acabaeb4b889"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/tf/tf_non_stream_model_accuracy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "333af5ccb39f40e87910ff950b561c2eff72105d",
+      "size": 26,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/333af5ccb39f40e87910ff950b561c2eff72105d"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/tf/tf_non_stream_model_sampling_stream_accuracy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2e06f8f313f52c3d1595c27b3ff315a5b18de0a",
+      "size": 26,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/d2e06f8f313f52c3d1595c27b3ff315a5b18de0a"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/tflite_non_stream",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4014e41c443744cec915954e3f3298a547aee547",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/4014e41c443744cec915954e3f3298a547aee547"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/tflite_non_stream/model_summary.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "272cbab5b36de37b00cdd169278582f18e7c1852",
+      "size": 7710,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/272cbab5b36de37b00cdd169278582f18e7c1852"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/tflite_non_stream/non_stream.tflite",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcab59b0176d901aa41c047ce16b7ae033d27f27",
+      "size": 5289700,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/fcab59b0176d901aa41c047ce16b7ae033d27f27"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/tflite_non_stream/tflite_non_stream_model_accuracy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e3ea6be8fd0e36af471a63caa57ed7e60147537",
+      "size": 26,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/9e3ea6be8fd0e36af471a63caa57ed7e60147537"
+    },
+    {
+      "path": "models_data_v2_12_labels/att_mh_rnn_1/train.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfbfaf8477f3d4c4ac9a5c7d6e8d9d5e8c0aea52",
+      "size": 14501820,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/cfbfaf8477f3d4c4ac9a5c7d6e8d9d5e8c0aea52"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3e9b6c41d4d1106a237641aaa8e6fff8590d1e6",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/d3e9b6c41d4d1106a237641aaa8e6fff8590d1e6"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/accuracy_last.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55cc866c7b021c7a4bba32424f1ec8483c352ec1",
+      "size": 17,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/55cc866c7b021c7a4bba32424f1ec8483c352ec1"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/best_weights.data-00000-of-00001",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c38f9653119383f7a303a94689c85a2a1c79b6b",
+      "size": 7401050,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/9c38f9653119383f7a303a94689c85a2a1c79b6b"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/best_weights.index",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "900be3e4a2e3ccc0182b98de43a8fe21e72b6491",
+      "size": 34662,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/900be3e4a2e3ccc0182b98de43a8fe21e72b6491"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/checkpoint",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf3b29288f11a172be3514bbe2f9bd3b3d213d8c",
+      "size": 81,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/bf3b29288f11a172be3514bbe2f9bd3b3d213d8c"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/flags.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "008af2047e217bdad9e84ff5e5b70e69bac423c3",
+      "size": 2097,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/008af2047e217bdad9e84ff5e5b70e69bac423c3"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/flags.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "203b1a4174a5b955d7c9f199ae3468b9b2c77f80",
+      "size": 1867,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/203b1a4174a5b955d7c9f199ae3468b9b2c77f80"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/graph.pbtxt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a82edf79a1214497a184db51b0cbffef076f396",
+      "size": 4569501,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/8a82edf79a1214497a184db51b0cbffef076f396"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/labels.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba416458b011a7f4b96739eb6fcb6275a6ab3bec",
+      "size": 60,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ba416458b011a7f4b96739eb6fcb6275a6ab3bec"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/last_weights.data-00000-of-00001",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5231f8e29877e957d2b303c15df57a169b28e071",
+      "size": 7401050,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/5231f8e29877e957d2b303c15df57a169b28e071"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/last_weights.index",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73963f15d572ed04514fbca4e213a8ee6dfaa1a0",
+      "size": 34662,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/73963f15d572ed04514fbca4e213a8ee6dfaa1a0"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/logs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f51435cb9f398d12ac7cf296b4b5502c6866222c",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/f51435cb9f398d12ac7cf296b4b5502c6866222c"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/logs/train",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "848bbb8f327de2897c57eb98b25f1a7fcb61a853",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/848bbb8f327de2897c57eb98b25f1a7fcb61a853"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/logs/train/events.out.tfevents.1614214645.ip-172-31-12-175",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99e6ec4207aef86e69c45b178568e688763805c9",
+      "size": 5207314,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/99e6ec4207aef86e69c45b178568e688763805c9"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/logs/validation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ce829c86edbc775cfb43894e12c0f5832112319",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/4ce829c86edbc775cfb43894e12c0f5832112319"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/logs/validation/events.out.tfevents.1614214754.ip-172-31-12-175",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ebc33a22e4dc239942732edb0fc3a64f2d4936b",
+      "size": 123400,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/2ebc33a22e4dc239942732edb0fc3a64f2d4936b"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/model_summary.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b9a21373897e752bdbee05309d5c3608e770169",
+      "size": 878,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/1b9a21373897e752bdbee05309d5c3608e770169"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/non_stream",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "57085e05ea0f8d907ed012031fe641ca6c9d0ef5",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/57085e05ea0f8d907ed012031fe641ca6c9d0ef5"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/non_stream/model_summary.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a087ab78c1a89e6ca72f2609a387cd43e6efd127",
+      "size": 878,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/a087ab78c1a89e6ca72f2609a387cd43e6efd127"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/tf",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b1a6864fd5f822cb71452679a8685fe254e6d747",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/b1a6864fd5f822cb71452679a8685fe254e6d747"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/tf/model_summary_non_stream.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70c88f69cb7386efe8eb3215884d87d155964eb0",
+      "size": 25896,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/70c88f69cb7386efe8eb3215884d87d155964eb0"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/tf/model_summary_non_stream.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a272c209fe98a16ac8f2abe4b85aa0bfe8b9a790",
+      "size": 878,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/a272c209fe98a16ac8f2abe4b85aa0bfe8b9a790"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/tf/tf_non_stream_model_accuracy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74c8425752b4e91d15fe4b4b40991cf59b3080f9",
+      "size": 26,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/74c8425752b4e91d15fe4b4b40991cf59b3080f9"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/tf/tf_non_stream_model_sampling_stream_accuracy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "785dadf714b519d7cba5bbc3d3d8039166e3b09f",
+      "size": 26,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/785dadf714b519d7cba5bbc3d3d8039166e3b09f"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/tflite_non_stream",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "be03d1fc7745cc4d94a4c30d6654093b53f74b32",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/be03d1fc7745cc4d94a4c30d6654093b53f74b32"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/tflite_non_stream/model_summary.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a087ab78c1a89e6ca72f2609a387cd43e6efd127",
+      "size": 878,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/a087ab78c1a89e6ca72f2609a387cd43e6efd127"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/tflite_non_stream/non_stream.tflite",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "233e35d8f785e6170832a81ac52e681dffcd921a",
+      "size": 3617784,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/233e35d8f785e6170832a81ac52e681dffcd921a"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt1/tflite_non_stream/tflite_non_stream_model_accuracy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c836663a14ddf13d84a248480fdecad5df996b41",
+      "size": 26,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/c836663a14ddf13d84a248480fdecad5df996b41"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "31943d0d4494ce1a201183ec0589033cb7a5a121",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/31943d0d4494ce1a201183ec0589033cb7a5a121"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/accuracy_last.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac18bcee9a356a513ac2ade033f5eac856bfadec",
+      "size": 10,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ac18bcee9a356a513ac2ade033f5eac856bfadec"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/best_weights.data-00000-of-00001",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9eaa9bfbda3988e11a8f4d69d6501dae7850f285",
+      "size": 28844378,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/9eaa9bfbda3988e11a8f4d69d6501dae7850f285"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/best_weights.index",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d8907b3602dae71472af1ad71b87c9b1ed51e0a",
+      "size": 35326,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/1d8907b3602dae71472af1ad71b87c9b1ed51e0a"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/checkpoint",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf3b29288f11a172be3514bbe2f9bd3b3d213d8c",
+      "size": 81,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/bf3b29288f11a172be3514bbe2f9bd3b3d213d8c"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/flags.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5f164d74d2e354170b815298ff0f936add00e74",
+      "size": 2098,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/d5f164d74d2e354170b815298ff0f936add00e74"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/flags.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52b36b5b4ae0a89d08081960dfc1d271666961bb",
+      "size": 1868,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/52b36b5b4ae0a89d08081960dfc1d271666961bb"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/graph.pbtxt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0ba2191e1e6290880279d623f8d87de0ada6720",
+      "size": 4570627,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/f0ba2191e1e6290880279d623f8d87de0ada6720"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/labels.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba416458b011a7f4b96739eb6fcb6275a6ab3bec",
+      "size": 60,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ba416458b011a7f4b96739eb6fcb6275a6ab3bec"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/last_weights.data-00000-of-00001",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df831c441d41b84cfa7a18651ff294903be9e686",
+      "size": 28844378,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/df831c441d41b84cfa7a18651ff294903be9e686"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/last_weights.index",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6884424e3719e621784269d0ac8c3b67ab35e936",
+      "size": 35326,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/6884424e3719e621784269d0ac8c3b67ab35e936"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/logs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6f6317c5b79be837936c598cc352589fb987be86",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/6f6317c5b79be837936c598cc352589fb987be86"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/logs/train",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "419f3f15f5dc4205c2b5d317a6464bb4d39f5ee6",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/419f3f15f5dc4205c2b5d317a6464bb4d39f5ee6"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/logs/train/events.out.tfevents.1614177406.ip-172-31-12-175",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed7d0f1422282e19bba22c13fb1de39fb5bb94b1",
+      "size": 5210580,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ed7d0f1422282e19bba22c13fb1de39fb5bb94b1"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/logs/validation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b39456776e518ace22092cfcb6f2b8971046e94",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/1b39456776e518ace22092cfcb6f2b8971046e94"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/logs/validation/events.out.tfevents.1614177547.ip-172-31-12-175",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97ada94e846fb243853168cebea40b8b5234c89d",
+      "size": 123400,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/97ada94e846fb243853168cebea40b8b5234c89d"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/model_summary.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8d148e39c4e90d871639eeea7588515992c472e",
+      "size": 882,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/c8d148e39c4e90d871639eeea7588515992c472e"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/non_stream",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1c61807d61fc94e65298d9483104f5d05e91caf7",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/1c61807d61fc94e65298d9483104f5d05e91caf7"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/non_stream/model_summary.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "054d378489c43237de1662e6f594798ef093305f",
+      "size": 882,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/054d378489c43237de1662e6f594798ef093305f"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/tf",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "609c6a05b8fe86e7aec6621090a7f7d46cf1e136",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/609c6a05b8fe86e7aec6621090a7f7d46cf1e136"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/tf/model_summary_non_stream.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "170cf8c7701316c0e95b7e8a372d7da1d5dbf931",
+      "size": 25922,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/170cf8c7701316c0e95b7e8a372d7da1d5dbf931"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/tf/model_summary_non_stream.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e295ccaf5dbcfe047932c333b939fce273d68ad",
+      "size": 882,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/5e295ccaf5dbcfe047932c333b939fce273d68ad"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/tf/tf_non_stream_model_accuracy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a68be6953b2bd99282cf6c5f24f918f6a51ae9e2",
+      "size": 26,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/a68be6953b2bd99282cf6c5f24f918f6a51ae9e2"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/tf/tf_non_stream_model_sampling_stream_accuracy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0fb9956cec3808458693dda17f783bc7faa78fe",
+      "size": 26,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/f0fb9956cec3808458693dda17f783bc7faa78fe"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/tflite_non_stream",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "69a8edf08270b5439eddb24218f6ef102f092f50",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/69a8edf08270b5439eddb24218f6ef102f092f50"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/tflite_non_stream/model_summary.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "054d378489c43237de1662e6f594798ef093305f",
+      "size": 882,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/054d378489c43237de1662e6f594798ef093305f"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/tflite_non_stream/non_stream.tflite",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0cc4dd400a093d62dcc5eb92f1946437c9c9160e",
+      "size": 10830708,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/0cc4dd400a093d62dcc5eb92f1946437c9c9160e"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt2/tflite_non_stream/tflite_non_stream_model_accuracy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d188844e000ac42954dbc7871bf40b1150b6dc30",
+      "size": 26,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/d188844e000ac42954dbc7871bf40b1150b6dc30"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ecc09a20ca3390d09e8d5d19fbf4df9727178b2b",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/ecc09a20ca3390d09e8d5d19fbf4df9727178b2b"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/accuracy_last.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6adfde1390915817f151ed8bf84796bf4a65f013",
+      "size": 17,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/6adfde1390915817f151ed8bf84796bf4a65f013"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/best_weights.data-00000-of-00001",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d9b30f9e0bdb7942968ba76d3bb47555ec76303",
+      "size": 64443482,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/9d9b30f9e0bdb7942968ba76d3bb47555ec76303"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/best_weights.index",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a85cb43ab2e54f212c277244ed977dc8dd080028",
+      "size": 35339,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/a85cb43ab2e54f212c277244ed977dc8dd080028"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/checkpoint",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf3b29288f11a172be3514bbe2f9bd3b3d213d8c",
+      "size": 81,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/bf3b29288f11a172be3514bbe2f9bd3b3d213d8c"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/flags.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92ce7a6428fda6eb8eeb57f9dd1d263aa45e20b1",
+      "size": 2126,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/92ce7a6428fda6eb8eeb57f9dd1d263aa45e20b1"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/flags.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "548b7579a45cbf13bcea6d8a307d31afd53cf388",
+      "size": 1896,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/548b7579a45cbf13bcea6d8a307d31afd53cf388"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/graph.pbtxt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3ce2b733e3a2ca1d2248423fc2572ab5d1c923a",
+      "size": 4570627,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/a3ce2b733e3a2ca1d2248423fc2572ab5d1c923a"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/labels.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba416458b011a7f4b96739eb6fcb6275a6ab3bec",
+      "size": 60,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ba416458b011a7f4b96739eb6fcb6275a6ab3bec"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/last_weights.data-00000-of-00001",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a05be1482f43f9e0083c9f3008a1cc64e2d7eaf9",
+      "size": 64443482,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/a05be1482f43f9e0083c9f3008a1cc64e2d7eaf9"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/last_weights.index",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cd86060c4c2047c8e05a7e99030b387d556f15e",
+      "size": 35339,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/3cd86060c4c2047c8e05a7e99030b387d556f15e"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/logs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "606122ee3eb7fbec6062a39fa70afd309ad1f085",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/606122ee3eb7fbec6062a39fa70afd309ad1f085"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/logs/train",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63561b311037624e2852f209ae93b952d295687c",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/63561b311037624e2852f209ae93b952d295687c"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/logs/train/events.out.tfevents.1613767563.ip-172-31-12-175",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "047d8a0977d17726eabcd30f52c7a6ff386ec9cf",
+      "size": 5210580,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/047d8a0977d17726eabcd30f52c7a6ff386ec9cf"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/logs/validation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "971fe95e03d95b092887b53f8b55005ed529b0c1",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/971fe95e03d95b092887b53f8b55005ed529b0c1"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/logs/validation/events.out.tfevents.1613767711.ip-172-31-12-175",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09dd26c96c6e5d87ae0c95d79ada7ec58d910138",
+      "size": 123400,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/09dd26c96c6e5d87ae0c95d79ada7ec58d910138"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/model_summary.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0055329d13f8e53b4f9397fdb65c9ca2ca4f809e",
+      "size": 882,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/0055329d13f8e53b4f9397fdb65c9ca2ca4f809e"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/non_stream",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "15424923fa9ad5dfa5f8da6d2b97d180f3314b8f",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/15424923fa9ad5dfa5f8da6d2b97d180f3314b8f"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/non_stream/model_summary.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7aefdf2f24127386f5a7f787d3ccbc518bca8d5",
+      "size": 882,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/d7aefdf2f24127386f5a7f787d3ccbc518bca8d5"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/tf",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "31c3dbb6b0d7ac2d5955e75f3e2e003321b2010b",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/31c3dbb6b0d7ac2d5955e75f3e2e003321b2010b"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/tf/model_summary_non_stream.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cdf1d1ec7c1820d4f627fe9b04f8b112262327c",
+      "size": 25939,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/8cdf1d1ec7c1820d4f627fe9b04f8b112262327c"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/tf/model_summary_non_stream.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab769ee29b2230767859919e303fe338c61e47e4",
+      "size": 882,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ab769ee29b2230767859919e303fe338c61e47e4"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/tf/tf_non_stream_model_accuracy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d0b2ebe01b8cfc7c781d5806d8c4a4b79ebba2b",
+      "size": 26,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/7d0b2ebe01b8cfc7c781d5806d8c4a4b79ebba2b"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/tf/tf_non_stream_model_sampling_stream_accuracy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8793a5e631a108b68a4d3da16e503a55df110d92",
+      "size": 26,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/8793a5e631a108b68a4d3da16e503a55df110d92"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/tflite_non_stream",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed5cfbaf0df488ad606e659a9d396953219b06b4",
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/trees/ed5cfbaf0df488ad606e659a9d396953219b06b4"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/tflite_non_stream/model_summary.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7aefdf2f24127386f5a7f787d3ccbc518bca8d5",
+      "size": 882,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/d7aefdf2f24127386f5a7f787d3ccbc518bca8d5"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/tflite_non_stream/non_stream.tflite",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a71b2ad0cc33b0388ef9f79836a7fde3b53e994c",
+      "size": 22717772,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/a71b2ad0cc33b0388ef9f79836a7fde3b53e994c"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/tflite_non_stream/tflite_non_stream_model_accuracy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59533da7c06806283d0e389adf11317d7800979f",
+      "size": 26,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/59533da7c06806283d0e389adf11317d7800979f"
+    },
+    {
+      "path": "models_data_v2_12_labels/kwt3/train.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfc1256f1ef8b02753b8398a174c749b15853107",
+      "size": 1025,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/cfc1256f1ef8b02753b8398a174c749b15853107"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9310a4f8434a6997f5f105946f9b5262365e01cd",
+      "size": 89,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/9310a4f8434a6997f5f105946f9b5262365e01cd"
+    },
+    {
+      "path": "train.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89e49c68220763369c22422a9b6eb2d93e2c5019",
+      "size": 1011,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/89e49c68220763369c22422a9b6eb2d93e2c5019"
+    },
+    {
+      "path": "train_35.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c9535a15774c83783dc18b30378beef3dfa0f5a",
+      "size": 1229,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/6c9535a15774c83783dc18b30378beef3dfa0f5a"
+    },
+    {
+      "path": "train_att_mh_rnn.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ab6f4ad3fb08f4719d2314e625905be4b40279c5",
+      "size": 1050,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/ab6f4ad3fb08f4719d2314e625905be4b40279c5"
+    },
+    {
+      "path": "train_v1.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b1f236770166d004d453ed9b7ea243aff1c76f0",
+      "size": 1007,
+      "url": "https://api.github.com/repos/ARM-software/keyword-transformer/git/blobs/3b1f236770166d004d453ed9b7ea243aff1c76f0"
+    }
+  ],
+  "truncated": false
+}

@@ -1,0 +1,37 @@
+{
+  "candidates": [
+    {
+      "name": "illustrative_q8_4",
+      "x_bits": 8,
+      "x_frac": 4,
+      "w_bits": 8,
+      "w_frac": 4,
+      "bias_bits": 32,
+      "acc_bits": 32,
+      "out_bits": 16,
+      "out_frac": 4
+    },
+    {
+      "name": "illustrative_q12_6",
+      "x_bits": 12,
+      "x_frac": 6,
+      "w_bits": 12,
+      "w_frac": 6,
+      "bias_bits": 40,
+      "acc_bits": 40,
+      "out_bits": 24,
+      "out_frac": 6
+    },
+    {
+      "name": "existing_prototype_q16_8",
+      "x_bits": 16,
+      "x_frac": 8,
+      "w_bits": 16,
+      "w_frac": 8,
+      "bias_bits": 48,
+      "acc_bits": 48,
+      "out_bits": 32,
+      "out_frac": 8
+    }
+  ]
+}

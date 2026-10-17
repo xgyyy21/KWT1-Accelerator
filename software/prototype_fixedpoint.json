@@ -1,0 +1,10 @@
+{
+  "x_bits": 16,
+  "x_frac": 8,
+  "w_bits": 16,
+  "w_frac": 8,
+  "bias_bits": 48,
+  "acc_bits": 48,
+  "out_bits": 32,
+  "out_frac": 8
+}
