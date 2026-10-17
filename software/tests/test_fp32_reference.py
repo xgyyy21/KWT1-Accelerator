@@ -48,6 +48,17 @@ class FP32ReferenceTest(unittest.TestCase):
         self.assertEqual(add_bits(0x80000000, 0x80000000), 0x80000000)
         self.assertEqual(add_bits(0x80000000, 0x00000000), 0x00000000)
 
+    def test_signed_zero_for_independent_multiply_and_add(self) -> None:
+        # Keep the sign of a zero product, then apply the separate addition
+        # from an accumulator that starts at +0 under round-to-nearest-even.
+        self.assertEqual(multiply_bits(0x80000000, 0x3F800000), 0x80000000)
+        self.assertEqual(multiply_bits(0x80000000, 0xBF800000), 0x00000000)
+        self.assertEqual(add_bits(0x80000000, 0x80000000), 0x80000000)
+        self.assertEqual(add_bits(0x00000000, 0x80000000), 0x00000000)
+        self.assertEqual(add_bits(0x3F800000, 0xBF800000), 0x00000000)
+        self.assertEqual(run_ffn1_bits([[0x80000000]], [[0x3F800000]],
+                                       [0x00000000]), [[0x00000000]])
+
     def test_k_order_can_change_result(self) -> None:
         one = 0x3F800000
         plus_big, minus_big = 0x4B800000, 0xCB800000  # +/- 2**24

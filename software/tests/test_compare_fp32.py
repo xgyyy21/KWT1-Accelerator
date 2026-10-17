@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import struct
 import tempfile
 import unittest
 
@@ -16,7 +17,7 @@ from software.pack_fp32 import create_pack
 
 class CompareFP32Test(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp = tempfile.TemporaryDirectory()
+        self.temp = tempfile.TemporaryDirectory(dir=Path(__file__).resolve().parent)
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         self.image = self.root / "image"
@@ -117,6 +118,26 @@ class CompareFP32Test(unittest.TestCase):
         self.assertEqual(report["shape"], [1, 1])
         self.assertEqual((image / "expected.mem").read_text(encoding="ascii"),
                          "0000\n40d0\n")  # 2*3+0.5 = 6.5, bits 0x40d00000.
+
+    def test_final_output_catches_distinct_arithmetic_fault_symptoms(self) -> None:
+        # Independently hand-derived wrong results. A final-output mismatch
+        # detects each fault, but cannot by itself prove which internal stage
+        # caused it; the PE trace is still required for diagnosis.
+        faults = (
+            ("expected", 0xBF800000, "bias omitted: -1 instead of -0.75"),
+            ("expected", 0xBF000000, "bias added twice: -0.5 instead of -0.75"),
+            ("rounding_expected", 0xA8800000, "fused rounding instead of +0"),
+            ("tile_expected", 0xC0300000, "K32 reset: -3+0.25=-2.75"),
+        )
+        for expected_name, wrong_bits, explanation in faults:
+            with self.subTest(explanation=explanation):
+                raw = bytearray((self.image / f"{expected_name}.bin").read_bytes())
+                struct.pack_into("<I", raw, 0, wrong_bits)
+                actual = self.root / "fault.bin"
+                actual.write_bytes(raw)
+                report = compare(self.image, actual, expected_name=expected_name)
+                self.assertEqual(report["mismatch_count"], 1)
+                self.assertEqual(report["examples"][0]["actual_bits"], f"0x{wrong_bits:08x}")
 
 
 if __name__ == "__main__":

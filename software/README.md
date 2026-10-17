@@ -2,7 +2,7 @@
 
 本目录对应赛题指定的 KWT-1、第一层 FFN 线性计算 `Y[99,256] = X[99,64] @ W[64,256] + b[256]`。它把 PC 上的模型参考、可执行数值规则、数据打包和 E203 驱动流程接成一个工作链。**真实 KWT-1 权重已在合成零波形、以及一条划分未核实的真实音频上分别完成 12 层导出冒烟；合法验证集精度、RTL 和 SoC 联调仍未完成。**见[真实音频试跑记录](../work/real_audio_unverified_smoke.md)。
 
-**结合 2026-10-17 [硬件最新回复](../docs/KWT-1_回复软件同学_硬件当前状态_2026-10-17.md)，首版先做 FP32。**旧 `ffn1_numeric.py`、`pack_tensors.py`、`precision/` 和 `innovation/weight_stationary.py` 是 Q16.8/16 位等**后续候选原型**，不能作为 FP32 RTL 的逐位标准。当前先看[FP32 运算、手算例与未定事项](FP32_REFERENCE_DRAFT.md)、[`fp32_reference.py`](fp32_reference.py) 和 [`pack_fp32.py`](pack_fp32.py)。`innovation/fp32_tiled.py` 是另写的首版 FP32 **容量与搬运草案**。FP32 参考提出非融合、每步舍入、K 递增、偏置最后一次等规则，仍待硬件共同确认；低 16 位字先的镜像也是布局草案。硬件报告已有 8×16 阵列和 A/B/result 三块 `16 bit×1024` 缓存原型，读请求下一拍有效；阵列 PE 仍是整数 MAC，FP32 与 bias 未接入。现有模块测试与 FP32 参考向量不构成整层验证，软件侧尚未独立复跑硬件回归。最新的[软件行动顺序](../docs/KWT-1_硬件2026-10-17回复后的软件行动.md)写明先交换三组现成小向量，再冻结数值和存储规则；目前没有正式 E203 地址表或实际驱动适配。
+**结合 2026-10-17 [硬件最新回复](../docs/KWT-1_回复软件同学_硬件当前状态_2026-10-17.md)，首版先做 FP32。**旧 `ffn1_numeric.py`、`pack_tensors.py`、`precision/` 和 `innovation/weight_stationary.py` 是 Q16.8/16 位等**后续候选原型**，不能作为 FP32 RTL 的逐位标准。当前先看[FP32 运算、手算例与未定事项](FP32_REFERENCE_DRAFT.md)、[`fp32_reference.py`](fp32_reference.py) 和 [`pack_fp32.py`](pack_fp32.py)。`innovation/fp32_tiled.py` 是另写的首版 FP32 **容量与搬运草案**。FP32 参考提出非融合、每步舍入、K 递增、偏置最后一次等规则，仍待硬件共同确认；低 16 位字先的镜像也是布局草案。当前 `origin/hardware` (`acfae72`) 已有 8×16 阵列、A/B/result 三块 `16 bit×1024` 缓存原型，以及**独立的 FP32 PE 功能性延迟模型**；FP32 算术仍在寄存器前组合计算，未证明真实 8+4 算术流水/时序收敛，阵列和 tile engine 尚未完成 FP32/bias 联调。缓存模块读回 CSV 有 144 条记录，但 3 组输入 SHA-256 元数据需硬件修正。请看[逐项数值规则审查草案](../docs/FP32_数值规则_软件侧审查与回复草案_2026-10-17.md)、[读回核验报告](../docs/KWT-1_硬件缓存读回核验_2026-10-17.md)和[PE 轨迹 CSV 字段草案](FP32_PE_TRACE_CSV_DRAFT.md)。现有模块测试不构成整层/SoC 验证；目前没有正式 E203 地址表或实际驱动适配。
 
 ## 已有文件与状态
 
@@ -14,6 +14,8 @@
 | [`fp32_step_traces.py`](examples/fp32_step_traces.py) / [`expected_traces.json`](examples/fp32_hand_image/expected_traces.json) | 为三组 FP32 小任务生成每次乘法、累加和最后偏置的机器可读位模式记录；旁附 SHA-256 | 与独立手算锚点、样例输出及重建字节核对通过；仍是硬件待确认的候选轨迹 |
 | [`compare_fp32.py`](compare_fp32.py) | 按候选布局比较 RTL `.bin` 或逐行 16 位 `.mem` 与 FP32 expected 的原始 32 位模式，并检查镜像清单 | 两种格式的手算镜像自比、单比特故障定位和错误布局拒绝通过；尚无真实 RTL 输出 |
 | [`check_hardware_fp32_vectors.py`](check_hardware_fp32_vectors.py) | 与硬件分支的独立 .NET FP32 加法、乘法向量交叉核验 | 20,441 对输入中，支持范围内加法 20,125 对、乘法 17,626 对零位差；特殊输入和溢出单独计数；不是 RTL 验证 |
+| [`check_word_readback.py`](check_word_readback.py) | 核对硬件缓存读回 CSV 的 16 位字、FP32 重组、地址、坐标、周期及输入指纹 | 对当前硬件分支的 144 条记录，字值/地址/周期与镜像一致；3 组输入 SHA-256 不符，原 CSV 严格判失败；仅缓存模块局部验证 |
+| [`fp32_trace_csv.py`](examples/fp32_trace_csv.py) / [`FP32_PE_TRACE_CSV_DRAFT.md`](FP32_PE_TRACE_CSV_DRAFT.md) | 从既有逐步 JSON 生成 80 条带 `software_candidate` 标记的 PE trace CSV 演示 | 软件再生成及手算锚点测试通过；真实 `pe_trace.csv` 尚未收到 |
 | `pack_tensors.py` | 从 NPZ 生成二进制、16 位 `.mem`、期望输出和哈希清单 | 打包/解包测试通过；若提供 `y_float`，先核对它与 `X@W+b`；内存布局是示例 |
 | `evaluate_layers.py` | 按 12 层聚合样本误差，避免将逐样本误差平均冒充官方指标 | 合成单元测试通过；仍需合法验证集样本 |
 | [`precision/`](precision/README.md) | 对多个候选定点格式扫描 12 层误差与饱和次数 | 真实权重加合成零波形的全链路试跑通过；没有合法验证集结论 |
