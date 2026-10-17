@@ -3,7 +3,7 @@ module systolic_array_8x16 #(
   parameter int ACC_WIDTH = 2 * DATA_WIDTH,
   parameter int ROWS = 8,
   parameter int COLS = 16,
-  parameter int K = 4,
+  parameter int K = 64,
   parameter bit SIGNED_DATA = 1'b1
 ) (
   input logic clk, input logic rst_n, input logic start, input logic in_valid,

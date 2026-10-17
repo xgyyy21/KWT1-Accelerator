@@ -3,7 +3,8 @@ module ai_engine_core #(
   parameter int ACC_WIDTH  = 32,
   parameter int ROWS = 8,
   parameter int COLS = 16,
-  parameter int K = 4
+  // The undergraduate first-layer contract reduces over K=64 inputs.
+  parameter int K = 64
 ) (
   input logic clk,
   input logic rst_n,

@@ -19,3 +19,4 @@ rtl/matrix_task_controller.sv
 rtl/block_descriptor.sv
 rtl/block_counter.sv
 rtl/fp32_mac_boundary.sv
+rtl/ai_engine_tile_loop.sv

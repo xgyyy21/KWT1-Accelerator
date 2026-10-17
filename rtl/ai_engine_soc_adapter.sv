@@ -8,7 +8,7 @@ module ai_engine_soc_adapter #(
   parameter int ACC_WIDTH = 32,
   parameter int ROWS = 8,
   parameter int COLS = 16,
-  parameter int K = 4
+  parameter int K = 64
 ) (
   input logic clk,
   input logic rst_n,
