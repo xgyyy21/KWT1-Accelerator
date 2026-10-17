@@ -89,9 +89,11 @@ python -m software.compare_fp32 --packed-dir runs/fp32_hand \
     --actual runs/rtl/fp32_hand/y.bin --report runs/rtl/fp32_hand/compare.json
 python -m software.compare_fp32 --packed-dir runs/fp32_hand \
     --actual runs/rtl/fp32_hand/tile_y.bin --expected-name tile_expected
+python -m software.compare_fp32 --packed-dir runs/fp32_hand \
+    --actual runs/rtl/fp32_hand/y.mem --report runs/rtl/fp32_hand/compare_mem.json
 ```
 
-输出 `BIT-EXACT` 只说明**这份数据、这份候选算术/布局**下各位相同；不是整层、12 层或精度达标证明。旧 `compare_rtl.py` 会把输出解读成整数，不适用于这份 FP32 镜像。
+`.mem` 每行必须是一个恰好四位的十六进制 16 位字，依次为每个 FP32 的低字、高字；可有空行，不接受注释或地址标签。工具先检查清单的候选布局、形状、位宽、字数、字节数、`expected.bin` 哈希，再逐个 FP32 比较；报告保存原始 `.mem` 与解码后字节各自的哈希。若硬件采用别的字序，先与硬件同学冻结新协议，再调整打包器和比较器。输出 `BIT-EXACT` 只说明**这份数据、这份候选算术/布局**下各位相同；不是整层、12 层或精度达标证明。旧 `compare_rtl.py` 会把输出解读成整数，不适用于这份 FP32 镜像。
 
 若已有 `x`、`w`、`b` 三个 `float32` 数组组成的 `.npz`，可用 [`pack_fp32.py`](pack_fp32.py) 打包任意尺寸的一层任务。例如：
 
@@ -111,3 +113,9 @@ python -m software.pack_fp32 --input runs/source.npz --output-dir runs/fp32_pack
 5. 外存行列顺序、16 位高低字、字节序、真实基地址和总线事务何时定稿？
 
 冻结其中任一项后，同步改脚本、样例与测试，并在清单中记录版本。真正完成联调的证据应是同一版本的 RTL 仿真命令、逐步日志、输出文件和软件比较报告。
+
+## 6. 与硬件独立金标准核对加法和乘法
+
+硬件分支的 `scripts/Generate-Fp32Vectors.ps1` 用 .NET `Single` 生成四列十六进制文件：输入 `a`、输入 `b`、期望加法、期望乘法。硬件同学先在自己的分支生成文件；软件拿到**原文件**后运行 `python -m software.check_hardware_fp32_vectors --vectors runs/fp32_vectors.txt --hardware-commit <生成时的硬件提交> --report runs/fp32_vector_check.json`。比较器逐行严格检查四个 8 位十六进制数，记录文件与软件参考的 SHA-256、通过/跳过/失败数量和第一处位差。`--hardware-commit` 仅记录提供者声明，文件哈希本身不能证明它确实由该提交生成。当前软件草案会明确跳过 NaN/无穷输入及有限数运算溢出为非有限结果的情况，不把跳过计为通过。
+
+2026-10-17 在 `hardware` 提交 `4448aee155f59dc895f83bec3968322160fd66a6` 的生成脚本上，本地生成 20,441 对向量（文件 SHA-256 `b3a645b027dd3a1afddf9ca917f3df35fa4e2aa95222b85ba4c481de168b9dcb`）。有限范围中，加法核对 20,125 对、乘法核对 17,626 对，逐位差异均为 0；加法另跳过特殊输入 314 对、非有限结果 2 对，乘法相应跳过 314 对、2,501 对。**这只交叉核对两套独立参考计算**，并没有运行阵列中的 FP32 PE、偏置、SRAM 或 E203；硬件必须继续提供真实 PE 逐步轨迹和读回日志。

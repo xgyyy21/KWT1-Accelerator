@@ -12,7 +12,8 @@
 | `ffn1_numeric.py` | 可配置有符号定点参考模型、量化、舍入、饱和、RMSE | 小规模算例通过；格式是示例 |
 | [`fp32_reference.py`](fp32_reference.py) / [`pack_fp32.py`](pack_fp32.py) | 首版 FP32 的候选逐步运算参考、NPZ 打包和 16 位字镜像 | 独立手算、舍入、跨 K=32 分块及一条划分未核实音频的 12 层镜像完整性核验通过；算术/布局尚未与 RTL 冻结 |
 | [`fp32_step_traces.py`](examples/fp32_step_traces.py) / [`expected_traces.json`](examples/fp32_hand_image/expected_traces.json) | 为三组 FP32 小任务生成每次乘法、累加和最后偏置的机器可读位模式记录；旁附 SHA-256 | 与独立手算锚点、样例输出及重建字节核对通过；仍是硬件待确认的候选轨迹 |
-| [`compare_fp32.py`](compare_fp32.py) | 按候选布局比较 RTL 与 FP32 expected 的原始 32 位模式 | 手算镜像自比和单比特故障定位通过；尚无真实 RTL 输出 |
+| [`compare_fp32.py`](compare_fp32.py) | 按候选布局比较 RTL `.bin` 或逐行 16 位 `.mem` 与 FP32 expected 的原始 32 位模式，并检查镜像清单 | 两种格式的手算镜像自比、单比特故障定位和错误布局拒绝通过；尚无真实 RTL 输出 |
+| [`check_hardware_fp32_vectors.py`](check_hardware_fp32_vectors.py) | 与硬件分支的独立 .NET FP32 加法、乘法向量交叉核验 | 20,441 对输入中，支持范围内加法 20,125 对、乘法 17,626 对零位差；特殊输入和溢出单独计数；不是 RTL 验证 |
 | `pack_tensors.py` | 从 NPZ 生成二进制、16 位 `.mem`、期望输出和哈希清单 | 打包/解包测试通过；若提供 `y_float`，先核对它与 `X@W+b`；内存布局是示例 |
 | `evaluate_layers.py` | 按 12 层聚合样本误差，避免将逐样本误差平均冒充官方指标 | 合成单元测试通过；仍需合法验证集样本 |
 | [`precision/`](precision/README.md) | 对多个候选定点格式扫描 12 层误差与饱和次数 | 真实权重加合成零波形的全链路试跑通过；没有合法验证集结论 |
@@ -35,7 +36,7 @@
 
    FP32 `expected.bin` 来自按 K 顺序、乘加分别舍入、最后加一次偏置的候选规则；即使 NPZ 中有 `y_float`，也不会直接复制它作为逐位期望。只有与硬件共同冻结算术、地址和 16 位字序并获得 RTL 仿真结果后，才可把它用于正式对拍。
 
-   RTL 如按同一候选顺序导出 `y.bin`，用 `python -m software.compare_fp32 --packed-dir runs/fp32/sample_0001/layer_00 --actual runs/rtl/sample_0001/layer_00/y.bin --report runs/rtl/sample_0001/layer_00/fp32_compare.json` 做**原始 FP32 位模式**对拍。它与下面的整数 `compare_rtl.py` 是两个不同工具。
+   RTL 如按同一候选顺序导出 `y.bin`，用 `python -m software.compare_fp32 --packed-dir runs/fp32/sample_0001/layer_00 --actual runs/rtl/sample_0001/layer_00/y.bin --report runs/rtl/sample_0001/layer_00/fp32_compare.json` 做**原始 FP32 位模式**对拍。若输出为 `.mem`，每行放一个恰好四位的十六进制 16 位字，按 FP32 低字、再高字排列，可把 `--actual` 指向该 `.mem`；工具会拒绝字数或清单布局不符的文件。它与下面的整数 `compare_rtl.py` 是两个不同工具。
 
 3. **后续定点候选：**对一层生成旧 Q16.8/16 位原型镜像：
 
