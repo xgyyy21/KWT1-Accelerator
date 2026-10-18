@@ -15,7 +15,7 @@
 
 | 字段 | 类型、建议范围 | `mac` 行 | `bias` 行 |
 |---|---|---|---|
-| `source_kind` | 枚举字符串 `software_candidate` / `rtl_measured` | 表明来源 | 同左；禁止给软件演示改名伪称实测 |
+| `source_kind` | 交换文件使用 `software_candidate` / `rtl_measured`；单元测试内部另用 `synthetic_test` | 表明来源 | 同左；禁止给软件演示或人工测试改名伪称实测 |
 | `case_id` | 非空字符串，当前三例之一 | 定位向量与清单 | 同左 |
 | `tile_id` | 建议非负 `uint32`；**具体编号规则待确认** | 候选示范 K32 用 `k//32` | 示范为最后一个 K 块编号；硬件需定义 |
 | `row`,`column` | 建议非负 `uint32`，分别 `<M`、`<N` | 逻辑 `Y[row,column]` | 同一输出元素 |
@@ -76,12 +76,13 @@ tile_start_k = 该任务本次 K 块起始的全局索引
 python -m software.compare_pe_trace --expected software/examples/fp32_hand_image/expected_pe_trace_demo.csv --actual <硬件真实pe_trace.csv> --case-id k32_boundary --report <本地报告.json>
 ```
 
-当前只用**人工构造并明确标作 synthetic-test-only 的测试行**验证比较器的排序、K32 首错、缺 bias 事件和错误来源阻断；没有任何真实硬件轨迹通过此工具。若硬件最终采用不同列或采样语义，先共同修订草案与工具，不能为了得到 PASS 在软件中悄悄重解释硬件字段。
+当前只用**人工构造并明确标作 `synthetic_test` 的测试行**验证比较器的排序、K32 首错、缺 bias、重复事件和错误来源阻断；人工行不能走命令行的真实轨迹入口，成功时只报告 `SYNTHETIC-MATCH`。没有任何真实硬件轨迹通过此工具。若硬件最终采用不同列或采样语义，先共同修订草案与工具，不能为了得到 PASS 在软件中悄悄重解释硬件字段。
 
-1. 三组向量各自的真实 `pe_trace.csv`、RTL commit（若 dirty 另附源码快照指纹算法）、filelist、仿真命令、Icarus 版本和日志；实际装载的九个 `.bin/.mem` 或其固定提交与哈希。
+1. **先交 `hand_2x2` 的真实单 PE `pe_trace.csv` 和 testbench 输出**，包含 RTL commit（若 dirty 另附源码快照指纹算法）、filelist、仿真命令、工具版本和日志，以及实际装载的 `.bin/.mem` 哈希；首组对拍后再扩展 `rounding_nonfused`、`k32_boundary`。
 2. `trace_valid`、`trace_bias_valid` 是哪一个上升沿之后可见，是否分别只代表 MAC 与 bias **提交**，各位模式是否同沿有效；`result_valid` 的对齐关系、空泡与停使能行为。
 3. 逻辑 `row,column`、物理 PE 位置、任务号、`tile_id`、`tile_start_k` 和内部 16 位 `trace_k` 的映射；K32 时 `task_first/clear_acc` 的真实策略。
 4. 如要核阶段延迟，定义周期起点、复位、跨任务/回绕、输入接受和结果提交的计数口径；说明 8 拍乘/4 拍加模型是否仍为正式实现计划。
 5. 特殊值、次正规、有符号零、溢出的数值处理方案，由双方负责人共同批准后才进入正式逐位验收。
+6. 若宣称 **K32 跨块 SRAM 保存与恢复**，另交写入地址与值、读取地址与值、有效周期和与 k31/k32 部分和对应的 testbench 记录；单次 K64 连续计算的轨迹不能替代该证据。
 
 收到这些信息之前，本文件只是**对接草案**；软件黄金 CSV 可供硬件 testbench 开发参考，但不能把它填入 `rtl_measured` 栏，也不能据此宣称 PE 或阵列通过。

@@ -55,3 +55,17 @@ python -m software.check_word_readback --csv 'E:\大二上\实验室\芯片设�
 3. **共同：**先确认哪一份文件作为正式读回附件。即使选新版并核验通过，结论仍限于缓存读回；真实 FP32 PE trace、阵列和 SoC 验证分别另交证据。
 
 旧记录中的“三组失败”是对旧版文件的真实检测，不应被直接删改为 PASS；新版的“九组通过”也不应倒写为旧版已通过。
+
+## 2026-10-18 追加核验：固定源码 replay 仍待独立检查
+
+硬件侧本地交接说明 `E:\大二上\实验室\芯片设计\KWT-1_回复软件_已推送资料与待交付清单_2026-10-18.md` 报告已将新证据包推到 `hardware` 提交 `e6d83f9140a68076210c992d7ea02795db4f3c0f`，其中重新仿真的 `replay/word_readback.csv` 据称为 SHA-256 `d1ecc874018a5a1806646523bccc1f4a7687ccd2942aa121488a66daca5b9d56`、144 条记录、9 组输入。这些是**硬件报告值**；本次软件环境尚未取得该提交的原文件，不能把它登记为软件独立 PASS。
+
+本次软件工作区为干净的 `software` 分支，HEAD 恰是指定基线 `d11aa3d51e81f0f070f2014229032e0098851922`。GitHub 集成对仓库及提交返回 404；两次 `git fetch origin e6d83f...` 分别因连接超时和连接重置失败；网页读取也未取得提交。`git cat-file` 没有该提交。本报告没有从硬件交接文字重建 CSV，也没有用旧版文件代替 replay。
+
+软件独立重跑了两个**已在本机存在的对照文件**：本地新版 `d7ba2ee7…` 的严格检查结果为 `PASS`、144 条、9 组；旧仓库版 `6d7de5bf…` 仍为 `FAIL`，首类错误为 `hand_2x2/W`、`rounding_nonfused/W`、`k32_boundary/BIAS` 三组输入哈希。这个结果只复现原有差异，不涉及 `d1ecc874…` 的新 replay。待取得固定提交原文件后，再按硬件交接说明读取 README、provenance、manifest、run_report、filelist 和日志，核对原字节哈希，然后运行：
+
+```text
+python -m software.check_word_readback --csv <e6d83f 固定提交的 replay/word_readback.csv> --image-dir software/examples/fp32_hand_image
+```
+
+该命令目前**未对 replay CSV 执行**。即使之后通过，结论仍限于缓存读回记录与软件输入镜像一致；PE 乘加、K32 SRAM 保存恢复、阵列和 SoC 均须另外提供实测证据。

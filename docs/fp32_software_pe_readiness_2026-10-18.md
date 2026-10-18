@@ -48,7 +48,7 @@ python -m unittest discover -s software/tests -p 'test_*.py'
 
 | 工作 | 当前状态 | 可查证据 / 阻塞 | 负责人及下一步 |
 |---|---|---|---|
-| 软件单元测试 | **本轮已重跑：80 项，79 通过、1 跳过、0 失败** | `software/tests/`；含 6 项候选比较器人工行测试；跳过项依赖未安装的上游 sparse checkout；只证明当前实现与固定测试一致 | 软件：保持测试可复现，后续变更再跑 |
+| 软件单元测试 | **追加核验：82 项，81 通过、1 跳过、0 失败** | `software/tests/`；含 8 项候选比较器人工行测试，人工行明确标为 `synthetic_test`；跳过项依赖未安装的上游 sparse checkout；只证明当前实现与固定测试一致 | 软件：保持测试可复现，后续变更再跑 |
 | FP32 数值参考与三组向量 | **软件候选已备**；协议未冻结 | `fp32_reference.py`、`expected_traces.json`、独立手算锚点；异常/次正规/零号仍待合同 | 软件与硬件负责人共同确认例外语义；软件保留旧版 oracle |
 | 缓存局部读回 | 新本地 CSV 对软件镜像 **144/144 通过记录校验**；正式硬件来源未固定 | 新旧 CSV 差异及缺失日志见指纹复核报告；仅 `matrix_cache_manager` | 硬件给新文件提交、源码/filelist/日志；软件从固定提交重核 |
 | 真实 FP32 单 PE 逐步对拍 | **待硬件验证**；软件候选比较器已备 | 未收到真实 `pe_trace.csv`；已有 80 行 CSV 是软件演示；`compare_pe_trace.py` 仅在人工合成测试行上跑过 | 硬件给 PE testbench、轨迹、映射与仿真命令；软件在双方确认字段后运行首错对拍 |
@@ -56,3 +56,11 @@ python -m unittest discover -s software/tests -p 'test_*.py'
 | SoC/E203 端到端 | **待硬件和综合联调** | 缺总线/寄存器冻结及真实端到端运行日志 | 硬件/综合定接口、集成；软件再做驱动与端到端对拍 |
 
 **这轮仍可独立做的事：**保持三组镜像和黄金轨迹可复现，准备合法数据来源及精度/NRMSE 测量，编写候选 trace 字段与首错格式。实际 PE 周期、物理 PE 到逻辑坐标的映射、特殊值语义必须待硬件材料和双方确认。见 [`fp32_pe_trace_contract_draft.md`](fp32_pe_trace_contract_draft.md)。
+
+## 5. 追加审查：人工测试轨迹与真实 PE 证据的界线
+
+原单元测试临时生成的轨迹行曾写成 `source_kind=rtl_measured`，虽然注释已说明这些是人工行，但字段本身容易被误读为实测。本次已将其改为 `synthetic_test`，不再填写 `rtl_commit`；比较器只在单元测试显式指定内部测试入口时接受该标签，命令行真实轨迹入口仍要求 `rtl_measured`、合法周期和 RTL 提交。人工行比对成功只返回 `SYNTHETIC-MATCH`，不再显示为可能被误解的硬件匹配结果。另补充了重复事件和真实入口拒绝人工行的针对性测试。
+
+比较器当前按 `case_id,row,column,event,global_k` 找事件，检查原始 FP32 位模式、缺失和重复事件，并在可匹配事件上比对输入 manifest 与黄金轨迹的 SHA-256。它不验证时钟周期是否对应 8 拍乘法或 4 拍加法，也不独立证明 CSV 所写 `rtl_commit` 与实际运行源码相符；`tile_id` 默认不参与比较，须在硬件映射确认后才启用相应选项。请勿用软件生成的 80 行演示 CSV 冒充 PE 实测。
+
+硬件侧报告新读回证据包在 `hardware` 提交 `e6d83f9140a68076210c992d7ea02795db4f3c0f`，但本次软件环境未能取得该固定提交，因此 `d1ecc874…` 的 replay CSV **未被软件独立核验**。已能在本机复核的仍是旧本地新版 `d7ba2ee7…` 的缓存读回 PASS 与旧仓库版 `6d7de5bf…` 的三组哈希 FAIL；详细区分见 [`fp32_word_readback_hash_reconciliation.md`](fp32_word_readback_hash_reconciliation.md)。硬件报告的 Icarus/PowerShell 通过、软件独立读回检查、真实 PE 对拍是三个不同层次。

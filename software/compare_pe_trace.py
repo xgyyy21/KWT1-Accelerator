@@ -87,6 +87,10 @@ def _load(path: Path, source: str, case_id: str | None) -> tuple[dict, str, int]
             if not row["rtl_commit"]:
                 raise TraceContractError(f"line {line}: missing rtl_commit")
             rtl_commits.add(row["rtl_commit"])
+        elif source == "synthetic_test":
+            _uint(row["cycle"], "cycle", line)
+            if row["rtl_commit"]:
+                raise TraceContractError(f"line {line}: synthetic test cannot claim rtl_commit")
         elif row["cycle"] or row["rtl_commit"]:
             raise TraceContractError(f"line {line}: software demo cannot claim RTL timing or commit")
         key = (row["case_id"], r, c, event, k)
@@ -112,14 +116,17 @@ def _identity(key: tuple) -> dict:
 
 
 def compare(expected_csv: Path, actual_csv: Path, *, case_id: str | None = None,
-            compare_tile_id: bool = False) -> dict:
+            compare_tile_id: bool = False,
+            _actual_source_kind: str = "rtl_measured") -> dict:
     """Return the first logical event mismatch under the draft 19-column schema.
 
     Clock timing is intentionally not checked: the RTL event-to-cycle contract
     and pipeline-valid mapping remain open. Actual rows may be PE-interleaved.
     """
+    if _actual_source_kind not in ("rtl_measured", "synthetic_test"):
+        raise TraceContractError("actual source must be rtl_measured or synthetic_test")
     expected, expected_sha, _ = _load(Path(expected_csv), "software_candidate", case_id)
-    actual, actual_sha, actual_rows = _load(Path(actual_csv), "rtl_measured", case_id)
+    actual, actual_sha, actual_rows = _load(Path(actual_csv), _actual_source_kind, case_id)
     first = None
     for key in sorted(expected.keys() | actual.keys(), key=_order):
         exp, got = expected.get(key), actual.get(key)
@@ -143,8 +150,11 @@ def compare(expected_csv: Path, actual_csv: Path, *, case_id: str | None = None,
         if first is not None:
             break
     return {
-        "status": "BIT-EXACT-CANDIDATE" if first is None else "MISMATCH",
-        "scope": "draft PE event-value comparison only; timing and RTL provenance require separate checks",
+        "status": ("SYNTHETIC-MATCH" if _actual_source_kind == "synthetic_test"
+                   else "BIT-EXACT-CANDIDATE") if first is None else "MISMATCH",
+        "scope": ("synthetic unit test only; no RTL evidence" if _actual_source_kind == "synthetic_test"
+                  else "draft PE event-value comparison only; timing and RTL provenance require separate checks"),
+        "actual_source_kind": _actual_source_kind,
         "case_id_filter": case_id,
         "matched_event_identities": len(expected.keys() & actual.keys()),
         "expected_events": len(expected),
