@@ -1,0 +1,120 @@
+﻿{
+    "rtl_commit":  "acfae7282f2d16f6fe8df476efed147f23df4b71",
+    "software_commit":  "d11aa3d51e81f0f070f2014229032e0098851922",
+    "extraction":  "git -c core.autocrlf=false archive COMMIT; original LF bytes preserved",
+    "compiled_snapshot_sha256":  "9906d8936968464109ab5fc532c09f315f55da5877d34adabb12e57a28bb6042",
+    "compiled_snapshot_method":  "SHA256 of UTF-8, no BOM, no final LF: sorted lines \u003clowercase-file-SHA256\u003e\u003ctwo spaces\u003e\u003cpackage-relative sources/path\u003e. Only the two compiled .sv files are included.",
+    "files":  [
+                  {
+                      "path":  "inputs/bias.bin",
+                      "bytes":  8,
+                      "sha256":  "a87f7282fda4eba58e73df7310253f02b521d912a9d040beb42c09dceae258fd"
+                  },
+                  {
+                      "path":  "inputs/bias.mem",
+                      "bytes":  20,
+                      "sha256":  "f030632be734f3d796c6c7151cd1a209f5f571b364d19d7f42cf69b03d015218"
+                  },
+                  {
+                      "path":  "inputs/manifest.json",
+                      "bytes":  8086,
+                      "sha256":  "148ac9b305c34dafd033ea33d98b4f0a13edbf1306c66d29c7926ed348941e93"
+                  },
+                  {
+                      "path":  "inputs/rounding_bias.bin",
+                      "bytes":  4,
+                      "sha256":  "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+                  },
+                  {
+                      "path":  "inputs/rounding_bias.mem",
+                      "bytes":  10,
+                      "sha256":  "86b59daec6dbb138064b7b6801fe424dc3369a3199a6abd85d6ed2e98df6af01"
+                  },
+                  {
+                      "path":  "inputs/rounding_w.bin",
+                      "bytes":  8,
+                      "sha256":  "c3ab17f29a1c4ba6387856faf4915c03dd5804974febb9ecfddd4fbc6b41c3ea"
+                  },
+                  {
+                      "path":  "inputs/rounding_w.mem",
+                      "bytes":  20,
+                      "sha256":  "2feae40a068ee3f44c347bcb55d23a853db5850be33ea90621cacece539fefd3"
+                  },
+                  {
+                      "path":  "inputs/rounding_x.bin",
+                      "bytes":  8,
+                      "sha256":  "17075bc174311a170d9562e85cf701ae9f4d84a239863a42642554984dd267f2"
+                  },
+                  {
+                      "path":  "inputs/rounding_x.mem",
+                      "bytes":  20,
+                      "sha256":  "dc73a95c195b0cbed62c5324d4393aad7abc2c702283722d28bb671d4d2e95a3"
+                  },
+                  {
+                      "path":  "inputs/tile_bias.bin",
+                      "bytes":  4,
+                      "sha256":  "75e253f50979177eba47b2d0805ad36038789108924514d2a761a70de057d16f"
+                  },
+                  {
+                      "path":  "inputs/tile_bias.mem",
+                      "bytes":  10,
+                      "sha256":  "005c7ecbccd47d525d60bf02b00dce5405be5632be1cad5ad959804e3c2d516d"
+                  },
+                  {
+                      "path":  "inputs/tile_w.bin",
+                      "bytes":  256,
+                      "sha256":  "5889666823c2bcf52f9cb08b572630a61cd0c2b5d3a7a1df11d6d81c0e8fe007"
+                  },
+                  {
+                      "path":  "inputs/tile_w.mem",
+                      "bytes":  640,
+                      "sha256":  "1597e227dd2b24b198b15aa09e5113b635d55425718978c15f41fc5de8a4e8cf"
+                  },
+                  {
+                      "path":  "inputs/tile_x.bin",
+                      "bytes":  256,
+                      "sha256":  "2f20cd03c9cd392a406c56232b0ff93a15f6d6d7da79086bfa14f55d4a4031b0"
+                  },
+                  {
+                      "path":  "inputs/tile_x.mem",
+                      "bytes":  640,
+                      "sha256":  "09fd3265f8a3811cd90d12f796179c68492d4ab9119e21dad4c527d77db5b926"
+                  },
+                  {
+                      "path":  "inputs/w.bin",
+                      "bytes":  16,
+                      "sha256":  "9b4a9050f1cea2e3bcb7e5fe240d352eeed38c80b57cd1c9b45a8f9f7c650d7a"
+                  },
+                  {
+                      "path":  "inputs/w.mem",
+                      "bytes":  40,
+                      "sha256":  "e422ce13ec2f13515426a071c1ea2a3d12088e35ce605716d8dfc7d9ca8d8895"
+                  },
+                  {
+                      "path":  "inputs/x.bin",
+                      "bytes":  16,
+                      "sha256":  "f8788ce138a2b6e54302c09bd3d5274cb2fc3ceca6425b02c788181d332edc6d"
+                  },
+                  {
+                      "path":  "inputs/x.mem",
+                      "bytes":  40,
+                      "sha256":  "1bc68fe3e4dab29b88b1b35c67efa359a460ccf886bd5ae5c9eee85f4f0ab309"
+                  },
+                  {
+                      "path":  "sources/rtl/matrix_cache_manager.sv",
+                      "bytes":  2264,
+                      "sha256":  "ad1db76b9df18621d31ae8aae11c9bc5ee30e7dd1baa2caaf7dd3cd4680f8838"
+                  },
+                  {
+                      "path":  "sources/tb/word_readback_tb.sv",
+                      "bytes":  7244,
+                      "sha256":  "d2e4dd150409a897e1140cd1f6ddc935972861c217e13ff3e0f1714e612bd382"
+                  }
+              ],
+    "historical_csv":  {
+                           "path":  "../word_readback.csv",
+                           "sha256":  "d7ba2ee7ae5678552899008b292398df861a6da28d06fa13bfa28dd53e732a1b",
+                           "claimed_snapshot":  "7c42767dfe3a7be8b39a93d3dbb2e6322c3b3bf0b4fe48c99a2bb6b8fe2bd4fd",
+                           "status":  "historical artifact; complete dirty snapshot not recovered; not reproducibly attributed to acfae72"
+                       }
+}

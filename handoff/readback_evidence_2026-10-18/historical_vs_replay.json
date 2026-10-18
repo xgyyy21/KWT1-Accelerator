@@ -1,0 +1,34 @@
+﻿{
+    "status":  "MATCH_FOR_17_NON_PROVENANCE_FIELDS",
+    "rows":  144,
+    "compared_fields":  [
+                            "case",
+                            "tensor",
+                            "input_bin",
+                            "input_sha256",
+                            "bank",
+                            "row",
+                            "column",
+                            "k",
+                            "low_word_address",
+                            "high_word_address",
+                            "word_low16",
+                            "word_high16",
+                            "reconstructed_fp32_bits",
+                            "low_request_cycle",
+                            "low_data_valid_cycle",
+                            "high_request_cycle",
+                            "high_data_valid_cycle"
+                        ],
+    "differences":  [
+
+                    ],
+    "historical_sha256":  "d7ba2ee7ae5678552899008b292398df861a6da28d06fa13bfa28dd53e732a1b",
+    "replay_sha256":  "d1ecc874018a5a1806646523bccc1f4a7687ccd2942aa121488a66daca5b9d56",
+    "excluded_fields":  [
+                            "mem_hex_file",
+                            "rtl_revision",
+                            "rtl_snapshot_sha256"
+                        ],
+    "note":  "Equal values and recorded cycles do not prove identity of the historical dirty source snapshot."
+}

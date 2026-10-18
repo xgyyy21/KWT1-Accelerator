@@ -1,0 +1,40 @@
+﻿{
+    "status":  "CACHE_READBACK_ONLY_PASS",
+    "rows":  144,
+    "groups":  9,
+    "rtl_commit":  "acfae7282f2d16f6fe8df476efed147f23df4b71",
+    "software_commit":  "d11aa3d51e81f0f070f2014229032e0098851922",
+    "compiled_snapshot_sha256":  "9906d8936968464109ab5fc532c09f315f55da5877d34adabb12e57a28bb6042",
+    "csv_sha256":  "d1ecc874018a5a1806646523bccc1f4a7687ccd2942aa121488a66daca5b9d56",
+    "compile_arguments":  [
+                              "-g2012",
+                              "-s",
+                              "word_readback_tb",
+                              "-o",
+                              "D:\\competition\\build\\team_handoff_repo\\handoff\\readback_evidence_2026-10-18\\replay\\word_readback_tb.vvp",
+                              "-f",
+                              "readback.f"
+                          ],
+    "simulation_arguments":  [
+                                 "D:\\competition\\build\\team_handoff_repo\\handoff\\readback_evidence_2026-10-18\\replay\\word_readback_tb.vvp",
+                                 "+output=D:/competition/build/team_handoff_repo/handoff/readback_evidence_2026-10-18/replay/word_readback.csv",
+                                 "+data_dir=inputs",
+                                 "+rtl_revision=acfae7282f2d16f6fe8df476efed147f23df4b71",
+                                 "+rtl_snapshot=9906d8936968464109ab5fc532c09f315f55da5877d34adabb12e57a28bb6042",
+                                 "+hand_x_sha=f8788ce138a2b6e54302c09bd3d5274cb2fc3ceca6425b02c788181d332edc6d",
+                                 "+hand_w_sha=9b4a9050f1cea2e3bcb7e5fe240d352eeed38c80b57cd1c9b45a8f9f7c650d7a",
+                                 "+hand_bias_sha=a87f7282fda4eba58e73df7310253f02b521d912a9d040beb42c09dceae258fd",
+                                 "+round_x_sha=17075bc174311a170d9562e85cf701ae9f4d84a239863a42642554984dd267f2",
+                                 "+round_w_sha=c3ab17f29a1c4ba6387856faf4915c03dd5804974febb9ecfddd4fbc6b41c3ea",
+                                 "+round_bias_sha=df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+                                 "+tile_x_sha=2f20cd03c9cd392a406c56232b0ff93a15f6d6d7da79086bfa14f55d4a4031b0",
+                                 "+tile_w_sha=5889666823c2bcf52f9cb08b572630a61cd0c2b5d3a7a1df11d6d81c0e8fe007",
+                                 "+tile_bias_sha=75e253f50979177eba47b2d0805ad36038789108924514d2a761a70de057d16f"
+                             ],
+    "compiler_version":  "Icarus Verilog version 14.0 (devel) ()",
+    "runtime_version":  "Icarus Verilog runtime version 14.0 (devel) ()",
+    "limitations":  [
+                        "Cache-manager boundary only; no PE, DMA, SRAM macro or E203 verification.",
+                        "Fresh replay does not authenticate the historical +dirty source snapshot."
+                    ]
+}

@@ -1,0 +1,3 @@
+# Evidence hashes refer to the exact archived bytes, independent of checkout OS.
+handoff/word_readback.csv -text
+handoff/readback_evidence_2026-10-18/** -text

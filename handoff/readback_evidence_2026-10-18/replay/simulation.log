@@ -1,0 +1,2 @@
+word_readback_tb PASS rows=145
+sources/tb/word_readback_tb.sv:129: $finish called at 11551000 (1ps)

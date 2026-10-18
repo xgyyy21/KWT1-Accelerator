@@ -1,0 +1,151 @@
+﻿{
+    "source":  "Exact original local files from D:/competition/testdata/software_db073056/software/examples/fp32_hand_image, copied without reformatting",
+    "software_comparison_commit":  "d11aa3d51e81f0f070f2014229032e0098851922",
+    "note":  "All nine bins match fixed software blobs exactly. Original mem text has CRLF; LF canonical bytes in inputs are used for the fresh replay.",
+    "files":  [
+                  {
+                      "path":  "historical_inputs/bias.bin",
+                      "sha256":  "a87f7282fda4eba58e73df7310253f02b521d912a9d040beb42c09dceae258fd",
+                      "bytes":  8,
+                      "software_path":  "software/examples/fp32_hand_image/bias.bin",
+                      "byte_equal_to_d11aa3d":  true,
+                      "equal_after_crlf_to_lf":  null
+                  },
+                  {
+                      "path":  "historical_inputs/bias.mem",
+                      "sha256":  "cad177fc6d98912d460ba6b8d74ae42f9fe1f59dc6fe6b911df10cae5c550c67",
+                      "bytes":  24,
+                      "software_path":  "software/examples/fp32_hand_image/bias.mem",
+                      "byte_equal_to_d11aa3d":  false,
+                      "equal_after_crlf_to_lf":  true
+                  },
+                  {
+                      "path":  "historical_inputs/rounding_bias.bin",
+                      "sha256":  "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+                      "bytes":  4,
+                      "software_path":  "software/examples/fp32_hand_image/rounding_bias.bin",
+                      "byte_equal_to_d11aa3d":  true,
+                      "equal_after_crlf_to_lf":  null
+                  },
+                  {
+                      "path":  "historical_inputs/rounding_bias.mem",
+                      "sha256":  "e2e6debcb3f0abb57b7ed099eb478e27d5b1d3caebcd965afc18068565138e8f",
+                      "bytes":  12,
+                      "software_path":  "software/examples/fp32_hand_image/rounding_bias.mem",
+                      "byte_equal_to_d11aa3d":  false,
+                      "equal_after_crlf_to_lf":  true
+                  },
+                  {
+                      "path":  "historical_inputs/rounding_w.bin",
+                      "sha256":  "c3ab17f29a1c4ba6387856faf4915c03dd5804974febb9ecfddd4fbc6b41c3ea",
+                      "bytes":  8,
+                      "software_path":  "software/examples/fp32_hand_image/rounding_w.bin",
+                      "byte_equal_to_d11aa3d":  true,
+                      "equal_after_crlf_to_lf":  null
+                  },
+                  {
+                      "path":  "historical_inputs/rounding_w.mem",
+                      "sha256":  "3d7cc9b9c8466588f2a9efea54b8bab9fc858076d18e0d6bf8f77a9085db4792",
+                      "bytes":  24,
+                      "software_path":  "software/examples/fp32_hand_image/rounding_w.mem",
+                      "byte_equal_to_d11aa3d":  false,
+                      "equal_after_crlf_to_lf":  true
+                  },
+                  {
+                      "path":  "historical_inputs/rounding_x.bin",
+                      "sha256":  "17075bc174311a170d9562e85cf701ae9f4d84a239863a42642554984dd267f2",
+                      "bytes":  8,
+                      "software_path":  "software/examples/fp32_hand_image/rounding_x.bin",
+                      "byte_equal_to_d11aa3d":  true,
+                      "equal_after_crlf_to_lf":  null
+                  },
+                  {
+                      "path":  "historical_inputs/rounding_x.mem",
+                      "sha256":  "d9cb03909802baed99a278f3205101351018440da3b3ef1be35c7304e9313090",
+                      "bytes":  24,
+                      "software_path":  "software/examples/fp32_hand_image/rounding_x.mem",
+                      "byte_equal_to_d11aa3d":  false,
+                      "equal_after_crlf_to_lf":  true
+                  },
+                  {
+                      "path":  "historical_inputs/tile_bias.bin",
+                      "sha256":  "75e253f50979177eba47b2d0805ad36038789108924514d2a761a70de057d16f",
+                      "bytes":  4,
+                      "software_path":  "software/examples/fp32_hand_image/tile_bias.bin",
+                      "byte_equal_to_d11aa3d":  true,
+                      "equal_after_crlf_to_lf":  null
+                  },
+                  {
+                      "path":  "historical_inputs/tile_bias.mem",
+                      "sha256":  "63b960105954648c6d5516cbc60ef9ce7a5634ff8e068d16da5d4417ce93a75b",
+                      "bytes":  12,
+                      "software_path":  "software/examples/fp32_hand_image/tile_bias.mem",
+                      "byte_equal_to_d11aa3d":  false,
+                      "equal_after_crlf_to_lf":  true
+                  },
+                  {
+                      "path":  "historical_inputs/tile_w.bin",
+                      "sha256":  "5889666823c2bcf52f9cb08b572630a61cd0c2b5d3a7a1df11d6d81c0e8fe007",
+                      "bytes":  256,
+                      "software_path":  "software/examples/fp32_hand_image/tile_w.bin",
+                      "byte_equal_to_d11aa3d":  true,
+                      "equal_after_crlf_to_lf":  null
+                  },
+                  {
+                      "path":  "historical_inputs/tile_w.mem",
+                      "sha256":  "fcd2c55909b718265ce8a442ab75d1eaa2f21e362770a8732c20da0b3904ff9f",
+                      "bytes":  768,
+                      "software_path":  "software/examples/fp32_hand_image/tile_w.mem",
+                      "byte_equal_to_d11aa3d":  false,
+                      "equal_after_crlf_to_lf":  true
+                  },
+                  {
+                      "path":  "historical_inputs/tile_x.bin",
+                      "sha256":  "2f20cd03c9cd392a406c56232b0ff93a15f6d6d7da79086bfa14f55d4a4031b0",
+                      "bytes":  256,
+                      "software_path":  "software/examples/fp32_hand_image/tile_x.bin",
+                      "byte_equal_to_d11aa3d":  true,
+                      "equal_after_crlf_to_lf":  null
+                  },
+                  {
+                      "path":  "historical_inputs/tile_x.mem",
+                      "sha256":  "f6dc1003b57d382225315888774bc4344c2f83e7968136a6f434cb3a509262ae",
+                      "bytes":  768,
+                      "software_path":  "software/examples/fp32_hand_image/tile_x.mem",
+                      "byte_equal_to_d11aa3d":  false,
+                      "equal_after_crlf_to_lf":  true
+                  },
+                  {
+                      "path":  "historical_inputs/w.bin",
+                      "sha256":  "9b4a9050f1cea2e3bcb7e5fe240d352eeed38c80b57cd1c9b45a8f9f7c650d7a",
+                      "bytes":  16,
+                      "software_path":  "software/examples/fp32_hand_image/w.bin",
+                      "byte_equal_to_d11aa3d":  true,
+                      "equal_after_crlf_to_lf":  null
+                  },
+                  {
+                      "path":  "historical_inputs/w.mem",
+                      "sha256":  "d056aac3bb13a066e5373d92148f62e276d72248144cf421d0f8cd5a3e6f8a03",
+                      "bytes":  48,
+                      "software_path":  "software/examples/fp32_hand_image/w.mem",
+                      "byte_equal_to_d11aa3d":  false,
+                      "equal_after_crlf_to_lf":  true
+                  },
+                  {
+                      "path":  "historical_inputs/x.bin",
+                      "sha256":  "f8788ce138a2b6e54302c09bd3d5274cb2fc3ceca6425b02c788181d332edc6d",
+                      "bytes":  16,
+                      "software_path":  "software/examples/fp32_hand_image/x.bin",
+                      "byte_equal_to_d11aa3d":  true,
+                      "equal_after_crlf_to_lf":  null
+                  },
+                  {
+                      "path":  "historical_inputs/x.mem",
+                      "sha256":  "dc8bbdea876b71c1cd86f919656e74cfd098d89f778c390f22280e435cc357fc",
+                      "bytes":  48,
+                      "software_path":  "software/examples/fp32_hand_image/x.mem",
+                      "byte_equal_to_d11aa3d":  false,
+                      "equal_after_crlf_to_lf":  true
+                  }
+              ]
+}

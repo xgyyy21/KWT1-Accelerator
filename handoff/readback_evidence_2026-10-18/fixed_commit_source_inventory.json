@@ -1,0 +1,214 @@
+﻿{
+    "commit":  "acfae7282f2d16f6fe8df476efed147f23df4b71",
+    "scope":  "All rtl/tb .sv .v .f Git archive bytes; informational inventory, not the historical dirty snapshot",
+    "files":  [
+                  {
+                      "path":  "rtl/ai_engine_cache_soc_adapter.sv",
+                      "sha256":  "846a7854d051f94b6847d3c0fc6c993187e624aa0f6d9e073d686714b2f3750c"
+                  },
+                  {
+                      "path":  "rtl/ai_engine_core.sv",
+                      "sha256":  "2996b25fc85b98d19ca828a0deea336446400a7e0f30717ad166fec9560aaa66"
+                  },
+                  {
+                      "path":  "rtl/ai_engine_fsm.sv",
+                      "sha256":  "a637eb524879bbd63d6534c71d6fdb2cba0616af5860a768fe44f73ee0b9bc01"
+                  },
+                  {
+                      "path":  "rtl/ai_engine_pkg.sv",
+                      "sha256":  "99dcb21b694f725a0d0e3f3301095fdc09cd1f965a60d8a9d4d383b075032911"
+                  },
+                  {
+                      "path":  "rtl/ai_engine_regs.sv",
+                      "sha256":  "545bc7618d35c4006e7df39a8bb895280a58cdc58a65cece7486752b2e4dede0"
+                  },
+                  {
+                      "path":  "rtl/ai_engine_soc_adapter.sv",
+                      "sha256":  "37164e3087f7dcd8c72b899485f169a5a0d37344040562659a4cecd1396f9b45"
+                  },
+                  {
+                      "path":  "rtl/ai_engine_tile_loop.sv",
+                      "sha256":  "50a17fb0a4406151f741a2076a2047194dcc39c2da247464012d8b498eb48a9c"
+                  },
+                  {
+                      "path":  "rtl/ai_engine_tiled_executor.sv",
+                      "sha256":  "a8974bffcdf34335d2dc063d15d6f7a00b8dd83176332413a7b168e0e3505573"
+                  },
+                  {
+                      "path":  "rtl/block_counter.sv",
+                      "sha256":  "9baa888e2ee07e9cb0232002a99f0634be92262e809c7e59b981bef1b132d7bb"
+                  },
+                  {
+                      "path":  "rtl/block_descriptor.sv",
+                      "sha256":  "4b50d9f1b9d73d554e12385165806e8b7bc47b958355420d5cdda8244d00f4ff"
+                  },
+                  {
+                      "path":  "rtl/files.f",
+                      "sha256":  "8eb4001dedac2adfada2342d63143ba53687339f6f051419ba93b126d818d9a8"
+                  },
+                  {
+                      "path":  "rtl/fp32_mac_boundary.sv",
+                      "sha256":  "bccc3b76015534d42caefd56964d09932fc540aec64a29b45ee1a3700996273f"
+                  },
+                  {
+                      "path":  "rtl/fp32_math_pkg.sv",
+                      "sha256":  "f9b2ff813b51aba48914ce181c3840d40bd3bbd4f5b2ad0c89a3f4acadb888fe"
+                  },
+                  {
+                      "path":  "rtl/fp32_pe_mac.sv",
+                      "sha256":  "a2c50a912107aaf4f04f8f1cee35915973df6211ff450b114bd2d84fd01ea5ee"
+                  },
+                  {
+                      "path":  "rtl/matrix_buffer.sv",
+                      "sha256":  "50329ddd4521cdd2c989cf23dbbdcf9f49f2379a51263dbf892cb37ed4b15e2c"
+                  },
+                  {
+                      "path":  "rtl/matrix_cache_manager.sv",
+                      "sha256":  "ad1db76b9df18621d31ae8aae11c9bc5ee30e7dd1baa2caaf7dd3cd4680f8838"
+                  },
+                  {
+                      "path":  "rtl/matrix_task_controller.sv",
+                      "sha256":  "cba739edc5ae7a78a970432388910c0a7b3d013ef504c338c47d9512fd584b17"
+                  },
+                  {
+                      "path":  "rtl/matrix_task_scheduler.sv",
+                      "sha256":  "5c4efb28a448f498b6cd2169ff721e711dbedd0d5e9a3aebe85fdef2099457be"
+                  },
+                  {
+                      "path":  "rtl/pe_array_8x16.sv",
+                      "sha256":  "b52e0384c890b8e6b8111ed7a9d8581af91cf7cbb737c0074568ab99db6c08cb"
+                  },
+                  {
+                      "path":  "rtl/pe_mac.sv",
+                      "sha256":  "051b5855301ba3bc9174dea79a1485aa8330265fb0b41c221632b9ce65f60f63"
+                  },
+                  {
+                      "path":  "rtl/systolic_array_8x16.sv",
+                      "sha256":  "0fd4a08515887af4ef32d5cd61701cdb5dc587dcfd644ac06b3bfbf372460a85"
+                  },
+                  {
+                      "path":  "rtl/systolic_input_skew.sv",
+                      "sha256":  "573b6eefb213a9d2cb7f22ceeb981c93e34aee46bb8c817527889e5ec94c1e5f"
+                  },
+                  {
+                      "path":  "rtl/systolic_tile_engine.sv",
+                      "sha256":  "07802069dfb7bc71e2f97f190bcfda4f087478276d1e7554d015cf5bc9a76135"
+                  },
+                  {
+                      "path":  "rtl/tile_dma.sv",
+                      "sha256":  "0c8c2163fe6a61b2bf721b7e49c500586bdfde48dfab69d3af7ba043fe35b4cb"
+                  },
+                  {
+                      "path":  "rtl/tile_result_collector.sv",
+                      "sha256":  "d93d617d0151ddd63b6be254ad2c4315eca410bf3295b823d663fb1cf0db1d1d"
+                  },
+                  {
+                      "path":  "rtl/tile_stream_adapter.sv",
+                      "sha256":  "06af51e0d90ed49aa97cfd80190449e7be6b2e55d8b74251bffc9c940d99d8d8"
+                  },
+                  {
+                      "path":  "tb/ai_engine_cache_soc_adapter_tb.sv",
+                      "sha256":  "be925dbe3f1d36b60b370b219358d6a64fa9a014f010e2b37f9233274ff51c99"
+                  },
+                  {
+                      "path":  "tb/ai_engine_core_sequence_tb.sv",
+                      "sha256":  "450f9986ad4b66ad53c48b5bcaee965e3e13250a3dbbc47de87933d02c932c85"
+                  },
+                  {
+                      "path":  "tb/ai_engine_core_tb.sv",
+                      "sha256":  "8b48fa3a8988275aea5eaa1cc6f40f9608ad386cf22b32c98c5d88aa83ebc47c"
+                  },
+                  {
+                      "path":  "tb/ai_engine_fsm_tb.sv",
+                      "sha256":  "c6f2a1eaa69000b403f991965c3bcfd17df7f12ecd98c9b1e31961605d3300aa"
+                  },
+                  {
+                      "path":  "tb/ai_engine_regs_tb.sv",
+                      "sha256":  "16f42196e26aed62af73e93c94b42ef779f049e0e0ed6ee05db77b7c4db4931c"
+                  },
+                  {
+                      "path":  "tb/ai_engine_tile_loop_tb.sv",
+                      "sha256":  "29c5e66450b6d84b0153c379c08509e2c5d23d4744df3720b8c5d290dcca79ca"
+                  },
+                  {
+                      "path":  "tb/ai_engine_tiled_executor_tb.sv",
+                      "sha256":  "138af8800fb5945545f8c756edc17caaec6627963d95ccde3807aa730e3f56ca"
+                  },
+                  {
+                      "path":  "tb/block_counter_tb.sv",
+                      "sha256":  "6673130174bdee5e71dd19611f2e6534758ec0684b549deec2325f926baa433c"
+                  },
+                  {
+                      "path":  "tb/block_descriptor_tb.sv",
+                      "sha256":  "6fef0319123b7d5cc030a449173ca68226bec28135da039f04fb41c0f6549d45"
+                  },
+                  {
+                      "path":  "tb/fp32_mac_boundary_tb.sv",
+                      "sha256":  "b4fcf7f37daabd9dbcff051ead5734e0a73d3ccf87bfa68293975af2557d9240"
+                  },
+                  {
+                      "path":  "tb/fp32_math_tb.sv",
+                      "sha256":  "68ac89ab2f37382de089e622e34e154948b4b096ccd55b14c713eee32d77b179"
+                  },
+                  {
+                      "path":  "tb/matrix_buffer_tb.sv",
+                      "sha256":  "826679a9d807f9b81c59ed8fe7f54da4693503d14b8343c618e596f0790931be"
+                  },
+                  {
+                      "path":  "tb/matrix_cache_manager_tb.sv",
+                      "sha256":  "c641e00eb102a33ef6bf6c8c723c7497f8e7bf53fff55b2be74a152d2a0e1c07"
+                  },
+                  {
+                      "path":  "tb/matrix_task_controller_tb.sv",
+                      "sha256":  "33c75e8b2bbc394bc92680113614c0949a1ba1c425c61c95a785e2a374c392d5"
+                  },
+                  {
+                      "path":  "tb/matrix_task_scheduler_tb.sv",
+                      "sha256":  "6ece9b28a0f1d8601e847038b0bbe33216f59b673e0d4cb255647417e6962135"
+                  },
+                  {
+                      "path":  "tb/pe_array_8x16_tb.sv",
+                      "sha256":  "50891d56e27d17cddb375684d7b24ca25b386163abfaa4b9e42f7b098af11764"
+                  },
+                  {
+                      "path":  "tb/pe_mac_signed_tb.sv",
+                      "sha256":  "6730a8252eb1bf49f1153b535438e140de4805c0880ce9ae3b3fc1cb14f0e377"
+                  },
+                  {
+                      "path":  "tb/pe_mac_tb.sv",
+                      "sha256":  "e088337ebef08d6b9cbbb839ac76db0acab84e01a9190131299157530263e7d6"
+                  },
+                  {
+                      "path":  "tb/systolic_array_8x16_tb.sv",
+                      "sha256":  "46b05bfd8457425ef519b8dea4809fc45e3d0f447c06f4a196419b1075830708"
+                  },
+                  {
+                      "path":  "tb/systolic_array_reference_tb.sv",
+                      "sha256":  "2d95adea91e4873dcef9bbe2a4f9ffdcbba31c4d5c85da9d8778caf75339691c"
+                  },
+                  {
+                      "path":  "tb/systolic_array_stress_tb.sv",
+                      "sha256":  "5669e9dd35121c58d61f2e30dd780d3bf03bac2b210b469fee583b9e3a268173"
+                  },
+                  {
+                      "path":  "tb/systolic_input_skew_tb.sv",
+                      "sha256":  "a1062a15e136935e3b9139ae6ff34bf14a6c5b4b88c5ee4c58c684d6d6d66da2"
+                  },
+                  {
+                      "path":  "tb/tile_dma_tb.sv",
+                      "sha256":  "1ab469faa2392e030c36c788a93a4245d61134b10824b3adf49e4fe8f4e24a5e"
+                  },
+                  {
+                      "path":  "tb/tile_result_collector_tb.sv",
+                      "sha256":  "6a9bdb665e8c3006259a71d28cec02366d0d8ce3f520fcf7aa4497e9151b77cd"
+                  },
+                  {
+                      "path":  "tb/tile_stream_adapter_tb.sv",
+                      "sha256":  "23e4f7b406ccaf5471b8865ba69dbb08b85ce7bb0beea6558310552a4ee3e925"
+                  },
+                  {
+                      "path":  "tb/word_readback_tb.sv",
+                      "sha256":  "d2e4dd150409a897e1140cd1f6ddc935972861c217e13ff3e0f1714e612bd382"
+                  }
+              ]
+}
