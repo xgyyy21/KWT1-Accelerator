@@ -1,0 +1,31 @@
+{
+  "hardware_base_commit": "13a924ca77be7016e61d87cc83981752838cf8e2",
+  "software_commit": "d11d169ea6f7b8500d6a2186c803d0f1a5eba709",
+  "csv_rtl_commit": "13a924ca77be7016e61d87cc83981752838cf8e2+dirty",
+  "workspace": "D:/competition is not a Git repository; hardware base taken from independent clone",
+  "dirty_reason": "new formal testbench is not committed; exact compiled source snapshot is included",
+  "compiled_sources": [
+    {
+      "file": "sources/rtl/fp32_math_pkg.sv",
+      "sha256": "f9b2ff813b51aba48914ce181c3840d40bd3bbd4f5b2ad0c89a3f4acadb888fe",
+      "base_git_blob_sha256": "f9b2ff813b51aba48914ce181c3840d40bd3bbd4f5b2ad0c89a3f4acadb888fe",
+      "matches_base_git_blob": true
+    },
+    {
+      "file": "sources/rtl/fp32_pe_mac.sv",
+      "sha256": "8ff62fcae149b206c5507efd93ccc60a062bedcdb21858a1725cae7c760ddaed",
+      "base_git_blob_sha256": "8ff62fcae149b206c5507efd93ccc60a062bedcdb21858a1725cae7c760ddaed",
+      "matches_base_git_blob": true
+    },
+    {
+      "file": "sources/tb/fp32_pe_formal_tb.sv",
+      "sha256": "80ca1892f4f5423b7298013705120594a2a117601513e52422343f41343768e0",
+      "base_git_blob_sha256": null,
+      "matches_base_git_blob": false
+    }
+  ],
+  "input_manifest_sha256": "148ac9b305c34dafd033ea33d98b4f0a13edbf1306c66d29c7926ed348941e93",
+  "reference_trace_sha256": "a85bb5b7d334841acab94740290933bd3a991b881acf8782615cb8c43f73553b",
+  "git_status_of_clone": "",
+  "note": "A clean clone does not imply uncommitted source workspace is clean. No new commit/push made."
+}
