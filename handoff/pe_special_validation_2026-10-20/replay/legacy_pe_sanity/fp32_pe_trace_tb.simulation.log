@@ -1,0 +1,2 @@
+fp32_pe_trace_tb PASS FRAMEWORK_ONLY rows=74; no real FP32 PE validated
+tb/fp32_pe_trace_tb.sv:262: $finish called at 766000 (1ps)

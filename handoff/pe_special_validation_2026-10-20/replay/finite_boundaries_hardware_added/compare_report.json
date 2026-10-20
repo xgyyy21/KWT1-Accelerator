@@ -1,0 +1,13 @@
+{
+  "status": "BIT-EXACT-CANDIDATE",
+  "scope": "draft PE event-value comparison only; timing and RTL provenance require separate checks",
+  "actual_source_kind": "rtl_measured",
+  "case_id_filter": "finite_boundaries_hardware_added",
+  "matched_event_identities": 768,
+  "expected_events": 768,
+  "actual_events": 768,
+  "actual_csv_rows": 768,
+  "expected_csv_sha256": "02febb2413bcd203e736745688ab424b3314a86662cfe4102fa5d8ec835d268a",
+  "actual_csv_sha256": "02f82aa1e2fedcfadf78856835975823e19166434e1276c009e241f0d4110c9e",
+  "first_mismatch": null
+}

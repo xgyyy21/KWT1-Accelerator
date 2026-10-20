@@ -1,0 +1,4613 @@
+{
+  "scope": "hardware-added golden generated with pinned software reference; not RTL measured",
+  "cells": [
+    {
+      "row": 0,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 0,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 0,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 0,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 0,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 0,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 0,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 0,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 1,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 1,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 1,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 1,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 1,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 1,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 1,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 2,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1,
+          "acc_bits": 1
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 1
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 2
+    },
+    {
+      "row": 2,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483649,
+          "acc_bits": 2147483649
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 2147483649
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483650
+    },
+    {
+      "row": 2,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 2,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 2,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 2,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 3,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 3,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 3,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483649,
+          "acc_bits": 2147483649
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 2147483649
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 0
+    },
+    {
+      "row": 3,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1,
+          "acc_bits": 1
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 1
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 0
+    },
+    {
+      "row": 3,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 3,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 3,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 3,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 4,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1,
+          "acc_bits": 1
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 1
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 1
+    },
+    {
+      "row": 4,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483649,
+          "acc_bits": 2147483649
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 2147483649
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 4,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2,
+          "acc_bits": 2
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 2
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 3
+    },
+    {
+      "row": 4,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483650,
+          "acc_bits": 2147483650
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 2147483650
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483651
+    },
+    {
+      "row": 4,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 4,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 4,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 4,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 5,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2,
+          "acc_bits": 2
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 2
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 2
+    },
+    {
+      "row": 5,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483650,
+          "acc_bits": 2147483650
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 2147483650
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 2147483650
+    },
+    {
+      "row": 5,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3,
+          "acc_bits": 3
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 3
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 4
+    },
+    {
+      "row": 5,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483651,
+          "acc_bits": 2147483651
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 2147483651
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483652
+    },
+    {
+      "row": 5,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 5,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 5,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 5,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 6,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483650,
+          "acc_bits": 2147483650
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 2147483650
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 2147483650
+    },
+    {
+      "row": 6,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2,
+          "acc_bits": 2
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 2
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 2
+    },
+    {
+      "row": 6,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483651,
+          "acc_bits": 2147483651
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 2147483651
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 2147483650
+    },
+    {
+      "row": 6,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3,
+          "acc_bits": 3
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 3
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2
+    },
+    {
+      "row": 6,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 6,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 6,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 6,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 7,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 4194304,
+          "acc_bits": 4194304
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 4194304
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 4194304
+    },
+    {
+      "row": 7,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2151677952,
+          "acc_bits": 2151677952
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 2151677952
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 2151677952
+    },
+    {
+      "row": 7,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 8388607,
+          "acc_bits": 8388607
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 8388607
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 8388608
+    },
+    {
+      "row": 7,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2155872255,
+          "acc_bits": 2155872255
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 2155872255
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2155872256
+    },
+    {
+      "row": 7,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 7,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 7,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 7,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 8,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2151677952,
+          "acc_bits": 2151677952
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 2151677952
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 2151677952
+    },
+    {
+      "row": 8,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 4194304,
+          "acc_bits": 4194304
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 4194304
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 4194304
+    },
+    {
+      "row": 8,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2155872255,
+          "acc_bits": 2155872255
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 2155872255
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 2155872254
+    },
+    {
+      "row": 8,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 8388607,
+          "acc_bits": 8388607
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 8388607
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 8388606
+    },
+    {
+      "row": 8,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 8,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 8,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 8,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 9,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 4194304,
+          "acc_bits": 4194304
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 4194304
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 4194304
+    },
+    {
+      "row": 9,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2151677952,
+          "acc_bits": 2151677952
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 2151677952
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 2151677952
+    },
+    {
+      "row": 9,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 8388608,
+          "acc_bits": 8388608
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 8388608
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 8388609
+    },
+    {
+      "row": 9,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2155872256,
+          "acc_bits": 2155872256
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 2155872256
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2155872257
+    },
+    {
+      "row": 9,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 9,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 9,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 9,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 10,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2151677952,
+          "acc_bits": 2151677952
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 2151677952
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 2151677952
+    },
+    {
+      "row": 10,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 4194304,
+          "acc_bits": 4194304
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 4194304
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 4194304
+    },
+    {
+      "row": 10,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2155872256,
+          "acc_bits": 2155872256
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 2155872256
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 2155872255
+    },
+    {
+      "row": 10,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 8388608,
+          "acc_bits": 8388608
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 8388608
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 8388607
+    },
+    {
+      "row": 10,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 10,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 10,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 10,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 11,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 4194304,
+          "acc_bits": 4194304
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 4194304
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 4194304
+    },
+    {
+      "row": 11,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2151677952,
+          "acc_bits": 2151677952
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 2151677952
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 2151677952
+    },
+    {
+      "row": 11,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 8388609,
+          "acc_bits": 8388609
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 8388609
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 8388610
+    },
+    {
+      "row": 11,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2155872257,
+          "acc_bits": 2155872257
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 2155872257
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2155872258
+    },
+    {
+      "row": 11,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 11,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 11,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 11,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 12,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1056964608,
+          "acc_bits": 1056964608
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 1056964608
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 1056964608
+    },
+    {
+      "row": 12,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3204448256,
+          "acc_bits": 3204448256
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 3204448256
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 3204448256
+    },
+    {
+      "row": 12,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1065353216,
+          "acc_bits": 1065353216
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 1065353216
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1065353216
+    },
+    {
+      "row": 12,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3212836864,
+          "acc_bits": 3212836864
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 3212836864
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 3212836864
+    },
+    {
+      "row": 12,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 12,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 12,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1,
+          "acc_bits": 1
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 1
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 1
+    },
+    {
+      "row": 12,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 8388608,
+          "acc_bits": 8388608
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 8388608
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 8388608
+    },
+    {
+      "row": 13,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3204448256,
+          "acc_bits": 3204448256
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 3204448256
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 3204448256
+    },
+    {
+      "row": 13,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1056964608,
+          "acc_bits": 1056964608
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 1056964608
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 1056964608
+    },
+    {
+      "row": 13,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3212836864,
+          "acc_bits": 3212836864
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 3212836864
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 3212836864
+    },
+    {
+      "row": 13,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1065353216,
+          "acc_bits": 1065353216
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 1065353216
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 1065353216
+    },
+    {
+      "row": 13,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 13,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 13,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483649,
+          "acc_bits": 2147483649
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 2147483649
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 13,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2155872256,
+          "acc_bits": 2155872256
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 2155872256
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 2155872256
+    },
+    {
+      "row": 14,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1056964609,
+          "acc_bits": 1056964609
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 1056964609
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 1056964609
+    },
+    {
+      "row": 14,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3204448257,
+          "acc_bits": 3204448257
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 3204448257
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 3204448257
+    },
+    {
+      "row": 14,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1065353217,
+          "acc_bits": 1065353217
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 1065353217
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1065353217
+    },
+    {
+      "row": 14,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3212836865,
+          "acc_bits": 3212836865
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 3212836865
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 3212836865
+    },
+    {
+      "row": 14,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 14,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 14,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1,
+          "acc_bits": 1
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 1
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 1
+    },
+    {
+      "row": 14,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 8388609,
+          "acc_bits": 8388609
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 8388609
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 8388609
+    },
+    {
+      "row": 15,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1056964607,
+          "acc_bits": 1056964607
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 1056964607
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 1056964607
+    },
+    {
+      "row": 15,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3204448255,
+          "acc_bits": 3204448255
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 3204448255
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 3204448255
+    },
+    {
+      "row": 15,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1065353215,
+          "acc_bits": 1065353215
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 1065353215
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1065353215
+    },
+    {
+      "row": 15,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3212836863,
+          "acc_bits": 3212836863
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 3212836863
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 3212836863
+    },
+    {
+      "row": 15,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 15,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 15,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1,
+          "acc_bits": 1
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 1
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 1
+    },
+    {
+      "row": 15,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 8388608,
+          "acc_bits": 8388608
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 8388608
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 8388608
+    },
+    {
+      "row": 16,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 16,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 16,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 16,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 16,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 16,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 16,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 16,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 17,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 17,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 17,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 17,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 17,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 17,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 17,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 17,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 18,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 18,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 18,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1,
+          "acc_bits": 1
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483649,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 18,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483649,
+          "acc_bits": 2147483649
+        },
+        {
+          "k": 1,
+          "product_bits": 1,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 18,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 18,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 18,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 18,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 19,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 19,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 19,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483649,
+          "acc_bits": 2147483649
+        },
+        {
+          "k": 1,
+          "product_bits": 1,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 19,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1,
+          "acc_bits": 1
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483649,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 19,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 19,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 19,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 19,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 20,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1,
+          "acc_bits": 1
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483649,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 20,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483649,
+          "acc_bits": 2147483649
+        },
+        {
+          "k": 1,
+          "product_bits": 1,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 20,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2,
+          "acc_bits": 2
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483650,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 20,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483650,
+          "acc_bits": 2147483650
+        },
+        {
+          "k": 1,
+          "product_bits": 2,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 20,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 20,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 20,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 20,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 21,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2,
+          "acc_bits": 2
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483650,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 21,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483650,
+          "acc_bits": 2147483650
+        },
+        {
+          "k": 1,
+          "product_bits": 2,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 21,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3,
+          "acc_bits": 3
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483651,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 21,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483651,
+          "acc_bits": 2147483651
+        },
+        {
+          "k": 1,
+          "product_bits": 3,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 21,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 21,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 21,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 21,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 22,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483650,
+          "acc_bits": 2147483650
+        },
+        {
+          "k": 1,
+          "product_bits": 2,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 22,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2,
+          "acc_bits": 2
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483650,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 22,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483651,
+          "acc_bits": 2147483651
+        },
+        {
+          "k": 1,
+          "product_bits": 3,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 22,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3,
+          "acc_bits": 3
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483651,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 22,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 22,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 22,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 22,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 23,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 4194304,
+          "acc_bits": 4194304
+        },
+        {
+          "k": 1,
+          "product_bits": 2151677952,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 23,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2151677952,
+          "acc_bits": 2151677952
+        },
+        {
+          "k": 1,
+          "product_bits": 4194304,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 23,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 8388607,
+          "acc_bits": 8388607
+        },
+        {
+          "k": 1,
+          "product_bits": 2155872255,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 23,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2155872255,
+          "acc_bits": 2155872255
+        },
+        {
+          "k": 1,
+          "product_bits": 8388607,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 23,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 23,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 23,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 23,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 24,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2151677952,
+          "acc_bits": 2151677952
+        },
+        {
+          "k": 1,
+          "product_bits": 4194304,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 24,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 4194304,
+          "acc_bits": 4194304
+        },
+        {
+          "k": 1,
+          "product_bits": 2151677952,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 24,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2155872255,
+          "acc_bits": 2155872255
+        },
+        {
+          "k": 1,
+          "product_bits": 8388607,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 24,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 8388607,
+          "acc_bits": 8388607
+        },
+        {
+          "k": 1,
+          "product_bits": 2155872255,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 24,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 24,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 24,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 24,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 25,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 4194304,
+          "acc_bits": 4194304
+        },
+        {
+          "k": 1,
+          "product_bits": 2151677952,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 25,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2151677952,
+          "acc_bits": 2151677952
+        },
+        {
+          "k": 1,
+          "product_bits": 4194304,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 25,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 8388608,
+          "acc_bits": 8388608
+        },
+        {
+          "k": 1,
+          "product_bits": 2155872256,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 25,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2155872256,
+          "acc_bits": 2155872256
+        },
+        {
+          "k": 1,
+          "product_bits": 8388608,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 25,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 25,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 25,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 25,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 26,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2151677952,
+          "acc_bits": 2151677952
+        },
+        {
+          "k": 1,
+          "product_bits": 4194304,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 26,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 4194304,
+          "acc_bits": 4194304
+        },
+        {
+          "k": 1,
+          "product_bits": 2151677952,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 26,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2155872256,
+          "acc_bits": 2155872256
+        },
+        {
+          "k": 1,
+          "product_bits": 8388608,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 26,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 8388608,
+          "acc_bits": 8388608
+        },
+        {
+          "k": 1,
+          "product_bits": 2155872256,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 26,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 26,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 26,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 26,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 27,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 4194304,
+          "acc_bits": 4194304
+        },
+        {
+          "k": 1,
+          "product_bits": 2151677952,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 27,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2151677952,
+          "acc_bits": 2151677952
+        },
+        {
+          "k": 1,
+          "product_bits": 4194304,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 27,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 8388609,
+          "acc_bits": 8388609
+        },
+        {
+          "k": 1,
+          "product_bits": 2155872257,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 27,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2155872257,
+          "acc_bits": 2155872257
+        },
+        {
+          "k": 1,
+          "product_bits": 8388609,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 27,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 27,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 27,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 27,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 28,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1056964608,
+          "acc_bits": 1056964608
+        },
+        {
+          "k": 1,
+          "product_bits": 3204448256,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 28,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3204448256,
+          "acc_bits": 3204448256
+        },
+        {
+          "k": 1,
+          "product_bits": 1056964608,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 28,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1065353216,
+          "acc_bits": 1065353216
+        },
+        {
+          "k": 1,
+          "product_bits": 3212836864,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 28,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3212836864,
+          "acc_bits": 3212836864
+        },
+        {
+          "k": 1,
+          "product_bits": 1065353216,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 28,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 28,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 28,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1,
+          "acc_bits": 1
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483649,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 28,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 8388608,
+          "acc_bits": 8388608
+        },
+        {
+          "k": 1,
+          "product_bits": 2155872256,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 29,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3204448256,
+          "acc_bits": 3204448256
+        },
+        {
+          "k": 1,
+          "product_bits": 1056964608,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 29,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1056964608,
+          "acc_bits": 1056964608
+        },
+        {
+          "k": 1,
+          "product_bits": 3204448256,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 29,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3212836864,
+          "acc_bits": 3212836864
+        },
+        {
+          "k": 1,
+          "product_bits": 1065353216,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 29,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1065353216,
+          "acc_bits": 1065353216
+        },
+        {
+          "k": 1,
+          "product_bits": 3212836864,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 29,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 29,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 29,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483649,
+          "acc_bits": 2147483649
+        },
+        {
+          "k": 1,
+          "product_bits": 1,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 29,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2155872256,
+          "acc_bits": 2155872256
+        },
+        {
+          "k": 1,
+          "product_bits": 8388608,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 30,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1056964609,
+          "acc_bits": 1056964609
+        },
+        {
+          "k": 1,
+          "product_bits": 3204448257,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 30,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3204448257,
+          "acc_bits": 3204448257
+        },
+        {
+          "k": 1,
+          "product_bits": 1056964609,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 30,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1065353217,
+          "acc_bits": 1065353217
+        },
+        {
+          "k": 1,
+          "product_bits": 3212836865,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 30,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3212836865,
+          "acc_bits": 3212836865
+        },
+        {
+          "k": 1,
+          "product_bits": 1065353217,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 30,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 30,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 30,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1,
+          "acc_bits": 1
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483649,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 30,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 8388609,
+          "acc_bits": 8388609
+        },
+        {
+          "k": 1,
+          "product_bits": 2155872257,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 31,
+      "column": 0,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1056964607,
+          "acc_bits": 1056964607
+        },
+        {
+          "k": 1,
+          "product_bits": 3204448255,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 31,
+      "column": 1,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3204448255,
+          "acc_bits": 3204448255
+        },
+        {
+          "k": 1,
+          "product_bits": 1056964607,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 31,
+      "column": 2,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1065353215,
+          "acc_bits": 1065353215
+        },
+        {
+          "k": 1,
+          "product_bits": 3212836863,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 1,
+      "result_bits": 1
+    },
+    {
+      "row": 31,
+      "column": 3,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 3212836863,
+          "acc_bits": 3212836863
+        },
+        {
+          "k": 1,
+          "product_bits": 1065353215,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483649,
+      "result_bits": 2147483649
+    },
+    {
+      "row": 31,
+      "column": 4,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 0,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 0,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 31,
+      "column": 5,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483648,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 2147483648,
+      "result_bits": 0
+    },
+    {
+      "row": 31,
+      "column": 6,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 1,
+          "acc_bits": 1
+        },
+        {
+          "k": 1,
+          "product_bits": 2147483649,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    },
+    {
+      "row": 31,
+      "column": 7,
+      "steps": [
+        {
+          "k": 0,
+          "product_bits": 8388608,
+          "acc_bits": 8388608
+        },
+        {
+          "k": 1,
+          "product_bits": 2155872256,
+          "acc_bits": 0
+        }
+      ],
+      "bias_bits": 0,
+      "result_bits": 0
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+SAMPLING posedge+#1ns after NBA; first edge out of reset=1; no inter-block reset; block_K=32 total_K=2
+INPUT_FILES D:/competition/handoff/pe_special_validation_2026-10-20/inputs/x.mem D:/competition/handoff/pe_special_validation_2026-10-20/inputs/w.mem D:/competition/handoff/pe_special_validation_2026-10-20/inputs/bias.mem
+INPUT row=0 column=0 cycle=2 global_k=0 block=0 first=1 last=0 x=3f800000 w=40000000
+INPUT row=0 column=0 cycle=3 global_k=1 block=0 first=0 last=1 x=c0000000 w=3fc00000
+MUL_READY row=0 column=0 cycle=10 global_k=0 local_k=0 input_cycle=2
+MUL_READY row=0 column=0 cycle=11 global_k=1 local_k=1 input_cycle=3
+MAC_COMMIT row=0 column=0 cycle=16 global_k=0 local_k=0 before=00000000 product=40000000 after=40000000
+MAC_COMMIT row=0 column=0 cycle=21 global_k=1 local_k=1 before=40000000 product=c0400000 after=bf800000
+BIAS_COMMIT row=0 column=0 cycle=26 before=bf800000 bias=3e800000 result=bf400000
+INPUT row=0 column=1 cycle=44 global_k=0 block=0 first=1 last=0 x=3f800000 w=bf800000
+INPUT row=0 column=1 cycle=45 global_k=1 block=0 first=0 last=1 x=c0000000 w=3f000000
+MUL_READY row=0 column=1 cycle=52 global_k=0 local_k=0 input_cycle=44
+MUL_READY row=0 column=1 cycle=53 global_k=1 local_k=1 input_cycle=45
+MAC_COMMIT row=0 column=1 cycle=58 global_k=0 local_k=0 before=00000000 product=bf800000 after=bf800000
+MAC_COMMIT row=0 column=1 cycle=63 global_k=1 local_k=1 before=bf800000 product=bf800000 after=c0000000
+BIAS_COMMIT row=0 column=1 cycle=68 before=c0000000 bias=bf000000 result=c0200000
+INPUT row=1 column=0 cycle=86 global_k=0 block=0 first=1 last=0 x=3f000000 w=40000000
+INPUT row=1 column=0 cycle=87 global_k=1 block=0 first=0 last=1 x=40400000 w=3fc00000
+MUL_READY row=1 column=0 cycle=94 global_k=0 local_k=0 input_cycle=86
+MUL_READY row=1 column=0 cycle=95 global_k=1 local_k=1 input_cycle=87
+MAC_COMMIT row=1 column=0 cycle=100 global_k=0 local_k=0 before=00000000 product=3f800000 after=3f800000
+MAC_COMMIT row=1 column=0 cycle=105 global_k=1 local_k=1 before=3f800000 product=40900000 after=40b00000
+BIAS_COMMIT row=1 column=0 cycle=110 before=40b00000 bias=3e800000 result=40b80000
+INPUT row=1 column=1 cycle=128 global_k=0 block=0 first=1 last=0 x=3f000000 w=bf800000
+INPUT row=1 column=1 cycle=129 global_k=1 block=0 first=0 last=1 x=40400000 w=3f000000
+MUL_READY row=1 column=1 cycle=136 global_k=0 local_k=0 input_cycle=128
+MUL_READY row=1 column=1 cycle=137 global_k=1 local_k=1 input_cycle=129
+MAC_COMMIT row=1 column=1 cycle=142 global_k=0 local_k=0 before=00000000 product=bf000000 after=bf000000
+MAC_COMMIT row=1 column=1 cycle=147 global_k=1 local_k=1 before=bf000000 product=3fc00000 after=3f800000
+BIAS_COMMIT row=1 column=1 cycle=152 before=3f800000 bias=bf000000 result=3f000000
+fp32_pe_special_tb PASS case=hand_2x2 mac=8 bias=4 actual_block_boundaries=0
+sources/tb/fp32_pe_special_tb.sv:220: $finish called at 1700000 (1ps)

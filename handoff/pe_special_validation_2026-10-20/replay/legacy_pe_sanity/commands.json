@@ -1,0 +1,140 @@
+[
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/iverilog.exe",
+      "-g2012",
+      "-s",
+      "fp32_pe_trace_tb",
+      "-o",
+      "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\binaries_ja7rdbf0\\fp32_pe_trace_tb.vvp",
+      "-f",
+      "rtl/files.f",
+      "tb/fp32_pe_trace_tb.sv"
+    ],
+    "cwd": "D:\\competition",
+    "log": "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\fp32_pe_trace_tb.compile.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/vvp.exe",
+      "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\binaries_ja7rdbf0\\fp32_pe_trace_tb.vvp"
+    ],
+    "cwd": "D:\\competition",
+    "log": "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\fp32_pe_trace_tb.simulation.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/iverilog.exe",
+      "-g2012",
+      "-s",
+      "fp32_pe_kblock_tb",
+      "-o",
+      "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\binaries_ja7rdbf0\\fp32_pe_kblock_tb.vvp",
+      "-f",
+      "rtl/files.f",
+      "tb/fp32_pe_kblock_tb.sv"
+    ],
+    "cwd": "D:\\competition",
+    "log": "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\fp32_pe_kblock_tb.compile.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/vvp.exe",
+      "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\binaries_ja7rdbf0\\fp32_pe_kblock_tb.vvp"
+    ],
+    "cwd": "D:\\competition",
+    "log": "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\fp32_pe_kblock_tb.simulation.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/iverilog.exe",
+      "-g2012",
+      "-s",
+      "fp32_pe_hand_2x2_tb",
+      "-o",
+      "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\binaries_ja7rdbf0\\fp32_pe_hand_2x2_tb.vvp",
+      "-f",
+      "rtl/files.f",
+      "tb/fp32_pe_hand_2x2_tb.sv"
+    ],
+    "cwd": "D:\\competition",
+    "log": "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\fp32_pe_hand_2x2_tb.compile.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/vvp.exe",
+      "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\binaries_ja7rdbf0\\fp32_pe_hand_2x2_tb.vvp"
+    ],
+    "cwd": "D:\\competition",
+    "log": "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\fp32_pe_hand_2x2_tb.simulation.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/iverilog.exe",
+      "-g2012",
+      "-s",
+      "fp32_mac_boundary_tb",
+      "-o",
+      "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\binaries_ja7rdbf0\\fp32_mac_boundary_tb.vvp",
+      "-f",
+      "rtl/files.f",
+      "tb/fp32_mac_boundary_tb.sv"
+    ],
+    "cwd": "D:\\competition",
+    "log": "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\fp32_mac_boundary_tb.compile.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/vvp.exe",
+      "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\binaries_ja7rdbf0\\fp32_mac_boundary_tb.vvp"
+    ],
+    "cwd": "D:\\competition",
+    "log": "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\fp32_mac_boundary_tb.simulation.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/iverilog.exe",
+      "-g2012",
+      "-s",
+      "fp32_pe_array_2x2_tb",
+      "-o",
+      "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\binaries_ja7rdbf0\\fp32_pe_array_2x2_tb.vvp",
+      "-f",
+      "rtl/files.f",
+      "tb/fp32_pe_array_2x2_tb.sv"
+    ],
+    "cwd": "D:\\competition",
+    "log": "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\fp32_pe_array_2x2_tb.compile.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/vvp.exe",
+      "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\binaries_ja7rdbf0\\fp32_pe_array_2x2_tb.vvp"
+    ],
+    "cwd": "D:\\competition",
+    "log": "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\fp32_pe_array_2x2_tb.simulation.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/iverilog.exe",
+      "-g2012",
+      "-s",
+      "fp32_pe_array_k64_tb",
+      "-o",
+      "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\binaries_ja7rdbf0\\fp32_pe_array_k64_tb.vvp",
+      "-f",
+      "rtl/files.f",
+      "tb/fp32_pe_array_k64_tb.sv"
+    ],
+    "cwd": "D:\\competition",
+    "log": "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\fp32_pe_array_k64_tb.compile.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/vvp.exe",
+      "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\binaries_ja7rdbf0\\fp32_pe_array_k64_tb.vvp"
+    ],
+    "cwd": "D:\\competition",
+    "log": "D:\\competition\\build\\pe_special_legacy_checks_2026-10-20\\fp32_pe_array_k64_tb.simulation.log"
+  }
+]

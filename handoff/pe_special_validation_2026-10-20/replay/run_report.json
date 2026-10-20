@@ -1,0 +1,72 @@
+{
+  "status": "PASS_SINGLE_PE_SPECIALS_LOCAL_CHECK",
+  "software_commit": "d11d169ea6f7b8500d6a2186c803d0f1a5eba709",
+  "rtl_revision": "9941d8a5981dfdbd851b1e92a0ebc2cdef39f8e8+dirty",
+  "cases": [
+    {
+      "case_id": "hand_2x2",
+      "status": "PASS_LOCAL_CHECK",
+      "mac_events": 8,
+      "bias_events": 4,
+      "actual_k32_boundaries": 0,
+      "csv_sha256": "0cbd8c09453e4716516c21e0ce5172d584da1372ed498b9c468cec3fe650ca2a",
+      "software_compare_status": "BIT-EXACT-CANDIDATE",
+      "acceptance": "software-provided vector; owner independent RTL acceptance pending"
+    },
+    {
+      "case_id": "rounding_nonfused",
+      "status": "PASS_LOCAL_CHECK",
+      "mac_events": 2,
+      "bias_events": 1,
+      "actual_k32_boundaries": 0,
+      "csv_sha256": "cb66622d015c6b887a2ba21b66532d04be1090f16f93799ed70abbcde615d7a0",
+      "software_compare_status": "BIT-EXACT-CANDIDATE",
+      "acceptance": "software-provided vector; owner independent RTL acceptance pending"
+    },
+    {
+      "case_id": "k32_boundary",
+      "status": "PASS_LOCAL_CHECK",
+      "mac_events": 64,
+      "bias_events": 1,
+      "actual_k32_boundaries": 1,
+      "csv_sha256": "a6370cb5d4823ab16b3943a806cb5cb268cf1b7974fc657166b6c4a67f825434",
+      "software_compare_status": "BIT-EXACT-CANDIDATE",
+      "acceptance": "software-provided vector; owner independent RTL acceptance pending"
+    },
+    {
+      "case_id": "finite_boundaries_hardware_added",
+      "status": "PASS_LOCAL_CHECK",
+      "mac_events": 512,
+      "bias_events": 256,
+      "actual_k32_boundaries": 0,
+      "csv_sha256": "02f82aa1e2fedcfadf78856835975823e19166434e1276c009e241f0d4110c9e",
+      "software_compare_status": "BIT-EXACT-CANDIDATE",
+      "acceptance": "hardware-added; not independently accepted by software owner"
+    }
+  ],
+  "math_boundary_coverage": {
+    "pairs": 24713,
+    "directed_pairs": 713,
+    "seeded_random_pairs": 24000,
+    "seed": "0x4b575431",
+    "overflow_pairs_excluded": 1518,
+    "pairs_with_subnormal_input": 10061,
+    "subnormal_add_results": 1797,
+    "subnormal_mul_results": 1986,
+    "negative_zero_add_results": 1,
+    "negative_zero_mul_results": 4177,
+    "independent_oracle_sanity_checks": 9,
+    "scope": "sampled finite non-overflow add/mul; not exhaustive binary32 coverage"
+  },
+  "validator_tests": "14 tests passed; corrupted COPIES only, not extra hardware evidence",
+  "software_owner_independent_acceptance": "PENDING",
+  "not_verified": [
+    "SRAM partial sum save/restore",
+    "array",
+    "full layer",
+    "E203/SoC",
+    "150 MHz physical timing",
+    "NaN/Inf/overflow contract",
+    "exhaustive FP32 coverage"
+  ]
+}

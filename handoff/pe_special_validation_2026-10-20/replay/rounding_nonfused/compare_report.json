@@ -1,0 +1,13 @@
+{
+  "status": "BIT-EXACT-CANDIDATE",
+  "scope": "draft PE event-value comparison only; timing and RTL provenance require separate checks",
+  "actual_source_kind": "rtl_measured",
+  "case_id_filter": "rounding_nonfused",
+  "matched_event_identities": 3,
+  "expected_events": 3,
+  "actual_events": 3,
+  "actual_csv_rows": 3,
+  "expected_csv_sha256": "b3f3fdeb958c5f5d0443787954b6d3d385af2257cdf10948416bd521deda4896",
+  "actual_csv_sha256": "cb66622d015c6b887a2ba21b66532d04be1090f16f93799ed70abbcde615d7a0",
+  "first_mismatch": null
+}

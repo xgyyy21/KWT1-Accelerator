@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "scope": "actual RTL valid/data alignment and 8/4-clock functional boundaries",
+  "mac_events": 64,
+  "bias_events": 1,
+  "actual_k32_boundaries": [
+    {
+      "row": 0,
+      "column": 0,
+      "previous_global_k": 31,
+      "next_global_k": 32,
+      "previous_commit_cycle": 209,
+      "next_accept_cycle": 219,
+      "next_commit_cycle": 271,
+      "previous_acc_after_bits": "0x40000000",
+      "next_acc_before_bits": "0x40000000",
+      "next_acc_after_bits": "0xbf800000",
+      "disabled_wait_cycles": 9,
+      "partial_sum_storage": "PE accumulator register; NOT SRAM"
+    }
+  ],
+  "physical_timing_closed": false,
+  "sram_save_restore_verified": false
+}

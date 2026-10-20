@@ -1,0 +1,29 @@
+{
+  "scope": "six existing single-PE and array sanity tests; NOT full-project regression",
+  "tests": [
+    {
+      "test": "fp32_pe_trace_tb",
+      "status": "PASS"
+    },
+    {
+      "test": "fp32_pe_kblock_tb",
+      "status": "PASS"
+    },
+    {
+      "test": "fp32_pe_hand_2x2_tb",
+      "status": "PASS"
+    },
+    {
+      "test": "fp32_mac_boundary_tb",
+      "status": "PASS"
+    },
+    {
+      "test": "fp32_pe_array_2x2_tb",
+      "status": "PASS"
+    },
+    {
+      "test": "fp32_pe_array_k64_tb",
+      "status": "PASS"
+    }
+  ]
+}

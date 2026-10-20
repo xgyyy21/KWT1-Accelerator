@@ -1,0 +1,14 @@
+{
+  "pairs": 24713,
+  "directed_pairs": 713,
+  "seeded_random_pairs": 24000,
+  "seed": "0x4b575431",
+  "overflow_pairs_excluded": 1518,
+  "pairs_with_subnormal_input": 10061,
+  "subnormal_add_results": 1797,
+  "subnormal_mul_results": 1986,
+  "negative_zero_add_results": 1,
+  "negative_zero_mul_results": 4177,
+  "independent_oracle_sanity_checks": 9,
+  "scope": "sampled finite non-overflow add/mul; not exhaustive binary32 coverage"
+}

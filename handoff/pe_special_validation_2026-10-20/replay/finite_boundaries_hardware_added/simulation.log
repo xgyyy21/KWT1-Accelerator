@@ -1,0 +1,1796 @@
+SAMPLING posedge+#1ns after NBA; first edge out of reset=1; no inter-block reset; block_K=32 total_K=2
+INPUT_FILES D:/competition/handoff/pe_special_validation_2026-10-20/boundary_inputs/x.mem D:/competition/handoff/pe_special_validation_2026-10-20/boundary_inputs/w.mem D:/competition/handoff/pe_special_validation_2026-10-20/boundary_inputs/bias.mem
+INPUT row=0 column=0 cycle=2 global_k=0 block=0 first=1 last=0 x=00000000 w=3f000000
+INPUT row=0 column=0 cycle=3 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=0 column=0 cycle=10 global_k=0 local_k=0 input_cycle=2
+MUL_READY row=0 column=0 cycle=11 global_k=1 local_k=1 input_cycle=3
+MAC_COMMIT row=0 column=0 cycle=16 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=0 column=0 cycle=21 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=0 column=0 cycle=26 before=00000000 bias=00000000 result=00000000
+INPUT row=0 column=1 cycle=44 global_k=0 block=0 first=1 last=0 x=00000000 w=bf000000
+INPUT row=0 column=1 cycle=45 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=0 column=1 cycle=52 global_k=0 local_k=0 input_cycle=44
+MUL_READY row=0 column=1 cycle=53 global_k=1 local_k=1 input_cycle=45
+MAC_COMMIT row=0 column=1 cycle=58 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=0 column=1 cycle=63 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=0 column=1 cycle=68 before=00000000 bias=80000000 result=00000000
+INPUT row=0 column=2 cycle=86 global_k=0 block=0 first=1 last=0 x=00000000 w=3f800000
+INPUT row=0 column=2 cycle=87 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=0 column=2 cycle=94 global_k=0 local_k=0 input_cycle=86
+MUL_READY row=0 column=2 cycle=95 global_k=1 local_k=1 input_cycle=87
+MAC_COMMIT row=0 column=2 cycle=100 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=0 column=2 cycle=105 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=0 column=2 cycle=110 before=00000000 bias=00000001 result=00000001
+INPUT row=0 column=3 cycle=128 global_k=0 block=0 first=1 last=0 x=00000000 w=bf800000
+INPUT row=0 column=3 cycle=129 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=0 column=3 cycle=136 global_k=0 local_k=0 input_cycle=128
+MUL_READY row=0 column=3 cycle=137 global_k=1 local_k=1 input_cycle=129
+MAC_COMMIT row=0 column=3 cycle=142 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=0 column=3 cycle=147 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=0 column=3 cycle=152 before=00000000 bias=80000001 result=80000001
+INPUT row=0 column=4 cycle=170 global_k=0 block=0 first=1 last=0 x=00000000 w=00000000
+INPUT row=0 column=4 cycle=171 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=0 column=4 cycle=178 global_k=0 local_k=0 input_cycle=170
+MUL_READY row=0 column=4 cycle=179 global_k=1 local_k=1 input_cycle=171
+MAC_COMMIT row=0 column=4 cycle=184 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=0 column=4 cycle=189 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=0 column=4 cycle=194 before=00000000 bias=00000000 result=00000000
+INPUT row=0 column=5 cycle=212 global_k=0 block=0 first=1 last=0 x=00000000 w=80000000
+INPUT row=0 column=5 cycle=213 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=0 column=5 cycle=220 global_k=0 local_k=0 input_cycle=212
+MUL_READY row=0 column=5 cycle=221 global_k=1 local_k=1 input_cycle=213
+MAC_COMMIT row=0 column=5 cycle=226 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=0 column=5 cycle=231 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=0 column=5 cycle=236 before=00000000 bias=80000000 result=00000000
+INPUT row=0 column=6 cycle=254 global_k=0 block=0 first=1 last=0 x=00000000 w=00000001
+INPUT row=0 column=6 cycle=255 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=0 column=6 cycle=262 global_k=0 local_k=0 input_cycle=254
+MUL_READY row=0 column=6 cycle=263 global_k=1 local_k=1 input_cycle=255
+MAC_COMMIT row=0 column=6 cycle=268 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=0 column=6 cycle=273 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=0 column=6 cycle=278 before=00000000 bias=00000000 result=00000000
+INPUT row=0 column=7 cycle=296 global_k=0 block=0 first=1 last=0 x=00000000 w=00800000
+INPUT row=0 column=7 cycle=297 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=0 column=7 cycle=304 global_k=0 local_k=0 input_cycle=296
+MUL_READY row=0 column=7 cycle=305 global_k=1 local_k=1 input_cycle=297
+MAC_COMMIT row=0 column=7 cycle=310 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=0 column=7 cycle=315 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=0 column=7 cycle=320 before=00000000 bias=00000000 result=00000000
+INPUT row=1 column=0 cycle=338 global_k=0 block=0 first=1 last=0 x=80000000 w=3f000000
+INPUT row=1 column=0 cycle=339 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=1 column=0 cycle=346 global_k=0 local_k=0 input_cycle=338
+MUL_READY row=1 column=0 cycle=347 global_k=1 local_k=1 input_cycle=339
+MAC_COMMIT row=1 column=0 cycle=352 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=1 column=0 cycle=357 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=1 column=0 cycle=362 before=00000000 bias=00000000 result=00000000
+INPUT row=1 column=1 cycle=380 global_k=0 block=0 first=1 last=0 x=80000000 w=bf000000
+INPUT row=1 column=1 cycle=381 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=1 column=1 cycle=388 global_k=0 local_k=0 input_cycle=380
+MUL_READY row=1 column=1 cycle=389 global_k=1 local_k=1 input_cycle=381
+MAC_COMMIT row=1 column=1 cycle=394 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=1 column=1 cycle=399 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=1 column=1 cycle=404 before=00000000 bias=80000000 result=00000000
+INPUT row=1 column=2 cycle=422 global_k=0 block=0 first=1 last=0 x=80000000 w=3f800000
+INPUT row=1 column=2 cycle=423 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=1 column=2 cycle=430 global_k=0 local_k=0 input_cycle=422
+MUL_READY row=1 column=2 cycle=431 global_k=1 local_k=1 input_cycle=423
+MAC_COMMIT row=1 column=2 cycle=436 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=1 column=2 cycle=441 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=1 column=2 cycle=446 before=00000000 bias=00000001 result=00000001
+INPUT row=1 column=3 cycle=464 global_k=0 block=0 first=1 last=0 x=80000000 w=bf800000
+INPUT row=1 column=3 cycle=465 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=1 column=3 cycle=472 global_k=0 local_k=0 input_cycle=464
+MUL_READY row=1 column=3 cycle=473 global_k=1 local_k=1 input_cycle=465
+MAC_COMMIT row=1 column=3 cycle=478 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=1 column=3 cycle=483 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=1 column=3 cycle=488 before=00000000 bias=80000001 result=80000001
+INPUT row=1 column=4 cycle=506 global_k=0 block=0 first=1 last=0 x=80000000 w=00000000
+INPUT row=1 column=4 cycle=507 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=1 column=4 cycle=514 global_k=0 local_k=0 input_cycle=506
+MUL_READY row=1 column=4 cycle=515 global_k=1 local_k=1 input_cycle=507
+MAC_COMMIT row=1 column=4 cycle=520 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=1 column=4 cycle=525 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=1 column=4 cycle=530 before=00000000 bias=00000000 result=00000000
+INPUT row=1 column=5 cycle=548 global_k=0 block=0 first=1 last=0 x=80000000 w=80000000
+INPUT row=1 column=5 cycle=549 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=1 column=5 cycle=556 global_k=0 local_k=0 input_cycle=548
+MUL_READY row=1 column=5 cycle=557 global_k=1 local_k=1 input_cycle=549
+MAC_COMMIT row=1 column=5 cycle=562 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=1 column=5 cycle=567 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=1 column=5 cycle=572 before=00000000 bias=80000000 result=00000000
+INPUT row=1 column=6 cycle=590 global_k=0 block=0 first=1 last=0 x=80000000 w=00000001
+INPUT row=1 column=6 cycle=591 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=1 column=6 cycle=598 global_k=0 local_k=0 input_cycle=590
+MUL_READY row=1 column=6 cycle=599 global_k=1 local_k=1 input_cycle=591
+MAC_COMMIT row=1 column=6 cycle=604 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=1 column=6 cycle=609 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=1 column=6 cycle=614 before=00000000 bias=00000000 result=00000000
+INPUT row=1 column=7 cycle=632 global_k=0 block=0 first=1 last=0 x=80000000 w=00800000
+INPUT row=1 column=7 cycle=633 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=1 column=7 cycle=640 global_k=0 local_k=0 input_cycle=632
+MUL_READY row=1 column=7 cycle=641 global_k=1 local_k=1 input_cycle=633
+MAC_COMMIT row=1 column=7 cycle=646 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=1 column=7 cycle=651 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=1 column=7 cycle=656 before=00000000 bias=00000000 result=00000000
+INPUT row=2 column=0 cycle=674 global_k=0 block=0 first=1 last=0 x=00000001 w=3f000000
+INPUT row=2 column=0 cycle=675 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=2 column=0 cycle=682 global_k=0 local_k=0 input_cycle=674
+MUL_READY row=2 column=0 cycle=683 global_k=1 local_k=1 input_cycle=675
+MAC_COMMIT row=2 column=0 cycle=688 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=2 column=0 cycle=693 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=2 column=0 cycle=698 before=00000000 bias=00000000 result=00000000
+INPUT row=2 column=1 cycle=716 global_k=0 block=0 first=1 last=0 x=00000001 w=bf000000
+INPUT row=2 column=1 cycle=717 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=2 column=1 cycle=724 global_k=0 local_k=0 input_cycle=716
+MUL_READY row=2 column=1 cycle=725 global_k=1 local_k=1 input_cycle=717
+MAC_COMMIT row=2 column=1 cycle=730 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=2 column=1 cycle=735 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=2 column=1 cycle=740 before=00000000 bias=80000000 result=00000000
+INPUT row=2 column=2 cycle=758 global_k=0 block=0 first=1 last=0 x=00000001 w=3f800000
+INPUT row=2 column=2 cycle=759 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=2 column=2 cycle=766 global_k=0 local_k=0 input_cycle=758
+MUL_READY row=2 column=2 cycle=767 global_k=1 local_k=1 input_cycle=759
+MAC_COMMIT row=2 column=2 cycle=772 global_k=0 local_k=0 before=00000000 product=00000001 after=00000001
+MAC_COMMIT row=2 column=2 cycle=777 global_k=1 local_k=1 before=00000001 product=00000000 after=00000001
+BIAS_COMMIT row=2 column=2 cycle=782 before=00000001 bias=00000001 result=00000002
+INPUT row=2 column=3 cycle=800 global_k=0 block=0 first=1 last=0 x=00000001 w=bf800000
+INPUT row=2 column=3 cycle=801 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=2 column=3 cycle=808 global_k=0 local_k=0 input_cycle=800
+MUL_READY row=2 column=3 cycle=809 global_k=1 local_k=1 input_cycle=801
+MAC_COMMIT row=2 column=3 cycle=814 global_k=0 local_k=0 before=00000000 product=80000001 after=80000001
+MAC_COMMIT row=2 column=3 cycle=819 global_k=1 local_k=1 before=80000001 product=80000000 after=80000001
+BIAS_COMMIT row=2 column=3 cycle=824 before=80000001 bias=80000001 result=80000002
+INPUT row=2 column=4 cycle=842 global_k=0 block=0 first=1 last=0 x=00000001 w=00000000
+INPUT row=2 column=4 cycle=843 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=2 column=4 cycle=850 global_k=0 local_k=0 input_cycle=842
+MUL_READY row=2 column=4 cycle=851 global_k=1 local_k=1 input_cycle=843
+MAC_COMMIT row=2 column=4 cycle=856 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=2 column=4 cycle=861 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=2 column=4 cycle=866 before=00000000 bias=00000000 result=00000000
+INPUT row=2 column=5 cycle=884 global_k=0 block=0 first=1 last=0 x=00000001 w=80000000
+INPUT row=2 column=5 cycle=885 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=2 column=5 cycle=892 global_k=0 local_k=0 input_cycle=884
+MUL_READY row=2 column=5 cycle=893 global_k=1 local_k=1 input_cycle=885
+MAC_COMMIT row=2 column=5 cycle=898 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=2 column=5 cycle=903 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=2 column=5 cycle=908 before=00000000 bias=80000000 result=00000000
+INPUT row=2 column=6 cycle=926 global_k=0 block=0 first=1 last=0 x=00000001 w=00000001
+INPUT row=2 column=6 cycle=927 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=2 column=6 cycle=934 global_k=0 local_k=0 input_cycle=926
+MUL_READY row=2 column=6 cycle=935 global_k=1 local_k=1 input_cycle=927
+MAC_COMMIT row=2 column=6 cycle=940 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=2 column=6 cycle=945 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=2 column=6 cycle=950 before=00000000 bias=00000000 result=00000000
+INPUT row=2 column=7 cycle=968 global_k=0 block=0 first=1 last=0 x=00000001 w=00800000
+INPUT row=2 column=7 cycle=969 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=2 column=7 cycle=976 global_k=0 local_k=0 input_cycle=968
+MUL_READY row=2 column=7 cycle=977 global_k=1 local_k=1 input_cycle=969
+MAC_COMMIT row=2 column=7 cycle=982 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=2 column=7 cycle=987 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=2 column=7 cycle=992 before=00000000 bias=00000000 result=00000000
+INPUT row=3 column=0 cycle=1010 global_k=0 block=0 first=1 last=0 x=80000001 w=3f000000
+INPUT row=3 column=0 cycle=1011 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=3 column=0 cycle=1018 global_k=0 local_k=0 input_cycle=1010
+MUL_READY row=3 column=0 cycle=1019 global_k=1 local_k=1 input_cycle=1011
+MAC_COMMIT row=3 column=0 cycle=1024 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=3 column=0 cycle=1029 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=3 column=0 cycle=1034 before=00000000 bias=00000000 result=00000000
+INPUT row=3 column=1 cycle=1052 global_k=0 block=0 first=1 last=0 x=80000001 w=bf000000
+INPUT row=3 column=1 cycle=1053 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=3 column=1 cycle=1060 global_k=0 local_k=0 input_cycle=1052
+MUL_READY row=3 column=1 cycle=1061 global_k=1 local_k=1 input_cycle=1053
+MAC_COMMIT row=3 column=1 cycle=1066 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=3 column=1 cycle=1071 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=3 column=1 cycle=1076 before=00000000 bias=80000000 result=00000000
+INPUT row=3 column=2 cycle=1094 global_k=0 block=0 first=1 last=0 x=80000001 w=3f800000
+INPUT row=3 column=2 cycle=1095 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=3 column=2 cycle=1102 global_k=0 local_k=0 input_cycle=1094
+MUL_READY row=3 column=2 cycle=1103 global_k=1 local_k=1 input_cycle=1095
+MAC_COMMIT row=3 column=2 cycle=1108 global_k=0 local_k=0 before=00000000 product=80000001 after=80000001
+MAC_COMMIT row=3 column=2 cycle=1113 global_k=1 local_k=1 before=80000001 product=00000000 after=80000001
+BIAS_COMMIT row=3 column=2 cycle=1118 before=80000001 bias=00000001 result=00000000
+INPUT row=3 column=3 cycle=1136 global_k=0 block=0 first=1 last=0 x=80000001 w=bf800000
+INPUT row=3 column=3 cycle=1137 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=3 column=3 cycle=1144 global_k=0 local_k=0 input_cycle=1136
+MUL_READY row=3 column=3 cycle=1145 global_k=1 local_k=1 input_cycle=1137
+MAC_COMMIT row=3 column=3 cycle=1150 global_k=0 local_k=0 before=00000000 product=00000001 after=00000001
+MAC_COMMIT row=3 column=3 cycle=1155 global_k=1 local_k=1 before=00000001 product=80000000 after=00000001
+BIAS_COMMIT row=3 column=3 cycle=1160 before=00000001 bias=80000001 result=00000000
+INPUT row=3 column=4 cycle=1178 global_k=0 block=0 first=1 last=0 x=80000001 w=00000000
+INPUT row=3 column=4 cycle=1179 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=3 column=4 cycle=1186 global_k=0 local_k=0 input_cycle=1178
+MUL_READY row=3 column=4 cycle=1187 global_k=1 local_k=1 input_cycle=1179
+MAC_COMMIT row=3 column=4 cycle=1192 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=3 column=4 cycle=1197 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=3 column=4 cycle=1202 before=00000000 bias=00000000 result=00000000
+INPUT row=3 column=5 cycle=1220 global_k=0 block=0 first=1 last=0 x=80000001 w=80000000
+INPUT row=3 column=5 cycle=1221 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=3 column=5 cycle=1228 global_k=0 local_k=0 input_cycle=1220
+MUL_READY row=3 column=5 cycle=1229 global_k=1 local_k=1 input_cycle=1221
+MAC_COMMIT row=3 column=5 cycle=1234 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=3 column=5 cycle=1239 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=3 column=5 cycle=1244 before=00000000 bias=80000000 result=00000000
+INPUT row=3 column=6 cycle=1262 global_k=0 block=0 first=1 last=0 x=80000001 w=00000001
+INPUT row=3 column=6 cycle=1263 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=3 column=6 cycle=1270 global_k=0 local_k=0 input_cycle=1262
+MUL_READY row=3 column=6 cycle=1271 global_k=1 local_k=1 input_cycle=1263
+MAC_COMMIT row=3 column=6 cycle=1276 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=3 column=6 cycle=1281 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=3 column=6 cycle=1286 before=00000000 bias=00000000 result=00000000
+INPUT row=3 column=7 cycle=1304 global_k=0 block=0 first=1 last=0 x=80000001 w=00800000
+INPUT row=3 column=7 cycle=1305 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=3 column=7 cycle=1312 global_k=0 local_k=0 input_cycle=1304
+MUL_READY row=3 column=7 cycle=1313 global_k=1 local_k=1 input_cycle=1305
+MAC_COMMIT row=3 column=7 cycle=1318 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=3 column=7 cycle=1323 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=3 column=7 cycle=1328 before=00000000 bias=00000000 result=00000000
+INPUT row=4 column=0 cycle=1346 global_k=0 block=0 first=1 last=0 x=00000002 w=3f000000
+INPUT row=4 column=0 cycle=1347 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=4 column=0 cycle=1354 global_k=0 local_k=0 input_cycle=1346
+MUL_READY row=4 column=0 cycle=1355 global_k=1 local_k=1 input_cycle=1347
+MAC_COMMIT row=4 column=0 cycle=1360 global_k=0 local_k=0 before=00000000 product=00000001 after=00000001
+MAC_COMMIT row=4 column=0 cycle=1365 global_k=1 local_k=1 before=00000001 product=00000000 after=00000001
+BIAS_COMMIT row=4 column=0 cycle=1370 before=00000001 bias=00000000 result=00000001
+INPUT row=4 column=1 cycle=1388 global_k=0 block=0 first=1 last=0 x=00000002 w=bf000000
+INPUT row=4 column=1 cycle=1389 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=4 column=1 cycle=1396 global_k=0 local_k=0 input_cycle=1388
+MUL_READY row=4 column=1 cycle=1397 global_k=1 local_k=1 input_cycle=1389
+MAC_COMMIT row=4 column=1 cycle=1402 global_k=0 local_k=0 before=00000000 product=80000001 after=80000001
+MAC_COMMIT row=4 column=1 cycle=1407 global_k=1 local_k=1 before=80000001 product=80000000 after=80000001
+BIAS_COMMIT row=4 column=1 cycle=1412 before=80000001 bias=80000000 result=80000001
+INPUT row=4 column=2 cycle=1430 global_k=0 block=0 first=1 last=0 x=00000002 w=3f800000
+INPUT row=4 column=2 cycle=1431 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=4 column=2 cycle=1438 global_k=0 local_k=0 input_cycle=1430
+MUL_READY row=4 column=2 cycle=1439 global_k=1 local_k=1 input_cycle=1431
+MAC_COMMIT row=4 column=2 cycle=1444 global_k=0 local_k=0 before=00000000 product=00000002 after=00000002
+MAC_COMMIT row=4 column=2 cycle=1449 global_k=1 local_k=1 before=00000002 product=00000000 after=00000002
+BIAS_COMMIT row=4 column=2 cycle=1454 before=00000002 bias=00000001 result=00000003
+INPUT row=4 column=3 cycle=1472 global_k=0 block=0 first=1 last=0 x=00000002 w=bf800000
+INPUT row=4 column=3 cycle=1473 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=4 column=3 cycle=1480 global_k=0 local_k=0 input_cycle=1472
+MUL_READY row=4 column=3 cycle=1481 global_k=1 local_k=1 input_cycle=1473
+MAC_COMMIT row=4 column=3 cycle=1486 global_k=0 local_k=0 before=00000000 product=80000002 after=80000002
+MAC_COMMIT row=4 column=3 cycle=1491 global_k=1 local_k=1 before=80000002 product=80000000 after=80000002
+BIAS_COMMIT row=4 column=3 cycle=1496 before=80000002 bias=80000001 result=80000003
+INPUT row=4 column=4 cycle=1514 global_k=0 block=0 first=1 last=0 x=00000002 w=00000000
+INPUT row=4 column=4 cycle=1515 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=4 column=4 cycle=1522 global_k=0 local_k=0 input_cycle=1514
+MUL_READY row=4 column=4 cycle=1523 global_k=1 local_k=1 input_cycle=1515
+MAC_COMMIT row=4 column=4 cycle=1528 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=4 column=4 cycle=1533 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=4 column=4 cycle=1538 before=00000000 bias=00000000 result=00000000
+INPUT row=4 column=5 cycle=1556 global_k=0 block=0 first=1 last=0 x=00000002 w=80000000
+INPUT row=4 column=5 cycle=1557 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=4 column=5 cycle=1564 global_k=0 local_k=0 input_cycle=1556
+MUL_READY row=4 column=5 cycle=1565 global_k=1 local_k=1 input_cycle=1557
+MAC_COMMIT row=4 column=5 cycle=1570 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=4 column=5 cycle=1575 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=4 column=5 cycle=1580 before=00000000 bias=80000000 result=00000000
+INPUT row=4 column=6 cycle=1598 global_k=0 block=0 first=1 last=0 x=00000002 w=00000001
+INPUT row=4 column=6 cycle=1599 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=4 column=6 cycle=1606 global_k=0 local_k=0 input_cycle=1598
+MUL_READY row=4 column=6 cycle=1607 global_k=1 local_k=1 input_cycle=1599
+MAC_COMMIT row=4 column=6 cycle=1612 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=4 column=6 cycle=1617 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=4 column=6 cycle=1622 before=00000000 bias=00000000 result=00000000
+INPUT row=4 column=7 cycle=1640 global_k=0 block=0 first=1 last=0 x=00000002 w=00800000
+INPUT row=4 column=7 cycle=1641 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=4 column=7 cycle=1648 global_k=0 local_k=0 input_cycle=1640
+MUL_READY row=4 column=7 cycle=1649 global_k=1 local_k=1 input_cycle=1641
+MAC_COMMIT row=4 column=7 cycle=1654 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=4 column=7 cycle=1659 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=4 column=7 cycle=1664 before=00000000 bias=00000000 result=00000000
+INPUT row=5 column=0 cycle=1682 global_k=0 block=0 first=1 last=0 x=00000003 w=3f000000
+INPUT row=5 column=0 cycle=1683 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=5 column=0 cycle=1690 global_k=0 local_k=0 input_cycle=1682
+MUL_READY row=5 column=0 cycle=1691 global_k=1 local_k=1 input_cycle=1683
+MAC_COMMIT row=5 column=0 cycle=1696 global_k=0 local_k=0 before=00000000 product=00000002 after=00000002
+MAC_COMMIT row=5 column=0 cycle=1701 global_k=1 local_k=1 before=00000002 product=00000000 after=00000002
+BIAS_COMMIT row=5 column=0 cycle=1706 before=00000002 bias=00000000 result=00000002
+INPUT row=5 column=1 cycle=1724 global_k=0 block=0 first=1 last=0 x=00000003 w=bf000000
+INPUT row=5 column=1 cycle=1725 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=5 column=1 cycle=1732 global_k=0 local_k=0 input_cycle=1724
+MUL_READY row=5 column=1 cycle=1733 global_k=1 local_k=1 input_cycle=1725
+MAC_COMMIT row=5 column=1 cycle=1738 global_k=0 local_k=0 before=00000000 product=80000002 after=80000002
+MAC_COMMIT row=5 column=1 cycle=1743 global_k=1 local_k=1 before=80000002 product=80000000 after=80000002
+BIAS_COMMIT row=5 column=1 cycle=1748 before=80000002 bias=80000000 result=80000002
+INPUT row=5 column=2 cycle=1766 global_k=0 block=0 first=1 last=0 x=00000003 w=3f800000
+INPUT row=5 column=2 cycle=1767 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=5 column=2 cycle=1774 global_k=0 local_k=0 input_cycle=1766
+MUL_READY row=5 column=2 cycle=1775 global_k=1 local_k=1 input_cycle=1767
+MAC_COMMIT row=5 column=2 cycle=1780 global_k=0 local_k=0 before=00000000 product=00000003 after=00000003
+MAC_COMMIT row=5 column=2 cycle=1785 global_k=1 local_k=1 before=00000003 product=00000000 after=00000003
+BIAS_COMMIT row=5 column=2 cycle=1790 before=00000003 bias=00000001 result=00000004
+INPUT row=5 column=3 cycle=1808 global_k=0 block=0 first=1 last=0 x=00000003 w=bf800000
+INPUT row=5 column=3 cycle=1809 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=5 column=3 cycle=1816 global_k=0 local_k=0 input_cycle=1808
+MUL_READY row=5 column=3 cycle=1817 global_k=1 local_k=1 input_cycle=1809
+MAC_COMMIT row=5 column=3 cycle=1822 global_k=0 local_k=0 before=00000000 product=80000003 after=80000003
+MAC_COMMIT row=5 column=3 cycle=1827 global_k=1 local_k=1 before=80000003 product=80000000 after=80000003
+BIAS_COMMIT row=5 column=3 cycle=1832 before=80000003 bias=80000001 result=80000004
+INPUT row=5 column=4 cycle=1850 global_k=0 block=0 first=1 last=0 x=00000003 w=00000000
+INPUT row=5 column=4 cycle=1851 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=5 column=4 cycle=1858 global_k=0 local_k=0 input_cycle=1850
+MUL_READY row=5 column=4 cycle=1859 global_k=1 local_k=1 input_cycle=1851
+MAC_COMMIT row=5 column=4 cycle=1864 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=5 column=4 cycle=1869 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=5 column=4 cycle=1874 before=00000000 bias=00000000 result=00000000
+INPUT row=5 column=5 cycle=1892 global_k=0 block=0 first=1 last=0 x=00000003 w=80000000
+INPUT row=5 column=5 cycle=1893 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=5 column=5 cycle=1900 global_k=0 local_k=0 input_cycle=1892
+MUL_READY row=5 column=5 cycle=1901 global_k=1 local_k=1 input_cycle=1893
+MAC_COMMIT row=5 column=5 cycle=1906 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=5 column=5 cycle=1911 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=5 column=5 cycle=1916 before=00000000 bias=80000000 result=00000000
+INPUT row=5 column=6 cycle=1934 global_k=0 block=0 first=1 last=0 x=00000003 w=00000001
+INPUT row=5 column=6 cycle=1935 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=5 column=6 cycle=1942 global_k=0 local_k=0 input_cycle=1934
+MUL_READY row=5 column=6 cycle=1943 global_k=1 local_k=1 input_cycle=1935
+MAC_COMMIT row=5 column=6 cycle=1948 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=5 column=6 cycle=1953 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=5 column=6 cycle=1958 before=00000000 bias=00000000 result=00000000
+INPUT row=5 column=7 cycle=1976 global_k=0 block=0 first=1 last=0 x=00000003 w=00800000
+INPUT row=5 column=7 cycle=1977 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=5 column=7 cycle=1984 global_k=0 local_k=0 input_cycle=1976
+MUL_READY row=5 column=7 cycle=1985 global_k=1 local_k=1 input_cycle=1977
+MAC_COMMIT row=5 column=7 cycle=1990 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=5 column=7 cycle=1995 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=5 column=7 cycle=2000 before=00000000 bias=00000000 result=00000000
+INPUT row=6 column=0 cycle=2018 global_k=0 block=0 first=1 last=0 x=80000003 w=3f000000
+INPUT row=6 column=0 cycle=2019 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=6 column=0 cycle=2026 global_k=0 local_k=0 input_cycle=2018
+MUL_READY row=6 column=0 cycle=2027 global_k=1 local_k=1 input_cycle=2019
+MAC_COMMIT row=6 column=0 cycle=2032 global_k=0 local_k=0 before=00000000 product=80000002 after=80000002
+MAC_COMMIT row=6 column=0 cycle=2037 global_k=1 local_k=1 before=80000002 product=00000000 after=80000002
+BIAS_COMMIT row=6 column=0 cycle=2042 before=80000002 bias=00000000 result=80000002
+INPUT row=6 column=1 cycle=2060 global_k=0 block=0 first=1 last=0 x=80000003 w=bf000000
+INPUT row=6 column=1 cycle=2061 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=6 column=1 cycle=2068 global_k=0 local_k=0 input_cycle=2060
+MUL_READY row=6 column=1 cycle=2069 global_k=1 local_k=1 input_cycle=2061
+MAC_COMMIT row=6 column=1 cycle=2074 global_k=0 local_k=0 before=00000000 product=00000002 after=00000002
+MAC_COMMIT row=6 column=1 cycle=2079 global_k=1 local_k=1 before=00000002 product=80000000 after=00000002
+BIAS_COMMIT row=6 column=1 cycle=2084 before=00000002 bias=80000000 result=00000002
+INPUT row=6 column=2 cycle=2102 global_k=0 block=0 first=1 last=0 x=80000003 w=3f800000
+INPUT row=6 column=2 cycle=2103 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=6 column=2 cycle=2110 global_k=0 local_k=0 input_cycle=2102
+MUL_READY row=6 column=2 cycle=2111 global_k=1 local_k=1 input_cycle=2103
+MAC_COMMIT row=6 column=2 cycle=2116 global_k=0 local_k=0 before=00000000 product=80000003 after=80000003
+MAC_COMMIT row=6 column=2 cycle=2121 global_k=1 local_k=1 before=80000003 product=00000000 after=80000003
+BIAS_COMMIT row=6 column=2 cycle=2126 before=80000003 bias=00000001 result=80000002
+INPUT row=6 column=3 cycle=2144 global_k=0 block=0 first=1 last=0 x=80000003 w=bf800000
+INPUT row=6 column=3 cycle=2145 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=6 column=3 cycle=2152 global_k=0 local_k=0 input_cycle=2144
+MUL_READY row=6 column=3 cycle=2153 global_k=1 local_k=1 input_cycle=2145
+MAC_COMMIT row=6 column=3 cycle=2158 global_k=0 local_k=0 before=00000000 product=00000003 after=00000003
+MAC_COMMIT row=6 column=3 cycle=2163 global_k=1 local_k=1 before=00000003 product=80000000 after=00000003
+BIAS_COMMIT row=6 column=3 cycle=2168 before=00000003 bias=80000001 result=00000002
+INPUT row=6 column=4 cycle=2186 global_k=0 block=0 first=1 last=0 x=80000003 w=00000000
+INPUT row=6 column=4 cycle=2187 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=6 column=4 cycle=2194 global_k=0 local_k=0 input_cycle=2186
+MUL_READY row=6 column=4 cycle=2195 global_k=1 local_k=1 input_cycle=2187
+MAC_COMMIT row=6 column=4 cycle=2200 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=6 column=4 cycle=2205 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=6 column=4 cycle=2210 before=00000000 bias=00000000 result=00000000
+INPUT row=6 column=5 cycle=2228 global_k=0 block=0 first=1 last=0 x=80000003 w=80000000
+INPUT row=6 column=5 cycle=2229 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=6 column=5 cycle=2236 global_k=0 local_k=0 input_cycle=2228
+MUL_READY row=6 column=5 cycle=2237 global_k=1 local_k=1 input_cycle=2229
+MAC_COMMIT row=6 column=5 cycle=2242 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=6 column=5 cycle=2247 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=6 column=5 cycle=2252 before=00000000 bias=80000000 result=00000000
+INPUT row=6 column=6 cycle=2270 global_k=0 block=0 first=1 last=0 x=80000003 w=00000001
+INPUT row=6 column=6 cycle=2271 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=6 column=6 cycle=2278 global_k=0 local_k=0 input_cycle=2270
+MUL_READY row=6 column=6 cycle=2279 global_k=1 local_k=1 input_cycle=2271
+MAC_COMMIT row=6 column=6 cycle=2284 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=6 column=6 cycle=2289 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=6 column=6 cycle=2294 before=00000000 bias=00000000 result=00000000
+INPUT row=6 column=7 cycle=2312 global_k=0 block=0 first=1 last=0 x=80000003 w=00800000
+INPUT row=6 column=7 cycle=2313 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=6 column=7 cycle=2320 global_k=0 local_k=0 input_cycle=2312
+MUL_READY row=6 column=7 cycle=2321 global_k=1 local_k=1 input_cycle=2313
+MAC_COMMIT row=6 column=7 cycle=2326 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=6 column=7 cycle=2331 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=6 column=7 cycle=2336 before=00000000 bias=00000000 result=00000000
+INPUT row=7 column=0 cycle=2354 global_k=0 block=0 first=1 last=0 x=007fffff w=3f000000
+INPUT row=7 column=0 cycle=2355 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=7 column=0 cycle=2362 global_k=0 local_k=0 input_cycle=2354
+MUL_READY row=7 column=0 cycle=2363 global_k=1 local_k=1 input_cycle=2355
+MAC_COMMIT row=7 column=0 cycle=2368 global_k=0 local_k=0 before=00000000 product=00400000 after=00400000
+MAC_COMMIT row=7 column=0 cycle=2373 global_k=1 local_k=1 before=00400000 product=00000000 after=00400000
+BIAS_COMMIT row=7 column=0 cycle=2378 before=00400000 bias=00000000 result=00400000
+INPUT row=7 column=1 cycle=2396 global_k=0 block=0 first=1 last=0 x=007fffff w=bf000000
+INPUT row=7 column=1 cycle=2397 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=7 column=1 cycle=2404 global_k=0 local_k=0 input_cycle=2396
+MUL_READY row=7 column=1 cycle=2405 global_k=1 local_k=1 input_cycle=2397
+MAC_COMMIT row=7 column=1 cycle=2410 global_k=0 local_k=0 before=00000000 product=80400000 after=80400000
+MAC_COMMIT row=7 column=1 cycle=2415 global_k=1 local_k=1 before=80400000 product=80000000 after=80400000
+BIAS_COMMIT row=7 column=1 cycle=2420 before=80400000 bias=80000000 result=80400000
+INPUT row=7 column=2 cycle=2438 global_k=0 block=0 first=1 last=0 x=007fffff w=3f800000
+INPUT row=7 column=2 cycle=2439 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=7 column=2 cycle=2446 global_k=0 local_k=0 input_cycle=2438
+MUL_READY row=7 column=2 cycle=2447 global_k=1 local_k=1 input_cycle=2439
+MAC_COMMIT row=7 column=2 cycle=2452 global_k=0 local_k=0 before=00000000 product=007fffff after=007fffff
+MAC_COMMIT row=7 column=2 cycle=2457 global_k=1 local_k=1 before=007fffff product=00000000 after=007fffff
+BIAS_COMMIT row=7 column=2 cycle=2462 before=007fffff bias=00000001 result=00800000
+INPUT row=7 column=3 cycle=2480 global_k=0 block=0 first=1 last=0 x=007fffff w=bf800000
+INPUT row=7 column=3 cycle=2481 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=7 column=3 cycle=2488 global_k=0 local_k=0 input_cycle=2480
+MUL_READY row=7 column=3 cycle=2489 global_k=1 local_k=1 input_cycle=2481
+MAC_COMMIT row=7 column=3 cycle=2494 global_k=0 local_k=0 before=00000000 product=807fffff after=807fffff
+MAC_COMMIT row=7 column=3 cycle=2499 global_k=1 local_k=1 before=807fffff product=80000000 after=807fffff
+BIAS_COMMIT row=7 column=3 cycle=2504 before=807fffff bias=80000001 result=80800000
+INPUT row=7 column=4 cycle=2522 global_k=0 block=0 first=1 last=0 x=007fffff w=00000000
+INPUT row=7 column=4 cycle=2523 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=7 column=4 cycle=2530 global_k=0 local_k=0 input_cycle=2522
+MUL_READY row=7 column=4 cycle=2531 global_k=1 local_k=1 input_cycle=2523
+MAC_COMMIT row=7 column=4 cycle=2536 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=7 column=4 cycle=2541 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=7 column=4 cycle=2546 before=00000000 bias=00000000 result=00000000
+INPUT row=7 column=5 cycle=2564 global_k=0 block=0 first=1 last=0 x=007fffff w=80000000
+INPUT row=7 column=5 cycle=2565 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=7 column=5 cycle=2572 global_k=0 local_k=0 input_cycle=2564
+MUL_READY row=7 column=5 cycle=2573 global_k=1 local_k=1 input_cycle=2565
+MAC_COMMIT row=7 column=5 cycle=2578 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=7 column=5 cycle=2583 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=7 column=5 cycle=2588 before=00000000 bias=80000000 result=00000000
+INPUT row=7 column=6 cycle=2606 global_k=0 block=0 first=1 last=0 x=007fffff w=00000001
+INPUT row=7 column=6 cycle=2607 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=7 column=6 cycle=2614 global_k=0 local_k=0 input_cycle=2606
+MUL_READY row=7 column=6 cycle=2615 global_k=1 local_k=1 input_cycle=2607
+MAC_COMMIT row=7 column=6 cycle=2620 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=7 column=6 cycle=2625 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=7 column=6 cycle=2630 before=00000000 bias=00000000 result=00000000
+INPUT row=7 column=7 cycle=2648 global_k=0 block=0 first=1 last=0 x=007fffff w=00800000
+INPUT row=7 column=7 cycle=2649 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=7 column=7 cycle=2656 global_k=0 local_k=0 input_cycle=2648
+MUL_READY row=7 column=7 cycle=2657 global_k=1 local_k=1 input_cycle=2649
+MAC_COMMIT row=7 column=7 cycle=2662 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=7 column=7 cycle=2667 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=7 column=7 cycle=2672 before=00000000 bias=00000000 result=00000000
+INPUT row=8 column=0 cycle=2690 global_k=0 block=0 first=1 last=0 x=807fffff w=3f000000
+INPUT row=8 column=0 cycle=2691 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=8 column=0 cycle=2698 global_k=0 local_k=0 input_cycle=2690
+MUL_READY row=8 column=0 cycle=2699 global_k=1 local_k=1 input_cycle=2691
+MAC_COMMIT row=8 column=0 cycle=2704 global_k=0 local_k=0 before=00000000 product=80400000 after=80400000
+MAC_COMMIT row=8 column=0 cycle=2709 global_k=1 local_k=1 before=80400000 product=00000000 after=80400000
+BIAS_COMMIT row=8 column=0 cycle=2714 before=80400000 bias=00000000 result=80400000
+INPUT row=8 column=1 cycle=2732 global_k=0 block=0 first=1 last=0 x=807fffff w=bf000000
+INPUT row=8 column=1 cycle=2733 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=8 column=1 cycle=2740 global_k=0 local_k=0 input_cycle=2732
+MUL_READY row=8 column=1 cycle=2741 global_k=1 local_k=1 input_cycle=2733
+MAC_COMMIT row=8 column=1 cycle=2746 global_k=0 local_k=0 before=00000000 product=00400000 after=00400000
+MAC_COMMIT row=8 column=1 cycle=2751 global_k=1 local_k=1 before=00400000 product=80000000 after=00400000
+BIAS_COMMIT row=8 column=1 cycle=2756 before=00400000 bias=80000000 result=00400000
+INPUT row=8 column=2 cycle=2774 global_k=0 block=0 first=1 last=0 x=807fffff w=3f800000
+INPUT row=8 column=2 cycle=2775 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=8 column=2 cycle=2782 global_k=0 local_k=0 input_cycle=2774
+MUL_READY row=8 column=2 cycle=2783 global_k=1 local_k=1 input_cycle=2775
+MAC_COMMIT row=8 column=2 cycle=2788 global_k=0 local_k=0 before=00000000 product=807fffff after=807fffff
+MAC_COMMIT row=8 column=2 cycle=2793 global_k=1 local_k=1 before=807fffff product=00000000 after=807fffff
+BIAS_COMMIT row=8 column=2 cycle=2798 before=807fffff bias=00000001 result=807ffffe
+INPUT row=8 column=3 cycle=2816 global_k=0 block=0 first=1 last=0 x=807fffff w=bf800000
+INPUT row=8 column=3 cycle=2817 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=8 column=3 cycle=2824 global_k=0 local_k=0 input_cycle=2816
+MUL_READY row=8 column=3 cycle=2825 global_k=1 local_k=1 input_cycle=2817
+MAC_COMMIT row=8 column=3 cycle=2830 global_k=0 local_k=0 before=00000000 product=007fffff after=007fffff
+MAC_COMMIT row=8 column=3 cycle=2835 global_k=1 local_k=1 before=007fffff product=80000000 after=007fffff
+BIAS_COMMIT row=8 column=3 cycle=2840 before=007fffff bias=80000001 result=007ffffe
+INPUT row=8 column=4 cycle=2858 global_k=0 block=0 first=1 last=0 x=807fffff w=00000000
+INPUT row=8 column=4 cycle=2859 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=8 column=4 cycle=2866 global_k=0 local_k=0 input_cycle=2858
+MUL_READY row=8 column=4 cycle=2867 global_k=1 local_k=1 input_cycle=2859
+MAC_COMMIT row=8 column=4 cycle=2872 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=8 column=4 cycle=2877 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=8 column=4 cycle=2882 before=00000000 bias=00000000 result=00000000
+INPUT row=8 column=5 cycle=2900 global_k=0 block=0 first=1 last=0 x=807fffff w=80000000
+INPUT row=8 column=5 cycle=2901 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=8 column=5 cycle=2908 global_k=0 local_k=0 input_cycle=2900
+MUL_READY row=8 column=5 cycle=2909 global_k=1 local_k=1 input_cycle=2901
+MAC_COMMIT row=8 column=5 cycle=2914 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=8 column=5 cycle=2919 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=8 column=5 cycle=2924 before=00000000 bias=80000000 result=00000000
+INPUT row=8 column=6 cycle=2942 global_k=0 block=0 first=1 last=0 x=807fffff w=00000001
+INPUT row=8 column=6 cycle=2943 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=8 column=6 cycle=2950 global_k=0 local_k=0 input_cycle=2942
+MUL_READY row=8 column=6 cycle=2951 global_k=1 local_k=1 input_cycle=2943
+MAC_COMMIT row=8 column=6 cycle=2956 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=8 column=6 cycle=2961 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=8 column=6 cycle=2966 before=00000000 bias=00000000 result=00000000
+INPUT row=8 column=7 cycle=2984 global_k=0 block=0 first=1 last=0 x=807fffff w=00800000
+INPUT row=8 column=7 cycle=2985 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=8 column=7 cycle=2992 global_k=0 local_k=0 input_cycle=2984
+MUL_READY row=8 column=7 cycle=2993 global_k=1 local_k=1 input_cycle=2985
+MAC_COMMIT row=8 column=7 cycle=2998 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=8 column=7 cycle=3003 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=8 column=7 cycle=3008 before=00000000 bias=00000000 result=00000000
+INPUT row=9 column=0 cycle=3026 global_k=0 block=0 first=1 last=0 x=00800000 w=3f000000
+INPUT row=9 column=0 cycle=3027 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=9 column=0 cycle=3034 global_k=0 local_k=0 input_cycle=3026
+MUL_READY row=9 column=0 cycle=3035 global_k=1 local_k=1 input_cycle=3027
+MAC_COMMIT row=9 column=0 cycle=3040 global_k=0 local_k=0 before=00000000 product=00400000 after=00400000
+MAC_COMMIT row=9 column=0 cycle=3045 global_k=1 local_k=1 before=00400000 product=00000000 after=00400000
+BIAS_COMMIT row=9 column=0 cycle=3050 before=00400000 bias=00000000 result=00400000
+INPUT row=9 column=1 cycle=3068 global_k=0 block=0 first=1 last=0 x=00800000 w=bf000000
+INPUT row=9 column=1 cycle=3069 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=9 column=1 cycle=3076 global_k=0 local_k=0 input_cycle=3068
+MUL_READY row=9 column=1 cycle=3077 global_k=1 local_k=1 input_cycle=3069
+MAC_COMMIT row=9 column=1 cycle=3082 global_k=0 local_k=0 before=00000000 product=80400000 after=80400000
+MAC_COMMIT row=9 column=1 cycle=3087 global_k=1 local_k=1 before=80400000 product=80000000 after=80400000
+BIAS_COMMIT row=9 column=1 cycle=3092 before=80400000 bias=80000000 result=80400000
+INPUT row=9 column=2 cycle=3110 global_k=0 block=0 first=1 last=0 x=00800000 w=3f800000
+INPUT row=9 column=2 cycle=3111 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=9 column=2 cycle=3118 global_k=0 local_k=0 input_cycle=3110
+MUL_READY row=9 column=2 cycle=3119 global_k=1 local_k=1 input_cycle=3111
+MAC_COMMIT row=9 column=2 cycle=3124 global_k=0 local_k=0 before=00000000 product=00800000 after=00800000
+MAC_COMMIT row=9 column=2 cycle=3129 global_k=1 local_k=1 before=00800000 product=00000000 after=00800000
+BIAS_COMMIT row=9 column=2 cycle=3134 before=00800000 bias=00000001 result=00800001
+INPUT row=9 column=3 cycle=3152 global_k=0 block=0 first=1 last=0 x=00800000 w=bf800000
+INPUT row=9 column=3 cycle=3153 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=9 column=3 cycle=3160 global_k=0 local_k=0 input_cycle=3152
+MUL_READY row=9 column=3 cycle=3161 global_k=1 local_k=1 input_cycle=3153
+MAC_COMMIT row=9 column=3 cycle=3166 global_k=0 local_k=0 before=00000000 product=80800000 after=80800000
+MAC_COMMIT row=9 column=3 cycle=3171 global_k=1 local_k=1 before=80800000 product=80000000 after=80800000
+BIAS_COMMIT row=9 column=3 cycle=3176 before=80800000 bias=80000001 result=80800001
+INPUT row=9 column=4 cycle=3194 global_k=0 block=0 first=1 last=0 x=00800000 w=00000000
+INPUT row=9 column=4 cycle=3195 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=9 column=4 cycle=3202 global_k=0 local_k=0 input_cycle=3194
+MUL_READY row=9 column=4 cycle=3203 global_k=1 local_k=1 input_cycle=3195
+MAC_COMMIT row=9 column=4 cycle=3208 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=9 column=4 cycle=3213 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=9 column=4 cycle=3218 before=00000000 bias=00000000 result=00000000
+INPUT row=9 column=5 cycle=3236 global_k=0 block=0 first=1 last=0 x=00800000 w=80000000
+INPUT row=9 column=5 cycle=3237 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=9 column=5 cycle=3244 global_k=0 local_k=0 input_cycle=3236
+MUL_READY row=9 column=5 cycle=3245 global_k=1 local_k=1 input_cycle=3237
+MAC_COMMIT row=9 column=5 cycle=3250 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=9 column=5 cycle=3255 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=9 column=5 cycle=3260 before=00000000 bias=80000000 result=00000000
+INPUT row=9 column=6 cycle=3278 global_k=0 block=0 first=1 last=0 x=00800000 w=00000001
+INPUT row=9 column=6 cycle=3279 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=9 column=6 cycle=3286 global_k=0 local_k=0 input_cycle=3278
+MUL_READY row=9 column=6 cycle=3287 global_k=1 local_k=1 input_cycle=3279
+MAC_COMMIT row=9 column=6 cycle=3292 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=9 column=6 cycle=3297 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=9 column=6 cycle=3302 before=00000000 bias=00000000 result=00000000
+INPUT row=9 column=7 cycle=3320 global_k=0 block=0 first=1 last=0 x=00800000 w=00800000
+INPUT row=9 column=7 cycle=3321 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=9 column=7 cycle=3328 global_k=0 local_k=0 input_cycle=3320
+MUL_READY row=9 column=7 cycle=3329 global_k=1 local_k=1 input_cycle=3321
+MAC_COMMIT row=9 column=7 cycle=3334 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=9 column=7 cycle=3339 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=9 column=7 cycle=3344 before=00000000 bias=00000000 result=00000000
+INPUT row=10 column=0 cycle=3362 global_k=0 block=0 first=1 last=0 x=80800000 w=3f000000
+INPUT row=10 column=0 cycle=3363 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=10 column=0 cycle=3370 global_k=0 local_k=0 input_cycle=3362
+MUL_READY row=10 column=0 cycle=3371 global_k=1 local_k=1 input_cycle=3363
+MAC_COMMIT row=10 column=0 cycle=3376 global_k=0 local_k=0 before=00000000 product=80400000 after=80400000
+MAC_COMMIT row=10 column=0 cycle=3381 global_k=1 local_k=1 before=80400000 product=00000000 after=80400000
+BIAS_COMMIT row=10 column=0 cycle=3386 before=80400000 bias=00000000 result=80400000
+INPUT row=10 column=1 cycle=3404 global_k=0 block=0 first=1 last=0 x=80800000 w=bf000000
+INPUT row=10 column=1 cycle=3405 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=10 column=1 cycle=3412 global_k=0 local_k=0 input_cycle=3404
+MUL_READY row=10 column=1 cycle=3413 global_k=1 local_k=1 input_cycle=3405
+MAC_COMMIT row=10 column=1 cycle=3418 global_k=0 local_k=0 before=00000000 product=00400000 after=00400000
+MAC_COMMIT row=10 column=1 cycle=3423 global_k=1 local_k=1 before=00400000 product=80000000 after=00400000
+BIAS_COMMIT row=10 column=1 cycle=3428 before=00400000 bias=80000000 result=00400000
+INPUT row=10 column=2 cycle=3446 global_k=0 block=0 first=1 last=0 x=80800000 w=3f800000
+INPUT row=10 column=2 cycle=3447 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=10 column=2 cycle=3454 global_k=0 local_k=0 input_cycle=3446
+MUL_READY row=10 column=2 cycle=3455 global_k=1 local_k=1 input_cycle=3447
+MAC_COMMIT row=10 column=2 cycle=3460 global_k=0 local_k=0 before=00000000 product=80800000 after=80800000
+MAC_COMMIT row=10 column=2 cycle=3465 global_k=1 local_k=1 before=80800000 product=00000000 after=80800000
+BIAS_COMMIT row=10 column=2 cycle=3470 before=80800000 bias=00000001 result=807fffff
+INPUT row=10 column=3 cycle=3488 global_k=0 block=0 first=1 last=0 x=80800000 w=bf800000
+INPUT row=10 column=3 cycle=3489 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=10 column=3 cycle=3496 global_k=0 local_k=0 input_cycle=3488
+MUL_READY row=10 column=3 cycle=3497 global_k=1 local_k=1 input_cycle=3489
+MAC_COMMIT row=10 column=3 cycle=3502 global_k=0 local_k=0 before=00000000 product=00800000 after=00800000
+MAC_COMMIT row=10 column=3 cycle=3507 global_k=1 local_k=1 before=00800000 product=80000000 after=00800000
+BIAS_COMMIT row=10 column=3 cycle=3512 before=00800000 bias=80000001 result=007fffff
+INPUT row=10 column=4 cycle=3530 global_k=0 block=0 first=1 last=0 x=80800000 w=00000000
+INPUT row=10 column=4 cycle=3531 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=10 column=4 cycle=3538 global_k=0 local_k=0 input_cycle=3530
+MUL_READY row=10 column=4 cycle=3539 global_k=1 local_k=1 input_cycle=3531
+MAC_COMMIT row=10 column=4 cycle=3544 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=10 column=4 cycle=3549 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=10 column=4 cycle=3554 before=00000000 bias=00000000 result=00000000
+INPUT row=10 column=5 cycle=3572 global_k=0 block=0 first=1 last=0 x=80800000 w=80000000
+INPUT row=10 column=5 cycle=3573 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=10 column=5 cycle=3580 global_k=0 local_k=0 input_cycle=3572
+MUL_READY row=10 column=5 cycle=3581 global_k=1 local_k=1 input_cycle=3573
+MAC_COMMIT row=10 column=5 cycle=3586 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=10 column=5 cycle=3591 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=10 column=5 cycle=3596 before=00000000 bias=80000000 result=00000000
+INPUT row=10 column=6 cycle=3614 global_k=0 block=0 first=1 last=0 x=80800000 w=00000001
+INPUT row=10 column=6 cycle=3615 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=10 column=6 cycle=3622 global_k=0 local_k=0 input_cycle=3614
+MUL_READY row=10 column=6 cycle=3623 global_k=1 local_k=1 input_cycle=3615
+MAC_COMMIT row=10 column=6 cycle=3628 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=10 column=6 cycle=3633 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=10 column=6 cycle=3638 before=00000000 bias=00000000 result=00000000
+INPUT row=10 column=7 cycle=3656 global_k=0 block=0 first=1 last=0 x=80800000 w=00800000
+INPUT row=10 column=7 cycle=3657 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=10 column=7 cycle=3664 global_k=0 local_k=0 input_cycle=3656
+MUL_READY row=10 column=7 cycle=3665 global_k=1 local_k=1 input_cycle=3657
+MAC_COMMIT row=10 column=7 cycle=3670 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=10 column=7 cycle=3675 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=10 column=7 cycle=3680 before=00000000 bias=00000000 result=00000000
+INPUT row=11 column=0 cycle=3698 global_k=0 block=0 first=1 last=0 x=00800001 w=3f000000
+INPUT row=11 column=0 cycle=3699 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=11 column=0 cycle=3706 global_k=0 local_k=0 input_cycle=3698
+MUL_READY row=11 column=0 cycle=3707 global_k=1 local_k=1 input_cycle=3699
+MAC_COMMIT row=11 column=0 cycle=3712 global_k=0 local_k=0 before=00000000 product=00400000 after=00400000
+MAC_COMMIT row=11 column=0 cycle=3717 global_k=1 local_k=1 before=00400000 product=00000000 after=00400000
+BIAS_COMMIT row=11 column=0 cycle=3722 before=00400000 bias=00000000 result=00400000
+INPUT row=11 column=1 cycle=3740 global_k=0 block=0 first=1 last=0 x=00800001 w=bf000000
+INPUT row=11 column=1 cycle=3741 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=11 column=1 cycle=3748 global_k=0 local_k=0 input_cycle=3740
+MUL_READY row=11 column=1 cycle=3749 global_k=1 local_k=1 input_cycle=3741
+MAC_COMMIT row=11 column=1 cycle=3754 global_k=0 local_k=0 before=00000000 product=80400000 after=80400000
+MAC_COMMIT row=11 column=1 cycle=3759 global_k=1 local_k=1 before=80400000 product=80000000 after=80400000
+BIAS_COMMIT row=11 column=1 cycle=3764 before=80400000 bias=80000000 result=80400000
+INPUT row=11 column=2 cycle=3782 global_k=0 block=0 first=1 last=0 x=00800001 w=3f800000
+INPUT row=11 column=2 cycle=3783 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=11 column=2 cycle=3790 global_k=0 local_k=0 input_cycle=3782
+MUL_READY row=11 column=2 cycle=3791 global_k=1 local_k=1 input_cycle=3783
+MAC_COMMIT row=11 column=2 cycle=3796 global_k=0 local_k=0 before=00000000 product=00800001 after=00800001
+MAC_COMMIT row=11 column=2 cycle=3801 global_k=1 local_k=1 before=00800001 product=00000000 after=00800001
+BIAS_COMMIT row=11 column=2 cycle=3806 before=00800001 bias=00000001 result=00800002
+INPUT row=11 column=3 cycle=3824 global_k=0 block=0 first=1 last=0 x=00800001 w=bf800000
+INPUT row=11 column=3 cycle=3825 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=11 column=3 cycle=3832 global_k=0 local_k=0 input_cycle=3824
+MUL_READY row=11 column=3 cycle=3833 global_k=1 local_k=1 input_cycle=3825
+MAC_COMMIT row=11 column=3 cycle=3838 global_k=0 local_k=0 before=00000000 product=80800001 after=80800001
+MAC_COMMIT row=11 column=3 cycle=3843 global_k=1 local_k=1 before=80800001 product=80000000 after=80800001
+BIAS_COMMIT row=11 column=3 cycle=3848 before=80800001 bias=80000001 result=80800002
+INPUT row=11 column=4 cycle=3866 global_k=0 block=0 first=1 last=0 x=00800001 w=00000000
+INPUT row=11 column=4 cycle=3867 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=11 column=4 cycle=3874 global_k=0 local_k=0 input_cycle=3866
+MUL_READY row=11 column=4 cycle=3875 global_k=1 local_k=1 input_cycle=3867
+MAC_COMMIT row=11 column=4 cycle=3880 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=11 column=4 cycle=3885 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=11 column=4 cycle=3890 before=00000000 bias=00000000 result=00000000
+INPUT row=11 column=5 cycle=3908 global_k=0 block=0 first=1 last=0 x=00800001 w=80000000
+INPUT row=11 column=5 cycle=3909 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=11 column=5 cycle=3916 global_k=0 local_k=0 input_cycle=3908
+MUL_READY row=11 column=5 cycle=3917 global_k=1 local_k=1 input_cycle=3909
+MAC_COMMIT row=11 column=5 cycle=3922 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=11 column=5 cycle=3927 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=11 column=5 cycle=3932 before=00000000 bias=80000000 result=00000000
+INPUT row=11 column=6 cycle=3950 global_k=0 block=0 first=1 last=0 x=00800001 w=00000001
+INPUT row=11 column=6 cycle=3951 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=11 column=6 cycle=3958 global_k=0 local_k=0 input_cycle=3950
+MUL_READY row=11 column=6 cycle=3959 global_k=1 local_k=1 input_cycle=3951
+MAC_COMMIT row=11 column=6 cycle=3964 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=11 column=6 cycle=3969 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=11 column=6 cycle=3974 before=00000000 bias=00000000 result=00000000
+INPUT row=11 column=7 cycle=3992 global_k=0 block=0 first=1 last=0 x=00800001 w=00800000
+INPUT row=11 column=7 cycle=3993 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=11 column=7 cycle=4000 global_k=0 local_k=0 input_cycle=3992
+MUL_READY row=11 column=7 cycle=4001 global_k=1 local_k=1 input_cycle=3993
+MAC_COMMIT row=11 column=7 cycle=4006 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=11 column=7 cycle=4011 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=11 column=7 cycle=4016 before=00000000 bias=00000000 result=00000000
+INPUT row=12 column=0 cycle=4034 global_k=0 block=0 first=1 last=0 x=3f800000 w=3f000000
+INPUT row=12 column=0 cycle=4035 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=12 column=0 cycle=4042 global_k=0 local_k=0 input_cycle=4034
+MUL_READY row=12 column=0 cycle=4043 global_k=1 local_k=1 input_cycle=4035
+MAC_COMMIT row=12 column=0 cycle=4048 global_k=0 local_k=0 before=00000000 product=3f000000 after=3f000000
+MAC_COMMIT row=12 column=0 cycle=4053 global_k=1 local_k=1 before=3f000000 product=00000000 after=3f000000
+BIAS_COMMIT row=12 column=0 cycle=4058 before=3f000000 bias=00000000 result=3f000000
+INPUT row=12 column=1 cycle=4076 global_k=0 block=0 first=1 last=0 x=3f800000 w=bf000000
+INPUT row=12 column=1 cycle=4077 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=12 column=1 cycle=4084 global_k=0 local_k=0 input_cycle=4076
+MUL_READY row=12 column=1 cycle=4085 global_k=1 local_k=1 input_cycle=4077
+MAC_COMMIT row=12 column=1 cycle=4090 global_k=0 local_k=0 before=00000000 product=bf000000 after=bf000000
+MAC_COMMIT row=12 column=1 cycle=4095 global_k=1 local_k=1 before=bf000000 product=80000000 after=bf000000
+BIAS_COMMIT row=12 column=1 cycle=4100 before=bf000000 bias=80000000 result=bf000000
+INPUT row=12 column=2 cycle=4118 global_k=0 block=0 first=1 last=0 x=3f800000 w=3f800000
+INPUT row=12 column=2 cycle=4119 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=12 column=2 cycle=4126 global_k=0 local_k=0 input_cycle=4118
+MUL_READY row=12 column=2 cycle=4127 global_k=1 local_k=1 input_cycle=4119
+MAC_COMMIT row=12 column=2 cycle=4132 global_k=0 local_k=0 before=00000000 product=3f800000 after=3f800000
+MAC_COMMIT row=12 column=2 cycle=4137 global_k=1 local_k=1 before=3f800000 product=00000000 after=3f800000
+BIAS_COMMIT row=12 column=2 cycle=4142 before=3f800000 bias=00000001 result=3f800000
+INPUT row=12 column=3 cycle=4160 global_k=0 block=0 first=1 last=0 x=3f800000 w=bf800000
+INPUT row=12 column=3 cycle=4161 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=12 column=3 cycle=4168 global_k=0 local_k=0 input_cycle=4160
+MUL_READY row=12 column=3 cycle=4169 global_k=1 local_k=1 input_cycle=4161
+MAC_COMMIT row=12 column=3 cycle=4174 global_k=0 local_k=0 before=00000000 product=bf800000 after=bf800000
+MAC_COMMIT row=12 column=3 cycle=4179 global_k=1 local_k=1 before=bf800000 product=80000000 after=bf800000
+BIAS_COMMIT row=12 column=3 cycle=4184 before=bf800000 bias=80000001 result=bf800000
+INPUT row=12 column=4 cycle=4202 global_k=0 block=0 first=1 last=0 x=3f800000 w=00000000
+INPUT row=12 column=4 cycle=4203 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=12 column=4 cycle=4210 global_k=0 local_k=0 input_cycle=4202
+MUL_READY row=12 column=4 cycle=4211 global_k=1 local_k=1 input_cycle=4203
+MAC_COMMIT row=12 column=4 cycle=4216 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=12 column=4 cycle=4221 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=12 column=4 cycle=4226 before=00000000 bias=00000000 result=00000000
+INPUT row=12 column=5 cycle=4244 global_k=0 block=0 first=1 last=0 x=3f800000 w=80000000
+INPUT row=12 column=5 cycle=4245 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=12 column=5 cycle=4252 global_k=0 local_k=0 input_cycle=4244
+MUL_READY row=12 column=5 cycle=4253 global_k=1 local_k=1 input_cycle=4245
+MAC_COMMIT row=12 column=5 cycle=4258 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=12 column=5 cycle=4263 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=12 column=5 cycle=4268 before=00000000 bias=80000000 result=00000000
+INPUT row=12 column=6 cycle=4286 global_k=0 block=0 first=1 last=0 x=3f800000 w=00000001
+INPUT row=12 column=6 cycle=4287 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=12 column=6 cycle=4294 global_k=0 local_k=0 input_cycle=4286
+MUL_READY row=12 column=6 cycle=4295 global_k=1 local_k=1 input_cycle=4287
+MAC_COMMIT row=12 column=6 cycle=4300 global_k=0 local_k=0 before=00000000 product=00000001 after=00000001
+MAC_COMMIT row=12 column=6 cycle=4305 global_k=1 local_k=1 before=00000001 product=00000000 after=00000001
+BIAS_COMMIT row=12 column=6 cycle=4310 before=00000001 bias=00000000 result=00000001
+INPUT row=12 column=7 cycle=4328 global_k=0 block=0 first=1 last=0 x=3f800000 w=00800000
+INPUT row=12 column=7 cycle=4329 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=12 column=7 cycle=4336 global_k=0 local_k=0 input_cycle=4328
+MUL_READY row=12 column=7 cycle=4337 global_k=1 local_k=1 input_cycle=4329
+MAC_COMMIT row=12 column=7 cycle=4342 global_k=0 local_k=0 before=00000000 product=00800000 after=00800000
+MAC_COMMIT row=12 column=7 cycle=4347 global_k=1 local_k=1 before=00800000 product=00000000 after=00800000
+BIAS_COMMIT row=12 column=7 cycle=4352 before=00800000 bias=00000000 result=00800000
+INPUT row=13 column=0 cycle=4370 global_k=0 block=0 first=1 last=0 x=bf800000 w=3f000000
+INPUT row=13 column=0 cycle=4371 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=13 column=0 cycle=4378 global_k=0 local_k=0 input_cycle=4370
+MUL_READY row=13 column=0 cycle=4379 global_k=1 local_k=1 input_cycle=4371
+MAC_COMMIT row=13 column=0 cycle=4384 global_k=0 local_k=0 before=00000000 product=bf000000 after=bf000000
+MAC_COMMIT row=13 column=0 cycle=4389 global_k=1 local_k=1 before=bf000000 product=00000000 after=bf000000
+BIAS_COMMIT row=13 column=0 cycle=4394 before=bf000000 bias=00000000 result=bf000000
+INPUT row=13 column=1 cycle=4412 global_k=0 block=0 first=1 last=0 x=bf800000 w=bf000000
+INPUT row=13 column=1 cycle=4413 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=13 column=1 cycle=4420 global_k=0 local_k=0 input_cycle=4412
+MUL_READY row=13 column=1 cycle=4421 global_k=1 local_k=1 input_cycle=4413
+MAC_COMMIT row=13 column=1 cycle=4426 global_k=0 local_k=0 before=00000000 product=3f000000 after=3f000000
+MAC_COMMIT row=13 column=1 cycle=4431 global_k=1 local_k=1 before=3f000000 product=80000000 after=3f000000
+BIAS_COMMIT row=13 column=1 cycle=4436 before=3f000000 bias=80000000 result=3f000000
+INPUT row=13 column=2 cycle=4454 global_k=0 block=0 first=1 last=0 x=bf800000 w=3f800000
+INPUT row=13 column=2 cycle=4455 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=13 column=2 cycle=4462 global_k=0 local_k=0 input_cycle=4454
+MUL_READY row=13 column=2 cycle=4463 global_k=1 local_k=1 input_cycle=4455
+MAC_COMMIT row=13 column=2 cycle=4468 global_k=0 local_k=0 before=00000000 product=bf800000 after=bf800000
+MAC_COMMIT row=13 column=2 cycle=4473 global_k=1 local_k=1 before=bf800000 product=00000000 after=bf800000
+BIAS_COMMIT row=13 column=2 cycle=4478 before=bf800000 bias=00000001 result=bf800000
+INPUT row=13 column=3 cycle=4496 global_k=0 block=0 first=1 last=0 x=bf800000 w=bf800000
+INPUT row=13 column=3 cycle=4497 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=13 column=3 cycle=4504 global_k=0 local_k=0 input_cycle=4496
+MUL_READY row=13 column=3 cycle=4505 global_k=1 local_k=1 input_cycle=4497
+MAC_COMMIT row=13 column=3 cycle=4510 global_k=0 local_k=0 before=00000000 product=3f800000 after=3f800000
+MAC_COMMIT row=13 column=3 cycle=4515 global_k=1 local_k=1 before=3f800000 product=80000000 after=3f800000
+BIAS_COMMIT row=13 column=3 cycle=4520 before=3f800000 bias=80000001 result=3f800000
+INPUT row=13 column=4 cycle=4538 global_k=0 block=0 first=1 last=0 x=bf800000 w=00000000
+INPUT row=13 column=4 cycle=4539 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=13 column=4 cycle=4546 global_k=0 local_k=0 input_cycle=4538
+MUL_READY row=13 column=4 cycle=4547 global_k=1 local_k=1 input_cycle=4539
+MAC_COMMIT row=13 column=4 cycle=4552 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=13 column=4 cycle=4557 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=13 column=4 cycle=4562 before=00000000 bias=00000000 result=00000000
+INPUT row=13 column=5 cycle=4580 global_k=0 block=0 first=1 last=0 x=bf800000 w=80000000
+INPUT row=13 column=5 cycle=4581 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=13 column=5 cycle=4588 global_k=0 local_k=0 input_cycle=4580
+MUL_READY row=13 column=5 cycle=4589 global_k=1 local_k=1 input_cycle=4581
+MAC_COMMIT row=13 column=5 cycle=4594 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=13 column=5 cycle=4599 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=13 column=5 cycle=4604 before=00000000 bias=80000000 result=00000000
+INPUT row=13 column=6 cycle=4622 global_k=0 block=0 first=1 last=0 x=bf800000 w=00000001
+INPUT row=13 column=6 cycle=4623 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=13 column=6 cycle=4630 global_k=0 local_k=0 input_cycle=4622
+MUL_READY row=13 column=6 cycle=4631 global_k=1 local_k=1 input_cycle=4623
+MAC_COMMIT row=13 column=6 cycle=4636 global_k=0 local_k=0 before=00000000 product=80000001 after=80000001
+MAC_COMMIT row=13 column=6 cycle=4641 global_k=1 local_k=1 before=80000001 product=00000000 after=80000001
+BIAS_COMMIT row=13 column=6 cycle=4646 before=80000001 bias=00000000 result=80000001
+INPUT row=13 column=7 cycle=4664 global_k=0 block=0 first=1 last=0 x=bf800000 w=00800000
+INPUT row=13 column=7 cycle=4665 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=13 column=7 cycle=4672 global_k=0 local_k=0 input_cycle=4664
+MUL_READY row=13 column=7 cycle=4673 global_k=1 local_k=1 input_cycle=4665
+MAC_COMMIT row=13 column=7 cycle=4678 global_k=0 local_k=0 before=00000000 product=80800000 after=80800000
+MAC_COMMIT row=13 column=7 cycle=4683 global_k=1 local_k=1 before=80800000 product=00000000 after=80800000
+BIAS_COMMIT row=13 column=7 cycle=4688 before=80800000 bias=00000000 result=80800000
+INPUT row=14 column=0 cycle=4706 global_k=0 block=0 first=1 last=0 x=3f800001 w=3f000000
+INPUT row=14 column=0 cycle=4707 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=14 column=0 cycle=4714 global_k=0 local_k=0 input_cycle=4706
+MUL_READY row=14 column=0 cycle=4715 global_k=1 local_k=1 input_cycle=4707
+MAC_COMMIT row=14 column=0 cycle=4720 global_k=0 local_k=0 before=00000000 product=3f000001 after=3f000001
+MAC_COMMIT row=14 column=0 cycle=4725 global_k=1 local_k=1 before=3f000001 product=00000000 after=3f000001
+BIAS_COMMIT row=14 column=0 cycle=4730 before=3f000001 bias=00000000 result=3f000001
+INPUT row=14 column=1 cycle=4748 global_k=0 block=0 first=1 last=0 x=3f800001 w=bf000000
+INPUT row=14 column=1 cycle=4749 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=14 column=1 cycle=4756 global_k=0 local_k=0 input_cycle=4748
+MUL_READY row=14 column=1 cycle=4757 global_k=1 local_k=1 input_cycle=4749
+MAC_COMMIT row=14 column=1 cycle=4762 global_k=0 local_k=0 before=00000000 product=bf000001 after=bf000001
+MAC_COMMIT row=14 column=1 cycle=4767 global_k=1 local_k=1 before=bf000001 product=80000000 after=bf000001
+BIAS_COMMIT row=14 column=1 cycle=4772 before=bf000001 bias=80000000 result=bf000001
+INPUT row=14 column=2 cycle=4790 global_k=0 block=0 first=1 last=0 x=3f800001 w=3f800000
+INPUT row=14 column=2 cycle=4791 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=14 column=2 cycle=4798 global_k=0 local_k=0 input_cycle=4790
+MUL_READY row=14 column=2 cycle=4799 global_k=1 local_k=1 input_cycle=4791
+MAC_COMMIT row=14 column=2 cycle=4804 global_k=0 local_k=0 before=00000000 product=3f800001 after=3f800001
+MAC_COMMIT row=14 column=2 cycle=4809 global_k=1 local_k=1 before=3f800001 product=00000000 after=3f800001
+BIAS_COMMIT row=14 column=2 cycle=4814 before=3f800001 bias=00000001 result=3f800001
+INPUT row=14 column=3 cycle=4832 global_k=0 block=0 first=1 last=0 x=3f800001 w=bf800000
+INPUT row=14 column=3 cycle=4833 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=14 column=3 cycle=4840 global_k=0 local_k=0 input_cycle=4832
+MUL_READY row=14 column=3 cycle=4841 global_k=1 local_k=1 input_cycle=4833
+MAC_COMMIT row=14 column=3 cycle=4846 global_k=0 local_k=0 before=00000000 product=bf800001 after=bf800001
+MAC_COMMIT row=14 column=3 cycle=4851 global_k=1 local_k=1 before=bf800001 product=80000000 after=bf800001
+BIAS_COMMIT row=14 column=3 cycle=4856 before=bf800001 bias=80000001 result=bf800001
+INPUT row=14 column=4 cycle=4874 global_k=0 block=0 first=1 last=0 x=3f800001 w=00000000
+INPUT row=14 column=4 cycle=4875 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=14 column=4 cycle=4882 global_k=0 local_k=0 input_cycle=4874
+MUL_READY row=14 column=4 cycle=4883 global_k=1 local_k=1 input_cycle=4875
+MAC_COMMIT row=14 column=4 cycle=4888 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=14 column=4 cycle=4893 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=14 column=4 cycle=4898 before=00000000 bias=00000000 result=00000000
+INPUT row=14 column=5 cycle=4916 global_k=0 block=0 first=1 last=0 x=3f800001 w=80000000
+INPUT row=14 column=5 cycle=4917 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=14 column=5 cycle=4924 global_k=0 local_k=0 input_cycle=4916
+MUL_READY row=14 column=5 cycle=4925 global_k=1 local_k=1 input_cycle=4917
+MAC_COMMIT row=14 column=5 cycle=4930 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=14 column=5 cycle=4935 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=14 column=5 cycle=4940 before=00000000 bias=80000000 result=00000000
+INPUT row=14 column=6 cycle=4958 global_k=0 block=0 first=1 last=0 x=3f800001 w=00000001
+INPUT row=14 column=6 cycle=4959 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=14 column=6 cycle=4966 global_k=0 local_k=0 input_cycle=4958
+MUL_READY row=14 column=6 cycle=4967 global_k=1 local_k=1 input_cycle=4959
+MAC_COMMIT row=14 column=6 cycle=4972 global_k=0 local_k=0 before=00000000 product=00000001 after=00000001
+MAC_COMMIT row=14 column=6 cycle=4977 global_k=1 local_k=1 before=00000001 product=00000000 after=00000001
+BIAS_COMMIT row=14 column=6 cycle=4982 before=00000001 bias=00000000 result=00000001
+INPUT row=14 column=7 cycle=5000 global_k=0 block=0 first=1 last=0 x=3f800001 w=00800000
+INPUT row=14 column=7 cycle=5001 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=14 column=7 cycle=5008 global_k=0 local_k=0 input_cycle=5000
+MUL_READY row=14 column=7 cycle=5009 global_k=1 local_k=1 input_cycle=5001
+MAC_COMMIT row=14 column=7 cycle=5014 global_k=0 local_k=0 before=00000000 product=00800001 after=00800001
+MAC_COMMIT row=14 column=7 cycle=5019 global_k=1 local_k=1 before=00800001 product=00000000 after=00800001
+BIAS_COMMIT row=14 column=7 cycle=5024 before=00800001 bias=00000000 result=00800001
+INPUT row=15 column=0 cycle=5042 global_k=0 block=0 first=1 last=0 x=3f7fffff w=3f000000
+INPUT row=15 column=0 cycle=5043 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=15 column=0 cycle=5050 global_k=0 local_k=0 input_cycle=5042
+MUL_READY row=15 column=0 cycle=5051 global_k=1 local_k=1 input_cycle=5043
+MAC_COMMIT row=15 column=0 cycle=5056 global_k=0 local_k=0 before=00000000 product=3effffff after=3effffff
+MAC_COMMIT row=15 column=0 cycle=5061 global_k=1 local_k=1 before=3effffff product=00000000 after=3effffff
+BIAS_COMMIT row=15 column=0 cycle=5066 before=3effffff bias=00000000 result=3effffff
+INPUT row=15 column=1 cycle=5084 global_k=0 block=0 first=1 last=0 x=3f7fffff w=bf000000
+INPUT row=15 column=1 cycle=5085 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=15 column=1 cycle=5092 global_k=0 local_k=0 input_cycle=5084
+MUL_READY row=15 column=1 cycle=5093 global_k=1 local_k=1 input_cycle=5085
+MAC_COMMIT row=15 column=1 cycle=5098 global_k=0 local_k=0 before=00000000 product=beffffff after=beffffff
+MAC_COMMIT row=15 column=1 cycle=5103 global_k=1 local_k=1 before=beffffff product=80000000 after=beffffff
+BIAS_COMMIT row=15 column=1 cycle=5108 before=beffffff bias=80000000 result=beffffff
+INPUT row=15 column=2 cycle=5126 global_k=0 block=0 first=1 last=0 x=3f7fffff w=3f800000
+INPUT row=15 column=2 cycle=5127 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=15 column=2 cycle=5134 global_k=0 local_k=0 input_cycle=5126
+MUL_READY row=15 column=2 cycle=5135 global_k=1 local_k=1 input_cycle=5127
+MAC_COMMIT row=15 column=2 cycle=5140 global_k=0 local_k=0 before=00000000 product=3f7fffff after=3f7fffff
+MAC_COMMIT row=15 column=2 cycle=5145 global_k=1 local_k=1 before=3f7fffff product=00000000 after=3f7fffff
+BIAS_COMMIT row=15 column=2 cycle=5150 before=3f7fffff bias=00000001 result=3f7fffff
+INPUT row=15 column=3 cycle=5168 global_k=0 block=0 first=1 last=0 x=3f7fffff w=bf800000
+INPUT row=15 column=3 cycle=5169 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=15 column=3 cycle=5176 global_k=0 local_k=0 input_cycle=5168
+MUL_READY row=15 column=3 cycle=5177 global_k=1 local_k=1 input_cycle=5169
+MAC_COMMIT row=15 column=3 cycle=5182 global_k=0 local_k=0 before=00000000 product=bf7fffff after=bf7fffff
+MAC_COMMIT row=15 column=3 cycle=5187 global_k=1 local_k=1 before=bf7fffff product=80000000 after=bf7fffff
+BIAS_COMMIT row=15 column=3 cycle=5192 before=bf7fffff bias=80000001 result=bf7fffff
+INPUT row=15 column=4 cycle=5210 global_k=0 block=0 first=1 last=0 x=3f7fffff w=00000000
+INPUT row=15 column=4 cycle=5211 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=15 column=4 cycle=5218 global_k=0 local_k=0 input_cycle=5210
+MUL_READY row=15 column=4 cycle=5219 global_k=1 local_k=1 input_cycle=5211
+MAC_COMMIT row=15 column=4 cycle=5224 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=15 column=4 cycle=5229 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=15 column=4 cycle=5234 before=00000000 bias=00000000 result=00000000
+INPUT row=15 column=5 cycle=5252 global_k=0 block=0 first=1 last=0 x=3f7fffff w=80000000
+INPUT row=15 column=5 cycle=5253 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=15 column=5 cycle=5260 global_k=0 local_k=0 input_cycle=5252
+MUL_READY row=15 column=5 cycle=5261 global_k=1 local_k=1 input_cycle=5253
+MAC_COMMIT row=15 column=5 cycle=5266 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=15 column=5 cycle=5271 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=15 column=5 cycle=5276 before=00000000 bias=80000000 result=00000000
+INPUT row=15 column=6 cycle=5294 global_k=0 block=0 first=1 last=0 x=3f7fffff w=00000001
+INPUT row=15 column=6 cycle=5295 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=15 column=6 cycle=5302 global_k=0 local_k=0 input_cycle=5294
+MUL_READY row=15 column=6 cycle=5303 global_k=1 local_k=1 input_cycle=5295
+MAC_COMMIT row=15 column=6 cycle=5308 global_k=0 local_k=0 before=00000000 product=00000001 after=00000001
+MAC_COMMIT row=15 column=6 cycle=5313 global_k=1 local_k=1 before=00000001 product=00000000 after=00000001
+BIAS_COMMIT row=15 column=6 cycle=5318 before=00000001 bias=00000000 result=00000001
+INPUT row=15 column=7 cycle=5336 global_k=0 block=0 first=1 last=0 x=3f7fffff w=00800000
+INPUT row=15 column=7 cycle=5337 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=15 column=7 cycle=5344 global_k=0 local_k=0 input_cycle=5336
+MUL_READY row=15 column=7 cycle=5345 global_k=1 local_k=1 input_cycle=5337
+MAC_COMMIT row=15 column=7 cycle=5350 global_k=0 local_k=0 before=00000000 product=00800000 after=00800000
+MAC_COMMIT row=15 column=7 cycle=5355 global_k=1 local_k=1 before=00800000 product=00000000 after=00800000
+BIAS_COMMIT row=15 column=7 cycle=5360 before=00800000 bias=00000000 result=00800000
+INPUT row=16 column=0 cycle=5378 global_k=0 block=0 first=1 last=0 x=00000000 w=3f000000
+INPUT row=16 column=0 cycle=5379 global_k=1 block=0 first=0 last=1 x=80000000 w=3f000000
+MUL_READY row=16 column=0 cycle=5386 global_k=0 local_k=0 input_cycle=5378
+MUL_READY row=16 column=0 cycle=5387 global_k=1 local_k=1 input_cycle=5379
+MAC_COMMIT row=16 column=0 cycle=5392 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=16 column=0 cycle=5397 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=16 column=0 cycle=5402 before=00000000 bias=00000000 result=00000000
+INPUT row=16 column=1 cycle=5420 global_k=0 block=0 first=1 last=0 x=00000000 w=bf000000
+INPUT row=16 column=1 cycle=5421 global_k=1 block=0 first=0 last=1 x=80000000 w=bf000000
+MUL_READY row=16 column=1 cycle=5428 global_k=0 local_k=0 input_cycle=5420
+MUL_READY row=16 column=1 cycle=5429 global_k=1 local_k=1 input_cycle=5421
+MAC_COMMIT row=16 column=1 cycle=5434 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=16 column=1 cycle=5439 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=16 column=1 cycle=5444 before=00000000 bias=80000000 result=00000000
+INPUT row=16 column=2 cycle=5462 global_k=0 block=0 first=1 last=0 x=00000000 w=3f800000
+INPUT row=16 column=2 cycle=5463 global_k=1 block=0 first=0 last=1 x=80000000 w=3f800000
+MUL_READY row=16 column=2 cycle=5470 global_k=0 local_k=0 input_cycle=5462
+MUL_READY row=16 column=2 cycle=5471 global_k=1 local_k=1 input_cycle=5463
+MAC_COMMIT row=16 column=2 cycle=5476 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=16 column=2 cycle=5481 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=16 column=2 cycle=5486 before=00000000 bias=00000001 result=00000001
+INPUT row=16 column=3 cycle=5504 global_k=0 block=0 first=1 last=0 x=00000000 w=bf800000
+INPUT row=16 column=3 cycle=5505 global_k=1 block=0 first=0 last=1 x=80000000 w=bf800000
+MUL_READY row=16 column=3 cycle=5512 global_k=0 local_k=0 input_cycle=5504
+MUL_READY row=16 column=3 cycle=5513 global_k=1 local_k=1 input_cycle=5505
+MAC_COMMIT row=16 column=3 cycle=5518 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=16 column=3 cycle=5523 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=16 column=3 cycle=5528 before=00000000 bias=80000001 result=80000001
+INPUT row=16 column=4 cycle=5546 global_k=0 block=0 first=1 last=0 x=00000000 w=00000000
+INPUT row=16 column=4 cycle=5547 global_k=1 block=0 first=0 last=1 x=80000000 w=80000000
+MUL_READY row=16 column=4 cycle=5554 global_k=0 local_k=0 input_cycle=5546
+MUL_READY row=16 column=4 cycle=5555 global_k=1 local_k=1 input_cycle=5547
+MAC_COMMIT row=16 column=4 cycle=5560 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=16 column=4 cycle=5565 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=16 column=4 cycle=5570 before=00000000 bias=00000000 result=00000000
+INPUT row=16 column=5 cycle=5588 global_k=0 block=0 first=1 last=0 x=00000000 w=80000000
+INPUT row=16 column=5 cycle=5589 global_k=1 block=0 first=0 last=1 x=80000000 w=00000000
+MUL_READY row=16 column=5 cycle=5596 global_k=0 local_k=0 input_cycle=5588
+MUL_READY row=16 column=5 cycle=5597 global_k=1 local_k=1 input_cycle=5589
+MAC_COMMIT row=16 column=5 cycle=5602 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=16 column=5 cycle=5607 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=16 column=5 cycle=5612 before=00000000 bias=80000000 result=00000000
+INPUT row=16 column=6 cycle=5630 global_k=0 block=0 first=1 last=0 x=00000000 w=00000001
+INPUT row=16 column=6 cycle=5631 global_k=1 block=0 first=0 last=1 x=80000000 w=00000001
+MUL_READY row=16 column=6 cycle=5638 global_k=0 local_k=0 input_cycle=5630
+MUL_READY row=16 column=6 cycle=5639 global_k=1 local_k=1 input_cycle=5631
+MAC_COMMIT row=16 column=6 cycle=5644 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=16 column=6 cycle=5649 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=16 column=6 cycle=5654 before=00000000 bias=00000000 result=00000000
+INPUT row=16 column=7 cycle=5672 global_k=0 block=0 first=1 last=0 x=00000000 w=00800000
+INPUT row=16 column=7 cycle=5673 global_k=1 block=0 first=0 last=1 x=80000000 w=00800000
+MUL_READY row=16 column=7 cycle=5680 global_k=0 local_k=0 input_cycle=5672
+MUL_READY row=16 column=7 cycle=5681 global_k=1 local_k=1 input_cycle=5673
+MAC_COMMIT row=16 column=7 cycle=5686 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=16 column=7 cycle=5691 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=16 column=7 cycle=5696 before=00000000 bias=00000000 result=00000000
+INPUT row=17 column=0 cycle=5714 global_k=0 block=0 first=1 last=0 x=80000000 w=3f000000
+INPUT row=17 column=0 cycle=5715 global_k=1 block=0 first=0 last=1 x=00000000 w=3f000000
+MUL_READY row=17 column=0 cycle=5722 global_k=0 local_k=0 input_cycle=5714
+MUL_READY row=17 column=0 cycle=5723 global_k=1 local_k=1 input_cycle=5715
+MAC_COMMIT row=17 column=0 cycle=5728 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=17 column=0 cycle=5733 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=17 column=0 cycle=5738 before=00000000 bias=00000000 result=00000000
+INPUT row=17 column=1 cycle=5756 global_k=0 block=0 first=1 last=0 x=80000000 w=bf000000
+INPUT row=17 column=1 cycle=5757 global_k=1 block=0 first=0 last=1 x=00000000 w=bf000000
+MUL_READY row=17 column=1 cycle=5764 global_k=0 local_k=0 input_cycle=5756
+MUL_READY row=17 column=1 cycle=5765 global_k=1 local_k=1 input_cycle=5757
+MAC_COMMIT row=17 column=1 cycle=5770 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=17 column=1 cycle=5775 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=17 column=1 cycle=5780 before=00000000 bias=80000000 result=00000000
+INPUT row=17 column=2 cycle=5798 global_k=0 block=0 first=1 last=0 x=80000000 w=3f800000
+INPUT row=17 column=2 cycle=5799 global_k=1 block=0 first=0 last=1 x=00000000 w=3f800000
+MUL_READY row=17 column=2 cycle=5806 global_k=0 local_k=0 input_cycle=5798
+MUL_READY row=17 column=2 cycle=5807 global_k=1 local_k=1 input_cycle=5799
+MAC_COMMIT row=17 column=2 cycle=5812 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=17 column=2 cycle=5817 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=17 column=2 cycle=5822 before=00000000 bias=00000001 result=00000001
+INPUT row=17 column=3 cycle=5840 global_k=0 block=0 first=1 last=0 x=80000000 w=bf800000
+INPUT row=17 column=3 cycle=5841 global_k=1 block=0 first=0 last=1 x=00000000 w=bf800000
+MUL_READY row=17 column=3 cycle=5848 global_k=0 local_k=0 input_cycle=5840
+MUL_READY row=17 column=3 cycle=5849 global_k=1 local_k=1 input_cycle=5841
+MAC_COMMIT row=17 column=3 cycle=5854 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=17 column=3 cycle=5859 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=17 column=3 cycle=5864 before=00000000 bias=80000001 result=80000001
+INPUT row=17 column=4 cycle=5882 global_k=0 block=0 first=1 last=0 x=80000000 w=00000000
+INPUT row=17 column=4 cycle=5883 global_k=1 block=0 first=0 last=1 x=00000000 w=80000000
+MUL_READY row=17 column=4 cycle=5890 global_k=0 local_k=0 input_cycle=5882
+MUL_READY row=17 column=4 cycle=5891 global_k=1 local_k=1 input_cycle=5883
+MAC_COMMIT row=17 column=4 cycle=5896 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=17 column=4 cycle=5901 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=17 column=4 cycle=5906 before=00000000 bias=00000000 result=00000000
+INPUT row=17 column=5 cycle=5924 global_k=0 block=0 first=1 last=0 x=80000000 w=80000000
+INPUT row=17 column=5 cycle=5925 global_k=1 block=0 first=0 last=1 x=00000000 w=00000000
+MUL_READY row=17 column=5 cycle=5932 global_k=0 local_k=0 input_cycle=5924
+MUL_READY row=17 column=5 cycle=5933 global_k=1 local_k=1 input_cycle=5925
+MAC_COMMIT row=17 column=5 cycle=5938 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=17 column=5 cycle=5943 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=17 column=5 cycle=5948 before=00000000 bias=80000000 result=00000000
+INPUT row=17 column=6 cycle=5966 global_k=0 block=0 first=1 last=0 x=80000000 w=00000001
+INPUT row=17 column=6 cycle=5967 global_k=1 block=0 first=0 last=1 x=00000000 w=00000001
+MUL_READY row=17 column=6 cycle=5974 global_k=0 local_k=0 input_cycle=5966
+MUL_READY row=17 column=6 cycle=5975 global_k=1 local_k=1 input_cycle=5967
+MAC_COMMIT row=17 column=6 cycle=5980 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=17 column=6 cycle=5985 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=17 column=6 cycle=5990 before=00000000 bias=00000000 result=00000000
+INPUT row=17 column=7 cycle=6008 global_k=0 block=0 first=1 last=0 x=80000000 w=00800000
+INPUT row=17 column=7 cycle=6009 global_k=1 block=0 first=0 last=1 x=00000000 w=00800000
+MUL_READY row=17 column=7 cycle=6016 global_k=0 local_k=0 input_cycle=6008
+MUL_READY row=17 column=7 cycle=6017 global_k=1 local_k=1 input_cycle=6009
+MAC_COMMIT row=17 column=7 cycle=6022 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=17 column=7 cycle=6027 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=17 column=7 cycle=6032 before=00000000 bias=00000000 result=00000000
+INPUT row=18 column=0 cycle=6050 global_k=0 block=0 first=1 last=0 x=00000001 w=3f000000
+INPUT row=18 column=0 cycle=6051 global_k=1 block=0 first=0 last=1 x=80000001 w=3f000000
+MUL_READY row=18 column=0 cycle=6058 global_k=0 local_k=0 input_cycle=6050
+MUL_READY row=18 column=0 cycle=6059 global_k=1 local_k=1 input_cycle=6051
+MAC_COMMIT row=18 column=0 cycle=6064 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=18 column=0 cycle=6069 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=18 column=0 cycle=6074 before=00000000 bias=00000000 result=00000000
+INPUT row=18 column=1 cycle=6092 global_k=0 block=0 first=1 last=0 x=00000001 w=bf000000
+INPUT row=18 column=1 cycle=6093 global_k=1 block=0 first=0 last=1 x=80000001 w=bf000000
+MUL_READY row=18 column=1 cycle=6100 global_k=0 local_k=0 input_cycle=6092
+MUL_READY row=18 column=1 cycle=6101 global_k=1 local_k=1 input_cycle=6093
+MAC_COMMIT row=18 column=1 cycle=6106 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=18 column=1 cycle=6111 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=18 column=1 cycle=6116 before=00000000 bias=80000000 result=00000000
+INPUT row=18 column=2 cycle=6134 global_k=0 block=0 first=1 last=0 x=00000001 w=3f800000
+INPUT row=18 column=2 cycle=6135 global_k=1 block=0 first=0 last=1 x=80000001 w=3f800000
+MUL_READY row=18 column=2 cycle=6142 global_k=0 local_k=0 input_cycle=6134
+MUL_READY row=18 column=2 cycle=6143 global_k=1 local_k=1 input_cycle=6135
+MAC_COMMIT row=18 column=2 cycle=6148 global_k=0 local_k=0 before=00000000 product=00000001 after=00000001
+MAC_COMMIT row=18 column=2 cycle=6153 global_k=1 local_k=1 before=00000001 product=80000001 after=00000000
+BIAS_COMMIT row=18 column=2 cycle=6158 before=00000000 bias=00000001 result=00000001
+INPUT row=18 column=3 cycle=6176 global_k=0 block=0 first=1 last=0 x=00000001 w=bf800000
+INPUT row=18 column=3 cycle=6177 global_k=1 block=0 first=0 last=1 x=80000001 w=bf800000
+MUL_READY row=18 column=3 cycle=6184 global_k=0 local_k=0 input_cycle=6176
+MUL_READY row=18 column=3 cycle=6185 global_k=1 local_k=1 input_cycle=6177
+MAC_COMMIT row=18 column=3 cycle=6190 global_k=0 local_k=0 before=00000000 product=80000001 after=80000001
+MAC_COMMIT row=18 column=3 cycle=6195 global_k=1 local_k=1 before=80000001 product=00000001 after=00000000
+BIAS_COMMIT row=18 column=3 cycle=6200 before=00000000 bias=80000001 result=80000001
+INPUT row=18 column=4 cycle=6218 global_k=0 block=0 first=1 last=0 x=00000001 w=00000000
+INPUT row=18 column=4 cycle=6219 global_k=1 block=0 first=0 last=1 x=80000001 w=80000000
+MUL_READY row=18 column=4 cycle=6226 global_k=0 local_k=0 input_cycle=6218
+MUL_READY row=18 column=4 cycle=6227 global_k=1 local_k=1 input_cycle=6219
+MAC_COMMIT row=18 column=4 cycle=6232 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=18 column=4 cycle=6237 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=18 column=4 cycle=6242 before=00000000 bias=00000000 result=00000000
+INPUT row=18 column=5 cycle=6260 global_k=0 block=0 first=1 last=0 x=00000001 w=80000000
+INPUT row=18 column=5 cycle=6261 global_k=1 block=0 first=0 last=1 x=80000001 w=00000000
+MUL_READY row=18 column=5 cycle=6268 global_k=0 local_k=0 input_cycle=6260
+MUL_READY row=18 column=5 cycle=6269 global_k=1 local_k=1 input_cycle=6261
+MAC_COMMIT row=18 column=5 cycle=6274 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=18 column=5 cycle=6279 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=18 column=5 cycle=6284 before=00000000 bias=80000000 result=00000000
+INPUT row=18 column=6 cycle=6302 global_k=0 block=0 first=1 last=0 x=00000001 w=00000001
+INPUT row=18 column=6 cycle=6303 global_k=1 block=0 first=0 last=1 x=80000001 w=00000001
+MUL_READY row=18 column=6 cycle=6310 global_k=0 local_k=0 input_cycle=6302
+MUL_READY row=18 column=6 cycle=6311 global_k=1 local_k=1 input_cycle=6303
+MAC_COMMIT row=18 column=6 cycle=6316 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=18 column=6 cycle=6321 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=18 column=6 cycle=6326 before=00000000 bias=00000000 result=00000000
+INPUT row=18 column=7 cycle=6344 global_k=0 block=0 first=1 last=0 x=00000001 w=00800000
+INPUT row=18 column=7 cycle=6345 global_k=1 block=0 first=0 last=1 x=80000001 w=00800000
+MUL_READY row=18 column=7 cycle=6352 global_k=0 local_k=0 input_cycle=6344
+MUL_READY row=18 column=7 cycle=6353 global_k=1 local_k=1 input_cycle=6345
+MAC_COMMIT row=18 column=7 cycle=6358 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=18 column=7 cycle=6363 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=18 column=7 cycle=6368 before=00000000 bias=00000000 result=00000000
+INPUT row=19 column=0 cycle=6386 global_k=0 block=0 first=1 last=0 x=80000001 w=3f000000
+INPUT row=19 column=0 cycle=6387 global_k=1 block=0 first=0 last=1 x=00000001 w=3f000000
+MUL_READY row=19 column=0 cycle=6394 global_k=0 local_k=0 input_cycle=6386
+MUL_READY row=19 column=0 cycle=6395 global_k=1 local_k=1 input_cycle=6387
+MAC_COMMIT row=19 column=0 cycle=6400 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=19 column=0 cycle=6405 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=19 column=0 cycle=6410 before=00000000 bias=00000000 result=00000000
+INPUT row=19 column=1 cycle=6428 global_k=0 block=0 first=1 last=0 x=80000001 w=bf000000
+INPUT row=19 column=1 cycle=6429 global_k=1 block=0 first=0 last=1 x=00000001 w=bf000000
+MUL_READY row=19 column=1 cycle=6436 global_k=0 local_k=0 input_cycle=6428
+MUL_READY row=19 column=1 cycle=6437 global_k=1 local_k=1 input_cycle=6429
+MAC_COMMIT row=19 column=1 cycle=6442 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=19 column=1 cycle=6447 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=19 column=1 cycle=6452 before=00000000 bias=80000000 result=00000000
+INPUT row=19 column=2 cycle=6470 global_k=0 block=0 first=1 last=0 x=80000001 w=3f800000
+INPUT row=19 column=2 cycle=6471 global_k=1 block=0 first=0 last=1 x=00000001 w=3f800000
+MUL_READY row=19 column=2 cycle=6478 global_k=0 local_k=0 input_cycle=6470
+MUL_READY row=19 column=2 cycle=6479 global_k=1 local_k=1 input_cycle=6471
+MAC_COMMIT row=19 column=2 cycle=6484 global_k=0 local_k=0 before=00000000 product=80000001 after=80000001
+MAC_COMMIT row=19 column=2 cycle=6489 global_k=1 local_k=1 before=80000001 product=00000001 after=00000000
+BIAS_COMMIT row=19 column=2 cycle=6494 before=00000000 bias=00000001 result=00000001
+INPUT row=19 column=3 cycle=6512 global_k=0 block=0 first=1 last=0 x=80000001 w=bf800000
+INPUT row=19 column=3 cycle=6513 global_k=1 block=0 first=0 last=1 x=00000001 w=bf800000
+MUL_READY row=19 column=3 cycle=6520 global_k=0 local_k=0 input_cycle=6512
+MUL_READY row=19 column=3 cycle=6521 global_k=1 local_k=1 input_cycle=6513
+MAC_COMMIT row=19 column=3 cycle=6526 global_k=0 local_k=0 before=00000000 product=00000001 after=00000001
+MAC_COMMIT row=19 column=3 cycle=6531 global_k=1 local_k=1 before=00000001 product=80000001 after=00000000
+BIAS_COMMIT row=19 column=3 cycle=6536 before=00000000 bias=80000001 result=80000001
+INPUT row=19 column=4 cycle=6554 global_k=0 block=0 first=1 last=0 x=80000001 w=00000000
+INPUT row=19 column=4 cycle=6555 global_k=1 block=0 first=0 last=1 x=00000001 w=80000000
+MUL_READY row=19 column=4 cycle=6562 global_k=0 local_k=0 input_cycle=6554
+MUL_READY row=19 column=4 cycle=6563 global_k=1 local_k=1 input_cycle=6555
+MAC_COMMIT row=19 column=4 cycle=6568 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=19 column=4 cycle=6573 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=19 column=4 cycle=6578 before=00000000 bias=00000000 result=00000000
+INPUT row=19 column=5 cycle=6596 global_k=0 block=0 first=1 last=0 x=80000001 w=80000000
+INPUT row=19 column=5 cycle=6597 global_k=1 block=0 first=0 last=1 x=00000001 w=00000000
+MUL_READY row=19 column=5 cycle=6604 global_k=0 local_k=0 input_cycle=6596
+MUL_READY row=19 column=5 cycle=6605 global_k=1 local_k=1 input_cycle=6597
+MAC_COMMIT row=19 column=5 cycle=6610 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=19 column=5 cycle=6615 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=19 column=5 cycle=6620 before=00000000 bias=80000000 result=00000000
+INPUT row=19 column=6 cycle=6638 global_k=0 block=0 first=1 last=0 x=80000001 w=00000001
+INPUT row=19 column=6 cycle=6639 global_k=1 block=0 first=0 last=1 x=00000001 w=00000001
+MUL_READY row=19 column=6 cycle=6646 global_k=0 local_k=0 input_cycle=6638
+MUL_READY row=19 column=6 cycle=6647 global_k=1 local_k=1 input_cycle=6639
+MAC_COMMIT row=19 column=6 cycle=6652 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=19 column=6 cycle=6657 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=19 column=6 cycle=6662 before=00000000 bias=00000000 result=00000000
+INPUT row=19 column=7 cycle=6680 global_k=0 block=0 first=1 last=0 x=80000001 w=00800000
+INPUT row=19 column=7 cycle=6681 global_k=1 block=0 first=0 last=1 x=00000001 w=00800000
+MUL_READY row=19 column=7 cycle=6688 global_k=0 local_k=0 input_cycle=6680
+MUL_READY row=19 column=7 cycle=6689 global_k=1 local_k=1 input_cycle=6681
+MAC_COMMIT row=19 column=7 cycle=6694 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=19 column=7 cycle=6699 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=19 column=7 cycle=6704 before=00000000 bias=00000000 result=00000000
+INPUT row=20 column=0 cycle=6722 global_k=0 block=0 first=1 last=0 x=00000002 w=3f000000
+INPUT row=20 column=0 cycle=6723 global_k=1 block=0 first=0 last=1 x=80000002 w=3f000000
+MUL_READY row=20 column=0 cycle=6730 global_k=0 local_k=0 input_cycle=6722
+MUL_READY row=20 column=0 cycle=6731 global_k=1 local_k=1 input_cycle=6723
+MAC_COMMIT row=20 column=0 cycle=6736 global_k=0 local_k=0 before=00000000 product=00000001 after=00000001
+MAC_COMMIT row=20 column=0 cycle=6741 global_k=1 local_k=1 before=00000001 product=80000001 after=00000000
+BIAS_COMMIT row=20 column=0 cycle=6746 before=00000000 bias=00000000 result=00000000
+INPUT row=20 column=1 cycle=6764 global_k=0 block=0 first=1 last=0 x=00000002 w=bf000000
+INPUT row=20 column=1 cycle=6765 global_k=1 block=0 first=0 last=1 x=80000002 w=bf000000
+MUL_READY row=20 column=1 cycle=6772 global_k=0 local_k=0 input_cycle=6764
+MUL_READY row=20 column=1 cycle=6773 global_k=1 local_k=1 input_cycle=6765
+MAC_COMMIT row=20 column=1 cycle=6778 global_k=0 local_k=0 before=00000000 product=80000001 after=80000001
+MAC_COMMIT row=20 column=1 cycle=6783 global_k=1 local_k=1 before=80000001 product=00000001 after=00000000
+BIAS_COMMIT row=20 column=1 cycle=6788 before=00000000 bias=80000000 result=00000000
+INPUT row=20 column=2 cycle=6806 global_k=0 block=0 first=1 last=0 x=00000002 w=3f800000
+INPUT row=20 column=2 cycle=6807 global_k=1 block=0 first=0 last=1 x=80000002 w=3f800000
+MUL_READY row=20 column=2 cycle=6814 global_k=0 local_k=0 input_cycle=6806
+MUL_READY row=20 column=2 cycle=6815 global_k=1 local_k=1 input_cycle=6807
+MAC_COMMIT row=20 column=2 cycle=6820 global_k=0 local_k=0 before=00000000 product=00000002 after=00000002
+MAC_COMMIT row=20 column=2 cycle=6825 global_k=1 local_k=1 before=00000002 product=80000002 after=00000000
+BIAS_COMMIT row=20 column=2 cycle=6830 before=00000000 bias=00000001 result=00000001
+INPUT row=20 column=3 cycle=6848 global_k=0 block=0 first=1 last=0 x=00000002 w=bf800000
+INPUT row=20 column=3 cycle=6849 global_k=1 block=0 first=0 last=1 x=80000002 w=bf800000
+MUL_READY row=20 column=3 cycle=6856 global_k=0 local_k=0 input_cycle=6848
+MUL_READY row=20 column=3 cycle=6857 global_k=1 local_k=1 input_cycle=6849
+MAC_COMMIT row=20 column=3 cycle=6862 global_k=0 local_k=0 before=00000000 product=80000002 after=80000002
+MAC_COMMIT row=20 column=3 cycle=6867 global_k=1 local_k=1 before=80000002 product=00000002 after=00000000
+BIAS_COMMIT row=20 column=3 cycle=6872 before=00000000 bias=80000001 result=80000001
+INPUT row=20 column=4 cycle=6890 global_k=0 block=0 first=1 last=0 x=00000002 w=00000000
+INPUT row=20 column=4 cycle=6891 global_k=1 block=0 first=0 last=1 x=80000002 w=80000000
+MUL_READY row=20 column=4 cycle=6898 global_k=0 local_k=0 input_cycle=6890
+MUL_READY row=20 column=4 cycle=6899 global_k=1 local_k=1 input_cycle=6891
+MAC_COMMIT row=20 column=4 cycle=6904 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=20 column=4 cycle=6909 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=20 column=4 cycle=6914 before=00000000 bias=00000000 result=00000000
+INPUT row=20 column=5 cycle=6932 global_k=0 block=0 first=1 last=0 x=00000002 w=80000000
+INPUT row=20 column=5 cycle=6933 global_k=1 block=0 first=0 last=1 x=80000002 w=00000000
+MUL_READY row=20 column=5 cycle=6940 global_k=0 local_k=0 input_cycle=6932
+MUL_READY row=20 column=5 cycle=6941 global_k=1 local_k=1 input_cycle=6933
+MAC_COMMIT row=20 column=5 cycle=6946 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=20 column=5 cycle=6951 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=20 column=5 cycle=6956 before=00000000 bias=80000000 result=00000000
+INPUT row=20 column=6 cycle=6974 global_k=0 block=0 first=1 last=0 x=00000002 w=00000001
+INPUT row=20 column=6 cycle=6975 global_k=1 block=0 first=0 last=1 x=80000002 w=00000001
+MUL_READY row=20 column=6 cycle=6982 global_k=0 local_k=0 input_cycle=6974
+MUL_READY row=20 column=6 cycle=6983 global_k=1 local_k=1 input_cycle=6975
+MAC_COMMIT row=20 column=6 cycle=6988 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=20 column=6 cycle=6993 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=20 column=6 cycle=6998 before=00000000 bias=00000000 result=00000000
+INPUT row=20 column=7 cycle=7016 global_k=0 block=0 first=1 last=0 x=00000002 w=00800000
+INPUT row=20 column=7 cycle=7017 global_k=1 block=0 first=0 last=1 x=80000002 w=00800000
+MUL_READY row=20 column=7 cycle=7024 global_k=0 local_k=0 input_cycle=7016
+MUL_READY row=20 column=7 cycle=7025 global_k=1 local_k=1 input_cycle=7017
+MAC_COMMIT row=20 column=7 cycle=7030 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=20 column=7 cycle=7035 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=20 column=7 cycle=7040 before=00000000 bias=00000000 result=00000000
+INPUT row=21 column=0 cycle=7058 global_k=0 block=0 first=1 last=0 x=00000003 w=3f000000
+INPUT row=21 column=0 cycle=7059 global_k=1 block=0 first=0 last=1 x=80000003 w=3f000000
+MUL_READY row=21 column=0 cycle=7066 global_k=0 local_k=0 input_cycle=7058
+MUL_READY row=21 column=0 cycle=7067 global_k=1 local_k=1 input_cycle=7059
+MAC_COMMIT row=21 column=0 cycle=7072 global_k=0 local_k=0 before=00000000 product=00000002 after=00000002
+MAC_COMMIT row=21 column=0 cycle=7077 global_k=1 local_k=1 before=00000002 product=80000002 after=00000000
+BIAS_COMMIT row=21 column=0 cycle=7082 before=00000000 bias=00000000 result=00000000
+INPUT row=21 column=1 cycle=7100 global_k=0 block=0 first=1 last=0 x=00000003 w=bf000000
+INPUT row=21 column=1 cycle=7101 global_k=1 block=0 first=0 last=1 x=80000003 w=bf000000
+MUL_READY row=21 column=1 cycle=7108 global_k=0 local_k=0 input_cycle=7100
+MUL_READY row=21 column=1 cycle=7109 global_k=1 local_k=1 input_cycle=7101
+MAC_COMMIT row=21 column=1 cycle=7114 global_k=0 local_k=0 before=00000000 product=80000002 after=80000002
+MAC_COMMIT row=21 column=1 cycle=7119 global_k=1 local_k=1 before=80000002 product=00000002 after=00000000
+BIAS_COMMIT row=21 column=1 cycle=7124 before=00000000 bias=80000000 result=00000000
+INPUT row=21 column=2 cycle=7142 global_k=0 block=0 first=1 last=0 x=00000003 w=3f800000
+INPUT row=21 column=2 cycle=7143 global_k=1 block=0 first=0 last=1 x=80000003 w=3f800000
+MUL_READY row=21 column=2 cycle=7150 global_k=0 local_k=0 input_cycle=7142
+MUL_READY row=21 column=2 cycle=7151 global_k=1 local_k=1 input_cycle=7143
+MAC_COMMIT row=21 column=2 cycle=7156 global_k=0 local_k=0 before=00000000 product=00000003 after=00000003
+MAC_COMMIT row=21 column=2 cycle=7161 global_k=1 local_k=1 before=00000003 product=80000003 after=00000000
+BIAS_COMMIT row=21 column=2 cycle=7166 before=00000000 bias=00000001 result=00000001
+INPUT row=21 column=3 cycle=7184 global_k=0 block=0 first=1 last=0 x=00000003 w=bf800000
+INPUT row=21 column=3 cycle=7185 global_k=1 block=0 first=0 last=1 x=80000003 w=bf800000
+MUL_READY row=21 column=3 cycle=7192 global_k=0 local_k=0 input_cycle=7184
+MUL_READY row=21 column=3 cycle=7193 global_k=1 local_k=1 input_cycle=7185
+MAC_COMMIT row=21 column=3 cycle=7198 global_k=0 local_k=0 before=00000000 product=80000003 after=80000003
+MAC_COMMIT row=21 column=3 cycle=7203 global_k=1 local_k=1 before=80000003 product=00000003 after=00000000
+BIAS_COMMIT row=21 column=3 cycle=7208 before=00000000 bias=80000001 result=80000001
+INPUT row=21 column=4 cycle=7226 global_k=0 block=0 first=1 last=0 x=00000003 w=00000000
+INPUT row=21 column=4 cycle=7227 global_k=1 block=0 first=0 last=1 x=80000003 w=80000000
+MUL_READY row=21 column=4 cycle=7234 global_k=0 local_k=0 input_cycle=7226
+MUL_READY row=21 column=4 cycle=7235 global_k=1 local_k=1 input_cycle=7227
+MAC_COMMIT row=21 column=4 cycle=7240 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=21 column=4 cycle=7245 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=21 column=4 cycle=7250 before=00000000 bias=00000000 result=00000000
+INPUT row=21 column=5 cycle=7268 global_k=0 block=0 first=1 last=0 x=00000003 w=80000000
+INPUT row=21 column=5 cycle=7269 global_k=1 block=0 first=0 last=1 x=80000003 w=00000000
+MUL_READY row=21 column=5 cycle=7276 global_k=0 local_k=0 input_cycle=7268
+MUL_READY row=21 column=5 cycle=7277 global_k=1 local_k=1 input_cycle=7269
+MAC_COMMIT row=21 column=5 cycle=7282 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=21 column=5 cycle=7287 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=21 column=5 cycle=7292 before=00000000 bias=80000000 result=00000000
+INPUT row=21 column=6 cycle=7310 global_k=0 block=0 first=1 last=0 x=00000003 w=00000001
+INPUT row=21 column=6 cycle=7311 global_k=1 block=0 first=0 last=1 x=80000003 w=00000001
+MUL_READY row=21 column=6 cycle=7318 global_k=0 local_k=0 input_cycle=7310
+MUL_READY row=21 column=6 cycle=7319 global_k=1 local_k=1 input_cycle=7311
+MAC_COMMIT row=21 column=6 cycle=7324 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=21 column=6 cycle=7329 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=21 column=6 cycle=7334 before=00000000 bias=00000000 result=00000000
+INPUT row=21 column=7 cycle=7352 global_k=0 block=0 first=1 last=0 x=00000003 w=00800000
+INPUT row=21 column=7 cycle=7353 global_k=1 block=0 first=0 last=1 x=80000003 w=00800000
+MUL_READY row=21 column=7 cycle=7360 global_k=0 local_k=0 input_cycle=7352
+MUL_READY row=21 column=7 cycle=7361 global_k=1 local_k=1 input_cycle=7353
+MAC_COMMIT row=21 column=7 cycle=7366 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=21 column=7 cycle=7371 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=21 column=7 cycle=7376 before=00000000 bias=00000000 result=00000000
+INPUT row=22 column=0 cycle=7394 global_k=0 block=0 first=1 last=0 x=80000003 w=3f000000
+INPUT row=22 column=0 cycle=7395 global_k=1 block=0 first=0 last=1 x=00000003 w=3f000000
+MUL_READY row=22 column=0 cycle=7402 global_k=0 local_k=0 input_cycle=7394
+MUL_READY row=22 column=0 cycle=7403 global_k=1 local_k=1 input_cycle=7395
+MAC_COMMIT row=22 column=0 cycle=7408 global_k=0 local_k=0 before=00000000 product=80000002 after=80000002
+MAC_COMMIT row=22 column=0 cycle=7413 global_k=1 local_k=1 before=80000002 product=00000002 after=00000000
+BIAS_COMMIT row=22 column=0 cycle=7418 before=00000000 bias=00000000 result=00000000
+INPUT row=22 column=1 cycle=7436 global_k=0 block=0 first=1 last=0 x=80000003 w=bf000000
+INPUT row=22 column=1 cycle=7437 global_k=1 block=0 first=0 last=1 x=00000003 w=bf000000
+MUL_READY row=22 column=1 cycle=7444 global_k=0 local_k=0 input_cycle=7436
+MUL_READY row=22 column=1 cycle=7445 global_k=1 local_k=1 input_cycle=7437
+MAC_COMMIT row=22 column=1 cycle=7450 global_k=0 local_k=0 before=00000000 product=00000002 after=00000002
+MAC_COMMIT row=22 column=1 cycle=7455 global_k=1 local_k=1 before=00000002 product=80000002 after=00000000
+BIAS_COMMIT row=22 column=1 cycle=7460 before=00000000 bias=80000000 result=00000000
+INPUT row=22 column=2 cycle=7478 global_k=0 block=0 first=1 last=0 x=80000003 w=3f800000
+INPUT row=22 column=2 cycle=7479 global_k=1 block=0 first=0 last=1 x=00000003 w=3f800000
+MUL_READY row=22 column=2 cycle=7486 global_k=0 local_k=0 input_cycle=7478
+MUL_READY row=22 column=2 cycle=7487 global_k=1 local_k=1 input_cycle=7479
+MAC_COMMIT row=22 column=2 cycle=7492 global_k=0 local_k=0 before=00000000 product=80000003 after=80000003
+MAC_COMMIT row=22 column=2 cycle=7497 global_k=1 local_k=1 before=80000003 product=00000003 after=00000000
+BIAS_COMMIT row=22 column=2 cycle=7502 before=00000000 bias=00000001 result=00000001
+INPUT row=22 column=3 cycle=7520 global_k=0 block=0 first=1 last=0 x=80000003 w=bf800000
+INPUT row=22 column=3 cycle=7521 global_k=1 block=0 first=0 last=1 x=00000003 w=bf800000
+MUL_READY row=22 column=3 cycle=7528 global_k=0 local_k=0 input_cycle=7520
+MUL_READY row=22 column=3 cycle=7529 global_k=1 local_k=1 input_cycle=7521
+MAC_COMMIT row=22 column=3 cycle=7534 global_k=0 local_k=0 before=00000000 product=00000003 after=00000003
+MAC_COMMIT row=22 column=3 cycle=7539 global_k=1 local_k=1 before=00000003 product=80000003 after=00000000
+BIAS_COMMIT row=22 column=3 cycle=7544 before=00000000 bias=80000001 result=80000001
+INPUT row=22 column=4 cycle=7562 global_k=0 block=0 first=1 last=0 x=80000003 w=00000000
+INPUT row=22 column=4 cycle=7563 global_k=1 block=0 first=0 last=1 x=00000003 w=80000000
+MUL_READY row=22 column=4 cycle=7570 global_k=0 local_k=0 input_cycle=7562
+MUL_READY row=22 column=4 cycle=7571 global_k=1 local_k=1 input_cycle=7563
+MAC_COMMIT row=22 column=4 cycle=7576 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=22 column=4 cycle=7581 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=22 column=4 cycle=7586 before=00000000 bias=00000000 result=00000000
+INPUT row=22 column=5 cycle=7604 global_k=0 block=0 first=1 last=0 x=80000003 w=80000000
+INPUT row=22 column=5 cycle=7605 global_k=1 block=0 first=0 last=1 x=00000003 w=00000000
+MUL_READY row=22 column=5 cycle=7612 global_k=0 local_k=0 input_cycle=7604
+MUL_READY row=22 column=5 cycle=7613 global_k=1 local_k=1 input_cycle=7605
+MAC_COMMIT row=22 column=5 cycle=7618 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=22 column=5 cycle=7623 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=22 column=5 cycle=7628 before=00000000 bias=80000000 result=00000000
+INPUT row=22 column=6 cycle=7646 global_k=0 block=0 first=1 last=0 x=80000003 w=00000001
+INPUT row=22 column=6 cycle=7647 global_k=1 block=0 first=0 last=1 x=00000003 w=00000001
+MUL_READY row=22 column=6 cycle=7654 global_k=0 local_k=0 input_cycle=7646
+MUL_READY row=22 column=6 cycle=7655 global_k=1 local_k=1 input_cycle=7647
+MAC_COMMIT row=22 column=6 cycle=7660 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=22 column=6 cycle=7665 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=22 column=6 cycle=7670 before=00000000 bias=00000000 result=00000000
+INPUT row=22 column=7 cycle=7688 global_k=0 block=0 first=1 last=0 x=80000003 w=00800000
+INPUT row=22 column=7 cycle=7689 global_k=1 block=0 first=0 last=1 x=00000003 w=00800000
+MUL_READY row=22 column=7 cycle=7696 global_k=0 local_k=0 input_cycle=7688
+MUL_READY row=22 column=7 cycle=7697 global_k=1 local_k=1 input_cycle=7689
+MAC_COMMIT row=22 column=7 cycle=7702 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=22 column=7 cycle=7707 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=22 column=7 cycle=7712 before=00000000 bias=00000000 result=00000000
+INPUT row=23 column=0 cycle=7730 global_k=0 block=0 first=1 last=0 x=007fffff w=3f000000
+INPUT row=23 column=0 cycle=7731 global_k=1 block=0 first=0 last=1 x=807fffff w=3f000000
+MUL_READY row=23 column=0 cycle=7738 global_k=0 local_k=0 input_cycle=7730
+MUL_READY row=23 column=0 cycle=7739 global_k=1 local_k=1 input_cycle=7731
+MAC_COMMIT row=23 column=0 cycle=7744 global_k=0 local_k=0 before=00000000 product=00400000 after=00400000
+MAC_COMMIT row=23 column=0 cycle=7749 global_k=1 local_k=1 before=00400000 product=80400000 after=00000000
+BIAS_COMMIT row=23 column=0 cycle=7754 before=00000000 bias=00000000 result=00000000
+INPUT row=23 column=1 cycle=7772 global_k=0 block=0 first=1 last=0 x=007fffff w=bf000000
+INPUT row=23 column=1 cycle=7773 global_k=1 block=0 first=0 last=1 x=807fffff w=bf000000
+MUL_READY row=23 column=1 cycle=7780 global_k=0 local_k=0 input_cycle=7772
+MUL_READY row=23 column=1 cycle=7781 global_k=1 local_k=1 input_cycle=7773
+MAC_COMMIT row=23 column=1 cycle=7786 global_k=0 local_k=0 before=00000000 product=80400000 after=80400000
+MAC_COMMIT row=23 column=1 cycle=7791 global_k=1 local_k=1 before=80400000 product=00400000 after=00000000
+BIAS_COMMIT row=23 column=1 cycle=7796 before=00000000 bias=80000000 result=00000000
+INPUT row=23 column=2 cycle=7814 global_k=0 block=0 first=1 last=0 x=007fffff w=3f800000
+INPUT row=23 column=2 cycle=7815 global_k=1 block=0 first=0 last=1 x=807fffff w=3f800000
+MUL_READY row=23 column=2 cycle=7822 global_k=0 local_k=0 input_cycle=7814
+MUL_READY row=23 column=2 cycle=7823 global_k=1 local_k=1 input_cycle=7815
+MAC_COMMIT row=23 column=2 cycle=7828 global_k=0 local_k=0 before=00000000 product=007fffff after=007fffff
+MAC_COMMIT row=23 column=2 cycle=7833 global_k=1 local_k=1 before=007fffff product=807fffff after=00000000
+BIAS_COMMIT row=23 column=2 cycle=7838 before=00000000 bias=00000001 result=00000001
+INPUT row=23 column=3 cycle=7856 global_k=0 block=0 first=1 last=0 x=007fffff w=bf800000
+INPUT row=23 column=3 cycle=7857 global_k=1 block=0 first=0 last=1 x=807fffff w=bf800000
+MUL_READY row=23 column=3 cycle=7864 global_k=0 local_k=0 input_cycle=7856
+MUL_READY row=23 column=3 cycle=7865 global_k=1 local_k=1 input_cycle=7857
+MAC_COMMIT row=23 column=3 cycle=7870 global_k=0 local_k=0 before=00000000 product=807fffff after=807fffff
+MAC_COMMIT row=23 column=3 cycle=7875 global_k=1 local_k=1 before=807fffff product=007fffff after=00000000
+BIAS_COMMIT row=23 column=3 cycle=7880 before=00000000 bias=80000001 result=80000001
+INPUT row=23 column=4 cycle=7898 global_k=0 block=0 first=1 last=0 x=007fffff w=00000000
+INPUT row=23 column=4 cycle=7899 global_k=1 block=0 first=0 last=1 x=807fffff w=80000000
+MUL_READY row=23 column=4 cycle=7906 global_k=0 local_k=0 input_cycle=7898
+MUL_READY row=23 column=4 cycle=7907 global_k=1 local_k=1 input_cycle=7899
+MAC_COMMIT row=23 column=4 cycle=7912 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=23 column=4 cycle=7917 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=23 column=4 cycle=7922 before=00000000 bias=00000000 result=00000000
+INPUT row=23 column=5 cycle=7940 global_k=0 block=0 first=1 last=0 x=007fffff w=80000000
+INPUT row=23 column=5 cycle=7941 global_k=1 block=0 first=0 last=1 x=807fffff w=00000000
+MUL_READY row=23 column=5 cycle=7948 global_k=0 local_k=0 input_cycle=7940
+MUL_READY row=23 column=5 cycle=7949 global_k=1 local_k=1 input_cycle=7941
+MAC_COMMIT row=23 column=5 cycle=7954 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=23 column=5 cycle=7959 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=23 column=5 cycle=7964 before=00000000 bias=80000000 result=00000000
+INPUT row=23 column=6 cycle=7982 global_k=0 block=0 first=1 last=0 x=007fffff w=00000001
+INPUT row=23 column=6 cycle=7983 global_k=1 block=0 first=0 last=1 x=807fffff w=00000001
+MUL_READY row=23 column=6 cycle=7990 global_k=0 local_k=0 input_cycle=7982
+MUL_READY row=23 column=6 cycle=7991 global_k=1 local_k=1 input_cycle=7983
+MAC_COMMIT row=23 column=6 cycle=7996 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=23 column=6 cycle=8001 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=23 column=6 cycle=8006 before=00000000 bias=00000000 result=00000000
+INPUT row=23 column=7 cycle=8024 global_k=0 block=0 first=1 last=0 x=007fffff w=00800000
+INPUT row=23 column=7 cycle=8025 global_k=1 block=0 first=0 last=1 x=807fffff w=00800000
+MUL_READY row=23 column=7 cycle=8032 global_k=0 local_k=0 input_cycle=8024
+MUL_READY row=23 column=7 cycle=8033 global_k=1 local_k=1 input_cycle=8025
+MAC_COMMIT row=23 column=7 cycle=8038 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=23 column=7 cycle=8043 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=23 column=7 cycle=8048 before=00000000 bias=00000000 result=00000000
+INPUT row=24 column=0 cycle=8066 global_k=0 block=0 first=1 last=0 x=807fffff w=3f000000
+INPUT row=24 column=0 cycle=8067 global_k=1 block=0 first=0 last=1 x=007fffff w=3f000000
+MUL_READY row=24 column=0 cycle=8074 global_k=0 local_k=0 input_cycle=8066
+MUL_READY row=24 column=0 cycle=8075 global_k=1 local_k=1 input_cycle=8067
+MAC_COMMIT row=24 column=0 cycle=8080 global_k=0 local_k=0 before=00000000 product=80400000 after=80400000
+MAC_COMMIT row=24 column=0 cycle=8085 global_k=1 local_k=1 before=80400000 product=00400000 after=00000000
+BIAS_COMMIT row=24 column=0 cycle=8090 before=00000000 bias=00000000 result=00000000
+INPUT row=24 column=1 cycle=8108 global_k=0 block=0 first=1 last=0 x=807fffff w=bf000000
+INPUT row=24 column=1 cycle=8109 global_k=1 block=0 first=0 last=1 x=007fffff w=bf000000
+MUL_READY row=24 column=1 cycle=8116 global_k=0 local_k=0 input_cycle=8108
+MUL_READY row=24 column=1 cycle=8117 global_k=1 local_k=1 input_cycle=8109
+MAC_COMMIT row=24 column=1 cycle=8122 global_k=0 local_k=0 before=00000000 product=00400000 after=00400000
+MAC_COMMIT row=24 column=1 cycle=8127 global_k=1 local_k=1 before=00400000 product=80400000 after=00000000
+BIAS_COMMIT row=24 column=1 cycle=8132 before=00000000 bias=80000000 result=00000000
+INPUT row=24 column=2 cycle=8150 global_k=0 block=0 first=1 last=0 x=807fffff w=3f800000
+INPUT row=24 column=2 cycle=8151 global_k=1 block=0 first=0 last=1 x=007fffff w=3f800000
+MUL_READY row=24 column=2 cycle=8158 global_k=0 local_k=0 input_cycle=8150
+MUL_READY row=24 column=2 cycle=8159 global_k=1 local_k=1 input_cycle=8151
+MAC_COMMIT row=24 column=2 cycle=8164 global_k=0 local_k=0 before=00000000 product=807fffff after=807fffff
+MAC_COMMIT row=24 column=2 cycle=8169 global_k=1 local_k=1 before=807fffff product=007fffff after=00000000
+BIAS_COMMIT row=24 column=2 cycle=8174 before=00000000 bias=00000001 result=00000001
+INPUT row=24 column=3 cycle=8192 global_k=0 block=0 first=1 last=0 x=807fffff w=bf800000
+INPUT row=24 column=3 cycle=8193 global_k=1 block=0 first=0 last=1 x=007fffff w=bf800000
+MUL_READY row=24 column=3 cycle=8200 global_k=0 local_k=0 input_cycle=8192
+MUL_READY row=24 column=3 cycle=8201 global_k=1 local_k=1 input_cycle=8193
+MAC_COMMIT row=24 column=3 cycle=8206 global_k=0 local_k=0 before=00000000 product=007fffff after=007fffff
+MAC_COMMIT row=24 column=3 cycle=8211 global_k=1 local_k=1 before=007fffff product=807fffff after=00000000
+BIAS_COMMIT row=24 column=3 cycle=8216 before=00000000 bias=80000001 result=80000001
+INPUT row=24 column=4 cycle=8234 global_k=0 block=0 first=1 last=0 x=807fffff w=00000000
+INPUT row=24 column=4 cycle=8235 global_k=1 block=0 first=0 last=1 x=007fffff w=80000000
+MUL_READY row=24 column=4 cycle=8242 global_k=0 local_k=0 input_cycle=8234
+MUL_READY row=24 column=4 cycle=8243 global_k=1 local_k=1 input_cycle=8235
+MAC_COMMIT row=24 column=4 cycle=8248 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=24 column=4 cycle=8253 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=24 column=4 cycle=8258 before=00000000 bias=00000000 result=00000000
+INPUT row=24 column=5 cycle=8276 global_k=0 block=0 first=1 last=0 x=807fffff w=80000000
+INPUT row=24 column=5 cycle=8277 global_k=1 block=0 first=0 last=1 x=007fffff w=00000000
+MUL_READY row=24 column=5 cycle=8284 global_k=0 local_k=0 input_cycle=8276
+MUL_READY row=24 column=5 cycle=8285 global_k=1 local_k=1 input_cycle=8277
+MAC_COMMIT row=24 column=5 cycle=8290 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=24 column=5 cycle=8295 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=24 column=5 cycle=8300 before=00000000 bias=80000000 result=00000000
+INPUT row=24 column=6 cycle=8318 global_k=0 block=0 first=1 last=0 x=807fffff w=00000001
+INPUT row=24 column=6 cycle=8319 global_k=1 block=0 first=0 last=1 x=007fffff w=00000001
+MUL_READY row=24 column=6 cycle=8326 global_k=0 local_k=0 input_cycle=8318
+MUL_READY row=24 column=6 cycle=8327 global_k=1 local_k=1 input_cycle=8319
+MAC_COMMIT row=24 column=6 cycle=8332 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=24 column=6 cycle=8337 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=24 column=6 cycle=8342 before=00000000 bias=00000000 result=00000000
+INPUT row=24 column=7 cycle=8360 global_k=0 block=0 first=1 last=0 x=807fffff w=00800000
+INPUT row=24 column=7 cycle=8361 global_k=1 block=0 first=0 last=1 x=007fffff w=00800000
+MUL_READY row=24 column=7 cycle=8368 global_k=0 local_k=0 input_cycle=8360
+MUL_READY row=24 column=7 cycle=8369 global_k=1 local_k=1 input_cycle=8361
+MAC_COMMIT row=24 column=7 cycle=8374 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=24 column=7 cycle=8379 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=24 column=7 cycle=8384 before=00000000 bias=00000000 result=00000000
+INPUT row=25 column=0 cycle=8402 global_k=0 block=0 first=1 last=0 x=00800000 w=3f000000
+INPUT row=25 column=0 cycle=8403 global_k=1 block=0 first=0 last=1 x=80800000 w=3f000000
+MUL_READY row=25 column=0 cycle=8410 global_k=0 local_k=0 input_cycle=8402
+MUL_READY row=25 column=0 cycle=8411 global_k=1 local_k=1 input_cycle=8403
+MAC_COMMIT row=25 column=0 cycle=8416 global_k=0 local_k=0 before=00000000 product=00400000 after=00400000
+MAC_COMMIT row=25 column=0 cycle=8421 global_k=1 local_k=1 before=00400000 product=80400000 after=00000000
+BIAS_COMMIT row=25 column=0 cycle=8426 before=00000000 bias=00000000 result=00000000
+INPUT row=25 column=1 cycle=8444 global_k=0 block=0 first=1 last=0 x=00800000 w=bf000000
+INPUT row=25 column=1 cycle=8445 global_k=1 block=0 first=0 last=1 x=80800000 w=bf000000
+MUL_READY row=25 column=1 cycle=8452 global_k=0 local_k=0 input_cycle=8444
+MUL_READY row=25 column=1 cycle=8453 global_k=1 local_k=1 input_cycle=8445
+MAC_COMMIT row=25 column=1 cycle=8458 global_k=0 local_k=0 before=00000000 product=80400000 after=80400000
+MAC_COMMIT row=25 column=1 cycle=8463 global_k=1 local_k=1 before=80400000 product=00400000 after=00000000
+BIAS_COMMIT row=25 column=1 cycle=8468 before=00000000 bias=80000000 result=00000000
+INPUT row=25 column=2 cycle=8486 global_k=0 block=0 first=1 last=0 x=00800000 w=3f800000
+INPUT row=25 column=2 cycle=8487 global_k=1 block=0 first=0 last=1 x=80800000 w=3f800000
+MUL_READY row=25 column=2 cycle=8494 global_k=0 local_k=0 input_cycle=8486
+MUL_READY row=25 column=2 cycle=8495 global_k=1 local_k=1 input_cycle=8487
+MAC_COMMIT row=25 column=2 cycle=8500 global_k=0 local_k=0 before=00000000 product=00800000 after=00800000
+MAC_COMMIT row=25 column=2 cycle=8505 global_k=1 local_k=1 before=00800000 product=80800000 after=00000000
+BIAS_COMMIT row=25 column=2 cycle=8510 before=00000000 bias=00000001 result=00000001
+INPUT row=25 column=3 cycle=8528 global_k=0 block=0 first=1 last=0 x=00800000 w=bf800000
+INPUT row=25 column=3 cycle=8529 global_k=1 block=0 first=0 last=1 x=80800000 w=bf800000
+MUL_READY row=25 column=3 cycle=8536 global_k=0 local_k=0 input_cycle=8528
+MUL_READY row=25 column=3 cycle=8537 global_k=1 local_k=1 input_cycle=8529
+MAC_COMMIT row=25 column=3 cycle=8542 global_k=0 local_k=0 before=00000000 product=80800000 after=80800000
+MAC_COMMIT row=25 column=3 cycle=8547 global_k=1 local_k=1 before=80800000 product=00800000 after=00000000
+BIAS_COMMIT row=25 column=3 cycle=8552 before=00000000 bias=80000001 result=80000001
+INPUT row=25 column=4 cycle=8570 global_k=0 block=0 first=1 last=0 x=00800000 w=00000000
+INPUT row=25 column=4 cycle=8571 global_k=1 block=0 first=0 last=1 x=80800000 w=80000000
+MUL_READY row=25 column=4 cycle=8578 global_k=0 local_k=0 input_cycle=8570
+MUL_READY row=25 column=4 cycle=8579 global_k=1 local_k=1 input_cycle=8571
+MAC_COMMIT row=25 column=4 cycle=8584 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=25 column=4 cycle=8589 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=25 column=4 cycle=8594 before=00000000 bias=00000000 result=00000000
+INPUT row=25 column=5 cycle=8612 global_k=0 block=0 first=1 last=0 x=00800000 w=80000000
+INPUT row=25 column=5 cycle=8613 global_k=1 block=0 first=0 last=1 x=80800000 w=00000000
+MUL_READY row=25 column=5 cycle=8620 global_k=0 local_k=0 input_cycle=8612
+MUL_READY row=25 column=5 cycle=8621 global_k=1 local_k=1 input_cycle=8613
+MAC_COMMIT row=25 column=5 cycle=8626 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=25 column=5 cycle=8631 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=25 column=5 cycle=8636 before=00000000 bias=80000000 result=00000000
+INPUT row=25 column=6 cycle=8654 global_k=0 block=0 first=1 last=0 x=00800000 w=00000001
+INPUT row=25 column=6 cycle=8655 global_k=1 block=0 first=0 last=1 x=80800000 w=00000001
+MUL_READY row=25 column=6 cycle=8662 global_k=0 local_k=0 input_cycle=8654
+MUL_READY row=25 column=6 cycle=8663 global_k=1 local_k=1 input_cycle=8655
+MAC_COMMIT row=25 column=6 cycle=8668 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=25 column=6 cycle=8673 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=25 column=6 cycle=8678 before=00000000 bias=00000000 result=00000000
+INPUT row=25 column=7 cycle=8696 global_k=0 block=0 first=1 last=0 x=00800000 w=00800000
+INPUT row=25 column=7 cycle=8697 global_k=1 block=0 first=0 last=1 x=80800000 w=00800000
+MUL_READY row=25 column=7 cycle=8704 global_k=0 local_k=0 input_cycle=8696
+MUL_READY row=25 column=7 cycle=8705 global_k=1 local_k=1 input_cycle=8697
+MAC_COMMIT row=25 column=7 cycle=8710 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=25 column=7 cycle=8715 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=25 column=7 cycle=8720 before=00000000 bias=00000000 result=00000000
+INPUT row=26 column=0 cycle=8738 global_k=0 block=0 first=1 last=0 x=80800000 w=3f000000
+INPUT row=26 column=0 cycle=8739 global_k=1 block=0 first=0 last=1 x=00800000 w=3f000000
+MUL_READY row=26 column=0 cycle=8746 global_k=0 local_k=0 input_cycle=8738
+MUL_READY row=26 column=0 cycle=8747 global_k=1 local_k=1 input_cycle=8739
+MAC_COMMIT row=26 column=0 cycle=8752 global_k=0 local_k=0 before=00000000 product=80400000 after=80400000
+MAC_COMMIT row=26 column=0 cycle=8757 global_k=1 local_k=1 before=80400000 product=00400000 after=00000000
+BIAS_COMMIT row=26 column=0 cycle=8762 before=00000000 bias=00000000 result=00000000
+INPUT row=26 column=1 cycle=8780 global_k=0 block=0 first=1 last=0 x=80800000 w=bf000000
+INPUT row=26 column=1 cycle=8781 global_k=1 block=0 first=0 last=1 x=00800000 w=bf000000
+MUL_READY row=26 column=1 cycle=8788 global_k=0 local_k=0 input_cycle=8780
+MUL_READY row=26 column=1 cycle=8789 global_k=1 local_k=1 input_cycle=8781
+MAC_COMMIT row=26 column=1 cycle=8794 global_k=0 local_k=0 before=00000000 product=00400000 after=00400000
+MAC_COMMIT row=26 column=1 cycle=8799 global_k=1 local_k=1 before=00400000 product=80400000 after=00000000
+BIAS_COMMIT row=26 column=1 cycle=8804 before=00000000 bias=80000000 result=00000000
+INPUT row=26 column=2 cycle=8822 global_k=0 block=0 first=1 last=0 x=80800000 w=3f800000
+INPUT row=26 column=2 cycle=8823 global_k=1 block=0 first=0 last=1 x=00800000 w=3f800000
+MUL_READY row=26 column=2 cycle=8830 global_k=0 local_k=0 input_cycle=8822
+MUL_READY row=26 column=2 cycle=8831 global_k=1 local_k=1 input_cycle=8823
+MAC_COMMIT row=26 column=2 cycle=8836 global_k=0 local_k=0 before=00000000 product=80800000 after=80800000
+MAC_COMMIT row=26 column=2 cycle=8841 global_k=1 local_k=1 before=80800000 product=00800000 after=00000000
+BIAS_COMMIT row=26 column=2 cycle=8846 before=00000000 bias=00000001 result=00000001
+INPUT row=26 column=3 cycle=8864 global_k=0 block=0 first=1 last=0 x=80800000 w=bf800000
+INPUT row=26 column=3 cycle=8865 global_k=1 block=0 first=0 last=1 x=00800000 w=bf800000
+MUL_READY row=26 column=3 cycle=8872 global_k=0 local_k=0 input_cycle=8864
+MUL_READY row=26 column=3 cycle=8873 global_k=1 local_k=1 input_cycle=8865
+MAC_COMMIT row=26 column=3 cycle=8878 global_k=0 local_k=0 before=00000000 product=00800000 after=00800000
+MAC_COMMIT row=26 column=3 cycle=8883 global_k=1 local_k=1 before=00800000 product=80800000 after=00000000
+BIAS_COMMIT row=26 column=3 cycle=8888 before=00000000 bias=80000001 result=80000001
+INPUT row=26 column=4 cycle=8906 global_k=0 block=0 first=1 last=0 x=80800000 w=00000000
+INPUT row=26 column=4 cycle=8907 global_k=1 block=0 first=0 last=1 x=00800000 w=80000000
+MUL_READY row=26 column=4 cycle=8914 global_k=0 local_k=0 input_cycle=8906
+MUL_READY row=26 column=4 cycle=8915 global_k=1 local_k=1 input_cycle=8907
+MAC_COMMIT row=26 column=4 cycle=8920 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=26 column=4 cycle=8925 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=26 column=4 cycle=8930 before=00000000 bias=00000000 result=00000000
+INPUT row=26 column=5 cycle=8948 global_k=0 block=0 first=1 last=0 x=80800000 w=80000000
+INPUT row=26 column=5 cycle=8949 global_k=1 block=0 first=0 last=1 x=00800000 w=00000000
+MUL_READY row=26 column=5 cycle=8956 global_k=0 local_k=0 input_cycle=8948
+MUL_READY row=26 column=5 cycle=8957 global_k=1 local_k=1 input_cycle=8949
+MAC_COMMIT row=26 column=5 cycle=8962 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=26 column=5 cycle=8967 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=26 column=5 cycle=8972 before=00000000 bias=80000000 result=00000000
+INPUT row=26 column=6 cycle=8990 global_k=0 block=0 first=1 last=0 x=80800000 w=00000001
+INPUT row=26 column=6 cycle=8991 global_k=1 block=0 first=0 last=1 x=00800000 w=00000001
+MUL_READY row=26 column=6 cycle=8998 global_k=0 local_k=0 input_cycle=8990
+MUL_READY row=26 column=6 cycle=8999 global_k=1 local_k=1 input_cycle=8991
+MAC_COMMIT row=26 column=6 cycle=9004 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=26 column=6 cycle=9009 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=26 column=6 cycle=9014 before=00000000 bias=00000000 result=00000000
+INPUT row=26 column=7 cycle=9032 global_k=0 block=0 first=1 last=0 x=80800000 w=00800000
+INPUT row=26 column=7 cycle=9033 global_k=1 block=0 first=0 last=1 x=00800000 w=00800000
+MUL_READY row=26 column=7 cycle=9040 global_k=0 local_k=0 input_cycle=9032
+MUL_READY row=26 column=7 cycle=9041 global_k=1 local_k=1 input_cycle=9033
+MAC_COMMIT row=26 column=7 cycle=9046 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=26 column=7 cycle=9051 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=26 column=7 cycle=9056 before=00000000 bias=00000000 result=00000000
+INPUT row=27 column=0 cycle=9074 global_k=0 block=0 first=1 last=0 x=00800001 w=3f000000
+INPUT row=27 column=0 cycle=9075 global_k=1 block=0 first=0 last=1 x=80800001 w=3f000000
+MUL_READY row=27 column=0 cycle=9082 global_k=0 local_k=0 input_cycle=9074
+MUL_READY row=27 column=0 cycle=9083 global_k=1 local_k=1 input_cycle=9075
+MAC_COMMIT row=27 column=0 cycle=9088 global_k=0 local_k=0 before=00000000 product=00400000 after=00400000
+MAC_COMMIT row=27 column=0 cycle=9093 global_k=1 local_k=1 before=00400000 product=80400000 after=00000000
+BIAS_COMMIT row=27 column=0 cycle=9098 before=00000000 bias=00000000 result=00000000
+INPUT row=27 column=1 cycle=9116 global_k=0 block=0 first=1 last=0 x=00800001 w=bf000000
+INPUT row=27 column=1 cycle=9117 global_k=1 block=0 first=0 last=1 x=80800001 w=bf000000
+MUL_READY row=27 column=1 cycle=9124 global_k=0 local_k=0 input_cycle=9116
+MUL_READY row=27 column=1 cycle=9125 global_k=1 local_k=1 input_cycle=9117
+MAC_COMMIT row=27 column=1 cycle=9130 global_k=0 local_k=0 before=00000000 product=80400000 after=80400000
+MAC_COMMIT row=27 column=1 cycle=9135 global_k=1 local_k=1 before=80400000 product=00400000 after=00000000
+BIAS_COMMIT row=27 column=1 cycle=9140 before=00000000 bias=80000000 result=00000000
+INPUT row=27 column=2 cycle=9158 global_k=0 block=0 first=1 last=0 x=00800001 w=3f800000
+INPUT row=27 column=2 cycle=9159 global_k=1 block=0 first=0 last=1 x=80800001 w=3f800000
+MUL_READY row=27 column=2 cycle=9166 global_k=0 local_k=0 input_cycle=9158
+MUL_READY row=27 column=2 cycle=9167 global_k=1 local_k=1 input_cycle=9159
+MAC_COMMIT row=27 column=2 cycle=9172 global_k=0 local_k=0 before=00000000 product=00800001 after=00800001
+MAC_COMMIT row=27 column=2 cycle=9177 global_k=1 local_k=1 before=00800001 product=80800001 after=00000000
+BIAS_COMMIT row=27 column=2 cycle=9182 before=00000000 bias=00000001 result=00000001
+INPUT row=27 column=3 cycle=9200 global_k=0 block=0 first=1 last=0 x=00800001 w=bf800000
+INPUT row=27 column=3 cycle=9201 global_k=1 block=0 first=0 last=1 x=80800001 w=bf800000
+MUL_READY row=27 column=3 cycle=9208 global_k=0 local_k=0 input_cycle=9200
+MUL_READY row=27 column=3 cycle=9209 global_k=1 local_k=1 input_cycle=9201
+MAC_COMMIT row=27 column=3 cycle=9214 global_k=0 local_k=0 before=00000000 product=80800001 after=80800001
+MAC_COMMIT row=27 column=3 cycle=9219 global_k=1 local_k=1 before=80800001 product=00800001 after=00000000
+BIAS_COMMIT row=27 column=3 cycle=9224 before=00000000 bias=80000001 result=80000001
+INPUT row=27 column=4 cycle=9242 global_k=0 block=0 first=1 last=0 x=00800001 w=00000000
+INPUT row=27 column=4 cycle=9243 global_k=1 block=0 first=0 last=1 x=80800001 w=80000000
+MUL_READY row=27 column=4 cycle=9250 global_k=0 local_k=0 input_cycle=9242
+MUL_READY row=27 column=4 cycle=9251 global_k=1 local_k=1 input_cycle=9243
+MAC_COMMIT row=27 column=4 cycle=9256 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=27 column=4 cycle=9261 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=27 column=4 cycle=9266 before=00000000 bias=00000000 result=00000000
+INPUT row=27 column=5 cycle=9284 global_k=0 block=0 first=1 last=0 x=00800001 w=80000000
+INPUT row=27 column=5 cycle=9285 global_k=1 block=0 first=0 last=1 x=80800001 w=00000000
+MUL_READY row=27 column=5 cycle=9292 global_k=0 local_k=0 input_cycle=9284
+MUL_READY row=27 column=5 cycle=9293 global_k=1 local_k=1 input_cycle=9285
+MAC_COMMIT row=27 column=5 cycle=9298 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=27 column=5 cycle=9303 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=27 column=5 cycle=9308 before=00000000 bias=80000000 result=00000000
+INPUT row=27 column=6 cycle=9326 global_k=0 block=0 first=1 last=0 x=00800001 w=00000001
+INPUT row=27 column=6 cycle=9327 global_k=1 block=0 first=0 last=1 x=80800001 w=00000001
+MUL_READY row=27 column=6 cycle=9334 global_k=0 local_k=0 input_cycle=9326
+MUL_READY row=27 column=6 cycle=9335 global_k=1 local_k=1 input_cycle=9327
+MAC_COMMIT row=27 column=6 cycle=9340 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=27 column=6 cycle=9345 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=27 column=6 cycle=9350 before=00000000 bias=00000000 result=00000000
+INPUT row=27 column=7 cycle=9368 global_k=0 block=0 first=1 last=0 x=00800001 w=00800000
+INPUT row=27 column=7 cycle=9369 global_k=1 block=0 first=0 last=1 x=80800001 w=00800000
+MUL_READY row=27 column=7 cycle=9376 global_k=0 local_k=0 input_cycle=9368
+MUL_READY row=27 column=7 cycle=9377 global_k=1 local_k=1 input_cycle=9369
+MAC_COMMIT row=27 column=7 cycle=9382 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=27 column=7 cycle=9387 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=27 column=7 cycle=9392 before=00000000 bias=00000000 result=00000000
+INPUT row=28 column=0 cycle=9410 global_k=0 block=0 first=1 last=0 x=3f800000 w=3f000000
+INPUT row=28 column=0 cycle=9411 global_k=1 block=0 first=0 last=1 x=bf800000 w=3f000000
+MUL_READY row=28 column=0 cycle=9418 global_k=0 local_k=0 input_cycle=9410
+MUL_READY row=28 column=0 cycle=9419 global_k=1 local_k=1 input_cycle=9411
+MAC_COMMIT row=28 column=0 cycle=9424 global_k=0 local_k=0 before=00000000 product=3f000000 after=3f000000
+MAC_COMMIT row=28 column=0 cycle=9429 global_k=1 local_k=1 before=3f000000 product=bf000000 after=00000000
+BIAS_COMMIT row=28 column=0 cycle=9434 before=00000000 bias=00000000 result=00000000
+INPUT row=28 column=1 cycle=9452 global_k=0 block=0 first=1 last=0 x=3f800000 w=bf000000
+INPUT row=28 column=1 cycle=9453 global_k=1 block=0 first=0 last=1 x=bf800000 w=bf000000
+MUL_READY row=28 column=1 cycle=9460 global_k=0 local_k=0 input_cycle=9452
+MUL_READY row=28 column=1 cycle=9461 global_k=1 local_k=1 input_cycle=9453
+MAC_COMMIT row=28 column=1 cycle=9466 global_k=0 local_k=0 before=00000000 product=bf000000 after=bf000000
+MAC_COMMIT row=28 column=1 cycle=9471 global_k=1 local_k=1 before=bf000000 product=3f000000 after=00000000
+BIAS_COMMIT row=28 column=1 cycle=9476 before=00000000 bias=80000000 result=00000000
+INPUT row=28 column=2 cycle=9494 global_k=0 block=0 first=1 last=0 x=3f800000 w=3f800000
+INPUT row=28 column=2 cycle=9495 global_k=1 block=0 first=0 last=1 x=bf800000 w=3f800000
+MUL_READY row=28 column=2 cycle=9502 global_k=0 local_k=0 input_cycle=9494
+MUL_READY row=28 column=2 cycle=9503 global_k=1 local_k=1 input_cycle=9495
+MAC_COMMIT row=28 column=2 cycle=9508 global_k=0 local_k=0 before=00000000 product=3f800000 after=3f800000
+MAC_COMMIT row=28 column=2 cycle=9513 global_k=1 local_k=1 before=3f800000 product=bf800000 after=00000000
+BIAS_COMMIT row=28 column=2 cycle=9518 before=00000000 bias=00000001 result=00000001
+INPUT row=28 column=3 cycle=9536 global_k=0 block=0 first=1 last=0 x=3f800000 w=bf800000
+INPUT row=28 column=3 cycle=9537 global_k=1 block=0 first=0 last=1 x=bf800000 w=bf800000
+MUL_READY row=28 column=3 cycle=9544 global_k=0 local_k=0 input_cycle=9536
+MUL_READY row=28 column=3 cycle=9545 global_k=1 local_k=1 input_cycle=9537
+MAC_COMMIT row=28 column=3 cycle=9550 global_k=0 local_k=0 before=00000000 product=bf800000 after=bf800000
+MAC_COMMIT row=28 column=3 cycle=9555 global_k=1 local_k=1 before=bf800000 product=3f800000 after=00000000
+BIAS_COMMIT row=28 column=3 cycle=9560 before=00000000 bias=80000001 result=80000001
+INPUT row=28 column=4 cycle=9578 global_k=0 block=0 first=1 last=0 x=3f800000 w=00000000
+INPUT row=28 column=4 cycle=9579 global_k=1 block=0 first=0 last=1 x=bf800000 w=80000000
+MUL_READY row=28 column=4 cycle=9586 global_k=0 local_k=0 input_cycle=9578
+MUL_READY row=28 column=4 cycle=9587 global_k=1 local_k=1 input_cycle=9579
+MAC_COMMIT row=28 column=4 cycle=9592 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=28 column=4 cycle=9597 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=28 column=4 cycle=9602 before=00000000 bias=00000000 result=00000000
+INPUT row=28 column=5 cycle=9620 global_k=0 block=0 first=1 last=0 x=3f800000 w=80000000
+INPUT row=28 column=5 cycle=9621 global_k=1 block=0 first=0 last=1 x=bf800000 w=00000000
+MUL_READY row=28 column=5 cycle=9628 global_k=0 local_k=0 input_cycle=9620
+MUL_READY row=28 column=5 cycle=9629 global_k=1 local_k=1 input_cycle=9621
+MAC_COMMIT row=28 column=5 cycle=9634 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=28 column=5 cycle=9639 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=28 column=5 cycle=9644 before=00000000 bias=80000000 result=00000000
+INPUT row=28 column=6 cycle=9662 global_k=0 block=0 first=1 last=0 x=3f800000 w=00000001
+INPUT row=28 column=6 cycle=9663 global_k=1 block=0 first=0 last=1 x=bf800000 w=00000001
+MUL_READY row=28 column=6 cycle=9670 global_k=0 local_k=0 input_cycle=9662
+MUL_READY row=28 column=6 cycle=9671 global_k=1 local_k=1 input_cycle=9663
+MAC_COMMIT row=28 column=6 cycle=9676 global_k=0 local_k=0 before=00000000 product=00000001 after=00000001
+MAC_COMMIT row=28 column=6 cycle=9681 global_k=1 local_k=1 before=00000001 product=80000001 after=00000000
+BIAS_COMMIT row=28 column=6 cycle=9686 before=00000000 bias=00000000 result=00000000
+INPUT row=28 column=7 cycle=9704 global_k=0 block=0 first=1 last=0 x=3f800000 w=00800000
+INPUT row=28 column=7 cycle=9705 global_k=1 block=0 first=0 last=1 x=bf800000 w=00800000
+MUL_READY row=28 column=7 cycle=9712 global_k=0 local_k=0 input_cycle=9704
+MUL_READY row=28 column=7 cycle=9713 global_k=1 local_k=1 input_cycle=9705
+MAC_COMMIT row=28 column=7 cycle=9718 global_k=0 local_k=0 before=00000000 product=00800000 after=00800000
+MAC_COMMIT row=28 column=7 cycle=9723 global_k=1 local_k=1 before=00800000 product=80800000 after=00000000
+BIAS_COMMIT row=28 column=7 cycle=9728 before=00000000 bias=00000000 result=00000000
+INPUT row=29 column=0 cycle=9746 global_k=0 block=0 first=1 last=0 x=bf800000 w=3f000000
+INPUT row=29 column=0 cycle=9747 global_k=1 block=0 first=0 last=1 x=3f800000 w=3f000000
+MUL_READY row=29 column=0 cycle=9754 global_k=0 local_k=0 input_cycle=9746
+MUL_READY row=29 column=0 cycle=9755 global_k=1 local_k=1 input_cycle=9747
+MAC_COMMIT row=29 column=0 cycle=9760 global_k=0 local_k=0 before=00000000 product=bf000000 after=bf000000
+MAC_COMMIT row=29 column=0 cycle=9765 global_k=1 local_k=1 before=bf000000 product=3f000000 after=00000000
+BIAS_COMMIT row=29 column=0 cycle=9770 before=00000000 bias=00000000 result=00000000
+INPUT row=29 column=1 cycle=9788 global_k=0 block=0 first=1 last=0 x=bf800000 w=bf000000
+INPUT row=29 column=1 cycle=9789 global_k=1 block=0 first=0 last=1 x=3f800000 w=bf000000
+MUL_READY row=29 column=1 cycle=9796 global_k=0 local_k=0 input_cycle=9788
+MUL_READY row=29 column=1 cycle=9797 global_k=1 local_k=1 input_cycle=9789
+MAC_COMMIT row=29 column=1 cycle=9802 global_k=0 local_k=0 before=00000000 product=3f000000 after=3f000000
+MAC_COMMIT row=29 column=1 cycle=9807 global_k=1 local_k=1 before=3f000000 product=bf000000 after=00000000
+BIAS_COMMIT row=29 column=1 cycle=9812 before=00000000 bias=80000000 result=00000000
+INPUT row=29 column=2 cycle=9830 global_k=0 block=0 first=1 last=0 x=bf800000 w=3f800000
+INPUT row=29 column=2 cycle=9831 global_k=1 block=0 first=0 last=1 x=3f800000 w=3f800000
+MUL_READY row=29 column=2 cycle=9838 global_k=0 local_k=0 input_cycle=9830
+MUL_READY row=29 column=2 cycle=9839 global_k=1 local_k=1 input_cycle=9831
+MAC_COMMIT row=29 column=2 cycle=9844 global_k=0 local_k=0 before=00000000 product=bf800000 after=bf800000
+MAC_COMMIT row=29 column=2 cycle=9849 global_k=1 local_k=1 before=bf800000 product=3f800000 after=00000000
+BIAS_COMMIT row=29 column=2 cycle=9854 before=00000000 bias=00000001 result=00000001
+INPUT row=29 column=3 cycle=9872 global_k=0 block=0 first=1 last=0 x=bf800000 w=bf800000
+INPUT row=29 column=3 cycle=9873 global_k=1 block=0 first=0 last=1 x=3f800000 w=bf800000
+MUL_READY row=29 column=3 cycle=9880 global_k=0 local_k=0 input_cycle=9872
+MUL_READY row=29 column=3 cycle=9881 global_k=1 local_k=1 input_cycle=9873
+MAC_COMMIT row=29 column=3 cycle=9886 global_k=0 local_k=0 before=00000000 product=3f800000 after=3f800000
+MAC_COMMIT row=29 column=3 cycle=9891 global_k=1 local_k=1 before=3f800000 product=bf800000 after=00000000
+BIAS_COMMIT row=29 column=3 cycle=9896 before=00000000 bias=80000001 result=80000001
+INPUT row=29 column=4 cycle=9914 global_k=0 block=0 first=1 last=0 x=bf800000 w=00000000
+INPUT row=29 column=4 cycle=9915 global_k=1 block=0 first=0 last=1 x=3f800000 w=80000000
+MUL_READY row=29 column=4 cycle=9922 global_k=0 local_k=0 input_cycle=9914
+MUL_READY row=29 column=4 cycle=9923 global_k=1 local_k=1 input_cycle=9915
+MAC_COMMIT row=29 column=4 cycle=9928 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=29 column=4 cycle=9933 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=29 column=4 cycle=9938 before=00000000 bias=00000000 result=00000000
+INPUT row=29 column=5 cycle=9956 global_k=0 block=0 first=1 last=0 x=bf800000 w=80000000
+INPUT row=29 column=5 cycle=9957 global_k=1 block=0 first=0 last=1 x=3f800000 w=00000000
+MUL_READY row=29 column=5 cycle=9964 global_k=0 local_k=0 input_cycle=9956
+MUL_READY row=29 column=5 cycle=9965 global_k=1 local_k=1 input_cycle=9957
+MAC_COMMIT row=29 column=5 cycle=9970 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=29 column=5 cycle=9975 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=29 column=5 cycle=9980 before=00000000 bias=80000000 result=00000000
+INPUT row=29 column=6 cycle=9998 global_k=0 block=0 first=1 last=0 x=bf800000 w=00000001
+INPUT row=29 column=6 cycle=9999 global_k=1 block=0 first=0 last=1 x=3f800000 w=00000001
+MUL_READY row=29 column=6 cycle=10006 global_k=0 local_k=0 input_cycle=9998
+MUL_READY row=29 column=6 cycle=10007 global_k=1 local_k=1 input_cycle=9999
+MAC_COMMIT row=29 column=6 cycle=10012 global_k=0 local_k=0 before=00000000 product=80000001 after=80000001
+MAC_COMMIT row=29 column=6 cycle=10017 global_k=1 local_k=1 before=80000001 product=00000001 after=00000000
+BIAS_COMMIT row=29 column=6 cycle=10022 before=00000000 bias=00000000 result=00000000
+INPUT row=29 column=7 cycle=10040 global_k=0 block=0 first=1 last=0 x=bf800000 w=00800000
+INPUT row=29 column=7 cycle=10041 global_k=1 block=0 first=0 last=1 x=3f800000 w=00800000
+MUL_READY row=29 column=7 cycle=10048 global_k=0 local_k=0 input_cycle=10040
+MUL_READY row=29 column=7 cycle=10049 global_k=1 local_k=1 input_cycle=10041
+MAC_COMMIT row=29 column=7 cycle=10054 global_k=0 local_k=0 before=00000000 product=80800000 after=80800000
+MAC_COMMIT row=29 column=7 cycle=10059 global_k=1 local_k=1 before=80800000 product=00800000 after=00000000
+BIAS_COMMIT row=29 column=7 cycle=10064 before=00000000 bias=00000000 result=00000000
+INPUT row=30 column=0 cycle=10082 global_k=0 block=0 first=1 last=0 x=3f800001 w=3f000000
+INPUT row=30 column=0 cycle=10083 global_k=1 block=0 first=0 last=1 x=bf800001 w=3f000000
+MUL_READY row=30 column=0 cycle=10090 global_k=0 local_k=0 input_cycle=10082
+MUL_READY row=30 column=0 cycle=10091 global_k=1 local_k=1 input_cycle=10083
+MAC_COMMIT row=30 column=0 cycle=10096 global_k=0 local_k=0 before=00000000 product=3f000001 after=3f000001
+MAC_COMMIT row=30 column=0 cycle=10101 global_k=1 local_k=1 before=3f000001 product=bf000001 after=00000000
+BIAS_COMMIT row=30 column=0 cycle=10106 before=00000000 bias=00000000 result=00000000
+INPUT row=30 column=1 cycle=10124 global_k=0 block=0 first=1 last=0 x=3f800001 w=bf000000
+INPUT row=30 column=1 cycle=10125 global_k=1 block=0 first=0 last=1 x=bf800001 w=bf000000
+MUL_READY row=30 column=1 cycle=10132 global_k=0 local_k=0 input_cycle=10124
+MUL_READY row=30 column=1 cycle=10133 global_k=1 local_k=1 input_cycle=10125
+MAC_COMMIT row=30 column=1 cycle=10138 global_k=0 local_k=0 before=00000000 product=bf000001 after=bf000001
+MAC_COMMIT row=30 column=1 cycle=10143 global_k=1 local_k=1 before=bf000001 product=3f000001 after=00000000
+BIAS_COMMIT row=30 column=1 cycle=10148 before=00000000 bias=80000000 result=00000000
+INPUT row=30 column=2 cycle=10166 global_k=0 block=0 first=1 last=0 x=3f800001 w=3f800000
+INPUT row=30 column=2 cycle=10167 global_k=1 block=0 first=0 last=1 x=bf800001 w=3f800000
+MUL_READY row=30 column=2 cycle=10174 global_k=0 local_k=0 input_cycle=10166
+MUL_READY row=30 column=2 cycle=10175 global_k=1 local_k=1 input_cycle=10167
+MAC_COMMIT row=30 column=2 cycle=10180 global_k=0 local_k=0 before=00000000 product=3f800001 after=3f800001
+MAC_COMMIT row=30 column=2 cycle=10185 global_k=1 local_k=1 before=3f800001 product=bf800001 after=00000000
+BIAS_COMMIT row=30 column=2 cycle=10190 before=00000000 bias=00000001 result=00000001
+INPUT row=30 column=3 cycle=10208 global_k=0 block=0 first=1 last=0 x=3f800001 w=bf800000
+INPUT row=30 column=3 cycle=10209 global_k=1 block=0 first=0 last=1 x=bf800001 w=bf800000
+MUL_READY row=30 column=3 cycle=10216 global_k=0 local_k=0 input_cycle=10208
+MUL_READY row=30 column=3 cycle=10217 global_k=1 local_k=1 input_cycle=10209
+MAC_COMMIT row=30 column=3 cycle=10222 global_k=0 local_k=0 before=00000000 product=bf800001 after=bf800001
+MAC_COMMIT row=30 column=3 cycle=10227 global_k=1 local_k=1 before=bf800001 product=3f800001 after=00000000
+BIAS_COMMIT row=30 column=3 cycle=10232 before=00000000 bias=80000001 result=80000001
+INPUT row=30 column=4 cycle=10250 global_k=0 block=0 first=1 last=0 x=3f800001 w=00000000
+INPUT row=30 column=4 cycle=10251 global_k=1 block=0 first=0 last=1 x=bf800001 w=80000000
+MUL_READY row=30 column=4 cycle=10258 global_k=0 local_k=0 input_cycle=10250
+MUL_READY row=30 column=4 cycle=10259 global_k=1 local_k=1 input_cycle=10251
+MAC_COMMIT row=30 column=4 cycle=10264 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=30 column=4 cycle=10269 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=30 column=4 cycle=10274 before=00000000 bias=00000000 result=00000000
+INPUT row=30 column=5 cycle=10292 global_k=0 block=0 first=1 last=0 x=3f800001 w=80000000
+INPUT row=30 column=5 cycle=10293 global_k=1 block=0 first=0 last=1 x=bf800001 w=00000000
+MUL_READY row=30 column=5 cycle=10300 global_k=0 local_k=0 input_cycle=10292
+MUL_READY row=30 column=5 cycle=10301 global_k=1 local_k=1 input_cycle=10293
+MAC_COMMIT row=30 column=5 cycle=10306 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=30 column=5 cycle=10311 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=30 column=5 cycle=10316 before=00000000 bias=80000000 result=00000000
+INPUT row=30 column=6 cycle=10334 global_k=0 block=0 first=1 last=0 x=3f800001 w=00000001
+INPUT row=30 column=6 cycle=10335 global_k=1 block=0 first=0 last=1 x=bf800001 w=00000001
+MUL_READY row=30 column=6 cycle=10342 global_k=0 local_k=0 input_cycle=10334
+MUL_READY row=30 column=6 cycle=10343 global_k=1 local_k=1 input_cycle=10335
+MAC_COMMIT row=30 column=6 cycle=10348 global_k=0 local_k=0 before=00000000 product=00000001 after=00000001
+MAC_COMMIT row=30 column=6 cycle=10353 global_k=1 local_k=1 before=00000001 product=80000001 after=00000000
+BIAS_COMMIT row=30 column=6 cycle=10358 before=00000000 bias=00000000 result=00000000
+INPUT row=30 column=7 cycle=10376 global_k=0 block=0 first=1 last=0 x=3f800001 w=00800000
+INPUT row=30 column=7 cycle=10377 global_k=1 block=0 first=0 last=1 x=bf800001 w=00800000
+MUL_READY row=30 column=7 cycle=10384 global_k=0 local_k=0 input_cycle=10376
+MUL_READY row=30 column=7 cycle=10385 global_k=1 local_k=1 input_cycle=10377
+MAC_COMMIT row=30 column=7 cycle=10390 global_k=0 local_k=0 before=00000000 product=00800001 after=00800001
+MAC_COMMIT row=30 column=7 cycle=10395 global_k=1 local_k=1 before=00800001 product=80800001 after=00000000
+BIAS_COMMIT row=30 column=7 cycle=10400 before=00000000 bias=00000000 result=00000000
+INPUT row=31 column=0 cycle=10418 global_k=0 block=0 first=1 last=0 x=3f7fffff w=3f000000
+INPUT row=31 column=0 cycle=10419 global_k=1 block=0 first=0 last=1 x=bf7fffff w=3f000000
+MUL_READY row=31 column=0 cycle=10426 global_k=0 local_k=0 input_cycle=10418
+MUL_READY row=31 column=0 cycle=10427 global_k=1 local_k=1 input_cycle=10419
+MAC_COMMIT row=31 column=0 cycle=10432 global_k=0 local_k=0 before=00000000 product=3effffff after=3effffff
+MAC_COMMIT row=31 column=0 cycle=10437 global_k=1 local_k=1 before=3effffff product=beffffff after=00000000
+BIAS_COMMIT row=31 column=0 cycle=10442 before=00000000 bias=00000000 result=00000000
+INPUT row=31 column=1 cycle=10460 global_k=0 block=0 first=1 last=0 x=3f7fffff w=bf000000
+INPUT row=31 column=1 cycle=10461 global_k=1 block=0 first=0 last=1 x=bf7fffff w=bf000000
+MUL_READY row=31 column=1 cycle=10468 global_k=0 local_k=0 input_cycle=10460
+MUL_READY row=31 column=1 cycle=10469 global_k=1 local_k=1 input_cycle=10461
+MAC_COMMIT row=31 column=1 cycle=10474 global_k=0 local_k=0 before=00000000 product=beffffff after=beffffff
+MAC_COMMIT row=31 column=1 cycle=10479 global_k=1 local_k=1 before=beffffff product=3effffff after=00000000
+BIAS_COMMIT row=31 column=1 cycle=10484 before=00000000 bias=80000000 result=00000000
+INPUT row=31 column=2 cycle=10502 global_k=0 block=0 first=1 last=0 x=3f7fffff w=3f800000
+INPUT row=31 column=2 cycle=10503 global_k=1 block=0 first=0 last=1 x=bf7fffff w=3f800000
+MUL_READY row=31 column=2 cycle=10510 global_k=0 local_k=0 input_cycle=10502
+MUL_READY row=31 column=2 cycle=10511 global_k=1 local_k=1 input_cycle=10503
+MAC_COMMIT row=31 column=2 cycle=10516 global_k=0 local_k=0 before=00000000 product=3f7fffff after=3f7fffff
+MAC_COMMIT row=31 column=2 cycle=10521 global_k=1 local_k=1 before=3f7fffff product=bf7fffff after=00000000
+BIAS_COMMIT row=31 column=2 cycle=10526 before=00000000 bias=00000001 result=00000001
+INPUT row=31 column=3 cycle=10544 global_k=0 block=0 first=1 last=0 x=3f7fffff w=bf800000
+INPUT row=31 column=3 cycle=10545 global_k=1 block=0 first=0 last=1 x=bf7fffff w=bf800000
+MUL_READY row=31 column=3 cycle=10552 global_k=0 local_k=0 input_cycle=10544
+MUL_READY row=31 column=3 cycle=10553 global_k=1 local_k=1 input_cycle=10545
+MAC_COMMIT row=31 column=3 cycle=10558 global_k=0 local_k=0 before=00000000 product=bf7fffff after=bf7fffff
+MAC_COMMIT row=31 column=3 cycle=10563 global_k=1 local_k=1 before=bf7fffff product=3f7fffff after=00000000
+BIAS_COMMIT row=31 column=3 cycle=10568 before=00000000 bias=80000001 result=80000001
+INPUT row=31 column=4 cycle=10586 global_k=0 block=0 first=1 last=0 x=3f7fffff w=00000000
+INPUT row=31 column=4 cycle=10587 global_k=1 block=0 first=0 last=1 x=bf7fffff w=80000000
+MUL_READY row=31 column=4 cycle=10594 global_k=0 local_k=0 input_cycle=10586
+MUL_READY row=31 column=4 cycle=10595 global_k=1 local_k=1 input_cycle=10587
+MAC_COMMIT row=31 column=4 cycle=10600 global_k=0 local_k=0 before=00000000 product=00000000 after=00000000
+MAC_COMMIT row=31 column=4 cycle=10605 global_k=1 local_k=1 before=00000000 product=00000000 after=00000000
+BIAS_COMMIT row=31 column=4 cycle=10610 before=00000000 bias=00000000 result=00000000
+INPUT row=31 column=5 cycle=10628 global_k=0 block=0 first=1 last=0 x=3f7fffff w=80000000
+INPUT row=31 column=5 cycle=10629 global_k=1 block=0 first=0 last=1 x=bf7fffff w=00000000
+MUL_READY row=31 column=5 cycle=10636 global_k=0 local_k=0 input_cycle=10628
+MUL_READY row=31 column=5 cycle=10637 global_k=1 local_k=1 input_cycle=10629
+MAC_COMMIT row=31 column=5 cycle=10642 global_k=0 local_k=0 before=00000000 product=80000000 after=00000000
+MAC_COMMIT row=31 column=5 cycle=10647 global_k=1 local_k=1 before=00000000 product=80000000 after=00000000
+BIAS_COMMIT row=31 column=5 cycle=10652 before=00000000 bias=80000000 result=00000000
+INPUT row=31 column=6 cycle=10670 global_k=0 block=0 first=1 last=0 x=3f7fffff w=00000001
+INPUT row=31 column=6 cycle=10671 global_k=1 block=0 first=0 last=1 x=bf7fffff w=00000001
+MUL_READY row=31 column=6 cycle=10678 global_k=0 local_k=0 input_cycle=10670
+MUL_READY row=31 column=6 cycle=10679 global_k=1 local_k=1 input_cycle=10671
+MAC_COMMIT row=31 column=6 cycle=10684 global_k=0 local_k=0 before=00000000 product=00000001 after=00000001
+MAC_COMMIT row=31 column=6 cycle=10689 global_k=1 local_k=1 before=00000001 product=80000001 after=00000000
+BIAS_COMMIT row=31 column=6 cycle=10694 before=00000000 bias=00000000 result=00000000
+INPUT row=31 column=7 cycle=10712 global_k=0 block=0 first=1 last=0 x=3f7fffff w=00800000
+INPUT row=31 column=7 cycle=10713 global_k=1 block=0 first=0 last=1 x=bf7fffff w=00800000
+MUL_READY row=31 column=7 cycle=10720 global_k=0 local_k=0 input_cycle=10712
+MUL_READY row=31 column=7 cycle=10721 global_k=1 local_k=1 input_cycle=10713
+MAC_COMMIT row=31 column=7 cycle=10726 global_k=0 local_k=0 before=00000000 product=00800000 after=00800000
+MAC_COMMIT row=31 column=7 cycle=10731 global_k=1 local_k=1 before=00800000 product=80800000 after=00000000
+BIAS_COMMIT row=31 column=7 cycle=10736 before=00000000 bias=00000000 result=00000000
+fp32_pe_special_tb PASS case=finite_boundaries_hardware_added mac=512 bias=256 actual_block_boundaries=0
+sources/tb/fp32_pe_special_tb.sv:220: $finish called at 107540000 (1ps)
