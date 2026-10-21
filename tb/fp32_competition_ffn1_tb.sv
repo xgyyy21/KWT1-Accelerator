@@ -34,6 +34,33 @@ module fp32_competition_ffn1_tb;
   integer write_count = 0;
   integer i, r, c, guard;
   integer observed_results = 0;
+  integer progress_cycle = 0;
+  integer last_tile_seen = -1;
+  integer last_write_seen = 0;
+
+  // Long full-layer runs must expose whether the scheduler is advancing or
+  // stuck in one tile.  This is diagnostic output only; it does not affect
+  // the protocol or result checks.
+  always @(posedge clk) begin
+    if (rst_n) begin
+      progress_cycle = progress_cycle + 1;
+      if (tile_index !== last_tile_seen) begin
+        $display("PROGRESS cycle=%0d tile=%0d row=%0d col=%0d k_block=%0d writes=%0d busy=%0d error=%0d",
+                 progress_cycle, tile_index, row_base, col_base,
+                 k_block_index, write_count, tile_busy, accel_error);
+        last_tile_seen = tile_index;
+      end
+      if (write_count >= last_write_seen + 1024) begin
+        $display("PROGRESS cycle=%0d write_halfwords=%0d tile=%0d",
+                 progress_cycle, write_count, tile_index);
+        last_write_seen = write_count;
+      end
+      if ((progress_cycle % 100000) == 0)
+        $display("HEARTBEAT cycle=%0d tile=%0d writes=%0d busy=%0d done=%0d error=%0d",
+                 progress_cycle, tile_index, write_count, tile_busy,
+                 accel_done, accel_error);
+    end
+  end
 
   fp32_accelerator_top #(.STRICT_COMPETITION_SHAPES(1'b1)) dut (
     .clk(clk), .rst_n(rst_n),
@@ -125,6 +152,9 @@ module fp32_competition_ffn1_tb;
     nice_write_reg(8'h18, K);
     nice_write_reg(8'h1c, N);
     write_count = 0;
+    progress_cycle = 0;
+    last_tile_seen = -1;
+    last_write_seen = 0;
     nice_write_reg(8'h00, 32'd1);
 
     guard = 0;

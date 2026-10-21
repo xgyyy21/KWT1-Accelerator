@@ -8,6 +8,7 @@
 - `handoff/final_software_materials_2026-10-20/evidence/word_readback.csv`：存储读回记录。
 - `handoff/final_software_materials_2026-10-20/evidence/checkpoint_trace.csv`：512 写、512 读请求、512 读响应。
 - `handoff/final_software_materials_2026-10-20/evidence/checkpoint_result.csv`：当前 checkpoint 汇总结果。
+- `handoff/final_software_materials_2026-10-20/evidence/checkpoint_result_per_pe.csv`：实际 RTL checkpoint 完成后的 128 个 PE 逐项结果。
 - `handoff/final_software_materials_2026-10-20/docs/memory_layout_v1_internal.md`：内部存储布局。
 - `handoff/final_software_materials_2026-10-20/docs/control_interface_v1_internal.md`：内部控制接口。
 - `handoff/final_software_materials_2026-10-20/docs/special_value_and_error_policy_v1.md`：特殊值和错误策略草案。
@@ -16,6 +17,8 @@
 ## 当前验证边界
 
 - 4 组阵列轨迹共 13,531 个事件已由软件侧逐位核验。
+- checkpoint testbench 已实际输出 128 个唯一 `(row,column)` 结果；不是软件自行生成的期望轨迹。
+- 单个 8×16 tile、K=64 完整顶层路径已实际通过，128 个输出和 256 个半字写回均检查通过。
 - 关键单 PE、阵列、K=256 小任务、checkpoint 和协议中立接口 testbench 已有回归日志。
 - `tb/fp32_competition_ffn1_tb.sv` 已编译，但完整 `99×64 × 64×256` 仿真本轮没有完成，不能标记为整层 PASS。
 - checkpoint 当前是阵列检查点实验，尚未接入正式 DMA/FSM/顶层执行链。

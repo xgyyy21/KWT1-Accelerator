@@ -7,6 +7,7 @@
 1. 19 列阵列轨迹：`evidence/pe_trace.csv`，来源包为 `array_pe_trace_2026-10-20_v2.zip`。
 2. 存储读回记录：`evidence/word_readback.csv`。
 3. 阵列级部分和 SRAM 检查点：`evidence/checkpoint_trace.csv` 和 `evidence/checkpoint_result.csv`，完整包为 `partial_sum_checkpoint_2026-10-20_v4.zip`。
+   新增逐 PE 实际结果：`evidence/checkpoint_result_per_pe.csv`（128 行，含 `cycle,row,column,result_bits`）。
 4. 内部存储布局：`docs/memory_layout_v1_internal.md`。
 5. 内部控制接口：`docs/control_interface_v1_internal.md`。
 6. 特殊值和错误策略草案：`docs/special_value_and_error_policy_v1.md`。
@@ -16,6 +17,8 @@
 
 - 阵列 4 组共 13,531 个事件：软件侧已逐位核验 13,531/13,531。
 - 8×16 SRAM checkpoint：512 写、512 读请求、512 读响应，恢复 128 个 PE 后继续计算，128 个结果正确。
+- 上述 128 个结果已从实际 RTL checkpoint testbench 的 `result_valid` 时刻逐 PE 写出，不是软件自行生成的期望轨迹；SHA-256 见 `SHA256SUMS.txt`。
+- 单个 8×16 tile、K=64 的完整顶层路径已实际仿真通过：128 个输出、256 个半字写回，日志见 `evidence/one_tile_k64/`。
 - 协议中立接口三次小任务：9 个输出正确，背压和 DONE 顺序通过。
 - 关键回归 testbench 均已编译并通过；完整清单见 `evidence/regression_20261020_summary.json`。
 
