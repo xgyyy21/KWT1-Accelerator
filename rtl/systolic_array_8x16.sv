@@ -3,14 +3,12 @@ module systolic_array_8x16 #(
   parameter int ACC_WIDTH = 2 * DATA_WIDTH,
   parameter int ROWS = 8,
   parameter int COLS = 16,
-  parameter int K = 64,
-  parameter bit SIGNED_DATA = 1'b1,
-  parameter bit FP32_MODE = 1'b0
+  parameter int K = 4,
+  parameter bit SIGNED_DATA = 1'b1
 ) (
   input logic clk, input logic rst_n, input logic start, input logic in_valid,
   input logic [DATA_WIDTH-1:0] a_left [ROWS],
   input logic [DATA_WIDTH-1:0] b_top [COLS],
-  input logic [31:0] bias_data [COLS],
   output logic busy, output logic done, output logic result_valid,
   output logic [ACC_WIDTH-1:0] result [ROWS][COLS]
 );
@@ -46,13 +44,10 @@ module systolic_array_8x16 #(
     end
   endgenerate
 
-  pe_array_8x16 #(.DATA_WIDTH(DATA_WIDTH), .ACC_WIDTH(ACC_WIDTH), .ROWS(ROWS),
-                  .COLS(COLS), .SIGNED_DATA(SIGNED_DATA), .FP32_MODE(FP32_MODE),
-                  .K(K)) u_pe_array (
+  pe_array_8x16 #(.DATA_WIDTH(DATA_WIDTH), .ACC_WIDTH(ACC_WIDTH), .ROWS(ROWS), .COLS(COLS), .SIGNED_DATA(SIGNED_DATA)) u_pe_array (
     .clk(clk), .rst_n(rst_n), .clear_acc(accept_start), .in_valid(pe_valid),
     .first_valid(pe_first), .last_valid(pe_last),
-    .a_data(a_pipe), .b_data(b_pipe), .bias_data(bias_data),
-    .result_valid(pe_result_valid),
+    .a_data(a_pipe), .b_data(b_pipe), .result_valid(pe_result_valid),
     .result(pe_result), .busy(pe_busy)
   );
 

@@ -23,7 +23,6 @@ module systolic_tile_engine #(
 );
   logic array_busy, array_done, array_result_valid;
   logic [ACC_WIDTH-1:0] array_result [ROWS][COLS];
-  logic [31:0] zero_bias [COLS];
   logic collector_busy, collector_done;
   logic collector_start;
   logic array_start;
@@ -34,18 +33,12 @@ module systolic_tile_engine #(
   assign busy = array_busy | collector_busy;
   assign done = collector_done;
 
-  genvar bias_col;
-  generate for (bias_col=0; bias_col<COLS; bias_col=bias_col+1) begin : GEN_ZERO_BIAS
-    assign zero_bias[bias_col] = 32'b0;
-  end endgenerate
-
   systolic_array_8x16 #(
     .DATA_WIDTH(DATA_WIDTH), .ACC_WIDTH(ACC_WIDTH),
     .ROWS(ROWS), .COLS(COLS), .K(K)
   ) u_array (
     .clk(clk), .rst_n(rst_n), .start(array_start), .in_valid(in_valid),
-    .a_left(a_left), .b_top(b_top), .bias_data(zero_bias),
-    .busy(array_busy), .done(array_done),
+    .a_left(a_left), .b_top(b_top), .busy(array_busy), .done(array_done),
     .result_valid(array_result_valid), .result(array_result)
   );
 

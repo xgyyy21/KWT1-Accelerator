@@ -27,6 +27,12 @@ module fp32_pe_mac #(
   input  logic [31:0] a_in,
   input  logic [31:0] b_in,
   input  logic [31:0] bias_in,
+  input  logic checkpoint_restore,
+  input  logic [31:0] checkpoint_accumulator,
+  input  logic [31:0] checkpoint_bias,
+  output logic [31:0] checkpoint_accumulator_out,
+  output logic [31:0] checkpoint_bias_out,
+  output logic [2:0] checkpoint_state_out,
   output logic result_valid,
   output logic [31:0] result,
   output logic busy,
@@ -83,6 +89,9 @@ module fp32_pe_mac #(
   logic        add_valid_pipe   [0:ADD_LATENCY-1];
 
   assign busy = (state != S_IDLE) && (state != S_DONE);
+  assign checkpoint_accumulator_out = accumulator;
+  assign checkpoint_bias_out = bias_reg;
+  assign checkpoint_state_out = state;
 
   initial begin
     if (K <= 0 || MUL_LATENCY != 8 || ADD_LATENCY != 4)
@@ -293,6 +302,27 @@ module fp32_pe_mac #(
             end
           end
         end
+      end
+
+      // Checkpoint restore has priority over ordinary pipeline advancement.
+      // The controller only asserts it after the arithmetic has been reset
+      // and all SRAM words for this PE have been read back.
+      if (checkpoint_restore) begin
+        state          <= S_WAIT_BLOCK;
+        accumulator    <= checkpoint_accumulator;
+        bias_reg       <= checkpoint_bias;
+        input_count    <= 16'd0;
+        expected_count <= 16'd0;
+        add_index      <= 16'd0;
+        final_block    <= 1'b0;
+        add_busy       <= 1'b0;
+        result         <= 32'd0;
+        result_valid   <= 1'b0;
+        done           <= 1'b0;
+        for (i = 0; i < MUL_LATENCY; i = i + 1)
+          mul_valid_pipe[i] <= 1'b0;
+        for (i = 0; i < ADD_LATENCY; i = i + 1)
+          add_valid_pipe[i] <= 1'b0;
       end
     end
   end

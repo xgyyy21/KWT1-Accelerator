@@ -6,17 +6,10 @@ module pe_array_8x16_tb;
   logic valid[R][C], first_v[R][C], last_v[R][C];
   logic [DW-1:0] a[R][C], b[R][C];
   logic rv[R][C], busy[R][C]; logic [AW-1:0] result[R][C];
-  logic [31:0] bias_data[C];
-  logic trace_valid[R][C], trace_bias_valid[R][C];
-  logic [31:0] trace_cycle[R][C], trace_x_bits[R][C], trace_w_bits[R][C];
-  logic [31:0] trace_acc_before_bits[R][C], trace_product_bits[R][C];
-  logic [31:0] trace_acc_after_bits[R][C], trace_bias_bits[R][C];
-  logic [15:0] trace_k[R][C];
   integer i,j;
   pe_array_8x16 #(.DATA_WIDTH(DW),.ACC_WIDTH(AW),.ROWS(R),.COLS(C)) dut(.*,
     .in_valid(valid), .first_valid(first_v), .last_valid(last_v), .a_data(a), .b_data(b), .result_valid(rv));
   initial begin
-    for(j=0;j<C;j=j+1) bias_data[j]=0;
     for(i=0;i<R;i=i+1) for(j=0;j<C;j=j+1) begin valid[i][j]=0; first_v[i][j]=0; last_v[i][j]=0; a[i][j]=3; b[i][j]=4; end
     repeat(2) @(negedge clk); rst_n=1;
     @(negedge clk); for(i=0;i<R;i=i+1) for(j=0;j<C;j=j+1) begin valid[i][j]=1; first_v[i][j]=1; end

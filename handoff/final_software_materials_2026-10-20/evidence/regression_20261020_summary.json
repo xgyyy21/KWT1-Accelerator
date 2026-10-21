@@ -1,0 +1,67 @@
+﻿{
+    "date":  "2026-10-20",
+    "simulator":  "Icarus Verilog/vvp from D:/competition/.tools/iverilog/bin",
+    "status":  "PASS_WITH_EXPLICIT_UNTESTED",
+    "tests":  [
+                  {
+                      "compile":  "PASS",
+                      "run":  "PASS",
+                      "name":  "fp32_math_boundary_tb",
+                      "note":  "finite arithmetic boundary vectors"
+                  },
+                  {
+                      "compile":  "PASS",
+                      "run":  "PASS",
+                      "name":  "fp32_pe_special_tb",
+                      "note":  "PE special/finite validation"
+                  },
+                  {
+                      "compile":  "PASS",
+                      "run":  "PASS",
+                      "name":  "fp32_pe_array_8x16_tb",
+                      "note":  "8x16 array"
+                  },
+                  {
+                      "compile":  "PASS",
+                      "run":  "PASS",
+                      "name":  "fp32_pe_array_k64_tb",
+                      "note":  "K=64 register continuation"
+                  },
+                  {
+                      "compile":  "PASS",
+                      "run":  "PASS",
+                      "name":  "fp32_tile_kblock_load_compute_k256_tb",
+                      "note":  "8 K-block K=256 writeback"
+                  },
+                  {
+                      "compile":  "PASS",
+                      "run":  "PASS",
+                      "name":  "fp32_array_checkpoint_tb",
+                      "note":  "512 SRAM writes + 512 reads + 128 restores"
+                  },
+                  {
+                      "compile":  "PASS",
+                      "run":  "PASS",
+                      "name":  "fp32_matrix_tile_scheduler_tb",
+                      "note":  "competition shape scheduler"
+                  },
+                  {
+                      "compile":  "PASS",
+                      "run":  "PASS",
+                      "name":  "fp32_matrix_block_controller_tb",
+                      "note":  "block controller"
+                  },
+                  {
+                      "compile":  "PASS",
+                      "run":  "PASS",
+                      "name":  "interface_v1_top_tb",
+                      "note":  "three protocol-neutral jobs, backpressure and DONE ordering"
+                  },
+                  {
+                      "compile":  "PASS",
+                      "run":  "NOT_COMPLETED",
+                      "name":  "fp32_competition_ffn1_tb",
+                      "note":  "full-size 99x64x256 top simulation launched; no PASS/FAIL after \u003e200 s CPU, manually stopped"
+                  }
+              ]
+}

@@ -10,7 +10,6 @@ module systolic_array_8x16_tb;
   logic rst_n = 0, start = 0, in_valid = 0;
   logic [DW-1:0] a_left [ROWS];
   logic [DW-1:0] b_top [COLS];
-  logic [31:0] bias_data [COLS];
   logic busy, done, result_valid;
   logic [AW-1:0] result [ROWS][COLS];
   integer i, j, t;
@@ -20,7 +19,6 @@ module systolic_array_8x16_tb;
   initial begin
     for (i=0; i<ROWS; i=i+1) a_left[i] = 0;
     for (j=0; j<COLS; j=j+1) b_top[j] = 0;
-    for (j=0; j<COLS; j=j+1) bias_data[j] = 0;
     repeat (2) @(negedge clk);
     rst_n = 1;
     @(negedge clk); start = 1;

@@ -26,6 +26,10 @@ module fp32_pe_hand_2x2_tb;
   logic [31:0] a_in = 32'b0;
   logic [31:0] b_in = 32'b0;
   logic [31:0] bias_in = 32'b0;
+  logic checkpoint_restore = 1'b0;
+  logic [31:0] checkpoint_accumulator = 32'd0, checkpoint_bias = 32'd0;
+  wire [31:0] checkpoint_accumulator_out, checkpoint_bias_out;
+  wire [2:0] checkpoint_state_out;
 
   logic result_valid;
   logic [31:0] result;
@@ -52,6 +56,9 @@ module fp32_pe_hand_2x2_tb;
     .clk(clk), .rst_n(rst_n), .enable(enable), .clear_acc(clear_acc),
     .task_first(task_first), .task_last(task_last), .in_valid(in_valid),
     .a_in(a_in), .b_in(b_in), .bias_in(bias_in),
+    .checkpoint_restore(checkpoint_restore), .checkpoint_accumulator(checkpoint_accumulator),
+    .checkpoint_bias(checkpoint_bias), .checkpoint_accumulator_out(checkpoint_accumulator_out),
+    .checkpoint_bias_out(checkpoint_bias_out), .checkpoint_state_out(checkpoint_state_out),
     .result_valid(result_valid), .result(result), .busy(busy), .done(done),
     .trace_valid(trace_valid), .trace_cycle(trace_cycle), .trace_k(trace_k),
     .trace_x_bits(trace_x_bits), .trace_w_bits(trace_w_bits),
