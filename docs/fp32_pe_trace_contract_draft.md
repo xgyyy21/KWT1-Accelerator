@@ -1,6 +1,8 @@
 # FP32 PE 轨迹对接数据契约草案（2026-10-18）
 
-> **仅供软件/硬件讨论，待双方负责人确认。**这里设计如何对拍，不声称硬件已生成轨迹。现有 `software/examples/fp32_hand_image/expected_pe_trace_demo.csv` 的 80 行全部由软件产生，`source_kind=software_candidate`；真实 `pe_trace.csv` 尚未收到。数值协议仍有特殊值、次正规和有符号零的未决项。
+> **2026-10-20 状态补记：**本文件正文是 10-18 的提议和当时的缺口清单。真实 19 列单 PE 轨迹已另行归档；软件侧对固定提交 `abe7e167ea62041a48fd8935ca3d8a9d224cc731` 的三项专项独立对拍见[验收报告](../handoff/SOFTWARE_INDEPENDENT_REVIEW_PE_SPECIALS_2026-10-20.md)。其中 K32 仅证实 PE 累加寄存器保持，不证实 SRAM 保存/恢复。`expected_pe_trace_demo.csv` 始终是软件演示；NaN、Inf、溢出、阵列/SoC 与物理时序仍未确认。下文“尚未收到真实轨迹”均指 10-18 的历史状态，不能代替今日结论。
+
+> **原始状态（2026-10-18），仅供双方讨论。**这里提出如何对拍；当时尚未收到真实 `pe_trace.csv`。`software/examples/fp32_hand_image/expected_pe_trace_demo.csv` 的 80 行始终由软件产生，`source_kind=software_candidate`。特殊值及超出已验证向量的行为仍待确认。
 
 ## 1. 两种顺序，两个坐标系
 
@@ -76,7 +78,7 @@ tile_start_k = 该任务本次 K 块起始的全局索引
 python -m software.compare_pe_trace --expected software/examples/fp32_hand_image/expected_pe_trace_demo.csv --actual <硬件真实pe_trace.csv> --case-id k32_boundary --report <本地报告.json>
 ```
 
-当前只用**人工构造并明确标作 `synthetic_test` 的测试行**验证比较器的排序、K32 首错、缺 bias、重复事件和错误来源阻断；人工行不能走命令行的真实轨迹入口，成功时只报告 `SYNTHETIC-MATCH`。没有任何真实硬件轨迹通过此工具。若硬件最终采用不同列或采样语义，先共同修订草案与工具，不能为了得到 PASS 在软件中悄悄重解释硬件字段。
+**在 2026-10-18 撰写时**，只用人工构造并明确标作 `synthetic_test` 的测试行验证比较器的排序、K32 首错、缺 bias、重复事件和错误来源阻断；人工行不能走命令行的真实轨迹入口。后续真实单 PE 验收结果以上方 2026-10-20 补记及其报告为准。若硬件最终采用不同列或采样语义，先共同修订草案与工具，不能为了得到 PASS 在软件中悄悄重解释硬件字段。
 
 1. **先交 `hand_2x2` 的真实单 PE `pe_trace.csv` 和 testbench 输出**，包含 RTL commit（若 dirty 另附源码快照指纹算法）、filelist、仿真命令、工具版本和日志，以及实际装载的 `.bin/.mem` 哈希；首组对拍后再扩展 `rounding_nonfused`、`k32_boundary`。
 2. `trace_valid`、`trace_bias_valid` 是哪一个上升沿之后可见，是否分别只代表 MAC 与 bias **提交**，各位模式是否同沿有效；`result_valid` 的对齐关系、空泡与停使能行为。
@@ -85,4 +87,4 @@ python -m software.compare_pe_trace --expected software/examples/fp32_hand_image
 5. 特殊值、次正规、有符号零、溢出的数值处理方案，由双方负责人共同批准后才进入正式逐位验收。
 6. 若宣称 **K32 跨块 SRAM 保存与恢复**，另交写入地址与值、读取地址与值、有效周期和与 k31/k32 部分和对应的 testbench 记录；单次 K64 连续计算的轨迹不能替代该证据。
 
-收到这些信息之前，本文件只是**对接草案**；软件黄金 CSV 可供硬件 testbench 开发参考，但不能把它填入 `rtl_measured` 栏，也不能据此宣称 PE 或阵列通过。
+本文件仍是**对接草案**；软件黄金 CSV 可供硬件 testbench 开发参考，但不能把它填入 `rtl_measured` 栏。真实单 PE 已验证的范围见文首报告；该结果不意味着阵列、SRAM 或 SoC 已通过。
