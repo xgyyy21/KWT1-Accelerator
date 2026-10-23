@@ -8,7 +8,7 @@ module ai_engine_soc_adapter #(
   parameter int ACC_WIDTH = 32,
   parameter int ROWS = 8,
   parameter int COLS = 16,
-  parameter int K = 64
+  parameter int K = 4
 ) (
   input logic clk,
   input logic rst_n,
@@ -39,7 +39,7 @@ module ai_engine_soc_adapter #(
   output logic engine_error
 );
   logic engine_start;
-  logic [31:0] src_a_base, src_b_base, dst_base;
+  logic [31:0] src_a_base, src_b_base, bias_base, dst_base;
   logic [15:0] matrix_m, matrix_k, matrix_n;
 
   ai_engine_regs u_regs (
@@ -48,7 +48,8 @@ module ai_engine_soc_adapter #(
     .rsp_valid(bus_rsp_valid), .rsp_rdata(bus_rdata),
     .engine_busy(engine_busy), .engine_done(engine_done),
     .engine_error(engine_error), .engine_start(engine_start),
-    .src_a_base(src_a_base), .src_b_base(src_b_base), .dst_base(dst_base),
+    .src_a_base(src_a_base), .src_b_base(src_b_base),
+    .bias_base(bias_base), .dst_base(dst_base),
     .matrix_m(matrix_m), .matrix_k(matrix_k), .matrix_n(matrix_n)
   );
 
