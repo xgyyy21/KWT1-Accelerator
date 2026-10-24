@@ -1,0 +1,50 @@
+[
+  {
+    "id": "hand_2x2",
+    "rows": 2,
+    "cols": 2,
+    "depth": 2,
+    "prefix": "",
+    "input_dir": "inputs",
+    "golden": "inputs/expected_pe_trace_demo.csv",
+    "manifest_sha256": "148ac9b305c34dafd033ea33d98b4f0a13edbf1306c66d29c7926ed348941e93",
+    "reference_sha256": "a85bb5b7d334841acab94740290933bd3a991b881acf8782615cb8c43f73553b",
+    "acceptance": "software-provided vector; owner independent RTL acceptance pending"
+  },
+  {
+    "id": "rounding_nonfused",
+    "rows": 1,
+    "cols": 1,
+    "depth": 2,
+    "prefix": "rounding_",
+    "input_dir": "inputs",
+    "golden": "inputs/expected_pe_trace_demo.csv",
+    "manifest_sha256": "148ac9b305c34dafd033ea33d98b4f0a13edbf1306c66d29c7926ed348941e93",
+    "reference_sha256": "a85bb5b7d334841acab94740290933bd3a991b881acf8782615cb8c43f73553b",
+    "acceptance": "software-provided vector; owner independent RTL acceptance pending"
+  },
+  {
+    "id": "k32_boundary",
+    "rows": 1,
+    "cols": 1,
+    "depth": 64,
+    "prefix": "tile_",
+    "input_dir": "inputs",
+    "golden": "inputs/expected_pe_trace_demo.csv",
+    "manifest_sha256": "148ac9b305c34dafd033ea33d98b4f0a13edbf1306c66d29c7926ed348941e93",
+    "reference_sha256": "a85bb5b7d334841acab94740290933bd3a991b881acf8782615cb8c43f73553b",
+    "acceptance": "software-provided vector; owner independent RTL acceptance pending"
+  },
+  {
+    "id": "finite_boundaries_hardware_added",
+    "rows": 32,
+    "cols": 8,
+    "depth": 2,
+    "input_dir": "boundary_inputs",
+    "prefix": "",
+    "golden": "boundary_inputs/expected_pe_trace.csv",
+    "manifest_sha256": "7e89c181f906cb2d72b23417be2b3570ec03ddb8d8f41c434f7dfc336e18d392",
+    "reference_sha256": "8e5223b0e2dff4760936acaa1825649d6f69c8f0ca4c509b7bb5bd94e7ff62c1",
+    "acceptance": "hardware-added; not independently accepted by software owner"
+  }
+]

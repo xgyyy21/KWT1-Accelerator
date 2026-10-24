@@ -1,0 +1,44 @@
+SAMPLING posedge+#1ns after NBA; first posedge out of reset=1; no per-cell reset; clock=10ns simulation only
+INPUT_FILES D:/competition/handoff/pe_hand_2x2_formal_2026-10-20/inputs/x.mem D:/competition/handoff/pe_hand_2x2_formal_2026-10-20/inputs/w.mem D:/competition/handoff/pe_hand_2x2_formal_2026-10-20/inputs/bias.mem
+INPUT row=0 column=0 cycle=2 first=1 last=0 x=3f800000 w=40000000
+INPUT row=0 column=0 cycle=3 first=0 last=1 x=c0000000 w=3fc00000
+MUL_READY row=0 column=0 k=0 cycle=10 input_cycle=2 product=40000000
+MUL_READY row=0 column=0 k=1 cycle=11 input_cycle=3 product=c0400000
+ADD_ISSUE row=0 column=0 bias=0 k=0 cycle=12 before=00000000 operand=40000000
+MAC_COMMIT row=0 column=0 k=0 cycle=16 add_issue=12 before=00000000 product=40000000 after=40000000
+ADD_ISSUE row=0 column=0 bias=0 k=1 cycle=17 before=40000000 operand=c0400000
+MAC_COMMIT row=0 column=0 k=1 cycle=21 add_issue=17 before=40000000 product=c0400000 after=bf800000
+ADD_ISSUE row=0 column=0 bias=1 k=1 cycle=22 before=bf800000 operand=3e800000
+BIAS_COMMIT row=0 column=0 cycle=26 add_issue=22 before=bf800000 bias=3e800000 result=bf400000
+INPUT row=0 column=1 cycle=45 first=1 last=0 x=3f800000 w=bf800000
+INPUT row=0 column=1 cycle=46 first=0 last=1 x=c0000000 w=3f000000
+MUL_READY row=0 column=1 k=0 cycle=53 input_cycle=45 product=bf800000
+MUL_READY row=0 column=1 k=1 cycle=54 input_cycle=46 product=bf800000
+ADD_ISSUE row=0 column=1 bias=0 k=0 cycle=55 before=00000000 operand=bf800000
+MAC_COMMIT row=0 column=1 k=0 cycle=59 add_issue=55 before=00000000 product=bf800000 after=bf800000
+ADD_ISSUE row=0 column=1 bias=0 k=1 cycle=60 before=bf800000 operand=bf800000
+MAC_COMMIT row=0 column=1 k=1 cycle=64 add_issue=60 before=bf800000 product=bf800000 after=c0000000
+ADD_ISSUE row=0 column=1 bias=1 k=1 cycle=65 before=c0000000 operand=bf000000
+BIAS_COMMIT row=0 column=1 cycle=69 add_issue=65 before=c0000000 bias=bf000000 result=c0200000
+INPUT row=1 column=0 cycle=88 first=1 last=0 x=3f000000 w=40000000
+INPUT row=1 column=0 cycle=89 first=0 last=1 x=40400000 w=3fc00000
+MUL_READY row=1 column=0 k=0 cycle=96 input_cycle=88 product=3f800000
+MUL_READY row=1 column=0 k=1 cycle=97 input_cycle=89 product=40900000
+ADD_ISSUE row=1 column=0 bias=0 k=0 cycle=98 before=00000000 operand=3f800000
+MAC_COMMIT row=1 column=0 k=0 cycle=102 add_issue=98 before=00000000 product=3f800000 after=3f800000
+ADD_ISSUE row=1 column=0 bias=0 k=1 cycle=103 before=3f800000 operand=40900000
+MAC_COMMIT row=1 column=0 k=1 cycle=107 add_issue=103 before=3f800000 product=40900000 after=40b00000
+ADD_ISSUE row=1 column=0 bias=1 k=1 cycle=108 before=40b00000 operand=3e800000
+BIAS_COMMIT row=1 column=0 cycle=112 add_issue=108 before=40b00000 bias=3e800000 result=40b80000
+INPUT row=1 column=1 cycle=131 first=1 last=0 x=3f000000 w=bf800000
+INPUT row=1 column=1 cycle=132 first=0 last=1 x=40400000 w=3f000000
+MUL_READY row=1 column=1 k=0 cycle=139 input_cycle=131 product=bf000000
+MUL_READY row=1 column=1 k=1 cycle=140 input_cycle=132 product=3fc00000
+ADD_ISSUE row=1 column=1 bias=0 k=0 cycle=141 before=00000000 operand=bf000000
+MAC_COMMIT row=1 column=1 k=0 cycle=145 add_issue=141 before=00000000 product=bf000000 after=bf000000
+ADD_ISSUE row=1 column=1 bias=0 k=1 cycle=146 before=bf000000 operand=3fc00000
+MAC_COMMIT row=1 column=1 k=1 cycle=150 add_issue=146 before=bf000000 product=3fc00000 after=3f800000
+ADD_ISSUE row=1 column=1 bias=1 k=1 cycle=151 before=3f800000 operand=bf000000
+BIAS_COMMIT row=1 column=1 cycle=155 add_issue=151 before=3f800000 bias=bf000000 result=3f000000
+fp32_pe_formal_tb PASS cells=4 mac_events=8 bias_events=4 mul_latency=8 add_latency=4
+sources/tb/fp32_pe_formal_tb.sv:154: $finish called at 1740000 (1ps)

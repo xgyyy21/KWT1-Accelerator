@@ -1,0 +1,31 @@
+{
+  "hardware_base_commit": "9941d8a5981dfdbd851b1e92a0ebc2cdef39f8e8",
+  "csv_rtl_commit": "9941d8a5981dfdbd851b1e92a0ebc2cdef39f8e8+dirty",
+  "software_commit": "d11d169ea6f7b8500d6a2186c803d0f1a5eba709",
+  "compiled_sources": [
+    {
+      "path": "sources/rtl/fp32_math_pkg.sv",
+      "sha256": "f9b2ff813b51aba48914ce181c3840d40bd3bbd4f5b2ad0c89a3f4acadb888fe"
+    },
+    {
+      "path": "sources/rtl/fp32_pe_mac.sv",
+      "sha256": "8ff62fcae149b206c5507efd93ccc60a062bedcdb21858a1725cae7c760ddaed"
+    },
+    {
+      "path": "sources/tb/fp32_pe_special_tb.sv",
+      "sha256": "3efa5798eb1daf106cc88003aef530a8be43e6b287ed42130ba81bda58c4a0dd"
+    },
+    {
+      "path": "sources/tb/fp32_math_boundary_tb.sv",
+      "sha256": "d9652a7da90220b1fa652cd2fabb7fb660f9df2e8a8e2ae77fab840d742f0d9b"
+    }
+  ],
+  "rtl_matches_base_git_blobs": {
+    "rtl/fp32_math_pkg.sv": true,
+    "rtl/fp32_pe_mac.sv": true
+  },
+  "dirty_reason": "new local testbenches and validation runner not committed; exact source snapshots supplied",
+  "workspace": "D:/competition is not a Git repository; baseline from independent team clone",
+  "clone_status_at_build": "",
+  "scope": "functional single PE only; no commit/push performed by runner"
+}

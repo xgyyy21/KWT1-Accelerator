@@ -1,3 +1,5 @@
 # Evidence hashes refer to the exact archived bytes, independent of checkout OS.
 handoff/word_readback.csv -text
 handoff/readback_evidence_2026-10-18/** -text
+handoff/pe_hand_2x2_formal_2026-10-20/** -text
+handoff/pe_special_validation_2026-10-20/** -text

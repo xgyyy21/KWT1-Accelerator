@@ -1,0 +1,11 @@
+SAMPLING posedge+#1ns after NBA; first edge out of reset=1; no inter-block reset; block_K=32 total_K=2
+INPUT_FILES D:/competition/handoff/pe_special_validation_2026-10-20/inputs/rounding_x.mem D:/competition/handoff/pe_special_validation_2026-10-20/inputs/rounding_w.mem D:/competition/handoff/pe_special_validation_2026-10-20/inputs/rounding_bias.mem
+INPUT row=0 column=0 cycle=2 global_k=0 block=0 first=1 last=0 x=bf800000 w=3f800000
+INPUT row=0 column=0 cycle=3 global_k=1 block=0 first=0 last=1 x=3f800001 w=3f7ffffe
+MUL_READY row=0 column=0 cycle=10 global_k=0 local_k=0 input_cycle=2
+MUL_READY row=0 column=0 cycle=11 global_k=1 local_k=1 input_cycle=3
+MAC_COMMIT row=0 column=0 cycle=16 global_k=0 local_k=0 before=00000000 product=bf800000 after=bf800000
+MAC_COMMIT row=0 column=0 cycle=21 global_k=1 local_k=1 before=bf800000 product=3f800000 after=00000000
+BIAS_COMMIT row=0 column=0 cycle=26 before=00000000 bias=00000000 result=00000000
+fp32_pe_special_tb PASS case=rounding_nonfused mac=2 bias=1 actual_block_boundaries=0
+sources/tb/fp32_pe_special_tb.sv:220: $finish called at 440000 (1ps)

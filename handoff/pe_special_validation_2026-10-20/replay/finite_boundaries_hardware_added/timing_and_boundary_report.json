@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "scope": "actual RTL valid/data alignment and 8/4-clock functional boundaries",
+  "mac_events": 512,
+  "bias_events": 256,
+  "actual_k32_boundaries": [],
+  "physical_timing_closed": false,
+  "sram_save_restore_verified": false
+}

@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "scope": "K=2 hand_2x2 measured valid/data alignment and 8/4 cycle functional boundaries",
+  "events": 12,
+  "mac": 8,
+  "bias": 4,
+  "cells": [
+    {
+      "row": 0,
+      "column": 0,
+      "input_accept": [
+        2,
+        3
+      ],
+      "mul_buffer_write": [
+        10,
+        11
+      ],
+      "add_issue": [
+        12,
+        17
+      ],
+      "mac_commit": [
+        16,
+        21
+      ],
+      "bias_issue": 22,
+      "bias_commit": 26
+    },
+    {
+      "row": 0,
+      "column": 1,
+      "input_accept": [
+        45,
+        46
+      ],
+      "mul_buffer_write": [
+        53,
+        54
+      ],
+      "add_issue": [
+        55,
+        60
+      ],
+      "mac_commit": [
+        59,
+        64
+      ],
+      "bias_issue": 65,
+      "bias_commit": 69
+    },
+    {
+      "row": 1,
+      "column": 0,
+      "input_accept": [
+        88,
+        89
+      ],
+      "mul_buffer_write": [
+        96,
+        97
+      ],
+      "add_issue": [
+        98,
+        103
+      ],
+      "mac_commit": [
+        102,
+        107
+      ],
+      "bias_issue": 108,
+      "bias_commit": 112
+    },
+    {
+      "row": 1,
+      "column": 1,
+      "input_accept": [
+        131,
+        132
+      ],
+      "mul_buffer_write": [
+        139,
+        140
+      ],
+      "add_issue": [
+        141,
+        146
+      ],
+      "mac_commit": [
+        145,
+        150
+      ],
+      "bias_issue": 151,
+      "bias_commit": 155
+    }
+  ],
+  "physical_timing_closed": false
+}

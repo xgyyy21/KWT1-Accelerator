@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "manifest_sha256": "7e89c181f906cb2d72b23417be2b3570ec03ddb8d8f41c434f7dfc336e18d392",
+  "reference_sha256": "8e5223b0e2dff4760936acaa1825649d6f69c8f0ca4c509b7bb5bd94e7ff62c1",
+  "actual_inputs": [
+    {
+      "loaded_by_tb": "boundary_inputs/x.mem",
+      "mem_sha256": "9776eb9101d69252741c0c8930ea1cc116969e9d6df1f7a67242c73a78c5c370",
+      "bin_sha256": "537ba58098cca1f6d878d1f041a1a78a5abf8be7f9ba1a9b7e36129484e4c927",
+      "shape": [
+        32,
+        2
+      ],
+      "layout": "row-major; low 16-bit word first; each word little-endian"
+    },
+    {
+      "loaded_by_tb": "boundary_inputs/w.mem",
+      "mem_sha256": "0f129e7422fd138823d46f95cfb5e27c5fe649c51cddb1328e8852c3b8ba1fdf",
+      "bin_sha256": "8003a549003b109acd49f247a86ee355fde7a87cf3c2ef130a943cd179a5e0f8",
+      "shape": [
+        2,
+        8
+      ],
+      "layout": "row-major; low 16-bit word first; each word little-endian"
+    },
+    {
+      "loaded_by_tb": "boundary_inputs/bias.mem",
+      "mem_sha256": "6769074c00d0ae399cff044db3b2017ec9dcef7bd55d094507e5fe15992ab2af",
+      "bin_sha256": "4656d910c9f534a2025dc07c1c743c0f8efb3ca74a5148ebf0a04629efd6d209",
+      "shape": [
+        1,
+        8
+      ],
+      "layout": "row-major; low 16-bit word first; each word little-endian"
+    }
+  ]
+}

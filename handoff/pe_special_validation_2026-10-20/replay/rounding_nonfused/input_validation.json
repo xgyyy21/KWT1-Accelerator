@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "manifest_sha256": "148ac9b305c34dafd033ea33d98b4f0a13edbf1306c66d29c7926ed348941e93",
+  "reference_sha256": "a85bb5b7d334841acab94740290933bd3a991b881acf8782615cb8c43f73553b",
+  "actual_inputs": [
+    {
+      "loaded_by_tb": "inputs/rounding_x.mem",
+      "mem_sha256": "dc73a95c195b0cbed62c5324d4393aad7abc2c702283722d28bb671d4d2e95a3",
+      "bin_sha256": "17075bc174311a170d9562e85cf701ae9f4d84a239863a42642554984dd267f2",
+      "shape": [
+        1,
+        2
+      ],
+      "layout": "row-major; low 16-bit word first; each word little-endian"
+    },
+    {
+      "loaded_by_tb": "inputs/rounding_w.mem",
+      "mem_sha256": "2feae40a068ee3f44c347bcb55d23a853db5850be33ea90621cacece539fefd3",
+      "bin_sha256": "c3ab17f29a1c4ba6387856faf4915c03dd5804974febb9ecfddd4fbc6b41c3ea",
+      "shape": [
+        2,
+        1
+      ],
+      "layout": "row-major; low 16-bit word first; each word little-endian"
+    },
+    {
+      "loaded_by_tb": "inputs/rounding_bias.mem",
+      "mem_sha256": "86b59daec6dbb138064b7b6801fe424dc3369a3199a6abd85d6ed2e98df6af01",
+      "bin_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "shape": [
+        1,
+        1
+      ],
+      "layout": "row-major; low 16-bit word first; each word little-endian"
+    }
+  ]
+}

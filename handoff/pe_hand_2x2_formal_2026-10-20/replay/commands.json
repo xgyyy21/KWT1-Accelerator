@@ -1,0 +1,57 @@
+{
+  "commands": [
+    [
+      "D:/competition/.tools/iverilog/bin/iverilog.exe",
+      "-V"
+    ],
+    [
+      "D:/competition/.tools/iverilog/bin/vvp.exe",
+      "-V"
+    ],
+    [
+      "D:/competition/.tools/iverilog/bin/iverilog.exe",
+      "-g2012",
+      "-s",
+      "fp32_pe_formal_tb",
+      "-o",
+      "D:\\competition\\handoff\\pe_hand_2x2_formal_2026-10-20\\replay\\compile_g4u07dbr\\pe.vvp",
+      "-f",
+      "filelist.f"
+    ],
+    [
+      "D:/competition/.tools/iverilog/bin/vvp.exe",
+      "D:\\competition\\handoff\\pe_hand_2x2_formal_2026-10-20\\replay\\compile_g4u07dbr\\pe.vvp",
+      "+INPUT_DIR=D:/competition/handoff/pe_hand_2x2_formal_2026-10-20/inputs",
+      "+OUTPUT_DIR=D:/competition/handoff/pe_hand_2x2_formal_2026-10-20/replay",
+      "+RTL_REVISION=13a924ca77be7016e61d87cc83981752838cf8e2+dirty",
+      "+MANIFEST_SHA=148ac9b305c34dafd033ea33d98b4f0a13edbf1306c66d29c7926ed348941e93",
+      "+REFERENCE_SHA=a85bb5b7d334841acab94740290933bd3a991b881acf8782615cb8c43f73553b"
+    ],
+    [
+      "C:\\Program Files\\Lenovo\\ModelMgr\\Plugins\\Image\\python.exe",
+      "-B",
+      "-m",
+      "software.compare_pe_trace",
+      "--expected",
+      "D:\\competition\\handoff\\pe_hand_2x2_formal_2026-10-20\\software_snapshot\\software\\examples\\fp32_hand_image\\expected_pe_trace_demo.csv",
+      "--actual",
+      "D:\\competition\\handoff\\pe_hand_2x2_formal_2026-10-20\\replay\\pe_trace.csv",
+      "--case-id",
+      "hand_2x2",
+      "--compare-tile-id",
+      "--report",
+      "D:\\competition\\handoff\\pe_hand_2x2_formal_2026-10-20\\replay\\compare_report.json"
+    ],
+    [
+      "C:\\Program Files\\Lenovo\\ModelMgr\\Plugins\\Image\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "software.tests.test_compare_pe_trace",
+      "software.tests.test_fp32_trace_csv",
+      "software.tests.test_fp32_step_traces"
+    ]
+  ],
+  "cwd_compile_sim": "D:\\competition\\handoff\\pe_hand_2x2_formal_2026-10-20",
+  "cwd_software_tools": "D:\\competition\\handoff\\pe_hand_2x2_formal_2026-10-20\\software_snapshot"
+}

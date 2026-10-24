@@ -1,0 +1,24 @@
+{
+  "status": "PASS_HAND_2X2_19_COLUMN_LOCAL_CHECK",
+  "scope": "single PE K=2 only; software owner independent acceptance pending",
+  "csv_sha256": "7e254106514c11b2a52e1d62ab2c9eb550d154cce671bc71eac6c311cccc2e6a",
+  "csv_columns": 19,
+  "mac_events": 8,
+  "bias_events": 4,
+  "software_compare_status": "BIT-EXACT-CANDIDATE",
+  "compare_tile_id": true,
+  "timing_check": "PASS functional 8-clock multiplier boundary and 4-clock dependent add boundary",
+  "not_verified": [
+    "rounding_nonfused case",
+    "K32 boundary",
+    "SRAM partial sum save/restore",
+    "full subnormal/signed-zero coverage",
+    "array",
+    "SoC",
+    "150 MHz synthesis timing"
+  ],
+  "rtl_revision": "13a924ca77be7016e61d87cc83981752838cf8e2+dirty",
+  "software_commit": "d11d169ea6f7b8500d6a2186c803d0f1a5eba709",
+  "input_manifest_sha256": "148ac9b305c34dafd033ea33d98b4f0a13edbf1306c66d29c7926ed348941e93",
+  "reference_trace_sha256": "a85bb5b7d334841acab94740290933bd3a991b881acf8782615cb8c43f73553b"
+}

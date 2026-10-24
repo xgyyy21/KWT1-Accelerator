@@ -1,0 +1,262 @@
+[
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/iverilog.exe",
+      "-V"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\iverilog_version.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/vvp.exe",
+      "-V"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\vvp_version.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/iverilog.exe",
+      "-g2012",
+      "-s",
+      "fp32_pe_special_tb",
+      "-o",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\binaries_7bgii77u\\test.vvp",
+      "-f",
+      "filelist.f",
+      "-Pfp32_pe_special_tb.ROWS=2",
+      "-Pfp32_pe_special_tb.COLS=2",
+      "-Pfp32_pe_special_tb.TOTAL_K=2"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\hand_2x2\\compile.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/vvp.exe",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\binaries_7bgii77u\\test.vvp",
+      "+CASE_ID=hand_2x2",
+      "+OUTPUT_DIR=D:/competition/handoff/pe_special_validation_2026-10-20/replay/hand_2x2",
+      "+RTL_REVISION=9941d8a5981dfdbd851b1e92a0ebc2cdef39f8e8+dirty",
+      "+MANIFEST_SHA=148ac9b305c34dafd033ea33d98b4f0a13edbf1306c66d29c7926ed348941e93",
+      "+REFERENCE_SHA=a85bb5b7d334841acab94740290933bd3a991b881acf8782615cb8c43f73553b",
+      "+X_FILE=D:/competition/handoff/pe_special_validation_2026-10-20/inputs/x.mem",
+      "+W_FILE=D:/competition/handoff/pe_special_validation_2026-10-20/inputs/w.mem",
+      "+BIAS_FILE=D:/competition/handoff/pe_special_validation_2026-10-20/inputs/bias.mem"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\hand_2x2\\simulation.log"
+  },
+  {
+    "argv": [
+      "C:\\Program Files\\Lenovo\\ModelMgr\\Plugins\\Image\\python.exe",
+      "-B",
+      "-m",
+      "software.compare_pe_trace",
+      "--expected",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\inputs\\expected_pe_trace_demo.csv",
+      "--actual",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\hand_2x2\\pe_trace.csv",
+      "--case-id",
+      "hand_2x2",
+      "--compare-tile-id",
+      "--report",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\hand_2x2\\compare_report.json"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\software_snapshot",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\hand_2x2\\compare.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/iverilog.exe",
+      "-g2012",
+      "-s",
+      "fp32_pe_special_tb",
+      "-o",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\binaries_7bgii77u\\test.vvp",
+      "-f",
+      "filelist.f",
+      "-Pfp32_pe_special_tb.ROWS=1",
+      "-Pfp32_pe_special_tb.COLS=1",
+      "-Pfp32_pe_special_tb.TOTAL_K=2"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\rounding_nonfused\\compile.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/vvp.exe",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\binaries_7bgii77u\\test.vvp",
+      "+CASE_ID=rounding_nonfused",
+      "+OUTPUT_DIR=D:/competition/handoff/pe_special_validation_2026-10-20/replay/rounding_nonfused",
+      "+RTL_REVISION=9941d8a5981dfdbd851b1e92a0ebc2cdef39f8e8+dirty",
+      "+MANIFEST_SHA=148ac9b305c34dafd033ea33d98b4f0a13edbf1306c66d29c7926ed348941e93",
+      "+REFERENCE_SHA=a85bb5b7d334841acab94740290933bd3a991b881acf8782615cb8c43f73553b",
+      "+X_FILE=D:/competition/handoff/pe_special_validation_2026-10-20/inputs/rounding_x.mem",
+      "+W_FILE=D:/competition/handoff/pe_special_validation_2026-10-20/inputs/rounding_w.mem",
+      "+BIAS_FILE=D:/competition/handoff/pe_special_validation_2026-10-20/inputs/rounding_bias.mem"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\rounding_nonfused\\simulation.log"
+  },
+  {
+    "argv": [
+      "C:\\Program Files\\Lenovo\\ModelMgr\\Plugins\\Image\\python.exe",
+      "-B",
+      "-m",
+      "software.compare_pe_trace",
+      "--expected",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\inputs\\expected_pe_trace_demo.csv",
+      "--actual",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\rounding_nonfused\\pe_trace.csv",
+      "--case-id",
+      "rounding_nonfused",
+      "--compare-tile-id",
+      "--report",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\rounding_nonfused\\compare_report.json"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\software_snapshot",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\rounding_nonfused\\compare.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/iverilog.exe",
+      "-g2012",
+      "-s",
+      "fp32_pe_special_tb",
+      "-o",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\binaries_7bgii77u\\test.vvp",
+      "-f",
+      "filelist.f",
+      "-Pfp32_pe_special_tb.ROWS=1",
+      "-Pfp32_pe_special_tb.COLS=1",
+      "-Pfp32_pe_special_tb.TOTAL_K=64"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\k32_boundary\\compile.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/vvp.exe",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\binaries_7bgii77u\\test.vvp",
+      "+CASE_ID=k32_boundary",
+      "+OUTPUT_DIR=D:/competition/handoff/pe_special_validation_2026-10-20/replay/k32_boundary",
+      "+RTL_REVISION=9941d8a5981dfdbd851b1e92a0ebc2cdef39f8e8+dirty",
+      "+MANIFEST_SHA=148ac9b305c34dafd033ea33d98b4f0a13edbf1306c66d29c7926ed348941e93",
+      "+REFERENCE_SHA=a85bb5b7d334841acab94740290933bd3a991b881acf8782615cb8c43f73553b",
+      "+X_FILE=D:/competition/handoff/pe_special_validation_2026-10-20/inputs/tile_x.mem",
+      "+W_FILE=D:/competition/handoff/pe_special_validation_2026-10-20/inputs/tile_w.mem",
+      "+BIAS_FILE=D:/competition/handoff/pe_special_validation_2026-10-20/inputs/tile_bias.mem"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\k32_boundary\\simulation.log"
+  },
+  {
+    "argv": [
+      "C:\\Program Files\\Lenovo\\ModelMgr\\Plugins\\Image\\python.exe",
+      "-B",
+      "-m",
+      "software.compare_pe_trace",
+      "--expected",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\inputs\\expected_pe_trace_demo.csv",
+      "--actual",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\k32_boundary\\pe_trace.csv",
+      "--case-id",
+      "k32_boundary",
+      "--compare-tile-id",
+      "--report",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\k32_boundary\\compare_report.json"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\software_snapshot",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\k32_boundary\\compare.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/iverilog.exe",
+      "-g2012",
+      "-s",
+      "fp32_pe_special_tb",
+      "-o",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\binaries_7bgii77u\\test.vvp",
+      "-f",
+      "filelist.f",
+      "-Pfp32_pe_special_tb.ROWS=32",
+      "-Pfp32_pe_special_tb.COLS=8",
+      "-Pfp32_pe_special_tb.TOTAL_K=2"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\finite_boundaries_hardware_added\\compile.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/vvp.exe",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\binaries_7bgii77u\\test.vvp",
+      "+CASE_ID=finite_boundaries_hardware_added",
+      "+OUTPUT_DIR=D:/competition/handoff/pe_special_validation_2026-10-20/replay/finite_boundaries_hardware_added",
+      "+RTL_REVISION=9941d8a5981dfdbd851b1e92a0ebc2cdef39f8e8+dirty",
+      "+MANIFEST_SHA=7e89c181f906cb2d72b23417be2b3570ec03ddb8d8f41c434f7dfc336e18d392",
+      "+REFERENCE_SHA=8e5223b0e2dff4760936acaa1825649d6f69c8f0ca4c509b7bb5bd94e7ff62c1",
+      "+X_FILE=D:/competition/handoff/pe_special_validation_2026-10-20/boundary_inputs/x.mem",
+      "+W_FILE=D:/competition/handoff/pe_special_validation_2026-10-20/boundary_inputs/w.mem",
+      "+BIAS_FILE=D:/competition/handoff/pe_special_validation_2026-10-20/boundary_inputs/bias.mem"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\finite_boundaries_hardware_added\\simulation.log"
+  },
+  {
+    "argv": [
+      "C:\\Program Files\\Lenovo\\ModelMgr\\Plugins\\Image\\python.exe",
+      "-B",
+      "-m",
+      "software.compare_pe_trace",
+      "--expected",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\boundary_inputs\\expected_pe_trace.csv",
+      "--actual",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\finite_boundaries_hardware_added\\pe_trace.csv",
+      "--case-id",
+      "finite_boundaries_hardware_added",
+      "--compare-tile-id",
+      "--report",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\finite_boundaries_hardware_added\\compare_report.json"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\software_snapshot",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\finite_boundaries_hardware_added\\compare.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/iverilog.exe",
+      "-g2012",
+      "-s",
+      "fp32_math_boundary_tb",
+      "-o",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\binaries_7bgii77u\\test.vvp",
+      "-f",
+      "filelist.f"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\math_boundaries\\compile.log"
+  },
+  {
+    "argv": [
+      "D:/competition/.tools/iverilog/bin/vvp.exe",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\binaries_7bgii77u\\test.vvp",
+      "+VECTORS=D:/competition/handoff/pe_special_validation_2026-10-20/fp32_boundary_vectors.txt"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\math_boundaries\\simulation.log"
+  },
+  {
+    "argv": [
+      "C:\\Program Files\\Lenovo\\ModelMgr\\Plugins\\Image\\python.exe",
+      "-B",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\Test-PeSpecialValidator.py",
+      "--packet",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20",
+      "--results",
+      "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay"
+    ],
+    "cwd": "D:\\competition\\handoff\\pe_special_validation_2026-10-20",
+    "log": "D:\\competition\\handoff\\pe_special_validation_2026-10-20\\replay\\validator_tests.log"
+  }
+]

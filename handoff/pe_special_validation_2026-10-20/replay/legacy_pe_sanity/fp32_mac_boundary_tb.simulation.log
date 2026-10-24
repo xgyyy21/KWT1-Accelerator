@@ -1,0 +1,2 @@
+fp32_mac_boundary_tb PASS
+tb/fp32_mac_boundary_tb.sv:17: $finish called at 70000 (1ps)

@@ -94,10 +94,6 @@ module fp32_pe_array_8x16 #(
 
   integer result_seen;
   integer events_this_cycle;
-  logic [TOTAL_CELLS-1:0] cell_result_mask;
-  // Keep shifting until every input/marker token has drained. Once empty,
-  // holding invalid payload registers cannot affect a PE or its timing.
-  integer input_drain_cycles;
   integer r, c;
 
   wire accept_input = stream_valid && (busy || start);
@@ -111,7 +107,6 @@ module fp32_pe_array_8x16 #(
   generate
     for (gr = 0; gr < ROWS; gr = gr + 1) begin : G_CELL_ROW
       for (gc = 0; gc < COLS; gc = gc + 1) begin : G_CELL_COL
-        assign cell_result_mask[gr*COLS+gc] = cell_result_valid[gr][gc];
         assign cell_valid[gr][gc] = a_valid[gr][gc] && b_valid[gr][gc];
         assign cell_first[gr][gc] = cell_valid[gr][gc] &&
                                      a_first[gr][gc] && b_first[gr][gc];
@@ -277,7 +272,6 @@ module fp32_pe_array_8x16 #(
       done <= 1'b0;
       result_valid <= 1'b0;
       result_seen <= 0;
-      input_drain_cycles <= 0;
       for (r = 0; r < ROWS; r = r + 1) begin
         for (c = 0; c < COLS; c = c + 1) begin
           a_pipe[r][c] <= 32'd0;
@@ -317,12 +311,6 @@ module fp32_pe_array_8x16 #(
       // Input skew makes A(row,k) and B(k,col) meet at the same PE clock:
       // A is delayed by row and B is delayed by column before entering the
       // horizontal/vertical propagation paths.
-      if (accept_input)
-        input_drain_cycles <= ROWS + COLS + 1;
-      else if (input_drain_cycles > 0)
-        input_drain_cycles <= input_drain_cycles - 1;
-
-      if (accept_input || input_drain_cycles > 0) begin
       for (r = 0; r < ROWS; r = r + 1) begin
         a_skew[r][0] <= a_left[r];
         a_skew_valid[r][0] <= accept_input;
@@ -367,18 +355,15 @@ module fp32_pe_array_8x16 #(
           b_last[r][c] <= b_last[r-1][c];
         end
       end
-      end
 
       // Capture the individually timed PE results and finish only after all
       // rows and columns have produced their final bias result.
-      if (|cell_result_mask) begin
       for (r = 0; r < ROWS; r = r + 1) begin
         for (c = 0; c < COLS; c = c + 1) begin
           if (cell_result_valid[r][c]) begin
             events_this_cycle = events_this_cycle + 1;
           end
         end
-      end
       end
       if (events_this_cycle != 0) begin
         if (result_seen + events_this_cycle >= TOTAL_CELLS) begin

@@ -1,0 +1,2 @@
+fp32_pe_kblock_tb PASS preserved_partial_sum=7 bias=1 result=8
+tb/fp32_pe_kblock_tb.sv:113: $finish called at 476000 (1ps)

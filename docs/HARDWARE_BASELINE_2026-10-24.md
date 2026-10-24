@@ -5,10 +5,11 @@
 - 顶层：`rtl/fp32_accelerator_top.sv`
 - RTL 文件列表：`rtl/files.f`
 - 竞赛整层 testbench：`tb/fp32_competition_ffn1_tb.sv`
-- 源码哈希清单：`docs/evidence/real_ffn1_layer00_source_manifest.json`
+- 2026-10-23 归档源哈希清单：`docs/evidence/real_ffn1_layer00_source_manifest.json`
+- 当前合并后 RTL/TB 哈希清单：`docs/evidence/hardware_current_source_manifest.json`
 - 分支：`hardware`
 
-本次导入的是 2026-10-23 真实 KWT-1 layer00 FFN1 仿真所用的源快照，而不是旧的整数阵列基线。真实归档包位于开发机 `D:\competition\handoff\real_ffn1_layer00_rtl_2026-10-23.zip`，SHA-256：
+本次固定版本以 2026-10-23 真实 KWT-1 layer00 FFN1 仿真源快照为基础，并合入远程 hardware 分支随后增加的 PE checkpoint/阵列交接材料。真实归档包位于开发机 `D:\competition\handoff\real_ffn1_layer00_rtl_2026-10-23.zip`，SHA-256：
 
 `86238127a80a2f1726d9968698c57a676dd065f9419dd69988dfe07cfdd4db20`
 
@@ -21,7 +22,7 @@
 
 ## 本次仓库验证
 
-导入后应至少执行：
+当前合并版本应至少执行：
 
 ```powershell
 iverilog -g2012 -s fp32_competition_ffn1_tb -o build/fp32_competition_ffn1.vvp -f rtl/files.f tb/fp32_competition_ffn1_tb.sv

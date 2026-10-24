@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "raw_manifest_sha256": "148ac9b305c34dafd033ea33d98b4f0a13edbf1306c66d29c7926ed348941e93",
+  "raw_reference_sha256": "a85bb5b7d334841acab94740290933bd3a991b881acf8782615cb8c43f73553b",
+  "tensors": [
+    {
+      "tensor": "x",
+      "shape": [
+        2,
+        2
+      ],
+      "bin_sha256": "f8788ce138a2b6e54302c09bd3d5274cb2fc3ceca6425b02c788181d332edc6d",
+      "mem_sha256": "1bc68fe3e4dab29b88b1b35c67efa359a460ccf886bd5ae5c9eee85f4f0ab309",
+      "loaded_by_tb": "inputs/x.mem",
+      "mapping": "row-major; FP32={word[2*i+1],word[2*i]}; low 16-bit word first"
+    },
+    {
+      "tensor": "w",
+      "shape": [
+        2,
+        2
+      ],
+      "bin_sha256": "9b4a9050f1cea2e3bcb7e5fe240d352eeed38c80b57cd1c9b45a8f9f7c650d7a",
+      "mem_sha256": "e422ce13ec2f13515426a071c1ea2a3d12088e35ce605716d8dfc7d9ca8d8895",
+      "loaded_by_tb": "inputs/w.mem",
+      "mapping": "row-major; FP32={word[2*i+1],word[2*i]}; low 16-bit word first"
+    },
+    {
+      "tensor": "bias",
+      "shape": [
+        1,
+        2
+      ],
+      "bin_sha256": "a87f7282fda4eba58e73df7310253f02b521d912a9d040beb42c09dceae258fd",
+      "mem_sha256": "f030632be734f3d796c6c7151cd1a209f5f571b364d19d7f42cf69b03d015218",
+      "loaded_by_tb": "inputs/bias.mem",
+      "mapping": "row-major; FP32={word[2*i+1],word[2*i]}; low 16-bit word first"
+    }
+  ]
+}

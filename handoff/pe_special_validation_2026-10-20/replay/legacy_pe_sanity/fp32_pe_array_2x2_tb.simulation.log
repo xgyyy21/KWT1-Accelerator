@@ -1,0 +1,2 @@
+fp32_pe_array_2x2_tb PASS result=[[bf400000,c0200000],[40b80000,3f000000]] trace_mac=8 trace_bias=4
+tb/fp32_pe_array_2x2_tb.sv:147: $finish called at 338000 (1ps)

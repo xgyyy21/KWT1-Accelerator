@@ -1,0 +1,65 @@
+{
+  "scope": "artificial corruption of a copy; not measured hardware evidence",
+  "tests": [
+    {
+      "test": "wrong_tile",
+      "status": "REJECTED_AS_EXPECTED",
+      "detail": {
+        "case_id": "hand_2x2",
+        "row": 0,
+        "column": 0,
+        "event": "mac",
+        "global_k": 0,
+        "field": "tile_id",
+        "expected": "0",
+        "actual": "1",
+        "tile_id": 1,
+        "cycle": 16,
+        "rtl_commit": "13a924ca77be7016e61d87cc83981752838cf8e2+dirty"
+      }
+    },
+    {
+      "test": "wrong_value",
+      "status": "REJECTED_AS_EXPECTED",
+      "detail": {
+        "case_id": "hand_2x2",
+        "row": 0,
+        "column": 0,
+        "event": "mac",
+        "global_k": 0,
+        "field": "product_bits",
+        "expected": "0x40000000",
+        "actual": "0x00000000",
+        "tile_id": 0,
+        "cycle": 16,
+        "rtl_commit": "13a924ca77be7016e61d87cc83981752838cf8e2+dirty"
+      }
+    },
+    {
+      "test": "missing_bias",
+      "status": "REJECTED_AS_EXPECTED",
+      "detail": {
+        "case_id": "hand_2x2",
+        "row": 0,
+        "column": 0,
+        "event": "bias",
+        "global_k": null,
+        "field": "event",
+        "expected": "<present>",
+        "actual": "<absent>",
+        "tile_id": 0,
+        "cycle": null
+      }
+    },
+    {
+      "test": "duplicate_event",
+      "status": "REJECTED_AS_EXPECTED",
+      "detail": "line 14: duplicate event ('hand_2x2', 0, 0, 'mac', 0)"
+    },
+    {
+      "test": "wrong_manifest",
+      "status": "REJECTED_AS_EXPECTED",
+      "detail": "{'case_id': 'hand_2x2', 'row': 0, 'column': 0, 'event': 'mac', 'global_k': 0}: provenance input_manifest_sha256 differs"
+    }
+  ]
+}
