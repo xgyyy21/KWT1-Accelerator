@@ -94,8 +94,10 @@ module fp32_pe_mac #(
   assign checkpoint_state_out = state;
 
   initial begin
+`ifndef SYNTHESIS
     if (K <= 0 || MUL_LATENCY != 8 || ADD_LATENCY != 4)
       $fatal(1, "fp32_pe_mac requires K>0 and an 8+4 cycle contract");
+`endif
   end
 
   always_ff @(posedge clk or negedge rst_n) begin
@@ -225,8 +227,12 @@ module fp32_pe_mac #(
           mul_k_pipe[0]       <= 16'd0;
           mul_block_end_pipe[0] <= (K == 1) || task_last;
         end else if (state == S_COLLECT && enable && in_valid) begin
+          // This is a simulation-time protocol guard.  Synthesis should see
+          // the same datapath without requiring a run-time system task.
+`ifndef SYNTHESIS
           if (input_count >= K)
             $fatal(1, "fp32_pe_mac received more than K inputs in one block");
+`endif
           input_count <= input_count + 1'b1;
           if (task_last)
             final_block <= 1'b1;

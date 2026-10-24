@@ -48,21 +48,24 @@ module fp32_tile_cache_streamer #(
   integer a_req_word, b_req_word, bias_req_word;
   integer a_rsp_word, b_rsp_word, bias_rsp_word;
   integer stream_k;
-  integer r, c, i;
   logic [15:0] a_low_word, b_low_word, bias_low_word;
   logic [31:0] a_tile [ROWS][K];
   logic [31:0] b_tile [K][COLS];
   logic [31:0] bias_tile [COLS];
 
   initial begin
+`ifndef SYNTHESIS
     if (ROWS <= 0 || COLS <= 0 || K <= 0 ||
         A_WORDS > (1 << ADDR_WIDTH) ||
         B_WORDS > (1 << ADDR_WIDTH) ||
         BIAS_WORDS > (1 << ADDR_WIDTH))
       $fatal(1, "FP32 tile cache streamer parameters exceed cache");
+`endif
   end
 
   always_comb begin
+    integer r;
+    integer c;
     busy = (state != S_IDLE);
     a_rd_en = 1'b0;
     b_rd_en = 1'b0;
@@ -114,6 +117,8 @@ module fp32_tile_cache_streamer #(
   // Bias words are captured into bias_in directly; the array output is held
   // at reset value until the tile has been fully loaded.
   always_ff @(posedge clk or negedge rst_n) begin
+    integer r;
+    integer c;
     if (!rst_n) begin
       state <= S_IDLE;
       done <= 1'b0;
