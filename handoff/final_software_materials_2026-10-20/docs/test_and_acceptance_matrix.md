@@ -6,7 +6,9 @@
 | 8×16 四组阵列轨迹 | 已仿真；软件侧 13,531/13,531 逐位核验 | `array_pe_trace_2026-10-20_v2.zip` |
 | K=64 跨块寄存器延续 | 已仿真通过 | 阵列轨迹与 K64 TB |
 | 阵列 SRAM checkpoint | 已仿真通过，限阵列检查点端口 | `partial_sum_checkpoint_2026-10-20_v4.zip` |
+| 128 个 PE 逐项 checkpoint 结果 | 已由实际 RTL testbench 输出并核对坐标唯一性 | `evidence/checkpoint_result_per_pe.csv` |
 | 协议中立接口三次小任务 | 已仿真通过 | `interface_v1_evidence_2026-10-20_run2.zip` |
+| 单个 8×16 tile、K=64 完整顶层路径 | 已实际仿真通过 | `evidence/one_tile_k64/` |
 | 99×64×256 全尺寸顶层 | 已编译；本轮未取得 PASS | `tests/fp32_competition_ffn1_tb.sv` 与 `evidence/full_ffn1/` |
 | 真实 E203 NICE/System Bus | 尚未实现/验证 | 等待平台接口和代码 |
 | 物理 SRAM 宏、150 MHz 时序、面积、功耗 | 尚未实现/验证 | 等待综合/平台条件 |

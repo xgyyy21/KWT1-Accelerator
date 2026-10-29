@@ -21,7 +21,9 @@
 - 四组阵列轨迹：共 13,531 个事件；软件侧已逐事件核验 13,531/13,531。
 - 单 PE 特殊值、K 边界、8×16 阵列、K=64、K=256 八块计算。
 - 8×16 阵列 checkpoint：512 次写、512 次读请求、512 次读响应，恢复 128 个 PE 后继续计算，128 个结果均为 `0x42c20000`。
+- checkpoint 还输出了 128 个 PE 的逐项实际结果：`evidence/checkpoint_result_per_pe.csv`，每个 `(row,column)` 一行。
 - 协议中立接口三次小任务：输出 9 个，DONE 晚于最后写握手，背压检查通过。
+- 单个 8×16 tile、K=64 的完整顶层路径已实际仿真通过；输出 128 个、写回 256 个半字。
 - `fp32_competition_ffn1_tb.sv` 已编译；全尺寸顶层仿真在 Icarus 下运行过慢，本轮未产生 PASS，故不列为通过。
 
 ## 本包包含
@@ -35,6 +37,9 @@
 - `evidence/partial_sum_checkpoint_2026-10-20_v4.zip`：阵列级 SRAM checkpoint 证据包。
 - `evidence/interface_v1_evidence_2026-10-20_run2.zip`：协议中立接口和读回证据包。
 - `evidence/pe_trace.csv`、`evidence/word_readback.csv`：软件侧最小回传文件。
+- `evidence/checkpoint_result_per_pe.csv`：128 个 PE 的逐项 checkpoint 恢复后结果。
+- `evidence/checkpoint_per_pe/`：该 CSV 的编译日志、实际仿真日志和输入来源说明。
+- `evidence/one_tile_k64/`：单 tile 完整路径的编译日志、PASS 日志和 testbench。
 - `evidence/regression_20261020/`：本轮关键 testbench 的编译与仿真日志。
 - `SHA256SUMS.txt`：本包全部文件的 SHA-256。
 

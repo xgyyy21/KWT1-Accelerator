@@ -42,7 +42,7 @@ module fp32_array_checkpoint_tb;
   integer r,c,k,cycle=0,wait_cycles=0,writes=0,reads=0,restores=0,results=0;
   integer save_seen[0:CELLS*4-1],read_seen[0:CELLS*4-1];
   integer pending_read_valid, pending_read_addr;
-  integer fd, result_fd;
+  integer fd, result_fd, result_pe_fd;
   reg [31:0] saved_acc[0:CELLS-1],saved_bias[0:CELLS-1];
   reg [31:0] expected = 32'h42c20000; // 32*1 + 32*2 + bias(1) = 97
   reg saw_reset=0,saw_save=0,saw_restore=0;
@@ -104,7 +104,10 @@ module fp32_array_checkpoint_tb;
       if(result_valid) begin
         results=results+1;
         for(r=0;r<ROWS;r=r+1) for(c=0;c<COLS;c=c+1)
-          if(result[r][c]!==expected) $fatal(1,"restored result mismatch r=%0d c=%0d got=%h",r,c,result[r][c]);
+          begin
+            if(result[r][c]!==expected) $fatal(1,"restored result mismatch r=%0d c=%0d got=%h",r,c,result[r][c]);
+            $fdisplay(result_pe_fd,"%0d,%0d,%0d,0x%08h",cycle,r,c,result[r][c]);
+          end
         $fdisplay(result_fd,"%0d,all,%0d,0x%08h",cycle,results,expected);
       end
     end
@@ -119,8 +122,11 @@ module fp32_array_checkpoint_tb;
     pending_read_valid=0; pending_read_addr=0;
     fd=$fopen("checkpoint_trace.csv","w");
     result_fd=$fopen("checkpoint_result.csv","w");
+    result_pe_fd=$fopen("checkpoint_result_per_pe.csv","w");
+    if(!fd || !result_fd || !result_pe_fd) $fatal(1,"checkpoint output file open failed");
     $fdisplay(fd,"cycle,kind,address,we,wdata,rvalid,rdata");
     $fdisplay(result_fd,"cycle,scope,count,result_bits");
+    $fdisplay(result_pe_fd,"cycle,row,column,result_bits");
     repeat(3) @(negedge clk); rst_n=1;
     // Invalid checkpoint requests are reported and do not touch SRAM.
     checkpoint_save_req=1; @(negedge clk); checkpoint_save_req=0; #1;
@@ -164,7 +170,7 @@ module fp32_array_checkpoint_tb;
        restores !== CELLS || results !== 1 || checkpoint_error !== 1'b0 || pending_read_valid !== 0)
       $fatal(1,"checkpoint evidence incomplete save=%0d read=%0d reset=%0d writes=%0d reads=%0d results=%0d err=%0d",saw_save,saw_restore,saw_reset,writes,reads,results,checkpoint_error);
     $display("PASS: SRAM checkpoint save=%0d read=%0d restored_cells=%0d result=0x%08h",writes,reads,CELLS,expected);
-    $fclose(fd);$fclose(result_fd);$finish;
+    $fclose(fd);$fclose(result_fd);$fclose(result_pe_fd);$finish;
   end
   initial begin #2000000; $fatal(1,"checkpoint TB timeout"); end
 endmodule
