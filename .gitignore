@@ -10,6 +10,10 @@ node_modules/
 tmp/
 temp/
 build/
+# Historical, curated CSV/log evidence may retain its original build/ path.
+# Exported simulation binaries and generated object trees remain excluded.
+!handoff/hardware_history_2026-10-22/**/build/
+!handoff/hardware_history_2026-10-22/**/build/**
 dist/
 .cache/
 .DS_Store

@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "outputs_passed": 25344,
+  "outputs_failed": 0,
+  "write_halfwords": 50688,
+  "unique_write_halfwords": 50688,
+  "input_read_halfwords": 642048,
+  "spatial_tiles": 208,
+  "k_blocks_per_tile": 2,
+  "tail_valid_rows": 3,
+  "simulated_wait_cycles": 2587777,
+  "final_write_cycle": 2587777,
+  "done_cycle": 2587779,
+  "first_difference": null,
+  "input_files": {
+    "x": {
+      "halfwords": 12672,
+      "sha256": "c454d7fda993fad054259e46ed2ec467a320df5e8ef26eb25a8877ecb737090f",
+      "format": "16-bit hex, low half first"
+    },
+    "w": {
+      "halfwords": 32768,
+      "sha256": "83c7b5be19f817884980c0bb1bccf98beda85ec902ac4ca20ef4c08ef79e2c08",
+      "format": "16-bit hex, low half first"
+    },
+    "bias": {
+      "halfwords": 512,
+      "sha256": "86856bf54f5f76a13be21428f0a0c897c08195e929b8f61f253a0d578d259397",
+      "format": "16-bit hex, low half first"
+    }
+  },
+  "negative_controls": [
+    {
+      "test": "wrong_actual_output",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "actual RTL output differs at (0,0)"
+    },
+    {
+      "test": "duplicate_output_coordinate",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "output coordinate/order at 1"
+    },
+    {
+      "test": "missing_write_halfword",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "write count 50687 != 50688"
+    },
+    {
+      "test": "out_of_window_write",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "write ordering/address differs at index 0: (0, 0, 0, 0, 0) != (0, 0, 0, 210000, 0)"
+    },
+    {
+      "test": "wrong_tail_descriptor",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "tile descriptor differs at 207"
+    }
+  ],
+  "scope": "one all-FP32-one FFN1 job through protocol-neutral accelerator top",
+  "software_owner_independent_acceptance": "PENDING",
+  "not_verified": [
+    "varied-value full layer",
+    "full FFN2",
+    "real E203 NICE/System Bus",
+    "physical SRAM macro",
+    "physical 8/4-stage arithmetic timing or PPA"
+  ],
+  "simulator_resource_use": {
+    "pid": 12316,
+    "exit_code": 0,
+    "cpu_seconds": 1447.484375,
+    "elapsed_seconds": 1531.0595022,
+    "start_time": "2026-10-21T21:24:08.2739402+08:00",
+    "exit_time": "2026-10-21T21:49:39.3334424+08:00"
+  },
+  "software_reference_compare": {
+    "status": "BIT_EXACT_LOCAL_COMPARE",
+    "outputs_matched": 25344,
+    "first_difference": null,
+    "reference_sha256": "45daa2c620dcd512ffa2380141cf762477ea25846fc0328027827cfa3842fefb",
+    "reference_origin": "software branch d11d169ea6f7b8500d6a2186c803d0f1a5eba709 archived snapshot",
+    "independent_software_owner_acceptance": "PENDING"
+  }
+}

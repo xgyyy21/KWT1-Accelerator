@@ -1,0 +1,16 @@
+{
+  "original_evidence_manifest_entries_verified": {
+    "full_run": 314,
+    "full_sources": 47,
+    "exception_run": 36,
+    "exception_sources": 14
+  },
+  "scope": "Archive integrity; not a new RTL simulation or software-independent acceptance",
+  "two_job_outputs_matched": 31680,
+  "two_job_halfwords_matched": 63360,
+  "targeted_tests_passed": 5,
+  "targeted_tests_failed": 0,
+  "lint_exit_code": 1,
+  "vendor_timing_model": false,
+  "e203_integration": false
+}

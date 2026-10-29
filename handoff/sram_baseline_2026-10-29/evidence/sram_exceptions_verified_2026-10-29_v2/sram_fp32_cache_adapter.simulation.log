@@ -1,0 +1,8 @@
+CHECK reset suppression and uninitialized storage PASS
+CHECK all 3072 words, three parallel banks, back-to-back reads PASS
+CHECK FP32 two-word transport and macro-boundary selection PASS
+CHECK response backpressure, write blocking and independent banks PASS
+CHECK standby with pending response and wake-up PASS
+CHECK reset cancellation and SRAM content retention PASS
+PASS sram_fp32_cache_adapter writes=3091 read_requests=3096 read_responses=3093 reset_cancelled=3 blocked_bank_cycles=16 macro_pin_checks=50064 cycles=2086
+tb/sram_fp32_cache_adapter_tb.sv:267: $finish called at 20857000 (1ps)

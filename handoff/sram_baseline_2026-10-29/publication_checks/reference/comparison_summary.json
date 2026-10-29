@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "jobs": [
+    {
+      "job": 0,
+      "shape": [
+        99,
+        64,
+        256
+      ],
+      "outputs_matched": 25344,
+      "write_halfwords_matched": 50688,
+      "tiles": 208,
+      "first_difference": null
+    },
+    {
+      "job": 1,
+      "shape": [
+        99,
+        256,
+        64
+      ],
+      "outputs_matched": 6336,
+      "write_halfwords_matched": 12672,
+      "tiles": 52,
+      "first_difference": null
+    }
+  ],
+  "failed": 0,
+  "reference_sha256": "45daa2c620dcd512ffa2380141cf762477ea25846fc0328027827cfa3842fefb",
+  "evidence": "D:\\competition\\build\\hardware_publish_2026-10-29_v1\\handoff\\sram_baseline_2026-10-29\\evidence\\sram_two_layers_verilator_2026-10-29_v1",
+  "input_evidence_sha256": {
+    "inputs.csv": "259f727e869816df72449bc6e8dadacfd74d90c64b12479cb08c9722eb241484",
+    "outputs.csv": "9871651f96fae595d6b6e4470d6bb2e4c306d33c7eb7c6b399861fb2a1c0f766",
+    "writeback.csv": "67e4632fd8648a7105525c0af89b1ac25e9338568759ce0bf15147b7e1cfc8b1",
+    "tiles.csv": "16d665dadaa7fa049d9cc093b9e3ee8bcc8c3e67cd788bc2d2bb64d672c01c51",
+    "control.csv": "8e39512cfdb0bf43f2350a20e53628931beb5c1041e1db92d84dbc93cfaa113e"
+  },
+  "scope": "Hardware-side archived software-reference recomputation; not independent software acceptance or a new RTL run"
+}

@@ -1,0 +1,2 @@
+PASS: SRAM checkpoint save=512 read=512 restored_cells=128 result=0x42c20000
+D:\competition\handoff\ffn1_prerequisites_2026-10-21_v2\sources\tb\fp32_array_checkpoint_tb.sv:173: $finish called at 21330000 (1ps)

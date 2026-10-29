@@ -1,0 +1,18 @@
+[
+  {
+    "file": "software_sram_delivery_2026-10-29_v2.zip",
+    "bytes": 51360324,
+    "sha256": "6078cef17021198f021055fcff83946a6a0cb391e142eff77fa9d646a11ad6a9",
+    "version": "local-sram-2026-10-29-fca29a1faecb",
+    "files": 443,
+    "zip_payloads_verified": true
+  },
+  {
+    "file": "synthesis_sram_delivery_2026-10-29_v2.zip",
+    "bytes": 51360141,
+    "sha256": "a4776b8f4e551dd0c76f45547db439ffa38cab0710860c7ef9928a549f0dee1a",
+    "version": "local-sram-2026-10-29-fca29a1faecb",
+    "files": 443,
+    "zip_payloads_verified": true
+  }
+]

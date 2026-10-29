@@ -1,0 +1,54 @@
+{
+  "arithmetic": "finite binary32, nearest-even, gradual underflow; separate multiplication and addition rounding, k ascending, bias once",
+  "input_file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-16\\kwt1-real-audio-smoke\\layer_00.npz",
+  "input_sha256": "5be944c1d4816fdbefb2a4ff124ff7a62da6540cf74d2ab020bea4130e0e21ce",
+  "layout": "DRAFT row-major, low 16-bit word first, little-endian bytes per word",
+  "provided_y_float_present": true,
+  "provided_y_float_used_for_expected": false,
+  "source_id": "eight/750e3e75_nohash_0.wav",
+  "split_claim": "unverified",
+  "split_verified_by_this_tool": false,
+  "status": "DRAFT FP32 arithmetic and memory-layout proposal; no RTL validation claim",
+  "tensors": {
+    "b": {
+      "bytes": 1024,
+      "element_bits": 32,
+      "sha256_bin": "b305b163000b217514ddfd8ede2745ec428922730f09d351749aa489848bda7e",
+      "shape": [
+        1,
+        256
+      ],
+      "word_count": 512
+    },
+    "expected": {
+      "bytes": 101376,
+      "element_bits": 32,
+      "sha256_bin": "24c84d16792bd5ab10bedfce5ebfd84a6305495477672d3144044e1ce33a51c5",
+      "shape": [
+        99,
+        256
+      ],
+      "word_count": 50688
+    },
+    "w": {
+      "bytes": 65536,
+      "element_bits": 32,
+      "sha256_bin": "4c6a8f5171a0ddc5eab198c0acdc4d96d547918bbac97f3b3be8019d42bb188e",
+      "shape": [
+        64,
+        256
+      ],
+      "word_count": 32768
+    },
+    "x": {
+      "bytes": 25344,
+      "element_bits": 32,
+      "sha256_bin": "1036470843aa8096f110adc2a90a7b9888c3654189680510eaf6ac180ee505fc",
+      "shape": [
+        99,
+        64
+      ],
+      "word_count": 12672
+    }
+  }
+}

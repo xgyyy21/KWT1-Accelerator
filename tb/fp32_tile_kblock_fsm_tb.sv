@@ -88,7 +88,24 @@ module fp32_tile_kblock_fsm_tb;
     if (!error || busy || load_start)
       $fatal(1, "zero K-block count was not rejected");
     @(negedge clk); start = 1'b0;
-    $display("PASS: fp32_tile_kblock_fsm two K-block sequencing");
+    // Restart from ERROR without reset, then inject a real control fault
+    // during LOAD. This tests the FSM only, not a full DMA abort/flush.
+    @(posedge clk); #1;
+    block_count_cfg = 16'd2;
+    @(negedge clk); start = 1'b1;
+    @(posedge clk); #1;
+    if (!busy || !load_start || done || error || block_index != 0)
+      $fatal(1, "valid restart after config error failed");
+    @(negedge clk); start = 0; error_in = 1;
+    @(posedge clk); #1;
+    if (!error || busy || done || load_start || writeback_start)
+      $fatal(1, "LOAD error did not cancel control sequence");
+    @(negedge clk); error_in = 0; start = 1;
+    @(posedge clk); #1;
+    if (!busy || !load_start || error || done || block_index != 0)
+      $fatal(1, "valid restart after LOAD error failed");
+    @(negedge clk); start = 0;
+    $display("PASS: fp32_tile_kblock_fsm two K-block sequencing, invalid config, injected LOAD error and restart");
     $finish;
   end
 

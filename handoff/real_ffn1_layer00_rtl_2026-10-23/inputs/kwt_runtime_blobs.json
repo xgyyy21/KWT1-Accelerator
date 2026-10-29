@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "upstream_repository": "ARM-software/keyword-transformer",
+  "upstream_commit": "237e4097afd4f6851e0b82f0a8d65c2dfe8eae30",
+  "files": {
+    "kws_streaming/data/input_data.py": {
+      "git_blob_sha1": "98b3d34f46e7e6e40b39dce1703fc6c457b7cd82",
+      "size": 35247
+    },
+    "kws_streaming/data/__init__.py": {
+      "git_blob_sha1": "df2f04dedfed6be7590bec1c0a682fbd18abc421",
+      "size": 629
+    },
+    "kws_streaming/layers/compat.py": {
+      "git_blob_sha1": "4bfd13a899dbc328e0487d5b6d53c999fc5bfa25",
+      "size": 781
+    },
+    "kws_streaming/layers/data_frame.py": {
+      "git_blob_sha1": "83ac39d49d9f0496c8b03062d1c7be35c557a728",
+      "size": 9208
+    },
+    "kws_streaming/layers/dct.py": {
+      "git_blob_sha1": "c48bff4eeb124d7d6fa7b7f6b4ad8ddd4139369c",
+      "size": 2279
+    },
+    "kws_streaming/layers/magnitude_rdft.py": {
+      "git_blob_sha1": "8b517020b2089db9b93f659c65aa585715de3889",
+      "size": 4473
+    },
+    "kws_streaming/layers/magnitude_rdft_mel.py": {
+      "git_blob_sha1": "3e02a3d36555c0ddf1a5100156c6532ebfdd4f30",
+      "size": 5281
+    },
+    "kws_streaming/layers/mel_table.py": {
+      "git_blob_sha1": "ddebc0003811b3301febb7779059fe919f3ff713",
+      "size": 5565
+    },
+    "kws_streaming/layers/modes.py": {
+      "git_blob_sha1": "d21184f93de9a3f01392bd7da0a311de1117ac1a",
+      "size": 3066
+    },
+    "kws_streaming/layers/normalizer.py": {
+      "git_blob_sha1": "d815d0c8e4cee475487cee8bfc9b834d0ce47b02",
+      "size": 1677
+    },
+    "kws_streaming/layers/preemphasis.py": {
+      "git_blob_sha1": "64d22a8acd6a70e036712df9ce4f743585b64dfd",
+      "size": 2319
+    },
+    "kws_streaming/layers/random_shift.py": {
+      "git_blob_sha1": "374ddf5ea5414ea5d36d5683a9bfca4c2df4ef97",
+      "size": 4236
+    },
+    "kws_streaming/layers/random_stretch_squeeze.py": {
+      "git_blob_sha1": "12b6ca7d0575907d54d1d4b74313caef23129bd8",
+      "size": 4470
+    },
+    "kws_streaming/layers/spectrogram_augment.py": {
+      "git_blob_sha1": "33f1da4f956908bbdb12ecfb32b3a62326229a88",
+      "size": 4084
+    },
+    "kws_streaming/layers/spectrogram_cutout.py": {
+      "git_blob_sha1": "5067a058004869119ca7d66d36003161a69b8837",
+      "size": 5749
+    },
+    "kws_streaming/layers/speech_features.py": {
+      "git_blob_sha1": "c888a2f77e03487b399622c094fd288c43a237e4",
+      "size": 13229
+    },
+    "kws_streaming/layers/temporal_padding.py": {
+      "git_blob_sha1": "3d433e4b201ed750a75875e722cb103a1719549c",
+      "size": 3471
+    },
+    "kws_streaming/layers/windowing.py": {
+      "git_blob_sha1": "71d160ec1800bb97a012432861e315ed8ffc6f5c",
+      "size": 2961
+    },
+    "kws_streaming/layers/__init__.py": {
+      "git_blob_sha1": "f15908c8aa874daa1ed188bae3501b91be88f915",
+      "size": 631
+    },
+    "kws_streaming/models/kws_transformer.py": {
+      "git_blob_sha1": "ff323b04786cea200bba7d62288673e1ebe48657",
+      "size": 6539
+    },
+    "kws_streaming/models/models.py": {
+      "git_blob_sha1": "b033ae3d48a40f9709302c7d7f071d9961ec6cca",
+      "size": 2213
+    },
+    "kws_streaming/models/model_flags.py": {
+      "git_blob_sha1": "25ec34f084a23021cb1a3955939d4c0fd6938ec0",
+      "size": 2787
+    },
+    "kws_streaming/models/model_params.py": {
+      "git_blob_sha1": "4c23c75c12c03546c842e1a262b52aaa691056e3",
+      "size": 11462
+    },
+    "kws_streaming/models/transformer_utils.py": {
+      "git_blob_sha1": "ff597a2d6d15d9ae61304667da62931c14338c58",
+      "size": 7589
+    },
+    "kws_streaming/models/utils.py": {
+      "git_blob_sha1": "d1493302c186451b14d5bebdac18049ee010513e",
+      "size": 16962
+    },
+    "kws_streaming/models/__init__.py": {
+      "git_blob_sha1": "d62889a603d7c82e584a0a6b659cc7e59ced1d03",
+      "size": 631
+    },
+    "kws_streaming/__init__.py": {
+      "git_blob_sha1": "625758ddaac8e31b389f38101ca77b0f02bee50d",
+      "size": 624
+    },
+    "models_data_v2_12_labels/kwt1/best_weights.data-00000-of-00001": {
+      "git_blob_sha1": "9c38f9653119383f7a303a94689c85a2a1c79b6b",
+      "size": 7401050
+    },
+    "models_data_v2_12_labels/kwt1/best_weights.index": {
+      "git_blob_sha1": "900be3e4a2e3ccc0182b98de43a8fe21e72b6491",
+      "size": 34662
+    },
+    "models_data_v2_12_labels/kwt1/flags.json": {
+      "git_blob_sha1": "008af2047e217bdad9e84ff5e5b70e69bac423c3",
+      "size": 2097
+    }
+  }
+}

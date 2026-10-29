@@ -1,0 +1,4 @@
+fp32_accelerator_top_tb PASS m=9 k=64 n=17 tiles=4 writes=306
+fp32_accelerator_top_tb PASS m=2 k=256 n=2 tiles=1 writes=8
+fp32_accelerator_top_tb PASS end_to_end_jobs=2
+D:\competition\handoff\ffn1_prerequisites_2026-10-21_v2\sources\tb\fp32_accelerator_top_tb.sv:171: $finish called at 457725000 (1ps)

@@ -1,0 +1,20 @@
+{
+  "remote_hardware_before": "0b04a55f8902f5969077fb376423b7c31853b9a3",
+  "preserved_local_checkpoint_commit": "a4e810d17fa9187ade80bbcd65843346fd89f2b3",
+  "source_files_copied_and_hash_verified": 145,
+  "source_manifest_sha256": "75a7d8cc78c3a8fafbc77dbac612345d20769cb3495e7d4a1df64a31eb0d1df4",
+  "original_package_id": "local-sram-2026-10-29-fca29a1faecb",
+  "excluded_generated_files": 257,
+  "changed_tracked_paths_before_documentation": [
+    "rtl/files.f",
+    "rtl/fp32_accelerator_top.sv",
+    "rtl/fp32_pe_array_8x16.sv",
+    "rtl/fp32_pe_mac.sv",
+    "rtl/fp32_tile_cache_streamer.sv",
+    "rtl/fp32_tile_dma_load_engine.sv",
+    "rtl/fp32_tile_kblock_load_compute.sv",
+    "rtl/fp32_tile_load_compute.sv",
+    "tb/fp32_tile_kblock_fsm_tb.sv"
+  ],
+  "no_pe_arithmetic_pipeline_rewrite": true
+}

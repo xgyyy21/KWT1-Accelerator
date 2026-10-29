@@ -1,0 +1,129 @@
+[
+  {
+    "cwd": "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\sources",
+    "argv": [
+      "D:\\competition\\.tools\\iverilog\\bin\\iverilog.exe",
+      "-V"
+    ]
+  },
+  {
+    "cwd": "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\sources",
+    "argv": [
+      "D:\\competition\\.tools\\iverilog\\bin\\vvp.exe",
+      "-V"
+    ]
+  },
+  {
+    "cwd": "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\sources",
+    "argv": [
+      "D:\\competition\\.tools\\iverilog\\bin\\iverilog.exe",
+      "-g2012",
+      "-Wall",
+      "-s",
+      "sram_fp32_cache_adapter_tb",
+      "-o",
+      "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\sram_fp32_cache_adapter.vvp",
+      "rtl/sram_1024x16_adapter.sv",
+      "rtl/sram_fp32_cache_adapter.sv",
+      "tb/support/ramsp128x16_functional_model.sv",
+      "tb/sram_fp32_cache_adapter_tb.sv"
+    ]
+  },
+  {
+    "cwd": "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\sources",
+    "argv": [
+      "D:\\competition\\.tools\\iverilog\\bin\\vvp.exe",
+      "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\sram_fp32_cache_adapter.vvp",
+      "+trace=D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\sram_fp32_cache_adapter.trace.csv"
+    ]
+  },
+  {
+    "cwd": "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\sources",
+    "argv": [
+      "D:\\competition\\.tools\\iverilog\\bin\\iverilog.exe",
+      "-g2012",
+      "-Wall",
+      "-s",
+      "fp32_bus_fault_guard_tb",
+      "-o",
+      "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\fp32_bus_fault_guard.vvp",
+      "rtl/prototype/fp32_bus_fault_guard.sv",
+      "tb/fp32_bus_fault_guard_tb.sv"
+    ]
+  },
+  {
+    "cwd": "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\sources",
+    "argv": [
+      "D:\\competition\\.tools\\iverilog\\bin\\vvp.exe",
+      "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\fp32_bus_fault_guard.vvp",
+      "+trace=D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\fp32_bus_fault_guard.trace.csv"
+    ]
+  },
+  {
+    "cwd": "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\sources",
+    "argv": [
+      "D:\\competition\\.tools\\iverilog\\bin\\iverilog.exe",
+      "-g2012",
+      "-Wall",
+      "-s",
+      "fp32_tile_soc_bus_adapter_tb",
+      "-o",
+      "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\fp32_tile_soc_bus_adapter.vvp",
+      "rtl/fp32_tile_soc_bus_adapter.sv",
+      "tb/fp32_tile_soc_bus_adapter_tb.sv"
+    ]
+  },
+  {
+    "cwd": "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\sources",
+    "argv": [
+      "D:\\competition\\.tools\\iverilog\\bin\\vvp.exe",
+      "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\fp32_tile_soc_bus_adapter.vvp",
+      "+trace=D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\fp32_tile_soc_bus_adapter.trace.csv"
+    ]
+  },
+  {
+    "cwd": "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\sources",
+    "argv": [
+      "D:\\competition\\.tools\\iverilog\\bin\\iverilog.exe",
+      "-g2012",
+      "-Wall",
+      "-s",
+      "ai_engine_regs_tb",
+      "-o",
+      "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\ai_engine_regs.vvp",
+      "rtl/ai_engine_pkg.sv",
+      "rtl/ai_engine_regs.sv",
+      "tb/ai_engine_regs_tb.sv"
+    ]
+  },
+  {
+    "cwd": "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\sources",
+    "argv": [
+      "D:\\competition\\.tools\\iverilog\\bin\\vvp.exe",
+      "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\ai_engine_regs.vvp",
+      "+trace=D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\ai_engine_regs.trace.csv"
+    ]
+  },
+  {
+    "cwd": "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\sources",
+    "argv": [
+      "D:\\competition\\.tools\\iverilog\\bin\\iverilog.exe",
+      "-g2012",
+      "-Wall",
+      "-s",
+      "fp32_tile_kblock_fsm_tb",
+      "-o",
+      "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\fp32_tile_kblock_fsm.vvp",
+      "rtl/fp32_tile_kblock_fsm.sv",
+      "tb/fp32_tile_kblock_fsm_tb.sv"
+    ]
+  },
+  {
+    "cwd": "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\sources",
+    "argv": [
+      "D:\\competition\\.tools\\iverilog\\bin\\vvp.exe",
+      "D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\fp32_tile_kblock_fsm.vvp",
+      "+trace=D:\\competition\\build\\sram_exceptions_verified_2026-10-29_v2\\fp32_tile_kblock_fsm.trace.csv"
+    ]
+  }
+]

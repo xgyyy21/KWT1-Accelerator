@@ -3,3 +3,12 @@ handoff/word_readback.csv -text
 handoff/readback_evidence_2026-10-18/** -text
 handoff/pe_hand_2x2_formal_2026-10-20/** -text
 handoff/pe_special_validation_2026-10-20/** -text
+
+# Fixed-byte hardware baseline; manifests bind source and evidence bytes.
+rtl/** -text
+tb/** -text
+scripts/** -text
+handoff/sram_baseline_2026-10-29/** -text
+handoff/real_ffn1_layer00_rtl_2026-10-23/software_reference/** -text
+handoff/real_ffn1_layer00_rtl_2026-10-23/** -text
+handoff/hardware_history_2026-10-22/** -text

@@ -1,0 +1,11 @@
+﻿{
+    "test_kind":  "synthetic evidence-checker unit tests; not an RTL simulation",
+    "tests_run":  8,
+    "status":  "PASS",
+    "observed_shell_exit_code":  0,
+    "negative_corruptions_rejected":  9,
+    "checker_sha256":  "29392e2f5a12ea32099c5ce1eabe6c081e09e9b0b44dfc7807456ed31fc3b906",
+    "unit_test_sha256":  "2d931d7927e0efe8fd6f829cdba6f688901670fd8b33cff65683444d9e053b60",
+    "log":  "checker_unit_tests.log",
+    "log_sha256":  "82c2ad417bd09f47eb87d3b5167ecb4e030776b48800518559fa6da73a74432f"
+}

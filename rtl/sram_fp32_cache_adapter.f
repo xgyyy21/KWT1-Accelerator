@@ -1,0 +1,2 @@
+rtl/sram_1024x16_adapter.sv
+rtl/sram_fp32_cache_adapter.sv

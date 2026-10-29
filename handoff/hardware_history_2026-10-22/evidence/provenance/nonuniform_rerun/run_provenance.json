@@ -1,0 +1,32 @@
+﻿{
+    "status":  "PASS",
+    "run_type":  "fresh synchronous rerun to capture native exit code",
+    "command":  "D:\\competition\\.tools\\iverilog\\bin\\vvp.exe -i D:\\competition\\build\\ffn1_completion\\varied_compile.vvp +OUT_DIR=D:\\competition\\build\\ffn1_varied_exit_run_sync +X_FILE=D:\\competition\\build\\ffn1_varied_exit_run_sync\\input_data\\ffn1_x_fp32.mem +W_FILE=D:\\competition\\build\\ffn1_varied_exit_run_sync\\input_data\\ffn1_w_fp32.mem +BIAS_FILE=D:\\competition\\build\\ffn1_varied_exit_run_sync\\input_data\\ffn1_bias_fp32.mem +EXPECTED_FILE=D:\\competition\\build\\ffn1_varied_exit_run_sync\\input_data\\ffn1_expected_fp32.mem",
+    "cwd":  "D:\\competition",
+    "tool_version":  "Icarus Verilog 14.0 devel",
+    "actual_vvp":  "ffn1_varied_actual_run.vvp",
+    "actual_vvp_sha256":  "a3fc777a204414a1d3192472de493db9665e2ee96556aad56fc8c5e494e6f067",
+    "rtl_tb_snapshot":  "../../ffn1_full_layer_varied_2026-10-22/sources",
+    "archive_manifest_sha256":  "6683c9e1c02dd2cf07ffe6645a349fd54105889b18252635487e7e295434591b",
+    "snapshot_source_files_compared_with_compile_tree":  41,
+    "snapshot_source_differences":  0,
+    "input_x_sha256":  "43c461389eb427d93f1f699826ce0a8f7c1c9ceb81f8b031455d5611eb763376",
+    "input_w_sha256":  "a2cd5051c2b3337f838170a9f8776bc0df11b6f3e727ee79e4104ec367d62624",
+    "input_bias_sha256":  "0878e768802fdab2aba0f6a3ac682124f12faeb9d1902bdefade48ccf8a0169a",
+    "run_output_dir":  "build/ffn1_varied_exit_run_sync",
+    "process_exit_code":  0,
+    "elapsed_seconds":  1088.6622228,
+    "checker":  "Check-VariedFfn1.py --package actual_run; exit 0; PASS",
+    "outputs":  {
+                    "rtl_outputs_matched_software_reference":  25344,
+                    "rtl_outputs_failed":  0,
+                    "system_bus_write_halfwords_checked":  50688,
+                    "tiles_checked":  208,
+                    "input_read_halfwords":  642048,
+                    "tail_rows_checked":  3
+                },
+    "started_at":  "2026-10-22T21:44:20.0054302+08:00",
+    "ended_at":  "2026-10-22T22:02:28.6676530+08:00",
+    "raw_native_log":  "actual_run/ffn1.run.native.log (UTF-16LE as captured by Windows PowerShell Tee-Object)",
+    "utf8_log":  "actual_run/ffn1.run.log (same decoded text, UTF-8 for checker compatibility)"
+}

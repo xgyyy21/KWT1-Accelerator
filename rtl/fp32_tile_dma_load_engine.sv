@@ -8,7 +8,8 @@ module fp32_tile_dma_load_engine #(
   parameter int COL_TILE = 16,
   parameter int K_TILE = 32,
   parameter int ADDR_WIDTH = 32,
-  parameter int CACHE_ADDR_WIDTH = 10
+  parameter int CACHE_ADDR_WIDTH = 10,
+  parameter bit ENABLE_CACHE_HANDSHAKE = 1'b0
 ) (
   input logic clk,
   input logic rst_n,
@@ -44,6 +45,7 @@ module fp32_tile_dma_load_engine #(
   output logic result_wr_en,
   output logic [CACHE_ADDR_WIDTH-1:0] result_wr_addr,
   output logic [15:0] result_wr_data,
+  input logic a_wr_ready, b_wr_ready, result_wr_ready,
   output logic busy,
   output logic load_done
 );
@@ -58,6 +60,9 @@ module fp32_tile_dma_load_engine #(
   logic seq_req_ready;
 
   logic read_pending;
+  logic write_pending;
+  logic [15:0] buffered_data;
+  logic cache_write_ready;
   logic seq_finished;
   logic [1:0] pending_bank;
   logic [CACHE_ADDR_WIDTH-1:0] pending_addr;
@@ -82,9 +87,9 @@ module fp32_tile_dma_load_engine #(
     .word_high(seq_word_high), .phase(seq_phase)
   );
 
-  assign busy = seq_busy || read_pending;
-  assign seq_req_ready = seq_req_valid && !read_pending && bus_req_ready;
-  assign bus_req_valid = seq_req_valid && !read_pending;
+  assign busy = seq_busy || read_pending || write_pending;
+  assign seq_req_ready = bus_req_valid && bus_req_ready;
+  assign bus_req_valid = seq_req_valid && !read_pending && !write_pending;
   assign bus_req_write = 1'b0;
   assign bus_req_addr = seq_req_addr;
   assign bus_req_wdata = 16'd0;
@@ -92,14 +97,23 @@ module fp32_tile_dma_load_engine #(
   always_comb begin
     a_wr_en = 1'b0;
     a_wr_addr = pending_addr;
-    a_wr_data = bus_rsp_rdata;
+    a_wr_data = buffered_data;
     b_wr_en = 1'b0;
     b_wr_addr = pending_addr;
-    b_wr_data = bus_rsp_rdata;
+    b_wr_data = buffered_data;
     result_wr_en = 1'b0;
     result_wr_addr = pending_addr;
-    result_wr_data = bus_rsp_rdata;
-    if (read_pending && bus_rsp_valid) begin
+    result_wr_data = buffered_data;
+    cache_write_ready = !ENABLE_CACHE_HANDSHAKE;
+    if (ENABLE_CACHE_HANDSHAKE) begin
+      case (pending_bank)
+        2'd0: cache_write_ready = a_wr_ready;
+        2'd1: cache_write_ready = b_wr_ready;
+        2'd2: cache_write_ready = result_wr_ready;
+        default: cache_write_ready = 1'b0;
+      endcase
+    end
+    if (write_pending) begin
       case (pending_bank)
         2'd0: a_wr_en = 1'b1;
         2'd1: b_wr_en = 1'b1;
@@ -112,6 +126,8 @@ module fp32_tile_dma_load_engine #(
   always_ff @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
       read_pending <= 1'b0;
+      write_pending <= 1'b0;
+      buffered_data <= '0;
       seq_finished <= 1'b0;
       pending_bank <= 2'd0;
       pending_addr <= '0;
@@ -120,7 +136,8 @@ module fp32_tile_dma_load_engine #(
       load_done <= 1'b0;
       if (seq_done)
         seq_finished <= 1'b1;
-      if (seq_finished && (!read_pending || bus_rsp_valid)) begin
+      // DONE means the final buffered half-word has reached the cache.
+      if (seq_finished && !read_pending && !write_pending) begin
         load_done <= 1'b1;
         seq_finished <= 1'b0;
       end
@@ -130,7 +147,11 @@ module fp32_tile_dma_load_engine #(
         pending_addr <= seq_cache_word_addr;
       end else if (read_pending && bus_rsp_valid) begin
         read_pending <= 1'b0;
+        write_pending <= 1'b1;
+        buffered_data <= bus_rsp_rdata;
       end
+      if (write_pending && cache_write_ready)
+        write_pending <= 1'b0;
     end
   end
 endmodule

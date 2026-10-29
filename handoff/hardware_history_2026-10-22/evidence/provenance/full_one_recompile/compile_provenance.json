@@ -1,0 +1,15 @@
+﻿{
+    "status":  "PASS",
+    "evidence_kind":  "recompiled binary from archived exact source snapshot",
+    "cwd":  "evidence/ffn1_full_layer_2026-10-21/sources",
+    "command":  "iverilog -g2012 -s fp32_competition_ffn1_tb -o \u003cartifact\u003e -f rtl/files.f tb/fp32_competition_ffn1_tb.sv",
+    "tool_version":  "Icarus Verilog version 14.0 (devel)",
+    "exit_code":  0,
+    "artifact":  "ffn1_uniform_archived.vvp",
+    "artifact_sha256":  "c4b40153ce54b1cd74a43c0a822dae096153a8cb9ac4432fc1f6930f1349cf09",
+    "source_manifest":  "../../ffn1_full_layer_2026-10-21/source_manifest.json",
+    "source_manifest_sha256":  "37d0c7178f6950fcfe61e6aa2f95c87ffba4e88e39b3badb48e68204eb655873",
+    "historical_artifact_sha256":  "fc98b06ce6eBC75f3d1ef27e8c89d79b3cfd6427f1cf6e7069b781064e113483",
+    "byte_identical_to_historical_artifact":  false,
+    "note":  "The original historical VVP is absent. This artifact is recompiled from the included archived full-one RTL/TB snapshot. Its hash differs from the historical artifact hash; source identity and reproducible compile command are supplied, but no byte-identity claim is made."
+}

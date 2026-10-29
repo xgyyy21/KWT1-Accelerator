@@ -1,0 +1,2 @@
+fp32_tile_engine_2x2_tb PASS results=4
+D:\competition\handoff\ffn1_prerequisites_2026-10-21_v2\sources\tb\fp32_tile_engine_2x2_tb.sv:69: $finish called at 376000 (1ps)

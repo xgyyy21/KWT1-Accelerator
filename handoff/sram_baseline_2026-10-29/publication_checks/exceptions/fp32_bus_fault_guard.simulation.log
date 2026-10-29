@@ -1,0 +1,2 @@
+PASS fp32_bus_fault_guard checks=7 timeout_cycles=4 scope=standalone_prototype
+tb/fp32_bus_fault_guard_tb.sv:106: $finish called at 476000 (1ps)

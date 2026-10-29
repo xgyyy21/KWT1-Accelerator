@@ -73,7 +73,7 @@ module fp32_pe_mac #(
   logic [31:0] mul_w_pipe       [0:MUL_LATENCY-1];
   logic [15:0] mul_k_pipe       [0:MUL_LATENCY-1];
   logic        mul_block_end_pipe [0:MUL_LATENCY-1];
-  logic        mul_valid_pipe   [0:MUL_LATENCY-1];
+  logic [MUL_LATENCY-1:0] mul_valid_pipe;
 
   logic [31:0] product_mem [0:K-1];
   logic [31:0] x_mem       [0:K-1];
@@ -86,19 +86,19 @@ module fp32_pe_mac #(
   logic [31:0] add_w_pipe       [0:ADD_LATENCY-1];
   logic [15:0] add_k_pipe       [0:ADD_LATENCY-1];
   logic        add_bias_pipe    [0:ADD_LATENCY-1];
-  logic        add_valid_pipe   [0:ADD_LATENCY-1];
+  logic [ADD_LATENCY-1:0] add_valid_pipe;
 
   assign busy = (state != S_IDLE) && (state != S_DONE);
   assign checkpoint_accumulator_out = accumulator;
   assign checkpoint_bias_out = bias_reg;
   assign checkpoint_state_out = state;
 
-  initial begin
 `ifndef SYNTHESIS
+  initial begin
     if (K <= 0 || MUL_LATENCY != 8 || ADD_LATENCY != 4)
       $fatal(1, "fp32_pe_mac requires K>0 and an 8+4 cycle contract");
-`endif
   end
+`endif
 
   always_ff @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
@@ -149,32 +149,41 @@ module fp32_pe_mac #(
       end
     end else begin
       cycle_count <= cycle_count + 1;
-      result_valid <= 1'b0;
-      done         <= 1'b0;
-      trace_valid  <= 1'b0;
-      trace_bias_valid <= 1'b0;
+      if (result_valid) result_valid <= 1'b0;
+      if (done) done <= 1'b0;
+      if (trace_valid) trace_valid <= 1'b0;
+      if (trace_bias_valid) trace_bias_valid <= 1'b0;
 
-      for (i = MUL_LATENCY-1; i > 0; i = i - 1) begin
-        mul_product_pipe[i] <= mul_product_pipe[i-1];
-        mul_x_pipe[i]       <= mul_x_pipe[i-1];
-        mul_w_pipe[i]       <= mul_w_pipe[i-1];
-        mul_k_pipe[i]       <= mul_k_pipe[i-1];
-        mul_block_end_pipe[i] <= mul_block_end_pipe[i-1];
-        mul_valid_pipe[i]   <= mul_valid_pipe[i-1];
+      // Payload registers only advance with a valid token. The validity
+      // shift still advances every clock: bubbles do not stall arithmetic
+      // and the externally visible 8+4 cycle contract is unchanged.
+      if (|mul_valid_pipe) begin
+        mul_valid_pipe <= mul_valid_pipe << 1;
+        for (i = MUL_LATENCY-1; i > 0; i = i - 1) begin
+          if (mul_valid_pipe[i-1]) begin
+            mul_product_pipe[i] <= mul_product_pipe[i-1];
+            mul_x_pipe[i]       <= mul_x_pipe[i-1];
+            mul_w_pipe[i]       <= mul_w_pipe[i-1];
+            mul_k_pipe[i]       <= mul_k_pipe[i-1];
+            mul_block_end_pipe[i] <= mul_block_end_pipe[i-1];
+          end
+        end
       end
-      mul_valid_pipe[0] <= 1'b0;
 
-      for (i = ADD_LATENCY-1; i > 0; i = i - 1) begin
-        add_before_pipe[i]  <= add_before_pipe[i-1];
-        add_product_pipe[i] <= add_product_pipe[i-1];
-        add_sum_pipe[i]     <= add_sum_pipe[i-1];
-        add_x_pipe[i]       <= add_x_pipe[i-1];
-        add_w_pipe[i]       <= add_w_pipe[i-1];
-        add_k_pipe[i]       <= add_k_pipe[i-1];
-        add_bias_pipe[i]    <= add_bias_pipe[i-1];
-        add_valid_pipe[i]   <= add_valid_pipe[i-1];
+      if (|add_valid_pipe) begin
+        add_valid_pipe <= add_valid_pipe << 1;
+        for (i = ADD_LATENCY-1; i > 0; i = i - 1) begin
+          if (add_valid_pipe[i-1]) begin
+            add_before_pipe[i]  <= add_before_pipe[i-1];
+            add_product_pipe[i] <= add_product_pipe[i-1];
+            add_sum_pipe[i]     <= add_sum_pipe[i-1];
+            add_x_pipe[i]       <= add_x_pipe[i-1];
+            add_w_pipe[i]       <= add_w_pipe[i-1];
+            add_k_pipe[i]       <= add_k_pipe[i-1];
+            add_bias_pipe[i]    <= add_bias_pipe[i-1];
+          end
+        end
       end
-      add_valid_pipe[0] <= 1'b0;
 
       // A new task clears the accumulator.  The first block of a task also
       // captures bias.  Later K blocks must not clear the accumulator.
@@ -227,8 +236,6 @@ module fp32_pe_mac #(
           mul_k_pipe[0]       <= 16'd0;
           mul_block_end_pipe[0] <= (K == 1) || task_last;
         end else if (state == S_COLLECT && enable && in_valid) begin
-          // This is a simulation-time protocol guard.  Synthesis should see
-          // the same datapath without requiring a run-time system task.
 `ifndef SYNTHESIS
           if (input_count >= K)
             $fatal(1, "fp32_pe_mac received more than K inputs in one block");

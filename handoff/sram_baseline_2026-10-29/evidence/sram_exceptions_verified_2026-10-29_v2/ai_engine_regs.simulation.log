@@ -1,0 +1,2 @@
+ai_engine_regs_tb PASS
+tb/ai_engine_regs_tb.sv:42: $finish called at 500000 (1ps)

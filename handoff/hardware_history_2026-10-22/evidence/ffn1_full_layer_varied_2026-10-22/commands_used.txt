@@ -1,0 +1,5 @@
+# Exact commands used from D:\competition
+& 'C:\Program Files\Lenovo\ModelMgr\Plugins\Image\python.exe' -B scripts/Generate-VariedFfn1Inputs.py --output build/ffn1_varied_inputs
+& .tools/iverilog/bin/iverilog.exe -g2012 -s fp32_competition_ffn1_tb -o build/ffn1_completion/varied_compile.vvp -f rtl/files.f tb/fp32_competition_ffn1_tb.sv
+& .tools/iverilog/bin/vvp.exe -i build/ffn1_completion/varied_compile.vvp +OUT_DIR=build/ffn1_varied_run +X_FILE=build/ffn1_varied_run/input_data/ffn1_x_fp32.mem +W_FILE=build/ffn1_varied_run/input_data/ffn1_w_fp32.mem +BIAS_FILE=build/ffn1_varied_run/input_data/ffn1_bias_fp32.mem +EXPECTED_FILE=build/ffn1_varied_run/input_data/ffn1_expected_fp32.mem
+& 'C:\Program Files\Lenovo\ModelMgr\Plugins\Image\python.exe' -B scripts/Check-VariedFfn1.py --package build/ffn1_varied_run

@@ -1,0 +1,12 @@
+﻿{
+    "status":  "PASS",
+    "original_manifest":  "ffn1_prerequisites_2026-10-21_v2/SHA256SUMS.txt",
+    "included_copy":  "ffn1_prerequisites_2026-10-21_v2_SHA256SUMS.txt",
+    "original_manifest_sha256":  "86c4e0a9f6edce6c0cdf2730e875c8a5ce3d7521e5a696fe4e2918b9abaf9dee",
+    "affected_regression_link_manifest_sha256":  "86c4e0a9f6edce6c0cdf2730e875c8a5ce3d7521e5a696fe4e2918b9abaf9dee",
+    "affected_regression_link_summary_sha256":  "2203089a152ee146b84d7c02c8f82fa2cae302749c1aaac09b422a37d371597f",
+    "included_summary_sha256":  "2203089a152ee146b84d7c02c8f82fa2cae302749c1aaac09b422a37d371597f",
+    "manifest_matches_link":  true,
+    "summary_matches_link":  true,
+    "note":  "The complete original regression v2 evidence tree, including this exact manifest, remains under evidence/. This dedicated copy and link file make the previously omitted manifest explicit."
+}

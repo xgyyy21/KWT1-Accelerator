@@ -1,0 +1,1 @@
+verilator --lint-only --timing --assert -sv -DSYNTHESIS --top-module fp32_accelerator_top -GUSE_SRAM_MACROS=1 -GSTRICT_COMPETITION_SHAPES=1 -f rtl/files.f 

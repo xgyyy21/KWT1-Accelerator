@@ -1,0 +1,2 @@
+PASS: one 8x16 tile K=64 outputs=128 writes=256 cycles=12634
+D:\competition\handoff\ffn1_prerequisites_2026-10-21_v2\sources\tb\fp32_one_tile_k64_tb.sv:70: $finish called at 126525000 (1ps)

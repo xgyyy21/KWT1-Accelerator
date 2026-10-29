@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "run_kind": "actual RTL simulation; nonuniform finite FP32 operands",
+  "shape": [
+    99,
+    64,
+    256
+  ],
+  "rtl_outputs_matched_software_reference": 25344,
+  "rtl_outputs_failed": 0,
+  "first_difference": null,
+  "system_bus_write_halfwords_checked": 50688,
+  "tiles_checked": 208,
+  "k_blocks_per_tile": 2,
+  "tail_rows_checked": 3,
+  "input_read_halfwords": 642048,
+  "inputs": {
+    "x": {
+      "count": 6336,
+      "distinct_bit_patterns": 12,
+      "sha256": "43c461389eb427d93f1f699826ce0a8f7c1c9ceb81f8b031455d5611eb763376"
+    },
+    "w": {
+      "count": 16384,
+      "distinct_bit_patterns": 12,
+      "sha256": "a2cd5051c2b3337f838170a9f8776bc0df11b6f3e727ee79e4104ec367d62624"
+    },
+    "bias": {
+      "count": 256,
+      "distinct_bit_patterns": 12,
+      "sha256": "0878e768802fdab2aba0f6a3ac682124f12faeb9d1902bdefade48ccf8a0169a"
+    }
+  },
+  "software_reference_sha256": "45daa2c620dcd512ffa2380141cf762477ea25846fc0328027827cfa3842fefb",
+  "scope": "protocol-neutral RTL top; not E203 integration, not real model weights, not PPA"
+}

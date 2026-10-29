@@ -1,0 +1,5 @@
+warning: Some design elements have no explicit time unit and/or
+       : time precision. This may cause confusing timing results.
+       : Affected design elements are:
+       :   -- module ai_engine_regs declared here: rtl/ai_engine_regs.sv:4
+       :   -- package ai_engine_pkg declared here: rtl/ai_engine_pkg.sv:1

@@ -1,0 +1,619 @@
+{
+  "original_local_directory": "handoff/software_incremental_delivery_completed_2026-10-22",
+  "original_sha256sum_entries_verified": 498,
+  "historical_evidence_not_new_simulation": true,
+  "omitted_files": [
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/docs/control_interface_v1_internal.md",
+      "bytes": 1366,
+      "sha256": "6fdff190044bce85ead2fb73792a05aa26933e4b58b17ae7ad28b5809a52f57d",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/docs/memory_layout_v1_internal.md",
+      "bytes": 1351,
+      "sha256": "a33414698b78b7173d4831b0a4a14040657abe8c27759b22dbb00a28003a1fa2",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/docs/REPLY_TO_SOFTWARE_2026-10-20.md",
+      "bytes": 2367,
+      "sha256": "57fed68fa9160e2f9a4bff4ece750f380a5621f10dcbef7ca38ddd649be5adb9",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/docs/special_value_and_error_policy_v1.md",
+      "bytes": 728,
+      "sha256": "78ece0550d2faa836e24c42bbff65fe364873fa196519d111a718291f484946f",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/docs/test_and_acceptance_matrix.md",
+      "bytes": 1503,
+      "sha256": "10c0ef29e405030fa9b16c76580c4b0a19fdd090dfc1672a4f5f758513ff18df",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/array_pe_trace_2026-10-20_v2.zip",
+      "bytes": 5428818,
+      "sha256": "5bcbb81bddb2f1a0f881a240950c87f1589f2c33255c99c22b05355e22f9b835",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/checkpoint_per_pe/compile.log",
+      "bytes": 29862,
+      "sha256": "697551071357e2689834750526fe2cddd7e0fde56d22e3928ec536f29b4b320c",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/checkpoint_per_pe/README.md",
+      "bytes": 772,
+      "sha256": "fd1aba04742f2f0cb9d51e8a9a4a79dc8d862c20e3c6cfcc71ffa5d7b87b68a8",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/checkpoint_per_pe/run.log",
+      "bytes": 376,
+      "sha256": "70ace63e345659717f8898da123d21066e325fc55ff771800981f625b6d5929f",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/checkpoint_result.csv",
+      "bytes": 54,
+      "sha256": "9f0e69950264185d7db7f8f5bb4d79c1b2472608405aebb4b28c2bfb38266605",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/checkpoint_result_per_pe.csv",
+      "bytes": 2766,
+      "sha256": "4313619479c17633dc134e77405957b71b575527db1a7875b05d04a7688c340f",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/checkpoint_trace.csv",
+      "bytes": 61704,
+      "sha256": "cb0ac88d5c677c49f835a5c3f33be885f447735b1c03b95bb1314615e6b2e2a7",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/full_ffn1/compile.log",
+      "bytes": 31770,
+      "sha256": "c4b097d9f905b10ef611618b84c7bb8acc91375253e45007b52b0107aae52eae",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/full_ffn1/STATUS.md",
+      "bytes": 588,
+      "sha256": "bf09f4b965fa4254e17c6652cb6d4db3cae376c19357a530abacfce7715baeb0",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/interface_v1_delivery_2026-10-20.zip",
+      "bytes": 502668,
+      "sha256": "2d8ffcb50f7663436d8bfa7334d6f249c04a99dfc20ff5c4563f6674ab246cf6",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/one_tile_k64/compile.log",
+      "bytes": 31510,
+      "sha256": "d60f66356ef7b91ebf06781fd2f2d5e27b4ea5be460b040f2d0d623a617f32bd",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/one_tile_k64/README.md",
+      "bytes": 724,
+      "sha256": "5f6b02f194e9b46d92202b0b5f7b004c92caa50dd0d8363e046b9fefcb222e2f",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/one_tile_k64/run.log",
+      "bytes": 336,
+      "sha256": "6cfd64835f5d3f0cc3c85e6504e6b08bf4c81514106c2523aab75bef58214f5f",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/partial_sum_checkpoint_2026-10-20_v4.zip",
+      "bytes": 391431,
+      "sha256": "efeb95a05fb9c6105add6e93d1ef46c0fa0021d583ad6fdd3d054af93ea4c321",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/pe_trace.csv",
+      "bytes": 3805375,
+      "sha256": "0fe4d7401576f66449af290d6c6ff980815fcf4047a8dd5a96255c666a3e8542",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/fp32_array_checkpoint_tb.compile.log",
+      "bytes": 29862,
+      "sha256": "4dbcd761d04013d3cba13ca34f08cdb230e6967e4077c9b157efd3b94df32dca",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/fp32_array_checkpoint_tb.run.log",
+      "bytes": 328,
+      "sha256": "0c5d83ce2ca6481db3bef0dde18c67beb7db41c2d145e3bdbba0d6a9fa64cf1e",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/fp32_math_boundary_tb.compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/fp32_math_boundary_tb.run.log",
+      "bytes": 300,
+      "sha256": "4bbb9e40e851fb9f443da72a86ac78aa0eb26328e9936aec5e4094c45eb79f45",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/fp32_matrix_block_controller_tb.compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/fp32_matrix_block_controller_tb.run.log",
+      "bytes": 300,
+      "sha256": "7489fe2ca3d87646d10364140de6a54471d8e6fb56ace8b335acad4c0226842d",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/fp32_matrix_tile_scheduler_tb.compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/fp32_matrix_tile_scheduler_tb.run.log",
+      "bytes": 306,
+      "sha256": "9b3a0cb54ef801e93a5891bfa3d2b5270229d248ad5171f6d44b263804781711",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/fp32_pe_array_8x16_tb.compile.log",
+      "bytes": 29862,
+      "sha256": "4dbcd761d04013d3cba13ca34f08cdb230e6967e4077c9b157efd3b94df32dca",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/fp32_pe_array_8x16_tb.run.log",
+      "bytes": 258,
+      "sha256": "54bb3831fcf61ad86c6b6ee1c6e5a3259c8cf23712d9f61469c05cdf70f03a60",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/fp32_pe_array_k64_tb.compile.log",
+      "bytes": 29862,
+      "sha256": "4dbcd761d04013d3cba13ca34f08cdb230e6967e4077c9b157efd3b94df32dca",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/fp32_pe_array_k64_tb.run.log",
+      "bytes": 268,
+      "sha256": "aa0732ceb072d0e7bb13701dd846b51be7b1f057222836c7000001850022ebe8",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/fp32_pe_special_tb.compile.log",
+      "bytes": 910,
+      "sha256": "19db5d97da33e5524a70e043b4190b99f6489428f2807e5e0e955f469380a2ab",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/fp32_pe_special_tb.run.log",
+      "bytes": 2140,
+      "sha256": "41e5698bf77e529e18805931986ee8aad24fbf916e2b2ba497260925cb99a68f",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/fp32_tile_kblock_load_compute_k256_tb.compile.log",
+      "bytes": 6162,
+      "sha256": "61c897c98245015d59936bd5cf26a58bdfc4343acd31db79cabac63af27d7670",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/fp32_tile_kblock_load_compute_k256_tb.run.log",
+      "bytes": 316,
+      "sha256": "a15b937d2a57b9f3f2d883af561bb79dccf8a2718ba70a34b7c840cc326b7c73",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/interface_v1_top_tb.compile.log",
+      "bytes": 31510,
+      "sha256": "bb37ebf6b0b2c2c59cd30266a5bbfc4089a1988ccccfb651c949980f9454b535",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/interface_v1_top_tb.compile2.log",
+      "bytes": 31510,
+      "sha256": "25b2fc572ea088ccd2ceaf076cd650ac90ac67532a571f900e52382705f3e958",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/interface_v1_top_tb.compile3.log",
+      "bytes": 31510,
+      "sha256": "dc354675b4b74e3b236dee789bf2e8facba75e089d9e5df4f4b40b9c9e777435",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/interface_v1_top_tb.run.log",
+      "bytes": 252,
+      "sha256": "3e6077f8bfb7034d7ead72dc513977fc9f6a242cc1845aca05d77f4a3086d455",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/interface_v1_top_tb.run2.log",
+      "bytes": 3020,
+      "sha256": "6d0eff008059563bbc86a76ec5bd019de958de2888b66bf8c8d3ebeca9662d64",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020/interface_v1_top_tb.run3.log",
+      "bytes": 1086,
+      "sha256": "4a21e4912c303d0cd1603262eb26ec1f97a7c12cb2c5b36e21c8c67b504ce4f7",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/regression_20261020_summary.json",
+      "bytes": 2775,
+      "sha256": "3f22b88755b0ecc30dbe4ceb851cec3b8cb272059ff8db59cc642fe40ba7aa95",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/evidence/word_readback.csv",
+      "bytes": 49816,
+      "sha256": "d7ba2ee7ae5678552899008b292398df861a6da28d06fa13bfa28dd53e732a1b",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/README.md",
+      "bytes": 3962,
+      "sha256": "683f29117e992cba6a651a776c8e40d75fd66c055d357d5534dffaf95ca39b93",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/ai_engine_core.sv",
+      "bytes": 2868,
+      "sha256": "0d5a5cc4ea284119789a1984657827272a452d51bc14623241fca73c16eeba72",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/ai_engine_fsm.sv",
+      "bytes": 1770,
+      "sha256": "a637eb524879bbd63d6534c71d6fdb2cba0616af5860a768fe44f73ee0b9bc01",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/ai_engine_pkg.sv",
+      "bytes": 482,
+      "sha256": "99dcb21b694f725a0d0e3f3301095fdc09cd1f965a60d8a9d4d383b075032911",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/ai_engine_regs.sv",
+      "bytes": 3599,
+      "sha256": "a82401939ef07e453f1c0e40f5d05b81487510091ca3ab8731908e463b7b01d3",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/ai_engine_soc_adapter.sv",
+      "bytes": 2682,
+      "sha256": "972035437023e68cfea9ddc313fb184c9913f5b8591631aa3e3c32cf6c6660a1",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/block_counter.sv",
+      "bytes": 1525,
+      "sha256": "9baa888e2ee07e9cb0232002a99f0634be92262e809c7e59b981bef1b132d7bb",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/block_descriptor.sv",
+      "bytes": 1166,
+      "sha256": "4b50d9f1b9d73d554e12385165806e8b7bc47b958355420d5cdda8244d00f4ff",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/files.f",
+      "bytes": 1051,
+      "sha256": "8f81502ffd6e2851688599377ca86f3a62ef49b807ba511f28683faaba99b063",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_accelerator_top.sv",
+      "bytes": 5609,
+      "sha256": "ca04b27a30fe9e9c7c2deecd660b0bcf1411aa930edec7c228de08236e4f4fe2",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_mac_boundary.sv",
+      "bytes": 1040,
+      "sha256": "bccc3b76015534d42caefd56964d09932fc540aec64a29b45ee1a3700996273f",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_math_pkg.sv",
+      "bytes": 4099,
+      "sha256": "f9b2ff813b51aba48914ce181c3840d40bd3bbd4f5b2ad0c89a3f4acadb888fe",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_matrix_block_controller.sv",
+      "bytes": 3961,
+      "sha256": "2097714e01144e2e703cd1ec1b0addf0adaf73147c876958617a207d04edd4c3",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_matrix_global_addr_gen.sv",
+      "bytes": 2709,
+      "sha256": "ee8054dc7fd6a6b024e3ce333a642d2dbbfcb13258670f165678ae7884655096",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_matrix_tile_scheduler.sv",
+      "bytes": 3094,
+      "sha256": "3547a9e9dfc4ac12f3b27302bc621a313e6334070d2b3f36eb461b28e3154af7",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_nice_control_adapter.sv",
+      "bytes": 2038,
+      "sha256": "11c466e68629df985d51f87830fa3fb4f68b5c86d623365d8e54ab5882373fb7",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_pe_array_8x16.sv",
+      "bytes": 14630,
+      "sha256": "12b3f89bf0dcbc6b206b737d685b998fe9d7e4248da934361b5515a1949e99f0",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_pe_mac.sv",
+      "bytes": 12798,
+      "sha256": "7fbfabe4627a813e556b99e691a893d3a36aa228306d1d29abb17cd1ba5b23f0",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_tile_cache_mapper.sv",
+      "bytes": 1996,
+      "sha256": "68e5a381b4e983e1bc401d9d8f81adc0a4105cf3016bf0beddab7b9d19b19751",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_tile_cache_streamer.sv",
+      "bytes": 6204,
+      "sha256": "5948040e2bca4e3450523cf55ee0f1b30b129d98490fef6be49dfd5e75db60a0",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_tile_dma_load_engine.sv",
+      "bytes": 4698,
+      "sha256": "078cfd7149e7f424f18f665f260d11862b7817ce7f91cfd60e3c8b18ba9e6f5e",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_tile_dma_sequencer.sv",
+      "bytes": 7515,
+      "sha256": "19f0e8a5f526626ae00cc7fda62300aed32965497874c5eafe1330b48764e536",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_tile_dma_writeback_engine.sv",
+      "bytes": 5033,
+      "sha256": "b8edaf3d3db27a45205c8b7bae06da84a520fbaaebfcdc25b7a80afefff6223b",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_tile_engine.sv",
+      "bytes": 2495,
+      "sha256": "5cc237d39c95d9118baf92ec6e0f59311fe77a60f214021804b83a330bf64da6",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_tile_fsm.sv",
+      "bytes": 3094,
+      "sha256": "12c10227a66af7ba6ebe96fec915fc6a8def533c0bf65788c8c4d6a88686354a",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_tile_kblock_fsm.sv",
+      "bytes": 4169,
+      "sha256": "63a799c11d2019c8615b20b00406f2bf957679a6a0b7bffe9cd4749815ec90c8",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_tile_kblock_load_compute.sv",
+      "bytes": 9427,
+      "sha256": "e669769c255733adea54fb258782ea9e4afbcbd276853e954ba7ab1ed608e760",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_tile_load_compute.sv",
+      "bytes": 9049,
+      "sha256": "b16ab974274982c8e566e55de08cf1fc221da876dd75e1470dcf9ac505365b59",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/fp32_tile_soc_bus_adapter.sv",
+      "bytes": 2269,
+      "sha256": "bfe335ad4ff94f1f87090d4b14e3d327879fad006958d4890c1d8c1d6495ad9e",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/matrix_buffer.sv",
+      "bytes": 1683,
+      "sha256": "50329ddd4521cdd2c989cf23dbbdcf9f49f2379a51263dbf892cb37ed4b15e2c",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/matrix_cache_manager.sv",
+      "bytes": 2264,
+      "sha256": "ad1db76b9df18621d31ae8aae11c9bc5ee30e7dd1baa2caaf7dd3cd4680f8838",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/matrix_task_controller.sv",
+      "bytes": 2126,
+      "sha256": "cba739edc5ae7a78a970432388910c0a7b3d013ef504c338c47d9512fd584b17",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/matrix_task_scheduler.sv",
+      "bytes": 2157,
+      "sha256": "5c4efb28a448f498b6cd2169ff721e711dbedd0d5e9a3aebe85fdef2099457be",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/pe_array_8x16.sv",
+      "bytes": 1456,
+      "sha256": "a7f33ecd8a2b7516abc3acc8faa5bd54dd40b43dfd3be1a24e976e5703ffb056",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/pe_mac.sv",
+      "bytes": 2794,
+      "sha256": "051b5855301ba3bc9174dea79a1485aa8330265fb0b41c221632b9ce65f60f63",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/systolic_array_8x16.sv",
+      "bytes": 5733,
+      "sha256": "5cffcff3b2de2ede3b13a9ff976e38290bac741a4209045ec5c6913245658906",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/systolic_input_skew.sv",
+      "bytes": 2165,
+      "sha256": "573b6eefb213a9d2cb7f22ceeb981c93e34aee46bb8c817527889e5ec94c1e5f",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/systolic_tile_engine.sv",
+      "bytes": 1906,
+      "sha256": "ec7648d730c1e9e5d53360f05f56f33c7640ab52287558461a2098e7c24643ed",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/tile_dma.sv",
+      "bytes": 1588,
+      "sha256": "0c8c2163fe6a61b2bf721b7e49c500586bdfde48dfab69d3af7ba043fe35b4cb",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/tile_result_collector.sv",
+      "bytes": 2083,
+      "sha256": "d93d617d0151ddd63b6be254ad2c4315eca410bf3295b823d663fb1cf0db1d1d",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/rtl/tile_stream_adapter.sv",
+      "bytes": 1274,
+      "sha256": "06af51e0d90ed49aa97cfd80190449e7be6b2e55d8b74251bffc9c940d99d8d8",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/SHA256SUMS.txt",
+      "bytes": 10224,
+      "sha256": "d93ff6ec24dcd76cee16988ecc2a17388e1e1a49f1ad69112301fbdc67df71c5",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/tb/fp32_array_checkpoint_tb.sv",
+      "bytes": 10228,
+      "sha256": "af761451e7f204017f3337853647c14eb5fc6f8d9abdce94547a5a9bedf6fd96",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/tb/fp32_array_trace_tb.sv",
+      "bytes": 13322,
+      "sha256": "f0313eff12e887184aafa787939307125a2d72aa59d17aa83aa4a626e6b4afaa",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/tb/fp32_competition_ffn1_tb.sv",
+      "bytes": 5577,
+      "sha256": "10429d19275363d9e94a236e6daa4f42de4fb0efca7d493b950ef05bbb9e9fa6",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/tb/fp32_math_boundary_tb.sv",
+      "bytes": 1353,
+      "sha256": "d9652a7da90220b1fa652cd2fabb7fb660f9df2e8a8e2ae77fab840d742f0d9b",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/tb/fp32_matrix_block_controller_tb.sv",
+      "bytes": 3472,
+      "sha256": "b88a68be0029e85e0e4f364705c062308085d640a5c2b590b481ad6f7d29e588",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/tb/fp32_matrix_tile_scheduler_tb.sv",
+      "bytes": 4163,
+      "sha256": "efb18f2bd19d434c83698d74d25aef5d0e5c8f83c60177aca1b7dc774203f487",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/tb/fp32_pe_array_8x16_tb.sv",
+      "bytes": 2740,
+      "sha256": "98f69d6c6d43928dcacf483488891d43f1ba072ec6603065f90636754ec8937e",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/tb/fp32_pe_array_k64_tb.sv",
+      "bytes": 2977,
+      "sha256": "5caea561e61c722c9d0162b1e11ea8bca03c5b30630a13603e1d93256e8f16e6",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/tb/fp32_pe_special_tb.sv",
+      "bytes": 12671,
+      "sha256": "591b19b2fb6066ebad57191da675e234e65663dcf142aa755b2d16e368357a9f",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/tb/fp32_tile_kblock_load_compute_k256_tb.sv",
+      "bytes": 4640,
+      "sha256": "d47b04b3cc5f2ca04ea7da913a4c2ad6c23c2599fff81023b26d14b55293a171",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/tb/interface_v1_top_tb.sv",
+      "bytes": 8211,
+      "sha256": "86f0f211bd482d71cdadb57b2b145e5cb997c7f00ebff629de49d23ef2c121f2",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/tests/fp32_competition_ffn1_tb.sv",
+      "bytes": 5577,
+      "sha256": "10429d19275363d9e94a236e6daa4f42de4fb0efca7d493b950ef05bbb9e9fa6",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/prior_accepted/final_software_materials_2026-10-20/tests/fp32_one_tile_k64_tb.sv",
+      "bytes": 3343,
+      "sha256": "997f3f3251377e6a047d67f72a7edc07b69d8474e4d73182832417faf99847bf",
+      "reason": "duplicate historical accepted evidence already stored elsewhere in shared repository"
+    },
+    {
+      "path": "evidence/provenance/full_one_recompile/ffn1_uniform_archived.vvp",
+      "bytes": 5654583,
+      "sha256": "c4b40153ce54b1cd74a43c0a822dae096153a8cb9ac4432fc1f6930f1349cf09",
+      "reason": "build binary/archive/model/audio excluded by shared repository policy"
+    },
+    {
+      "path": "evidence/provenance/nonuniform_rerun/ffn1_varied_actual_run.vvp",
+      "bytes": 5659301,
+      "sha256": "a3fc777a204414a1d3192472de493db9665e2ee96556aad56fc8c5e494e6f067",
+      "reason": "build binary/archive/model/audio excluded by shared repository policy"
+    },
+    {
+      "path": "evidence/provenance/nonuniform_rerun/ffn1_varied_repro.vvp",
+      "bytes": 5659301,
+      "sha256": "39604769406f28386d3824b83de2402adf654f9522604e8b78ceb5f2f048cb6f",
+      "reason": "build binary/archive/model/audio excluded by shared repository policy"
+    }
+  ]
+}

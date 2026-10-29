@@ -1,0 +1,38 @@
+{
+  "tests": [
+    {
+      "test": "sram_fp32_cache_adapter",
+      "compile_exit_code": 0,
+      "simulation_exit_code": 0,
+      "pass": true
+    },
+    {
+      "test": "fp32_bus_fault_guard",
+      "compile_exit_code": 0,
+      "simulation_exit_code": 0,
+      "pass": true
+    },
+    {
+      "test": "fp32_tile_soc_bus_adapter",
+      "compile_exit_code": 0,
+      "simulation_exit_code": 0,
+      "pass": true
+    },
+    {
+      "test": "ai_engine_regs",
+      "compile_exit_code": 0,
+      "simulation_exit_code": 0,
+      "pass": true
+    },
+    {
+      "test": "fp32_tile_kblock_fsm",
+      "compile_exit_code": 0,
+      "simulation_exit_code": 0,
+      "pass": true
+    }
+  ],
+  "passed": 5,
+  "failed": 0,
+  "scope": "Functional models and standalone fault guard; no vendor timing or E203",
+  "fault_guard_integrated_in_accelerator_top": false
+}

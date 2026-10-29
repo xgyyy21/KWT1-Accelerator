@@ -6,10 +6,21 @@
 module fp32_accelerator_top #(
   parameter int ADDR_WIDTH = 32,
   parameter int DATA_WIDTH = 32,
-  parameter bit STRICT_COMPETITION_SHAPES = 1'b1
+  parameter bit STRICT_COMPETITION_SHAPES = 1'b1,
+  parameter bit USE_SRAM_MACROS = 1'b0
 ) (
   input  logic                   clk,
   input  logic                   rst_n,
+  // Optional physical cache-macro boundary; enabled explicitly by parameter.
+  input logic [2:0] cache_standby,
+  output wire [23:0] macro_cen, macro_gwen,
+  output wire [23:0][15:0] macro_wen,
+  output wire [23:0][6:0] macro_a,
+  output wire [23:0][15:0] macro_d,
+  input wire [23:0][15:0] macro_q,
+  output wire [23:0][2:0] macro_ema,
+  output wire [23:0][1:0] macro_emaw,
+  output wire [23:0] macro_ret1n,
 
   // NICE control plane.
   input  logic                   nice_req_valid,
@@ -87,9 +98,14 @@ module fp32_accelerator_top #(
 
   fp32_tile_kblock_load_compute #(
     .ROW_TILE(8), .COL_TILE(16), .K_TILE(32), .K_BLOCKS(8),
-    .ADDR_WIDTH(ADDR_WIDTH), .CACHE_ADDR_WIDTH(10)
+    .ADDR_WIDTH(ADDR_WIDTH), .CACHE_ADDR_WIDTH(10),
+    .USE_SRAM_MACROS(USE_SRAM_MACROS)
   ) u_tile_engine (
     .clk(clk), .rst_n(rst_n), .start(tile_start),
+    .cache_standby(cache_standby),
+    .macro_cen(macro_cen), .macro_gwen(macro_gwen), .macro_wen(macro_wen),
+    .macro_a(macro_a), .macro_d(macro_d), .macro_q(macro_q),
+    .macro_ema(macro_ema), .macro_emaw(macro_emaw), .macro_ret1n(macro_ret1n),
     .k_block_count(k_block_count),
     .matrix_m(matrix_m), .matrix_k(matrix_k), .matrix_n(matrix_n),
     .row_base(row_base), .col_base(col_base), .k_base(k_base),

@@ -1,0 +1,2 @@
+fp32_pe_array_k64_tb PASS cells=128 K=64 result=65.0
+D:\competition\handoff\ffn1_prerequisites_2026-10-21_v2\sources\tb\fp32_pe_array_k64_tb.sv:82: $finish called at 4246000 (1ps)

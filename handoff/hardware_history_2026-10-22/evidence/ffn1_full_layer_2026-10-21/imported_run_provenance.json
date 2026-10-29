@@ -1,0 +1,26 @@
+{
+  "evidence_origin": "D:\\competition\\build\\ffn1_completion",
+  "observed_vvp_exit_code": 0,
+  "exit_code_source": "supplied by operator after observing original shell process exit",
+  "original_cwd": "D:\\competition",
+  "original_compile_argv": [
+    "D:\\competition\\.tools\\iverilog\\bin\\iverilog.exe",
+    "-g2012",
+    "-s",
+    "fp32_competition_ffn1_tb",
+    "-o",
+    "build/ffn1_completion/ffn1.vvp",
+    "-f",
+    "rtl/files.f",
+    "tb/fp32_competition_ffn1_tb.sv"
+  ],
+  "original_run_argv": [
+    "D:\\competition\\.tools\\iverilog\\bin\\vvp.exe",
+    "-i",
+    "build/ffn1_completion/ffn1.vvp",
+    "+OUT_DIR=build/ffn1_completion"
+  ],
+  "compiled_vvp_sha256": "fc98b06ce6ebc75f3d1ef27e8c89d79b3cfd6427f1cf6e7069b781064e113483",
+  "collector_reran_simulation": false,
+  "source_identity": "matched unchanged affected-regression snapshot; exact source hashes archived"
+}

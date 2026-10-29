@@ -10,7 +10,8 @@ module fp32_tile_kblock_load_compute #(
   parameter int K_TILE = 32,
   parameter int K_BLOCKS = 2,
   parameter int ADDR_WIDTH = 32,
-  parameter int CACHE_ADDR_WIDTH = 10
+  parameter int CACHE_ADDR_WIDTH = 10,
+  parameter bit USE_SRAM_MACROS = 1'b0
 ) (
   input logic clk,
   input logic rst_n,
@@ -39,6 +40,15 @@ module fp32_tile_kblock_load_compute #(
   output logic [15:0] bus_req_wdata,
 
   input logic error_in,
+  input logic [2:0] cache_standby,
+  output wire [23:0] macro_cen, macro_gwen,
+  output wire [23:0][15:0] macro_wen,
+  output wire [23:0][6:0] macro_a,
+  output wire [23:0][15:0] macro_d,
+  input wire [23:0][15:0] macro_q,
+  output wire [23:0][2:0] macro_ema,
+  output wire [23:0][1:0] macro_emaw,
+  output wire [23:0] macro_ret1n,
   output logic load_busy,
   output logic load_done,
   output logic stream_busy,
@@ -65,6 +75,7 @@ module fp32_tile_kblock_load_compute #(
   logic ctrl_busy;
   logic stream_done;
   logic [15:0] current_k_base;
+  logic [15:0] current_k_valid;
 
   logic load_bus_req_valid, load_bus_req_write;
   logic [ADDR_WIDTH-1:0] load_bus_req_addr;
@@ -74,6 +85,7 @@ module fp32_tile_kblock_load_compute #(
   logic [15:0] wb_bus_req_wdata;
 
   logic a_wr_en, b_wr_en, result_wr_en;
+  wire [2:0] cache_wr_ready, cache_rd_ready;
   logic [CACHE_ADDR_WIDTH-1:0] a_wr_addr, b_wr_addr, result_wr_addr;
   logic [15:0] a_wr_data, b_wr_data, result_wr_data;
   logic a_rd_en, b_rd_en, result_rd_en;
@@ -107,6 +119,11 @@ module fp32_tile_kblock_load_compute #(
 
   always_comb begin
     current_k_base = k_base + (block_index * K_TILE);
+    current_k_valid = k_valid_block;
+    if (current_k_base >= matrix_k)
+      current_k_valid = 16'd0;
+    else if (matrix_k - current_k_base < k_valid_block)
+      current_k_valid = matrix_k - current_k_base;
   end
 
   fp32_tile_kblock_fsm #(.BLOCKS(K_BLOCKS)) u_ctrl (
@@ -122,13 +139,14 @@ module fp32_tile_kblock_load_compute #(
 
   fp32_tile_dma_load_engine #(
     .ROW_TILE(ROW_TILE), .COL_TILE(COL_TILE), .K_TILE(K_TILE),
-    .ADDR_WIDTH(ADDR_WIDTH), .CACHE_ADDR_WIDTH(CACHE_ADDR_WIDTH)
+    .ADDR_WIDTH(ADDR_WIDTH), .CACHE_ADDR_WIDTH(CACHE_ADDR_WIDTH),
+    .ENABLE_CACHE_HANDSHAKE(1'b1)
   ) u_load (
     .clk(clk), .rst_n(rst_n), .start(load_start),
     .matrix_m(matrix_m), .matrix_k(matrix_k), .matrix_n(matrix_n),
     .row_base(row_base), .col_base(col_base), .k_base(current_k_base),
     .rows_valid(rows_valid), .cols_valid(cols_valid),
-    .k_valid(k_valid_block), .a_base_word(a_base_word),
+    .k_valid(current_k_valid), .a_base_word(a_base_word),
     .b_base_word(b_base_word), .bias_base_word(bias_base_word),
     .result_base_word(result_base_word),
     .bus_req_valid(load_bus_req_valid), .bus_req_write(load_bus_req_write),
@@ -138,30 +156,38 @@ module fp32_tile_kblock_load_compute #(
     .a_wr_data(a_wr_data), .b_wr_en(b_wr_en), .b_wr_addr(b_wr_addr),
     .b_wr_data(b_wr_data), .result_wr_en(result_wr_en),
     .result_wr_addr(result_wr_addr), .result_wr_data(result_wr_data),
+    .a_wr_ready(cache_wr_ready[0]), .b_wr_ready(cache_wr_ready[1]),
+    .result_wr_ready(cache_wr_ready[2]),
     .busy(load_busy), .load_done(load_done)
   );
 
-  matrix_cache_manager #(
-    .DATA_WIDTH(16), .ADDR_WIDTH(CACHE_ADDR_WIDTH),
-    .DEPTH(1 << CACHE_ADDR_WIDTH)
+  fp32_tile_cache_bridge #(
+    .ADDR_WIDTH(CACHE_ADDR_WIDTH), .USE_SRAM_MACROS(USE_SRAM_MACROS)
   ) u_cache (
     .clk(clk), .rst_n(rst_n),
-    .a_wr_en(a_wr_en), .a_wr_addr(a_wr_addr), .a_wr_data(a_wr_data),
-    .b_wr_en(b_wr_en), .b_wr_addr(b_wr_addr), .b_wr_data(b_wr_data),
-    .result_wr_en(result_wr_en), .result_wr_addr(result_wr_addr),
-    .result_wr_data(result_wr_data), .a_rd_en(a_rd_en), .a_rd_addr(a_rd_addr),
-    .a_rd_data(a_rd_data), .a_rd_valid(a_rd_valid), .b_rd_en(b_rd_en),
-    .b_rd_addr(b_rd_addr), .b_rd_data(b_rd_data), .b_rd_valid(b_rd_valid),
-    .result_rd_en(result_rd_en), .result_rd_addr(result_rd_addr),
-    .result_rd_data(result_rd_data), .result_rd_valid(result_rd_valid)
+    .standby(cache_standby),
+    .wr_valid({result_wr_en, b_wr_en, a_wr_en}), .wr_ready(cache_wr_ready),
+    .wr_addr({result_wr_addr, b_wr_addr, a_wr_addr}),
+    .wr_data({result_wr_data, b_wr_data, a_wr_data}),
+    .rd_valid({result_rd_en, b_rd_en, a_rd_en}), .rd_ready(cache_rd_ready),
+    .rd_addr({result_rd_addr, b_rd_addr, a_rd_addr}),
+    .rsp_valid({result_rd_valid, b_rd_valid, a_rd_valid}),
+    .rsp_data({result_rd_data, b_rd_data, a_rd_data}),
+    .macro_cen(macro_cen), .macro_gwen(macro_gwen), .macro_wen(macro_wen),
+    .macro_a(macro_a), .macro_d(macro_d), .macro_q(macro_q),
+    .macro_ema(macro_ema), .macro_emaw(macro_emaw), .macro_ret1n(macro_ret1n)
   );
 
   fp32_tile_cache_streamer #(
     .ROWS(ROW_TILE), .COLS(COL_TILE), .K(K_TILE),
-    .ADDR_WIDTH(CACHE_ADDR_WIDTH)
+    .ADDR_WIDTH(CACHE_ADDR_WIDTH),
+    .ENABLE_CACHE_HANDSHAKE(1'b1), .ENABLE_BOUNDARY_MASK(1'b1)
   ) u_streamer (
     .clk(clk), .rst_n(rst_n), .start(stream_start),
     .task_first_cfg(task_first), .task_last_cfg(task_last),
+    .rows_valid(rows_valid), .cols_valid(cols_valid), .k_valid(current_k_valid),
+    .a_rd_ready(cache_rd_ready[0]), .b_rd_ready(cache_rd_ready[1]),
+    .result_rd_ready(cache_rd_ready[2]),
     .a_rd_en(a_rd_en), .a_rd_addr(a_rd_addr), .a_rd_data(a_rd_data),
     .a_rd_valid(a_rd_valid), .b_rd_en(b_rd_en), .b_rd_addr(b_rd_addr),
     .b_rd_data(b_rd_data), .b_rd_valid(b_rd_valid),

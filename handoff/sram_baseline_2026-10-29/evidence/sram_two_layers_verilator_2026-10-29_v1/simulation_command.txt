@@ -1,0 +1,1 @@
+/d/competition/build/sram_two_layers_verilator_2026-10-29_v1/obj_dir/Vfp32_sram_accelerator_top_tb.exe +OUT_DIR=D:/competition/build/sram_two_layers_verilator_2026-10-29_v1 

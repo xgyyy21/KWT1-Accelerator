@@ -1,0 +1,97 @@
+﻿[
+    {
+        "argv":  [
+                     "D:\\competition\\.tools\\iverilog\\bin\\iverilog.exe",
+                     "-V"
+                 ],
+        "cwd":  "D:\\competition\\handoff\\real_ffn1_layer00_rtl_2026-10-23",
+        "started_at":  "2026-10-23T09:39:12.917734+08:00",
+        "log":  "iverilog_version.log",
+        "status":  "PASS",
+        "pid":  6956,
+        "exit_code":  0,
+        "ended_at":  "2026-10-23T09:39:13.008394+08:00",
+        "elapsed_seconds":  0.0940000000409782,
+        "log_sha256":  "a4b2b98519e747477947bddee8af1bae61e98b01183c1cb3d98324c515cb505b"
+    },
+    {
+        "argv":  [
+                     "D:\\competition\\.tools\\iverilog\\bin\\vvp.exe",
+                     "-V"
+                 ],
+        "cwd":  "D:\\competition\\handoff\\real_ffn1_layer00_rtl_2026-10-23",
+        "started_at":  "2026-10-23T09:39:13.010393+08:00",
+        "log":  "vvp_version.log",
+        "status":  "PASS",
+        "pid":  47540,
+        "exit_code":  0,
+        "ended_at":  "2026-10-23T09:39:13.109865+08:00",
+        "elapsed_seconds":  0.09399999992456287,
+        "log_sha256":  "92aa2291c8c7a842ed54e9ede3c87c85aae52138e5884001d9208d6467cbed18"
+    },
+    {
+        "argv":  [
+                     "D:\\competition\\.tools\\iverilog\\bin\\iverilog.exe",
+                     "-g2012",
+                     "-s",
+                     "fp32_competition_ffn1_tb",
+                     "-o",
+                     "D:\\competition\\handoff\\real_ffn1_layer00_rtl_2026-10-23\\simulation\\ffn1_real_layer00.vvp",
+                     "-f",
+                     "rtl/files.f",
+                     "tb/fp32_competition_ffn1_tb.sv"
+                 ],
+        "cwd":  "D:\\competition\\handoff\\real_ffn1_layer00_rtl_2026-10-23\\sources",
+        "started_at":  "2026-10-23T09:39:13.110865+08:00",
+        "log":  "simulation\\compile.log",
+        "status":  "PASS",
+        "pid":  20916,
+        "exit_code":  0,
+        "ended_at":  "2026-10-23T09:39:13.550507+08:00",
+        "elapsed_seconds":  0.4529999999795109,
+        "log_sha256":  "4d07aad5f8973f5965f0defe668dda1ce7b7d53242a9f067e92572232801cd03"
+    },
+    {
+        "argv":  [
+                     "D:\\competition\\.tools\\iverilog\\bin\\vvp.exe",
+                     "-i",
+                     "D:\\competition\\handoff\\real_ffn1_layer00_rtl_2026-10-23\\simulation\\ffn1_real_layer00.vvp",
+                     "+OUT_DIR=D:/competition/handoff/real_ffn1_layer00_rtl_2026-10-23/simulation",
+                     "+X_FILE=D:/competition/handoff/real_ffn1_layer00_rtl_2026-10-23/inputs/x_fp32.mem",
+                     "+W_FILE=D:/competition/handoff/real_ffn1_layer00_rtl_2026-10-23/inputs/w_fp32.mem",
+                     "+BIAS_FILE=D:/competition/handoff/real_ffn1_layer00_rtl_2026-10-23/inputs/bias_fp32.mem",
+                     "+EXPECTED_FILE=D:/competition/handoff/real_ffn1_layer00_rtl_2026-10-23/inputs/expected_fp32.mem"
+                 ],
+        "cwd":  "D:\\competition\\handoff\\real_ffn1_layer00_rtl_2026-10-23",
+        "started_at":  "2026-10-23T09:39:13.559548+08:00",
+        "log":  "simulation\\ffn1.run.log",
+        "status":  "PASS",
+        "pid":  61456,
+        "exit_code":  0,
+        "ended_at":  "2026-10-23T12:03:41.685296+08:00",
+        "elapsed_seconds":  8668.125,
+        "log_sha256":  "f560ff80cc8ad669e601565256c016a96424afa603be687adf85849c09cc35ba",
+        "binary_sha256":  "85c98034e10213941f948fd965e0762b34de79bf17a470e1d530040adbdfc3d0"
+    },
+    {
+        "argv":  [
+                     "C:\\Program Files\\Lenovo\\ModelMgr\\Plugins\\Image\\python.exe",
+                     "-B",
+                     "handoff\\real_ffn1_layer00_rtl_2026-10-23\\Check-RealFfn1Layer00.py",
+                     "--package",
+                     "handoff\\real_ffn1_layer00_rtl_2026-10-23",
+                     "--recompute-reference",
+                     "--negative-controls"
+                 ],
+        "cwd":  "D:\\competition\\handoff\\real_ffn1_layer00_rtl_2026-10-23",
+        "started_at":  "2026-10-23T12:03:41.695302+08:00",
+        "log":  "checker.log",
+        "status":  "PASS",
+        "pid":  39096,
+        "exit_code":  0,
+        "ended_at":  "2026-10-23T12:03:49.974789+08:00",
+        "elapsed_seconds":  8.282,
+        "log_sha256":  "dd93ab57899a095ddc91cd69049d501ae18f3ceba62ec7c006361f4a47ec287b",
+        "previous_first_checker_log_sha256":  "203e9787aa8a7b6704b3f1126a27841d092cfe09ca831e985be19e1d8645acc4"
+    }
+]

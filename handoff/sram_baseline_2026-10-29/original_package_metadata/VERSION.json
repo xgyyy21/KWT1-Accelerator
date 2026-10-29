@@ -1,0 +1,16 @@
+{
+  "id": "local-sram-2026-10-29-fca29a1faecb",
+  "git_commit": null,
+  "source_manifest_sha256": "fca29a1faecbebece7e558eb4badb09807a0277e3ea8db9d56b45cb3f65aa04a",
+  "main_rtl_matches_full_simulation": true,
+  "macro_mode": true,
+  "top": "fp32_accelerator_top",
+  "filelist": "rtl/files.f",
+  "parameters": {
+    "ADDR_WIDTH": 32,
+    "DATA_WIDTH": 32,
+    "USE_SRAM_MACROS": 1,
+    "STRICT_COMPETITION_SHAPES": 1
+  },
+  "prototype_fault_guard_in_main_top": false
+}

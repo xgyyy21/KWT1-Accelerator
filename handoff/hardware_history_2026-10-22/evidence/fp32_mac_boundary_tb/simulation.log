@@ -1,0 +1,2 @@
+fp32_mac_boundary_tb PASS
+D:\competition\handoff\ffn1_prerequisites_2026-10-21_v2\sources\tb\fp32_mac_boundary_tb.sv:17: $finish called at 70000 (1ps)

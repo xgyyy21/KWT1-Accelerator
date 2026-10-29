@@ -1,0 +1,704 @@
+%Warning-PINMISSING: rtl\fp32_tile_engine.sv:42:57: Instance has missing pin: 'trace_valid'
+   42 |   fp32_pe_array_8x16 #(.ROWS(ROWS), .COLS(COLS), .K(K)) u_array (
+      |                                                         ^~~~~~~
+                     rtl\fp32_pe_array_8x16.sv:38:16: ... Location of port declaration
+   38 |   output logic trace_valid [ROWS][COLS],
+      |                ^~~~~~~~~~~
+                     ... For warning description see https://verilator.org/warn/PINMISSING?v=5.050
+                     ... Use "/* verilator lint_off PINMISSING */" and lint_on around source to disable this message.
+%Warning-PINMISSING: rtl\fp32_tile_engine.sv:42:57: Instance has missing pin: 'trace_bias_valid'
+   42 |   fp32_pe_array_8x16 #(.ROWS(ROWS), .COLS(COLS), .K(K)) u_array (
+      |                                                         ^~~~~~~
+                     rtl\fp32_pe_array_8x16.sv:39:16: ... Location of port declaration
+   39 |   output logic trace_bias_valid [ROWS][COLS],
+      |                ^~~~~~~~~~~~~~~~
+%Warning-PINMISSING: rtl\fp32_tile_engine.sv:42:57: Instance has missing pin: 'trace_cycle'
+   42 |   fp32_pe_array_8x16 #(.ROWS(ROWS), .COLS(COLS), .K(K)) u_array (
+      |                                                         ^~~~~~~
+                     rtl\fp32_pe_array_8x16.sv:40:23: ... Location of port declaration
+   40 |   output logic [31:0] trace_cycle [ROWS][COLS],
+      |                       ^~~~~~~~~~~
+%Warning-PINMISSING: rtl\fp32_tile_engine.sv:42:57: Instance has missing pin: 'trace_k'
+   42 |   fp32_pe_array_8x16 #(.ROWS(ROWS), .COLS(COLS), .K(K)) u_array (
+      |                                                         ^~~~~~~
+                     rtl\fp32_pe_array_8x16.sv:41:23: ... Location of port declaration
+   41 |   output logic [15:0] trace_k [ROWS][COLS],
+      |                       ^~~~~~~
+%Warning-PINMISSING: rtl\fp32_tile_engine.sv:42:57: Instance has missing pin: 'trace_x_bits'
+   42 |   fp32_pe_array_8x16 #(.ROWS(ROWS), .COLS(COLS), .K(K)) u_array (
+      |                                                         ^~~~~~~
+                     rtl\fp32_pe_array_8x16.sv:42:23: ... Location of port declaration
+   42 |   output logic [31:0] trace_x_bits [ROWS][COLS],
+      |                       ^~~~~~~~~~~~
+%Warning-PINMISSING: rtl\fp32_tile_engine.sv:42:57: Instance has missing pin: 'trace_w_bits'
+   42 |   fp32_pe_array_8x16 #(.ROWS(ROWS), .COLS(COLS), .K(K)) u_array (
+      |                                                         ^~~~~~~
+                     rtl\fp32_pe_array_8x16.sv:43:23: ... Location of port declaration
+   43 |   output logic [31:0] trace_w_bits [ROWS][COLS],
+      |                       ^~~~~~~~~~~~
+%Warning-PINMISSING: rtl\fp32_tile_engine.sv:42:57: Instance has missing pin: 'trace_acc_before_bits'
+   42 |   fp32_pe_array_8x16 #(.ROWS(ROWS), .COLS(COLS), .K(K)) u_array (
+      |                                                         ^~~~~~~
+                     rtl\fp32_pe_array_8x16.sv:44:23: ... Location of port declaration
+   44 |   output logic [31:0] trace_acc_before_bits [ROWS][COLS],
+      |                       ^~~~~~~~~~~~~~~~~~~~~
+%Warning-PINMISSING: rtl\fp32_tile_engine.sv:42:57: Instance has missing pin: 'trace_product_bits'
+   42 |   fp32_pe_array_8x16 #(.ROWS(ROWS), .COLS(COLS), .K(K)) u_array (
+      |                                                         ^~~~~~~
+                     rtl\fp32_pe_array_8x16.sv:45:23: ... Location of port declaration
+   45 |   output logic [31:0] trace_product_bits [ROWS][COLS],
+      |                       ^~~~~~~~~~~~~~~~~~
+%Warning-PINMISSING: rtl\fp32_tile_engine.sv:42:57: Instance has missing pin: 'trace_acc_after_bits'
+   42 |   fp32_pe_array_8x16 #(.ROWS(ROWS), .COLS(COLS), .K(K)) u_array (
+      |                                                         ^~~~~~~
+                     rtl\fp32_pe_array_8x16.sv:46:23: ... Location of port declaration
+   46 |   output logic [31:0] trace_acc_after_bits [ROWS][COLS],
+      |                       ^~~~~~~~~~~~~~~~~~~~
+%Warning-PINMISSING: rtl\fp32_tile_engine.sv:42:57: Instance has missing pin: 'trace_bias_bits'
+   42 |   fp32_pe_array_8x16 #(.ROWS(ROWS), .COLS(COLS), .K(K)) u_array (
+      |                                                         ^~~~~~~
+                     rtl\fp32_pe_array_8x16.sv:47:23: ... Location of port declaration
+   47 |   output logic [31:0] trace_bias_bits [ROWS][COLS]
+      |                       ^~~~~~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\ai_engine_pkg.sv:1:9: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    1 | package ai_engine_pkg;
+      |         ^~~~~~~~~~~~~
+                       rtl\sram_1024x16_adapter.sv:6:8: ... Location of module with timescale
+    6 | module sram_1024x16_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       ... For warning description see https://verilator.org/warn/TIMESCALEMOD?v=5.050
+                       ... Use "/* verilator lint_off TIMESCALEMOD */" and lint_on around source to disable this message.
+%Warning-TIMESCALEMOD: rtl\fp32_math_pkg.sv:1:9: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    1 | package fp32_math_pkg;
+      |         ^~~~~~~~~~~~~
+                       rtl\sram_1024x16_adapter.sv:6:8: ... Location of module with timescale
+    6 | module sram_1024x16_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\pe_mac.sv:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    1 | module pe_mac #(
+      |        ^~~~~~
+                       rtl\sram_1024x16_adapter.sv:6:8: ... Location of module with timescale
+    6 | module sram_1024x16_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\pe_array_8x16.sv:3:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    3 | module pe_array_8x16 #(
+      |        ^~~~~~~~~~~~~
+                       rtl\sram_1024x16_adapter.sv:6:8: ... Location of module with timescale
+    6 | module sram_1024x16_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\systolic_array_8x16.sv:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    1 | module systolic_array_8x16 #(
+      |        ^~~~~~~~~~~~~~~~~~~
+                       rtl\sram_1024x16_adapter.sv:6:8: ... Location of module with timescale
+    6 | module sram_1024x16_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\systolic_input_skew.sv:3:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    3 | module systolic_input_skew #(
+      |        ^~~~~~~~~~~~~~~~~~~
+                       rtl\sram_1024x16_adapter.sv:6:8: ... Location of module with timescale
+    6 | module sram_1024x16_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\tile_result_collector.sv:3:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    3 | module tile_result_collector #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       rtl\sram_1024x16_adapter.sv:6:8: ... Location of module with timescale
+    6 | module sram_1024x16_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\tile_stream_adapter.sv:4:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    4 | module tile_stream_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~
+                       rtl\sram_1024x16_adapter.sv:6:8: ... Location of module with timescale
+    6 | module sram_1024x16_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\systolic_tile_engine.sv:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    1 | module systolic_tile_engine #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       rtl\sram_1024x16_adapter.sv:6:8: ... Location of module with timescale
+    6 | module sram_1024x16_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\ai_engine_fsm.sv:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    1 | module ai_engine_fsm (
+      |        ^~~~~~~~~~~~~
+                       rtl\sram_1024x16_adapter.sv:6:8: ... Location of module with timescale
+    6 | module sram_1024x16_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\ai_engine_core.sv:1:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    1 | module ai_engine_core #(
+      |        ^~~~~~~~~~~~~~
+                       rtl\sram_1024x16_adapter.sv:6:8: ... Location of module with timescale
+    6 | module sram_1024x16_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\ai_engine_regs.sv:4:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    4 | module ai_engine_regs #(
+      |        ^~~~~~~~~~~~~~
+                       rtl\sram_1024x16_adapter.sv:6:8: ... Location of module with timescale
+    6 | module sram_1024x16_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\ai_engine_soc_adapter.sv:6:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    6 | module ai_engine_soc_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       rtl\sram_1024x16_adapter.sv:6:8: ... Location of module with timescale
+    6 | module sram_1024x16_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl\matrix_cache_manager.sv:4:8: Timescale missing on this module as other modules have it (IEEE 1800-2023 3.14.2.3)
+    4 | module matrix_cache_manager #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       rtl\sram_1024x16_adapter.sv:6:8: ... Location of module with timescale
+    6 | module sram_1024x16_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+%Warning-WIDTHEXPAND: rtl\fp32_math_pkg.sv:38:20: Operator COND expects 32 bits on the Conditional False, but Conditional False's VARREF 'ea' generates 8 bits.
+                                                : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_array.G_CELL_ROW[7].G_CELL_COL[15].u_pe'
+   38 |         eae=(ea==0)?1:ea; ebe=(eb==0)?1:eb;
+      |                    ^
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.050
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: rtl\fp32_math_pkg.sv:38:38: Operator COND expects 32 bits on the Conditional False, but Conditional False's VARREF 'eb' generates 8 bits.
+                                                : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_array.G_CELL_ROW[7].G_CELL_COL[15].u_pe'
+   38 |         eae=(ea==0)?1:ea; ebe=(eb==0)?1:eb;
+      |                                      ^
+%Warning-WIDTHEXPAND: rtl\fp32_math_pkg.sv:84:20: Operator COND expects 32 bits on the Conditional False, but Conditional False's VARREF 'ea' generates 8 bits.
+                                                : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_array.G_CELL_ROW[7].G_CELL_COL[15].u_pe'
+   84 |         expn=(ea==0?1:ea)+(eb==0?1:eb)-127;
+      |                    ^
+%Warning-WIDTHEXPAND: rtl\fp32_math_pkg.sv:84:33: Operator COND expects 32 bits on the Conditional False, but Conditional False's VARREF 'eb' generates 8 bits.
+                                                : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_array.G_CELL_ROW[7].G_CELL_COL[15].u_pe'
+   84 |         expn=(ea==0?1:ea)+(eb==0?1:eb)-127;
+      |                                 ^
+%Warning-WIDTHEXPAND: rtl\fp32_pe_mac.sv:240:27: Operator GTE expects 32 bits on the LHS, but LHS's VARREF 'input_count' generates 16 bits.
+                                               : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_array.G_CELL_ROW[7].G_CELL_COL[15].u_pe'
+  240 |           if (input_count >= K)
+      |                           ^~
+%Warning-WIDTHEXPAND: rtl\fp32_pe_mac.sv:251:49: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'input_count' generates 16 bits.
+                                               : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_array.G_CELL_ROW[7].G_CELL_COL[15].u_pe'
+  251 |           mul_block_end_pipe[0] <= (input_count + 1'b1 >= K) || task_last;
+      |                                                 ^
+%Warning-WIDTHTRUNC: rtl\fp32_pe_mac.sv:257:22: Bit extraction of array[31:0] requires 5 bit index, not 16 bits.
+                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_array.G_CELL_ROW[7].G_CELL_COL[15].u_pe'
+  257 |           product_mem[mul_k_pipe[MUL_LATENCY-1]] <= mul_product_pipe[MUL_LATENCY-1];
+      |                      ^
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.050
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: rtl\fp32_pe_mac.sv:258:16: Bit extraction of array[31:0] requires 5 bit index, not 16 bits.
+                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_array.G_CELL_ROW[7].G_CELL_COL[15].u_pe'
+  258 |           x_mem[mul_k_pipe[MUL_LATENCY-1]]       <= mul_x_pipe[MUL_LATENCY-1];
+      |                ^
+%Warning-WIDTHTRUNC: rtl\fp32_pe_mac.sv:259:16: Bit extraction of array[31:0] requires 5 bit index, not 16 bits.
+                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_array.G_CELL_ROW[7].G_CELL_COL[15].u_pe'
+  259 |           w_mem[mul_k_pipe[MUL_LATENCY-1]]       <= mul_w_pipe[MUL_LATENCY-1];
+      |                ^
+%Warning-WIDTHTRUNC: rtl\fp32_pe_mac.sv:280:47: Bit extraction of array[31:0] requires 5 bit index, not 16 bits.
+                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_array.G_CELL_ROW[7].G_CELL_COL[15].u_pe'
+  280 |             add_product_pipe[0] <= product_mem[add_index];
+      |                                               ^
+%Warning-WIDTHTRUNC: rtl\fp32_pe_mac.sv:281:69: Bit extraction of array[31:0] requires 5 bit index, not 16 bits.
+                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_array.G_CELL_ROW[7].G_CELL_COL[15].u_pe'
+  281 |             add_sum_pipe[0]     <= fp32_add(accumulator, product_mem[add_index]);
+      |                                                                     ^
+%Warning-WIDTHTRUNC: rtl\fp32_pe_mac.sv:282:41: Bit extraction of array[31:0] requires 5 bit index, not 16 bits.
+                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_array.G_CELL_ROW[7].G_CELL_COL[15].u_pe'
+  282 |             add_x_pipe[0]       <= x_mem[add_index];
+      |                                         ^
+%Warning-WIDTHTRUNC: rtl\fp32_pe_mac.sv:283:41: Bit extraction of array[31:0] requires 5 bit index, not 16 bits.
+                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_array.G_CELL_ROW[7].G_CELL_COL[15].u_pe'
+  283 |             add_w_pipe[0]       <= w_mem[add_index];
+      |                                         ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_global_addr_gen.sv:43:27: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'row_base' generates 16 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_global_addr'
+   43 |     global_row = row_base + local_row;
+      |                           ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_global_addr_gen.sv:43:27: Operator ADD expects 32 bits on the RHS, but RHS's VARREF 'local_row' generates 16 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_global_addr'
+   43 |     global_row = row_base + local_row;
+      |                           ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_global_addr_gen.sv:44:27: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'col_base' generates 16 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_global_addr'
+   44 |     global_col = col_base + local_col;
+      |                           ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_global_addr_gen.sv:44:27: Operator ADD expects 32 bits on the RHS, but RHS's VARREF 'local_col' generates 16 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_global_addr'
+   44 |     global_col = col_base + local_col;
+      |                           ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_global_addr_gen.sv:45:23: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'k_base' generates 16 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_global_addr'
+   45 |     global_k = k_base + local_k;
+      |                       ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_global_addr_gen.sv:45:23: Operator ADD expects 32 bits on the RHS, but RHS's VARREF 'local_k' generates 16 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_global_addr'
+   45 |     global_k = k_base + local_k;
+      |                       ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_global_addr_gen.sv:48:26: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'local_row' generates 16 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_global_addr'
+   48 |     a_valid = (local_row < ROW_TILE) && (local_k < K_TILE) &&
+      |                          ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_global_addr_gen.sv:48:50: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'local_k' generates 16 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_global_addr'
+   48 |     a_valid = (local_row < ROW_TILE) && (local_k < K_TILE) &&
+      |                                                  ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_global_addr_gen.sv:50:24: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'local_k' generates 16 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_global_addr'
+   50 |     b_valid = (local_k < K_TILE) && (local_col < COL_TILE) &&
+      |                        ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_global_addr_gen.sv:50:48: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'local_col' generates 16 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_global_addr'
+   50 |     b_valid = (local_k < K_TILE) && (local_col < COL_TILE) &&
+      |                                                ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_global_addr_gen.sv:52:29: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'local_col' generates 16 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_global_addr'
+   52 |     bias_valid = (local_col < COL_TILE) && (global_col < matrix_n);
+      |                             ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_global_addr_gen.sv:53:31: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'local_row' generates 16 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_global_addr'
+   53 |     result_valid = (local_row < ROW_TILE) && (local_col < COL_TILE) &&
+      |                               ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_global_addr_gen.sv:53:57: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'local_col' generates 16 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_global_addr'
+   53 |     result_valid = (local_row < ROW_TILE) && (local_col < COL_TILE) &&
+      |                                                         ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_global_addr_gen.sv:57:46: Operator ADD expects 64 bits on the RHS, but RHS's VARREF 'global_k' generates 32 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_global_addr'
+   57 |              ((((64'(global_row) * matrix_k) + global_k) * 2) + half_word);
+      |                                              ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_global_addr_gen.sv:59:44: Operator ADD expects 64 bits on the RHS, but RHS's VARREF 'global_col' generates 32 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_global_addr'
+   59 |              ((((64'(global_k) * matrix_n) + global_col) * 2) + half_word);
+      |                                            ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_global_addr_gen.sv:62:51: Operator ADD expects 64 bits on the RHS, but RHS's VARREF 'global_col' generates 32 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_global_addr'
+   62 |                   ((((64'(global_row) * matrix_n) + global_col) * 2) + half_word);
+      |                                                   ^
+%Warning-WIDTHEXPAND: rtl\fp32_tile_cache_mapper.sv:37:26: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'local_row' generates 16 bits.
+                                                         : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_local_addr'
+   37 |     a_valid = (local_row < ROW_TILE) && (local_k < K_TILE);
+      |                          ^
+%Warning-WIDTHEXPAND: rtl\fp32_tile_cache_mapper.sv:37:50: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'local_k' generates 16 bits.
+                                                         : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_local_addr'
+   37 |     a_valid = (local_row < ROW_TILE) && (local_k < K_TILE);
+      |                                                  ^
+%Warning-WIDTHEXPAND: rtl\fp32_tile_cache_mapper.sv:38:24: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'local_k' generates 16 bits.
+                                                         : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_local_addr'
+   38 |     b_valid = (local_k < K_TILE) && (local_col < COL_TILE);
+      |                        ^
+%Warning-WIDTHEXPAND: rtl\fp32_tile_cache_mapper.sv:38:48: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'local_col' generates 16 bits.
+                                                         : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_local_addr'
+   38 |     b_valid = (local_k < K_TILE) && (local_col < COL_TILE);
+      |                                                ^
+%Warning-WIDTHEXPAND: rtl\fp32_tile_cache_mapper.sv:39:29: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'local_col' generates 16 bits.
+                                                         : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_local_addr'
+   39 |     bias_valid = (local_col < COL_TILE);
+      |                             ^
+%Warning-WIDTHEXPAND: rtl\fp32_tile_cache_mapper.sv:40:31: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'local_row' generates 16 bits.
+                                                         : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_local_addr'
+   40 |     result_valid = (local_row < ROW_TILE) && (local_col < COL_TILE);
+      |                               ^
+%Warning-WIDTHEXPAND: rtl\fp32_tile_cache_mapper.sv:40:57: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'local_col' generates 16 bits.
+                                                         : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_local_addr'
+   40 |     result_valid = (local_row < ROW_TILE) && (local_col < COL_TILE);
+      |                                                         ^
+%Warning-WIDTHEXPAND: rtl\fp32_tile_cache_mapper.sv:42:37: Operator ADD expects 32 bits on the RHS, but RHS's VARREF 'local_k' generates 16 bits.
+                                                         : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_local_addr'
+   42 |     a_index = ((local_row * K_TILE) + local_k) * 2;
+      |                                     ^
+%Warning-WIDTHEXPAND: rtl\fp32_tile_cache_mapper.sv:43:37: Operator ADD expects 32 bits on the RHS, but RHS's VARREF 'local_col' generates 16 bits.
+                                                         : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_local_addr'
+   43 |     b_index = ((local_k * COL_TILE) + local_col) * 2;
+      |                                     ^
+%Warning-WIDTHEXPAND: rtl\fp32_tile_cache_mapper.sv:45:44: Operator ADD expects 32 bits on the RHS, but RHS's VARREF 'local_col' generates 16 bits.
+                                                         : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq.u_local_addr'
+   45 |     result_index = ((local_row * COL_TILE) + local_col) * 2;
+      |                                            ^
+%Warning-WIDTHEXPAND: rtl\tile_result_collector.sv:31:56: Operator GT expects 32 bits on the LHS, but LHS's VARREF 'valid_rows' generates 16 bits.
+                                                        : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_collector'
+   31 |         if(valid_rows==0 || valid_cols==0 || valid_rows>ROWS || valid_cols>COLS) begin
+      |                                                        ^
+%Warning-WIDTHEXPAND: rtl\tile_result_collector.sv:31:75: Operator GT expects 32 bits on the LHS, but LHS's VARREF 'valid_cols' generates 16 bits.
+                                                        : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_collector'
+   31 |         if(valid_rows==0 || valid_cols==0 || valid_rows>ROWS || valid_cols>COLS) begin
+      |                                                                           ^
+%Warning-WIDTHEXPAND: rtl\tile_result_collector.sv:42:39: Operator SUB expects 32 bits on the LHS, but LHS's VARREF 'cols_q' generates 16 bits.
+                                                        : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_collector'
+   42 |         end else if (col_idx == cols_q-1) begin
+      |                                       ^
+%Warning-WIDTHEXPAND: rtl\tile_result_collector.sv:40:30: Operator SUB expects 32 bits on the LHS, but LHS's VARREF 'rows_q' generates 16 bits.
+                                                        : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_collector'
+   40 |         if (row_idx == rows_q-1 && col_idx == cols_q-1) begin
+      |                              ^
+%Warning-WIDTHEXPAND: rtl\tile_result_collector.sv:40:53: Operator SUB expects 32 bits on the LHS, but LHS's VARREF 'cols_q' generates 16 bits.
+                                                        : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute.u_collector'
+   40 |         if (row_idx == rows_q-1 && col_idx == cols_q-1) begin
+      |                                                     ^
+%Warning-WIDTHEXPAND: rtl\fp32_tile_engine.sv:39:72: Operator LTE expects 32 bits on the LHS, but LHS's VARREF 'valid_rows' generates 16 bits.
+                                                   : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute'
+   39 |   assign array_start = collector_start && valid_rows > 0 && valid_rows <= ROWS &&
+      |                                                                        ^~
+%Warning-WIDTHEXPAND: rtl\fp32_tile_engine.sv:40:53: Operator LTE expects 32 bits on the LHS, but LHS's VARREF 'valid_cols' generates 16 bits.
+                                                   : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_compute'
+   40 |                        valid_cols > 0 && valid_cols <= COLS;
+      |                                                     ^~
+%Warning-WIDTHTRUNC: rtl\fp32_tile_cache_streamer.sv:140:19: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's VARREF 'ROWS' generates 32 bits.
+                                                           : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_streamer'
+  140 |       active_rows <= ROWS;
+      |                   ^~
+%Warning-WIDTHTRUNC: rtl\fp32_tile_cache_streamer.sv:141:19: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's VARREF 'COLS' generates 32 bits.
+                                                           : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_streamer'
+  141 |       active_cols <= COLS;
+      |                   ^~
+%Warning-WIDTHTRUNC: rtl\fp32_tile_cache_streamer.sv:142:16: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's VARREF 'K' generates 32 bits.
+                                                           : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_streamer'
+  142 |       active_k <= K;
+      |                ^~
+%Warning-WIDTHEXPAND: rtl\fp32_tile_cache_streamer.sv:158:49: Operator COND expects 32 bits on the Conditional True, but Conditional True's VARREF 'rows_valid' generates 16 bits.
+                                                            : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_streamer'
+  158 |             active_rows <= ENABLE_BOUNDARY_MASK ? rows_valid : ROWS;
+      |                                                 ^
+%Warning-WIDTHTRUNC: rtl\fp32_tile_cache_streamer.sv:158:25: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's COND generates 32 bits.
+                                                           : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_streamer'
+  158 |             active_rows <= ENABLE_BOUNDARY_MASK ? rows_valid : ROWS;
+      |                         ^~
+%Warning-WIDTHEXPAND: rtl\fp32_tile_cache_streamer.sv:159:49: Operator COND expects 32 bits on the Conditional True, but Conditional True's VARREF 'cols_valid' generates 16 bits.
+                                                            : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_streamer'
+  159 |             active_cols <= ENABLE_BOUNDARY_MASK ? cols_valid : COLS;
+      |                                                 ^
+%Warning-WIDTHTRUNC: rtl\fp32_tile_cache_streamer.sv:159:25: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's COND generates 32 bits.
+                                                           : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_streamer'
+  159 |             active_cols <= ENABLE_BOUNDARY_MASK ? cols_valid : COLS;
+      |                         ^~
+%Warning-WIDTHEXPAND: rtl\fp32_tile_cache_streamer.sv:160:46: Operator COND expects 32 bits on the Conditional True, but Conditional True's VARREF 'k_valid' generates 16 bits.
+                                                            : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_streamer'
+  160 |             active_k <= ENABLE_BOUNDARY_MASK ? k_valid : K;
+      |                                              ^
+%Warning-WIDTHTRUNC: rtl\fp32_tile_cache_streamer.sv:160:22: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's COND generates 32 bits.
+                                                           : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_streamer'
+  160 |             active_k <= ENABLE_BOUNDARY_MASK ? k_valid : K;
+      |                      ^~
+%Warning-WIDTHEXPAND: rtl\fp32_tile_kblock_fsm.sv:42:45: Operator GT expects 32 bits on the LHS, but LHS's VARREF 'count' generates 16 bits.
+                                                       : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_ctrl'
+   42 |     config_invalid = (count == 0) || (count > BLOCKS);
+      |                                             ^
+%Warning-WIDTHEXPAND: rtl\fp32_tile_kblock_fsm.sv:76:29: Operator ADD expects 32 or 16 bits on the LHS, but LHS's VARREF 'block_index' generates 3 bits.
+                                                       : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_ctrl'
+   76 |             if (block_index + 1 < block_count_q) begin
+      |                             ^
+%Warning-WIDTHEXPAND: rtl\fp32_tile_kblock_fsm.sv:127:30: Operator EQ expects 16 bits on the LHS, but LHS's VARREF 'block_index' generates 3 bits.
+                                                        : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_ctrl'
+  127 |                 (block_index == block_count_q-1'b1);
+      |                              ^~
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_block_controller.sv:35:19: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'left' generates 16 bits.
+                                                               : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_scheduler.u_block_controller'
+   35 |     min16 = (left < right) ? left : 16'(right);
+      |                   ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_block_controller.sv:98:32: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'k_base' generates 16 bits.
+                                                               : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_scheduler.u_block_controller'
+   98 |               k_base <= k_base + K_TILE;
+      |                                ^
+%Warning-WIDTHTRUNC: rtl\fp32_matrix_block_controller.sv:98:22: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's ADD generates 32 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_scheduler.u_block_controller'
+   98 |               k_base <= k_base + K_TILE;
+      |                      ^~
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_block_controller.sv:101:36: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'col_base' generates 16 bits.
+                                                                : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_scheduler.u_block_controller'
+  101 |               col_base <= col_base + COL_TILE;
+      |                                    ^
+%Warning-WIDTHTRUNC: rtl\fp32_matrix_block_controller.sv:101:24: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's ADD generates 32 bits.
+                                                               : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_scheduler.u_block_controller'
+  101 |               col_base <= col_base + COL_TILE;
+      |                        ^~
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_block_controller.sv:105:36: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'row_base' generates 16 bits.
+                                                                : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_scheduler.u_block_controller'
+  105 |               row_base <= row_base + ROW_TILE;
+      |                                    ^
+%Warning-WIDTHTRUNC: rtl\fp32_matrix_block_controller.sv:105:24: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's ADD generates 32 bits.
+                                                               : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_scheduler.u_block_controller'
+  105 |               row_base <= row_base + ROW_TILE;
+      |                        ^~
+%Warning-WIDTHEXPAND: rtl\ai_engine_regs.sv:76:26: Operator ASSIGNDLY expects 32 bits on the Assign RHS, but Assign RHS's VARREF 'matrix_m' generates 16 bits.
+                                                 : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_nice.u_regs'
+   76 |           A_M: rsp_rdata <= matrix_m;
+      |                          ^~
+%Warning-WIDTHEXPAND: rtl\ai_engine_regs.sv:77:26: Operator ASSIGNDLY expects 32 bits on the Assign RHS, but Assign RHS's VARREF 'matrix_k' generates 16 bits.
+                                                 : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_nice.u_regs'
+   77 |           A_K: rsp_rdata <= matrix_k;
+      |                          ^~
+%Warning-WIDTHEXPAND: rtl\ai_engine_regs.sv:78:26: Operator ASSIGNDLY expects 32 bits on the Assign RHS, but Assign RHS's VARREF 'matrix_n' generates 16 bits.
+                                                 : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_nice.u_regs'
+   78 |           A_N: rsp_rdata <= matrix_n;
+      |                          ^~
+%Warning-WIDTHEXPAND: rtl\fp32_tile_kblock_load_compute.sv:121:29: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'k_base' generates 16 bits.
+                                                                 : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine'
+  121 |     current_k_base = k_base + (block_index * K_TILE);
+      |                             ^
+%Warning-WIDTHTRUNC: rtl\fp32_tile_kblock_load_compute.sv:121:20: Operator ASSIGN expects 16 bits on the Assign RHS, but Assign RHS's ADD generates 32 bits.
+                                                                : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine'
+  121 |     current_k_base = k_base + (block_index * K_TILE);
+      |                    ^
+%Warning-WIDTHEXPAND: rtl\fp32_tile_kblock_load_compute.sv:229:40: Operator SHIFTR expects 32 bits on the LHS, but LHS's VARREF 'wb_stage_pending_addr' generates 10 bits.
+                                                                 : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine'
+  229 |     stage_elem = wb_stage_pending_addr >> 1;
+      |                                        ^~
+%Warning-WIDTHTRUNC: rtl\fp32_tile_kblock_load_compute.sv:256:21: Bit extraction of array[7:0] requires 3 bit index, not 16 bits.
+                                                                : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine'
+  256 |         result_stage[result_row][result_col] <= result_data;
+      |                     ^
+%Warning-WIDTHTRUNC: rtl\fp32_tile_kblock_load_compute.sv:256:33: Bit extraction of array[15:0] requires 4 bit index, not 16 bits.
+                                                                : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine'
+  256 |         result_stage[result_row][result_col] <= result_data;
+      |                                 ^
+%Warning-WIDTHEXPAND: rtl\fp32_tile_kblock_load_compute.sv:255:38: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'result_row' generates 16 bits.
+                                                                 : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine'
+  255 |       if (result_valid && result_row < ROW_TILE && result_col < COL_TILE)
+      |                                      ^
+%Warning-WIDTHEXPAND: rtl\fp32_tile_kblock_load_compute.sv:255:63: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'result_col' generates 16 bits.
+                                                                 : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine'
+  255 |       if (result_valid && result_row < ROW_TILE && result_col < COL_TILE)
+      |                                                               ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_tile_scheduler.sv:49:18: Operator LTE expects 32 bits on the LHS, but LHS's VARREF 'matrix_k' generates 16 bits.
+                                                             : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_scheduler'
+   49 |        (matrix_k <= MAX_MATRIX_K));
+      |                  ^~
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_tile_scheduler.sv:80:32: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'matrix_k_q' generates 16 bits.
+                                                             : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_scheduler'
+   80 |   assign k_valid = (matrix_k_q < K_BLOCK_SIZE) ? matrix_k_q : K_BLOCK_SIZE;
+      |                                ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_tile_scheduler.sv:80:48: Operator COND expects 32 bits on the Conditional True, but Conditional True's VARREF 'matrix_k_q' generates 16 bits.
+                                                             : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_scheduler'
+   80 |   assign k_valid = (matrix_k_q < K_BLOCK_SIZE) ? matrix_k_q : K_BLOCK_SIZE;
+      |                                                ^
+%Warning-WIDTHTRUNC: rtl\fp32_matrix_tile_scheduler.sv:80:18: Operator ASSIGNW expects 16 bits on the Assign RHS, but Assign RHS's COND generates 32 bits.
+                                                            : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_scheduler'
+   80 |   assign k_valid = (matrix_k_q < K_BLOCK_SIZE) ? matrix_k_q : K_BLOCK_SIZE;
+      |                  ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_tile_scheduler.sv:83:39: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'matrix_k_q' generates 16 bits.
+                                                             : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_scheduler'
+   83 |                          ((matrix_k_q + K_BLOCK_SIZE - 1) / K_BLOCK_SIZE) : 16'd0;
+      |                                       ^
+%Warning-WIDTHEXPAND: rtl\fp32_matrix_tile_scheduler.sv:82:45: Operator COND expects 32 bits on the Conditional False, but Conditional False's CONST '16'h0' generates 16 bits.
+                                                             : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_scheduler'
+   82 |   assign k_block_count = (K_BLOCK_SIZE > 0) ?
+      |                                             ^
+%Warning-WIDTHTRUNC: rtl\fp32_matrix_tile_scheduler.sv:82:24: Operator ASSIGNW expects 16 bits on the Assign RHS, but Assign RHS's COND generates 32 bits.
+                                                            : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_scheduler'
+   82 |   assign k_block_count = (K_BLOCK_SIZE > 0) ?
+      |                        ^
+%Warning-WIDTHTRUNC: tb\fp32_sram_accelerator_top_tb.sv:84:28: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's SUB generates 32 bits.
+                                                             : ... note: In instance 'fp32_sram_accelerator_top_tb'
+   84 |         encode_exact[30:23]=127+msb-fraction_bits;
+      |                            ^
+%Warning-WIDTHTRUNC: tb\fp32_sram_accelerator_top_tb.sv:151:36: Logical operator COND expects 1 bit on the Conditional Test, but Conditional Test's MODDIVS generates 32 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  151 |           if(sys_wdata!==(offset%2 ? expected[elem][31:16] : expected[elem][15:0]))
+      |                                    ^
+%Warning-WIDTHEXPAND: tb\fp32_sram_accelerator_top_tb.sv:153:57: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'row_base' generates 16 bits.
+                                                               : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  153 |           if(elem/n_dim<row_base || elem/n_dim>=row_base+rows_valid ||
+      |                                                         ^
+%Warning-WIDTHEXPAND: tb\fp32_sram_accelerator_top_tb.sv:153:57: Operator ADD expects 32 bits on the RHS, but RHS's VARREF 'rows_valid' generates 16 bits.
+                                                               : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  153 |           if(elem/n_dim<row_base || elem/n_dim>=row_base+rows_valid ||
+      |                                                         ^
+%Warning-WIDTHEXPAND: tb\fp32_sram_accelerator_top_tb.sv:154:57: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'col_base' generates 16 bits.
+                                                               : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  154 |              elem%n_dim<col_base || elem%n_dim>=col_base+cols_valid)
+      |                                                         ^
+%Warning-WIDTHEXPAND: tb\fp32_sram_accelerator_top_tb.sv:154:57: Operator ADD expects 32 bits on the RHS, but RHS's VARREF 'cols_valid' generates 16 bits.
+                                                               : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  154 |              elem%n_dim<col_base || elem%n_dim>=col_base+cols_valid)
+      |                                                         ^
+%Warning-WIDTHEXPAND: tb\fp32_sram_accelerator_top_tb.sv:171:42: Operator NEQCASE expects 32 bits on the LHS, but LHS's VARREF 'row_base' generates 16 bits.
+                                                               : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  171 |         if(tile_index!==tiles || row_base!==rb || col_base!==cb || rows_valid!==rv ||
+      |                                          ^~~
+%Warning-WIDTHEXPAND: tb\fp32_sram_accelerator_top_tb.sv:171:59: Operator NEQCASE expects 32 bits on the LHS, but LHS's VARREF 'col_base' generates 16 bits.
+                                                               : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  171 |         if(tile_index!==tiles || row_base!==rb || col_base!==cb || rows_valid!==rv ||
+      |                                                           ^~~
+%Warning-WIDTHEXPAND: tb\fp32_sram_accelerator_top_tb.sv:171:78: Operator NEQCASE expects 32 bits on the LHS, but LHS's VARREF 'rows_valid' generates 16 bits.
+                                                               : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  171 |         if(tile_index!==tiles || row_base!==rb || col_base!==cb || rows_valid!==rv ||
+      |                                                                              ^~~
+%Warning-WIDTHEXPAND: tb\fp32_sram_accelerator_top_tb.sv:172:22: Operator NEQCASE expects 32 bits on the LHS, but LHS's VARREF 'cols_valid' generates 16 bits.
+                                                               : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  172 |            cols_valid!==cv || k_base!==0 || k_valid!==((k_dim<32)?k_dim:32) ||
+      |                      ^~~
+%Warning-WIDTHEXPAND: tb\fp32_sram_accelerator_top_tb.sv:172:52: Operator NEQCASE expects 32 bits on the LHS, but LHS's VARREF 'k_valid' generates 16 bits.
+                                                               : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  172 |            cols_valid!==cv || k_base!==0 || k_valid!==((k_dim<32)?k_dim:32) ||
+      |                                                    ^~~
+%Warning-WIDTHEXPAND: tb\fp32_sram_accelerator_top_tb.sv:173:25: Operator NEQCASE expects 32 bits on the LHS, but LHS's VARREF 'k_block_count' generates 16 bits.
+                                                               : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  173 |            k_block_count!==((k_dim+31)/32)) $fatal(1,"Wrong tile descriptor");
+      |                         ^~~
+%Warning-WIDTHTRUNC: tb\fp32_sram_accelerator_top_tb.sv:267:8: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'input_fd' generates 32 bits.
+                                                             : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  267 |     if(!input_fd||!output_fd||!write_fd||!tile_fd||!control_fd) $fatal(1,"Cannot open evidence");
+      |        ^
+%Warning-WIDTHTRUNC: tb\fp32_sram_accelerator_top_tb.sv:267:19: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'output_fd' generates 32 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  267 |     if(!input_fd||!output_fd||!write_fd||!tile_fd||!control_fd) $fatal(1,"Cannot open evidence");
+      |                   ^
+%Warning-WIDTHTRUNC: tb\fp32_sram_accelerator_top_tb.sv:267:31: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'write_fd' generates 32 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  267 |     if(!input_fd||!output_fd||!write_fd||!tile_fd||!control_fd) $fatal(1,"Cannot open evidence");
+      |                               ^
+%Warning-WIDTHTRUNC: tb\fp32_sram_accelerator_top_tb.sv:267:42: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'tile_fd' generates 32 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  267 |     if(!input_fd||!output_fd||!write_fd||!tile_fd||!control_fd) $fatal(1,"Cannot open evidence");
+      |                                          ^
+%Warning-WIDTHTRUNC: tb\fp32_sram_accelerator_top_tb.sv:267:52: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'control_fd' generates 32 bits.
+                                                              : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  267 |     if(!input_fd||!output_fd||!write_fd||!tile_fd||!control_fd) $fatal(1,"Cannot open evidence");
+      |                                                    ^
+%Warning-MULTIDRIVEN: rtl\fp32_tile_dma_sequencer.sv:195:7: Variable written to in always_ff also written by other process (IEEE 1800-2023 9.2.2.4): 'state'
+                                                          : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq'
+                      rtl\fp32_tile_dma_sequencer.sv:195:7: 
+  195 |       state <= PH_IDLE;
+      |       ^~~~~
+                      rtl\fp32_tile_dma_sequencer.sv:184:15: ... Location of other write
+  184 |               state <= PH_DONE;
+      |               ^~~~~
+                      ... For warning description see https://verilator.org/warn/MULTIDRIVEN?v=5.050
+                      ... Use "/* verilator lint_off MULTIDRIVEN */" and lint_on around source to disable this message.
+%Warning-MULTIDRIVEN: rtl\fp32_tile_dma_sequencer.sv:200:7: Variable written to in always_ff also written by other process (IEEE 1800-2023 9.2.2.4): 'row_idx'
+                                                          : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq'
+                      rtl\fp32_tile_dma_sequencer.sv:200:7: 
+  200 |       row_idx <= 0; col_idx <= 0; k_idx <= 0; half_idx <= 0;
+      |       ^~~~~~~
+                      rtl\fp32_tile_dma_sequencer.sv:182:15: ... Location of other write
+  182 |               row_idx <= row_idx + 1'b1; col_idx <= 0;
+      |               ^~~~~~~
+%Warning-MULTIDRIVEN: rtl\fp32_tile_dma_sequencer.sv:200:21: Variable written to in always_ff also written by other process (IEEE 1800-2023 9.2.2.4): 'col_idx'
+                                                           : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq'
+                      rtl\fp32_tile_dma_sequencer.sv:200:21: 
+  200 |       row_idx <= 0; col_idx <= 0; k_idx <= 0; half_idx <= 0;
+      |                     ^~~~~~~
+                      rtl\fp32_tile_dma_sequencer.sv:182:42: ... Location of other write
+  182 |               row_idx <= row_idx + 1'b1; col_idx <= 0;
+      |                                          ^~~~~~~
+%Warning-MULTIDRIVEN: rtl\fp32_tile_dma_sequencer.sv:200:35: Variable written to in always_ff also written by other process (IEEE 1800-2023 9.2.2.4): 'k_idx'
+                                                           : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq'
+                      rtl\fp32_tile_dma_sequencer.sv:200:35: 
+  200 |       row_idx <= 0; col_idx <= 0; k_idx <= 0; half_idx <= 0;
+      |                                   ^~~~~
+                      rtl\fp32_tile_dma_sequencer.sv:172:43: ... Location of other write
+  172 |               row_idx <= 0; col_idx <= 0; k_idx <= 0;
+      |                                           ^~~~~
+%Warning-MULTIDRIVEN: rtl\fp32_tile_dma_sequencer.sv:200:47: Variable written to in always_ff also written by other process (IEEE 1800-2023 9.2.2.4): 'half_idx'
+                                                           : ... note: In instance 'fp32_sram_accelerator_top_tb.dut.u_tile_engine.u_load.u_seq'
+                      rtl\fp32_tile_dma_sequencer.sv:200:47: 
+  200 |       row_idx <= 0; col_idx <= 0; k_idx <= 0; half_idx <= 0;
+      |                                               ^~~~~~~~
+                      rtl\fp32_tile_dma_sequencer.sv:147:9: ... Location of other write
+  147 |         half_idx <= 1'b0;
+      |         ^~~~~~~~
+%Warning-UNSIGNED: tb\fp32_sram_accelerator_top_tb.sv:161:25: Comparison is constant due to unsigned arithmetic
+                                                            : ... note: In instance 'fp32_sram_accelerator_top_tb'
+  161 |           if(!((sys_addr>=A_BASE && sys_addr<A_BASE+2*m_dim*k_dim)||
+      |                         ^~
+                   ... For warning description see https://verilator.org/warn/UNSIGNED?v=5.050
+                   ... Use "/* verilator lint_off UNSIGNED */" and lint_on around source to disable this message.
+make: Entering directory '/d/competition/build/sram_two_layers_verilator_2026-10-29_v1/obj_dir'
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated.o D:/competition/.tools/msys64/ucrt64/share/verilator/include/verilated.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_timing.o D:/competition/.tools/msys64/ucrt64/share/verilator/include/verilated_timing.cpp
+D:/competition/.tools/msys64/ucrt64/share/verilator/include/verilated.cpp:78:10: warning: 'STDOUT_FILENO' redefined
+   78 | # define STDOUT_FILENO _fileno(stdout)
+      |          ^~~~~~~~~~~~~
+In file included from D:/competition/.tools/msys64/ucrt64/include/locale.h:12,
+                 from D:/competition/.tools/msys64/ucrt64/include/c++/16.2.0/clocale:47,
+                 from D:/competition/.tools/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/c++locale.h:41,
+                 from D:/competition/.tools/msys64/ucrt64/include/c++/16.2.0/bits/localefwd.h:42,
+                 from D:/competition/.tools/msys64/ucrt64/include/c++/16.2.0/string:48,
+                 from D:/competition/.tools/msys64/ucrt64/share/verilator/include/verilatedos.h:653,
+                 from D:/competition/.tools/msys64/ucrt64/share/verilator/include/verilated.cpp:51:
+D:/competition/.tools/msys64/ucrt64/include/stdio.h:56:9: note: this is the location of the previous definition
+   56 | #define STDOUT_FILENO   1
+      |         ^~~~~~~~~~~~~
+D:/competition/.tools/msys64/ucrt64/share/verilator/include/verilated.cpp:79:10: warning: 'STDERR_FILENO' redefined
+   79 | # define STDERR_FILENO _fileno(stderr)
+      |          ^~~~~~~~~~~~~
+D:/competition/.tools/msys64/ucrt64/include/stdio.h:57:9: note: this is the location of the previous definition
+   57 | #define STDERR_FILENO   2
+      |         ^~~~~~~~~~~~~
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_threads.o D:/competition/.tools/msys64/ucrt64/share/verilator/include/verilated_threads.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -x c++-header Vfp32_sram_accelerator_top_tb__pch.h -o Vfp32_sram_accelerator_top_tb__pch.h.fast.gch
+g++   -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -x c++-header Vfp32_sram_accelerator_top_tb__pch.h -o Vfp32_sram_accelerator_top_tb__pch.h.slow.gch
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb___024root__0.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb___024root__1.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb___024root__2.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb___024root__3.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__0.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__1.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__2.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__3.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__4.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__5.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__6.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__7.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__8.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__9.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__10.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__11.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__12.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__13.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__14.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__15.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__16.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__17.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__18.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__19.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__20.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__21.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__22.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__23.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__24.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__25.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__26.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__27.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__28.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__29.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__30.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__31.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__32.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__33.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__34.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__35.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__36.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__37.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__38.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__39.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__40.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__41.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__42.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__43.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__44.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__45.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__46.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__47.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__48.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__49.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__50.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__51.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__52.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__53.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__54.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__55.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__56.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__57.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__58.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__59.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__60.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__61.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__62.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__63.cpp
+g++ -Os  -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.fast -c Vfp32_sram_accelerator_top_tb__main.cpp
+g++   -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.slow -c Vfp32_sram_accelerator_top_tb__ConstPool__0__Slow.cpp
+g++   -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.slow -c Vfp32_sram_accelerator_top_tb___024root__Slow.cpp
+g++   -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.slow -c Vfp32_sram_accelerator_top_tb___024root__0__Slow.cpp
+g++   -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.slow -c Vfp32_sram_accelerator_top_tb___024root__1__Slow.cpp
+g++   -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.slow -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__Slow.cpp
+g++   -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.slow -c Vfp32_sram_accelerator_top_tb_fp32_pe_mac__K20__0__Slow.cpp
+g++   -I.  -MMD -ID:/competition/.tools/msys64/ucrt64/share/verilator/include -ID:/competition/.tools/msys64/ucrt64/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O2 -DVL_TIME_CONTEXT   -fcoroutines -include Vfp32_sram_accelerator_top_tb__pch.h.slow -c Vfp32_sram_accelerator_top_tb__Syms__Slow.cpp
+g++    verilated.o verilated_timing.o verilated_threads.o Vfp32_sram_accelerator_top_tb__ALL.a    -pthread -lpthread -latomic   -o Vfp32_sram_accelerator_top_tb
+rm Vfp32_sram_accelerator_top_tb__ALL.verilator_deplist.tmp
+make: Leaving directory '/d/competition/build/sram_two_layers_verilator_2026-10-29_v1/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev vUNKNOWN-built20260702
+- Verilator: Built from 3.684 MB sources in 45 modules, into 45.313 MB in 77 C++ files needing 0.166 MB
+- Verilator: Walltime 241.893 s (elab=0.042, cvt=7.469, bld=233.531); cpu 0.000 s on 2 threads; allocated 511.102 MB

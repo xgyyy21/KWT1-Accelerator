@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "task": "real KWT-1 layer 00 FFN1",
+  "shape": [
+    99,
+    64,
+    256
+  ],
+  "rtl_outputs_passed": 25344,
+  "rtl_outputs_failed": 0,
+  "first_difference": null,
+  "write_halfwords_checked": 50688,
+  "spatial_tiles_checked": 208,
+  "k_blocks_per_tile": 2,
+  "tail_valid_rows": 3,
+  "input_memory_checks": {
+    "x": {
+      "elements_checked": 6336,
+      "sha256_bin": "1036470843aa8096f110adc2a90a7b9888c3654189680510eaf6ac180ee505fc",
+      "loaded_snapshot_sha256": "cb94093d5c7a37b35d3ae721cd4102771402d3061d049caf371a00650d6b17d4"
+    },
+    "w": {
+      "elements_checked": 16384,
+      "sha256_bin": "4c6a8f5171a0ddc5eab198c0acdc4d96d547918bbac97f3b3be8019d42bb188e",
+      "loaded_snapshot_sha256": "a9a8a59266fbd8506a16f599217b7062aca5e0c8a497dd6659396d6bfff2a812"
+    },
+    "bias": {
+      "elements_checked": 256,
+      "sha256_bin": "b305b163000b217514ddfd8ede2745ec428922730f09d351749aa489848bda7e",
+      "loaded_snapshot_sha256": "461880072ec610cef239f1682deffb818ccd1630611478ecbf1beb907739ec9b"
+    }
+  },
+  "simulator_exit_code": 0,
+  "expected_bin_sha256": "24c84d16792bd5ab10bedfce5ebfd84a6305495477672d3144044e1ce33a51c5",
+  "source_manifest_sha256": "81a87f9e2488b8cca687006235d0abb83dbce6720786b719cceeca43b54e63e4",
+  "simulated_wait_cycles": 2587777,
+  "input_read_halfwords": 642048,
+  "final_write_cycle": 2587777,
+  "done_cycle": 2587779,
+  "software_reference_recomputation": {
+    "status": "PASS",
+    "expected_values_recomputed": 25344,
+    "mismatches": 0,
+    "reference_sha256": "45daa2c620dcd512ffa2380141cf762477ea25846fc0328027827cfa3842fefb",
+    "elapsed_seconds": 6.75,
+    "description": "local execution of frozen software arithmetic; not software-owner independent RTL rerun"
+  },
+  "checker_negative_controls": [
+    {
+      "test": "wrong_actual_bits_even_with_match_equal_one",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "test": "duplicate_coordinate",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "test": "missing_output",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "test": "missing_write",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "test": "out_of_window_write",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "test": "wrong_actual_halfword",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "test": "wrong_tail_rows",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "test": "missing_k_block",
+      "status": "REJECTED_AS_EXPECTED"
+    },
+    {
+      "test": "done_not_after_last_write",
+      "status": "REJECTED_AS_EXPECTED"
+    }
+  ],
+  "software_owner_independent_acceptance": "PENDING",
+  "scope": "real model data, one layer-00 FFN1 job through protocol-neutral RTL top",
+  "not_verified": [
+    "full 12-layer inference",
+    "FFN2",
+    "classification accuracy or verified dataset split",
+    "real E203 NICE or System Bus",
+    "CPU result visibility/cache coherency",
+    "physical SRAM",
+    "physical arithmetic pipeline timing",
+    "formal PPA"
+  ]
+}

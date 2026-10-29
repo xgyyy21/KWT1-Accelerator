@@ -1,0 +1,12 @@
+[
+  {
+    "argv": [
+      "D:\\competition\\.tools\\iverilog\\bin\\iverilog.exe",
+      "-V"
+    ],
+    "cwd": "D:\\competition\\handoff\\ffn1_full_layer_2026-10-21",
+    "exit_code": 0,
+    "elapsed_seconds": 0.125,
+    "log": "tool_version.log"
+  }
+]

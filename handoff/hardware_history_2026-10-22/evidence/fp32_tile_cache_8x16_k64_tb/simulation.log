@@ -1,0 +1,2 @@
+PASS: cache to 8x16 FP32 two-block K=64 results=128
+D:\competition\handoff\ffn1_prerequisites_2026-10-21_v2\sources\tb\fp32_tile_cache_8x16_k64_tb.sv:154: $finish called at 87220000 (1ps)

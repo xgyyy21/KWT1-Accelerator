@@ -1,0 +1,15 @@
+﻿{
+    "Started":  "2026-10-29T00:50:59.9541328+08:00",
+    "Complete":  true,
+    "Passed":  true,
+    "SourceIdentity":  "Local snapshot and source_manifest.csv, not a Git commit",
+    "Scope":  "Macro-mode continuous FFN1 99x64x256 then FFN2 99x256x64 without reset or SRAM clear",
+    "VendorTimingModelUsed":  false,
+    "E203Integrated":  false,
+    "SoftwareIndependentReview":  false,
+    "Command":  "D:\\competition\\.tools\\msys64\\usr\\bin\\bash.exe \"--login\" \"D:/competition/build/sram_two_layers_verilator_2026-10-29_v1/sources/scripts/run-sram-full-layer.sh\" \"D:/competition/build/sram_two_layers_verilator_2026-10-29_v1/sources\" \"D:/competition/build/sram_two_layers_verilator_2026-10-29_v1\" \"two\"",
+    "ProcessExitCode":  0,
+    "CompileExitCode":  0,
+    "SimulationExitCode":  0,
+    "Finished":  "2026-10-29T00:57:29.9268225+08:00"
+}

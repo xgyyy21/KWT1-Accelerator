@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "D:\\competition\\.tools\\iverilog\\bin\\vvp.exe",
+    "-i",
+    "D:\\competition\\handoff\\real_ffn1_layer00_rtl_2026-10-23\\simulation\\ffn1_real_layer00.vvp",
+    "+OUT_DIR=D:/competition/handoff/real_ffn1_layer00_rtl_2026-10-23/simulation",
+    "+X_FILE=D:/competition/handoff/real_ffn1_layer00_rtl_2026-10-23/inputs/x_fp32.mem",
+    "+W_FILE=D:/competition/handoff/real_ffn1_layer00_rtl_2026-10-23/inputs/w_fp32.mem",
+    "+BIAS_FILE=D:/competition/handoff/real_ffn1_layer00_rtl_2026-10-23/inputs/bias_fp32.mem",
+    "+EXPECTED_FILE=D:/competition/handoff/real_ffn1_layer00_rtl_2026-10-23/inputs/expected_fp32.mem"
+  ],
+  "cwd": "D:\\competition\\handoff\\real_ffn1_layer00_rtl_2026-10-23",
+  "started_at": "2026-10-23T09:39:13.559548+08:00",
+  "log": "simulation\\ffn1.run.log",
+  "status": "PASS",
+  "pid": 61456,
+  "exit_code": 0,
+  "ended_at": "2026-10-23T12:03:41.685296+08:00",
+  "elapsed_seconds": 8668.125,
+  "log_sha256": "f560ff80cc8ad669e601565256c016a96424afa603be687adf85849c09cc35ba",
+  "binary_sha256": "85c98034e10213941f948fd965e0762b34de79bf17a470e1d530040adbdfc3d0"
+}

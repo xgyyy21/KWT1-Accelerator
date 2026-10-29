@@ -1,0 +1,1104 @@
+﻿{
+    "status":  "PROVENANCE_BOUND_TO_ARCHIVED_RUNS",
+    "total_events":  13531,
+    "software_side_acceptance":  "Separate software report states 13,531/13,531 events match; included comparator reports show the corresponding per-case matches.",
+    "git_commit":  "not recorded; hash-identified RTL/TB source snapshot only",
+    "revision_label":  "label is not treated as source identity",
+    "source_tree":  "evidence/sources/",
+    "command_database":  "evidence/commands.json",
+    "cases":  [
+                  {
+                      "case":  "array_hand_2x2",
+                      "events":  12,
+                      "comparison_status":  "BIT-EXACT-CANDIDATE",
+                      "trace_path":  "evidence/array_hand_2x2/pe_trace.csv",
+                      "trace_sha256":  "8531b45db23036bca5482968117a1023a2d9eeeb80153d8fb1d6e18eeb25fca8",
+                      "simulator_log":  "evidence/array_hand_2x2/simulation.log",
+                      "comparison_report":  "evidence/array_hand_2x2/comparison.json",
+                      "command_records":  [
+                                              {
+                                                  "argv":  [
+                                                               "D:\\competition\\.tools\\iverilog\\bin\\iverilog.exe",
+                                                               "-g2012",
+                                                               "-s",
+                                                               "fp32_array_trace_tb",
+                                                               "-Pfp32_array_trace_tb.ROWS=2",
+                                                               "-Pfp32_array_trace_tb.COLS=2",
+                                                               "-Pfp32_array_trace_tb.TOTAL_K=2",
+                                                               "-Pfp32_array_trace_tb.VALID_ROWS=2",
+                                                               "-Pfp32_array_trace_tb.VALID_COLS=2",
+                                                               "-Pfp32_array_trace_tb.ROW_BASE=0",
+                                                               "-Pfp32_array_trace_tb.COL_BASE=0",
+                                                               "-o",
+                                                               "D:\\competition\\build\\ffn1_completion\\prerequisite_bins\\array_hand_2x2.vvp",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_pkg.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_math_pkg.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\pe_mac.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\pe_array_8x16.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\systolic_array_8x16.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\systolic_input_skew.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\tile_result_collector.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\tile_stream_adapter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\systolic_tile_engine.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_fsm.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_core.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_regs.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_soc_adapter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\matrix_cache_manager.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\matrix_buffer.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\tile_dma.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\matrix_task_scheduler.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\matrix_task_controller.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\block_descriptor.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\block_counter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_mac_boundary.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_pe_mac.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_pe_array_8x16.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_cache_mapper.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_cache_streamer.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_matrix_global_addr_gen.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_matrix_block_controller.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_dma_sequencer.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_dma_load_engine.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_dma_writeback_engine.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_engine.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_fsm.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_kblock_fsm.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_load_compute.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_kblock_load_compute.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_matrix_tile_scheduler.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_soc_bus_adapter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_nice_control_adapter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_accelerator_top.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\tb\\fp32_array_trace_tb.sv"
+                                                           ],
+                                                  "cwd":  "D:\\competition",
+                                                  "exit_code":  0,
+                                                  "elapsed_seconds":  0.1720000000204891,
+                                                  "log":  "array_hand_2x2\\compile.log",
+                                                  "log_sha256":  "44df84766d9a39eb8454e59b78d0eca9e21b8c2d46a0815ab5868a28c6b12f0a"
+                                              },
+                                              {
+                                                  "argv":  [
+                                                               "D:\\competition\\.tools\\iverilog\\bin\\vvp.exe",
+                                                               "-i",
+                                                               "D:\\competition\\build\\ffn1_completion\\prerequisite_bins\\array_hand_2x2.vvp",
+                                                               "+input=D:/competition/handoff/ffn1_prerequisites_2026-10-21_v2/inputs/hand_2x2",
+                                                               "+output=D:/competition/handoff/ffn1_prerequisites_2026-10-21_v2/array_hand_2x2",
+                                                               "+case=hand_2x2",
+                                                               "+revision=ffn1-idle-enable-source-hashes",
+                                                               "+manifest=148ac9b305c34dafd033ea33d98b4f0a13edbf1306c66d29c7926ed348941e93",
+                                                               "+reference=a85bb5b7d334841acab94740290933bd3a991b881acf8782615cb8c43f73553b"
+                                                           ],
+                                                  "cwd":  "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\array_hand_2x2",
+                                                  "exit_code":  0,
+                                                  "elapsed_seconds":  0.09299999999348074,
+                                                  "log":  "array_hand_2x2\\simulation.log",
+                                                  "log_sha256":  "e17c1b6d6e4034b26961787f2a9c6ff1fc7f7774c303f03c460be597070baaf9"
+                                              },
+                                              {
+                                                  "argv":  [
+                                                               "C:\\Program Files\\Lenovo\\ModelMgr\\Plugins\\Image\\python.exe",
+                                                               "-B",
+                                                               "-m",
+                                                               "software.compare_pe_trace",
+                                                               "--expected",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\inputs\\hand_2x2\\expected_pe_trace.csv",
+                                                               "--actual",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\array_hand_2x2\\pe_trace.csv",
+                                                               "--compare-tile-id",
+                                                               "--report",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\array_hand_2x2\\comparison.json"
+                                                           ],
+                                                  "cwd":  "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\software_snapshot",
+                                                  "exit_code":  0,
+                                                  "elapsed_seconds":  0.25,
+                                                  "log":  "array_hand_2x2\\comparison.log",
+                                                  "log_sha256":  "4ca8b2abf189059e0b9d790736632274da3be97c77d14c36bcd2013a07f2a5af"
+                                              }
+                                          ],
+                      "revision_label":  "ffn1-idle-enable-source-hashes",
+                      "rtl_git_commit":  null,
+                      "rtl_sources":  [
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_core.sv",
+                                              "sha256":  "0d5a5cc4ea284119789a1984657827272a452d51bc14623241fca73c16eeba72"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_fsm.sv",
+                                              "sha256":  "a637eb524879bbd63d6534c71d6fdb2cba0616af5860a768fe44f73ee0b9bc01"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_pkg.sv",
+                                              "sha256":  "99dcb21b694f725a0d0e3f3301095fdc09cd1f965a60d8a9d4d383b075032911"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_regs.sv",
+                                              "sha256":  "a82401939ef07e453f1c0e40f5d05b81487510091ca3ab8731908e463b7b01d3"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_soc_adapter.sv",
+                                              "sha256":  "972035437023e68cfea9ddc313fb184c9913f5b8591631aa3e3c32cf6c6660a1"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/block_counter.sv",
+                                              "sha256":  "9baa888e2ee07e9cb0232002a99f0634be92262e809c7e59b981bef1b132d7bb"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/block_descriptor.sv",
+                                              "sha256":  "4b50d9f1b9d73d554e12385165806e8b7bc47b958355420d5cdda8244d00f4ff"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_accelerator_top.sv",
+                                              "sha256":  "ca04b27a30fe9e9c7c2deecd660b0bcf1411aa930edec7c228de08236e4f4fe2"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_mac_boundary.sv",
+                                              "sha256":  "bccc3b76015534d42caefd56964d09932fc540aec64a29b45ee1a3700996273f"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_math_pkg.sv",
+                                              "sha256":  "f9b2ff813b51aba48914ce181c3840d40bd3bbd4f5b2ad0c89a3f4acadb888fe"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_matrix_block_controller.sv",
+                                              "sha256":  "2097714e01144e2e703cd1ec1b0addf0adaf73147c876958617a207d04edd4c3"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_matrix_global_addr_gen.sv",
+                                              "sha256":  "ee8054dc7fd6a6b024e3ce333a642d2dbbfcb13258670f165678ae7884655096"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_matrix_tile_scheduler.sv",
+                                              "sha256":  "3547a9e9dfc4ac12f3b27302bc621a313e6334070d2b3f36eb461b28e3154af7"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_nice_control_adapter.sv",
+                                              "sha256":  "11c466e68629df985d51f87830fa3fb4f68b5c86d623365d8e54ab5882373fb7"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_pe_array_8x16.sv",
+                                              "sha256":  "95a6df30ff383446eb7d834645216aaa7065156022c86ce76bed0a2a3726addd"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_pe_mac.sv",
+                                              "sha256":  "9a4192323b4c9243eb26452dd93237b4d71682341820c784decc2968a3c8caf6"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_cache_mapper.sv",
+                                              "sha256":  "68e5a381b4e983e1bc401d9d8f81adc0a4105cf3016bf0beddab7b9d19b19751"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_cache_streamer.sv",
+                                              "sha256":  "5948040e2bca4e3450523cf55ee0f1b30b129d98490fef6be49dfd5e75db60a0"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_dma_load_engine.sv",
+                                              "sha256":  "078cfd7149e7f424f18f665f260d11862b7817ce7f91cfd60e3c8b18ba9e6f5e"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_dma_sequencer.sv",
+                                              "sha256":  "19f0e8a5f526626ae00cc7fda62300aed32965497874c5eafe1330b48764e536"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_dma_writeback_engine.sv",
+                                              "sha256":  "b8edaf3d3db27a45205c8b7bae06da84a520fbaaebfcdc25b7a80afefff6223b"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_engine.sv",
+                                              "sha256":  "5cc237d39c95d9118baf92ec6e0f59311fe77a60f214021804b83a330bf64da6"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_fsm.sv",
+                                              "sha256":  "12c10227a66af7ba6ebe96fec915fc6a8def533c0bf65788c8c4d6a88686354a"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_kblock_fsm.sv",
+                                              "sha256":  "63a799c11d2019c8615b20b00406f2bf957679a6a0b7bffe9cd4749815ec90c8"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_kblock_load_compute.sv",
+                                              "sha256":  "e669769c255733adea54fb258782ea9e4afbcbd276853e954ba7ab1ed608e760"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_load_compute.sv",
+                                              "sha256":  "b16ab974274982c8e566e55de08cf1fc221da876dd75e1470dcf9ac505365b59"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_soc_bus_adapter.sv",
+                                              "sha256":  "bfe335ad4ff94f1f87090d4b14e3d327879fad006958d4890c1d8c1d6495ad9e"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/matrix_buffer.sv",
+                                              "sha256":  "50329ddd4521cdd2c989cf23dbbdcf9f49f2379a51263dbf892cb37ed4b15e2c"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/matrix_cache_manager.sv",
+                                              "sha256":  "ad1db76b9df18621d31ae8aae11c9bc5ee30e7dd1baa2caaf7dd3cd4680f8838"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/matrix_task_controller.sv",
+                                              "sha256":  "cba739edc5ae7a78a970432388910c0a7b3d013ef504c338c47d9512fd584b17"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/matrix_task_scheduler.sv",
+                                              "sha256":  "5c4efb28a448f498b6cd2169ff721e711dbedd0d5e9a3aebe85fdef2099457be"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/pe_array_8x16.sv",
+                                              "sha256":  "a7f33ecd8a2b7516abc3acc8faa5bd54dd40b43dfd3be1a24e976e5703ffb056"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/pe_mac.sv",
+                                              "sha256":  "051b5855301ba3bc9174dea79a1485aa8330265fb0b41c221632b9ce65f60f63"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/systolic_array_8x16.sv",
+                                              "sha256":  "5cffcff3b2de2ede3b13a9ff976e38290bac741a4209045ec5c6913245658906"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/systolic_input_skew.sv",
+                                              "sha256":  "573b6eefb213a9d2cb7f22ceeb981c93e34aee46bb8c817527889e5ec94c1e5f"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/systolic_tile_engine.sv",
+                                              "sha256":  "ec7648d730c1e9e5d53360f05f56f33c7640ab52287558461a2098e7c24643ed"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/tile_dma.sv",
+                                              "sha256":  "0c8c2163fe6a61b2bf721b7e49c500586bdfde48dfab69d3af7ba043fe35b4cb"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/tile_result_collector.sv",
+                                              "sha256":  "d93d617d0151ddd63b6be254ad2c4315eca410bf3295b823d663fb1cf0db1d1d"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/tile_stream_adapter.sv",
+                                              "sha256":  "06af51e0d90ed49aa97cfd80190449e7be6b2e55d8b74251bffc9c940d99d8d8"
+                                          }
+                                      ],
+                      "testbench_path":  "evidence/sources/tb/fp32_array_trace_tb.sv",
+                      "testbench_sha256":  "f0313eff12e887184aafa787939307125a2d72aa59d17aa83aa4a626e6b4afaa"
+                  },
+                  {
+                      "case":  "array_array_8x16_k32",
+                      "events":  4224,
+                      "comparison_status":  "BIT-EXACT-CANDIDATE",
+                      "trace_path":  "evidence/array_array_8x16_k32/pe_trace.csv",
+                      "trace_sha256":  "e792c411e564fc12157d234d99920b3be38083c3456202893afcd0aae3672145",
+                      "simulator_log":  "evidence/array_array_8x16_k32/simulation.log",
+                      "comparison_report":  "evidence/array_array_8x16_k32/comparison.json",
+                      "command_records":  [
+                                              {
+                                                  "argv":  [
+                                                               "D:\\competition\\.tools\\iverilog\\bin\\iverilog.exe",
+                                                               "-g2012",
+                                                               "-s",
+                                                               "fp32_array_trace_tb",
+                                                               "-Pfp32_array_trace_tb.ROWS=8",
+                                                               "-Pfp32_array_trace_tb.COLS=16",
+                                                               "-Pfp32_array_trace_tb.TOTAL_K=32",
+                                                               "-Pfp32_array_trace_tb.VALID_ROWS=8",
+                                                               "-Pfp32_array_trace_tb.VALID_COLS=16",
+                                                               "-Pfp32_array_trace_tb.ROW_BASE=0",
+                                                               "-Pfp32_array_trace_tb.COL_BASE=0",
+                                                               "-o",
+                                                               "D:\\competition\\build\\ffn1_completion\\prerequisite_bins\\array_array_8x16_k32.vvp",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_pkg.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_math_pkg.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\pe_mac.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\pe_array_8x16.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\systolic_array_8x16.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\systolic_input_skew.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\tile_result_collector.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\tile_stream_adapter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\systolic_tile_engine.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_fsm.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_core.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_regs.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_soc_adapter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\matrix_cache_manager.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\matrix_buffer.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\tile_dma.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\matrix_task_scheduler.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\matrix_task_controller.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\block_descriptor.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\block_counter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_mac_boundary.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_pe_mac.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_pe_array_8x16.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_cache_mapper.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_cache_streamer.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_matrix_global_addr_gen.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_matrix_block_controller.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_dma_sequencer.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_dma_load_engine.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_dma_writeback_engine.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_engine.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_fsm.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_kblock_fsm.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_load_compute.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_kblock_load_compute.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_matrix_tile_scheduler.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_soc_bus_adapter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_nice_control_adapter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_accelerator_top.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\tb\\fp32_array_trace_tb.sv"
+                                                           ],
+                                                  "cwd":  "D:\\competition",
+                                                  "exit_code":  0,
+                                                  "elapsed_seconds":  0.5940000000409782,
+                                                  "log":  "array_array_8x16_k32\\compile.log",
+                                                  "log_sha256":  "91937e00acfa551effcfd2b3074ac2acf1f09729358c03666fa0c0b78ba981e6"
+                                              },
+                                              {
+                                                  "argv":  [
+                                                               "D:\\competition\\.tools\\iverilog\\bin\\vvp.exe",
+                                                               "-i",
+                                                               "D:\\competition\\build\\ffn1_completion\\prerequisite_bins\\array_array_8x16_k32.vvp",
+                                                               "+input=D:/competition/handoff/ffn1_prerequisites_2026-10-21_v2/inputs/array_8x16_k32",
+                                                               "+output=D:/competition/handoff/ffn1_prerequisites_2026-10-21_v2/array_array_8x16_k32",
+                                                               "+case=array_8x16_k32",
+                                                               "+revision=ffn1-idle-enable-source-hashes",
+                                                               "+manifest=f1cc10738e5cf1eb3a260d19c93cd293fb2ed3de0cbaab05def58af41e2e1f60",
+                                                               "+reference=40a0be78d305485fdd71242b31597b872df357db77b03827d0ffaedc1adb87bf"
+                                                           ],
+                                                  "cwd":  "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\array_array_8x16_k32",
+                                                  "exit_code":  0,
+                                                  "elapsed_seconds":  2.3589999999385327,
+                                                  "log":  "array_array_8x16_k32\\simulation.log",
+                                                  "log_sha256":  "56755ad1936c76b9b82431764351bf1acd7d25500f535d173103be2df168aae9"
+                                              },
+                                              {
+                                                  "argv":  [
+                                                               "C:\\Program Files\\Lenovo\\ModelMgr\\Plugins\\Image\\python.exe",
+                                                               "-B",
+                                                               "-m",
+                                                               "software.compare_pe_trace",
+                                                               "--expected",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\inputs\\array_8x16_k32\\expected_pe_trace.csv",
+                                                               "--actual",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\array_array_8x16_k32\\pe_trace.csv",
+                                                               "--compare-tile-id",
+                                                               "--report",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\array_array_8x16_k32\\comparison.json"
+                                                           ],
+                                                  "cwd":  "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\software_snapshot",
+                                                  "exit_code":  0,
+                                                  "elapsed_seconds":  0.2970000000204891,
+                                                  "log":  "array_array_8x16_k32\\comparison.log",
+                                                  "log_sha256":  "91686d0ed09b314a072d170bf3508996579fc68ec1e36a21a6e53222a83ca36a"
+                                              }
+                                          ],
+                      "revision_label":  "ffn1-idle-enable-source-hashes",
+                      "rtl_git_commit":  null,
+                      "rtl_sources":  [
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_core.sv",
+                                              "sha256":  "0d5a5cc4ea284119789a1984657827272a452d51bc14623241fca73c16eeba72"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_fsm.sv",
+                                              "sha256":  "a637eb524879bbd63d6534c71d6fdb2cba0616af5860a768fe44f73ee0b9bc01"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_pkg.sv",
+                                              "sha256":  "99dcb21b694f725a0d0e3f3301095fdc09cd1f965a60d8a9d4d383b075032911"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_regs.sv",
+                                              "sha256":  "a82401939ef07e453f1c0e40f5d05b81487510091ca3ab8731908e463b7b01d3"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_soc_adapter.sv",
+                                              "sha256":  "972035437023e68cfea9ddc313fb184c9913f5b8591631aa3e3c32cf6c6660a1"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/block_counter.sv",
+                                              "sha256":  "9baa888e2ee07e9cb0232002a99f0634be92262e809c7e59b981bef1b132d7bb"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/block_descriptor.sv",
+                                              "sha256":  "4b50d9f1b9d73d554e12385165806e8b7bc47b958355420d5cdda8244d00f4ff"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_accelerator_top.sv",
+                                              "sha256":  "ca04b27a30fe9e9c7c2deecd660b0bcf1411aa930edec7c228de08236e4f4fe2"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_mac_boundary.sv",
+                                              "sha256":  "bccc3b76015534d42caefd56964d09932fc540aec64a29b45ee1a3700996273f"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_math_pkg.sv",
+                                              "sha256":  "f9b2ff813b51aba48914ce181c3840d40bd3bbd4f5b2ad0c89a3f4acadb888fe"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_matrix_block_controller.sv",
+                                              "sha256":  "2097714e01144e2e703cd1ec1b0addf0adaf73147c876958617a207d04edd4c3"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_matrix_global_addr_gen.sv",
+                                              "sha256":  "ee8054dc7fd6a6b024e3ce333a642d2dbbfcb13258670f165678ae7884655096"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_matrix_tile_scheduler.sv",
+                                              "sha256":  "3547a9e9dfc4ac12f3b27302bc621a313e6334070d2b3f36eb461b28e3154af7"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_nice_control_adapter.sv",
+                                              "sha256":  "11c466e68629df985d51f87830fa3fb4f68b5c86d623365d8e54ab5882373fb7"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_pe_array_8x16.sv",
+                                              "sha256":  "95a6df30ff383446eb7d834645216aaa7065156022c86ce76bed0a2a3726addd"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_pe_mac.sv",
+                                              "sha256":  "9a4192323b4c9243eb26452dd93237b4d71682341820c784decc2968a3c8caf6"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_cache_mapper.sv",
+                                              "sha256":  "68e5a381b4e983e1bc401d9d8f81adc0a4105cf3016bf0beddab7b9d19b19751"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_cache_streamer.sv",
+                                              "sha256":  "5948040e2bca4e3450523cf55ee0f1b30b129d98490fef6be49dfd5e75db60a0"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_dma_load_engine.sv",
+                                              "sha256":  "078cfd7149e7f424f18f665f260d11862b7817ce7f91cfd60e3c8b18ba9e6f5e"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_dma_sequencer.sv",
+                                              "sha256":  "19f0e8a5f526626ae00cc7fda62300aed32965497874c5eafe1330b48764e536"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_dma_writeback_engine.sv",
+                                              "sha256":  "b8edaf3d3db27a45205c8b7bae06da84a520fbaaebfcdc25b7a80afefff6223b"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_engine.sv",
+                                              "sha256":  "5cc237d39c95d9118baf92ec6e0f59311fe77a60f214021804b83a330bf64da6"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_fsm.sv",
+                                              "sha256":  "12c10227a66af7ba6ebe96fec915fc6a8def533c0bf65788c8c4d6a88686354a"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_kblock_fsm.sv",
+                                              "sha256":  "63a799c11d2019c8615b20b00406f2bf957679a6a0b7bffe9cd4749815ec90c8"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_kblock_load_compute.sv",
+                                              "sha256":  "e669769c255733adea54fb258782ea9e4afbcbd276853e954ba7ab1ed608e760"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_load_compute.sv",
+                                              "sha256":  "b16ab974274982c8e566e55de08cf1fc221da876dd75e1470dcf9ac505365b59"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_soc_bus_adapter.sv",
+                                              "sha256":  "bfe335ad4ff94f1f87090d4b14e3d327879fad006958d4890c1d8c1d6495ad9e"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/matrix_buffer.sv",
+                                              "sha256":  "50329ddd4521cdd2c989cf23dbbdcf9f49f2379a51263dbf892cb37ed4b15e2c"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/matrix_cache_manager.sv",
+                                              "sha256":  "ad1db76b9df18621d31ae8aae11c9bc5ee30e7dd1baa2caaf7dd3cd4680f8838"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/matrix_task_controller.sv",
+                                              "sha256":  "cba739edc5ae7a78a970432388910c0a7b3d013ef504c338c47d9512fd584b17"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/matrix_task_scheduler.sv",
+                                              "sha256":  "5c4efb28a448f498b6cd2169ff721e711dbedd0d5e9a3aebe85fdef2099457be"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/pe_array_8x16.sv",
+                                              "sha256":  "a7f33ecd8a2b7516abc3acc8faa5bd54dd40b43dfd3be1a24e976e5703ffb056"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/pe_mac.sv",
+                                              "sha256":  "051b5855301ba3bc9174dea79a1485aa8330265fb0b41c221632b9ce65f60f63"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/systolic_array_8x16.sv",
+                                              "sha256":  "5cffcff3b2de2ede3b13a9ff976e38290bac741a4209045ec5c6913245658906"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/systolic_input_skew.sv",
+                                              "sha256":  "573b6eefb213a9d2cb7f22ceeb981c93e34aee46bb8c817527889e5ec94c1e5f"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/systolic_tile_engine.sv",
+                                              "sha256":  "ec7648d730c1e9e5d53360f05f56f33c7640ab52287558461a2098e7c24643ed"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/tile_dma.sv",
+                                              "sha256":  "0c8c2163fe6a61b2bf721b7e49c500586bdfde48dfab69d3af7ba043fe35b4cb"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/tile_result_collector.sv",
+                                              "sha256":  "d93d617d0151ddd63b6be254ad2c4315eca410bf3295b823d663fb1cf0db1d1d"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/tile_stream_adapter.sv",
+                                              "sha256":  "06af51e0d90ed49aa97cfd80190449e7be6b2e55d8b74251bffc9c940d99d8d8"
+                                          }
+                                      ],
+                      "testbench_path":  "evidence/sources/tb/fp32_array_trace_tb.sv",
+                      "testbench_sha256":  "f0313eff12e887184aafa787939307125a2d72aa59d17aa83aa4a626e6b4afaa"
+                  },
+                  {
+                      "case":  "array_array_8x16_k64",
+                      "events":  8320,
+                      "comparison_status":  "BIT-EXACT-CANDIDATE",
+                      "trace_path":  "evidence/array_array_8x16_k64/pe_trace.csv",
+                      "trace_sha256":  "115ccfce890cbccf0ca111cd77be945c69c96e70ecbd5a5b78f2dc4d0c591ebc",
+                      "simulator_log":  "evidence/array_array_8x16_k64/simulation.log",
+                      "comparison_report":  "evidence/array_array_8x16_k64/comparison.json",
+                      "command_records":  [
+                                              {
+                                                  "argv":  [
+                                                               "D:\\competition\\.tools\\iverilog\\bin\\iverilog.exe",
+                                                               "-g2012",
+                                                               "-s",
+                                                               "fp32_array_trace_tb",
+                                                               "-Pfp32_array_trace_tb.ROWS=8",
+                                                               "-Pfp32_array_trace_tb.COLS=16",
+                                                               "-Pfp32_array_trace_tb.TOTAL_K=64",
+                                                               "-Pfp32_array_trace_tb.VALID_ROWS=8",
+                                                               "-Pfp32_array_trace_tb.VALID_COLS=16",
+                                                               "-Pfp32_array_trace_tb.ROW_BASE=0",
+                                                               "-Pfp32_array_trace_tb.COL_BASE=0",
+                                                               "-o",
+                                                               "D:\\competition\\build\\ffn1_completion\\prerequisite_bins\\array_array_8x16_k64.vvp",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_pkg.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_math_pkg.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\pe_mac.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\pe_array_8x16.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\systolic_array_8x16.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\systolic_input_skew.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\tile_result_collector.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\tile_stream_adapter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\systolic_tile_engine.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_fsm.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_core.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_regs.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_soc_adapter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\matrix_cache_manager.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\matrix_buffer.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\tile_dma.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\matrix_task_scheduler.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\matrix_task_controller.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\block_descriptor.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\block_counter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_mac_boundary.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_pe_mac.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_pe_array_8x16.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_cache_mapper.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_cache_streamer.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_matrix_global_addr_gen.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_matrix_block_controller.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_dma_sequencer.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_dma_load_engine.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_dma_writeback_engine.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_engine.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_fsm.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_kblock_fsm.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_load_compute.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_kblock_load_compute.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_matrix_tile_scheduler.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_soc_bus_adapter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_nice_control_adapter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_accelerator_top.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\tb\\fp32_array_trace_tb.sv"
+                                                           ],
+                                                  "cwd":  "D:\\competition",
+                                                  "exit_code":  0,
+                                                  "elapsed_seconds":  0.5629999999655411,
+                                                  "log":  "array_array_8x16_k64\\compile.log",
+                                                  "log_sha256":  "91937e00acfa551effcfd2b3074ac2acf1f09729358c03666fa0c0b78ba981e6"
+                                              },
+                                              {
+                                                  "argv":  [
+                                                               "D:\\competition\\.tools\\iverilog\\bin\\vvp.exe",
+                                                               "-i",
+                                                               "D:\\competition\\build\\ffn1_completion\\prerequisite_bins\\array_array_8x16_k64.vvp",
+                                                               "+input=D:/competition/handoff/ffn1_prerequisites_2026-10-21_v2/inputs/array_8x16_k64",
+                                                               "+output=D:/competition/handoff/ffn1_prerequisites_2026-10-21_v2/array_array_8x16_k64",
+                                                               "+case=array_8x16_k64",
+                                                               "+revision=ffn1-idle-enable-source-hashes",
+                                                               "+manifest=d8add7f315af89d7acc9f4b064d915a54219eabbfbbc63504eb43b0e91b09718",
+                                                               "+reference=a399f6662c366270a29d77c2ab009ce23f449e0539d5b514c6167d29d1a9dd56"
+                                                           ],
+                                                  "cwd":  "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\array_array_8x16_k64",
+                                                  "exit_code":  0,
+                                                  "elapsed_seconds":  4.079000000027008,
+                                                  "log":  "array_array_8x16_k64\\simulation.log",
+                                                  "log_sha256":  "9dd537bf05bd6cda065103840a8ff03f447f86bac5ec44d58d8a63ea6b46acef"
+                                              },
+                                              {
+                                                  "argv":  [
+                                                               "C:\\Program Files\\Lenovo\\ModelMgr\\Plugins\\Image\\python.exe",
+                                                               "-B",
+                                                               "-m",
+                                                               "software.compare_pe_trace",
+                                                               "--expected",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\inputs\\array_8x16_k64\\expected_pe_trace.csv",
+                                                               "--actual",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\array_array_8x16_k64\\pe_trace.csv",
+                                                               "--compare-tile-id",
+                                                               "--report",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\array_array_8x16_k64\\comparison.json"
+                                                           ],
+                                                  "cwd":  "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\software_snapshot",
+                                                  "exit_code":  0,
+                                                  "elapsed_seconds":  0.46799999999348074,
+                                                  "log":  "array_array_8x16_k64\\comparison.log",
+                                                  "log_sha256":  "03e7f68071dfa305f772b3b94bdc619adcfff64dd17caf8de64c82f94b2a0c8e"
+                                              }
+                                          ],
+                      "revision_label":  "ffn1-idle-enable-source-hashes",
+                      "rtl_git_commit":  null,
+                      "rtl_sources":  [
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_core.sv",
+                                              "sha256":  "0d5a5cc4ea284119789a1984657827272a452d51bc14623241fca73c16eeba72"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_fsm.sv",
+                                              "sha256":  "a637eb524879bbd63d6534c71d6fdb2cba0616af5860a768fe44f73ee0b9bc01"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_pkg.sv",
+                                              "sha256":  "99dcb21b694f725a0d0e3f3301095fdc09cd1f965a60d8a9d4d383b075032911"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_regs.sv",
+                                              "sha256":  "a82401939ef07e453f1c0e40f5d05b81487510091ca3ab8731908e463b7b01d3"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_soc_adapter.sv",
+                                              "sha256":  "972035437023e68cfea9ddc313fb184c9913f5b8591631aa3e3c32cf6c6660a1"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/block_counter.sv",
+                                              "sha256":  "9baa888e2ee07e9cb0232002a99f0634be92262e809c7e59b981bef1b132d7bb"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/block_descriptor.sv",
+                                              "sha256":  "4b50d9f1b9d73d554e12385165806e8b7bc47b958355420d5cdda8244d00f4ff"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_accelerator_top.sv",
+                                              "sha256":  "ca04b27a30fe9e9c7c2deecd660b0bcf1411aa930edec7c228de08236e4f4fe2"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_mac_boundary.sv",
+                                              "sha256":  "bccc3b76015534d42caefd56964d09932fc540aec64a29b45ee1a3700996273f"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_math_pkg.sv",
+                                              "sha256":  "f9b2ff813b51aba48914ce181c3840d40bd3bbd4f5b2ad0c89a3f4acadb888fe"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_matrix_block_controller.sv",
+                                              "sha256":  "2097714e01144e2e703cd1ec1b0addf0adaf73147c876958617a207d04edd4c3"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_matrix_global_addr_gen.sv",
+                                              "sha256":  "ee8054dc7fd6a6b024e3ce333a642d2dbbfcb13258670f165678ae7884655096"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_matrix_tile_scheduler.sv",
+                                              "sha256":  "3547a9e9dfc4ac12f3b27302bc621a313e6334070d2b3f36eb461b28e3154af7"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_nice_control_adapter.sv",
+                                              "sha256":  "11c466e68629df985d51f87830fa3fb4f68b5c86d623365d8e54ab5882373fb7"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_pe_array_8x16.sv",
+                                              "sha256":  "95a6df30ff383446eb7d834645216aaa7065156022c86ce76bed0a2a3726addd"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_pe_mac.sv",
+                                              "sha256":  "9a4192323b4c9243eb26452dd93237b4d71682341820c784decc2968a3c8caf6"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_cache_mapper.sv",
+                                              "sha256":  "68e5a381b4e983e1bc401d9d8f81adc0a4105cf3016bf0beddab7b9d19b19751"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_cache_streamer.sv",
+                                              "sha256":  "5948040e2bca4e3450523cf55ee0f1b30b129d98490fef6be49dfd5e75db60a0"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_dma_load_engine.sv",
+                                              "sha256":  "078cfd7149e7f424f18f665f260d11862b7817ce7f91cfd60e3c8b18ba9e6f5e"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_dma_sequencer.sv",
+                                              "sha256":  "19f0e8a5f526626ae00cc7fda62300aed32965497874c5eafe1330b48764e536"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_dma_writeback_engine.sv",
+                                              "sha256":  "b8edaf3d3db27a45205c8b7bae06da84a520fbaaebfcdc25b7a80afefff6223b"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_engine.sv",
+                                              "sha256":  "5cc237d39c95d9118baf92ec6e0f59311fe77a60f214021804b83a330bf64da6"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_fsm.sv",
+                                              "sha256":  "12c10227a66af7ba6ebe96fec915fc6a8def533c0bf65788c8c4d6a88686354a"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_kblock_fsm.sv",
+                                              "sha256":  "63a799c11d2019c8615b20b00406f2bf957679a6a0b7bffe9cd4749815ec90c8"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_kblock_load_compute.sv",
+                                              "sha256":  "e669769c255733adea54fb258782ea9e4afbcbd276853e954ba7ab1ed608e760"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_load_compute.sv",
+                                              "sha256":  "b16ab974274982c8e566e55de08cf1fc221da876dd75e1470dcf9ac505365b59"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_soc_bus_adapter.sv",
+                                              "sha256":  "bfe335ad4ff94f1f87090d4b14e3d327879fad006958d4890c1d8c1d6495ad9e"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/matrix_buffer.sv",
+                                              "sha256":  "50329ddd4521cdd2c989cf23dbbdcf9f49f2379a51263dbf892cb37ed4b15e2c"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/matrix_cache_manager.sv",
+                                              "sha256":  "ad1db76b9df18621d31ae8aae11c9bc5ee30e7dd1baa2caaf7dd3cd4680f8838"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/matrix_task_controller.sv",
+                                              "sha256":  "cba739edc5ae7a78a970432388910c0a7b3d013ef504c338c47d9512fd584b17"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/matrix_task_scheduler.sv",
+                                              "sha256":  "5c4efb28a448f498b6cd2169ff721e711dbedd0d5e9a3aebe85fdef2099457be"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/pe_array_8x16.sv",
+                                              "sha256":  "a7f33ecd8a2b7516abc3acc8faa5bd54dd40b43dfd3be1a24e976e5703ffb056"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/pe_mac.sv",
+                                              "sha256":  "051b5855301ba3bc9174dea79a1485aa8330265fb0b41c221632b9ce65f60f63"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/systolic_array_8x16.sv",
+                                              "sha256":  "5cffcff3b2de2ede3b13a9ff976e38290bac741a4209045ec5c6913245658906"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/systolic_input_skew.sv",
+                                              "sha256":  "573b6eefb213a9d2cb7f22ceeb981c93e34aee46bb8c817527889e5ec94c1e5f"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/systolic_tile_engine.sv",
+                                              "sha256":  "ec7648d730c1e9e5d53360f05f56f33c7640ab52287558461a2098e7c24643ed"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/tile_dma.sv",
+                                              "sha256":  "0c8c2163fe6a61b2bf721b7e49c500586bdfde48dfab69d3af7ba043fe35b4cb"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/tile_result_collector.sv",
+                                              "sha256":  "d93d617d0151ddd63b6be254ad2c4315eca410bf3295b823d663fb1cf0db1d1d"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/tile_stream_adapter.sv",
+                                              "sha256":  "06af51e0d90ed49aa97cfd80190449e7be6b2e55d8b74251bffc9c940d99d8d8"
+                                          }
+                                      ],
+                      "testbench_path":  "evidence/sources/tb/fp32_array_trace_tb.sv",
+                      "testbench_sha256":  "f0313eff12e887184aafa787939307125a2d72aa59d17aa83aa4a626e6b4afaa"
+                  },
+                  {
+                      "case":  "array_array_tail_3x5_k64",
+                      "events":  975,
+                      "comparison_status":  "BIT-EXACT-CANDIDATE",
+                      "trace_path":  "evidence/array_array_tail_3x5_k64/pe_trace.csv",
+                      "trace_sha256":  "a810af140986f222992d0157a8fd80f7eef4328bf48c7dfb4402e2aed8074b2d",
+                      "simulator_log":  "evidence/array_array_tail_3x5_k64/simulation.log",
+                      "comparison_report":  "evidence/array_array_tail_3x5_k64/comparison.json",
+                      "command_records":  [
+                                              {
+                                                  "argv":  [
+                                                               "D:\\competition\\.tools\\iverilog\\bin\\iverilog.exe",
+                                                               "-g2012",
+                                                               "-s",
+                                                               "fp32_array_trace_tb",
+                                                               "-Pfp32_array_trace_tb.ROWS=8",
+                                                               "-Pfp32_array_trace_tb.COLS=16",
+                                                               "-Pfp32_array_trace_tb.TOTAL_K=64",
+                                                               "-Pfp32_array_trace_tb.VALID_ROWS=3",
+                                                               "-Pfp32_array_trace_tb.VALID_COLS=5",
+                                                               "-Pfp32_array_trace_tb.ROW_BASE=96",
+                                                               "-Pfp32_array_trace_tb.COL_BASE=16",
+                                                               "-o",
+                                                               "D:\\competition\\build\\ffn1_completion\\prerequisite_bins\\array_array_tail_3x5_k64.vvp",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_pkg.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_math_pkg.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\pe_mac.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\pe_array_8x16.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\systolic_array_8x16.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\systolic_input_skew.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\tile_result_collector.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\tile_stream_adapter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\systolic_tile_engine.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_fsm.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_core.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_regs.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\ai_engine_soc_adapter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\matrix_cache_manager.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\matrix_buffer.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\tile_dma.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\matrix_task_scheduler.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\matrix_task_controller.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\block_descriptor.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\block_counter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_mac_boundary.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_pe_mac.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_pe_array_8x16.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_cache_mapper.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_cache_streamer.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_matrix_global_addr_gen.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_matrix_block_controller.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_dma_sequencer.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_dma_load_engine.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_dma_writeback_engine.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_engine.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_fsm.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_kblock_fsm.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_load_compute.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_kblock_load_compute.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_matrix_tile_scheduler.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_tile_soc_bus_adapter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_nice_control_adapter.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\rtl\\fp32_accelerator_top.sv",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\sources\\tb\\fp32_array_trace_tb.sv"
+                                                           ],
+                                                  "cwd":  "D:\\competition",
+                                                  "exit_code":  0,
+                                                  "elapsed_seconds":  0.5779999999795109,
+                                                  "log":  "array_array_tail_3x5_k64\\compile.log",
+                                                  "log_sha256":  "91937e00acfa551effcfd2b3074ac2acf1f09729358c03666fa0c0b78ba981e6"
+                                              },
+                                              {
+                                                  "argv":  [
+                                                               "D:\\competition\\.tools\\iverilog\\bin\\vvp.exe",
+                                                               "-i",
+                                                               "D:\\competition\\build\\ffn1_completion\\prerequisite_bins\\array_array_tail_3x5_k64.vvp",
+                                                               "+input=D:/competition/handoff/ffn1_prerequisites_2026-10-21_v2/inputs/array_tail_3x5_k64",
+                                                               "+output=D:/competition/handoff/ffn1_prerequisites_2026-10-21_v2/array_array_tail_3x5_k64",
+                                                               "+case=array_tail_3x5_k64",
+                                                               "+revision=ffn1-idle-enable-source-hashes",
+                                                               "+manifest=378a1a794e50dcc5668e3c380ae56ece597a0c79e87fa23574753876b8f237a7",
+                                                               "+reference=463a2818d3ed88300d583326d8273b6b453cd65f9d7ec92403056128f485885c"
+                                                           ],
+                                                  "cwd":  "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\array_array_tail_3x5_k64",
+                                                  "exit_code":  0,
+                                                  "elapsed_seconds":  3.3280000000959262,
+                                                  "log":  "array_array_tail_3x5_k64\\simulation.log",
+                                                  "log_sha256":  "7d14ac8f2bd37df177b6e986ebe1e7ad4ba4da4bf7d6ec40554a6c3597387b6b"
+                                              },
+                                              {
+                                                  "argv":  [
+                                                               "C:\\Program Files\\Lenovo\\ModelMgr\\Plugins\\Image\\python.exe",
+                                                               "-B",
+                                                               "-m",
+                                                               "software.compare_pe_trace",
+                                                               "--expected",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\inputs\\array_tail_3x5_k64\\expected_pe_trace.csv",
+                                                               "--actual",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\array_array_tail_3x5_k64\\pe_trace.csv",
+                                                               "--compare-tile-id",
+                                                               "--report",
+                                                               "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\array_array_tail_3x5_k64\\comparison.json"
+                                                           ],
+                                                  "cwd":  "D:\\competition\\handoff\\ffn1_prerequisites_2026-10-21_v2\\software_snapshot",
+                                                  "exit_code":  0,
+                                                  "elapsed_seconds":  0.2029999999795109,
+                                                  "log":  "array_array_tail_3x5_k64\\comparison.log",
+                                                  "log_sha256":  "9acc32db8225a628e747d5e5e72bd0e976dab636c96ce4b06193ef9bceea4586"
+                                              }
+                                          ],
+                      "revision_label":  "ffn1-idle-enable-source-hashes",
+                      "rtl_git_commit":  null,
+                      "rtl_sources":  [
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_core.sv",
+                                              "sha256":  "0d5a5cc4ea284119789a1984657827272a452d51bc14623241fca73c16eeba72"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_fsm.sv",
+                                              "sha256":  "a637eb524879bbd63d6534c71d6fdb2cba0616af5860a768fe44f73ee0b9bc01"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_pkg.sv",
+                                              "sha256":  "99dcb21b694f725a0d0e3f3301095fdc09cd1f965a60d8a9d4d383b075032911"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_regs.sv",
+                                              "sha256":  "a82401939ef07e453f1c0e40f5d05b81487510091ca3ab8731908e463b7b01d3"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/ai_engine_soc_adapter.sv",
+                                              "sha256":  "972035437023e68cfea9ddc313fb184c9913f5b8591631aa3e3c32cf6c6660a1"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/block_counter.sv",
+                                              "sha256":  "9baa888e2ee07e9cb0232002a99f0634be92262e809c7e59b981bef1b132d7bb"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/block_descriptor.sv",
+                                              "sha256":  "4b50d9f1b9d73d554e12385165806e8b7bc47b958355420d5cdda8244d00f4ff"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_accelerator_top.sv",
+                                              "sha256":  "ca04b27a30fe9e9c7c2deecd660b0bcf1411aa930edec7c228de08236e4f4fe2"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_mac_boundary.sv",
+                                              "sha256":  "bccc3b76015534d42caefd56964d09932fc540aec64a29b45ee1a3700996273f"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_math_pkg.sv",
+                                              "sha256":  "f9b2ff813b51aba48914ce181c3840d40bd3bbd4f5b2ad0c89a3f4acadb888fe"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_matrix_block_controller.sv",
+                                              "sha256":  "2097714e01144e2e703cd1ec1b0addf0adaf73147c876958617a207d04edd4c3"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_matrix_global_addr_gen.sv",
+                                              "sha256":  "ee8054dc7fd6a6b024e3ce333a642d2dbbfcb13258670f165678ae7884655096"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_matrix_tile_scheduler.sv",
+                                              "sha256":  "3547a9e9dfc4ac12f3b27302bc621a313e6334070d2b3f36eb461b28e3154af7"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_nice_control_adapter.sv",
+                                              "sha256":  "11c466e68629df985d51f87830fa3fb4f68b5c86d623365d8e54ab5882373fb7"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_pe_array_8x16.sv",
+                                              "sha256":  "95a6df30ff383446eb7d834645216aaa7065156022c86ce76bed0a2a3726addd"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_pe_mac.sv",
+                                              "sha256":  "9a4192323b4c9243eb26452dd93237b4d71682341820c784decc2968a3c8caf6"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_cache_mapper.sv",
+                                              "sha256":  "68e5a381b4e983e1bc401d9d8f81adc0a4105cf3016bf0beddab7b9d19b19751"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_cache_streamer.sv",
+                                              "sha256":  "5948040e2bca4e3450523cf55ee0f1b30b129d98490fef6be49dfd5e75db60a0"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_dma_load_engine.sv",
+                                              "sha256":  "078cfd7149e7f424f18f665f260d11862b7817ce7f91cfd60e3c8b18ba9e6f5e"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_dma_sequencer.sv",
+                                              "sha256":  "19f0e8a5f526626ae00cc7fda62300aed32965497874c5eafe1330b48764e536"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_dma_writeback_engine.sv",
+                                              "sha256":  "b8edaf3d3db27a45205c8b7bae06da84a520fbaaebfcdc25b7a80afefff6223b"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_engine.sv",
+                                              "sha256":  "5cc237d39c95d9118baf92ec6e0f59311fe77a60f214021804b83a330bf64da6"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_fsm.sv",
+                                              "sha256":  "12c10227a66af7ba6ebe96fec915fc6a8def533c0bf65788c8c4d6a88686354a"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_kblock_fsm.sv",
+                                              "sha256":  "63a799c11d2019c8615b20b00406f2bf957679a6a0b7bffe9cd4749815ec90c8"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_kblock_load_compute.sv",
+                                              "sha256":  "e669769c255733adea54fb258782ea9e4afbcbd276853e954ba7ab1ed608e760"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_load_compute.sv",
+                                              "sha256":  "b16ab974274982c8e566e55de08cf1fc221da876dd75e1470dcf9ac505365b59"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/fp32_tile_soc_bus_adapter.sv",
+                                              "sha256":  "bfe335ad4ff94f1f87090d4b14e3d327879fad006958d4890c1d8c1d6495ad9e"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/matrix_buffer.sv",
+                                              "sha256":  "50329ddd4521cdd2c989cf23dbbdcf9f49f2379a51263dbf892cb37ed4b15e2c"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/matrix_cache_manager.sv",
+                                              "sha256":  "ad1db76b9df18621d31ae8aae11c9bc5ee30e7dd1baa2caaf7dd3cd4680f8838"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/matrix_task_controller.sv",
+                                              "sha256":  "cba739edc5ae7a78a970432388910c0a7b3d013ef504c338c47d9512fd584b17"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/matrix_task_scheduler.sv",
+                                              "sha256":  "5c4efb28a448f498b6cd2169ff721e711dbedd0d5e9a3aebe85fdef2099457be"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/pe_array_8x16.sv",
+                                              "sha256":  "a7f33ecd8a2b7516abc3acc8faa5bd54dd40b43dfd3be1a24e976e5703ffb056"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/pe_mac.sv",
+                                              "sha256":  "051b5855301ba3bc9174dea79a1485aa8330265fb0b41c221632b9ce65f60f63"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/systolic_array_8x16.sv",
+                                              "sha256":  "5cffcff3b2de2ede3b13a9ff976e38290bac741a4209045ec5c6913245658906"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/systolic_input_skew.sv",
+                                              "sha256":  "573b6eefb213a9d2cb7f22ceeb981c93e34aee46bb8c817527889e5ec94c1e5f"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/systolic_tile_engine.sv",
+                                              "sha256":  "ec7648d730c1e9e5d53360f05f56f33c7640ab52287558461a2098e7c24643ed"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/tile_dma.sv",
+                                              "sha256":  "0c8c2163fe6a61b2bf721b7e49c500586bdfde48dfab69d3af7ba043fe35b4cb"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/tile_result_collector.sv",
+                                              "sha256":  "d93d617d0151ddd63b6be254ad2c4315eca410bf3295b823d663fb1cf0db1d1d"
+                                          },
+                                          {
+                                              "path":  "evidence/sources/rtl/tile_stream_adapter.sv",
+                                              "sha256":  "06af51e0d90ed49aa97cfd80190449e7be6b2e55d8b74251bffc9c940d99d8d8"
+                                          }
+                                      ],
+                      "testbench_path":  "evidence/sources/tb/fp32_array_trace_tb.sv",
+                      "testbench_sha256":  "f0313eff12e887184aafa787939307125a2d72aa59d17aa83aa4a626e6b4afaa"
+                  }
+              ],
+    "interpretation":  "The included measured CSVs are linked to archived compiler/simulator/comparator commands, logs, and exact copied source-file SHA-256 values. No fresh run is claimed in this packaging step; no E203/SoC integration is implied."
+}

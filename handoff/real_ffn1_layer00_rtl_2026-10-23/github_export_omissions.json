@@ -1,0 +1,31 @@
+{
+  "original_local_directory": "handoff/real_ffn1_layer00_rtl_2026-10-23",
+  "original_sha256sum_entries_verified": 89,
+  "historical_evidence_not_new_simulation": true,
+  "omitted_files": [
+    {
+      "path": "inputs/layer_00.npz",
+      "bytes": 182776,
+      "sha256": "5be944c1d4816fdbefb2a4ff124ff7a62da6540cf74d2ab020bea4130e0e21ce",
+      "reason": "build binary/archive/model/audio excluded by shared repository policy"
+    },
+    {
+      "path": "inputs/source_audio.wav",
+      "bytes": 32044,
+      "sha256": "d72dd7e4654e12b92a29c1bb247ef30886b632a7a14424ab4abb85e6272ae27a",
+      "reason": "build binary/archive/model/audio excluded by shared repository policy"
+    },
+    {
+      "path": "simulation/ffn1_real_layer00.vvp",
+      "bytes": 5659301,
+      "sha256": "85c98034e10213941f948fd965e0762b34de79bf17a470e1d530040adbdfc3d0",
+      "reason": "build binary/archive/model/audio excluded by shared repository policy"
+    },
+    {
+      "path": "software_input.zip",
+      "bytes": 869580,
+      "sha256": "5504f7b2e77be9350cc6da40d4a122d892084486d5b57cd0553ffb9550ff8147",
+      "reason": "build binary/archive/model/audio excluded by shared repository policy"
+    }
+  ]
+}

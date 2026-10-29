@@ -1,0 +1,2 @@
+PASS: idle optimization cycle equivalence rows=8 cols=16 mac=32768 bias=512 tasks=4
+D:\competition\handoff\ffn1_prerequisites_2026-10-21_v2\sources\tb\support\fp32_idle_equivalence_tb.sv:113: $finish called at 32380000 (1ps)

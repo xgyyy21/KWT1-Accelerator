@@ -1,0 +1,1 @@
+verilator --binary --timing --assert -sv --top-module fp32_sram_accelerator_top_tb -GTWO_LAYERS=1 --Mdir /d/competition/build/sram_two_layers_verilator_2026-10-29_v1/obj_dir --output-groups 0 -j 2 -Wno-fatal -CFLAGS -O2 -f rtl/files.f tb/support/ramsp128x16_functional_model.sv tb/fp32_sram_accelerator_top_tb.sv 

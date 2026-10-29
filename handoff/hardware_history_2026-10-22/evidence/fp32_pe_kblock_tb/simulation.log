@@ -1,0 +1,2 @@
+fp32_pe_kblock_tb PASS preserved_partial_sum=7 bias=1 result=8
+D:\competition\handoff\ffn1_prerequisites_2026-10-21_v2\sources\tb\fp32_pe_kblock_tb.sv:120: $finish called at 476000 (1ps)

@@ -1,0 +1,4 @@
+warning: Some design elements have no explicit time unit and/or
+       : time precision. This may cause confusing timing results.
+       : Affected design elements are:
+       :   -- module fp32_tile_kblock_fsm declared here: rtl/fp32_tile_kblock_fsm.sv:5

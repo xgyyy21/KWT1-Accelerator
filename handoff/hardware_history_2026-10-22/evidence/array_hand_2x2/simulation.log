@@ -1,0 +1,3 @@
+RESET_ABORT_CHECK PASS cells=4
+PASS case=hand_2x2 physical=2x2 valid=2x2 K=2 writes=4 hold_checks=0 cycles=45
+D:\competition\handoff\ffn1_prerequisites_2026-10-21_v2\sources\tb\fp32_array_trace_tb.sv:232: $finish called at 640000 (1ps)

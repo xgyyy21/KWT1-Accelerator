@@ -1,0 +1,129 @@
+{
+  "provenance": {
+    "split": "unverified",
+    "source_id": "eight/750e3e75_nohash_0.wav",
+    "declaration": "operator supplied; verify against the dataset manifest separately"
+  },
+  "upstream_commit": "237e4097afd4f6851e0b82f0a8d65c2dfe8eae30",
+  "runtime_source_integrity": {
+    "upstream_commit": "237e4097afd4f6851e0b82f0a8d65c2dfe8eae30",
+    "verified_runtime_files": 30,
+    "runtime_manifest_sha256": "fadc11b6dc3e06f69bcf8fb8642e3ba3413db46db89b2882786503ecada3b5b2"
+  },
+  "model": "models_data_v2_12_labels/kwt1/best_weights",
+  "flags_sha256": "fcd480d309f96d2029a3ba764634f9e46dd73b667c0ebb84b66af02680494c58",
+  "checkpoint_sha256": {
+    "best_weights.index": "5a60a0fa78a1855572084a42669768e2998d37e7d93c833962960fdb0db70fbc",
+    "best_weights.data-00000-of-00001": "ae993f6ed995938c1ab584b0857b35ca18f31f88001c7e17c7d7c3868bd33ad3"
+  },
+  "input_file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-07\\verilog-hdl-aes\\runs\\input_validation\\provisional\\750e3e75_nohash_0.wav",
+  "input_sha256": "d72dd7e4654e12b92a29c1bb247ef30886b632a7a14424ab4abb85e6272ae27a",
+  "tensorflow_version": "2.4.0",
+  "tensorflow_addons_version": "0.12.1",
+  "numpy_version": "1.19.5",
+  "checkpoint_ffn1_tensors_exactly_verified": 24,
+  "inference_overrides": {
+    "batch_size": 1,
+    "training": false,
+    "use_spec_augment": 0,
+    "use_spec_cutout": 0,
+    "sp_time_shift_ms": 0.0,
+    "sp_resample": 0.0,
+    "prenorm": false,
+    "approximate_gelu": false,
+    "distill_teacher_json": "",
+    "return_softmax": 0
+  },
+  "classifier_max_abs_error": 0.0,
+  "layers": [
+    {
+      "layer": 0,
+      "file": "layer_00.npz",
+      "max_abs_numpy_vs_dense": 0.0,
+      "sha256": "5be944c1d4816fdbefb2a4ff124ff7a62da6540cf74d2ab020bea4130e0e21ce"
+    },
+    {
+      "layer": 1,
+      "file": "layer_01.npz",
+      "max_abs_numpy_vs_dense": 0.0,
+      "sha256": "e0c4cac13601abe835f3cc5e16083ad80ba06d60c89b8c6f7b099955eb724c85"
+    },
+    {
+      "layer": 2,
+      "file": "layer_02.npz",
+      "max_abs_numpy_vs_dense": 0.0,
+      "sha256": "e682341f5f6c61e65f8ea1423421c73464b81c4b63e0727f2ace57e83ee76d8c"
+    },
+    {
+      "layer": 3,
+      "file": "layer_03.npz",
+      "max_abs_numpy_vs_dense": 0.0,
+      "sha256": "8383743b011e887a3ceadcbb024b15c3f3725ab72675793c28d30536568a2a1a"
+    },
+    {
+      "layer": 4,
+      "file": "layer_04.npz",
+      "max_abs_numpy_vs_dense": 0.0,
+      "sha256": "0e40377a9e06e1a9f93c7ecdf92a8540ee337bfb79fea6594f8f02dbc58212d5"
+    },
+    {
+      "layer": 5,
+      "file": "layer_05.npz",
+      "max_abs_numpy_vs_dense": 0.0,
+      "sha256": "28fd75cce114f6add3247ea0396468b91f83bb41458262240738576f8796a46f"
+    },
+    {
+      "layer": 6,
+      "file": "layer_06.npz",
+      "max_abs_numpy_vs_dense": 0.0,
+      "sha256": "b0355b49e647bd66cc075805ceb97021f994a1768b4be7ad20434cac31214f8e"
+    },
+    {
+      "layer": 7,
+      "file": "layer_07.npz",
+      "max_abs_numpy_vs_dense": 0.0,
+      "sha256": "d5aec3e059f6ae04d1662be3caf457b7f7947b2f609bb40fc3e62a44e9fa4058"
+    },
+    {
+      "layer": 8,
+      "file": "layer_08.npz",
+      "max_abs_numpy_vs_dense": 0.0,
+      "sha256": "f9d89883fb31d0d116b4ffeb0ba3dafa5657ae9184c0ddd4bba5cc24adf9d9a4"
+    },
+    {
+      "layer": 9,
+      "file": "layer_09.npz",
+      "max_abs_numpy_vs_dense": 0.0,
+      "sha256": "3680f81dbcbeb778a80f9f84cafcf87a6a888e54fd45ca9af33253bce917a65c"
+    },
+    {
+      "layer": 10,
+      "file": "layer_10.npz",
+      "max_abs_numpy_vs_dense": 0.0,
+      "sha256": "ce9c1cb4d1bb561c81f355696ce83d6cf4c0444acbade1fe84f8ccfeab8c8ec4"
+    },
+    {
+      "layer": 11,
+      "file": "layer_11.npz",
+      "max_abs_numpy_vs_dense": 0.0,
+      "sha256": "ed8ef0482846f6e203c66353ddded4abe695eca19d51cd630be4edc68e4b35e1"
+    }
+  ],
+  "array_contract": {
+    "x": [
+      99,
+      64
+    ],
+    "w": [
+      64,
+      256
+    ],
+    "b": [
+      256
+    ],
+    "y_float": [
+      99,
+      256
+    ]
+  }
+}

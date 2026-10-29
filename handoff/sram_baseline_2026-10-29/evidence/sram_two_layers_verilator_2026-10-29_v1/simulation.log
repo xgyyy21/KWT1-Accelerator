@@ -1,0 +1,25 @@
+PROGRESS SRAM FFN1 tile=1/208 cycle=24 writes=0
+PROGRESS SRAM FFN1 tile=16/208 cycle=392902 writes=3840
+PROGRESS SRAM FFN1 tile=32/208 cycle=811750 writes=7936
+PROGRESS SRAM FFN1 tile=48/208 cycle=1230683 writes=12032
+PROGRESS SRAM FFN1 tile=64/208 cycle=1649566 writes=16128
+PROGRESS SRAM FFN1 tile=80/208 cycle=2068450 writes=20224
+PROGRESS SRAM FFN1 tile=96/208 cycle=2487312 writes=24320
+PROGRESS SRAM FFN1 tile=112/208 cycle=2906189 writes=28416
+PROGRESS SRAM FFN1 tile=128/208 cycle=3325100 writes=32512
+PROGRESS SRAM FFN1 tile=144/208 cycle=3743973 writes=36608
+PROGRESS SRAM FFN1 tile=160/208 cycle=4162839 writes=40704
+PROGRESS SRAM FFN1 tile=176/208 cycle=4581688 writes=44800
+PROGRESS SRAM FFN1 tile=192/208 cycle=5000627 writes=48896
+PROGRESS SRAM FFN1 tile=208/208 cycle=5344733 writes=50592
+JOB PASS id=0 M=99 K=64 N=256 tiles=208 outputs=25344 writes=50688 reads=642048 done_observed_cycle=5365954 last_write=5365926
+PROGRESS SRAM FFN1 tile=1/52 cycle=5365975 writes=0
+PROGRESS SRAM FFN1 tile=16/52 cycle=6882147 writes=3840
+PROGRESS SRAM FFN1 tile=32/52 cycle=8499560 writes=7936
+PROGRESS SRAM FFN1 tile=48/52 cycle=10116763 writes=12032
+JOB PASS id=1 M=99 K=256 N=64 tiles=52 outputs=6336 writes=12672 reads=642048 done_observed_cycle=10550042 last_write=10550025
+PASS sram_accelerator_top two_layers=1 jobs=2 outputs=31680 writes=63360 tiles=260 macro_reads=1304576 macro_writes=1284096 bus_waits=651802 standby_bank_cycles=9680710 nonzero_lowwords=30873
+- tb\fp32_sram_accelerator_top_tb.sv:296: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.050 2026-07-01
+- Verilator: $finish at 106ms; walltime 143.383 s; speed 735.796 us/s
+- Verilator: cpu 0.000 s on 1 threads; allocated 10 MB

@@ -1,0 +1,286 @@
+PROGRESS cycle=1 tile=0 row=0 col=0 k_block=0 writes=0 busy=0 error=0
+PROGRESS cycle=1 tile=0 row=0 col=0 k_block=0 writes=0 busy=0 error=0
+PROGRESS cycle=12636 tile=1 row=0 col=16 k_block=0 writes=256 busy=1 error=0
+PROGRESS cycle=25268 tile=2 row=0 col=32 k_block=0 writes=512 busy=1 error=0
+PROGRESS cycle=37900 tile=3 row=0 col=48 k_block=0 writes=768 busy=1 error=0
+PROGRESS cycle=50530 write_halfwords=1024 tile=3
+PROGRESS cycle=50532 tile=4 row=0 col=64 k_block=0 writes=1024 busy=1 error=0
+PROGRESS cycle=63164 tile=5 row=0 col=80 k_block=0 writes=1280 busy=1 error=0
+PROGRESS cycle=75796 tile=6 row=0 col=96 k_block=0 writes=1536 busy=1 error=0
+PROGRESS cycle=88428 tile=7 row=0 col=112 k_block=0 writes=1792 busy=1 error=0
+HEARTBEAT cycle=100000 tile=7 writes=1792 busy=1 done=0 error=0
+PROGRESS cycle=101058 write_halfwords=2048 tile=7
+PROGRESS cycle=101060 tile=8 row=0 col=128 k_block=0 writes=2048 busy=1 error=0
+PROGRESS cycle=113692 tile=9 row=0 col=144 k_block=0 writes=2304 busy=1 error=0
+PROGRESS cycle=126324 tile=10 row=0 col=160 k_block=0 writes=2560 busy=1 error=0
+PROGRESS cycle=138956 tile=11 row=0 col=176 k_block=0 writes=2816 busy=1 error=0
+PROGRESS cycle=151586 write_halfwords=3072 tile=11
+PROGRESS cycle=151588 tile=12 row=0 col=192 k_block=0 writes=3072 busy=1 error=0
+PROGRESS cycle=164220 tile=13 row=0 col=208 k_block=0 writes=3328 busy=1 error=0
+PROGRESS cycle=176852 tile=14 row=0 col=224 k_block=0 writes=3584 busy=1 error=0
+PROGRESS cycle=189484 tile=15 row=0 col=240 k_block=0 writes=3840 busy=1 error=0
+HEARTBEAT cycle=200000 tile=15 writes=3840 busy=1 done=0 error=0
+PROGRESS cycle=202114 write_halfwords=4096 tile=15
+PROGRESS cycle=202116 tile=16 row=8 col=0 k_block=0 writes=4096 busy=1 error=0
+PROGRESS cycle=214748 tile=17 row=8 col=16 k_block=0 writes=4352 busy=1 error=0
+PROGRESS cycle=227380 tile=18 row=8 col=32 k_block=0 writes=4608 busy=1 error=0
+PROGRESS cycle=240012 tile=19 row=8 col=48 k_block=0 writes=4864 busy=1 error=0
+PROGRESS cycle=252642 write_halfwords=5120 tile=19
+PROGRESS cycle=252644 tile=20 row=8 col=64 k_block=0 writes=5120 busy=1 error=0
+PROGRESS cycle=265276 tile=21 row=8 col=80 k_block=0 writes=5376 busy=1 error=0
+PROGRESS cycle=277908 tile=22 row=8 col=96 k_block=0 writes=5632 busy=1 error=0
+PROGRESS cycle=290540 tile=23 row=8 col=112 k_block=0 writes=5888 busy=1 error=0
+HEARTBEAT cycle=300000 tile=23 writes=5888 busy=1 done=0 error=0
+PROGRESS cycle=303170 write_halfwords=6144 tile=23
+PROGRESS cycle=303172 tile=24 row=8 col=128 k_block=0 writes=6144 busy=1 error=0
+PROGRESS cycle=315804 tile=25 row=8 col=144 k_block=0 writes=6400 busy=1 error=0
+PROGRESS cycle=328436 tile=26 row=8 col=160 k_block=0 writes=6656 busy=1 error=0
+PROGRESS cycle=341068 tile=27 row=8 col=176 k_block=0 writes=6912 busy=1 error=0
+PROGRESS cycle=353698 write_halfwords=7168 tile=27
+PROGRESS cycle=353700 tile=28 row=8 col=192 k_block=0 writes=7168 busy=1 error=0
+PROGRESS cycle=366332 tile=29 row=8 col=208 k_block=0 writes=7424 busy=1 error=0
+PROGRESS cycle=378964 tile=30 row=8 col=224 k_block=0 writes=7680 busy=1 error=0
+PROGRESS cycle=391596 tile=31 row=8 col=240 k_block=0 writes=7936 busy=1 error=0
+HEARTBEAT cycle=400000 tile=31 writes=7936 busy=1 done=0 error=0
+PROGRESS cycle=404226 write_halfwords=8192 tile=31
+PROGRESS cycle=404228 tile=32 row=16 col=0 k_block=0 writes=8192 busy=1 error=0
+PROGRESS cycle=416860 tile=33 row=16 col=16 k_block=0 writes=8448 busy=1 error=0
+PROGRESS cycle=429492 tile=34 row=16 col=32 k_block=0 writes=8704 busy=1 error=0
+PROGRESS cycle=442124 tile=35 row=16 col=48 k_block=0 writes=8960 busy=1 error=0
+PROGRESS cycle=454754 write_halfwords=9216 tile=35
+PROGRESS cycle=454756 tile=36 row=16 col=64 k_block=0 writes=9216 busy=1 error=0
+PROGRESS cycle=467388 tile=37 row=16 col=80 k_block=0 writes=9472 busy=1 error=0
+PROGRESS cycle=480020 tile=38 row=16 col=96 k_block=0 writes=9728 busy=1 error=0
+PROGRESS cycle=492652 tile=39 row=16 col=112 k_block=0 writes=9984 busy=1 error=0
+HEARTBEAT cycle=500000 tile=39 writes=9984 busy=1 done=0 error=0
+PROGRESS cycle=505282 write_halfwords=10240 tile=39
+PROGRESS cycle=505284 tile=40 row=16 col=128 k_block=0 writes=10240 busy=1 error=0
+PROGRESS cycle=517916 tile=41 row=16 col=144 k_block=0 writes=10496 busy=1 error=0
+PROGRESS cycle=530548 tile=42 row=16 col=160 k_block=0 writes=10752 busy=1 error=0
+PROGRESS cycle=543180 tile=43 row=16 col=176 k_block=0 writes=11008 busy=1 error=0
+PROGRESS cycle=555810 write_halfwords=11264 tile=43
+PROGRESS cycle=555812 tile=44 row=16 col=192 k_block=0 writes=11264 busy=1 error=0
+PROGRESS cycle=568444 tile=45 row=16 col=208 k_block=0 writes=11520 busy=1 error=0
+PROGRESS cycle=581076 tile=46 row=16 col=224 k_block=0 writes=11776 busy=1 error=0
+PROGRESS cycle=593708 tile=47 row=16 col=240 k_block=0 writes=12032 busy=1 error=0
+HEARTBEAT cycle=600000 tile=47 writes=12032 busy=1 done=0 error=0
+PROGRESS cycle=606338 write_halfwords=12288 tile=47
+PROGRESS cycle=606340 tile=48 row=24 col=0 k_block=0 writes=12288 busy=1 error=0
+PROGRESS cycle=618972 tile=49 row=24 col=16 k_block=0 writes=12544 busy=1 error=0
+PROGRESS cycle=631604 tile=50 row=24 col=32 k_block=0 writes=12800 busy=1 error=0
+PROGRESS cycle=644236 tile=51 row=24 col=48 k_block=0 writes=13056 busy=1 error=0
+PROGRESS cycle=656866 write_halfwords=13312 tile=51
+PROGRESS cycle=656868 tile=52 row=24 col=64 k_block=0 writes=13312 busy=1 error=0
+PROGRESS cycle=669500 tile=53 row=24 col=80 k_block=0 writes=13568 busy=1 error=0
+PROGRESS cycle=682132 tile=54 row=24 col=96 k_block=0 writes=13824 busy=1 error=0
+PROGRESS cycle=694764 tile=55 row=24 col=112 k_block=0 writes=14080 busy=1 error=0
+HEARTBEAT cycle=700000 tile=55 writes=14080 busy=1 done=0 error=0
+PROGRESS cycle=707394 write_halfwords=14336 tile=55
+PROGRESS cycle=707396 tile=56 row=24 col=128 k_block=0 writes=14336 busy=1 error=0
+PROGRESS cycle=720028 tile=57 row=24 col=144 k_block=0 writes=14592 busy=1 error=0
+PROGRESS cycle=732660 tile=58 row=24 col=160 k_block=0 writes=14848 busy=1 error=0
+PROGRESS cycle=745292 tile=59 row=24 col=176 k_block=0 writes=15104 busy=1 error=0
+PROGRESS cycle=757922 write_halfwords=15360 tile=59
+PROGRESS cycle=757924 tile=60 row=24 col=192 k_block=0 writes=15360 busy=1 error=0
+PROGRESS cycle=770556 tile=61 row=24 col=208 k_block=0 writes=15616 busy=1 error=0
+PROGRESS cycle=783188 tile=62 row=24 col=224 k_block=0 writes=15872 busy=1 error=0
+PROGRESS cycle=795820 tile=63 row=24 col=240 k_block=0 writes=16128 busy=1 error=0
+HEARTBEAT cycle=800000 tile=63 writes=16128 busy=1 done=0 error=0
+PROGRESS cycle=808450 write_halfwords=16384 tile=63
+PROGRESS cycle=808452 tile=64 row=32 col=0 k_block=0 writes=16384 busy=1 error=0
+PROGRESS cycle=821084 tile=65 row=32 col=16 k_block=0 writes=16640 busy=1 error=0
+PROGRESS cycle=833716 tile=66 row=32 col=32 k_block=0 writes=16896 busy=1 error=0
+PROGRESS cycle=846348 tile=67 row=32 col=48 k_block=0 writes=17152 busy=1 error=0
+PROGRESS cycle=858978 write_halfwords=17408 tile=67
+PROGRESS cycle=858980 tile=68 row=32 col=64 k_block=0 writes=17408 busy=1 error=0
+PROGRESS cycle=871612 tile=69 row=32 col=80 k_block=0 writes=17664 busy=1 error=0
+PROGRESS cycle=884244 tile=70 row=32 col=96 k_block=0 writes=17920 busy=1 error=0
+PROGRESS cycle=896876 tile=71 row=32 col=112 k_block=0 writes=18176 busy=1 error=0
+HEARTBEAT cycle=900000 tile=71 writes=18176 busy=1 done=0 error=0
+PROGRESS cycle=909506 write_halfwords=18432 tile=71
+PROGRESS cycle=909508 tile=72 row=32 col=128 k_block=0 writes=18432 busy=1 error=0
+PROGRESS cycle=922140 tile=73 row=32 col=144 k_block=0 writes=18688 busy=1 error=0
+PROGRESS cycle=934772 tile=74 row=32 col=160 k_block=0 writes=18944 busy=1 error=0
+PROGRESS cycle=947404 tile=75 row=32 col=176 k_block=0 writes=19200 busy=1 error=0
+PROGRESS cycle=960034 write_halfwords=19456 tile=75
+PROGRESS cycle=960036 tile=76 row=32 col=192 k_block=0 writes=19456 busy=1 error=0
+PROGRESS cycle=972668 tile=77 row=32 col=208 k_block=0 writes=19712 busy=1 error=0
+PROGRESS cycle=985300 tile=78 row=32 col=224 k_block=0 writes=19968 busy=1 error=0
+PROGRESS cycle=997932 tile=79 row=32 col=240 k_block=0 writes=20224 busy=1 error=0
+HEARTBEAT cycle=1000000 tile=79 writes=20224 busy=1 done=0 error=0
+PROGRESS cycle=1010562 write_halfwords=20480 tile=79
+PROGRESS cycle=1010564 tile=80 row=40 col=0 k_block=0 writes=20480 busy=1 error=0
+PROGRESS cycle=1023196 tile=81 row=40 col=16 k_block=0 writes=20736 busy=1 error=0
+PROGRESS cycle=1035828 tile=82 row=40 col=32 k_block=0 writes=20992 busy=1 error=0
+PROGRESS cycle=1048460 tile=83 row=40 col=48 k_block=0 writes=21248 busy=1 error=0
+PROGRESS cycle=1061090 write_halfwords=21504 tile=83
+PROGRESS cycle=1061092 tile=84 row=40 col=64 k_block=0 writes=21504 busy=1 error=0
+PROGRESS cycle=1073724 tile=85 row=40 col=80 k_block=0 writes=21760 busy=1 error=0
+PROGRESS cycle=1086356 tile=86 row=40 col=96 k_block=0 writes=22016 busy=1 error=0
+PROGRESS cycle=1098988 tile=87 row=40 col=112 k_block=0 writes=22272 busy=1 error=0
+HEARTBEAT cycle=1100000 tile=87 writes=22272 busy=1 done=0 error=0
+PROGRESS cycle=1111618 write_halfwords=22528 tile=87
+PROGRESS cycle=1111620 tile=88 row=40 col=128 k_block=0 writes=22528 busy=1 error=0
+PROGRESS cycle=1124252 tile=89 row=40 col=144 k_block=0 writes=22784 busy=1 error=0
+PROGRESS cycle=1136884 tile=90 row=40 col=160 k_block=0 writes=23040 busy=1 error=0
+PROGRESS cycle=1149516 tile=91 row=40 col=176 k_block=0 writes=23296 busy=1 error=0
+PROGRESS cycle=1162146 write_halfwords=23552 tile=91
+PROGRESS cycle=1162148 tile=92 row=40 col=192 k_block=0 writes=23552 busy=1 error=0
+PROGRESS cycle=1174780 tile=93 row=40 col=208 k_block=0 writes=23808 busy=1 error=0
+PROGRESS cycle=1187412 tile=94 row=40 col=224 k_block=0 writes=24064 busy=1 error=0
+HEARTBEAT cycle=1200000 tile=94 writes=24306 busy=1 done=0 error=0
+PROGRESS cycle=1200044 tile=95 row=40 col=240 k_block=0 writes=24320 busy=1 error=0
+PROGRESS cycle=1212674 write_halfwords=24576 tile=95
+PROGRESS cycle=1212676 tile=96 row=48 col=0 k_block=0 writes=24576 busy=1 error=0
+PROGRESS cycle=1225308 tile=97 row=48 col=16 k_block=0 writes=24832 busy=1 error=0
+PROGRESS cycle=1237940 tile=98 row=48 col=32 k_block=0 writes=25088 busy=1 error=0
+PROGRESS cycle=1250572 tile=99 row=48 col=48 k_block=0 writes=25344 busy=1 error=0
+PROGRESS cycle=1263202 write_halfwords=25600 tile=99
+PROGRESS cycle=1263204 tile=100 row=48 col=64 k_block=0 writes=25600 busy=1 error=0
+PROGRESS cycle=1275836 tile=101 row=48 col=80 k_block=0 writes=25856 busy=1 error=0
+PROGRESS cycle=1288468 tile=102 row=48 col=96 k_block=0 writes=26112 busy=1 error=0
+HEARTBEAT cycle=1300000 tile=102 writes=26112 busy=1 done=0 error=0
+PROGRESS cycle=1301100 tile=103 row=48 col=112 k_block=0 writes=26368 busy=1 error=0
+PROGRESS cycle=1313730 write_halfwords=26624 tile=103
+PROGRESS cycle=1313732 tile=104 row=48 col=128 k_block=0 writes=26624 busy=1 error=0
+PROGRESS cycle=1326364 tile=105 row=48 col=144 k_block=0 writes=26880 busy=1 error=0
+PROGRESS cycle=1338996 tile=106 row=48 col=160 k_block=0 writes=27136 busy=1 error=0
+PROGRESS cycle=1351628 tile=107 row=48 col=176 k_block=0 writes=27392 busy=1 error=0
+PROGRESS cycle=1364258 write_halfwords=27648 tile=107
+PROGRESS cycle=1364260 tile=108 row=48 col=192 k_block=0 writes=27648 busy=1 error=0
+PROGRESS cycle=1376892 tile=109 row=48 col=208 k_block=0 writes=27904 busy=1 error=0
+PROGRESS cycle=1389524 tile=110 row=48 col=224 k_block=0 writes=28160 busy=1 error=0
+HEARTBEAT cycle=1400000 tile=110 writes=28160 busy=1 done=0 error=0
+PROGRESS cycle=1402156 tile=111 row=48 col=240 k_block=0 writes=28416 busy=1 error=0
+PROGRESS cycle=1414786 write_halfwords=28672 tile=111
+PROGRESS cycle=1414788 tile=112 row=56 col=0 k_block=0 writes=28672 busy=1 error=0
+PROGRESS cycle=1427420 tile=113 row=56 col=16 k_block=0 writes=28928 busy=1 error=0
+PROGRESS cycle=1440052 tile=114 row=56 col=32 k_block=0 writes=29184 busy=1 error=0
+PROGRESS cycle=1452684 tile=115 row=56 col=48 k_block=0 writes=29440 busy=1 error=0
+PROGRESS cycle=1465314 write_halfwords=29696 tile=115
+PROGRESS cycle=1465316 tile=116 row=56 col=64 k_block=0 writes=29696 busy=1 error=0
+PROGRESS cycle=1477948 tile=117 row=56 col=80 k_block=0 writes=29952 busy=1 error=0
+PROGRESS cycle=1490580 tile=118 row=56 col=96 k_block=0 writes=30208 busy=1 error=0
+HEARTBEAT cycle=1500000 tile=118 writes=30208 busy=1 done=0 error=0
+PROGRESS cycle=1503212 tile=119 row=56 col=112 k_block=0 writes=30464 busy=1 error=0
+PROGRESS cycle=1515842 write_halfwords=30720 tile=119
+PROGRESS cycle=1515844 tile=120 row=56 col=128 k_block=0 writes=30720 busy=1 error=0
+PROGRESS cycle=1528476 tile=121 row=56 col=144 k_block=0 writes=30976 busy=1 error=0
+PROGRESS cycle=1541108 tile=122 row=56 col=160 k_block=0 writes=31232 busy=1 error=0
+PROGRESS cycle=1553740 tile=123 row=56 col=176 k_block=0 writes=31488 busy=1 error=0
+PROGRESS cycle=1566370 write_halfwords=31744 tile=123
+PROGRESS cycle=1566372 tile=124 row=56 col=192 k_block=0 writes=31744 busy=1 error=0
+PROGRESS cycle=1579004 tile=125 row=56 col=208 k_block=0 writes=32000 busy=1 error=0
+PROGRESS cycle=1591636 tile=126 row=56 col=224 k_block=0 writes=32256 busy=1 error=0
+HEARTBEAT cycle=1600000 tile=126 writes=32256 busy=1 done=0 error=0
+PROGRESS cycle=1604268 tile=127 row=56 col=240 k_block=0 writes=32512 busy=1 error=0
+PROGRESS cycle=1616898 write_halfwords=32768 tile=127
+PROGRESS cycle=1616900 tile=128 row=64 col=0 k_block=0 writes=32768 busy=1 error=0
+PROGRESS cycle=1629532 tile=129 row=64 col=16 k_block=0 writes=33024 busy=1 error=0
+PROGRESS cycle=1642164 tile=130 row=64 col=32 k_block=0 writes=33280 busy=1 error=0
+PROGRESS cycle=1654796 tile=131 row=64 col=48 k_block=0 writes=33536 busy=1 error=0
+PROGRESS cycle=1667426 write_halfwords=33792 tile=131
+PROGRESS cycle=1667428 tile=132 row=64 col=64 k_block=0 writes=33792 busy=1 error=0
+PROGRESS cycle=1680060 tile=133 row=64 col=80 k_block=0 writes=34048 busy=1 error=0
+PROGRESS cycle=1692692 tile=134 row=64 col=96 k_block=0 writes=34304 busy=1 error=0
+HEARTBEAT cycle=1700000 tile=134 writes=34304 busy=1 done=0 error=0
+PROGRESS cycle=1705324 tile=135 row=64 col=112 k_block=0 writes=34560 busy=1 error=0
+PROGRESS cycle=1717954 write_halfwords=34816 tile=135
+PROGRESS cycle=1717956 tile=136 row=64 col=128 k_block=0 writes=34816 busy=1 error=0
+PROGRESS cycle=1730588 tile=137 row=64 col=144 k_block=0 writes=35072 busy=1 error=0
+PROGRESS cycle=1743220 tile=138 row=64 col=160 k_block=0 writes=35328 busy=1 error=0
+PROGRESS cycle=1755852 tile=139 row=64 col=176 k_block=0 writes=35584 busy=1 error=0
+PROGRESS cycle=1768482 write_halfwords=35840 tile=139
+PROGRESS cycle=1768484 tile=140 row=64 col=192 k_block=0 writes=35840 busy=1 error=0
+PROGRESS cycle=1781116 tile=141 row=64 col=208 k_block=0 writes=36096 busy=1 error=0
+PROGRESS cycle=1793748 tile=142 row=64 col=224 k_block=0 writes=36352 busy=1 error=0
+HEARTBEAT cycle=1800000 tile=142 writes=36352 busy=1 done=0 error=0
+PROGRESS cycle=1806380 tile=143 row=64 col=240 k_block=0 writes=36608 busy=1 error=0
+PROGRESS cycle=1819010 write_halfwords=36864 tile=143
+PROGRESS cycle=1819012 tile=144 row=72 col=0 k_block=0 writes=36864 busy=1 error=0
+PROGRESS cycle=1831644 tile=145 row=72 col=16 k_block=0 writes=37120 busy=1 error=0
+PROGRESS cycle=1844276 tile=146 row=72 col=32 k_block=0 writes=37376 busy=1 error=0
+PROGRESS cycle=1856908 tile=147 row=72 col=48 k_block=0 writes=37632 busy=1 error=0
+PROGRESS cycle=1869538 write_halfwords=37888 tile=147
+PROGRESS cycle=1869540 tile=148 row=72 col=64 k_block=0 writes=37888 busy=1 error=0
+PROGRESS cycle=1882172 tile=149 row=72 col=80 k_block=0 writes=38144 busy=1 error=0
+PROGRESS cycle=1894804 tile=150 row=72 col=96 k_block=0 writes=38400 busy=1 error=0
+HEARTBEAT cycle=1900000 tile=150 writes=38400 busy=1 done=0 error=0
+PROGRESS cycle=1907436 tile=151 row=72 col=112 k_block=0 writes=38656 busy=1 error=0
+PROGRESS cycle=1920066 write_halfwords=38912 tile=151
+PROGRESS cycle=1920068 tile=152 row=72 col=128 k_block=0 writes=38912 busy=1 error=0
+PROGRESS cycle=1932700 tile=153 row=72 col=144 k_block=0 writes=39168 busy=1 error=0
+PROGRESS cycle=1945332 tile=154 row=72 col=160 k_block=0 writes=39424 busy=1 error=0
+PROGRESS cycle=1957964 tile=155 row=72 col=176 k_block=0 writes=39680 busy=1 error=0
+PROGRESS cycle=1970594 write_halfwords=39936 tile=155
+PROGRESS cycle=1970596 tile=156 row=72 col=192 k_block=0 writes=39936 busy=1 error=0
+PROGRESS cycle=1983228 tile=157 row=72 col=208 k_block=0 writes=40192 busy=1 error=0
+PROGRESS cycle=1995860 tile=158 row=72 col=224 k_block=0 writes=40448 busy=1 error=0
+HEARTBEAT cycle=2000000 tile=158 writes=40448 busy=1 done=0 error=0
+PROGRESS cycle=2008492 tile=159 row=72 col=240 k_block=0 writes=40704 busy=1 error=0
+PROGRESS cycle=2021122 write_halfwords=40960 tile=159
+PROGRESS cycle=2021124 tile=160 row=80 col=0 k_block=0 writes=40960 busy=1 error=0
+PROGRESS cycle=2033756 tile=161 row=80 col=16 k_block=0 writes=41216 busy=1 error=0
+PROGRESS cycle=2046388 tile=162 row=80 col=32 k_block=0 writes=41472 busy=1 error=0
+PROGRESS cycle=2059020 tile=163 row=80 col=48 k_block=0 writes=41728 busy=1 error=0
+PROGRESS cycle=2071650 write_halfwords=41984 tile=163
+PROGRESS cycle=2071652 tile=164 row=80 col=64 k_block=0 writes=41984 busy=1 error=0
+PROGRESS cycle=2084284 tile=165 row=80 col=80 k_block=0 writes=42240 busy=1 error=0
+PROGRESS cycle=2096916 tile=166 row=80 col=96 k_block=0 writes=42496 busy=1 error=0
+HEARTBEAT cycle=2100000 tile=166 writes=42496 busy=1 done=0 error=0
+PROGRESS cycle=2109548 tile=167 row=80 col=112 k_block=0 writes=42752 busy=1 error=0
+PROGRESS cycle=2122178 write_halfwords=43008 tile=167
+PROGRESS cycle=2122180 tile=168 row=80 col=128 k_block=0 writes=43008 busy=1 error=0
+PROGRESS cycle=2134812 tile=169 row=80 col=144 k_block=0 writes=43264 busy=1 error=0
+PROGRESS cycle=2147444 tile=170 row=80 col=160 k_block=0 writes=43520 busy=1 error=0
+PROGRESS cycle=2160076 tile=171 row=80 col=176 k_block=0 writes=43776 busy=1 error=0
+PROGRESS cycle=2172706 write_halfwords=44032 tile=171
+PROGRESS cycle=2172708 tile=172 row=80 col=192 k_block=0 writes=44032 busy=1 error=0
+PROGRESS cycle=2185340 tile=173 row=80 col=208 k_block=0 writes=44288 busy=1 error=0
+PROGRESS cycle=2197972 tile=174 row=80 col=224 k_block=0 writes=44544 busy=1 error=0
+HEARTBEAT cycle=2200000 tile=174 writes=44544 busy=1 done=0 error=0
+PROGRESS cycle=2210604 tile=175 row=80 col=240 k_block=0 writes=44800 busy=1 error=0
+PROGRESS cycle=2223234 write_halfwords=45056 tile=175
+PROGRESS cycle=2223236 tile=176 row=88 col=0 k_block=0 writes=45056 busy=1 error=0
+PROGRESS cycle=2235868 tile=177 row=88 col=16 k_block=0 writes=45312 busy=1 error=0
+PROGRESS cycle=2248500 tile=178 row=88 col=32 k_block=0 writes=45568 busy=1 error=0
+PROGRESS cycle=2261132 tile=179 row=88 col=48 k_block=0 writes=45824 busy=1 error=0
+PROGRESS cycle=2273762 write_halfwords=46080 tile=179
+PROGRESS cycle=2273764 tile=180 row=88 col=64 k_block=0 writes=46080 busy=1 error=0
+PROGRESS cycle=2286396 tile=181 row=88 col=80 k_block=0 writes=46336 busy=1 error=0
+PROGRESS cycle=2299028 tile=182 row=88 col=96 k_block=0 writes=46592 busy=1 error=0
+HEARTBEAT cycle=2300000 tile=182 writes=46592 busy=1 done=0 error=0
+PROGRESS cycle=2311660 tile=183 row=88 col=112 k_block=0 writes=46848 busy=1 error=0
+PROGRESS cycle=2324290 write_halfwords=47104 tile=183
+PROGRESS cycle=2324292 tile=184 row=88 col=128 k_block=0 writes=47104 busy=1 error=0
+PROGRESS cycle=2336924 tile=185 row=88 col=144 k_block=0 writes=47360 busy=1 error=0
+PROGRESS cycle=2349556 tile=186 row=88 col=160 k_block=0 writes=47616 busy=1 error=0
+PROGRESS cycle=2362188 tile=187 row=88 col=176 k_block=0 writes=47872 busy=1 error=0
+PROGRESS cycle=2374818 write_halfwords=48128 tile=187
+PROGRESS cycle=2374820 tile=188 row=88 col=192 k_block=0 writes=48128 busy=1 error=0
+PROGRESS cycle=2387452 tile=189 row=88 col=208 k_block=0 writes=48384 busy=1 error=0
+HEARTBEAT cycle=2400000 tile=189 writes=48612 busy=1 done=0 error=0
+PROGRESS cycle=2400084 tile=190 row=88 col=224 k_block=0 writes=48640 busy=1 error=0
+PROGRESS cycle=2412716 tile=191 row=88 col=240 k_block=0 writes=48896 busy=1 error=0
+PROGRESS cycle=2425346 write_halfwords=49152 tile=191
+PROGRESS cycle=2425348 tile=192 row=96 col=0 k_block=0 writes=49152 busy=1 error=0
+PROGRESS cycle=2435500 tile=193 row=96 col=16 k_block=0 writes=49248 busy=1 error=0
+PROGRESS cycle=2445652 tile=194 row=96 col=32 k_block=0 writes=49344 busy=1 error=0
+PROGRESS cycle=2455804 tile=195 row=96 col=48 k_block=0 writes=49440 busy=1 error=0
+PROGRESS cycle=2465956 tile=196 row=96 col=64 k_block=0 writes=49536 busy=1 error=0
+PROGRESS cycle=2476108 tile=197 row=96 col=80 k_block=0 writes=49632 busy=1 error=0
+PROGRESS cycle=2486260 tile=198 row=96 col=96 k_block=0 writes=49728 busy=1 error=0
+PROGRESS cycle=2496412 tile=199 row=96 col=112 k_block=0 writes=49824 busy=1 error=0
+HEARTBEAT cycle=2500000 tile=199 writes=49824 busy=1 done=0 error=0
+PROGRESS cycle=2506564 tile=200 row=96 col=128 k_block=0 writes=49920 busy=1 error=0
+PROGRESS cycle=2516716 tile=201 row=96 col=144 k_block=0 writes=50016 busy=1 error=0
+PROGRESS cycle=2526868 tile=202 row=96 col=160 k_block=0 writes=50112 busy=1 error=0
+PROGRESS cycle=2536922 write_halfwords=50176 tile=202
+PROGRESS cycle=2537020 tile=203 row=96 col=176 k_block=0 writes=50208 busy=1 error=0
+PROGRESS cycle=2547172 tile=204 row=96 col=192 k_block=0 writes=50304 busy=1 error=0
+PROGRESS cycle=2557324 tile=205 row=96 col=208 k_block=0 writes=50400 busy=1 error=0
+PROGRESS cycle=2567476 tile=206 row=96 col=224 k_block=0 writes=50496 busy=1 error=0
+PROGRESS cycle=2577628 tile=207 row=96 col=240 k_block=0 writes=50592 busy=1 error=0
+PASS: FFN1 full layer m=99 k=64 n=256 tiles=208 outputs=25344 writes=50688 cycles=2587777
+PASS: FFN1 read_halfwords=642048 unique_write_halfwords=50688 tail_rows=3 last_write_cycle=2587777 done_cycle=2587779
+tb/fp32_competition_ffn1_tb.sv:271: $finish called at 25877960000 (1ps)

@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "zip_files": 20,
+  "checksum_entries": 19,
+  "zip_sha256": "5504f7b2e77be9350cc6da40d4a122d892084486d5b57cd0553ffb9550ff8147",
+  "tensors": {
+    "x": {
+      "fp32_elements": 6336,
+      "halfwords": 12672,
+      "tb_file": "x_fp32.mem",
+      "sha256_bin": "1036470843aa8096f110adc2a90a7b9888c3654189680510eaf6ac180ee505fc"
+    },
+    "w": {
+      "fp32_elements": 16384,
+      "halfwords": 32768,
+      "tb_file": "w_fp32.mem",
+      "sha256_bin": "4c6a8f5171a0ddc5eab198c0acdc4d96d547918bbac97f3b3be8019d42bb188e"
+    },
+    "b": {
+      "fp32_elements": 256,
+      "halfwords": 512,
+      "tb_file": "bias_fp32.mem",
+      "sha256_bin": "b305b163000b217514ddfd8ede2745ec428922730f09d351749aa489848bda7e"
+    },
+    "expected": {
+      "fp32_elements": 25344,
+      "halfwords": 50688,
+      "tb_file": "expected_fp32.mem",
+      "sha256_bin": "24c84d16792bd5ab10bedfce5ebfd84a6305495477672d3144044e1ce33a51c5"
+    }
+  },
+  "entry_check": "32-bit x/w/bias/expected plusargs; low-half-first 16-bit bus memory",
+  "scope": "archive internal consistency; no new upstream model/TensorFlow verification"
+}

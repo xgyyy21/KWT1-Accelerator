@@ -12,6 +12,9 @@ rtl/ai_engine_core.sv
 rtl/ai_engine_regs.sv
 rtl/ai_engine_soc_adapter.sv
 rtl/matrix_cache_manager.sv
+rtl/sram_1024x16_adapter.sv
+rtl/sram_fp32_cache_adapter.sv
+rtl/fp32_tile_cache_bridge.sv
 rtl/matrix_buffer.sv
 rtl/tile_dma.sv
 rtl/matrix_task_scheduler.sv
