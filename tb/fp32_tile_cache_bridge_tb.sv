@@ -2,7 +2,7 @@
 module fp32_tile_cache_bridge_tb;
   logic clk = 0;
   always #5 clk = ~clk;
-  logic rst_n = 0;
+  logic rst_n = 1;
   logic [2:0] standby = 0, wr_valid = 0, rd_valid = 0;
   logic [2:0][9:0] wr_addr = 0, rd_addr = 0;
   logic [2:0][15:0] wr_data = 0;
@@ -22,13 +22,21 @@ module fp32_tile_cache_bridge_tb;
     );
   end
   initial begin
+    #1 rst_n = 0;
+  end
+  initial begin
     repeat (2) @(negedge clk);
     rst_n = 1;
     wr_valid = 3'b111;
     wr_addr = {10'd1023,10'd128,10'd127};
     wr_data = {16'h3333,16'h2222,16'h1111};
+    #1;
+    if (wr_ready !== 3'b111) $fatal(1,"Initial writes were not ready");
     @(posedge clk); #1;
-    if (wr_ready !== 3'b111 || rsp_valid !== 0) $fatal(1,"Initial writes failed");
+    if (wr_ready !== 3'b000 || rsp_valid !== 0) $fatal(1,"Initial writes not accepted into command slots");
+    @(negedge clk); wr_valid = 0;
+    @(posedge clk); #1;
+    if (wr_ready !== 3'b111 || rsp_valid !== 0) $fatal(1,"Initial macro writes did not complete");
     @(negedge clk);
     wr_valid = 3'b001;
     wr_data[0] = 16'ha55a;
@@ -37,8 +45,7 @@ module fp32_tile_cache_bridge_tb;
     #1;
     if (rd_ready !== 3'b110) $fatal(1,"Write must block same-bank read only");
     @(posedge clk); #1;
-    if (rsp_valid !== 3'b110 || rsp_data[1] !== 16'h2222 || rsp_data[2] !== 16'h3333)
-      $fatal(1,"Independent bank reads failed during bank A collision");
+    if (rsp_valid !== 0) $fatal(1,"Read response arrived before macro access");
     @(negedge clk);
     wr_valid = 0;
     rd_valid = 3'b001;
@@ -46,12 +53,19 @@ module fp32_tile_cache_bridge_tb;
     #1;
     if (rd_ready[0] !== 0) $fatal(1,"Standby did not stall pending read");
     @(posedge clk); #1;
-    if (rsp_valid !== 0 || macro_cen !== 24'hffffff) $fatal(1,"Standby issued a request");
+    if (rsp_valid !== 3'b110 || rsp_data[1] !== 16'h2222 || rsp_data[2] !== 16'h3333)
+      $fatal(1,"Independent bank reads failed during bank A collision");
     @(negedge clk); standby = 0;
+    #1;
+    if (rd_ready[0] !== 1'b1) $fatal(1,"Deferred read did not resume");
+    @(posedge clk); #1;
+    if (rsp_valid[0] !== 0) $fatal(1,"Bank A response arrived before its macro read");
+    @(negedge clk);
+    rd_valid = 0;
     @(posedge clk); #1;
     if (rsp_valid !== 3'b001 || rsp_data[0] !== 16'ha55a)
       $fatal(1,"Deferred read did not observe accepted write");
-    @(negedge clk); rd_valid = 0;
+    @(negedge clk);
     @(posedge clk); #1;
     if (rsp_valid !== 0) $fatal(1,"Duplicate response");
     $display("PASS cache_bridge arbitration=write_priority independent_banks=3 standby_resume=1");

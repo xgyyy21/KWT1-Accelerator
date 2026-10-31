@@ -4,7 +4,7 @@
 module fp32_sram_compute_integration_tb;
   logic clk = 0;
   always #5 clk = ~clk;
-  logic rst_n = 0, start = 0;
+  logic rst_n = 1, start = 0;
   logic [15:0] matrix_m, matrix_k, matrix_n, row_base, col_base, rows_valid, cols_valid;
   wire bus_req_valid, bus_req_write;
   wire [31:0] bus_req_addr;
@@ -31,6 +31,9 @@ module fp32_sram_compute_integration_tb;
   bit held_write [0:2], held_read [0:2];
   logic [9:0] held_write_addr [0:2], held_read_addr [0:2];
   logic [15:0] held_write_data [0:2];
+  bit accepted_cache_req [0:2], accepted_cache_write [0:2];
+  logic [9:0] accepted_cache_addr [0:2];
+  logic [15:0] accepted_cache_data [0:2];
   integer cycle = 0, job = -1, result_count = 0, write_count = 0, read_count = 0;
   integer total_results = 0, total_writes = 0, macro_writes = 0, macro_reads = 0, macro_responses = 0;
   integer dma_waits = 0, stream_waits = 0, bus_waits = 0, nonzero_low_words = 0;
@@ -62,6 +65,10 @@ module fp32_sram_compute_integration_tb;
       .A(macro_a[m]), .D(macro_d[m]), .Q(macro_q[m]),
       .EMA(macro_ema[m]), .EMAW(macro_emaw[m]), .RET1N(macro_ret1n[m])
     );
+  end
+
+  initial begin
+    #1 rst_n = 0;
   end
 
   // An exact signed integer times 2**(-fraction_bits), for these small inputs.
@@ -177,6 +184,9 @@ module fp32_sram_compute_integration_tb;
         $fdisplay(result_fd, "%0d,%0d,result,%0d,%0d,-1,%08h",cycle,job,result_row,result_col,result_data);
       end
       for (int bank = 0; bank < 3; bank++) begin
+        // Macro pins now carry the request accepted on the previous rising
+        // edge. The adapter presents them on the falling edge and the SRAM
+        // samples them at this rising edge.
         // A prior stall must preserve valid/address and write data.
         if (held_write[bank] && (!dut.u_cache.wr_valid[bank] ||
             dut.u_cache.wr_addr[bank] !== held_write_addr[bank] ||
@@ -207,20 +217,21 @@ module fp32_sram_compute_integration_tb;
           if (!macro_cen[bank*8+slot]) begin
             selected++;
             addr = slot*128 + macro_a[bank*8+slot];
-            if (standby[bank]) $fatal(1, "SRAM accessed during standby");
+            if (standby[bank] && !accepted_cache_req[bank])
+              $fatal(1, "SRAM issued a new access during standby");
             if (!macro_gwen[bank*8+slot]) begin
-              if (!dut.u_cache.wr_valid[bank] || !dut.u_cache.wr_ready[bank] ||
-                  addr != dut.u_cache.wr_addr[bank] ||
-                  macro_d[bank*8+slot] !== dut.u_cache.wr_data[bank])
-                $fatal(1, "Macro write does not match accepted DMA request");
+              if (!accepted_cache_req[bank] || !accepted_cache_write[bank] ||
+                  addr != accepted_cache_addr[bank] ||
+                  macro_d[bank*8+slot] !== accepted_cache_data[bank])
+                $fatal(1, "Macro write does not match prior accepted DMA request");
               shadow[bank][addr] = macro_d[bank*8+slot];
               shadow_valid[bank][addr] = 1;
               macro_writes++;
               $fdisplay(access_fd,"%0d,%0d,%0d,write,%0d,%04h,1",cycle,job,bank,addr,macro_d[bank*8+slot]);
             end else begin
-              if (!dut.u_cache.rd_valid[bank] || !dut.u_cache.rd_ready[bank] ||
-                  addr != dut.u_cache.rd_addr[bank])
-                $fatal(1, "Macro read does not match accepted streamer request");
+              if (!accepted_cache_req[bank] || accepted_cache_write[bank] ||
+                  addr != accepted_cache_addr[bank])
+                $fatal(1, "Macro read does not match prior accepted streamer request");
               pending_read[bank] = 1;
               requested_addr[bank] = addr;
               expected_read[bank] = shadow[bank][addr];
@@ -231,9 +242,20 @@ module fp32_sram_compute_integration_tb;
           end
         end
         if (selected > 1) $fatal(1, "More than one 16-bit access per bank per clock");
-        if (selected != ((dut.u_cache.wr_valid[bank] && dut.u_cache.wr_ready[bank]) ||
-                         (dut.u_cache.rd_valid[bank] && dut.u_cache.rd_ready[bank])))
-          $fatal(1, "Accepted cache request missing at macro pins");
+        if (selected != accepted_cache_req[bank])
+          $fatal(1, "Prior accepted cache request missing at macro pins");
+        accepted_cache_req[bank] =
+          (dut.u_cache.wr_valid[bank] && dut.u_cache.wr_ready[bank]) ||
+          (dut.u_cache.rd_valid[bank] && dut.u_cache.rd_ready[bank]);
+        if (dut.u_cache.wr_valid[bank] && dut.u_cache.wr_ready[bank]) begin
+          accepted_cache_write[bank] = 1;
+          accepted_cache_addr[bank] = dut.u_cache.wr_addr[bank];
+          accepted_cache_data[bank] = dut.u_cache.wr_data[bank];
+        end else if (dut.u_cache.rd_valid[bank] && dut.u_cache.rd_ready[bank]) begin
+          accepted_cache_write[bank] = 0;
+          accepted_cache_addr[bank] = dut.u_cache.rd_addr[bank];
+          accepted_cache_data[bank] = 0;
+        end
       end
     end
   end
