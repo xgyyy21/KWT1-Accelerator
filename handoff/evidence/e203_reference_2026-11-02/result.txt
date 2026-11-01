@@ -1,0 +1,4 @@
+﻿ExitCode=0
+Scope=standalone e203_subsys_nice_core elaboration only
+Icarus=14.0 devel
+ReferenceCommit=9f3e34f337f5d0a1236a285871ffa2032491617a

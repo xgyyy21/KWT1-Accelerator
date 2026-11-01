@@ -1,0 +1,2 @@
+﻿PASS: fp32 tile load plus compute integration 2x2x2
+tb/fp32_tile_load_compute_tb.sv:143: $finish called at 1595000 (1ps)

@@ -1,0 +1,2 @@
+﻿PASS: fp32 tile load plus compute plus writeback 8x16x32
+tb/fp32_tile_load_compute_8x16_tb.sv:152: $finish called at 84355000 (1ps)

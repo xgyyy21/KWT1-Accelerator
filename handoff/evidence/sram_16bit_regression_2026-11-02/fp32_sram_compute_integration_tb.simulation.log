@@ -1,0 +1,4 @@
+﻿JOB PASS id=0 rows=8 cols=16 K=64 results=128 write_halfwords=256 bus_reads=3136
+JOB PASS id=1 rows=3 cols=5 K=35 results=15 write_halfwords=30 bus_reads=580
+PASS sram_compute_integration jobs=2 results=143 write_halfwords=286 macro_writes=3716 macro_reads=6272 macro_responses=6272 dma_waits=5273 stream_waits=10979 bus_waits=1924 nonzero_output_lowwords=142
+tb/fp32_sram_compute_integration_tb.sv:317: $finish called at 387700000 (1ps)

@@ -1,0 +1,1 @@
+﻿iverilog.exe -g2012 -gno-assertions -Wall -I rtl/e203/core -s e203_subsys_nice_core -o D:\competition\build\team_handoff_repo\build\e203_nice_reference_elab.vvp rtl/e203/general/sirv_gnrl_xchecker.v rtl/e203/general/sirv_gnrl_dffs.v rtl/e203/subsys/e203_subsys_nice_core.v

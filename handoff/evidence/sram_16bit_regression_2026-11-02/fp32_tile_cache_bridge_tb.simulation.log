@@ -1,0 +1,2 @@
+﻿PASS cache_bridge arbitration=write_priority independent_banks=3 standby_resume=1
+tb/fp32_tile_cache_bridge_tb.sv:72: $finish called at 86000 (1ps)

@@ -1,0 +1,14 @@
+﻿{
+    "Created":  "2026-11-02T00:39:22.2236356+08:00",
+    "CompileExitCode":  0,
+    "SimulationExitCode":  0,
+    "IcarusVersion":  "Icarus Verilog version 14.0 (devel) ()",
+    "VvpVersion":  "Icarus Verilog runtime version 14.0 (devel) ()",
+    "CompileCommand":  "iverilog -g2012 -Wall -s kwt1_e203_nice_wrapper_tb -o D:\\competition\\build\\team_handoff_repo\\build\\kwt_e203_nice_wrapper_2026-11-02_v2\\kwt1_e203_nice_wrapper_tb.vvp -c D:\\competition\\build\\team_handoff_repo\\rtl\\files.f D:\\competition\\build\\team_handoff_repo\\tb\\kwt1_e203_nice_wrapper_tb.sv",
+    "SimulationCommand":  "vvp D:\\competition\\build\\team_handoff_repo\\build\\kwt_e203_nice_wrapper_2026-11-02_v2\\kwt1_e203_nice_wrapper_tb.vvp",
+    "Passed":  true,
+    "Scope":  "Standalone KWT-1 E203 NICE wrapper mock protocol test",
+    "RealE203Integrated":  false,
+    "NICEIcbPayloadActive":  false,
+    "Note":  "Opcode/funct defaults are test parameters, not a frozen software ABI."
+}
