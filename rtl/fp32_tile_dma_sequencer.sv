@@ -139,57 +139,6 @@ module fp32_tile_dma_sequencer #(
     endcase
   end
 
-  task automatic advance_half_or_element;
-    begin
-      if (!half_idx) begin
-        half_idx <= 1'b1;
-      end else begin
-        half_idx <= 1'b0;
-        case (state)
-          PH_A: begin
-            if (k_idx + 1 < kval_q) k_idx <= k_idx + 1'b1;
-            else begin
-              k_idx <= 0;
-              if (row_idx + 1 < rows_q) row_idx <= row_idx + 1'b1;
-              else begin
-                row_idx <= 0; col_idx <= 0; k_idx <= 0; state <= PH_B;
-              end
-            end
-          end
-          PH_B: begin
-            if (col_idx + 1 < cols_q) col_idx <= col_idx + 1'b1;
-            else begin
-              col_idx <= 0;
-              if (k_idx + 1 < kval_q) k_idx <= k_idx + 1'b1;
-              else begin
-                row_idx <= 0; col_idx <= 0; k_idx <= 0; state <= PH_BIAS;
-              end
-            end
-          end
-          PH_BIAS: begin
-            if (col_idx + 1 < cols_q) col_idx <= col_idx + 1'b1;
-            else begin
-              row_idx <= 0; col_idx <= 0; k_idx <= 0;
-              if (ENABLE_RESULT_WRITE)
-                state <= PH_RESULT;
-              else
-                state <= PH_DONE;
-            end
-          end
-          PH_RESULT: begin
-            if (col_idx + 1 < cols_q) col_idx <= col_idx + 1'b1;
-            else if (row_idx + 1 < rows_q) begin
-              row_idx <= row_idx + 1'b1; col_idx <= 0;
-            end else begin
-              state <= PH_DONE;
-            end
-          end
-          default: begin end
-        endcase
-      end
-    end
-  endtask
-
   always_ff @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
       state <= PH_IDLE;
@@ -211,7 +160,55 @@ module fp32_tile_dma_sequencer #(
         else
           state <= PH_A;
       end else if (busy && req_ready) begin
-        advance_half_or_element();
+        // Keep all sequencer state ownership in this one clocked process.
+        // Inlining the transition avoids strict synthesis front-ends treating
+        // a task called from always_ff as a second driver.
+        if (!half_idx) begin
+          half_idx <= 1'b1;
+        end else begin
+          half_idx <= 1'b0;
+          case (state)
+            PH_A: begin
+              if (k_idx + 1 < kval_q) k_idx <= k_idx + 1'b1;
+              else begin
+                k_idx <= 0;
+                if (row_idx + 1 < rows_q) row_idx <= row_idx + 1'b1;
+                else begin
+                  row_idx <= 0; col_idx <= 0; k_idx <= 0; state <= PH_B;
+                end
+              end
+            end
+            PH_B: begin
+              if (col_idx + 1 < cols_q) col_idx <= col_idx + 1'b1;
+              else begin
+                col_idx <= 0;
+                if (k_idx + 1 < kval_q) k_idx <= k_idx + 1'b1;
+                else begin
+                  row_idx <= 0; col_idx <= 0; k_idx <= 0; state <= PH_BIAS;
+                end
+              end
+            end
+            PH_BIAS: begin
+              if (col_idx + 1 < cols_q) col_idx <= col_idx + 1'b1;
+              else begin
+                row_idx <= 0; col_idx <= 0; k_idx <= 0;
+                if (ENABLE_RESULT_WRITE)
+                  state <= PH_RESULT;
+                else
+                  state <= PH_DONE;
+              end
+            end
+            PH_RESULT: begin
+              if (col_idx + 1 < cols_q) col_idx <= col_idx + 1'b1;
+              else if (row_idx + 1 < rows_q) begin
+                row_idx <= row_idx + 1'b1; col_idx <= 0;
+              end else begin
+                state <= PH_DONE;
+              end
+            end
+            default: begin end
+          endcase
+        end
       end else if (state == PH_DONE) begin
         state <= PH_IDLE;
       end
