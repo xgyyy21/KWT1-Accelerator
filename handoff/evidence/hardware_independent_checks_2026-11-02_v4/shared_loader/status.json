@@ -1,0 +1,10 @@
+﻿{
+    "Created":  "2026-11-02T12:09:40.3826767+08:00",
+    "CompileExitCode":  0,
+    "SimulationExitCode":  0,
+    "Passed":  true,
+    "Scope":  "Protocol-level platform loader model followed by 16-bit System Bus matrix load/compute/writeback",
+    "E203Integrated":  false,
+    "RealSramMacro":  false,
+    "Note":  "The loader writes the behavioral shared-memory model before START; it is not a real E203/NICE simulation."
+}

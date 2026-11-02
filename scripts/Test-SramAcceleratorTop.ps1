@@ -66,6 +66,7 @@ foreach ($test in $tests) {
     $image = "run/$test.vvp"
     $compileArgs = @('-g2012','-s','fp32_sram_accelerator_top_tb')
     if ($test -eq 'ffn1_full_layer') { $compileArgs += '-Pfp32_sram_accelerator_top_tb.FULL_LAYER=1' }
+    if ($test -eq 'continuous_jobs') { $compileArgs += '-Pfp32_sram_accelerator_top_tb.CONTINUOUS_SMALL=1' }
     $compileArgs += @('-o',$image,'-c','rtl/files.f',
         'tb/support/ramsp128x16_functional_model.sv','tb/fp32_sram_accelerator_top_tb.sv')
     $runArgs = @($image,"+OUT_DIR=$testPath")

@@ -1,0 +1,2 @@
+﻿iverilog -g2012 -Wall -s kwt_shared_sram_loader_tb -o D:\competition\build\team_handoff_repo\build\hardware_independent_checks_2026-11-02_v4\shared_loader\kwt_shared_sram_loader_tb.vvp -c D:\competition\build\team_handoff_repo\rtl\files.f D:\competition\build\team_handoff_repo\tb\kwt_shared_sram_loader_tb.sv
+vvp D:\competition\build\team_handoff_repo\build\hardware_independent_checks_2026-11-02_v4\shared_loader\kwt_shared_sram_loader_tb.vvp

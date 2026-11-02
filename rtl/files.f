@@ -41,3 +41,4 @@ rtl/fp32_tile_soc_bus_adapter.sv
 rtl/fp32_nice_control_adapter.sv
 rtl/fp32_accelerator_top.sv
 rtl/kwt1_e203_nice_wrapper.sv
+rtl/kwt1_e203_nice_adapter.sv

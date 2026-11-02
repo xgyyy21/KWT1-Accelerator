@@ -1,0 +1,86 @@
+// Parameterized E203-facing boundary for the KWT-1 NICE wrapper.
+//
+// Port names intentionally match the public e203_subsys_nice_core contract,
+// including nice_rsp_rdat (not nice_rsp_rdata).  This is a platform-neutral
+// adapter skeleton: it does not instantiate e203_subsys_nice_core and does not
+// decide the server's instruction decoder or System-Bus address translation.
+module kwt1_e203_nice_adapter #(
+  parameter int E203_XLEN = 32,
+  parameter int E203_ADDR_SIZE = 32,
+  parameter logic [6:0] KWT_OPCODE = 7'h7b,
+  parameter logic [6:0] KWT_FUNCT7 = 7'h00,
+  parameter bit STRICT_COMPETITION_SHAPES = 1'b1,
+  parameter bit USE_SRAM_MACROS = 1'b0
+) (
+  input  logic                         nice_clk,
+  input  logic                         nice_rst_n,
+  output logic                         nice_active,
+  output logic                         nice_mem_holdup,
+  input  logic                         nice_req_valid,
+  output logic                         nice_req_ready,
+  input  logic [E203_XLEN-1:0]         nice_req_inst,
+  input  logic [E203_XLEN-1:0]         nice_req_rs1,
+  input  logic [E203_XLEN-1:0]         nice_req_rs2,
+  output logic                         nice_rsp_valid,
+  input  logic                         nice_rsp_ready,
+  output logic [E203_XLEN-1:0]         nice_rsp_rdat,
+  output logic                         nice_rsp_err,
+  output logic                         nice_icb_cmd_valid,
+  input  logic                         nice_icb_cmd_ready,
+  output logic [E203_ADDR_SIZE-1:0]    nice_icb_cmd_addr,
+  output logic                         nice_icb_cmd_read,
+  output logic [E203_XLEN-1:0]         nice_icb_cmd_wdata,
+  output logic [1:0]                   nice_icb_cmd_size,
+  input  logic                         nice_icb_rsp_valid,
+  output logic                         nice_icb_rsp_ready,
+  input  logic [E203_XLEN-1:0]         nice_icb_rsp_rdata,
+  input  logic                         nice_icb_rsp_err,
+  input  logic [2:0]                   cache_standby,
+  output wire [23:0]                   macro_cen,
+  output wire [23:0]                   macro_gwen,
+  output wire [23:0][15:0]             macro_wen,
+  output wire [23:0][6:0]              macro_a,
+  output wire [23:0][15:0]             macro_d,
+  input  wire [23:0][15:0]             macro_q,
+  output wire [23:0][2:0]              macro_ema,
+  output wire [23:0][1:0]              macro_emaw,
+  output wire [23:0]                   macro_ret1n,
+  output logic                         sys_req_valid,
+  output logic                         sys_req_write,
+  output logic [E203_ADDR_SIZE-1:0]    sys_req_addr,
+  output logic [15:0]                  sys_req_wdata,
+  input  logic                         sys_req_ready,
+  input  logic                         sys_rsp_valid,
+  input  logic [15:0]                  sys_rsp_rdata,
+  output logic                         engine_busy,
+  output logic                         engine_done,
+  output logic                         engine_error
+);
+  kwt1_e203_nice_wrapper #(
+    .E203_XLEN(E203_XLEN), .E203_ADDR_SIZE(E203_ADDR_SIZE),
+    .KWT_OPCODE(KWT_OPCODE), .KWT_FUNCT7(KWT_FUNCT7),
+    .STRICT_COMPETITION_SHAPES(STRICT_COMPETITION_SHAPES),
+    .USE_SRAM_MACROS(USE_SRAM_MACROS)
+  ) u_kwt1_wrapper (
+    .nice_clk(nice_clk), .nice_rst_n(nice_rst_n),
+    .nice_active(nice_active), .nice_mem_holdup(nice_mem_holdup),
+    .nice_req_valid(nice_req_valid), .nice_req_ready(nice_req_ready),
+    .nice_req_inst(nice_req_inst), .nice_req_rs1(nice_req_rs1),
+    .nice_req_rs2(nice_req_rs2), .nice_rsp_valid(nice_rsp_valid),
+    .nice_rsp_ready(nice_rsp_ready), .nice_rsp_rdat(nice_rsp_rdat),
+    .nice_rsp_err(nice_rsp_err), .nice_icb_cmd_valid(nice_icb_cmd_valid),
+    .nice_icb_cmd_ready(nice_icb_cmd_ready), .nice_icb_cmd_addr(nice_icb_cmd_addr),
+    .nice_icb_cmd_read(nice_icb_cmd_read), .nice_icb_cmd_wdata(nice_icb_cmd_wdata),
+    .nice_icb_cmd_size(nice_icb_cmd_size), .nice_icb_rsp_valid(nice_icb_rsp_valid),
+    .nice_icb_rsp_ready(nice_icb_rsp_ready), .nice_icb_rsp_rdata(nice_icb_rsp_rdata),
+    .nice_icb_rsp_err(nice_icb_rsp_err), .cache_standby(cache_standby),
+    .macro_cen(macro_cen), .macro_gwen(macro_gwen), .macro_wen(macro_wen),
+    .macro_a(macro_a), .macro_d(macro_d), .macro_q(macro_q),
+    .macro_ema(macro_ema), .macro_emaw(macro_emaw), .macro_ret1n(macro_ret1n),
+    .sys_req_valid(sys_req_valid), .sys_req_write(sys_req_write),
+    .sys_req_addr(sys_req_addr), .sys_req_wdata(sys_req_wdata),
+    .sys_req_ready(sys_req_ready), .sys_rsp_valid(sys_rsp_valid),
+    .sys_rsp_rdata(sys_rsp_rdata), .engine_busy(engine_busy),
+    .engine_done(engine_done), .engine_error(engine_error)
+  );
+endmodule

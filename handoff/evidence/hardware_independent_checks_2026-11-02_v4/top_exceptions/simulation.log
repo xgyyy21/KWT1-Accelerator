@@ -1,0 +1,5 @@
+﻿CHECK top-level orphan response error PASS
+CHECK reset clears error and suppresses SRAM pins PASS
+CHECK pending read cancellation and restart state PASS
+PASS fp32_sram_top_exception checks=3 cycles=30 scope=functional_model
+D:\competition\build\team_handoff_repo\tb\fp32_sram_top_exception_tb.sv:135: $finish called at 295000 (1ps)

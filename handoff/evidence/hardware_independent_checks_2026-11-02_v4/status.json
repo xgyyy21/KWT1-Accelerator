@@ -1,0 +1,58 @@
+﻿{
+    "Created":  "2026-11-02T12:09:40.5551083+08:00",
+    "Scope":  "Hardware-side functional/robustness tests; synthesis intentionally skipped",
+    "Tests":  [
+                  {
+                      "Name":  "wrapper_protocol",
+                      "Script":  "Test-KwtE203NiceWrapper.ps1",
+                      "ExitCode":  0,
+                      "Started":  "2026-11-02T12:08:36.2763438+08:00",
+                      "Finished":  "2026-11-02T12:08:38.4590469+08:00"
+                  },
+                  {
+                      "Name":  "wrapper_continuous",
+                      "Script":  "Test-KwtE203NiceWrapperContinuous.ps1",
+                      "ExitCode":  0,
+                      "Started":  "2026-11-02T12:08:38.4705625+08:00",
+                      "Finished":  "2026-11-02T12:08:41.3595266+08:00"
+                  },
+                  {
+                      "Name":  "sram_functional",
+                      "Script":  "Test-SramAdapterFunctional.ps1",
+                      "ExitCode":  0,
+                      "Started":  "2026-11-02T12:08:41.3595266+08:00",
+                      "Finished":  "2026-11-02T12:08:42.0051790+08:00"
+                  },
+                  {
+                      "Name":  "top_continuous",
+                      "Script":  "Test-SramAcceleratorTop.ps1",
+                      "ExitCode":  0,
+                      "Started":  "2026-11-02T12:08:42.0107581+08:00",
+                      "Finished":  "2026-11-02T12:09:35.8459229+08:00"
+                  },
+                  {
+                      "Name":  "top_exceptions",
+                      "Script":  "Test-SramTopExceptions.ps1",
+                      "ExitCode":  0,
+                      "Started":  "2026-11-02T12:09:35.8469244+08:00",
+                      "Finished":  "2026-11-02T12:09:37.2895493+08:00"
+                  },
+                  {
+                      "Name":  "sram_pin_contract",
+                      "Script":  "Test-SramAdapterPins.ps1",
+                      "ExitCode":  0,
+                      "Started":  "2026-11-02T12:09:37.2905481+08:00",
+                      "Finished":  "2026-11-02T12:09:38.2433441+08:00"
+                  },
+                  {
+                      "Name":  "shared_loader",
+                      "Script":  "Test-KwtSharedSramLoader.ps1",
+                      "ExitCode":  0,
+                      "Started":  "2026-11-02T12:09:38.2433441+08:00",
+                      "Finished":  "2026-11-02T12:09:40.5551083+08:00"
+                  }
+              ],
+    "SynthesisSkipped":  true,
+    "E203SoCIntegrated":  false,
+    "VendorSramTimingModel":  false
+}

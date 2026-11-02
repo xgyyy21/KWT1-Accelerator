@@ -1,0 +1,208 @@
+﻿rtl/fp32_tile_cache_bridge.sv:4: warning: timescale for fp32_tile_cache_bridge inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/matrix_buffer.sv:3: warning: timescale for matrix_buffer inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/tile_dma.sv:3: warning: timescale for tile_dma inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/matrix_task_scheduler.sv:2: warning: timescale for matrix_task_scheduler inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/matrix_task_controller.sv:3: warning: timescale for matrix_task_controller inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/block_descriptor.sv:2: warning: timescale for block_descriptor inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/block_counter.sv:1: warning: timescale for block_counter inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_mac_boundary.sv:4: warning: timescale for fp32_mac_boundary inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_pe_mac.sv:15: warning: timescale for fp32_pe_mac inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_pe_array_8x16.sv:9: warning: timescale for fp32_pe_array_8x16 inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_tile_cache_mapper.sv:8: warning: timescale for fp32_tile_cache_mapper inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_tile_cache_streamer.sv:5: warning: timescale for fp32_tile_cache_streamer inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_matrix_global_addr_gen.sv:4: warning: timescale for fp32_matrix_global_addr_gen inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_matrix_block_controller.sv:5: warning: timescale for fp32_matrix_block_controller inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_tile_dma_sequencer.sv:11: warning: timescale for fp32_tile_dma_sequencer inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_tile_dma_load_engine.sv:6: warning: timescale for fp32_tile_dma_load_engine inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_tile_dma_writeback_engine.sv:4: warning: timescale for fp32_tile_dma_writeback_engine inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_tile_engine.sv:4: warning: timescale for fp32_tile_engine inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_tile_fsm.sv:8: warning: timescale for fp32_tile_fsm inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_tile_kblock_fsm.sv:5: warning: timescale for fp32_tile_kblock_fsm inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_tile_load_compute.sv:5: warning: timescale for fp32_tile_load_compute inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_tile_kblock_load_compute.sv:7: warning: timescale for fp32_tile_kblock_load_compute inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_matrix_tile_scheduler.sv:7: warning: timescale for fp32_matrix_tile_scheduler inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_tile_soc_bus_adapter.sv:5: warning: timescale for fp32_tile_soc_bus_adapter inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_nice_control_adapter.sv:8: warning: timescale for fp32_nice_control_adapter inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/fp32_accelerator_top.sv:6: warning: timescale for fp32_accelerator_top inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/kwt1_e203_nice_wrapper.sv:6: warning: timescale for kwt1_e203_nice_wrapper inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+rtl/kwt1_e203_nice_adapter.sv:7: warning: timescale for kwt1_e203_nice_adapter inherited from another file.
+rtl/sram_fp32_cache_adapter.sv:1: ...: The inherited timescale is here.
+warning: Some design elements have no explicit time unit and/or
+       : time precision. This may cause confusing timing results.
+       : Affected design elements are:
+       :   -- module ai_engine_core declared here: rtl/ai_engine_core.sv:1
+       :   -- module ai_engine_fsm declared here: rtl/ai_engine_fsm.sv:1
+       :   -- module ai_engine_regs declared here: rtl/ai_engine_regs.sv:4
+       :   -- module ai_engine_soc_adapter declared here: rtl/ai_engine_soc_adapter.sv:6
+       :   -- module matrix_cache_manager declared here: rtl/matrix_cache_manager.sv:4
+       :   -- module pe_array_8x16 declared here: rtl/pe_array_8x16.sv:3
+       :   -- module pe_mac declared here: rtl/pe_mac.sv:1
+       :   -- module systolic_array_8x16 declared here: rtl/systolic_array_8x16.sv:1
+       :   -- module systolic_input_skew declared here: rtl/systolic_input_skew.sv:3
+       :   -- module systolic_tile_engine declared here: rtl/systolic_tile_engine.sv:1
+       :   -- module tile_result_collector declared here: rtl/tile_result_collector.sv:3
+       :   -- module tile_stream_adapter declared here: rtl/tile_stream_adapter.sv:4
+       :   -- package ai_engine_pkg declared here: rtl/ai_engine_pkg.sv:1
+       :   -- package fp32_math_pkg declared here: rtl/fp32_math_pkg.sv:1
+rtl/fp32_pe_array_8x16.sv:174: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'cell_acc_checkpoint[word=((<select+=<select+=(+checkpoint_cell[31:0])/(<COLS=32'sd16, wid=32>)[(0)+:37] expr_type=logic>[(0)+:41] expr_type=logic>)*(41'sb010000))+((+checkpoint_cell[31:0])%(<COLS=32'sd16, wid=32>))][31:0]').
+rtl/fp32_pe_array_8x16.sv:175: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'cell_acc_checkpoint[word=((<select+=<select+=(+checkpoint_cell[31:0])/(<COLS=32'sd16, wid=32>)[(0)+:37] expr_type=logic>[(0)+:41] expr_type=logic>)*(41'sb010000))+((+checkpoint_cell[31:0])%(<COLS=32'sd16, wid=32>))][31:0]').
+rtl/fp32_pe_array_8x16.sv:176: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'cell_bias_checkpoint[word=((<select+=<select+=(+checkpoint_cell[31:0])/(<COLS=32'sd16, wid=32>)[(0)+:37] expr_type=logic>[(0)+:41] expr_type=logic>)*(41'sb010000))+((+checkpoint_cell[31:0])%(<COLS=32'sd16, wid=32>))][31:0]').
+rtl/fp32_pe_array_8x16.sv:177: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'cell_bias_checkpoint[word=((<select+=<select+=(+checkpoint_cell[31:0])/(<COLS=32'sd16, wid=32>)[(0)+:37] expr_type=logic>[(0)+:41] expr_type=logic>)*(41'sb010000))+((+checkpoint_cell[31:0])%(<COLS=32'sd16, wid=32>))][31:0]').
+rtl/fp32_tile_kblock_load_compute.sv:234: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'wb_stage_pending_addr[9:0]').
+rtl/fp32_tile_kblock_load_compute.sv:235: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'result_stage[word=((<select+=<select+=+stage_row[31:0][(0)+:37] expr_type=logic>[(0)+:41] expr_type=logic>)*(41'sb010000))+(+stage_col[31:0])][31:0]').
+rtl/fp32_tile_kblock_load_compute.sv:237: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'result_stage[word=((<select+=<select+=+stage_row[31:0][(0)+:37] expr_type=logic>[(0)+:41] expr_type=logic>)*(41'sb010000))+(+stage_col[31:0])][31:0]').
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.
+rtl/fp32_pe_mac.sv:241: warning: System task ($fatal) cannot be synthesized in an always_ff process.

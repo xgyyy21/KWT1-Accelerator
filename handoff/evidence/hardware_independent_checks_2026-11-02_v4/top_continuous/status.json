@@ -1,0 +1,32 @@
+﻿{
+    "Created":  "2026-11-02T12:08:44.9250910+08:00",
+    "WorkingDirectory":  "D:\\competition\\build\\team_handoff_repo\\build\\hardware_independent_checks_2026-11-02_v4\\top_continuous\\sources",
+    "Complete":  true,
+    "SourceIdentity":  "Local source snapshot fixed by source_manifest.csv, not a Git commit",
+    "VendorTimingModelUsed":  false,
+    "E203Integrated":  false,
+    "SoftwareIndependentReview":  false,
+    "Tests":  [
+                  {
+                      "Test":  "continuous_jobs",
+                      "State":  "Passed",
+                      "Passed":  true,
+                      "Compile":  {
+                                      "ExitCode":  0,
+                                      "Started":  "2026-11-02T12:08:44.9514101+08:00",
+                                      "Finished":  "2026-11-02T12:08:45.9807188+08:00",
+                                      "Seconds":  1.0293086999999999,
+                                      "Command":  "D:\\competition\\build\\team_handoff_repo\\..\\..\\.tools\\iverilog\\bin\\iverilog.exe \"-g2012\" \"-s\" \"fp32_sram_accelerator_top_tb\" \"-Pfp32_sram_accelerator_top_tb.CONTINUOUS_SMALL=1\" \"-o\" \"run/continuous_jobs.vvp\" \"-c\" \"rtl/files.f\" \"tb/support/ramsp128x16_functional_model.sv\" \"tb/fp32_sram_accelerator_top_tb.sv\""
+                                  },
+                      "Simulation":  {
+                                         "ExitCode":  0,
+                                         "Started":  "2026-11-02T12:08:46.0325850+08:00",
+                                         "Finished":  "2026-11-02T12:09:35.5973183+08:00",
+                                         "Seconds":  49.565734199999994,
+                                         "Command":  "D:\\competition\\build\\team_handoff_repo\\..\\..\\.tools\\iverilog\\bin\\vvp.exe \"run/continuous_jobs.vvp\" \"+OUT_DIR=D:\\competition\\build\\team_handoff_repo\\build\\hardware_independent_checks_2026-11-02_v4\\top_continuous\\continuous_jobs\""
+                                     }
+                  }
+              ],
+    "Passed":  1,
+    "Failed":  0
+}

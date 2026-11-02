@@ -5,11 +5,14 @@
 module fp32_sram_accelerator_top_tb #(
   parameter bit FULL_LAYER = 0,
   parameter bit SECOND_LAYER = 0,
-  parameter bit TWO_LAYERS = 0
+  parameter bit TWO_LAYERS = 0,
+  parameter bit CONTINUOUS_SMALL = 0
 );
   localparam int MEM_WORDS=300000, A_BASE=0, B_BASE=100000,
                  C_BASE=200000, Y_BASE=210000, MAX_RESULTS=25344;
-  logic clk=0, rst_n=0;
+  // Start high and assert reset after time zero so the asynchronous reset
+  // branch is triggered in simulators that do not schedule 0 -> 0.
+  logic clk=0, rst_n=1;
   always #5 clk=~clk;
   logic nice_valid=0, nice_write=0;
   logic [31:0] nice_addr=0, nice_wdata=0;
@@ -120,10 +123,10 @@ module fp32_sram_accelerator_top_tb #(
   endtask
 
   always @(negedge clk) if(rst_n) begin
+    // Backpressure is exercised during work. Standby is applied only during
+    // an idle window below; asserting it asynchronously during an active
+    // macro command is not a valid SRAM operating sequence.
     sys_ready=(cycle%7!=0)&&(cycle%7!=1);
-    standby[0]=(cycle%17<5);
-    standby[1]=(cycle%19<6);
-    standby[2]=(cycle%13<4);
   end
   always @(posedge clk) begin:p_monitor
     integer offset,elem,selected,rb,cb,rv,cv;
@@ -270,8 +273,16 @@ module fp32_sram_accelerator_top_tb #(
     $fdisplay(write_fd,"cycle,job,tile_id,row,col,bus_word_addr,half,actual_hex");
     $fdisplay(tile_fd,"cycle,job,tile_id,row_base,col_base,rows_valid,cols_valid,k_blocks");
     $fdisplay(control_fd,"cycle,job,write,register_hex,wdata_hex,rdata_hex");
+    #1 rst_n=0;
     repeat(3) @(negedge clk); rst_n=1;
-    if(TWO_LAYERS) begin
+    standby=3'b111;
+    repeat(2) @(posedge clk);
+    standby=3'b000;
+    repeat(2) @(posedge clk);
+    if(CONTINUOUS_SMALL) begin
+      run_job(0,9,64,17);
+      run_job(1,2,256,2);
+    end else if(TWO_LAYERS) begin
       run_job(0,99,64,256);
       run_job(1,99,256,64);
     end else if(FULL_LAYER) run_job(0,99,64,256);

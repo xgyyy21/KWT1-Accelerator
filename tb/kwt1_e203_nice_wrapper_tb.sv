@@ -135,6 +135,13 @@ module kwt1_e203_nice_wrapper_tb;
     issue_and_check(3'd0, 32'h18, 32'd1, 1'b0, 32'd0);
     issue_and_check(3'd0, 32'h1c, 32'd1, 1'b0, 32'd0);
     issue_and_check(3'd2, 32'd0, 32'd0, 1'b0, 32'd0);
+    // The START response is command acceptance, not completion. Even if the
+    // datapath BUSY indication is delayed, the wrapper's start_guard prevents
+    // a second START or configuration write from entering that gap.
+    force dut.engine_busy = 1'b0;
+    issue_and_check(3'd2, 32'd0, 32'd0, 1'b1, 32'd0);
+    issue_and_check(3'd0, 32'h14, 32'd9, 1'b1, 32'd0);
+    release dut.engine_busy;
     wait (engine_done || engine_error);
     repeat (2) @(posedge clk);
     if (engine_error) $fatal(1, "1x1 task reported accelerator error");
@@ -148,6 +155,10 @@ module kwt1_e203_nice_wrapper_tb;
     issue_and_check(3'd0, 32'h15, 32'd3, 1'b1, 32'd0);
     issue_and_check(3'd1, 32'h24, 32'd0, 1'b1, 32'd0);
     issue_and_check(3'd0, 32'h100, 32'd3, 1'b1, 32'd0);
+    issue_and_check(3'd0, 32'h04, 32'd3, 1'b1, 32'd0);
+    issue_and_check(3'd1, 32'h00, 32'd0, 1'b1, 32'd0);
+    issue_and_check(3'd1, 32'h04, 32'd0, 1'b1, 32'd0);
+    issue_and_check(3'd3, 32'h100, 32'd0, 1'b0, 32'd2);
 
     // Response payload/error and request payload remain stable under stalls.
     nice_rsp_ready = 1'b0;
@@ -200,9 +211,14 @@ module kwt1_e203_nice_wrapper_tb;
     force dut.engine_done = 1'b1;
     force dut.engine_error = 1'b1;
     issue_and_check(3'd3, 32'd0, 32'd0, 1'b0, 32'd6);
+    issue_and_check(3'd4, 32'd3, 32'd0, 1'b0, 32'd0);
+    issue_and_check(3'd3, 32'd0, 32'd0, 1'b0, 32'd6);
     release dut.engine_done;
     release dut.engine_error;
-    issue_and_check(3'd4, 32'd3, 32'd0, 1'b0, 32'd0);
+    issue_and_check(3'd4, 32'd1, 32'd0, 1'b0, 32'd0);
+    issue_and_check(3'd3, 32'd0, 32'd0, 1'b0, 32'd4);
+    issue_and_check(3'd4, 32'd2, 32'd0, 1'b0, 32'd0);
+    issue_and_check(3'd3, 32'd0, 32'd0, 1'b0, 32'd0);
     issue_and_check(3'd3, 32'd0, 32'd0, 1'b0, 32'd0);
 
     // Bad opcode/funct encodings are rejected by this standalone wrapper.
@@ -227,9 +243,12 @@ module kwt1_e203_nice_wrapper_tb;
     nice_req_inst = enc(3'd3); nice_req_valid = 1'b1;
     @(posedge clk); #1 nice_req_valid = 1'b0;
     while (!nice_rsp_valid) @(negedge clk);
+    nice_req_valid = 1'b1;
     rst_n = 1'b0;
     @(posedge clk); #1;
-    if (nice_rsp_valid || nice_active) $fatal(1, "reset did not cancel response");
+    if (nice_rsp_valid || nice_active || nice_req_ready)
+      $fatal(1, "reset did not suppress activity and cancel response");
+    nice_req_valid = 1'b0;
     nice_rsp_ready = 1'b1;
     rst_n = 1'b1;
 

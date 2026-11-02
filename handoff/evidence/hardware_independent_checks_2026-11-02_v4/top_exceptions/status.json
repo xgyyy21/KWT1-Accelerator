@@ -1,0 +1,10 @@
+﻿{
+    "Test":  "fp32_sram_top_exception_tb",
+    "Passed":  true,
+    "CompileExitCode":  0,
+    "SimulationExitCode":  0,
+    "CompileCommand":  "iverilog -g2012 -Wall -s fp32_sram_top_exception_tb -o D:\\competition\\build\\team_handoff_repo\\build\\hardware_independent_checks_2026-11-02_v4\\top_exceptions\\fp32_sram_top_exception_tb.vvp -c D:\\competition\\build\\team_handoff_repo\\rtl\\files.f D:\\competition\\build\\team_handoff_repo\\tb\\support\\ramsp128x16_functional_model.sv D:\\competition\\build\\team_handoff_repo\\tb\\fp32_sram_top_exception_tb.sv",
+    "SimulationCommand":  "vvp D:\\competition\\build\\team_handoff_repo\\build\\hardware_independent_checks_2026-11-02_v4\\top_exceptions\\fp32_sram_top_exception_tb.vvp",
+    "Scope":  "Top-level functional SRAM/bus exception behavior; no E203 or vendor timing",
+    "PEChanged":  false
+}

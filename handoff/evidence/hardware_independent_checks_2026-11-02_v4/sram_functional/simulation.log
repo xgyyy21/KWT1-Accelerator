@@ -1,0 +1,2 @@
+﻿PASS sram_1024x16_adapter_functional_tb writes=4 reads=6 checks=6 boundary=127,128,1023 standby=1 reset_retention=1
+D:\competition\build\team_handoff_repo\tb\sram_1024x16_adapter_functional_tb.sv:128: $finish called at 386000 (1ps)

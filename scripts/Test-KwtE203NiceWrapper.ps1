@@ -53,12 +53,11 @@ $status = [ordered]@{
     Note = 'Opcode/funct defaults are test parameters, not a frozen software ABI.'
 }
 $status | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $outPath 'status.json') -Encoding UTF8
-$sourceFiles = @(
-    'rtl/kwt1_e203_nice_wrapper.sv',
-    'tb/kwt1_e203_nice_wrapper_tb.sv',
-    'rtl/files.f',
-    'scripts/Test-KwtE203NiceWrapper.ps1'
-)
+$sourceFiles = @((Get-Content -LiteralPath (Join-Path $projectRoot 'rtl/files.f') |
+    ForEach-Object { $_.Trim() } | Where-Object { $_ -and !$_.StartsWith('//') }))
+$sourceFiles += @('rtl/files.f','tb/kwt1_e203_nice_wrapper_tb.sv',
+                  'scripts/Test-KwtE203NiceWrapper.ps1')
+$sourceFiles = @($sourceFiles | Sort-Object -Unique)
 $sourceManifest = foreach ($relative in $sourceFiles) {
     $sourcePath = Join-Path $projectRoot $relative
     if (!(Test-Path -LiteralPath $sourcePath)) { throw "Missing source file: $relative" }

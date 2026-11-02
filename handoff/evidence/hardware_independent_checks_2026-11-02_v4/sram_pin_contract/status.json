@@ -1,0 +1,17 @@
+﻿{
+    "Test":  "sram_1024x16_adapter_pin_tb",
+    "Passed":  true,
+    "CompileExitCode":  0,
+    "SimulationExitCode":  0,
+    "IcarusVersion":  "Icarus Verilog version 14.0 (devel) ()",
+    "CompileCommand":  "iverilog -g2012 -Wall -s sram_1024x16_adapter_pin_tb -o D:\\competition\\build\\team_handoff_repo\\build\\hardware_independent_checks_2026-11-02_v4\\sram_pin_contract\\sram_1024x16_adapter_pin_tb.vvp D:\\competition\\build\\team_handoff_repo\\rtl\\sram_1024x16_adapter.sv D:\\competition\\build\\team_handoff_repo\\tb\\sram_1024x16_adapter_pin_tb.sv",
+    "SimulationCommand":  "vvp D:\\competition\\build\\team_handoff_repo\\build\\hardware_independent_checks_2026-11-02_v4\\sram_pin_contract\\sram_1024x16_adapter_pin_tb.vvp",
+    "Scope":  "Address decode, macro control pins, request gating and control protocol only",
+    "NotCovered":  [
+                       "Vendor SRAM timing/model behavior",
+                       "Q update/hold/data correctness",
+                       "EMAW encoding legality",
+                       "Retention transitions",
+                       "E203 integration"
+                   ]
+}

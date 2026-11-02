@@ -1,0 +1,4 @@
+JOB PASS id=0 M=9 K=64 N=17 tiles=4 outputs=153 writes=306 reads=6792 done_observed_cycle=56818 last_write=56797
+JOB PASS id=1 M=2 K=256 N=2 tiles=1 outputs=4 writes=8 reads=2080 done_observed_cycle=85415 last_write=85410
+PASS sram_accelerator_top full_layer=0 jobs=2 outputs=157 writes=314 tiles=5 macro_reads=25088 macro_writes=8872 bus_waits=9009 standby_bank_cycles=3 nonzero_lowwords=157
+tb/fp32_sram_accelerator_top_tb.sv:307: $finish called at 854150000 (1ps)

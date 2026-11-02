@@ -1,0 +1,4 @@
+﻿PASS continuous job=0 result=40a00000 writes=2 busy_samples=434
+PASS continuous job=1 result=40e00000 writes=2 busy_samples=869
+PASS kwt1_e203_nice_wrapper_continuous_tb jobs=2 writes=4 bus_waits=10 busy_samples=869 no_reset_between_jobs=1
+D:\competition\build\team_handoff_repo\tb\kwt1_e203_nice_wrapper_continuous_tb.sv:233: $finish called at 26586000 (1ps)
