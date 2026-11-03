@@ -1,0 +1,4 @@
+﻿MISMATCH layer=8 index=10342 row=40 col=102 actual=b95b expected=b95c
+RESULT layer=8 shift=15 outputs=25344 writes=12672 commands=899712 responses=899712 mismatches=1 first_bad=10342
+FATAL: D:\competition\build\team_handoff_repo\tb\int16_software_handoff_tb.sv:136: software candidate comparison mismatch
+       Time: 38863765  Scope: int16_software_handoff_tb
