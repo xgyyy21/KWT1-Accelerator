@@ -14,9 +14,18 @@ module int16_system_bus_control #(
   input logic s_icb_rsp_ready,
   output logic [31:0] s_icb_rsp_rdata,
   output logic s_icb_rsp_err,
-  input logic engine_busy,engine_done,engine_error,output logic engine_start,
-  output logic [ADDR_WIDTH-1:0] a_base,b_base,bias_base,dst_base,
-  output logic [15:0] matrix_m,matrix_k,matrix_n,output logic [4:0] out_shift
+  input logic engine_busy,
+  input logic engine_done,
+  input logic engine_error,
+  output logic engine_start,
+  output logic [ADDR_WIDTH-1:0] a_base,
+  output logic [ADDR_WIDTH-1:0] b_base,
+  output logic [ADDR_WIDTH-1:0] bias_base,
+  output logic [ADDR_WIDTH-1:0] dst_base,
+  output logic [15:0] matrix_m,
+  output logic [15:0] matrix_k,
+  output logic [15:0] matrix_n,
+  output logic [4:0] out_shift
 );
   localparam logic[7:0] A_CTRL=8'h00,A_STATUS=8'h04,A_A=8'h08,A_B=8'h0c,
     A_DST=8'h10,A_M=8'h14,A_K=8'h18,A_N=8'h1c,A_BIAS=8'h20,

@@ -1,0 +1,47 @@
+{
+  "schema": "kwt1-int16-e203-minimal-smoke-v1",
+  "status": "software vector only; no E203/SoC result",
+  "shape": {
+    "m": 1,
+    "k": 64,
+    "n": 16,
+    "k_tile": 32
+  },
+  "q_values": {
+    "x": 1,
+    "w": 1,
+    "bias": 0,
+    "y": 64
+  },
+  "out_shift": 0,
+  "rounding": "nearest_ties_even",
+  "output_range": [
+    -32767,
+    32767
+  ],
+  "word_layout": "one 4-hex-digit 16-bit word per line; two's complement",
+  "address_unit": "file-local 16-bit word index; physical DTCM base not assigned",
+  "requires_noncompetition_shape_mode": true,
+  "files": {
+    "x.mem": {
+      "sha256": "ab9db43753a2d9202f54d9cab334d244d9784e9d98679ffec02b3c9be1549101",
+      "word_count": 64,
+      "meaning": "X[1,64], row-major signed INT16"
+    },
+    "w.mem": {
+      "sha256": "c839c20d000447a1415509980bd36cc0ced9caffdaefb330f4697584b3b023ed",
+      "word_count": 1024,
+      "meaning": "W[64,16], K-major signed INT16"
+    },
+    "bias.mem": {
+      "sha256": "9a57762442c7680cd39df13b739c70c21a80f44ebab13e7a8d7ef25360dd77a6",
+      "word_count": 32,
+      "meaning": "16 signed INT32 values, low word then high word"
+    },
+    "y_expected.mem": {
+      "sha256": "003d1f54c278d5905a45a84a32d5c680e7ffa1dfefa4c34229797f4022b71d05",
+      "word_count": 16,
+      "meaning": "Y[1,16], row-major signed INT16"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+﻿[
+    {
+        "file":  "compile.log",
+        "bytes":  12838,
+        "sha256":  "2c5fc2924fef256a8906b465eec25ce7a445f56c5f32c56fcd65897763a18651"
+    },
+    {
+        "file":  "run.log",
+        "bytes":  358,
+        "sha256":  "885c216a934bc5f62ddef80dc0d34da00fda7166064d5485a7e19fbbc8db6c97"
+    },
+    {
+        "file":  "int16_e203_minimal_trace.csv",
+        "bytes":  88705,
+        "sha256":  "770dbdf9436acd14525a69049f74382cbb8a3c9f4175860ad4f20f9b9f999e17"
+    },
+    {
+        "file":  "int16_e203_minimal_status.csv",
+        "bytes":  68561,
+        "sha256":  "e9637a1ba3f8b3b40b4893556673f278c905bebcf01ea4fac736aa674a6cf4e7"
+    }
+]
