@@ -17,7 +17,7 @@ if($m -le 0 -or $n -le 0 -or ($k -ne 64 -and $k -ne 256) -or $shift -lt 0 -or $s
   throw 'Unsupported M/K/N or out_shift'
 }
 $contract=@{input_dtype='int16';weight_dtype='int16';bias_dtype='int32';output_dtype='int16';
-  layout='row_major';rounding='nearest_ties_away';overflow='saturate'}
+  layout='row_major';rounding='nearest_ties_even';overflow='saturate'}
 foreach($key in $contract.Keys){if($spec.$key -cne $contract[$key]){throw "$key must be $($contract[$key])"}}
 function Read-IntCsv([string]$Path,[int]$Rows,[int]$Cols,[long]$Min,[long]$Max){
   $result=[System.Collections.Generic.List[long]]::new()
@@ -44,10 +44,10 @@ foreach($key in @('a_csv','b_csv','bias_csv','expected_csv')){
   if(!(Test-Path -LiteralPath $path -PathType Leaf)){throw "Missing input CSV: $path"}
   $source[$key]=$path
 }
-$a=Read-IntCsv $source.a_csv $m $k -32768 32767
-$b=Read-IntCsv $source.b_csv $k $n -32768 32767
+$a=Read-IntCsv $source.a_csv $m $k -32767 32767
+$b=Read-IntCsv $source.b_csv $k $n -32767 32767
 $bias=Read-IntCsv $source.bias_csv $n 1 -2147483648 2147483647
-$expected=Read-IntCsv $source.expected_csv $m $n -32768 32767
+$expected=Read-IntCsv $source.expected_csv $m $n -32767 32767
 function Write-Hex([string]$Path,[long[]]$Values,[int]$Bits){
   $mask=[long]((1L -shl $Bits)-1)
   $width=[int]($Bits/4)
@@ -68,7 +68,7 @@ $prepared=@{}
 foreach($name in $outputs.Keys){$path=Join-Path $out $name;$prepared[$name]=@{count=$outputs[$name][0].Count;sha256=(Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash.ToLowerInvariant()}}
 $result=[ordered]@{format_version=1;dimensions=@{m=$m;k=$k;n=$n};out_shift=$shift;
   contract=@{input_dtype='int16';weight_dtype='int16';product_dtype='int32';accumulator_dtype='int48';
-    bias_dtype='int32';output_dtype='int16';layout='row_major';rounding='nearest_ties_away';
+    bias_dtype='int32';output_dtype='int16';layout='row_major';rounding='nearest_ties_even';
     overflow='saturate';k_tile=32};source_manifest=$sourceManifest;prepared_files=$prepared}
 $result|ConvertTo-Json -Depth 8|Set-Content -LiteralPath (Join-Path $out 'prepared_manifest.json') -Encoding UTF8
 Write-Output "Prepared INT16 input M=$m K=$k N=$n shift=$shift at $out"

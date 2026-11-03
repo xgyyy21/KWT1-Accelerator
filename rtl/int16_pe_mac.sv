@@ -15,6 +15,7 @@ module int16_pe_mac #(
   output logic                        result_valid,
   output logic signed [15:0]          result_out,
   output logic signed [ACC_WIDTH-1:0] raw_sum_out,
+  output logic                        input_error,
   output logic                        trace_valid,
   output logic signed [31:0]          trace_product,
   output logic signed [ACC_WIDTH-1:0] trace_acc_before,
@@ -28,25 +29,38 @@ module int16_pe_mac #(
   logic signed [ACC_WIDTH-1:0] bias_ext;
   logic signed [ACC_WIDTH-1:0] biased_sum_comb;
 
-  // Round to nearest, ties away from zero, then saturate to signed INT16.
+  // Round to nearest, ties to even, then saturate to the software range.
   function automatic logic signed [15:0] requantize_sat16(
     input logic signed [ACC_WIDTH-1:0] value,
     input logic [4:0] shift
   );
     logic signed [ACC_WIDTH-1:0] magnitude;
-    logic signed [ACC_WIDTH-1:0] rounded_magnitude;
+    logic [ACC_WIDTH-1:0] rounded_magnitude;
+    logic [ACC_WIDTH-1:0] unit;
+    logic [ACC_WIDTH-1:0] remainder;
+    logic [ACC_WIDTH-1:0] half;
     logic signed [ACC_WIDTH-1:0] scaled;
     begin
       magnitude = (value < 0) ? -value : value;
-      if (shift == 0)
+      unit = '0;
+      unit[0] = 1'b1;
+      if (shift == 0) begin
         rounded_magnitude = magnitude;
-      else
-        rounded_magnitude = (magnitude + (ACC_WIDTH'(1) <<< (shift-1))) >>> shift;
-      scaled = (value < 0) ? -rounded_magnitude : rounded_magnitude;
+      end else begin
+        unit = unit <<< shift;
+        remainder = magnitude & (unit - 1'b1);
+        half = unit >>> 1;
+        rounded_magnitude = magnitude >>> shift;
+        if ((remainder > half) ||
+            ((remainder == half) && rounded_magnitude[0]))
+          rounded_magnitude = rounded_magnitude + 1'b1;
+      end
+      scaled = (value < 0) ? -$signed(rounded_magnitude) :
+        $signed(rounded_magnitude);
       if (scaled > 32767)
         requantize_sat16 = 16'sh7fff;
-      else if (scaled < -32768)
-        requantize_sat16 = -16'sd32768;
+      else if (scaled < -32767)
+        requantize_sat16 = -16'sd32767;
       else
         requantize_sat16 = scaled[15:0];
     end
@@ -77,17 +91,26 @@ module int16_pe_mac #(
       if (start && !mac_valid)
         accumulator <= '0;
       if (mac_valid) begin
-        accumulator <= acc_after_comb;
-        trace_valid <= 1'b1;
-        trace_product <= product_comb;
-        trace_acc_before <= acc_before_comb;
-        trace_acc_after <= acc_after_comb;
-        if (mac_last) begin
-          raw_sum_out <= biased_sum_comb;
-          result_out <= requantize_sat16(biased_sum_comb, out_shift);
-          result_valid <= 1'b1;
+        if (!input_error) begin
+          accumulator <= acc_after_comb;
+          trace_valid <= 1'b1;
+          trace_product <= product_comb;
+          trace_acc_before <= acc_before_comb;
+          trace_acc_after <= acc_after_comb;
+          if (mac_last) begin
+            raw_sum_out <= biased_sum_comb;
+            result_out <= requantize_sat16(biased_sum_comb, out_shift);
+            result_valid <= 1'b1;
+          end
         end
       end
     end
+  end
+
+  // 0x8000 is reserved by the software contract and is never a legal
+  // quantized operand. Keep the error visible for the complete MAC cycle.
+  always_comb begin
+    input_error = mac_valid &&
+      ((a_in == 16'sh8000) || (b_in == 16'sh8000));
   end
 endmodule

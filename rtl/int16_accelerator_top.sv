@@ -33,7 +33,7 @@ module int16_accelerator_top #(
   typedef enum logic[3:0] {S_IDLE,S_BIAS_REQ,S_BIAS_WAIT,S_A_REQ,S_A_WAIT,
     S_B_REQ,S_B_WAIT,S_MAC,S_RESULT,S_WB_REQ,S_WB_WAIT,S_DONE,S_ERROR} state_t;
   state_t state;
-  logic engine_start,supported_shape,config_aligned,pe_result_valid;
+  logic engine_start,supported_shape,config_aligned,pe_result_valid,pe_input_error;
   logic master_outstanding,master_rsp_valid_q,master_rsp_ready;
   logic [31:0] master_rsp_rdata_q;
   logic master_rsp_err_q,master_cmd_fire,master_rsp_fire;
@@ -67,7 +67,8 @@ module int16_accelerator_top #(
     .mac_last((state==S_MAC)&&(current_k+1==matrix_k)),
     .a_in(current_k[0]?$signed(a_pair[31:16]):$signed(a_pair[15:0])),
     .b_in(b_vector),.bias_in(bias_vector),.out_shift(out_shift),
-    .result_valid(pe_result_valid),.result(pe_result),.raw_sum(pe_raw_sum));
+    .result_valid(pe_result_valid),.input_error(pe_input_error),
+    .result(pe_result),.raw_sum(pe_raw_sum));
 
   assign supported_shape=STRICT_COMPETITION_SHAPES ?
     (((matrix_m==16'd99)&&(matrix_k==16'd64)&&(matrix_n==16'd256))||
@@ -172,7 +173,8 @@ module int16_accelerator_top #(
           end
         end
         S_MAC:begin
-          if(current_k+1>=matrix_k)state<=S_RESULT;
+          if(pe_input_error)state<=S_ERROR;
+          else if(current_k+1>=matrix_k)state<=S_RESULT;
           else begin current_k<=current_k+1'b1;state<=S_A_REQ;end
         end
         S_RESULT:if(pe_result_valid)begin pair_idx<=0;state<=S_WB_REQ;end

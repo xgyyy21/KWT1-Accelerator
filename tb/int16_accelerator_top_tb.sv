@@ -77,7 +77,7 @@ module int16_accelerator_top_tb;
   endfunction
   function automatic integer bias_value(input integer c);bias_value=c*17-90;endfunction
   function automatic integer sat16(input longint signed value);
-    if(value>32767)sat16=32767;else if(value< -32768)sat16=-32768;else sat16=value;
+    if(value>32767)sat16=32767;else if(value< -32767)sat16=-32767;else sat16=value;
   endfunction
   task automatic put16(input integer byte_addr,input integer value);
     memory[byte_addr>>1]=value;

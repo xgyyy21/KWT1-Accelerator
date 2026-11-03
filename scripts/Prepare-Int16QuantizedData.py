@@ -67,7 +67,7 @@ def main():
     contract = {
         "input_dtype": "int16", "weight_dtype": "int16",
         "bias_dtype": "int32", "output_dtype": "int16",
-        "layout": "row_major", "rounding": "nearest_ties_away",
+        "layout": "row_major", "rounding": "nearest_ties_even",
         "overflow": "saturate",
     }
     for key, expected in contract.items():
@@ -78,10 +78,10 @@ def main():
     for path in source.values():
         if not path.is_file():
             raise SystemExit(f"missing CSV input: {path}")
-    a = read_csv(source["a_csv"], m, k, -32768, 32767)
-    b = read_csv(source["b_csv"], k, n, -32768, 32767)
+    a = read_csv(source["a_csv"], m, k, -32767, 32767)
+    b = read_csv(source["b_csv"], k, n, -32767, 32767)
     bias = read_csv(source["bias_csv"], n, 1, -(1 << 31), (1 << 31) - 1)
-    expected = read_csv(source["expected_csv"], m, n, -32768, 32767)
+    expected = read_csv(source["expected_csv"], m, n, -32767, 32767)
     outputs = {
         "a_int16.mem": (a, 16), "b_int16.mem": (b, 16),
         "bias_int32.mem": (bias, 32), "expected_int16.mem": (expected, 16),

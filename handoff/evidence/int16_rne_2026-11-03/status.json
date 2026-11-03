@@ -1,0 +1,16 @@
+﻿{
+    "CompileExitCode":  0,
+    "SimulationExitCode":  0,
+    "Passed":  true,
+    "ActiveDatatype":  "INT16",
+    "PeCount":  16,
+    "AccumulatorBits":  48,
+    "SystemBusBits":  32,
+    "KTile":  32,
+    "TestedK":  [
+                    64,
+                    256
+                ],
+    "ContinuousJobs":  2,
+    "Fp32InActiveFilelist":  false
+}
