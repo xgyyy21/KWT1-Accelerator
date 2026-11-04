@@ -22,6 +22,8 @@ module int16_software_handoff_tb;
   logic [15:0] memory [0:MEM_WORDS-1];
   logic response_pending; logic [31:0] response_data; logic response_error;
   integer cycle_count, command_count, response_count, output_write_count;
+  integer weight_read_count, bias_read_count;
+  integer run_start_cycle, run_done_cycle;
   integer layer_id, shift_cfg, mismatch_count, first_bad;
   string a_file, b_file, bias_file, expected_file;
 
@@ -49,11 +51,16 @@ module int16_software_handoff_tb;
       response_pending<=0; response_data<=0; response_error<=0;
       m_rsp_valid<=0; m_rsp_rdata<=0; m_rsp_err<=0; cycle_count<=0;
       command_count<=0; response_count<=0; output_write_count<=0;
+      weight_read_count<=0; bias_read_count<=0;
     end else begin
       cycle_count<=cycle_count+1;
       if(m_rsp_valid && m_rsp_ready) begin m_rsp_valid<=0; response_pending<=0; end
       if(m_valid && m_ready) begin
         command_count<=command_count+1;
+        if(m_read && m_addr>=B_BASE && m_addr<BIAS_BASE)
+          weight_read_count<=weight_read_count+1;
+        if(m_read && m_addr>=BIAS_BASE && m_addr<DST_BASE)
+          bias_read_count<=bias_read_count+1;
         if(!m_read && m_addr>=DST_BASE && m_addr<DST_BASE+(M*N*2))
           output_write_count<=output_write_count+1;
         if(m_read) begin
@@ -108,7 +115,9 @@ module int16_software_handoff_tb;
     mmio_write(8'h08,A_BASE); mmio_write(8'h0c,B_BASE);
     mmio_write(8'h20,BIAS_BASE); mmio_write(8'h10,DST_BASE);
     mmio_write(8'h14,M); mmio_write(8'h18,K); mmio_write(8'h1c,N);
-    mmio_write(8'h24,shift_cfg); mmio_write(8'h00,1);
+    mmio_write(8'h24,shift_cfg);
+    run_start_cycle=cycle_count;
+    mmio_write(8'h00,1);
     while(!done && !error) @(posedge clk);
     if(error) $fatal(1,"accelerator ERROR layer=%0d row=%0d col=%0d k=%0d",
       layer_id,row_index,col_index,k_index);
@@ -116,9 +125,15 @@ module int16_software_handoff_tb;
     if(command_count!=response_count)
       $fatal(1,"DONE before final response: commands=%0d responses=%0d",
         command_count,response_count);
+    run_done_cycle=cycle_count;
     if(output_write_count!=((M*N)/2))
       $fatal(1,"write command count mismatch got=%0d expected=%0d",
         output_write_count,(M*N)/2);
+    if (M==99 && K==64 && N==256 &&
+        (weight_read_count!=8192 || bias_read_count!=256 ||
+         output_write_count!=12672 || command_count!=71808))
+      $fatal(1,"layer00 reuse traffic mismatch commands=%0d W=%0d bias=%0d Y=%0d",
+        command_count,weight_read_count,bias_read_count,output_write_count);
 
     mismatch_count=0; first_bad=-1;
     for(integer i=0;i<M*N;i=i+1) begin
@@ -130,8 +145,9 @@ module int16_software_handoff_tb;
             layer_id,i,i/N,i%N,memory[(DST_BASE>>1)+i],expected_words[i]);
       end
     end
-    $display("RESULT layer=%0d shift=%0d outputs=%0d writes=%0d commands=%0d responses=%0d mismatches=%0d first_bad=%0d",
+    $display("RESULT layer=%0d shift=%0d outputs=%0d writes=%0d commands=%0d responses=%0d weight_reads=%0d bias_reads=%0d cycles=%0d mismatches=%0d first_bad=%0d",
       layer_id,shift_cfg,M*N,output_write_count,command_count,response_count,
+      weight_read_count,bias_read_count,run_done_cycle-run_start_cycle,
       mismatch_count,first_bad);
     if(mismatch_count!=0) $fatal(1,"software candidate comparison mismatch");
     $display("PASS int16_software_handoff_tb layer=%0d",layer_id);

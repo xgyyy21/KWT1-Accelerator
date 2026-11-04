@@ -30,8 +30,9 @@ module int16_accelerator_top #(
   output logic [15:0] current_row,current_col,current_k,current_k_block
 );
   localparam int LANES=16;
-  typedef enum logic[3:0] {S_IDLE,S_BIAS_REQ,S_BIAS_WAIT,S_A_REQ,S_A_WAIT,
-    S_B_REQ,S_B_WAIT,S_MAC,S_RESULT,S_WB_REQ,S_WB_WAIT,S_DONE,S_ERROR} state_t;
+  typedef enum logic[4:0] {S_IDLE,S_BIAS_REQ,S_BIAS_WAIT,S_A_REQ,S_A_WAIT,
+    S_B_REQ,S_B_WAIT,S_MAC,S_RESULT,S_WB_REQ,S_WB_WAIT,S_DONE,S_ERROR,
+    S_TILE_B_REQ,S_TILE_B_WAIT} state_t;
   state_t state;
   logic engine_start,supported_shape,config_aligned,pe_result_valid,pe_input_error;
   logic master_outstanding,master_rsp_valid_q,master_rsp_ready;
@@ -46,6 +47,10 @@ module int16_accelerator_top #(
   logic signed [15:0] b_vector[LANES],pe_result[LANES];
   logic signed [31:0] bias_vector[LANES];
   logic signed [47:0] pe_raw_sum[LANES];
+  // K=64 layer-00 weight tile cache. One 64x16 INT16 tile is retained while
+  // all M rows use the current output-column tile.
+  logic signed [15:0] weight_cache [0:63][LANES];
+  logic weight_cache_valid;
 
   int16_system_bus_control #(.ADDR_WIDTH(ADDR_WIDTH),.CTRL_BASE(CTRL_BASE)) u_control(
     .clk(clk),.rst_n(rst_n),.s_icb_cmd_valid(s_icb_cmd_valid),
@@ -83,7 +88,8 @@ module int16_accelerator_top #(
   assign current_k_block=current_k>>5;
   assign master_cmd_fire=m_icb_cmd_valid&&m_icb_cmd_ready;
   assign master_rsp_ready=(state==S_BIAS_WAIT)||(state==S_A_WAIT)||
-                          (state==S_B_WAIT)||(state==S_WB_WAIT);
+                          (state==S_B_WAIT)||(state==S_WB_WAIT)||
+                          (state==S_TILE_B_WAIT);
   assign m_icb_rsp_ready=!master_rsp_valid_q&&
                          (master_outstanding||master_cmd_fire);
   assign master_rsp_fire=m_icb_rsp_valid&&m_icb_rsp_ready;
@@ -94,6 +100,11 @@ module int16_accelerator_top #(
     case(state)
       S_BIAS_REQ:begin
         address_calc={32'd0,bias_base}+(64'(current_col+bias_idx)*4);
+        m_icb_cmd_valid=1'b1;m_icb_cmd_addr=ADDR_WIDTH'(address_calc);
+      end
+      S_TILE_B_REQ:begin
+        address_calc={32'd0,b_base}+
+          (((64'(current_k)*matrix_n)+current_col+(pair_idx*2))*2);
         m_icb_cmd_valid=1'b1;m_icb_cmd_addr=ADDR_WIDTH'(address_calc);
       end
       S_A_REQ:if(!current_k[0])begin
@@ -122,12 +133,17 @@ module int16_accelerator_top #(
     if(!rst_n)begin
       state<=S_IDLE;current_row<=0;current_col<=0;current_k<=0;
       bias_idx<=0;pair_idx<=0;active_cols<=0;a_pair<=0;
+      weight_cache_valid<=1'b0;
       master_outstanding<=1'b0;master_rsp_valid_q<=1'b0;
       master_rsp_rdata_q<='0;master_rsp_err_q<=1'b0;
       for(integer i=0;i<LANES;i=i+1)begin b_vector[i]<=0;bias_vector[i]<=0;end
     end else begin
       if(master_rsp_valid_q&&master_rsp_ready)
         master_rsp_valid_q<=1'b0;
+      if(master_rsp_valid_q&&master_rsp_ready&&master_rsp_err_q)
+        weight_cache_valid<=1'b0;
+      if((state==S_MAC)&&pe_input_error)
+        weight_cache_valid<=1'b0;
       if(master_cmd_fire)
         master_outstanding<=1'b1;
       if(master_rsp_fire)begin
@@ -139,6 +155,7 @@ module int16_accelerator_top #(
       case(state)
         S_IDLE:if(engine_start)begin
           current_row<=0;current_col<=0;current_k<=0;bias_idx<=0;pair_idx<=0;
+          weight_cache_valid<=1'b0;
           active_cols<=(matrix_n<LANES)?matrix_n:LANES;
           for(integer i=0;i<LANES;i=i+1)begin b_vector[i]<=0;bias_vector[i]<=0;end
           if(supported_shape&&config_aligned) state<=S_BIAS_REQ;
@@ -149,17 +166,55 @@ module int16_accelerator_top #(
           if(master_rsp_err_q)state<=S_ERROR;
           else begin
             bias_vector[bias_idx]<=$signed(master_rsp_rdata_q);
-            if(bias_idx+1>=active_cols)begin bias_idx<=0;current_k<=0;state<=S_A_REQ;end
+            if(bias_idx+1>=active_cols)begin
+              bias_idx<=0;current_k<=0;
+              if(matrix_k==16'd64) begin pair_idx<=0;state<=S_TILE_B_REQ;end
+              else state<=S_A_REQ;
+            end
             else begin bias_idx<=bias_idx+1'b1;state<=S_BIAS_REQ;end
           end
         end
         S_A_REQ:begin
-          if(current_k[0])begin pair_idx<=0;state<=S_B_REQ;end
+          if(current_k[0]&&matrix_k==16'd64)begin
+            for(integer i=0;i<LANES;i=i+1)
+              b_vector[i]<=(i<active_cols)?weight_cache[current_k][i]:16'sd0;
+            if(weight_cache_valid) state<=S_MAC;
+            else state<=S_ERROR;
+          end else if(current_k[0])begin pair_idx<=0;state<=S_B_REQ;end
           else if(m_icb_cmd_valid&&m_icb_cmd_ready)state<=S_A_WAIT;
         end
         S_A_WAIT:if(master_rsp_valid_q&&master_rsp_ready)begin
           if(master_rsp_err_q)state<=S_ERROR;
-          else begin a_pair<=master_rsp_rdata_q;pair_idx<=0;state<=S_B_REQ;end
+          else begin
+            a_pair<=master_rsp_rdata_q;pair_idx<=0;
+            if(matrix_k==16'd64) begin
+              for(integer i=0;i<LANES;i=i+1)
+                b_vector[i]<=(i<active_cols)?weight_cache[current_k][i]:16'sd0;
+              if(weight_cache_valid) state<=S_MAC;
+              else state<=S_ERROR;
+            end else state<=S_B_REQ;
+          end
+        end
+        S_TILE_B_REQ:if(m_icb_cmd_valid&&m_icb_cmd_ready)state<=S_TILE_B_WAIT;
+        S_TILE_B_WAIT:if(master_rsp_valid_q&&master_rsp_ready)begin
+          if(master_rsp_err_q)state<=S_ERROR;
+          else begin
+            weight_cache[current_k][pair_idx*2]<=
+              $signed(master_rsp_rdata_q[15:0]);
+            weight_cache[current_k][pair_idx*2+1]<=
+              ((pair_idx*2+1)<active_cols)?
+                $signed(master_rsp_rdata_q[31:16]):16'sd0;
+            if(pair_idx+1>=((active_cols+1)>>1))begin
+              pair_idx<=0;
+              if(current_k+1>=matrix_k)begin
+                current_k<=0;weight_cache_valid<=1'b1;state<=S_A_REQ;
+              end else begin
+                current_k<=current_k+1'b1;state<=S_TILE_B_REQ;
+              end
+            end else begin
+              pair_idx<=pair_idx+1'b1;state<=S_TILE_B_REQ;
+            end
+          end
         end
         S_B_REQ:if(m_icb_cmd_valid&&m_icb_cmd_ready)state<=S_B_WAIT;
         S_B_WAIT:if(master_rsp_valid_q&&master_rsp_ready)begin
@@ -184,7 +239,21 @@ module int16_accelerator_top #(
           else begin
           if(pair_idx+1>=((active_cols+1)>>1))begin
             pair_idx<=0;current_k<=0;bias_idx<=0;
-            if(current_col+active_cols<matrix_n)begin
+            if(matrix_k==16'd64) begin
+              // K=64 layer-00 mode: keep the current W/bias tile while
+              // advancing rows; load the next tile only after all rows.
+              if(current_row+1<matrix_m)begin
+                current_row<=current_row+1'b1;
+                state<=S_A_REQ;
+              end else if(current_col+active_cols<matrix_n)begin
+                current_row<=0;current_col<=current_col+LANES;
+                active_cols<=((matrix_n-(current_col+LANES))<LANES)?
+                  (matrix_n-(current_col+LANES)):LANES;
+                bias_idx<=0;pair_idx<=0;current_k<=0;
+                weight_cache_valid<=1'b0;
+                state<=S_BIAS_REQ;
+              end else state<=S_DONE;
+            end else if(current_col+active_cols<matrix_n)begin
               current_col<=current_col+LANES;
               active_cols<=((matrix_n-(current_col+LANES))<LANES)?
                 (matrix_n-(current_col+LANES)):LANES;

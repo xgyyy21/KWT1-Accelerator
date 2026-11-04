@@ -12,8 +12,14 @@ module int16_accelerator_top_tb;
   wire busy,done,error;wire[15:0]row_index,col_index,k_index,k_block;
   logic signed[15:0]memory[0:65535];
   logic response_pending;logic[31:0]pending_rdata;logic pending_error;
+  logic inject_error=0;logic[31:0]injected_error_addr=0;
   logic pending_read;logic[15:0]read_word_index;integer cycle_count;
-  integer commands_seen=0,responses_seen=0;logic[31:0]last_cmd_addr=0,last_rsp_data=0;
+  integer commands_seen=0,responses_seen=0;
+  integer output_write_count=0;
+  integer weight_read_count=0,bias_read_count=0;
+  integer first_weight_reads,first_bias_reads;
+  integer second_weight_reads,second_bias_reads,third_output_writes;
+  logic[31:0]last_cmd_addr=0,last_rsp_data=0;
   int16_accelerator_top #(.STRICT_COMPETITION_SHAPES(0))dut(
     .clk(clk),.rst_n(rst_n),.s_icb_cmd_valid(ctrl_valid),
     .s_icb_cmd_ready(ctrl_ready),.s_icb_cmd_addr(ctrl_addr),
@@ -35,10 +41,18 @@ module int16_accelerator_top_tb;
   always_ff @(posedge clk or negedge rst_n)begin
     if(!rst_n)begin response_pending<=0;pending_rdata<=0;pending_error<=0;
       pending_read<=0;read_word_index<=0;sys_rsp_valid<=0;
-      sys_rsp_rdata<=0;sys_rsp_error<=0;cycle_count<=0;end
+      sys_rsp_rdata<=0;sys_rsp_error<=0;cycle_count<=0;output_write_count<=0;end
     else begin
       cycle_count<=cycle_count+1;
-      if(sys_valid&&sys_ready)begin commands_seen<=commands_seen+1;last_cmd_addr<=sys_addr;end
+      if(sys_valid&&sys_ready)begin
+        commands_seen<=commands_seen+1;last_cmd_addr<=sys_addr;
+        if(sys_read&&sys_addr>=B_BASE&&sys_addr<BIAS_BASE)
+          weight_read_count<=weight_read_count+1;
+        if(sys_read&&sys_addr>=BIAS_BASE&&sys_addr<BIAS_BASE+(N*4))
+          bias_read_count<=bias_read_count+1;
+        if(!sys_read&&sys_addr>=DST_BASE&&sys_addr<DST_BASE+256)
+          output_write_count<=output_write_count+1;
+      end
       if(sys_rsp_valid&&sys_rsp_ready)begin responses_seen<=responses_seen+1;last_rsp_data<=sys_rsp_rdata;end
       if(sys_rsp_valid&&sys_rsp_ready)begin
         sys_rsp_valid<=0;response_pending<=0;
@@ -46,11 +60,12 @@ module int16_accelerator_top_tb;
       if(sys_valid&&sys_ready)begin
         if(sys_read)begin
           pending_rdata<={memory[(sys_addr>>1)+1],memory[sys_addr>>1]};
+          pending_error<=inject_error&&(sys_addr==injected_error_addr);
           pending_read<=1;response_pending<=1;
         end else begin
           if(sys_wmask[1:0]==2'b11)memory[sys_addr>>1]<=sys_wdata[15:0];
           if(sys_wmask[3:2]==2'b11)memory[(sys_addr>>1)+1]<=sys_wdata[31:16];
-          pending_rdata<=0;pending_read<=0;response_pending<=1;
+          pending_rdata<=0;pending_error<=0;pending_read<=0;response_pending<=1;
         end
       end
       if(response_pending&&!sys_rsp_valid)begin
@@ -103,6 +118,12 @@ module int16_accelerator_top_tb;
     if(commands_seen!=responses_seen)
       $fatal(1,"DONE before all accepted bus transactions responded: %0d/%0d",
         commands_seen,responses_seen);
+    first_weight_reads=weight_read_count;
+    first_bias_reads=bias_read_count;
+    $display("TRAFFIC_K64 W=%0d BIAS=%0d",first_weight_reads,first_bias_reads);
+    if(first_weight_reads!=576||first_bias_reads!=18)
+      $fatal(1,"K64 tile reuse traffic mismatch W=%0d expected=576 bias=%0d expected=18",
+        first_weight_reads,first_bias_reads);
     for(integer r=0;r<M;r=r+1)for(integer c=0;c<N;c=c+1)begin
       longint signed sum;integer expected;sum=bias_value(c);
       for(integer k=0;k<K;k=k+1)sum=sum+a_value(r,k)*b_value(k,c);
@@ -137,7 +158,70 @@ module int16_accelerator_top_tb;
         $fatal(1,"K256 mismatch c=%0d got=%0d expected=%0d",c,
           $signed(memory[(DST_BASE>>1)+c]),expected);
     end
-    $display("PASS int16_accelerator_top_tb K64_and_K256 PE=16 bus=32 continuous_jobs=2");
+    if(weight_read_count-first_weight_reads!=2048||
+       bias_read_count-first_bias_reads!=16)
+      $fatal(1,"K256 legacy traffic changed Wdelta=%0d biasdelta=%0d",
+        weight_read_count-first_weight_reads,bias_read_count-first_bias_reads);
+    $display("TRAFFIC_K256 W=%0d BIAS=%0d",
+      weight_read_count-first_weight_reads,bias_read_count-first_bias_reads);
+
+    // A third K=64 task uses changed W/bias without reset.  The cache must
+    // be invalidated at task start and reload fresh contents, not reuse the
+    // previous job's tile.
+    second_weight_reads=weight_read_count;
+    second_bias_reads=bias_read_count;
+    third_output_writes=output_write_count;
+    repeat(2)@(negedge clk);
+    for(integer k=0;k<64;k=k+1)put16(A_BASE+2*k,1);
+    for(integer k=0;k<64;k=k+1)for(integer c=0;c<16;c=c+1)
+      put16(B_BASE+2*(k*16+c),2);
+    for(integer c=0;c<16;c=c+1)begin
+      put32(BIAS_BASE+4*c,0);
+      put16(DST_BASE+2*c,16'h55aa);
+    end
+    mmio_write(8'h14,1);mmio_write(8'h18,64);mmio_write(8'h1c,16);
+    mmio_write(8'h24,0);mmio_write(8'h00,1);
+    while(!done&&!error)@(posedge clk);
+    if(error)$fatal(1,"third K64 cache refresh task entered ERROR");
+    @(posedge clk);
+    for(integer c=0;c<16;c=c+1)
+      if($signed(memory[(DST_BASE>>1)+c])!==128)
+        $fatal(1,"stale K64 cache result c=%0d got=%0d expected=128",c,
+          $signed(memory[(DST_BASE>>1)+c]));
+    if(weight_read_count-second_weight_reads!=512||
+       bias_read_count-second_bias_reads!=16||
+       output_write_count-third_output_writes!=8)
+      $fatal(1,"third K64 reload traffic mismatch W=%0d bias=%0d writes=%0d",
+        weight_read_count-second_weight_reads,
+        bias_read_count-second_bias_reads,
+        output_write_count-third_output_writes);
+    $display("TRAFFIC_K64_RELOAD W=%0d BIAS=%0d Y_WRITES=%0d",
+      weight_read_count-second_weight_reads,
+      bias_read_count-second_bias_reads,
+      output_write_count-third_output_writes);
+
+    // Exercise cache invalidation after it has become valid: complete row 0,
+    // then inject an ICB error on row 1's first A read.
+    repeat(2)@(negedge clk);
+    for(integer r=0;r<2;r=r+1)for(integer k=0;k<64;k=k+1)
+      put16(A_BASE+2*(r*64+k),1);
+    for(integer k=0;k<64;k=k+1)for(integer c=0;c<16;c=c+1)
+      put16(B_BASE+2*(k*16+c),1);
+    for(integer c=0;c<16;c=c+1)begin
+      put32(BIAS_BASE+4*c,0);
+      put16(DST_BASE+2*c,16'h55aa);
+      put16(DST_BASE+2*(16+c),16'h55aa);
+    end
+    mmio_write(8'h14,2);mmio_write(8'h18,64);mmio_write(8'h1c,16);
+    inject_error=1;injected_error_addr=A_BASE+(64*2);
+    mmio_write(8'h00,1);
+    while(!done&&!error)@(posedge clk);
+    if(!error)$fatal(1,"injected memory error did not enter ERROR");
+    @(posedge clk);
+    if(dut.weight_cache_valid!==1'b0)
+      $fatal(1,"weight cache remained valid after an in-flight memory error");
+    $display("PASS CACHE_ERROR_INVALIDATION cache_valid=%b",dut.weight_cache_valid);
+    $display("PASS int16_accelerator_top_tb K64_and_K256_and_cache_reload PE=16 bus=32 continuous_jobs=3");
     $finish;
   end
   initial begin #5000000;

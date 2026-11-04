@@ -1,0 +1,20 @@
+﻿{
+    "baseline":  {
+                     "x_reads":  50688,
+                     "weight_reads":  811008,
+                     "bias_reads":  25344,
+                     "output_writes":  12672,
+                     "total_dma":  899712
+                 },
+    "optimized":  {
+                      "x_reads":  50688,
+                      "weight_reads":  8192,
+                      "bias_reads":  256,
+                      "output_writes":  12672,
+                      "total_dma":  71808
+                  },
+    "total_dma_reduction_percent":  92.0188,
+    "weight_read_reduction_percent":  98.9899,
+    "bias_read_reduction_percent":  98.9899,
+    "note":  "Baseline from server trace analysis; optimized counts from local RTL behavioral simulation. Cycle counts are not directly comparable across environments."
+}
