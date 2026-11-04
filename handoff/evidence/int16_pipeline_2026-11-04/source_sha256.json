@@ -1,0 +1,72 @@
+﻿[
+    {
+        "path":  "rtl/int16_pe_mac.sv",
+        "bytes":  5315,
+        "sha256":  "4ea47aada26246e2fcee36d8a6dbd7a693d24609f0ab56b4cf5fc809894f1e2f"
+    },
+    {
+        "path":  "rtl/int16_pe_array_16.sv",
+        "bytes":  1336,
+        "sha256":  "76d2d00f0f06d575355e2ba0ef12aa6869d59c3de25120d7d31c275bbb0d32c3"
+    },
+    {
+        "path":  "rtl/int16_accelerator_top.sv",
+        "bytes":  9154,
+        "sha256":  "9072bd7060d7376e53ea2b45b1c60ff390e4d803af166f32d1b69ea539861f52"
+    },
+    {
+        "path":  "rtl/int16_system_bus_control.sv",
+        "bytes":  4046,
+        "sha256":  "dce4ab43a0c5c99f72754f13ae6d345bf2052d1567460eb63571d8aaf756e460"
+    },
+    {
+        "path":  "rtl/int16_e203_system_bus_adapter.sv",
+        "bytes":  5165,
+        "sha256":  "8f113c3b38a947f0befc2a7aed772a1efaa48c3a0d9125c12800c0e2af7038de"
+    },
+    {
+        "path":  "rtl/files.f",
+        "bytes":  219,
+        "sha256":  "cc1f4f112d94cfadefcc4e9e17ef6bfb1794d83a1852ff61a75639de973070da"
+    },
+    {
+        "path":  "tb/int16_pe_mac_tb.sv",
+        "bytes":  4203,
+        "sha256":  "7c96df5aff7508d88690d880f43af0aa76771caebe21d9765930d91db8f5ee7e"
+    },
+    {
+        "path":  "tb/int16_accelerator_top_tb.sv",
+        "bytes":  7303,
+        "sha256":  "34b7144d19d71f0d09f04b86e0e44f3d2dfc050375b1b30f07caca5c2da0faaa"
+    },
+    {
+        "path":  "tb/int16_e203_minimal_tb.sv",
+        "bytes":  10240,
+        "sha256":  "efd54bb55f96b5d4cb306f546e05bef0494f87b6cd94849c317584c03070b38e"
+    },
+    {
+        "path":  "handoff/int16_e203_minimal_2026-11-03/manifest.json",
+        "bytes":  1373,
+        "sha256":  "07b0b75bbb3e7f683aa386410a9c98b7bd4e48ef9b6d6d301433e4f5a9b12d5f"
+    },
+    {
+        "path":  "handoff/int16_e203_minimal_2026-11-03/x.mem",
+        "bytes":  320,
+        "sha256":  "ab9db43753a2d9202f54d9cab334d244d9784e9d98679ffec02b3c9be1549101"
+    },
+    {
+        "path":  "handoff/int16_e203_minimal_2026-11-03/w.mem",
+        "bytes":  5120,
+        "sha256":  "c839c20d000447a1415509980bd36cc0ced9caffdaefb330f4697584b3b023ed"
+    },
+    {
+        "path":  "handoff/int16_e203_minimal_2026-11-03/bias.mem",
+        "bytes":  160,
+        "sha256":  "9a57762442c7680cd39df13b739c70c21a80f44ebab13e7a8d7ef25360dd77a6"
+    },
+    {
+        "path":  "handoff/int16_e203_minimal_2026-11-03/y_expected.mem",
+        "bytes":  80,
+        "sha256":  "003d1f54c278d5905a45a84a32d5c680e7ffa1dfefa4c34229797f4022b71d05"
+    }
+]

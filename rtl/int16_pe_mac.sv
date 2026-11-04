@@ -26,8 +26,14 @@ module int16_pe_mac #(
   logic signed [ACC_WIDTH-1:0] product_ext;
   logic signed [ACC_WIDTH-1:0] acc_before_comb;
   logic signed [ACC_WIDTH-1:0] acc_after_comb;
-  logic signed [ACC_WIDTH-1:0] bias_ext;
-  logic signed [ACC_WIDTH-1:0] biased_sum_comb;
+  logic signed [ACC_WIDTH-1:0] pending_acc_q;
+  logic signed [31:0] pending_bias_q;
+  logic [4:0] pending_shift_q;
+  logic pending_valid_q;
+  logic signed [ACC_WIDTH-1:0] biased_sum_q;
+  logic [4:0] biased_shift_q;
+  logic biased_valid_q;
+  logic signed [ACC_WIDTH-1:0] pending_bias_ext;
 
   // Round to nearest, ties to even, then saturate to the software range.
   function automatic logic signed [15:0] requantize_sat16(
@@ -69,15 +75,21 @@ module int16_pe_mac #(
   always_comb begin
     product_comb = $signed(a_in) * $signed(b_in);
     product_ext = {{(ACC_WIDTH-32){product_comb[31]}}, product_comb};
-    bias_ext = {{(ACC_WIDTH-32){bias_in[31]}}, bias_in};
+    pending_bias_ext = {{(ACC_WIDTH-32){pending_bias_q[31]}}, pending_bias_q};
     acc_before_comb = start ? '0 : accumulator;
     acc_after_comb = acc_before_comb + product_ext;
-    biased_sum_comb = acc_after_comb + bias_ext;
   end
 
   always_ff @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
       accumulator <= '0;
+      pending_acc_q <= '0;
+      pending_bias_q <= '0;
+      pending_shift_q <= '0;
+      pending_valid_q <= 1'b0;
+      biased_sum_q <= '0;
+      biased_shift_q <= '0;
+      biased_valid_q <= 1'b0;
       result_valid <= 1'b0;
       result_out <= '0;
       raw_sum_out <= '0;
@@ -88,6 +100,25 @@ module int16_pe_mac #(
     end else begin
       result_valid <= 1'b0;
       trace_valid <= 1'b0;
+
+      // E1: separate the final bias addition from the MAC feedback path.
+      if (pending_valid_q) begin
+        biased_sum_q <= pending_acc_q + pending_bias_ext;
+        biased_shift_q <= pending_shift_q;
+        biased_valid_q <= 1'b1;
+        pending_valid_q <= 1'b0;
+      end else begin
+        biased_valid_q <= 1'b0;
+      end
+
+      // E2: perform the existing RNE/shift/saturation operation.  The
+      // output data and raw sum are held until the next completed result.
+      if (biased_valid_q) begin
+        raw_sum_out <= biased_sum_q;
+        result_out <= requantize_sat16(biased_sum_q, biased_shift_q);
+        result_valid <= 1'b1;
+      end
+
       if (start && !mac_valid)
         accumulator <= '0;
       if (mac_valid) begin
@@ -98,9 +129,12 @@ module int16_pe_mac #(
           trace_acc_before <= acc_before_comb;
           trace_acc_after <= acc_after_comb;
           if (mac_last) begin
-            raw_sum_out <= biased_sum_comb;
-            result_out <= requantize_sat16(biased_sum_comb, out_shift);
-            result_valid <= 1'b1;
+            // Capture acc_after, not accumulator: NBA updates have not yet
+            // taken effect at this edge.  Bias/shift belong to this job.
+            pending_acc_q <= acc_after_comb;
+            pending_bias_q <= bias_in;
+            pending_shift_q <= out_shift;
+            pending_valid_q <= 1'b1;
           end
         end
       end

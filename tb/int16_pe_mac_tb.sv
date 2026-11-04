@@ -50,6 +50,19 @@ module int16_pe_mac_tb;
         if(check_boundary&&k==32&&acc_before!==32*prod)$fatal(1,"K_TILE continuation failed");
         ref_sum=ref_sum+prod;
         if(k==count-1)begin
+          // E0 accepts the last MAC but deliberately does not publish the
+          // result. E1 performs bias addition and E2 publishes the result.
+          if(result_valid)
+            $fatal(1,"result became valid on final MAC edge");
+          @(negedge clk);
+          start=0;valid=0;last=0;a=0;b=0;
+          // Change these inputs immediately after E0: the result must use
+          // the final MAC's captured bias and shift, not live inputs.
+          bias=0;shift=0;
+          @(posedge clk);#1;
+          if(result_valid)
+            $fatal(1,"result became valid during E1 bias stage");
+          @(posedge clk);#1;
           if(!result_valid||raw_sum!==ref_sum+biasv||result_out!==expected)
             $fatal(1,"result mismatch raw=%0d/%0d out=%0d/%0d",raw_sum,ref_sum+biasv,result_out,expected);
         end else if(result_valid)$fatal(1,"early result");

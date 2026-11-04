@@ -1,0 +1,47 @@
+﻿[
+    {
+        "file":  "int16_accelerator_top_tb.compile.log",
+        "bytes":  11796,
+        "sha256":  "b24e157ff578b04b8dfbdc28c43ba5967622e70a4a4531e1b81a303d15d7391c"
+    },
+    {
+        "file":  "int16_accelerator_top_tb.run.log",
+        "bytes":  286,
+        "sha256":  "99943545e40160430c27b1b60fc123d4251d952d26270317cbe0b5c9b54e09ff"
+    },
+    {
+        "file":  "int16_e203_minimal_status.csv",
+        "bytes":  68561,
+        "sha256":  "e9637a1ba3f8b3b40b4893556673f278c905bebcf01ea4fac736aa674a6cf4e7"
+    },
+    {
+        "file":  "int16_e203_minimal_tb.compile.log",
+        "bytes":  12936,
+        "sha256":  "ab50147571ee4188451768f3a9569d93102cef5f06e046075bc8b83373a448a5"
+    },
+    {
+        "file":  "int16_e203_minimal_tb.run.log",
+        "bytes":  358,
+        "sha256":  "885c216a934bc5f62ddef80dc0d34da00fda7166064d5485a7e19fbbc8db6c97"
+    },
+    {
+        "file":  "int16_e203_minimal_trace.csv",
+        "bytes":  88705,
+        "sha256":  "254ca0cd46f632bace3723058f82b30c75c57448b489cad7ecf64ceea90545bb"
+    },
+    {
+        "file":  "int16_pe_mac_tb.compile.log",
+        "bytes":  1372,
+        "sha256":  "a1327b860af003d48d48aa2d8a747214d0f554334e98c112818994a4a5b60aa5"
+    },
+    {
+        "file":  "int16_pe_mac_tb.run.log",
+        "bytes":  452,
+        "sha256":  "c4062c8433c9d4b77e2008a19c43273b2abed2cc5038bac7e44f4870e3cf8c18"
+    },
+    {
+        "file":  "README.md",
+        "bytes":  631,
+        "sha256":  "f6c844580b0b1fc64dbf349d4bf3a622f844f0900fe2f87d83bcd0b2437de6fc"
+    }
+]
