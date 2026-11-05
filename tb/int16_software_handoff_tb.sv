@@ -24,6 +24,9 @@ module int16_software_handoff_tb;
   integer cycle_count, command_count, response_count, output_write_count;
   integer weight_read_count, bias_read_count;
   integer run_start_cycle, run_done_cycle;
+  logic held_cmd_valid=0, held_cmd_read=0;
+  logic [31:0] held_cmd_addr=0, held_cmd_wdata=0;
+  logic [3:0] held_cmd_wmask=0;
   integer layer_id, shift_cfg, mismatch_count, first_bad;
   string a_file, b_file, bias_file, expected_file;
 
@@ -54,6 +57,16 @@ module int16_software_handoff_tb;
       weight_read_count<=0; bias_read_count<=0;
     end else begin
       cycle_count<=cycle_count+1;
+      if(m_valid&&!m_ready)begin
+        if(held_cmd_valid&&((m_addr!==held_cmd_addr)||
+          (m_read!==held_cmd_read)||(m_wdata!==held_cmd_wdata)||
+          (m_wmask!==held_cmd_wmask)))
+          $fatal(1,"ICB command changed while backpressured");
+        held_cmd_valid<=1;held_cmd_addr<=m_addr;held_cmd_read<=m_read;
+        held_cmd_wdata<=m_wdata;held_cmd_wmask<=m_wmask;
+      end else begin
+        held_cmd_valid<=0;
+      end
       if(m_rsp_valid && m_rsp_ready) begin m_rsp_valid<=0; response_pending<=0; end
       if(m_valid && m_ready) begin
         command_count<=command_count+1;

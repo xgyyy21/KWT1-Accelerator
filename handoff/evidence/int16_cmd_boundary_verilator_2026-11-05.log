@@ -1,0 +1,181 @@
+%Warning-PINCONNECTEMPTY: rtl\int16_pe_array_16.sv:24:56: Instance pin connected by name with empty reference: 'trace_valid'
+   24 |       .result_out(result[i]),.raw_sum_out(raw_sum[i]),.trace_valid(),
+      |                                                        ^~~~~~~~~~~
+                          ... For warning description see https://verilator.org/warn/PINCONNECTEMPTY?v=5.050
+                          ... Use "/* verilator lint_off PINCONNECTEMPTY */" and lint_on around source to disable this message.
+%Warning-PINCONNECTEMPTY: rtl\int16_pe_array_16.sv:25:8: Instance pin connected by name with empty reference: 'trace_product'
+   25 |       .trace_product(),.trace_acc_before(),.trace_acc_after());
+      |        ^~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: rtl\int16_pe_array_16.sv:25:25: Instance pin connected by name with empty reference: 'trace_acc_before'
+   25 |       .trace_product(),.trace_acc_before(),.trace_acc_after());
+      |                         ^~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: rtl\int16_pe_array_16.sv:25:45: Instance pin connected by name with empty reference: 'trace_acc_after'
+   25 |       .trace_product(),.trace_acc_before(),.trace_acc_after());
+      |                                             ^~~~~~~~~~~~~~~
+%Warning-WIDTHEXPAND: rtl\int16_system_bus_control.sv:81:30: Operator ASSIGNDLY expects 32 bits on the Assign RHS, but Assign RHS's VARREF 'matrix_m' generates 16 bits.
+                                                           : ... note: In instance 'int16_accelerator_top.u_control'
+   81 |           A_M:s_icb_rsp_rdata<=matrix_m;A_K:s_icb_rsp_rdata<=matrix_k;
+      |                              ^~
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.050
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: rtl\int16_system_bus_control.sv:81:60: Operator ASSIGNDLY expects 32 bits on the Assign RHS, but Assign RHS's VARREF 'matrix_k' generates 16 bits.
+                                                           : ... note: In instance 'int16_accelerator_top.u_control'
+   81 |           A_M:s_icb_rsp_rdata<=matrix_m;A_K:s_icb_rsp_rdata<=matrix_k;
+      |                                                            ^~
+%Warning-WIDTHEXPAND: rtl\int16_system_bus_control.sv:82:30: Operator ASSIGNDLY expects 32 bits on the Assign RHS, but Assign RHS's VARREF 'matrix_n' generates 16 bits.
+                                                           : ... note: In instance 'int16_accelerator_top.u_control'
+   82 |           A_N:s_icb_rsp_rdata<=matrix_n;A_SHIFT:s_icb_rsp_rdata<=out_shift;
+      |                              ^~
+%Warning-WIDTHEXPAND: rtl\int16_system_bus_control.sv:82:64: Operator ASSIGNDLY expects 32 bits on the Assign RHS, but Assign RHS's VARREF 'out_shift' generates 5 bits.
+                                                           : ... note: In instance 'int16_accelerator_top.u_control'
+   82 |           A_N:s_icb_rsp_rdata<=matrix_n;A_SHIFT:s_icb_rsp_rdata<=out_shift;
+      |                                                                ^~
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:126:38: Operator ADD expects 64 bits on the RHS, but RHS's VARREF 'current_col' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  126 |           (((64'(current_k)*matrix_n)+current_col+(pair_idx*2))*2);
+      |                                      ^
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:132:51: Operator AND expects 64 bits on the LHS, but LHS's VARREF 'current_k' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  132 |           (((64'(current_row)*matrix_k)+(current_k&16'hfffe))*2);
+      |                                                   ^
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:132:51: Operator AND expects 64 bits on the RHS, but RHS's CONST '16'hfffe' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  132 |           (((64'(current_row)*matrix_k)+(current_k&16'hfffe))*2);
+      |                                                   ^
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:138:38: Operator ADD expects 64 bits on the RHS, but RHS's VARREF 'current_col' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  138 |           (((64'(current_k)*matrix_n)+current_col+(pair_idx*2))*2);
+      |                                      ^
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:144:40: Operator ADD expects 64 bits on the RHS, but RHS's VARREF 'current_col' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  144 |           (((64'(current_row)*matrix_n)+current_col+(pair_idx*2))*2);
+      |                                        ^
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:196:33: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'matrix_n' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  196 |           active_cols<=(matrix_n<LANES)?matrix_n:LANES;
+      |                                 ^
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:196:40: Operator COND expects 32 bits on the Conditional True, but Conditional True's VARREF 'matrix_n' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  196 |           active_cols<=(matrix_n<LANES)?matrix_n:LANES;
+      |                                        ^
+%Warning-WIDTHTRUNC: rtl\int16_accelerator_top.sv:196:22: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's COND generates 32 bits.
+                                                        : ... note: In instance 'int16_accelerator_top'
+  196 |           active_cols<=(matrix_n<LANES)?matrix_n:LANES;
+      |                      ^~
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.050
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: rtl\int16_accelerator_top.sv:205:24: Bit extraction of array[15:0] requires 4 bit index, not 5 bits.
+                                                        : ... note: In instance 'int16_accelerator_top'
+  205 |             bias_vector[bias_idx]<=$signed(master_rsp_rdata_q);
+      |                        ^
+%Warning-WIDTHTRUNC: rtl\int16_accelerator_top.sv:217:56: Bit extraction of array[63:0] requires 6 bit index, not 16 bits.
+                                                        : ... note: In instance 'int16_accelerator_top'
+  217 |               b_vector[i]<=(i<active_cols)?weight_cache[current_k][i]:16'sd0;
+      |                                                        ^
+%Warning-WIDTHTRUNC: rtl\int16_accelerator_top.sv:229:58: Bit extraction of array[63:0] requires 6 bit index, not 16 bits.
+                                                        : ... note: In instance 'int16_accelerator_top'
+  229 |                 b_vector[i]<=(i<active_cols)?weight_cache[current_k][i]:16'sd0;
+      |                                                          ^
+%Warning-WIDTHTRUNC: rtl\int16_accelerator_top.sv:239:25: Bit extraction of array[63:0] requires 6 bit index, not 16 bits.
+                                                        : ... note: In instance 'int16_accelerator_top'
+  239 |             weight_cache[current_k][pair_idx*2]<=
+      |                         ^
+%Warning-WIDTHTRUNC: rtl\int16_accelerator_top.sv:241:25: Bit extraction of array[63:0] requires 6 bit index, not 16 bits.
+                                                        : ... note: In instance 'int16_accelerator_top'
+  241 |             weight_cache[current_k][pair_idx*2+1]<=
+      |                         ^
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:286:56: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'current_col' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  286 |                 current_row<=0;current_col<=current_col+LANES;
+      |                                                        ^
+%Warning-WIDTHTRUNC: rtl\int16_accelerator_top.sv:286:43: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's ADD generates 32 bits.
+                                                        : ... note: In instance 'int16_accelerator_top'
+  286 |                 current_row<=0;current_col<=current_col+LANES;
+      |                                           ^~
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:287:40: Operator SUB expects 32 bits on the LHS, but LHS's VARREF 'matrix_n' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  287 |                 active_cols<=((matrix_n-(current_col+LANES))<LANES)?
+      |                                        ^
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:287:53: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'current_col' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  287 |                 active_cols<=((matrix_n-(current_col+LANES))<LANES)?
+      |                                                     ^
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:288:28: Operator SUB expects 32 bits on the LHS, but LHS's VARREF 'matrix_n' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  288 |                   (matrix_n-(current_col+LANES)):LANES;
+      |                            ^
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:288:41: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'current_col' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  288 |                   (matrix_n-(current_col+LANES)):LANES;
+      |                                         ^
+%Warning-WIDTHTRUNC: rtl\int16_accelerator_top.sv:287:28: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's COND generates 32 bits.
+                                                        : ... note: In instance 'int16_accelerator_top'
+  287 |                 active_cols<=((matrix_n-(current_col+LANES))<LANES)?
+      |                            ^~
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:285:38: Operator ADD expects 16 bits on the RHS, but RHS's VARREF 'active_cols' generates 5 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  285 |               end else if(current_col+active_cols<matrix_n)begin
+      |                                      ^
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:294:39: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'current_col' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  294 |               current_col<=current_col+LANES;
+      |                                       ^
+%Warning-WIDTHTRUNC: rtl\int16_accelerator_top.sv:294:26: Operator ASSIGNDLY expects 16 bits on the Assign RHS, but Assign RHS's ADD generates 32 bits.
+                                                        : ... note: In instance 'int16_accelerator_top'
+  294 |               current_col<=current_col+LANES;
+      |                          ^~
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:295:38: Operator SUB expects 32 bits on the LHS, but LHS's VARREF 'matrix_n' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  295 |               active_cols<=((matrix_n-(current_col+LANES))<LANES)?
+      |                                      ^
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:295:51: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'current_col' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  295 |               active_cols<=((matrix_n-(current_col+LANES))<LANES)?
+      |                                                   ^
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:296:26: Operator SUB expects 32 bits on the LHS, but LHS's VARREF 'matrix_n' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  296 |                 (matrix_n-(current_col+LANES)):LANES;
+      |                          ^
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:296:39: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'current_col' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  296 |                 (matrix_n-(current_col+LANES)):LANES;
+      |                                       ^
+%Warning-WIDTHTRUNC: rtl\int16_accelerator_top.sv:295:26: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's COND generates 32 bits.
+                                                        : ... note: In instance 'int16_accelerator_top'
+  295 |               active_cols<=((matrix_n-(current_col+LANES))<LANES)?
+      |                          ^~
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:300:37: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'matrix_n' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  300 |               active_cols<=(matrix_n<LANES)?matrix_n:LANES;
+      |                                     ^
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:300:44: Operator COND expects 32 bits on the Conditional True, but Conditional True's VARREF 'matrix_n' generates 16 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  300 |               active_cols<=(matrix_n<LANES)?matrix_n:LANES;
+      |                                            ^
+%Warning-WIDTHTRUNC: rtl\int16_accelerator_top.sv:300:26: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's COND generates 32 bits.
+                                                        : ... note: In instance 'int16_accelerator_top'
+  300 |               active_cols<=(matrix_n<LANES)?matrix_n:LANES;
+      |                          ^~
+%Warning-WIDTHEXPAND: rtl\int16_accelerator_top.sv:293:36: Operator ADD expects 16 bits on the RHS, but RHS's VARREF 'active_cols' generates 5 bits.
+                                                         : ... note: In instance 'int16_accelerator_top'
+  293 |             end else if(current_col+active_cols<matrix_n)begin
+      |                                    ^
+%Warning-UNUSEDSIGNAL: rtl\int16_accelerator_top.sv:55:16: Bits of signal are not used: 'address_calc'[63:32]
+                                                         : ... note: In instance 'int16_accelerator_top'
+   55 |   logic [63:0] address_calc;
+      |                ^~~~~~~~~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.050
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: rtl\int16_accelerator_top.sv:58:23: Signal is not used: 'pe_raw_sum'
+                                                         : ... note: In instance 'int16_accelerator_top'
+   58 |   logic signed [47:0] pe_raw_sum[LANES];
+      |                       ^~~~~~~~~~
+%Warning-UNSIGNED: rtl\int16_system_bus_control.sv:36:35: Comparison is constant due to unsigned arithmetic
+                                                        : ... note: In instance 'int16_accelerator_top.u_control'
+   36 |   assign in_window=(s_icb_cmd_addr>=CTRL_BASE)&&
+      |                                   ^~
+                   ... For warning description see https://verilator.org/warn/UNSIGNED?v=5.050
+                   ... Use "/* verilator lint_off UNSIGNED */" and lint_on around source to disable this message.
+- V e r i l a t i o n   R e p o r t: Verilator 5.050 2026-07-01 rev vUNKNOWN-built20260702
+- Verilator: Built from 0.163 MB sources in 6 modules, into 0.375 MB in 6 C++ files needing 0.000 MB
+- Verilator: Walltime 0.090 s (elab=0.007, cvt=0.058, bld=0.000); cpu 0.000 s on 1 threads; allocated 23.250 MB

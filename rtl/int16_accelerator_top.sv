@@ -38,6 +38,15 @@ module int16_accelerator_top #(
   logic master_outstanding,master_rsp_valid_q,master_rsp_ready;
   logic [31:0] master_rsp_rdata_q;
   logic master_rsp_err_q,master_cmd_fire,master_rsp_fire;
+  logic master_cmd_pending_q;
+  logic [ADDR_WIDTH-1:0] master_cmd_addr_q;
+  logic master_cmd_read_q;
+  logic [31:0] master_cmd_wdata_q;
+  logic [3:0] master_cmd_wmask_q;
+  logic command_build_valid,command_build_read;
+  logic [ADDR_WIDTH-1:0] command_build_addr;
+  logic [31:0] command_build_wdata;
+  logic [3:0] command_build_wmask;
   logic [ADDR_WIDTH-1:0] a_base,b_base,bias_base,dst_base;
   logic [15:0] matrix_m,matrix_k,matrix_n;
   logic [4:0] out_shift,bias_idx,active_cols;
@@ -86,6 +95,14 @@ module int16_accelerator_top #(
   assign accel_done=(state==S_DONE);
   assign accel_error=(state==S_ERROR);
   assign current_k_block=current_k>>5;
+  // The command boundary is registered.  Address generation and DTCM
+  // window checking therefore cannot feed the shared-controller state in the
+  // same combinational path as the accelerator FSM.
+  assign m_icb_cmd_valid=master_cmd_pending_q;
+  assign m_icb_cmd_addr=master_cmd_addr_q;
+  assign m_icb_cmd_read=master_cmd_read_q;
+  assign m_icb_cmd_wdata=master_cmd_wdata_q;
+  assign m_icb_cmd_wmask=master_cmd_wmask_q;
   assign master_cmd_fire=m_icb_cmd_valid&&m_icb_cmd_ready;
   assign master_rsp_ready=(state==S_BIAS_WAIT)||(state==S_A_WAIT)||
                           (state==S_B_WAIT)||(state==S_WB_WAIT)||
@@ -95,35 +112,40 @@ module int16_accelerator_top #(
   assign master_rsp_fire=m_icb_rsp_valid&&m_icb_rsp_ready;
 
   always_comb begin
-    m_icb_cmd_valid=1'b0;m_icb_cmd_read=1'b1;m_icb_cmd_addr='0;
-    m_icb_cmd_wdata='0;m_icb_cmd_wmask=4'b0000;address_calc=64'd0;
+    command_build_valid=1'b0;command_build_read=1'b1;
+    command_build_addr='0;command_build_wdata='0;
+    command_build_wmask=4'b0000;address_calc=64'd0;
     case(state)
       S_BIAS_REQ:begin
         address_calc={32'd0,bias_base}+(64'(current_col+bias_idx)*4);
-        m_icb_cmd_valid=1'b1;m_icb_cmd_addr=ADDR_WIDTH'(address_calc);
+        command_build_valid=1'b1;
+        command_build_addr=ADDR_WIDTH'(address_calc);
       end
       S_TILE_B_REQ:begin
         address_calc={32'd0,b_base}+
           (((64'(current_k)*matrix_n)+current_col+(pair_idx*2))*2);
-        m_icb_cmd_valid=1'b1;m_icb_cmd_addr=ADDR_WIDTH'(address_calc);
+        command_build_valid=1'b1;
+        command_build_addr=ADDR_WIDTH'(address_calc);
       end
       S_A_REQ:if(!current_k[0])begin
         address_calc={32'd0,a_base}+
           (((64'(current_row)*matrix_k)+(current_k&16'hfffe))*2);
-        m_icb_cmd_valid=1'b1;m_icb_cmd_addr=ADDR_WIDTH'(address_calc);
+        command_build_valid=1'b1;
+        command_build_addr=ADDR_WIDTH'(address_calc);
       end
       S_B_REQ:begin
         address_calc={32'd0,b_base}+
           (((64'(current_k)*matrix_n)+current_col+(pair_idx*2))*2);
-        m_icb_cmd_valid=1'b1;m_icb_cmd_addr=ADDR_WIDTH'(address_calc);
+        command_build_valid=1'b1;
+        command_build_addr=ADDR_WIDTH'(address_calc);
       end
       S_WB_REQ:begin
         address_calc={32'd0,dst_base}+
           (((64'(current_row)*matrix_n)+current_col+(pair_idx*2))*2);
-        m_icb_cmd_valid=1'b1;m_icb_cmd_read=1'b0;
-        m_icb_cmd_addr=ADDR_WIDTH'(address_calc);
-        m_icb_cmd_wdata={pe_result[pair_idx*2+1],pe_result[pair_idx*2]};
-        m_icb_cmd_wmask=(pair_idx*2+1<active_cols)?4'b1111:4'b0011;
+        command_build_valid=1'b1;command_build_read=1'b0;
+        command_build_addr=ADDR_WIDTH'(address_calc);
+        command_build_wdata={pe_result[pair_idx*2+1],pe_result[pair_idx*2]};
+        command_build_wmask=(pair_idx*2+1<active_cols)?4'b1111:4'b0011;
       end
       default:begin end
     endcase
@@ -135,6 +157,9 @@ module int16_accelerator_top #(
       bias_idx<=0;pair_idx<=0;active_cols<=0;a_pair<=0;
       weight_cache_valid<=1'b0;
       master_outstanding<=1'b0;master_rsp_valid_q<=1'b0;
+      master_cmd_pending_q<=1'b0;master_cmd_addr_q<='0;
+      master_cmd_read_q<=1'b1;master_cmd_wdata_q<='0;
+      master_cmd_wmask_q<=4'b0000;
       master_rsp_rdata_q<='0;master_rsp_err_q<=1'b0;
       for(integer i=0;i<LANES;i=i+1)begin b_vector[i]<=0;bias_vector[i]<=0;end
     end else begin
@@ -152,6 +177,18 @@ module int16_accelerator_top #(
         master_rsp_err_q<=m_icb_rsp_err;
         master_outstanding<=1'b0;
       end
+      // Capture the complete command before exposing it to the external ICB.
+      // A command remains pending, with all payload fields stable, until the
+      // real external command handshake occurs.
+      if(command_build_valid&&!master_cmd_pending_q)begin
+        master_cmd_pending_q<=1'b1;
+        master_cmd_addr_q<=command_build_addr;
+        master_cmd_read_q<=command_build_read;
+        master_cmd_wdata_q<=command_build_wdata;
+        master_cmd_wmask_q<=command_build_wmask;
+      end
+      if(master_cmd_fire)
+        master_cmd_pending_q<=1'b0;
       case(state)
         S_IDLE:if(engine_start)begin
           current_row<=0;current_col<=0;current_k<=0;bias_idx<=0;pair_idx<=0;
@@ -161,7 +198,7 @@ module int16_accelerator_top #(
           if(supported_shape&&config_aligned) state<=S_BIAS_REQ;
           else state<=S_ERROR;
         end
-        S_BIAS_REQ:if(m_icb_cmd_valid&&m_icb_cmd_ready)state<=S_BIAS_WAIT;
+        S_BIAS_REQ:if(master_cmd_fire)state<=S_BIAS_WAIT;
         S_BIAS_WAIT:if(master_rsp_valid_q&&master_rsp_ready)begin
           if(master_rsp_err_q)state<=S_ERROR;
           else begin
@@ -181,7 +218,7 @@ module int16_accelerator_top #(
             if(weight_cache_valid) state<=S_MAC;
             else state<=S_ERROR;
           end else if(current_k[0])begin pair_idx<=0;state<=S_B_REQ;end
-          else if(m_icb_cmd_valid&&m_icb_cmd_ready)state<=S_A_WAIT;
+          else if(master_cmd_fire)state<=S_A_WAIT;
         end
         S_A_WAIT:if(master_rsp_valid_q&&master_rsp_ready)begin
           if(master_rsp_err_q)state<=S_ERROR;
@@ -195,7 +232,7 @@ module int16_accelerator_top #(
             end else state<=S_B_REQ;
           end
         end
-        S_TILE_B_REQ:if(m_icb_cmd_valid&&m_icb_cmd_ready)state<=S_TILE_B_WAIT;
+        S_TILE_B_REQ:if(master_cmd_fire)state<=S_TILE_B_WAIT;
         S_TILE_B_WAIT:if(master_rsp_valid_q&&master_rsp_ready)begin
           if(master_rsp_err_q)state<=S_ERROR;
           else begin
@@ -216,7 +253,7 @@ module int16_accelerator_top #(
             end
           end
         end
-        S_B_REQ:if(m_icb_cmd_valid&&m_icb_cmd_ready)state<=S_B_WAIT;
+        S_B_REQ:if(master_cmd_fire)state<=S_B_WAIT;
         S_B_WAIT:if(master_rsp_valid_q&&master_rsp_ready)begin
           if(master_rsp_err_q)state<=S_ERROR;
           else begin
@@ -233,7 +270,7 @@ module int16_accelerator_top #(
           else begin current_k<=current_k+1'b1;state<=S_A_REQ;end
         end
         S_RESULT:if(pe_result_valid)begin pair_idx<=0;state<=S_WB_REQ;end
-        S_WB_REQ:if(m_icb_cmd_valid&&m_icb_cmd_ready)state<=S_WB_WAIT;
+        S_WB_REQ:if(master_cmd_fire)state<=S_WB_WAIT;
         S_WB_WAIT:if(master_rsp_valid_q&&master_rsp_ready)begin
           if(master_rsp_err_q)state<=S_ERROR;
           else begin

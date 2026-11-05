@@ -1,0 +1,2 @@
+﻿"layer","out_shift","result_status","passed","result","log"
+"0","15","PASS","True","RESULT layer=0 shift=15 outputs=25344 writes=12672 commands=71808 responses=71808 weight_reads=8192 bias_reads=256 cycles=529456 mismatches=0 first_bad=-1","layer_00.log"

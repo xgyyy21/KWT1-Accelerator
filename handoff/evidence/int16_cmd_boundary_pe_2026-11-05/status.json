@@ -1,0 +1,11 @@
+﻿{
+    "Created":  "2026-11-05T18:58:27.4747600+08:00",
+    "CompileExitCode":  0,
+    "SimulationExitCode":  0,
+    "Passed":  true,
+    "Contract":  "signed int16 A/B in [-32767,32767]; signed int32 product; signed int48 accumulator; signed int32 bias; nearest-ties-even right shift; saturating int16 output in [-32767,32767]; 0x8000 input=error",
+    "K":  64,
+    "KTile":  32,
+    "PeCount":  16,
+    "AdapterUsed":  false
+}

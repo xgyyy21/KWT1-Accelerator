@@ -1,0 +1,108 @@
+﻿{
+    "zip_path":  "D:\\competition\\KWT1_INT16_hardware_handoff_2026-11-02.zip",
+    "zip_sha256":  "ed4b5e51e629e06faca68153743b6cd09505009f213d1e4a456150281bcfb80b",
+    "baseline_head":  "af583e4b9f31a3886b9b7fbe5b701acb341220ff",
+    "checksum_files_verified":  64,
+    "compile_exit_code":  0,
+    "layers":  [
+                   {
+                       "layer":  0,
+                       "out_shift":  15,
+                       "result_status":  "PASS",
+                       "passed":  true,
+                       "result":  "RESULT layer=0 shift=15 outputs=25344 writes=12672 commands=71808 responses=71808 weight_reads=8192 bias_reads=256 cycles=529456 mismatches=0 first_bad=-1",
+                       "log":  "layer_00.log"
+                   },
+                   {
+                       "layer":  1,
+                       "out_shift":  16,
+                       "result_status":  "PASS",
+                       "passed":  true,
+                       "result":  "RESULT layer=1 shift=16 outputs=25344 writes=12672 commands=71808 responses=71808 weight_reads=8192 bias_reads=256 cycles=529456 mismatches=0 first_bad=-1",
+                       "log":  "layer_01.log"
+                   },
+                   {
+                       "layer":  2,
+                       "out_shift":  16,
+                       "result_status":  "PASS",
+                       "passed":  true,
+                       "result":  "RESULT layer=2 shift=16 outputs=25344 writes=12672 commands=71808 responses=71808 weight_reads=8192 bias_reads=256 cycles=529456 mismatches=0 first_bad=-1",
+                       "log":  "layer_02.log"
+                   },
+                   {
+                       "layer":  3,
+                       "out_shift":  15,
+                       "result_status":  "PASS",
+                       "passed":  true,
+                       "result":  "RESULT layer=3 shift=15 outputs=25344 writes=12672 commands=71808 responses=71808 weight_reads=8192 bias_reads=256 cycles=529456 mismatches=0 first_bad=-1",
+                       "log":  "layer_03.log"
+                   },
+                   {
+                       "layer":  4,
+                       "out_shift":  15,
+                       "result_status":  "PASS",
+                       "passed":  true,
+                       "result":  "RESULT layer=4 shift=15 outputs=25344 writes=12672 commands=71808 responses=71808 weight_reads=8192 bias_reads=256 cycles=529456 mismatches=0 first_bad=-1",
+                       "log":  "layer_04.log"
+                   },
+                   {
+                       "layer":  5,
+                       "out_shift":  15,
+                       "result_status":  "PASS",
+                       "passed":  true,
+                       "result":  "RESULT layer=5 shift=15 outputs=25344 writes=12672 commands=71808 responses=71808 weight_reads=8192 bias_reads=256 cycles=529456 mismatches=0 first_bad=-1",
+                       "log":  "layer_05.log"
+                   },
+                   {
+                       "layer":  6,
+                       "out_shift":  15,
+                       "result_status":  "PASS",
+                       "passed":  true,
+                       "result":  "RESULT layer=6 shift=15 outputs=25344 writes=12672 commands=71808 responses=71808 weight_reads=8192 bias_reads=256 cycles=529456 mismatches=0 first_bad=-1",
+                       "log":  "layer_06.log"
+                   },
+                   {
+                       "layer":  7,
+                       "out_shift":  15,
+                       "result_status":  "PASS",
+                       "passed":  true,
+                       "result":  "RESULT layer=7 shift=15 outputs=25344 writes=12672 commands=71808 responses=71808 weight_reads=8192 bias_reads=256 cycles=529456 mismatches=0 first_bad=-1",
+                       "log":  "layer_07.log"
+                   },
+                   {
+                       "layer":  8,
+                       "out_shift":  15,
+                       "result_status":  "PASS",
+                       "passed":  true,
+                       "result":  "RESULT layer=8 shift=15 outputs=25344 writes=12672 commands=71808 responses=71808 weight_reads=8192 bias_reads=256 cycles=529456 mismatches=0 first_bad=-1",
+                       "log":  "layer_08.log"
+                   },
+                   {
+                       "layer":  9,
+                       "out_shift":  15,
+                       "result_status":  "PASS",
+                       "passed":  true,
+                       "result":  "RESULT layer=9 shift=15 outputs=25344 writes=12672 commands=71808 responses=71808 weight_reads=8192 bias_reads=256 cycles=529456 mismatches=0 first_bad=-1",
+                       "log":  "layer_09.log"
+                   },
+                   {
+                       "layer":  10,
+                       "out_shift":  15,
+                       "result_status":  "PASS",
+                       "passed":  true,
+                       "result":  "RESULT layer=10 shift=15 outputs=25344 writes=12672 commands=71808 responses=71808 weight_reads=8192 bias_reads=256 cycles=529456 mismatches=0 first_bad=-1",
+                       "log":  "layer_10.log"
+                   },
+                   {
+                       "layer":  11,
+                       "out_shift":  16,
+                       "result_status":  "PASS",
+                       "passed":  true,
+                       "result":  "RESULT layer=11 shift=16 outputs=25344 writes=12672 commands=71808 responses=71808 weight_reads=8192 bias_reads=256 cycles=529456 mismatches=0 first_bad=-1",
+                       "log":  "layer_11.log"
+                   }
+               ],
+    "passed":  true,
+    "testbench":  "tb/int16_software_handoff_tb.sv",
+    "rtl_filelist":  "rtl/files.f"
+}

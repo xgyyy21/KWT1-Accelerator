@@ -13,6 +13,8 @@ module int16_accelerator_top_tb;
   logic signed[15:0]memory[0:65535];
   logic response_pending;logic[31:0]pending_rdata;logic pending_error;
   logic inject_error=0;logic[31:0]injected_error_addr=0;
+  logic held_cmd_valid=0,held_cmd_read=0;
+  logic[31:0]held_cmd_addr=0,held_cmd_wdata=0;logic[3:0]held_cmd_wmask=0;
   logic pending_read;logic[15:0]read_word_index;integer cycle_count;
   integer commands_seen=0,responses_seen=0;
   integer output_write_count=0;
@@ -44,6 +46,16 @@ module int16_accelerator_top_tb;
       sys_rsp_rdata<=0;sys_rsp_error<=0;cycle_count<=0;output_write_count<=0;end
     else begin
       cycle_count<=cycle_count+1;
+      if(sys_valid&&!sys_ready)begin
+        if(held_cmd_valid&&((sys_addr!==held_cmd_addr)||
+          (sys_read!==held_cmd_read)||(sys_wdata!==held_cmd_wdata)||
+          (sys_wmask!==held_cmd_wmask)))
+          $fatal(1,"ICB command changed while backpressured");
+        held_cmd_valid<=1;held_cmd_addr<=sys_addr;held_cmd_read<=sys_read;
+        held_cmd_wdata<=sys_wdata;held_cmd_wmask<=sys_wmask;
+      end else begin
+        held_cmd_valid<=0;
+      end
       if(sys_valid&&sys_ready)begin
         commands_seen<=commands_seen+1;last_cmd_addr<=sys_addr;
         if(sys_read&&sys_addr>=B_BASE&&sys_addr<BIAS_BASE)

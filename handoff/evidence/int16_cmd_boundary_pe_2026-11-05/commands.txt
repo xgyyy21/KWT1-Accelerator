@@ -1,0 +1,2 @@
+﻿iverilog -g2012 -Wall -s int16_pe_mac_tb -o D:\competition\build\team_handoff_repo\handoff\evidence\int16_cmd_boundary_pe_2026-11-05\int16_pe.vvp -c D:\competition\build\team_handoff_repo\rtl\int16_pe_files.f D:\competition\build\team_handoff_repo\tb\int16_pe_mac_tb.sv
+vvp D:\competition\build\team_handoff_repo\handoff\evidence\int16_cmd_boundary_pe_2026-11-05\int16_pe.vvp
