@@ -1,0 +1,36 @@
+{
+  "schema": "kwt1-int16-round01-config-v1",
+  "status": "frozen for d7329f2 RTL arithmetic and 12 existing independent FFN1 tasks; official validation accuracy pending",
+  "selected_candidate": "rtl_int48_fixed",
+  "rounding": "nearest_even",
+  "x_w_y_range": [-32767, 32767],
+  "reserved_int16_value": -32768,
+  "zero_point": 0,
+  "model_commit": "237e4097afd4f6851e0b82f0a8d65c2dfe8eae30",
+  "model": "models_data_v2_12_labels/kwt1/best_weights",
+  "rtl_commit": "d7329f200832697a4946bada5b72bf7db5b4ed7c",
+  "calibration_sources": [
+    {
+      "manifest_sha256": "e2a17b6bf0e7045d3c31ae697a062d97740d218a63e181fbfd2d898f5e3cb901",
+      "input_sha256": "d72dd7e4654e12b92a29c1bb247ef30886b632a7a14424ab4abb85e6272ae27a",
+      "source_id": "eight/750e3e75_nohash_0.wav",
+      "split": "unverified"
+    }
+  ],
+  "candidates": {
+    "rtl_int48_fixed": [
+      {"x_frac": 12, "w_frac": 16, "y_frac": 13, "bias_bits": 32, "acc_bits": 48},
+      {"x_frac": 12, "w_frac": 16, "y_frac": 12, "bias_bits": 32, "acc_bits": 48},
+      {"x_frac": 12, "w_frac": 16, "y_frac": 12, "bias_bits": 32, "acc_bits": 48},
+      {"x_frac": 12, "w_frac": 16, "y_frac": 13, "bias_bits": 32, "acc_bits": 48},
+      {"x_frac": 12, "w_frac": 16, "y_frac": 13, "bias_bits": 32, "acc_bits": 48},
+      {"x_frac": 12, "w_frac": 16, "y_frac": 13, "bias_bits": 32, "acc_bits": 48},
+      {"x_frac": 12, "w_frac": 16, "y_frac": 13, "bias_bits": 32, "acc_bits": 48},
+      {"x_frac": 12, "w_frac": 16, "y_frac": 13, "bias_bits": 32, "acc_bits": 48},
+      {"x_frac": 12, "w_frac": 16, "y_frac": 13, "bias_bits": 32, "acc_bits": 48},
+      {"x_frac": 12, "w_frac": 16, "y_frac": 13, "bias_bits": 32, "acc_bits": 48},
+      {"x_frac": 12, "w_frac": 16, "y_frac": 13, "bias_bits": 32, "acc_bits": 48},
+      {"x_frac": 12, "w_frac": 16, "y_frac": 12, "bias_bits": 32, "acc_bits": 48}
+    ]
+  }
+}

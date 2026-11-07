@@ -1,0 +1,557 @@
+{
+  "schema": "kwt1-int16-ffn1-word-images-v1",
+  "status": "software-generated INT16 Golden; RTL acceptance documented separately",
+  "config_sha256": "38ccd1d37d2b442c5f1883684007c1eeeae6718ace2faa2e8ed9b98867a1ee1f",
+  "source_manifest_sha256": "e2a17b6bf0e7045d3c31ae697a062d97740d218a63e181fbfd2d898f5e3cb901",
+  "source_id": "eight/750e3e75_nohash_0.wav",
+  "split": "unverified",
+  "candidate": "rtl_int48_fixed",
+  "word_format": "one unsigned 4-hex-digit 16-bit word per line; two's-complement patterns",
+  "x_layout": "X[99,64], row-major; one signed INT16 per word",
+  "w_layout": "W[64,256], K-major then column; one signed INT16 per word",
+  "bias_layout": "bias[256], signed INT32; low 16-bit word then high word",
+  "y_layout": "Y[99,256], row-major; one signed INT16 per word",
+  "addresses": "zero-based word indices within each file; physical addresses await hardware agreement",
+  "layers": [
+    {
+      "layer": 0,
+      "source_npz_sha256": "5be944c1d4816fdbefb2a4ff124ff7a62da6540cf74d2ab020bea4130e0e21ce",
+      "format": {
+        "x_frac": 12,
+        "w_frac": 16,
+        "y_frac": 13,
+        "bias_bits": 32,
+        "acc_bits": 48
+      },
+      "files": {
+        "x": {
+          "file": "x.mem",
+          "sha256": "8cc0b32d12543051aef4d48539fbb3d5fc09a37f37b9b6fcbf9f840a3840f874",
+          "word_count": 6336,
+          "byte_count": 12672
+        },
+        "w": {
+          "file": "w.mem",
+          "sha256": "31029df510ac342d4f850dc311f40d1ff18c1db723fb72f9e81367d7df3e5c7f",
+          "word_count": 16384,
+          "byte_count": 32768
+        },
+        "bias": {
+          "file": "bias.mem",
+          "sha256": "7117ad4d701d823335636b2fe4c7a83ed717ad0b9bd4e632aebbd372b26079fb",
+          "word_count": 512,
+          "byte_count": 1024
+        },
+        "y_expected": {
+          "file": "y_expected.mem",
+          "sha256": "7c69f116b5dc96efe4731f988e5a623d0f453308a93a6151f29fb9e4147dd49f",
+          "word_count": 25344,
+          "byte_count": 50688
+        }
+      },
+      "saturation": {
+        "x": 0,
+        "w": 0,
+        "bias": 0,
+        "mac": 0,
+        "bias_add": 0,
+        "y": 0
+      }
+    },
+    {
+      "layer": 1,
+      "source_npz_sha256": "e0c4cac13601abe835f3cc5e16083ad80ba06d60c89b8c6f7b099955eb724c85",
+      "format": {
+        "x_frac": 12,
+        "w_frac": 16,
+        "y_frac": 12,
+        "bias_bits": 32,
+        "acc_bits": 48
+      },
+      "files": {
+        "x": {
+          "file": "x.mem",
+          "sha256": "614ab90544e6837e6c41aa780971a4db5259fe79305f19a3ee1cda985c84ae50",
+          "word_count": 6336,
+          "byte_count": 12672
+        },
+        "w": {
+          "file": "w.mem",
+          "sha256": "67d9d6846cf7d4c655a7d59950675341a7c1c4e7143578e5d4bdfe387d7e04f9",
+          "word_count": 16384,
+          "byte_count": 32768
+        },
+        "bias": {
+          "file": "bias.mem",
+          "sha256": "3c755aa3400fad96c51079f2744d7f35d99f206c8cb6126822297e172603dfca",
+          "word_count": 512,
+          "byte_count": 1024
+        },
+        "y_expected": {
+          "file": "y_expected.mem",
+          "sha256": "e9436d1ea31e1d898f1fcd15e17161c9f017e543465ea9300b5ad1ace81165ec",
+          "word_count": 25344,
+          "byte_count": 50688
+        }
+      },
+      "saturation": {
+        "x": 0,
+        "w": 0,
+        "bias": 0,
+        "mac": 0,
+        "bias_add": 0,
+        "y": 0
+      }
+    },
+    {
+      "layer": 2,
+      "source_npz_sha256": "e682341f5f6c61e65f8ea1423421c73464b81c4b63e0727f2ace57e83ee76d8c",
+      "format": {
+        "x_frac": 12,
+        "w_frac": 16,
+        "y_frac": 12,
+        "bias_bits": 32,
+        "acc_bits": 48
+      },
+      "files": {
+        "x": {
+          "file": "x.mem",
+          "sha256": "529e4100b2f8b51fb1d5c21c96399ecdd61af13d209d689a7eb8d1f26c610449",
+          "word_count": 6336,
+          "byte_count": 12672
+        },
+        "w": {
+          "file": "w.mem",
+          "sha256": "f8b1969c3fde03866642ebfd20639117c0048485ace1ae43a434e5506a123af5",
+          "word_count": 16384,
+          "byte_count": 32768
+        },
+        "bias": {
+          "file": "bias.mem",
+          "sha256": "afc03f00c5370b672f3eefa0928a1f3e9d9b4538e6cb7ef0d6cf7798f7ec84a9",
+          "word_count": 512,
+          "byte_count": 1024
+        },
+        "y_expected": {
+          "file": "y_expected.mem",
+          "sha256": "b14beba789f0e2246c97ac5616c18dac26f516511351fa9295e7f618144dc7db",
+          "word_count": 25344,
+          "byte_count": 50688
+        }
+      },
+      "saturation": {
+        "x": 0,
+        "w": 0,
+        "bias": 0,
+        "mac": 0,
+        "bias_add": 0,
+        "y": 0
+      }
+    },
+    {
+      "layer": 3,
+      "source_npz_sha256": "8383743b011e887a3ceadcbb024b15c3f3725ab72675793c28d30536568a2a1a",
+      "format": {
+        "x_frac": 12,
+        "w_frac": 16,
+        "y_frac": 13,
+        "bias_bits": 32,
+        "acc_bits": 48
+      },
+      "files": {
+        "x": {
+          "file": "x.mem",
+          "sha256": "ffe39250a440117456a23490ff0b45842b70122eb55061b05b36f892bda48573",
+          "word_count": 6336,
+          "byte_count": 12672
+        },
+        "w": {
+          "file": "w.mem",
+          "sha256": "cea58daab5f8b3a6eee6929b7960288ed90e66a4dd4816d7753115350318b9e6",
+          "word_count": 16384,
+          "byte_count": 32768
+        },
+        "bias": {
+          "file": "bias.mem",
+          "sha256": "0cac9f7f17ec3cce0cd1b5159ca429f05447ba547c4e894f346abf453c9a13dd",
+          "word_count": 512,
+          "byte_count": 1024
+        },
+        "y_expected": {
+          "file": "y_expected.mem",
+          "sha256": "e277797f42bd5ea8514f063a26b4ea773358e0e5a70c8bd0b9088c0d9d1d4984",
+          "word_count": 25344,
+          "byte_count": 50688
+        }
+      },
+      "saturation": {
+        "x": 0,
+        "w": 0,
+        "bias": 0,
+        "mac": 0,
+        "bias_add": 0,
+        "y": 0
+      }
+    },
+    {
+      "layer": 4,
+      "source_npz_sha256": "0e40377a9e06e1a9f93c7ecdf92a8540ee337bfb79fea6594f8f02dbc58212d5",
+      "format": {
+        "x_frac": 12,
+        "w_frac": 16,
+        "y_frac": 13,
+        "bias_bits": 32,
+        "acc_bits": 48
+      },
+      "files": {
+        "x": {
+          "file": "x.mem",
+          "sha256": "9973cc42fe6ba0006c7c00a70219eeb0b102ffa531086e86f2bcacca12b55e44",
+          "word_count": 6336,
+          "byte_count": 12672
+        },
+        "w": {
+          "file": "w.mem",
+          "sha256": "c006435e6743b6face63ec241267815bf89b66246ede961378b274610acc6cf1",
+          "word_count": 16384,
+          "byte_count": 32768
+        },
+        "bias": {
+          "file": "bias.mem",
+          "sha256": "a37371b19a0ab2d5008fa5bcaa89ef54616d8004d1453d2c76cae8d1e1c790af",
+          "word_count": 512,
+          "byte_count": 1024
+        },
+        "y_expected": {
+          "file": "y_expected.mem",
+          "sha256": "6a8fa35b3ec700e77f308f808e8ba763e4d6958f4c4e80c645851a9480af1171",
+          "word_count": 25344,
+          "byte_count": 50688
+        }
+      },
+      "saturation": {
+        "x": 0,
+        "w": 0,
+        "bias": 0,
+        "mac": 0,
+        "bias_add": 0,
+        "y": 0
+      }
+    },
+    {
+      "layer": 5,
+      "source_npz_sha256": "28fd75cce114f6add3247ea0396468b91f83bb41458262240738576f8796a46f",
+      "format": {
+        "x_frac": 12,
+        "w_frac": 16,
+        "y_frac": 13,
+        "bias_bits": 32,
+        "acc_bits": 48
+      },
+      "files": {
+        "x": {
+          "file": "x.mem",
+          "sha256": "0c7edadfaa2110977a23eaba01abec46e2a7b5ce4d0acb299d077ac443a6941e",
+          "word_count": 6336,
+          "byte_count": 12672
+        },
+        "w": {
+          "file": "w.mem",
+          "sha256": "321195da3be42431fffb71de52b461c786e3fc3e9476dd0422f93669ae7a949b",
+          "word_count": 16384,
+          "byte_count": 32768
+        },
+        "bias": {
+          "file": "bias.mem",
+          "sha256": "2b3d912d313433e4d87db0f471857adf50c0e9e63a4a9d2e178166fda55bfaa9",
+          "word_count": 512,
+          "byte_count": 1024
+        },
+        "y_expected": {
+          "file": "y_expected.mem",
+          "sha256": "204371b42ab9f0ea68ca42085098cb4cb0ef678e44f5a9bd68a3e93c1d08a508",
+          "word_count": 25344,
+          "byte_count": 50688
+        }
+      },
+      "saturation": {
+        "x": 0,
+        "w": 0,
+        "bias": 0,
+        "mac": 0,
+        "bias_add": 0,
+        "y": 0
+      }
+    },
+    {
+      "layer": 6,
+      "source_npz_sha256": "b0355b49e647bd66cc075805ceb97021f994a1768b4be7ad20434cac31214f8e",
+      "format": {
+        "x_frac": 12,
+        "w_frac": 16,
+        "y_frac": 13,
+        "bias_bits": 32,
+        "acc_bits": 48
+      },
+      "files": {
+        "x": {
+          "file": "x.mem",
+          "sha256": "d83cff3a078e7b5d3642ca1f75d28715ec01f24a5117692916260a6ee5b2d74c",
+          "word_count": 6336,
+          "byte_count": 12672
+        },
+        "w": {
+          "file": "w.mem",
+          "sha256": "566495cab42c554c1af8de10be5d31f40c26eb0553b760b743a401357dc0c5fd",
+          "word_count": 16384,
+          "byte_count": 32768
+        },
+        "bias": {
+          "file": "bias.mem",
+          "sha256": "21139d621098bb9fb22cd0abdbaec078b52e57c5d08c13466c4f60c7ffcf2b7f",
+          "word_count": 512,
+          "byte_count": 1024
+        },
+        "y_expected": {
+          "file": "y_expected.mem",
+          "sha256": "0db8607c3481d2b06f6602cd1543bd3978add7f2605eb9ff9070d597eaf80bca",
+          "word_count": 25344,
+          "byte_count": 50688
+        }
+      },
+      "saturation": {
+        "x": 0,
+        "w": 0,
+        "bias": 0,
+        "mac": 0,
+        "bias_add": 0,
+        "y": 0
+      }
+    },
+    {
+      "layer": 7,
+      "source_npz_sha256": "d5aec3e059f6ae04d1662be3caf457b7f7947b2f609bb40fc3e62a44e9fa4058",
+      "format": {
+        "x_frac": 12,
+        "w_frac": 16,
+        "y_frac": 13,
+        "bias_bits": 32,
+        "acc_bits": 48
+      },
+      "files": {
+        "x": {
+          "file": "x.mem",
+          "sha256": "1d83ee91068253a317421e775ed3965e9e626da482ed3ad1db3eefae6c3cbe37",
+          "word_count": 6336,
+          "byte_count": 12672
+        },
+        "w": {
+          "file": "w.mem",
+          "sha256": "1923fb00a32e4a07e317b0aa69c674a7fd65dfd3a11936ed5a51ded39748df96",
+          "word_count": 16384,
+          "byte_count": 32768
+        },
+        "bias": {
+          "file": "bias.mem",
+          "sha256": "4029622f8f17062cd5619b248ba5d0453ab10cffdfa6ef2efe0f90340b057284",
+          "word_count": 512,
+          "byte_count": 1024
+        },
+        "y_expected": {
+          "file": "y_expected.mem",
+          "sha256": "7af5695dd72feb58b20abeb7bc7b00a18e3c95633138fcbf99631782b5710ec0",
+          "word_count": 25344,
+          "byte_count": 50688
+        }
+      },
+      "saturation": {
+        "x": 0,
+        "w": 0,
+        "bias": 0,
+        "mac": 0,
+        "bias_add": 0,
+        "y": 0
+      }
+    },
+    {
+      "layer": 8,
+      "source_npz_sha256": "f9d89883fb31d0d116b4ffeb0ba3dafa5657ae9184c0ddd4bba5cc24adf9d9a4",
+      "format": {
+        "x_frac": 12,
+        "w_frac": 16,
+        "y_frac": 13,
+        "bias_bits": 32,
+        "acc_bits": 48
+      },
+      "files": {
+        "x": {
+          "file": "x.mem",
+          "sha256": "06fbbd462c32abf1fde9f5619170812ac774e3dc8b41b8afca374ad0cfde313a",
+          "word_count": 6336,
+          "byte_count": 12672
+        },
+        "w": {
+          "file": "w.mem",
+          "sha256": "e9a360d7654b0f52da7c0bb9c724f2116444f3cb484a61d461f03ec314e11eaa",
+          "word_count": 16384,
+          "byte_count": 32768
+        },
+        "bias": {
+          "file": "bias.mem",
+          "sha256": "7d693913355a294aef39138bb8a352f9dc897dfce6c5ba7df49cb4ae7f9c0b28",
+          "word_count": 512,
+          "byte_count": 1024
+        },
+        "y_expected": {
+          "file": "y_expected.mem",
+          "sha256": "e176607400c5de5fb116745af811584d605e7220a681dc7e36ba93e14b6c3b9a",
+          "word_count": 25344,
+          "byte_count": 50688
+        }
+      },
+      "saturation": {
+        "x": 0,
+        "w": 0,
+        "bias": 0,
+        "mac": 0,
+        "bias_add": 0,
+        "y": 0
+      }
+    },
+    {
+      "layer": 9,
+      "source_npz_sha256": "3680f81dbcbeb778a80f9f84cafcf87a6a888e54fd45ca9af33253bce917a65c",
+      "format": {
+        "x_frac": 12,
+        "w_frac": 16,
+        "y_frac": 13,
+        "bias_bits": 32,
+        "acc_bits": 48
+      },
+      "files": {
+        "x": {
+          "file": "x.mem",
+          "sha256": "e3547c9a946203305f1568729dfe52f52ea3b1af8bce5c28cb813e402d2c7081",
+          "word_count": 6336,
+          "byte_count": 12672
+        },
+        "w": {
+          "file": "w.mem",
+          "sha256": "75986e771171f1972b5c07305a2e1ccc33dcaf915833784efdf50af8565f9e0a",
+          "word_count": 16384,
+          "byte_count": 32768
+        },
+        "bias": {
+          "file": "bias.mem",
+          "sha256": "53201011dbc6f12c66f2aaf21d033a0130934d54fefb2cf492863e3bf770e7f1",
+          "word_count": 512,
+          "byte_count": 1024
+        },
+        "y_expected": {
+          "file": "y_expected.mem",
+          "sha256": "35179ce8bb1325b26f08957af7b205be98a42e8d3481715336643f16620f8864",
+          "word_count": 25344,
+          "byte_count": 50688
+        }
+      },
+      "saturation": {
+        "x": 0,
+        "w": 0,
+        "bias": 0,
+        "mac": 0,
+        "bias_add": 0,
+        "y": 0
+      }
+    },
+    {
+      "layer": 10,
+      "source_npz_sha256": "ce9c1cb4d1bb561c81f355696ce83d6cf4c0444acbade1fe84f8ccfeab8c8ec4",
+      "format": {
+        "x_frac": 12,
+        "w_frac": 16,
+        "y_frac": 13,
+        "bias_bits": 32,
+        "acc_bits": 48
+      },
+      "files": {
+        "x": {
+          "file": "x.mem",
+          "sha256": "4d6fdb9796273727d0543d219cbcfad3d5b67f026d9a61454505009da3260f8a",
+          "word_count": 6336,
+          "byte_count": 12672
+        },
+        "w": {
+          "file": "w.mem",
+          "sha256": "24dbe158c017e9eb6b8b0647df6ba9fb058bc70cd5fe1a00455641bc9742d625",
+          "word_count": 16384,
+          "byte_count": 32768
+        },
+        "bias": {
+          "file": "bias.mem",
+          "sha256": "27b5b2653c206d5877b358e369908fd0a6423b1196146e0770d82649a27cb5c1",
+          "word_count": 512,
+          "byte_count": 1024
+        },
+        "y_expected": {
+          "file": "y_expected.mem",
+          "sha256": "0c8601c11238174821ddc25070c33327d1f1f00854c0324828ed66e7f8863b4b",
+          "word_count": 25344,
+          "byte_count": 50688
+        }
+      },
+      "saturation": {
+        "x": 0,
+        "w": 0,
+        "bias": 0,
+        "mac": 0,
+        "bias_add": 0,
+        "y": 0
+      }
+    },
+    {
+      "layer": 11,
+      "source_npz_sha256": "ed8ef0482846f6e203c66353ddded4abe695eca19d51cd630be4edc68e4b35e1",
+      "format": {
+        "x_frac": 12,
+        "w_frac": 16,
+        "y_frac": 12,
+        "bias_bits": 32,
+        "acc_bits": 48
+      },
+      "files": {
+        "x": {
+          "file": "x.mem",
+          "sha256": "9c31a9426ed3e2ff0798bc1b5d12288302e087f3b8a9328fcc7ef2d74031f3dc",
+          "word_count": 6336,
+          "byte_count": 12672
+        },
+        "w": {
+          "file": "w.mem",
+          "sha256": "05b4bb8059517255b9a0294f64f74cb37e54effeed1b22a88c40318f8a43d1b6",
+          "word_count": 16384,
+          "byte_count": 32768
+        },
+        "bias": {
+          "file": "bias.mem",
+          "sha256": "917ca030af3c3616773b2f3ff71d7d566c85c3f9223178f6dd7fb3ad977af0a9",
+          "word_count": 512,
+          "byte_count": 1024
+        },
+        "y_expected": {
+          "file": "y_expected.mem",
+          "sha256": "c26b1063902f4e707f232d524292d76fe493f9b83c7c99b09305d42706ab5bc4",
+          "word_count": 25344,
+          "byte_count": 50688
+        }
+      },
+      "saturation": {
+        "x": 0,
+        "w": 0,
+        "bias": 0,
+        "mac": 0,
+        "bias_add": 0,
+        "y": 0
+      }
+    }
+  ]
+}
