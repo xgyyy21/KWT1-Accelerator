@@ -32,7 +32,7 @@ module int16_accelerator_top #(
   localparam int LANES=16;
   typedef enum logic[4:0] {S_IDLE,S_BIAS_REQ,S_BIAS_WAIT,S_A_REQ,S_A_WAIT,
     S_B_REQ,S_B_WAIT,S_MAC,S_RESULT,S_WB_REQ,S_WB_WAIT,S_DONE,S_ERROR,
-    S_TILE_B_REQ,S_TILE_B_WAIT} state_t;
+    S_TILE_B_REQ,S_TILE_B_WAIT,S_CACHE_RD_REQ,S_CACHE_RD_WAIT} state_t;
   state_t state;
   logic engine_start,supported_shape,config_aligned,pe_result_valid,pe_input_error;
   logic master_outstanding,master_rsp_valid_q,master_rsp_ready;
@@ -57,9 +57,13 @@ module int16_accelerator_top #(
   logic signed [31:0] bias_vector[LANES];
   logic signed [47:0] pe_raw_sum[LANES];
   // K=64 layer-00 weight tile cache. One 64x16 INT16 tile is retained while
-  // all M rows use the current output-column tile.
-  logic signed [15:0] weight_cache [0:63][LANES];
+  // all M rows use the current output-column tile. Storage is sixteen
+  // synchronous single-port SRAM banks, not a 2-D unpacked array.
   logic weight_cache_valid;
+  logic cache_rd_en,cache_rd_valid;
+  logic [6:0] cache_rd_addr,cache_wr_addr;
+  logic [LANES-1:0] cache_wr_en;
+  logic [LANES*16-1:0] cache_rd_data_bus,cache_wr_data_bus;
   // Retain a one-cycle PE result event across the S_MAC -> S_RESULT
   // transition so a bound-top state machine cannot miss final k=63.
   logic pe_result_seen_q;
@@ -86,6 +90,30 @@ module int16_accelerator_top #(
     .b_in(b_vector),.bias_in(bias_vector),.out_shift(out_shift),
     .result_valid(pe_result_valid),.input_error(pe_input_error),
     .result(pe_result),.raw_sum(pe_raw_sum));
+
+  int16_weight_sram_16bank #(.LANES(LANES)) u_weight_cache_sram(
+    .clk(clk),.rst_n(rst_n),.rd_en(cache_rd_en),.rd_addr(cache_rd_addr),
+    .rd_valid(cache_rd_valid),.rd_data_bus(cache_rd_data_bus),
+    .wr_en(cache_wr_en),.wr_addr(cache_wr_addr),.wr_data_bus(cache_wr_data_bus));
+
+  // Cache writes happen only when a completed System-Bus read response is
+  // being consumed. Reads are synchronous and are followed by WAIT state.
+  always_comb begin
+    cache_rd_en = (state==S_CACHE_RD_REQ);
+    cache_rd_addr = current_k[6:0];
+    cache_wr_addr = current_k[6:0];
+    cache_wr_en = '0;
+    cache_wr_data_bus = '0;
+    if ((state==S_TILE_B_WAIT) && master_rsp_valid_q && master_rsp_ready &&
+        !master_rsp_err_q) begin
+      cache_wr_en[pair_idx*2] = 1'b1;
+      cache_wr_data_bus[pair_idx*2*16 +: 16] = master_rsp_rdata_q[15:0];
+      if ((pair_idx*2+1) < active_cols) begin
+        cache_wr_en[pair_idx*2+1] = 1'b1;
+        cache_wr_data_bus[(pair_idx*2+1)*16 +: 16] = master_rsp_rdata_q[31:16];
+      end
+    end
+  end
 
   assign supported_shape=STRICT_COMPETITION_SHAPES ?
     (((matrix_m==16'd99)&&(matrix_k==16'd64)&&(matrix_n==16'd256))||
@@ -221,9 +249,7 @@ module int16_accelerator_top #(
         end
         S_A_REQ:begin
           if(current_k[0]&&matrix_k==16'd64)begin
-            for(integer i=0;i<LANES;i=i+1)
-              b_vector[i]<=(i<active_cols)?weight_cache[current_k][i]:16'sd0;
-            if(weight_cache_valid) state<=S_MAC;
+            if(weight_cache_valid) state<=S_CACHE_RD_REQ;
             else state<=S_ERROR;
           end else if(current_k[0])begin pair_idx<=0;state<=S_B_REQ;end
           else if(master_cmd_fire)state<=S_A_WAIT;
@@ -233,9 +259,7 @@ module int16_accelerator_top #(
           else begin
             a_pair<=master_rsp_rdata_q;pair_idx<=0;
             if(matrix_k==16'd64) begin
-              for(integer i=0;i<LANES;i=i+1)
-                b_vector[i]<=(i<active_cols)?weight_cache[current_k][i]:16'sd0;
-              if(weight_cache_valid) state<=S_MAC;
+              if(weight_cache_valid) state<=S_CACHE_RD_REQ;
               else state<=S_ERROR;
             end else state<=S_B_REQ;
           end
@@ -244,11 +268,6 @@ module int16_accelerator_top #(
         S_TILE_B_WAIT:if(master_rsp_valid_q&&master_rsp_ready)begin
           if(master_rsp_err_q)state<=S_ERROR;
           else begin
-            weight_cache[current_k][pair_idx*2]<=
-              $signed(master_rsp_rdata_q[15:0]);
-            weight_cache[current_k][pair_idx*2+1]<=
-              ((pair_idx*2+1)<active_cols)?
-                $signed(master_rsp_rdata_q[31:16]):16'sd0;
             if(pair_idx+1>=((active_cols+1)>>1))begin
               pair_idx<=0;
               if(current_k+1>=matrix_k)begin
@@ -271,6 +290,13 @@ module int16_accelerator_top #(
             if(pair_idx+1>=((active_cols+1)>>1))begin pair_idx<=0;state<=S_MAC;end
             else begin pair_idx<=pair_idx+1'b1;state<=S_B_REQ;end
           end
+        end
+        S_CACHE_RD_REQ:state<=S_CACHE_RD_WAIT;
+        S_CACHE_RD_WAIT:if(cache_rd_valid)begin
+          for(integer i=0;i<LANES;i=i+1)
+            b_vector[i]<=(i<active_cols)?
+              $signed(cache_rd_data_bus[i*16 +: 16]):16'sd0;
+          state<=S_MAC;
         end
         S_MAC:begin
           if(pe_input_error)state<=S_ERROR;
