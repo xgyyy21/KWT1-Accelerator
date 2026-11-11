@@ -60,6 +60,9 @@ module int16_accelerator_top #(
   // all M rows use the current output-column tile.
   logic signed [15:0] weight_cache [0:63][LANES];
   logic weight_cache_valid;
+  // Retain a one-cycle PE result event across the S_MAC -> S_RESULT
+  // transition so a bound-top state machine cannot miss final k=63.
+  logic pe_result_seen_q;
 
   int16_system_bus_control #(.ADDR_WIDTH(ADDR_WIDTH),.CTRL_BASE(CTRL_BASE)) u_control(
     .clk(clk),.rst_n(rst_n),.s_icb_cmd_valid(s_icb_cmd_valid),
@@ -156,6 +159,7 @@ module int16_accelerator_top #(
       state<=S_IDLE;current_row<=0;current_col<=0;current_k<=0;
       bias_idx<=0;pair_idx<=0;active_cols<=0;a_pair<=0;
       weight_cache_valid<=1'b0;
+      pe_result_seen_q<=1'b0;
       master_outstanding<=1'b0;master_rsp_valid_q<=1'b0;
       master_cmd_pending_q<=1'b0;master_cmd_addr_q<='0;
       master_cmd_read_q<=1'b1;master_cmd_wdata_q<='0;
@@ -169,6 +173,10 @@ module int16_accelerator_top #(
         weight_cache_valid<=1'b0;
       if((state==S_MAC)&&pe_input_error)
         weight_cache_valid<=1'b0;
+      if((state==S_IDLE)&&engine_start)
+        pe_result_seen_q<=1'b0;
+      else if((state==S_MAC)&&pe_result_valid)
+        pe_result_seen_q<=1'b1;
       if(master_cmd_fire)
         master_outstanding<=1'b1;
       if(master_rsp_fire)begin
@@ -269,7 +277,10 @@ module int16_accelerator_top #(
           else if(current_k+1>=matrix_k)state<=S_RESULT;
           else begin current_k<=current_k+1'b1;state<=S_A_REQ;end
         end
-        S_RESULT:if(pe_result_valid)begin pair_idx<=0;state<=S_WB_REQ;end
+        S_RESULT:if(pe_result_valid||pe_result_seen_q)begin
+          pe_result_seen_q<=1'b0;
+          pair_idx<=0;state<=S_WB_REQ;
+        end
         S_WB_REQ:if(master_cmd_fire)state<=S_WB_WAIT;
         S_WB_WAIT:if(master_rsp_valid_q&&master_rsp_ready)begin
           if(master_rsp_err_q)state<=S_ERROR;
