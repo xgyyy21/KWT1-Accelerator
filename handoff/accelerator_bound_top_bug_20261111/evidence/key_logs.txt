@@ -1,0 +1,47 @@
+Final4 加速器绑定顶层功能问题 - 关键日志
+
+============================================================
+1) 对照：通用顶层 int16_accelerator_top (df45c9a) —— PASS
+============================================================
+源文件：
+  ~/kwt1_review_d7329f2_sram_prefetch_20261108/rtl/int16_accelerator_top.sv
+TB：
+  int16_accelerator_top_tb.sv（仓库自带）
+结果：
+  PASS int16_accelerator_top_tb K64_and_K256 PE=16 bus=32 continuous_jobs=2
+
+覆盖：
+  - 第 1 个作业：M=2, K=64, N=18
+  - 第 2 个作业：M=1, K=256, N=16（不复位连续跑）
+  - out_shift=0
+  - 每个输出与整数模型逐字对拍
+
+============================================================
+2) Final4 绑定顶层 int16_accelerator_top_32_11000000_0 —— TIMEOUT
+============================================================
+源文件：
+  ~/kwt1_soc_full_synth_sram_final4_20261109/int16_accelerator_top_bound.sv
+  SHA-256 前缀：2a966e36
+TB：
+  repo_bound_tb.sv（同一 TB，仅换 DUT，CTRL_BASE=0）
+结果：
+  TIMEOUT state=8 row=0 col=0 k=63 bus_cmd=0/1 rsp=0/0 rsp_pending=0
+          master_outstanding=0 rspbuf=0 counts=560/560 last=0000107c/ffff0003
+  Fatal: "repo_bound_tb.sv", 148: int16_accelerator_top_tb: at time 5000000000 ps
+
+解释：
+  - state=8 是 S_RESULT（枚举：0 IDLE,1 BIAS_REQ,2 BIAS_WAIT,3 A_REQ,4 A_WAIT,
+    5 B_REQ,6 B_WAIT,7 MAC,8 RESULT,9 WB_REQ,10 WB_WAIT,11 DONE,12 ERROR,
+    13 TILE_A_REQ,14 TILE_B_REQ,15 TILE_B_WAIT）
+  - current_k=63，说明最后一个 k 已经到达
+  - counts=560/560，总线命令与响应全部配平
+  - 没有 accel_error；就是等不到 pe_result_valid
+
+============================================================
+3) 旁证：自写整层 TB 跑绑定顶层（握手不完善，仅作旁证）
+============================================================
+  A_FORMAT=01103010
+  L00 done=0 error=0 cycles=30000000 a=32 b=512 bias=16 y=0
+  LAYER 0 mismatches=12672 / 12672
+
+含义：读了 A/B/bias，没有写回，也没有报错；与仓库 TB 的 S_RESULT 超时一致。

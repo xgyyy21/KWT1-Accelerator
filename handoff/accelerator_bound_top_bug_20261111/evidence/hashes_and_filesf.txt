@@ -1,0 +1,33 @@
+Final4 files.f 与哈希
+
+============================================================
+files.f 第 155-158 行
+============================================================
+155:~/kwt1_review_d7329f2_sram_prefetch_20261108/rtl/int16_pe_mac.sv
+156:~/kwt1_review_d7329f2_sram_prefetch_20261108/rtl/int16_pe_array_16.sv
+157:~/kwt1_review_d7329f2_sram_prefetch_20261108/rtl/int16_system_bus_control.sv
+158:~/kwt1_soc_full_synth_sram_final4_20261109/int16_accelerator_top_bound.sv
+
+============================================================
+SHA-256（服务器实测，与本地审计版本比对）
+============================================================
+int16_pe_mac.sv
+  4ea47aada26246e2fcee36d8a6dbd7a693d24609f0ab56b4cf5fc809894f1e2f
+  -> 与本地 tmp/review_df45c9a/rtl/int16_pe_mac.sv 一致
+
+int16_pe_array_16.sv
+  76d2d00f0f06d575355e2ba0ef12aa6869d59c3de25120d7d31c275bbb0d32c3
+  -> 与本地一致
+
+int16_system_bus_control.sv
+  dce4ab43a0c5c99f72754f13ae6d345bf2052d1567460eb63571d8aaf756e460
+  -> 与本地一致
+
+int16_accelerator_top_bound.sv
+  2a966e36...（Final4 专用绑定顶层；完整哈希请在服务器 sha256sum）
+  349 行，含 int16_weight_sram_16bank 与 RAMSP128X16 x16
+
+============================================================
+结论
+============================================================
+Final4 网表确实由上述 RTL 综合而来；问题在 top_bound，而不是 PE/阵列/控制。
