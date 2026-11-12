@@ -103,7 +103,15 @@ KWT CPU WATCHDOG                            ✗
 - 停住点：第 4 个字含 `lw a1,0(a3)`（数据 load），之后 ITCM 地址变 X；`accesses=4` 说明不是同址死循环。
 - **仍未 TEST PASS**；下一步是确认该 load 的地址与从设备响应。
 
-### 4.6 报告
+### 4.6 PT 时序检查尝试（2026-11-12，未成功）
+
+- 服务器有 `pt_shell T-2022.03-SP5-1`；已写 `~/kwt1_final4_soc_newfix_20261111/pt_sta.tcl`（read netlist → link → read SDC → update_timing → report_setup/hold/qor）。
+- 失败原因：**PT-063 "Library Compiler executable path is not set"**，导致标准单元 `.db` 无法读入（LNK-001），设计未 link，报告为空（`-slack less than 0.0000`，无路径）。
+- 已尝试：`set_app_var lc_executable_path`（报 CMD-104：不是 app var）、把 `lc_shell` 加入 `PATH`（仍 PT-063）、改用 `.lib`（标准单元目录只有 `.db`，没有 `.lib`）。
+- 结论：**PT STA 被工具环境挡住，不是设计问题**。有效时序证据仍为 DC 内 STA：setup 0.00 ns（0 违例）、hold −0.24 ns（4 条路径）。
+- 残留文件：`pt_sta.tcl`、`pt_setup.rpt`、`pt_hold.rpt`、`pt_qor.rpt`、`pt_violators.rpt`、`pt_coverage.rpt`（**均为未 link 结果，不可引用**）。
+
+### 4.7 报告
 
 - `REPORT_DRAFT.md`：八节 + §0 摘要 + §9 完成度 + §10 夜间失败记录。
 - `REPORT_QUANT_ARCH.md`：量化与硬件架构专题（含附录 A 红线、附录 B 证据缺口）。
@@ -122,7 +130,8 @@ KWT CPU WATCHDOG                            ✗
 | 宏 | 16×128X16 + 24×8KX32 + 8×4KX64 + 1×ROM1KX32 |
 | 单样本 NRMSE | 9.449e-05（layer 00） |
 | 100 样本 NRMSE | 最大 0.659%（layer 00），单样本最大 3.78% |
-| 门级 | 4 次正确 FETCH，未 PASS |
+| 门级 | 加速器块级 L00/L01 PASS；整机跑到 4,516 指令后 `x3=2`，未 PASS |
+| 加速器 RTL 12 层 | **12/12 PASS**（2026-11-13，每层 12,672 字 0 失配） |
 
 ---
 
@@ -130,7 +139,8 @@ KWT CPU WATCHDOG                            ✗
 
 | 项 | 状态 | 缺口 / 下一步 |
 |---|---|---|
-| 整机门级 `TEST PASS` | ❌ | 第 4 条后数据 load；需确认地址与从设备（DTCM/共享 SRAM）响应 |
+| 整机门级 `TEST PASS` | ❌ | 已跑到程序结束（4,516 指令、`EXIT_PC=0x800003f0`），程序自检 `x3=2`；`0x11000004` 读回 `4` 未满足完成位 `2` |
+| 整机 RTL 级联调 | ❌ | TB 预装路径绑定网表 `u_sram_wrap_32XK64`，RTL 无该层，需重写预装 |
 | Final4 端到端吞吐 | ❌ | 同上；块级 743,159 周期被 TB 存储延迟主导，不可用 |
 | Final4 网表功耗 | ❌ | 需先跑出 VCD/SAIF；PT 另有 `PT-063 Library Compiler path not set` |
 | LEC / Formality | ❌ | 无 SVF、无 FM 证据 |
@@ -142,6 +152,13 @@ KWT CPU WATCHDOG                            ✗
 ## 7. 复现命令
 
 ```bash
+# 0) 12 层加速器 RTL 功能验证（2026-11-13）
+ssh <server>
+cd ~/kwt1_final4_layer12_20261113
+bash run_layers.sh                 # ~1.3 s CPU/层，全 12 层约 20 s
+cat result_s15.txt result_s16.txt
+grep -h "mismatches=" work15/run_l*.log work16/run_l*.log
+
 # 1) NRMSE（单样本 / 冻结配置）
 cd ~/kwt1_final4_report_20261111/nrmse_verification   # 本地
 python run_nrmse.py --vectors ... --npz ... --archived ... --out . --acc-bits 48
