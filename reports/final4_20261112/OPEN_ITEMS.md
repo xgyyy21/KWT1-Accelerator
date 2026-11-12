@@ -1,8 +1,21 @@
-# 未完成事项登记（2026-11-11）
+# 未完成事项登记（2026-11-11，更新 2026-11-13）
 
-## OPEN-1 整机门级程序级仿真（暂停，未完成）
+## OPEN-0 12 层加速器 RTL 功能验证（2026-11-13 已完成，关闭）
 
-**状态：未完成，暂停。不写 PASS。**
+**状态：完成，12/12 层 PASS。**
+
+| 项 | 结果 | 证据 |
+|---|---|---|
+| 对象 | 综合前 `int16_accelerator_top_newfix.sv`（SHA-256 `2257fc3e…`） | `~/kwt1_final4_full_layer_20261111/` |
+| 层数 | 12/12 `FULL_LAYER PASS` | `~/kwt1_final4_layer12_20261113/run_all.log`、`result_s15.txt`、`result_s16.txt` |
+| 每层 | 12,672 字与 Golden 0 失配；非法 `0x8000` 被拒；`CTRL_ERRORS=0`；743,159 周期；退出码 0 | `work15|work16/run_l*.log` |
+| 汇总 | `LAYER12_RTL_RESULT_20261113.md`、`per_layer_12_rtl_20261113.csv` | 本目录 |
+
+边界：门级仍只有 L00/L01；整机 SoC 未 PASS。
+
+## OPEN-1 整机门级程序级仿真（2026-11-12 有重大进展，仍未 PASS）
+
+**状态：未 PASS。不写 PASS。**
 
 ### 已经做实的部分
 
@@ -22,6 +35,24 @@
 最可能位置：ITCM 包装层内部的时钟门控/复位使能单元（X 传播）。
 未验证的下一步：`$dumpvars` + UCLI driver 追踪 `u_sram_wrap_32KX64.CS` 的驱动源。
 
+### 2026-11-12 更新：已跑到程序结束，但自检失败
+
+启动问题修复后，最新门级整机运行 `~/kwt1_cpubus_diag_20261112_fix1/run/sim_fix10.log`（2026-11-12 20:56）结果：
+
+| 项 | 观测值 |
+|---|---|
+| 执行 | 4,516 条指令，`[RESULT] EXIT_PC=0x800003f0 cyc=12193 itcm=4516 dtcm=0 shared=1120` |
+| MMIO 配置 | CPU 写 `0x11000000`；`[ACC_TRACE] m=2 k=64 n=2 a=a0001000 b=a0002000 bias=a0003000 dst=a0004000` |
+| 加速器 | `state=12`、`enger=1`、`sticky=0`，向 `0xa0004000` 写回 4 个 32 位字 |
+| 状态读回 | CPU 读 `0x11000004` 得到 `0x00000004` |
+| 判定 | 程序按 `status & 2` 判完成位，未满足 → `x3=2` → `TEST FAIL x3=00000002` |
+
+待定位：`0x11000004` 读回值 `4` 与程序期望的完成位 `2` 不一致，是寄存器映射偏移、STATUS 位定义还是写回数据比较问题，尚未区分。**下一步**：抓 `u_kwt` 内 MMIO 寄存器的读数据与 `accel_done`，并对照 `kwt_smoke` 的 `program_listing.txt` 第 50–90 行确认判据。
+
+### 2026-11-13 更新：整机 RTL 级 TB 绑定阻塞
+
+同一 TB `tb_soc_cpubus.sv` 换到综合前 RTL 源（`files_soc_newfix.f`）后，VCS 在 `-XMRE` 阶段报 `token 'u_sram_wrap_32XK64' cannot be resolved`。原因是 TB 用网表专用层次 `...u_e203_itcm_ram.u_sram_wrap_32XK64` 预装 ITCM；RTL 侧 ITCM 由 `assets/kwt1_sram_bank.sv`（`RAMSP8KX32 u_macro`）组成，没有该层。要跑整机 RTL 需重写 ITCM/DTCM 预装路径，属大规模调试，本轮不开展。
+
 ### 重新接续时需要的东西
 
 - 目录：`~/kwt1_final4_realgate_20261111/`
@@ -36,8 +67,8 @@
 
 官方要求不需要整机门级跑完整程序。综合前后功能一致性用以下组合证明：
 
-1. RTL SoC 仿真（`kwt_smoke`，`x3=1`）
-2. 加速器块级门级 TB（K64 / K256 PASS）
-3. LEC（RTL vs 网表形式等价，待做）
+1. 加速器 RTL 12 层功能验证（12/12 PASS，2026-11-13）
+2. 加速器块级门级 TB（L00/L01 与 RTL 逐位 0 差异；K64 / K256 PASS）
+3. LEC（RTL vs 网表形式等价，待做；本次未做）
 
-报告中**不得**出现"Final4 网表门级功能 PASS"或"SDF PASS"。
+报告中**不得**出现"Final4 网表门级功能 PASS"、"整机 SoC 联调 PASS"或"SDF PASS"。
