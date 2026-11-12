@@ -49,6 +49,24 @@
 
 待定位：`0x11000004` 读回值 `4` 与程序期望的完成位 `2` 不一致，是寄存器映射偏移、STATUS 位定义还是写回数据比较问题，尚未区分。**下一步**：抓 `u_kwt` 内 MMIO 寄存器的读数据与 `accel_done`，并对照 `kwt_smoke` 的 `program_listing.txt` 第 50–90 行确认判据。
 
+### 2026-11-13 根因初判：读回的 4 是错误位
+
+`assets/int16_system_bus_control.sv` 第 77 行：
+
+```verilog
+A_STATUS: s_icb_rsp_rdata = {29'd0, error_sticky, engine_error, done_sticky, engine_done, engine_busy};
+```
+
+位定义：bit0=`engine_busy`、bit1=`engine_done`、bit2=`error_sticky`、bit3=`engine_error`。
+
+因此 `0x11000004 = 0x4` 表示 **error_sticky=1、done=0**——硬件报告的是错误，不是完成。程序的 `andi x7,x5,2`（测 done 位）自然永远不成立，轮询 100,000 次后跳 `fail`，`x3=2`。
+
+同一次运行下发的任务参数是 **M=2 / K=64 / N=32 / shift=3**（`program_listing.txt` 第 43–58 行：`sw` 到 `0x18/0x1C/0x20/0x24`），与所有已通过的块级配置 **M=99 / K=64 / N=256、shift 15/16** 不同；`[ACC_TRACE]` 内部还显示 `n=2`，与程序写入的 32 不符。
+
+下一步二选一：
+1. 查 `int16_system_bus_control.sv` 里 N 寄存器（`A_N=8'h20`）的写入路径，确认 `n=2` 的来源；或
+2. 把 SoC 程序改成已验证的合法形状 M=99/K=64/N=256（需重新编译程序镜像与数据段），再跑一次整机。
+
 ### 2026-11-13 更新：整机 RTL 级 TB 绑定阻塞
 
 同一 TB `tb_soc_cpubus.sv` 换到综合前 RTL 源（`files_soc_newfix.f`）后，VCS 在 `-XMRE` 阶段报 `token 'u_sram_wrap_32XK64' cannot be resolved`。原因是 TB 用网表专用层次 `...u_e203_itcm_ram.u_sram_wrap_32XK64` 预装 ITCM；RTL 侧 ITCM 由 `assets/kwt1_sram_bank.sv`（`RAMSP8KX32 u_macro`）组成，没有该层。要跑整机 RTL 需重写 ITCM/DTCM 预装路径，属大规模调试，本轮不开展。
