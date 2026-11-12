@@ -2,17 +2,21 @@
 
 > 写作原则：每个数字后面标注证据状态。
 > 【实测】= 有原始日志；【用户确认】= 口述但无原始证据；【待补】= 缺数据；【作废】= 已有结论但对象错误，不得引用。
-> 生成日期：2026-11-11；最后更新：2026-11-12（补齐 Final4 综合/时序数字与完成度清单）
+> 生成日期：2026-11-11；最后更新：2026-11-13（新增 newfix INT16 L00/L01 综合前后仿真级功能一致性证据）
+> 报告可直接引用的版本、输入、L00/L01 对拍结果与口径汇总见 `FINAL4_REPORT_READY_20261113.md`。
 
 ---
 
-## 〇、结论摘要（2026-11-12）
+## 〇、结论摘要（更新至 2026-11-13）
 
 **交付物**：Final4 全 SoC 网表 `kwt1_soc_mapped.v`（11,530,431 B，115,978 cells，GTECH=0，总细胞面积 3,255,536 µm²，其中加速器 `u_accelerator` 148,013 µm² ≈ 0.148 mm²）+ SDC + 综合/时序报告。
 
 **功能**
-- 新加速器块级门级 TB：**PASS**（K64/K256、整层 99×64×256 两层各 12,672/12,672、`0x8000` 拒绝）。
-- 整 SoC 门级跑程序：**未通过**，已定位为 ITCM/ROM 宏模型与门级 X 传播问题（`full_layer_test/GATE_DEBUG.md`），不写成设计错误，也不写成门级 PASS。
+- 新 INT16 `newfix` 加速器块级门仿：**L00/L01 PASS**；两层各完成 12,672 次 32 位输出写回，并与 Golden 零失配。历史 K64/K256 和 `0x8000` 拒绝测试另见原始日志。
+- 综合前后仿真级一致性：**L00/L01 PASS**；RTL 与门级实际输出逐地址、逐位比较，各 12,672 字、零差异。
+- 全 SoC CPU 程序门仿：**尚无本次同等级别的完整 PASS 证据**；不能把加速器块级 PASS 扩写为全 SoC PASS。
+
+**L00/L01综合前后仿真级功能一致性验证PASS。** 对象为新 INT16 `newfix` 加速器块级 RTL 与同源综合网表，**不是**全 SoC CPU 程序验证，也不是 Formality/LEC。综合日志使用 `int16_accelerator_top_newfix.sv`（SHA-256 `2257fc3eabf058d575a8f39d57de03ab42d8a2a9d2745f74ab3eace7e300a923`）；门仿网表 SHA-256 为 `4416857c0e544eb1245d5686e4f83a4ac6009a4f177d0259d9e204495e3b1c0b`。L00/L01 的 X、W、Bias、Golden 在 RTL 与门级目录的 SHA-256 逐项相同，配置均为 M99/K64/N256，shift 分别为 15/16。独立复跑转储的两层输出各 12,672 个 32 位字，按输出地址顺序逐字逐位比较均为 **0 mismatch**；两边各自对 Golden 也均为 0 mismatch、写回各 12,672 次。门级两层 MMIO STATUS 均为 `0x00000002`（完成且无错误），RTL 日志 `error=0`、`CTRL_ERRORS=0`；原始门级 `accel_done/accel_error` 端口显示 `z`，因此完成状态以 MMIO 读回为证。比较脚本、输入哈希、输出转储、编译及运行日志保存在服务器 `~/kwt1_final4_rtl_gate_compare_20261113/`，汇总见 `RESULT.md` 和 `COMPARE_RESULT.json`。本次使用 `+notimingcheck`，未做 SDF 或形式等价。
 
 **精度**
 - 数值模型与复现脚本**已冻结**（commit `bbff21cf`，候选 `rtl_int48_fixed`，48 位累加）。
@@ -22,7 +26,9 @@
 
 **时序**：setup **0.00 ns**（0 违例）；hold **−0.24 ns**（4 条路径，未做 hold fixing）；pre-layout、ideal clock、hold uncertainty = 0。
 
-**功耗**：Final4 网表 SAIF/VCD 功耗**未做**；报告中出现的功耗数字均按口径标注，不得当作 Final4 结论。
+**功耗**：新 INT16 Final4 网表的有效活动功耗**未取得**；报告中出现的历史功耗数字均按口径标注，不得当作新网表结论。
+
+**2026-11-13 新 INT16 L00 功耗尝试（未取得有效功耗数字）**：L00/L01 原有 PASS 记录使用 `kwt1_final4_soc_newfix_20261111/kwt1_soc_mapped.v`（SHA-256 `4416857c0e544eb1245d5686e4f83a4ac6009a4f177d0259d9e204495e3b1c0b`），但 `kwt1_final4_full_gate_20261112` 的测试平台顶层为独立 `int16_accelerator_top_11000000`，输入由测试平台存储模型提供，没有 E203 CPU、完整 SoC 总线活动。原测试时钟为 100 MHz，未保存 SAIF/VCD。独立目录 `~/kwt1_final4_power_20261112/` 中，已将 L00 活动采集测试平台设为 150 MHz，VCS 编译成功；一次原生 SAIF 采集运行约 18 分钟仅推进到约 0.85 µs，距完整 L00 计算窗口约 1.65 ms 很远，故终止（`SIM_RC=255`），未产生 SAIF，也未执行有效功耗注释。历史 L00 功能仿真记录 247721 周期、12672 输出匹配，仅可作 100 MHz 独立加速器功能记录，不能作为本次 150 MHz 全 SoC 功耗/能耗结果。全 SoC、加速器及单任务能耗数字均留空；需有包含 CPU/总线/SRAM 的同源完整 SoC 有界活动文件，或可完成的加速器活动采集，才可填写对应口径。
 
 **明确不作结论**：整机门级 PASS、SDF 后仿 PASS、官方 600 样本精度、Formality/LEC。
 
@@ -37,14 +43,15 @@
 | 面积（加速器 u_kwt） | **148,013 µm² ≈ 0.148 mm²**（`u_kwt` 含总线适配共 148,079 µm²；含 16×RAMSP128X16 权重 SRAM） | 【实测】Final4 全 SoC 综合 `area_hier.rpt` | 占全 SoC 细胞面积 4.5%，远低于 2.25 mm² 预算 |
 | 全 SoC 面积 | **3,255,536 µm² ≈ 3.256 mm²**，115,978 cells | 【实测】`area_hier.rpt` | E203 与共享 512 KB SRAM 按赛题规则不计入加速器预算 |
 | 功耗（计算窗口） | 162.2279 mW（clock_network 157.64 mW / 97.2%） | 【作废】VCD 来自 RTL+final3 混合仿真，非 Final4 网表 | 见第五节说明 |
-| 功耗（可信部分） | 逻辑 0.21 mW + SRAM 4.38 mW + 漏电 3.88 mW ≈ **8.5 mW** | 【实测】但仍是混合设计活动 | `power_fullsoc_compute.rpt` |
+| 功耗（历史混合设计参考） | 逻辑 0.21 mW + SRAM 4.38 mW + 漏电 3.88 mW ≈ **8.5 mW** | 【历史口径】RTL+final3 混合活动，**不作为新 INT16 Final4 功耗** | `power_fullsoc_compute.rpt` |
 | 数值一致性自测 | 32 个输出 word 与 INT16 Golden 逐字一致，CPU 侧 `x3=1` | 【实测】混合仿真；**属 RTL↔Golden 一致性，不等于量化精度验收** | `run.log`、`sim_sdf5.log` |
 | 量化精度（NRMSE） | 数值模型/脚本已冻结；官方 600 样本待组委会评测，本报告不填“通过” | 【待评】 | `nrmse_verification/NRMSE_RESULT.md` |
-| 加速器功能（新 Final4 版本） | **PASS**：仓库 TB K64 / K256 通过；整层 99×64×256 两层各 12,672/12,672 输出一致；`0x8000` 拒绝正常 | 【实测】 | `full_layer_test/RESULT.md` |
+| 加速器块级门仿（新 INT16 `newfix`） | **L00/L01 PASS**：两层各 12,672 次输出写回，各自与 Golden 零失配；门级 STATUS 均为 `0x00000002` | 【实测】零延迟门仿；K64/K256 与非法输入测试属其他日志 | `~/kwt1_final4_rtl_gate_compare_20261113/gate_run.log`、`RESULT.md` |
+| L00/L01 综合前后仿真级一致性 | **PASS**：两层各 12,672 个 32 位字，RTL↔门级逐地址零差异；双方对同一 Golden 也均零失配 | 【实测】`newfix` 加速器块级、零延迟门仿；**非 LEC** | `~/kwt1_final4_rtl_gate_compare_20261113/RESULT.md`、`COMPARE_RESULT.json`、四份输出转储 |
 | 加速器功能（旧绑定顶层） | 未通过（`k=63` / `S_RESULT` 超时）——**已被上一行的新版本取代** | 【实测·对象作废】 | 同上 |
 | 时序（150 MHz） | setup **0.00 ns**（0 违例）/ hold **−0.24 ns**（4 条路径；未做 hold fixing） | 【实测】pre-layout、ideal clock、hold uncertainty=0 | `kwt1_final4_soc_newfix_20261111/timing_max.rpt`、`timing_min.rpt` |
 
-**评分支撑点结论**：面积可直接用；数值一致性可用；**量化精度（NRMSE）只写“模型与脚本已冻结、官方 600 样本待评测”，不写“通过”**；功耗与时序必须带口径说明；吞吐需在真实 Final4 网表上重测。
+**评分支撑点结论**：面积与 L00/L01 块级综合前后功能一致性可按各自证据口径引用；**量化精度（NRMSE）只写“模型与脚本已冻结、官方 600 样本待评测”，不写“通过”**；功耗与时序必须带口径说明；全 SoC 吞吐需在真实网表上测得。
 
 ---
 
@@ -204,6 +211,8 @@ E203 RISC-V (rv32imc, NICE 协处理器接口 + 系统总线)
 
 ### 4.1 驱动方式
 
+- **本次正式使用的 L00/L01 块级测试**：测试平台直接例化 `newfix` 加速器 RTL 或同源综合网表，由存储模型提供相同 X/W/Bias，配置 M99/K64/N256、右移 15/16 位，按连续输出地址记录 12,672 个 32 位字。RTL 和门级原始输入及 Golden 共 8 个文件的 SHA-256 全部一致。独立测试平台副本只增加 `$writememh` 输出转储；脚本逐地址比较两份实际输出。文件及脚本见 `~/kwt1_final4_rtl_gate_compare_20261113/`。
+- 以下 CPU 程序驱动方式属于**另一组全 SoC 测试平台**，不用于推导本次块级一致性结果。
 - `tb_top.v` 例化 `e203_soc_top`，产生 `clk/rst_n`，通过 `+TESTCASE=<file>` 加载程序。
 - 程序以 16 位字文本给出（`program/kwt_smoke.verilog`），由 TB 预装到 ITCM；CPU 从复位向量取指。
 - 结束判据：CPU 写 `x3=1`（成功）/ `x3=2`（失败），TB 打印 `TEST PASS` / `TEST FAIL`。
@@ -217,22 +226,24 @@ E203 RISC-V (rv32imc, NICE 协处理器接口 + 系统总线)
 vcs -f files.f -top tb_top -o simv
 ./simv +TESTCASE=<prog> +DUMPWAVE=0
 
-# 加速器块级（Final4 网表）
-vcs -sverilog -full64 -timescale=1ns/1ps -f newfix.f \
-    -top int16_accelerator_top_tb -o simv_newfix
-./simv_newfix -l sim_newfix.log
+# 新 INT16 Final4 加速器块级 RTL↔门级对拍（在独立比较目录）
+cd ~/kwt1_final4_rtl_gate_compare_20261113
+vcs -sverilog -full64 -timescale=1ns/1ps -f rtl.f -top tb_full_layer -o simv_rtl > rtl_compile.log
+./simv_rtl > rtl_run.log
+vcs -sverilog -full64 -timescale=1ns/1ps -f gate.f -top tb_full_layer -o simv_gate > gate_compile.log
+./simv_gate +notimingcheck > gate_run.log
+python3 compare_rtl_gate_outputs.py > compare.log
+# 命令及退出码见 commands.txt；结构化结果见 COMPARE_RESULT.json
 
-# 整 SoC 门级（Final4 网表）
-vcs -sverilog -full64 -timescale=1ns/1ps -debug_access+all \
-    +incdir+... -f gate_rom.f -top tb_trace_top -o simv_rom6
-./simv_rom6 +DUMPWAVE=0 +notimingcheck +TESTCASE=<prog>
 ```
+
+全 SoC 历史门级诊断的具体编译命令与文件清单见对应服务器目录；本报告不将其当作本次 L00/L01 块级 PASS 的运行命令。
 
 ### 4.3 三组单独 TB
 
 | TB | 内容 | 状态 |
 | --- | --- | --- |
-| 加速器单独 | 仓库 `int16_accelerator_top_tb`：PE array + 权重缓存，直接喂向量 | **【实测 PASS】** K64 / K256、两个连续作业；整层 12,672/12,672 |
+| 加速器单独 | `newfix` RTL 与同源综合网表分别运行 L00/L01，测试平台存储模型提供同一批 X/W/Bias | **【实测 PASS】** 两层各 12,672 字与 Golden 一致；RTL↔门级逐地址零差异。历史 K64/K256 测试另见原始日志 |
 | E203 单独 | CPU 跑 riscv-tests | 【未做】未单独跑 riscv-tests |
 | 共享 SRAM 单独 | SRAM 模型读写/预装验证 | 【部分】ITCM 位交织与预装已验证（`MODEL_MEM0`），读写端口回读正常 |
 
@@ -250,6 +261,8 @@ vcs -sverilog -full64 -timescale=1ns/1ps -debug_access+all \
 | 加速器块级 | 非法输入 `0x8000` | 必须置 `accel_error` 并拒绝作业 |
 | 整 SoC | CPU 取指、写控制字、等 done、逐地址比对 | `x3=1` 且 32 个 word 与 `inputs/y_expected.mem` 一致 |
 | 整 SoC | 超时 | 不允许出现 `KWT CPU WATCHDOG` |
+
+本轮 L00/L01 实测使用独立块级 TB，**未运行上表的全 SoC CPU/x3 检查**。门级结果的完成证据为两层 MMIO STATUS 均读到 `0x00000002`；原始 `accel_done/accel_error` 输出线在该映射块级测试中显示 `z`，不作为完成证据。
 
 ### 4.6 预装与模型注意事项（本轮实测教训）
 
@@ -283,7 +296,7 @@ vcs -sverilog -full64 -timescale=1ns/1ps -debug_access+all \
   - **115,978 cells**；总细胞面积 **3,255,536.48 µm²**；
   - **GTECH = 0**；宏：16×`RAMSP128X16`（权重缓存）+ 24×`RAMSP8KX32`（共享 SRAM）+ 8×`RAMSP4KX64`（ITCM）；
   - 加速器层次 `u_kwt` = 148,079.44 µm²，其中 `u_accelerator` = **148,013.37 µm²**。
-- 加速器功能（块级门级）：**PASS**。仓库 TB K64/K256 通过，整层 99×64×256 两层各 12,672/12,672 一致。
+- 加速器功能（`newfix` 块级门级）：**L00/L01 PASS**。两层各完成 12,672 次输出写回并与 Golden 零失配；具体综合网表身份及综合前后直接比较见 5.3.1。K64/K256 属于另一次块级测试。
 - 门级仿真（整 SoC 真网表，跑程序）：**已突破启动，但未跑完**。`full_layer_test/GATE_DEBUG.md` §3.9：
   - 根因 1：CPU 复位向量是 **0x1000（mrom）**，不是 ITCM（`pc_rtvec = aon_io_bootrom ? 0x1000 : 0x8000_0000`）；
   - 根因 2：`ROM1KX32` 与 `RAMSP4KX64` 在 `mem_gen` 下都是**占位壳**（`mem` 可填，`Q` 自赋值恒 X）；
@@ -291,6 +304,17 @@ vcs -sverilog -full64 -timescale=1ns/1ps -debug_access+all \
   - 现状：CPU 出复位、从 mrom 跳到 ITCM、**取到正确指令**（`data=00068693800016b7`），连续 4 次取指后停住；
   - 仍未到 `CTRL/START`，**不得写成门级 PASS**。
 - SDF：已生成（143 MB，`DESIGN e203_soc_top`，SS，MAXIMUM），但**标注对象是 RTL 设计**，59k 实例未匹配，**结论作废**。
+
+### 5.3.1 新 INT16 L00/L01 综合前后功能一致性（本次正式结果）
+
+综合日志 `~/kwt1_final4_soc_newfix_20261111/synth_soc_newfix.log` 记录了 `int16_accelerator_top_newfix.sv` 作为综合输入（SHA-256 `2257fc3eabf058d575a8f39d57de03ab42d8a2a9d2745f74ab3eace7e300a923`）。门级测试使用同目录的 `kwt1_soc_mapped.v`（SHA-256 `4416857c0e544eb1245d5686e4f83a4ac6009a4f177d0259d9e204495e3b1c0b`），以其加速器模块为块级 DUT。RTL 和门级测试的 L00/L01 X、W、Bias、Golden 八个文件逐项 SHA-256 相同，配置均为 M99/K64/N256；L00 右移 15 位，L01 右移 16 位。
+
+| 层 | RTL 与门级输出 | RTL 与 Golden | 门级与 Golden | 写回与状态 |
+|---|---:|---:|---:|---|
+| L00 | 12,672 个 32 位字逐地址比较，**0 差异** | 0 失配 | 0 失配 | 两边各 12,672 次写回；门级 STATUS=`0x00000002` |
+| L01 | 12,672 个 32 位字逐地址比较，**0 差异** | 0 失配 | 0 失配 | 两边各 12,672 次写回；门级 STATUS=`0x00000002` |
+
+RTL 日志记录 `error=0`、`CTRL_ERRORS=0`；门级测试 `CTRL_ERRORS=0`、`FULL_LAYER PASS`。逐地址比较脚本退出码为 0；四份输出、输入哈希、RTL/网表版本哈希及完整命令在服务器 `~/kwt1_final4_rtl_gate_compare_20261113/`，汇总为 `RESULT.md`、`COMPARE_RESULT.json`。**结论：L00/L01 综合前后仿真级功能一致性验证 PASS。** 本结论限于加速器块级这两层，使用零延迟门仿（`+notimingcheck`）；不等同于 Formality/LEC、SDF 后仿或全 SoC CPU 程序门仿通过。
 
 ### 5.4 时序结果（可用部分）
 
@@ -304,9 +328,9 @@ vcs -sverilog -full64 -timescale=1ns/1ps -debug_access+all \
 
 ### 5.5 功耗（口径说明）
 
-- **Final4 网表的 SAIF/VCD 功耗：未做**（需要真网表能跑出活动文件；当前整机门级被 X 传播卡住）。因此本报告不给出 Final4 功耗数字。
+- **新 INT16 Final4 网表的有效活动功耗：未取得**。L00/L01 块级门仿 PASS 不会自动产生可用于全 SoC 功耗的活动文件；现有活动采集未完成。因此本报告不给出新网表功耗数字。
 - 已有 162.2279 mW 来自 VCD→SAIF→DC，但 VCD 由 5.2 的混合设计产生 → **不可作为 Final4 网表功耗**。
-- 其中 SRAM 宏 4.38 mW、逻辑 0.21 mW、漏电 3.88 mW 的量级可作参考。
+- 历史混合设计报告中的 SRAM 宏 4.38 mW、逻辑 0.21 mW、漏电 3.88 mW **不纳入新 INT16 Final4 正式功耗表**。
 - clock_network 占 97.2%：RTL 时钟网无 buffer + 综合网表插入单元无活动，属双重失真。
 
 ---
@@ -379,7 +403,7 @@ tb_top_gate.v + kwt1_soc_mapped.v + 5 个模型  →  simv_gate
 
 ---
 
-## 九、完成度清单（2026-11-12）
+## 九、完成度清单（更新至 2026-11-13）
 
 | 章节 | 状态 | 仍然缺的 |
 |---|---|---|
@@ -387,8 +411,8 @@ tb_top_gate.v + kwt1_soc_mapped.v + 5 个模型  →  simv_gate
 | 一 性能表 | ✅（吞吐一行为混合设计口径，已标注） | Final4 网表真实吞吐/周期需重测 |
 | 二 量化与模型 | ✅ | 官方 600 样本精度待组委会评测；100 样本本地预评估已完成（最大 0.659%） |
 | 三 硬件设计 | ✅ | — |
-| 四 testbench | ✅ | E203 单独 riscv-tests 未跑 |
-| 五 综合/STA/功耗 | ⚠️ 部分 | Final4 功耗未做；LEC 未做；SDF 结论作废 |
+| 四 testbench | ✅（L00/L01 块级 RTL/门级对拍已完成） | E203 单独 riscv-tests 未跑；全 SoC CPU 程序门仿未取得同等级别完整结果 |
+| 五 综合/STA/功耗 | ⚠️ 部分 | L00/L01 综合前后仿真级一致性 PASS；功耗未取得，LEC 未做，SDF 结论作废 |
 | 六 复现材料 | ✅ | — |
 | 七 对照实验 | ⚠️ 部分 | 内积/外积、权重驻留、门控时钟三项未做 |
 | 八 误差分析 | ✅（单样本） | 600 样本汇总统计待评测 |
@@ -418,7 +442,7 @@ tb_top_gate.v + kwt1_soc_mapped.v + 5 个模型  →  simv_gate
 
 ## 附：本轮红线（写报告时不得越过）
 
-1. 不得写「Final4 网表门级功能 PASS」——现有 PASS 是 RTL+final3 混合仿真；且 Final4 实际绑定顶层在仓库 TB 下 `S_RESULT` 超时，连一个作业都跑不完。
+1. 不得写「Final4 全 SoC 门级功能 PASS」——2026-11-13 的新证据只证明 `newfix` 加速器块级 L00/L01 综合前后仿真级一致性；旧绑定顶层超时和 RTL+final3 混合仿真属于不同版本与对象。
 2. 不得写「SDF 后仿 PASS」——标注对象错误，59k 实例未匹配。
 3. 不得写「功耗 162.23 mW」作为 Final4 结论——VCD 来自混合设计。
 4. 不得写「形式验证通过」——没有 FM 证据、没有 SVF。
