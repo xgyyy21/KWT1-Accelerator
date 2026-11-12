@@ -141,7 +141,7 @@ KWT CPU WATCHDOG                            ✗
 |---|---|---|
 | 整机门级 `TEST PASS` | ❌ | 已跑到程序结束（4,516 指令、`EXIT_PC=0x800003f0`），程序自检 `x3=2`；`0x11000004` 读回 `4` 未满足完成位 `2` |
 | 整机 RTL 级联调 | ❌ | TB 预装路径绑定网表 `u_sram_wrap_32XK64`，RTL 无该层，需重写预装 |
-| Final4 端到端吞吐 | ❌ | 同上；块级 743,159 周期被 TB 存储延迟主导，不可用 |
+| Final4 端到端吞吐 | ❌ | 块级实测 743,159 周期 @100 MHz = 134.6 tasks/s（TB 存储模型主导，另一 TB 记录 247,721）；SoC 待测 |
 | Final4 网表功耗 | ❌ | 需先跑出 VCD/SAIF；PT 另有 `PT-063 Library Compiler path not set` |
 | LEC / Formality | ❌ | 无 SVF、无 FM 证据 |
 | 官方 600 样本精度 | ⏳ | 组委会公布后用 `nrmse_verification/run_nrmse.py` 复算 |
