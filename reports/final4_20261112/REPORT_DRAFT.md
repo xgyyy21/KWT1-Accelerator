@@ -2,8 +2,8 @@
 
 > 写作原则：每个数字后面标注证据状态。
 > 【实测】= 有原始日志；【用户确认】= 口述但无原始证据；【待补】= 缺数据；【作废】= 已有结论但对象错误，不得引用。
-> 生成日期：2026-11-11；最后更新：2026-11-13（新增 newfix INT16 L00/L01 综合前后仿真级功能一致性证据）
-> 报告可直接引用的版本、输入、L00/L01 对拍结果与口径汇总见 `FINAL4_REPORT_READY_20261113.md`。
+> 生成日期：2026-11-11；最后更新：2026-11-13（新增 12 层加速器 RTL 功能验证 12/12 PASS、L00/L01 综合前后一致性、整机 SoC 阻塞说明）
+> 报告可直接引用的版本、输入、L00/L01 对拍结果与口径汇总见 `FINAL4_REPORT_READY_20261113.md`；12 层明细见 `LAYER12_RTL_RESULT_20261113.md`。
 
 ---
 
@@ -14,7 +14,8 @@
 **功能**
 - 新 INT16 `newfix` 加速器块级门仿：**L00/L01 PASS**；两层各完成 12,672 次 32 位输出写回，并与 Golden 零失配。历史 K64/K256 和 `0x8000` 拒绝测试另见原始日志。
 - 综合前后仿真级一致性：**L00/L01 PASS**；RTL 与门级实际输出逐地址、逐位比较，各 12,672 字、零差异。
-- 全 SoC CPU 程序门仿：**尚无本次同等级别的完整 PASS 证据**；不能把加速器块级 PASS 扩写为全 SoC PASS。
+- **加速器 RTL 12 层功能验证：12/12 PASS（2026-11-13）**；每层 M99/K64/N256，各比较 12,672 个 32 位输出字，与软件 Golden **0 失配**，非法 `0x8000` 任务均被拒绝，控制错误 0。**这是综合前 RTL 的实际仿真结果**，与门级 L00/L01 是两件事。证据：`LAYER12_RTL_RESULT_20261113.md`、`per_layer_12_rtl_20261113.csv`、服务器 `~/kwt1_final4_layer12_20261113/`。
+- 全 SoC CPU 程序门仿：**未 PASS**。最新门级整机运行已跑到程序结束（4,516 条指令，`EXIT_PC=0x800003f0`，加速器收到 m=2/k=64/n=2 并向 `0xa0004000` 写回 4 个字），但程序自检读回 `0x11000004 = 4`、未满足其“完成位=2”的判据，最终 `x3=2`、`TEST FAIL`。整机 RTL 级复现受 TB 绑定阻塞（见 5.3.3）。**不得把块级 RTL/门级 PASS 扩写为全 SoC PASS。**
 
 **L00/L01综合前后仿真级功能一致性验证PASS。** 对象为新 INT16 `newfix` 加速器块级 RTL 与同源综合网表，**不是**全 SoC CPU 程序验证，也不是 Formality/LEC。综合日志使用 `int16_accelerator_top_newfix.sv`（SHA-256 `2257fc3eabf058d575a8f39d57de03ab42d8a2a9d2745f74ab3eace7e300a923`）；门仿网表 SHA-256 为 `4416857c0e544eb1245d5686e4f83a4ac6009a4f177d0259d9e204495e3b1c0b`。L00/L01 的 X、W、Bias、Golden 在 RTL 与门级目录的 SHA-256 逐项相同，配置均为 M99/K64/N256，shift 分别为 15/16。独立复跑转储的两层输出各 12,672 个 32 位字，按输出地址顺序逐字逐位比较均为 **0 mismatch**；两边各自对 Golden 也均为 0 mismatch、写回各 12,672 次。门级两层 MMIO STATUS 均为 `0x00000002`（完成且无错误），RTL 日志 `error=0`、`CTRL_ERRORS=0`；原始门级 `accel_done/accel_error` 端口显示 `z`，因此完成状态以 MMIO 读回为证。比较脚本、输入哈希、输出转储、编译及运行日志保存在服务器 `~/kwt1_final4_rtl_gate_compare_20261113/`，汇总见 `RESULT.md` 和 `COMPARE_RESULT.json`。本次使用 `+notimingcheck`，未做 SDF 或形式等价。
 
@@ -48,6 +49,8 @@
 | 量化精度（NRMSE） | 数值模型/脚本已冻结；官方 600 样本待组委会评测，本报告不填“通过” | 【待评】 | `nrmse_verification/NRMSE_RESULT.md` |
 | 加速器块级门仿（新 INT16 `newfix`） | **L00/L01 PASS**：两层各 12,672 次输出写回，各自与 Golden 零失配；门级 STATUS 均为 `0x00000002` | 【实测】零延迟门仿；K64/K256 与非法输入测试属其他日志 | `~/kwt1_final4_rtl_gate_compare_20261113/gate_run.log`、`RESULT.md` |
 | L00/L01 综合前后仿真级一致性 | **PASS**：两层各 12,672 个 32 位字，RTL↔门级逐地址零差异；双方对同一 Golden 也均零失配 | 【实测】`newfix` 加速器块级、零延迟门仿；**非 LEC** | `~/kwt1_final4_rtl_gate_compare_20261113/RESULT.md`、`COMPARE_RESULT.json`、四份输出转储 |
+| 加速器 RTL 12 层功能 | **12/12 PASS**：每层 12,672 字、与 Golden 0 失配、非法任务拒绝、控制错误 0、退出码 0；743,159 周期/层 | 【实测】综合前 RTL，M99/K64/N256，shift 按层 15/16 | `LAYER12_RTL_RESULT_20261113.md`、`per_layer_12_rtl_20261113.csv`、`~/kwt1_final4_layer12_20261113/` |
+| 全 SoC CPU 程序（门级真网表） | **未 PASS**：跑到程序结束（4,516 指令，`EXIT_PC=0x800003f0`），程序自检 `x3=2`；MMIO 读回 `0x11000004=4` | 【实测·失败】不得当作整机 PASS | `~/kwt1_cpubus_diag_20261112_fix1/run/sim_fix10.log` |
 | 加速器功能（旧绑定顶层） | 未通过（`k=63` / `S_RESULT` 超时）——**已被上一行的新版本取代** | 【实测·对象作废】 | 同上 |
 | 时序（150 MHz） | setup **0.00 ns**（0 违例）/ hold **−0.24 ns**（4 条路径；未做 hold fixing） | 【实测】pre-layout、ideal clock、hold uncertainty=0 | `kwt1_final4_soc_newfix_20261111/timing_max.rpt`、`timing_min.rpt` |
 
@@ -297,12 +300,12 @@ python3 compare_rtl_gate_outputs.py > compare.log
   - **GTECH = 0**；宏：16×`RAMSP128X16`（权重缓存）+ 24×`RAMSP8KX32`（共享 SRAM）+ 8×`RAMSP4KX64`（ITCM）；
   - 加速器层次 `u_kwt` = 148,079.44 µm²，其中 `u_accelerator` = **148,013.37 µm²**。
 - 加速器功能（`newfix` 块级门级）：**L00/L01 PASS**。两层各完成 12,672 次输出写回并与 Golden 零失配；具体综合网表身份及综合前后直接比较见 5.3.1。K64/K256 属于另一次块级测试。
-- 门级仿真（整 SoC 真网表，跑程序）：**已突破启动，但未跑完**。`full_layer_test/GATE_DEBUG.md` §3.9：
-  - 根因 1：CPU 复位向量是 **0x1000（mrom）**，不是 ITCM（`pc_rtvec = aon_io_bootrom ? 0x1000 : 0x8000_0000`）；
-  - 根因 2：`ROM1KX32` 与 `RAMSP4KX64` 在 `mem_gen` 下都是**占位壳**（`mem` 可填，`Q` 自赋值恒 X）；
-  - 修复（仅仿真模型/独立 TB）：组合读 ROM + 组合读 RAM（按模型自身 `mux=A[2:0]`、`row=A[11:3]` 映射）+ TB 按实例装载 8 个 bank；
-  - 现状：CPU 出复位、从 mrom 跳到 ITCM、**取到正确指令**（`data=00068693800016b7`），连续 4 次取指后停住；
-  - 仍未到 `CTRL/START`，**不得写成门级 PASS**。
+- 门级仿真（整 SoC 真网表，跑程序）：**仍未 PASS，但已跑到程序结束**。`full_layer_test/GATE_DEBUG.md` §3.9 的启动问题修复后，2026-11-12 20:56 的最新一次门级运行（`~/kwt1_cpubus_diag_20261112_fix1/run/sim_fix10.log`）结果为：
+  - CPU 从 mrom 起步、跳入 ITCM 执行，**完成 4,516 条指令**，`[RESULT] EXIT_PC=0x800003f0 cyc=12193 itcm=4516 dtcm=0 shared=1120`；
+  - CPU 通过 `0x11000000` 写配置、启动加速器；`[ACC_TRACE]` 显示加速器收到 `m=2 k=64 n=2 a=a0001000 b=a0002000 bias=a0003000 dst=a0004000`，状态走到 12，`enger=1 sticky=0`；
+  - 加速器向 `0xa0004000` 写回 4 个 32 位字；CPU 读 `0x11000004` 得到 `0x00000004`；
+  - 程序按“`status & 2` 为完成位”判据自检，未满足，最终 `x3=2`、`TEST FAIL x3=00000002`。
+  - 结论：**总线/MMIO/加速器启动/写回的通路已经打通，但完成状态或数据比对至少有一处不一致**，属未解决缺陷，**不得写成整机门级 PASS**。
 - SDF：已生成（143 MB，`DESIGN e203_soc_top`，SS，MAXIMUM），但**标注对象是 RTL 设计**，59k 实例未匹配，**结论作废**。
 
 ### 5.3.1 新 INT16 L00/L01 综合前后功能一致性（本次正式结果）
@@ -315,6 +318,41 @@ python3 compare_rtl_gate_outputs.py > compare.log
 | L01 | 12,672 个 32 位字逐地址比较，**0 差异** | 0 失配 | 0 失配 | 两边各 12,672 次写回；门级 STATUS=`0x00000002` |
 
 RTL 日志记录 `error=0`、`CTRL_ERRORS=0`；门级测试 `CTRL_ERRORS=0`、`FULL_LAYER PASS`。逐地址比较脚本退出码为 0；四份输出、输入哈希、RTL/网表版本哈希及完整命令在服务器 `~/kwt1_final4_rtl_gate_compare_20261113/`，汇总为 `RESULT.md`、`COMPARE_RESULT.json`。**结论：L00/L01 综合前后仿真级功能一致性验证 PASS。** 本结论限于加速器块级这两层，使用零延迟门仿（`+notimingcheck`）；不等同于 Formality/LEC、SDF 后仿或全 SoC CPU 程序门仿通过。
+
+### 5.3.2 加速器 RTL 12 层功能验证（2026-11-13）
+
+对象是**综合前** `int16_accelerator_top_newfix.sv`（SHA-256 `2257fc3e…`，与 5.3.1 同一文件），不是门级、也不是软件 Golden 复算。
+
+测试平台用 `~/kwt1_final4_rtl_gate_compare_20261113/rtl_tb.sv`，按层移位拆成两个只跑单层的变体：`tb_s15.sv`（右移 15）、`tb_s16.sv`（右移 16）。向量取 `~/kwt1_cpu12_bundle_20261105/vectors/layer_00..11/` 的 `x.mem / w.mem / bias.mem / y_expected.mem`，按 32 位打包成 hex。
+
+| 层 | 右移 | 周期 | 比较字数 | 与 Golden 失配 | 非法任务 | 控制错误 | 退出码 | 结果 |
+|---|---:|---:|---:|---:|---|---:|---:|---|
+| 00 | 15 | 743,159 | 12,672 | 0 | 拒绝 | 0 | 0 | FULL_LAYER PASS |
+| 01 | 16 | 743,159 | 12,672 | 0 | 拒绝 | 0 | 0 | FULL_LAYER PASS |
+| 02 | 16 | 743,159 | 12,672 | 0 | 拒绝 | 0 | 0 | FULL_LAYER PASS |
+| 03 | 15 | 743,159 | 12,672 | 0 | 拒绝 | 0 | 0 | FULL_LAYER PASS |
+| 04 | 15 | 743,159 | 12,672 | 0 | 拒绝 | 0 | 0 | FULL_LAYER PASS |
+| 05 | 15 | 743,159 | 12,672 | 0 | 拒绝 | 0 | 0 | FULL_LAYER PASS |
+| 06 | 15 | 743,159 | 12,672 | 0 | 拒绝 | 0 | 0 | FULL_LAYER PASS |
+| 07 | 15 | 743,159 | 12,672 | 0 | 拒绝 | 0 | 0 | FULL_LAYER PASS |
+| 08 | 15 | 743,159 | 12,672 | 0 | 拒绝 | 0 | 0 | FULL_LAYER PASS |
+| 09 | 15 | 743,159 | 12,672 | 0 | 拒绝 | 0 | 0 | FULL_LAYER PASS |
+| 10 | 15 | 743,159 | 12,672 | 0 | 拒绝 | 0 | 0 | FULL_LAYER PASS |
+| 11 | 16 | 743,159 | 12,672 | 0 | 拒绝 | 0 | 0 | FULL_LAYER PASS |
+
+每层日志固定输出 `LAYER n mismatches=0 / 12672`、`ILLEGAL done=0 error=1 cycles=0`、`CTRL_ERRORS=0 OTHER_CMDS=0`、`FULL_LAYER PASS`，单层 CPU 时间约 1.3 s。
+
+**口径边界**：12 层 PASS 是**加速器块级**结果；门级只有 L00/L01 两层做过直接比较；整机 SoC 程序仍未 PASS（5.3.2 之后的 5.3.3）。任务形状固定为 M=99/K=64/N=256，未改 M/K/N、未改数值格式、未改冻结 RTL。
+
+### 5.3.3 整机 SoC RTL 级复现的阻塞
+
+现成整机 TB `~/kwt1_cpubus_diag_20261112_fix1/tb/tb_soc_cpubus.sv` 只能对**映射网表** `kwt1_soc_mapped.v` 运行：它通过 `u_dut...u_e203_sram.u_e203_itcm_ram.u_sram_wrap_32XK64` 这一网表专用层次预装 ITCM 程序镜像。把同一 TB 换到综合前 RTL 源（`files_soc_newfix.f`）后，VCS 在 `-XMRE` 阶段报：
+
+```
+tb_soc_cpubus.sv, 77-79: token 'u_sram_wrap_32XK64' cannot be resolved
+```
+
+RTL 侧 ITCM 由 `assets/kwt1_sram_bank.sv` 的 `RAMSP8KX32 u_macro` 组成，没有 `u_sram_wrap_32XK64` 这一层，因此需要重写 ITCM/DTCM 预装路径并重新确定存储模型层次。加上整机程序自检 `x3=2` 未定位，属“大规模调试 CPU/SRAM 模型”，本轮不开展；**不开展新的整机门级仿真，也不以块级 PASS 代替整机 PASS**。
 
 ### 5.4 时序结果（可用部分）
 
