@@ -50,7 +50,7 @@
 | 加速器块级门仿（新 INT16 `newfix`） | **L00/L01 PASS**：两层各 12,672 次输出写回，各自与 Golden 零失配；门级 STATUS 均为 `0x00000002` | 【实测】零延迟门仿；K64/K256 与非法输入测试属其他日志 | `~/kwt1_final4_rtl_gate_compare_20261113/gate_run.log`、`RESULT.md` |
 | L00/L01 综合前后仿真级一致性 | **PASS**：两层各 12,672 个 32 位字，RTL↔门级逐地址零差异；双方对同一 Golden 也均零失配 | 【实测】`newfix` 加速器块级、零延迟门仿；**非 LEC** | `~/kwt1_final4_rtl_gate_compare_20261113/RESULT.md`、`COMPARE_RESULT.json`、四份输出转储 |
 | 加速器 RTL 12 层功能 | **12/12 PASS**：每层 12,672 字、与 Golden 0 失配、非法任务拒绝、控制错误 0、退出码 0；743,159 周期/层 | 【实测】综合前 RTL，M99/K64/N256，shift 按层 15/16 | `LAYER12_RTL_RESULT_20261113.md`、`per_layer_12_rtl_20261113.csv`、`~/kwt1_final4_layer12_20261113/` |
-| 全 SoC CPU 程序（门级真网表） | **未 PASS**：跑到程序结束（4,516 指令，`EXIT_PC=0x800003f0`），程序自检 `x3=2`；MMIO 读回 `0x11000004=4` | 【实测·失败】不得当作整机 PASS | `~/kwt1_cpubus_diag_20261112_fix1/run/sim_fix10.log` |
+| 整机 SoC CPU 程序（门级真网表） | **未 PASS**：跑到程序结束（4,516 指令，`EXIT_PC=0x800003f0`），程序自检 `x3=2`；STATUS 读回 `0x4` = `error_sticky`（bit2），done=0 | 【实测·失败】不得当作整机 PASS | `~/kwt1_cpubus_diag_20261112_fix1/run/sim_fix10.log` |
 | 加速器功能（旧绑定顶层） | 未通过（`k=63` / `S_RESULT` 超时）——**已被上一行的新版本取代** | 【实测·对象作废】 | 同上 |
 | 时序（150 MHz） | setup **0.00 ns**（0 违例）/ hold **−0.24 ns**（4 条路径；未做 hold fixing） | 【实测】pre-layout、ideal clock、hold uncertainty=0 | `kwt1_final4_soc_newfix_20261111/timing_max.rpt`、`timing_min.rpt` |
 
@@ -305,7 +305,11 @@ python3 compare_rtl_gate_outputs.py > compare.log
   - CPU 通过 `0x11000000` 写配置、启动加速器；`[ACC_TRACE]` 显示加速器收到 `m=2 k=64 n=2 a=a0001000 b=a0002000 bias=a0003000 dst=a0004000`，状态走到 12，`enger=1 sticky=0`；
   - 加速器向 `0xa0004000` 写回 4 个 32 位字；CPU 读 `0x11000004` 得到 `0x00000004`；
   - 程序按“`status & 2` 为完成位”判据自检，未满足，最终 `x3=2`、`TEST FAIL x3=00000002`。
-  - 结论：**总线/MMIO/加速器启动/写回的通路已经打通，但完成状态或数据比对至少有一处不一致**，属未解决缺陷，**不得写成整机门级 PASS**。
+- 结论：**总线/MMIO/加速器启动/写回的通路已经打通，但加速器返回了错误状态**，属未解决缺陷，**不得写成整机门级 PASS**。
+- 根因定位（2026-11-13）：`assets/int16_system_bus_control.sv` 中状态字定义为
+  `A_STATUS = {29'd0, error_sticky, engine_error, done_sticky, engine_done, engine_busy}`，
+  即 bit0=busy、bit1=done、bit2=error_sticky、bit3=engine_error。CPU 读回 `0x4` = **error_sticky=1、done=0**，所以程序的“等 done 位”轮询永远不会成功。
+  该次 SoC 程序下发的是 **M=2 / K=64 / N=32 / shift=3**，与所有已通过的块级配置（M=99 / K=64 / N=256，shift 15/16）不同；`[ACC_TRACE]` 还显示加速器内部看到 `n=2`，与程序写入的 N=32 不一致。下一步需确认是参数寄存器写入未生效，还是该任务形状被判非法。
 - SDF：已生成（143 MB，`DESIGN e203_soc_top`，SS，MAXIMUM），但**标注对象是 RTL 设计**，59k 实例未匹配，**结论作废**。
 
 ### 5.3.1 新 INT16 L00/L01 综合前后功能一致性（本次正式结果）
