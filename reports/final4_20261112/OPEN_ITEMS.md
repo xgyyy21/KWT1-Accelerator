@@ -67,6 +67,16 @@ A_STATUS: s_icb_rsp_rdata = {29'd0, error_sticky, engine_error, done_sticky, eng
 1. 查 `int16_system_bus_control.sv` 里 N 寄存器（`A_N=8'h20`）的写入路径，确认 `n=2` 的来源；或
 2. 把 SoC 程序改成已验证的合法形状 M=99/K=64/N=256（需重新编译程序镜像与数据段），再跑一次整机。
 
+### 2026-11-13 更新：合法形状已跑通前半程（任务未跑完）
+
+已把 SoC 程序改成合法形状并重跑：
+
+- 新镜像 `~/kwt1_final4_soc_rtl_int_20261113/program/kwt_l00_m99k64n256.verilog`（M=99、K=64、N=256、shift=15；x/w/bias/y 用 layer-00 已验证向量）；
+- CPU 执行到写 START（`t=2.34267 ms`），`[ACC_TRACE]` 显示 `m=99 k=64 a=a0001000 b=a0002000 bias=a0003000 dst=a0004000`；
+- CPU 轮询 `0x11000004` 读到 `0x1`（busy），状态位判据正确；
+- 但 TB 18 ms 时限内任务未结束（看门狗终止），只能给下界：**任务窗口 > 782,857 拍 @50 MHz**，即 **≤191 tasks/s @150 MHz**。
+- TB 改动仅 `#15000000`→`#18000000`，备份 `tb_soc_cpubus.sv.bak_20261113`；日志 `run/sim_l00_m99c.log`。
+
 ### 2026-11-13 更新：整机 RTL 级 TB 绑定阻塞
 
 同一 TB `tb_soc_cpubus.sv` 换到综合前 RTL 源（`files_soc_newfix.f`）后，VCS 在 `-XMRE` 阶段报 `token 'u_sram_wrap_32XK64' cannot be resolved`。原因是 TB 用网表专用层次 `...u_e203_itcm_ram.u_sram_wrap_32XK64` 预装 ITCM；RTL 侧 ITCM 由 `assets/kwt1_sram_bank.sv`（`RAMSP8KX32 u_macro`）组成，没有该层。要跑整机 RTL 需重写 ITCM/DTCM 预装路径，属大规模调试，本轮不开展。
