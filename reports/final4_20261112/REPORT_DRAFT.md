@@ -15,7 +15,7 @@
 - 新 INT16 `newfix` 加速器块级门仿：**L00/L01 PASS**；两层各完成 12,672 次 32 位输出写回，并与 Golden 零失配。历史 K64/K256 和 `0x8000` 拒绝测试另见原始日志。
 - 综合前后仿真级一致性：**L00/L01 PASS**；RTL 与门级实际输出逐地址、逐位比较，各 12,672 字、零差异。
 - **加速器 RTL 12 层功能验证：12/12 PASS（2026-11-13）**；每层 M99/K64/N256，各比较 12,672 个 32 位输出字，与软件 Golden **0 失配**，非法 `0x8000` 任务均被拒绝，控制错误 0。**这是综合前 RTL 的实际仿真结果**，与门级 L00/L01 是两件事。证据：`LAYER12_RTL_RESULT_20261113.md`、`per_layer_12_rtl_20261113.csv`、服务器 `~/kwt1_final4_layer12_20261113/`。
-- 全 SoC CPU 程序门仿：**未 PASS**。最新门级整机运行已跑到程序结束（4,516 条指令，`EXIT_PC=0x800003f0`，加速器收到 m=2/k=64/n=2 并向 `0xa0004000` 写回 4 个字），但程序自检读回 `0x11000004 = 4`、未满足其“完成位=2”的判据，最终 `x3=2`、`TEST FAIL`。整机 RTL 级复现受 TB 绑定阻塞（见 5.3.3）。**不得把块级 RTL/门级 PASS 扩写为全 SoC PASS。**
+- 全 SoC CPU 程序门仿：**PASS（2026-11-13）**。整机真网表跑通合法任务 M=99/K=64/N=256/shift=15：CPU 写 START（t=2.34267 ms）→ 加速器锁存 `a=0xA0001000 b=0xA0005000 bias=0xA000E000 dst=0xA0010000` → CPU 读 STATUS=`0x2`（done，无错误，t=18.15113 ms）→ 程序逐字比较 **12,672 个 32 位输出字零失配** → `EXIT_PC=0x800003f0`、`x3=1`、`TEST PASS`（t=21.95319 ms，40 ms 看门狗未触发，TB 提前结束）。START→DONE **790,423 拍**，装载→写回 907,556 拍，整程序 1,097,659 拍（50 MHz 仿真）。证据：`SOC_RUN_20261113.md`、`~/kwt1_cpubus_diag_20261112_fix1/run/sim_l00_m99_v3.log`。**此前“x3=2 / 整机未 PASS”的记录基于 M=2/K=64/N=32 的非法任务与两次地址/编码错误的中间实验，均已作废。**
 
 **L00/L01综合前后仿真级功能一致性验证PASS。** 对象为新 INT16 `newfix` 加速器块级 RTL 与同源综合网表，**不是**全 SoC CPU 程序验证，也不是 Formality/LEC。综合日志使用 `int16_accelerator_top_newfix.sv`（SHA-256 `2257fc3eabf058d575a8f39d57de03ab42d8a2a9d2745f74ab3eace7e300a923`）；门仿网表 SHA-256 为 `4416857c0e544eb1245d5686e4f83a4ac6009a4f177d0259d9e204495e3b1c0b`。L00/L01 的 X、W、Bias、Golden 在 RTL 与门级目录的 SHA-256 逐项相同，配置均为 M99/K64/N256，shift 分别为 15/16。独立复跑转储的两层输出各 12,672 个 32 位字，按输出地址顺序逐字逐位比较均为 **0 mismatch**；两边各自对 Golden 也均为 0 mismatch、写回各 12,672 次。门级两层 MMIO STATUS 均为 `0x00000002`（完成且无错误），RTL 日志 `error=0`、`CTRL_ERRORS=0`；原始门级 `accel_done/accel_error` 端口显示 `z`，因此完成状态以 MMIO 读回为证。比较脚本、输入哈希、输出转储、编译及运行日志保存在服务器 `~/kwt1_final4_rtl_gate_compare_20261113/`，汇总见 `RESULT.md` 和 `COMPARE_RESULT.json`。本次使用 `+notimingcheck`，未做 SDF 或形式等价。
 
@@ -52,7 +52,8 @@
 | 加速器块级门仿（新 INT16 `newfix`） | **L00/L01 PASS**：两层各 12,672 次输出写回，各自与 Golden 零失配；门级 STATUS 均为 `0x00000002` | 【实测】零延迟门仿；K64/K256 与非法输入测试属其他日志 | `~/kwt1_final4_rtl_gate_compare_20261113/gate_run.log`、`RESULT.md` |
 | L00/L01 综合前后仿真级一致性 | **PASS**：两层各 12,672 个 32 位字，RTL↔门级逐地址零差异；双方对同一 Golden 也均零失配 | 【实测】`newfix` 加速器块级、零延迟门仿；**非 LEC** | `~/kwt1_final4_rtl_gate_compare_20261113/RESULT.md`、`COMPARE_RESULT.json`、四份输出转储 |
 | 加速器 RTL 12 层功能 | **12/12 PASS**：每层 12,672 字、与 Golden 0 失配、非法任务拒绝、控制错误 0、退出码 0；743,159 周期/层 | 【实测】综合前 RTL，M99/K64/N256，shift 按层 15/16 | `LAYER12_RTL_RESULT_20261113.md`、`per_layer_12_rtl_20261113.csv`、`~/kwt1_final4_layer12_20261113/` |
-| 整机 SoC CPU 程序（门级真网表） | **未 PASS**：跑到程序结束（4,516 指令，`EXIT_PC=0x800003f0`），程序自检 `x3=2`；STATUS 读回 `0x4` = `error_sticky`（bit2），done=0 | 【实测·失败】不得当作整机 PASS | `~/kwt1_cpubus_diag_20261112_fix1/run/sim_fix10.log` |
+| 整机 SoC CPU 程序（门级真网表） | **PASS**：M99/K64/N256/shift15，CPU 写 START→读 STATUS=0x2→逐字比较 12,672 个 32 位字零失配→`x3=1`、`TEST PASS`；START→DONE 790,423 拍 | 【实测】50 MHz 仿真，40 ms 看门狗未触发 | `SOC_RUN_20261113.md`、`run/sim_l00_m99_v3.log` |
+| 整机 SoC（旧 M2/K64/N32 程序） | 未 PASS（`x3=2`，STATUS=0x4=error_sticky）——**任务形状非法，已作废** | 【实测·作废】 | `run/sim_fix10.log` |
 | 加速器功能（旧绑定顶层） | 未通过（`k=63` / `S_RESULT` 超时）——**已被上一行的新版本取代** | 【实测·对象作废】 | 同上 |
 | 时序（150 MHz） | setup **0.00 ns**（0 违例）/ hold **−0.24 ns**（4 条路径；未做 hold fixing） | 【实测】pre-layout、ideal clock、hold uncertainty=0 | `kwt1_final4_soc_newfix_20261111/timing_max.rpt`、`timing_min.rpt` |
 
@@ -67,7 +68,8 @@
 | 1 | 块级**纯计算**窗口 | 101,352 | 150 MHz | **1,480** | 4.80 | 结构上限，**未实测** |
 | 2 | 块级**任务**窗口（含 A/B/bias 读 + Y 写回） | 743,159 | 100 MHz 仿真 | **134.6** | 0.436 | **实测**，受 TB 存储模型主导 |
 | 2' | 同上按 150 MHz 折算 | 743,159 | 150 MHz | 201.8 | 0.655 | **折算**，非实测 |
-| 3 | **正式 SoC 任务**（E203 调度 + 总线 + 写回） | **> 782,857**（下界） | 50 MHz 仿真 | **≤ 191**（上界） | — | 已跑通配置/启动，18 ms 内未跑完 |
+| 3 | **正式 SoC 任务** START→DONE | **790,423** | 50 MHz 仿真 | **189.8**（折算） | 0.616 | **实测 PASS** |
+| 3' | 正式 SoC 装载→写回 | **907,556** | 50 MHz 仿真 | **165.3**（折算） | 0.536 | 实测 PASS |
 
 - 口径 2 的计数起点是 START 被接受，终点是 `accel_done`；**不包含** CPU 取指、MMIO 配置与中断/轮询开销。
 - 12 层全部为同一形状，每层均 `743,159` 周期，逐层表见 `THROUGHPUT_20261113.md` 与 `throughput_12_rtl_20261113.csv`。
